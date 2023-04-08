@@ -1,2 +1,4 @@
-dh rdth rdther hnerd
-111111sda veas111  1111111111
+class User:
+    def __init__(self, name, email):
+        self.name = name
+        self.email = email
