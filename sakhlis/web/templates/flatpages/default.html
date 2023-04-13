@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+
+<title>{{ flatpage.title}} /
+ </title>
+</head>
+
+<body>
+{% block body %}
+
+{% endblock body%}
+<br>
+<img src={% static "images/muzg-na-chas.jpg" alt="Муж на час" %} width='200'>
+
+
+{{ flatpage.content}}
+</body></html>
