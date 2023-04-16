@@ -13,5 +13,6 @@ class RepFilter(FilterSet):
                   's_name': ['startswith'],
                   'email': ['icontains'],
                   'phone': ['icontains'],
-                  'rating_sum':['lt','gt']
+                  'rating_sum': ['lt','gt'],
+                  'city_id': ['exact'],
                   }
