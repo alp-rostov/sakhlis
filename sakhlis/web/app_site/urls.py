@@ -8,8 +8,8 @@ urlpatterns = [
 path('', CityList.as_view()),
 # path('<int:pk>',  City.as_view()),
 path('replist', RepairerList.as_view()),
-path('replist<int:pk>', Repairer.as_view()),
+path('replist/<int:pk>', Repairer.as_view()),
 
 ]
 
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) # для загрузки картинок.
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) # для выгрузки картинок из БД в шаблон.

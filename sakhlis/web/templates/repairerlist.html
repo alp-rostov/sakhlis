@@ -1,33 +1,51 @@
 {% extends 'flatpages/default.html' %}
-
+{% load custom_filters %}
 
 
 {% block body %}
 <h1>Список мастеров</h1>
-<table width="1800">
-{% for i in repairer %}
+<form action="" method="get">
+    {{ filterset.form.as_p }}
+    <input type="submit" value="Найти" />
+</form>
 
-<tr>
-    <td>{{ i.s_name }}</td>
-    <td>{{ i.name }}</td>
-    <td>{{ i.phone }}</td>
-    <td>{{ i.city_id }}</td>
-    <td>{{ i.email }}</td>
-    <td>{{ media }}</td>
+<table width="1300">
+    {% for i in repairer %}
 
-    <td>
-    {% if i.foto %}
-        <img src="media/{{ i.foto }}" width="150">
+    <tr>
+        <td><a href="replist/{{ i.pk }}">{{ i.s_name }}</a></td>
+        <td>{{ i.name|truncatechars:2 }}</td>
+        <td>{{ i.phone }}</td>
+        <td>{{ i.city_id }}</td>
+        <td>{{ i.email }}</td>
+        <td>{{ media }}</td>
 
-    {% else %}
-        !нет фото!
-    {% endif %}
-    </td>
+        <td><img src="media/{{ i.foto|default:'images/1.jpg' }}" width="150">    </td>
 
-    <td>{{ i.rating_sum }}</td>
+        <td>{{ i.rating_sum }}</td>
 
-</tr>
-{% endfor %}
+    </tr>
+    {% endfor %}
 </table>
 
+
+{% if page_obj.has_previous %}
+<a href="?page=1">1</a>
+{% if page_obj.previous_page_number != 1 %}
+...
+<a href="?page={{ page_obj.previous_page_number }}">{{ page_obj.previous_page_number }}</a>
+{% endif %}
+{% endif %}
+
+{# Информация о текущей странице #}
+{{ page_obj.number }}
+
+{# Информация о следующих страницах #}
+{% if page_obj.has_next %}
+<a href="?page={{ page_obj.next_page_number }}">{{ page_obj.next_page_number }}</a>
+{% if paginator.num_pages != page_obj.next_page_number %}
+...
+<a href="?page={{ page_obj.paginator.num_pages }}">{{ page_obj.paginator.num_pages }}</a>
+{% endif %}
+{% endif %}
 {% endblock body %}
