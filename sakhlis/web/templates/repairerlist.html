@@ -1,0 +1,33 @@
+{% extends 'flatpages/default.html' %}
+
+
+
+{% block body %}
+<h1>Список мастеров</h1>
+<table width="1800">
+{% for i in repairer %}
+
+<tr>
+    <td>{{ i.s_name }}</td>
+    <td>{{ i.name }}</td>
+    <td>{{ i.phone }}</td>
+    <td>{{ i.city_id }}</td>
+    <td>{{ i.email }}</td>
+    <td>{{ media }}</td>
+
+    <td>
+    {% if i.foto %}
+        <img src="media/{{ i.foto }}" width="150">
+
+    {% else %}
+        !нет фото!
+    {% endif %}
+    </td>
+
+    <td>{{ i.rating_sum }}</td>
+
+</tr>
+{% endfor %}
+</table>
+
+{% endblock body %}

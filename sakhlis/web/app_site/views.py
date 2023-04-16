@@ -1,7 +1,9 @@
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView
-from .models import City
+from .models import City, Repairer
 from .filters import CityFilter
+
+from pprint import pprint
 # Create your views here.
 
 class CityList(ListView):
@@ -26,10 +28,25 @@ class CityList(ListView):
         context = super().get_context_data(**kwargs)
         # Добавляем в контекст объект фильтрации.
         context['filterset'] = self.filterset
+        pprint(context)
         return context
+
+
 
 
 class City(DetailView):
     model = City
     template_name = 'city.html'
     context_object_name = 'city'
+
+
+
+class RepairerList(ListView):
+    model = Repairer
+    context_object_name = 'repairer'
+    template_name = 'repairerlist.html'
+
+class Repairer(DetailView):
+    model = Repairer
+    context_object_name = 'repairer'
+    template_name = 'repairer.html'
