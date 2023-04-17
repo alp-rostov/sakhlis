@@ -1,7 +1,7 @@
 from django import forms
-from .models import Repairer
+from .models import RepairerList
 class RepairerForm(forms.ModelForm):
    class Meta:
-       model = Repairer
+       model = RepairerList
        fields = ['name', 's_name', 'phone', 'city', 'email',
                  'foto']

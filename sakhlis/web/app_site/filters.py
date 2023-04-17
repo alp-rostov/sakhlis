@@ -1,11 +1,7 @@
 from django_filters import FilterSet, ModelChoiceFilter, CharFilter
-from .models import City, Repairer
+from .models import CityDirectory, RepairerList
 from django import forms
 
-class CityFilter(FilterSet):
-    class Meta:
-        model = City
-        fields = {'name': ['startswith']}
 
 class RepFilter(FilterSet):
 
@@ -24,7 +20,7 @@ class RepFilter(FilterSet):
     city_id = ModelChoiceFilter(
         field_name='city_id__name',
         label='Город',
-        queryset=City.objects.order_by('name').all(),
+        queryset=CityDirectory.objects.order_by('name').all(),
         lookup_expr='exact'
     )
 
@@ -41,7 +37,7 @@ class RepFilter(FilterSet):
     )
 
     class Meta:
-        model = Repairer
+        model = RepairerList
         fields = ['s_name', 'name', 'city_id', 'email', 'phone', ]
 
 

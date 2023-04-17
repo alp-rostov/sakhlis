@@ -1,14 +1,13 @@
 from django.urls import path
-from .views import CityList, City, RepairerList, Repairer
+from .views import RepairerL, RepaierD
 
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-path('', CityList.as_view()),
-# path('<int:pk>',  City.as_view()),
-path('replist', RepairerList.as_view()),
-path('replist/<int:pk>', Repairer.as_view()),
+path('', RepairerL.as_view()),
+path('<int:pk>', RepaierD.as_view()),
+
 
 ]
 

@@ -1,8 +1,8 @@
 from django.contrib import admin
-from .models import City, Repairer, Order
+from .models import CityDirectory, RepairerList, OrderList
 
-admin.site.register(City)
-admin.site.register(Repairer)
-admin.site.register(Order)
+admin.site.register(CityDirectory)
+admin.site.register(RepairerList)
+admin.site.register(OrderList)
 
 # Register your models here.
