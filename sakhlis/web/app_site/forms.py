@@ -1,6 +1,7 @@
 from django import forms
-from .models import City
-class CityForm(forms.ModelForm):
+from .models import Repairer
+class RepairerForm(forms.ModelForm):
    class Meta:
-       model = City
-       fields = '__all__'
+       model = Repairer
+       fields = ['name', 's_name', 'phone', 'city', 'email',
+                 'foto']

@@ -5,25 +5,33 @@
 
 {% block body %}
 <h1>Список мастеров</h1>
+
+<table width="1300" border="0">
+    <tr>
 <form action="" method="get">
-    {{ filterset.form.as_p }}
+<td>{{ filterset.form.s_name }}
+<td>{{ filterset.form.name }}
+<td>{{ filterset.form.city_id }}
+<td>{{ filterset.form.email }}
+<td>{{ filterset.form.phone }}
+
     <input type="submit" value="Найти" />
 </form>
+</tr>
 
-<table width="1300">
     {% for i in repairer %}
 
     <tr>
         <td><a href="replist/{{ i.pk }}">{{ i.s_name }}</a></td>
-        <td>{{ i.name|truncatechars:2 }}</td>
-        <td>{{ i.phone }}</td>
+        <td>{{ i.name|truncatechars:20 }}</td>
         <td>{{ i.city_id }}</td>
         <td>{{ i.email }}</td>
-        <td>{{ media }}</td>
+        <td>{{ i.phone }}</td>
 
-        <td><img src="media/{{ i.foto|default:'images/1.jpg' }}" width="150">    </td>
 
-        <td>{{ i.rating_sum }}</td>
+        <td><img src="media/{{ i.foto|default:'images/1.jpg' }}" width="100">    </td>
+
+
 
     </tr>
     {% endfor %}
@@ -49,4 +57,8 @@
 <a href="?{% url_replace page=page_obj.paginator.num_pages %}">{{ page_obj.paginator.num_pages }}</a>
 {% endif %}
 {% endif %}
+
+{{ get }}
+
+
 {% endblock body %}
