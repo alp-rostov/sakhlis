@@ -1,5 +1,6 @@
 from django.db import models
 from django.core.validators import RegexValidator, MinValueValidator
+from django.urls import reverse
 
 phoneNumberRegex = RegexValidator(regex=r"^\+?1?\d{8,15}$",
                                   message="Phone number must be entered in the "
@@ -40,3 +41,6 @@ class RepairerList(models.Model):
 
     def __str__(self):
         return f"{self.name} {self.s_name}"
+
+    def get_absolute_url(self):
+        return reverse('datail_repair', args=[str(self.id)])

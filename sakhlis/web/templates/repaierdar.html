@@ -1,5 +1,14 @@
 {% extends 'flatpages/default.html' %}
 
 {% block body %}
-{{ rep }}
+
+<table  width="1000">
+<tr><td>Фамилия: </td><td>{{ rep.s_name}}</td><td><td rowspan = 5><img src="media/{{ rep.foto|default:'images/1.jpg' }}" width="300"> </td>></tr>
+<tr><td>Имя: </td><td>{{ rep.name}}</td></tr>
+<tr><td>Город: </td><td>{{ rep.city_id}}</td></tr>
+<tr><td>Телефон: </td><td>{{ rep.phone}}</td></tr>
+<tr><td>Email: </td><td>{{ rep.email}}</td></tr>
+</table>
+
+
 {% endblock body %}

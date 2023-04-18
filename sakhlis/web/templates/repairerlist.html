@@ -22,7 +22,7 @@
     {% for i in repairer %}
 
     <tr>
-        <td><a href="{{ i.pk }}">{{ i.s_name }}</a></td>
+        <td><a href="{{ i.get_absolute_url }}">{{ i.s_name }}</a></td>
         <td>{{ i.name|truncatechars:20 }}</td>
         <td>{{ i.city_id }}</td>
         <td>{{ i.email }}</td>

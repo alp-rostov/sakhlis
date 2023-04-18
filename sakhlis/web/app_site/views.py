@@ -1,6 +1,7 @@
-from django.views.generic import ListView, DetailView
-from .models import RepairerList, CityDirectory
+from django.views.generic import ListView, DetailView, CreateView
+from .models import RepairerList
 from .filters import RepFilter
+from .forms import RepairerForm
 
 # Create your views here.
 class RepairerL( ListView):
@@ -20,13 +21,16 @@ class RepairerL( ListView):
         # context['get'] = CityDirectory.objects.all()
         return context
 
+
 class RepaierD(DetailView):
     model = RepairerList
     template_name = 'repaierdar.html'
     context_object_name = 'rep'
 
-
-
+class Repaier_create(CreateView):
+    model = RepairerList
+    template_name = 'repaier_create.html'
+    form_class = RepairerForm
 
 
     # Переопределяем функцию получения списка

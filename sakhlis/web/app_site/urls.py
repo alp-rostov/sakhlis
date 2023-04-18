@@ -1,13 +1,13 @@
 from django.urls import path
-from .views import RepairerL, RepaierD
+from .views import RepairerL, RepaierD, Repaier_create
 
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
 path('', RepairerL.as_view()),
-path('<int:pk>', RepaierD.as_view()),
-
+path('<int:pk>', RepaierD.as_view(), name='datail_repair'),
+path('create', Repaier_create.as_view()),
 
 ]
 
