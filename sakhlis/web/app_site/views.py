@@ -40,6 +40,7 @@ class RepaierUpdate(UpdateView):
     template_name = 'repaier_create.html'
     form_class = RepairerForm
 
+
 class RepaierDelete(DeleteView):
     model = RepairerList
     template_name = 'repaier_delete.html'

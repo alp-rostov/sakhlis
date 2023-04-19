@@ -1,5 +1,5 @@
 from django_filters import FilterSet, ModelChoiceFilter, CharFilter
-from .models import CityDirectory, RepairerList
+from .models import RepairerList, CityDirectory
 from django import forms
 
 
@@ -20,8 +20,8 @@ class RepFilter(FilterSet):
     city_id = ModelChoiceFilter(
         field_name='city_id__name',
         label='Город',
+        lookup_expr='exact',
         queryset=CityDirectory.objects.order_by('name').all(),
-        lookup_expr='exact'
     )
 
     email = CharFilter(
@@ -39,6 +39,3 @@ class RepFilter(FilterSet):
     class Meta:
         model = RepairerList
         fields = ['s_name', 'name', 'city_id', 'email', 'phone', ]
-
-
-
