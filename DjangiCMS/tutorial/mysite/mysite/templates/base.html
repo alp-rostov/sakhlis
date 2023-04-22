@@ -1,0 +1,136 @@
+{% load cms_tags menu_tags sekizai_tags %}
+
+<html lang="ru" prefix="og: http://ogp.me/ns#"><head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- Fav Icon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta name="robots" content="noindex,nofollow">
+    <title>{% block title %}{% endblock title %}</title>
+    {% render_block "css" %}
+    <meta name="description" content="Услуги мастера на час в городе N ✔ Вызвать мастера на дом ✔ Услуги электрика, сантехника, мелкий ремонт квартир">
+    <!-- Facebook -->
+	<meta property="og:title" content="Мастер на час в городе | (Муж на час)">
+	<meta property="og:description" content="Услуги мастера на час в городе N ✔ Вызвать мастера на дом ✔ Услуги электрика, сантехника, мелкий ремонт квартир">
+	<meta property="og:image" content="images/master-na-chas.jpg">
+	<meta property="og:image:width" content>
+	<meta property="og:image:height" content>
+	<meta property="og:site_name" content>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/mdb.min.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/fonts.css">
+    <!-- Owl Carusel -->
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/owl.carousel.min.css">
+    <!-- Custom Stylesheets -->
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/custom.css">
+  <style>
+
+   ul li {
+    display: inline-block; /* Строчно-блочный элемент */
+    padding: 10px; /* Поля вокруг текста */
+   }
+  </style>
+</head>
+<body >
+{% cms_toolbar %}
+    <!--Header-->
+    <nav id="navigation-menu" class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+        <div class="container">
+            {% static_placeholder "phone_title" %}
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="nav navbar-nav">
+                    {% show_menu 0 100 100 100 %}
+                    <li class="nav-item mr-4">
+                        <a class="nav-link btn btn-sm btn-orange btn-form cta-btn" data-toggle="modal" data-target="#exampleModal">Оставить заявку <i class="far fa-paper-plane animated tada delay-5s infinite ml-1"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="section-0" class="bg_img jarallax" data-jarallax="{" speed": 0.2}">
+
+
+    {% block content %}{% endblock content %}
+    </header>
+    <!--And Header-->
+
+    <!-- Modal Window -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h5 class="modal-title w-100 font-weight-bold" id="exampleModalLabel">Обратная связь</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body  mx-3">
+                    <div id="contact" class="form-container">
+                        <fieldset>
+                            <div id="message"></div>
+                            <form method="post" action="js/contact-form.php" name="contactform" id="contactform">
+                                <div class="md-form mb-4">
+                                    <i class="fas fa-user prefix grey-text"></i>
+                                    <input name="name" id="name" type="text" value placeholder="Имя" class="form-control" autocomplete="off">
+                                </div>
+                               <!--div class="md-form mb-4">
+                                    <i class="fas fa-envelope prefix grey-text"></i>
+                                    <input name="email" id="email" type="text" value="" placeholder="Email" class="form-control" autocomplete="off" />
+                                </div-->
+                                <div class="md-form mb-4">
+                                    <i class="fas fa-home prefix grey-text"></i>
+                                    <input name="home" id="home" type="text" value placeholder="Ваш адрес" class="form-control" autocomplete="off">
+                                </div>
+                                <div class="md-form mb-4">
+                                    <i class="fas fa-phone prefix grey-text"></i>
+                                    <input name="phone" id="phone" type="text" value placeholder="Телефон" class="form-control" autocomplete="off">
+                                </div>
+                                <div class="md-form">
+                                    <i class="fas fa-pencil prefix grey-text"></i>
+                                    <textarea name="comments" id="comments" class="md-textarea form-control" rows="4" placeholder="Опишите задачу"></textarea>
+                                    <div class="editContent">
+                                        <p class="small text-center"><span class="guardsman text-info">* Все поля для заполнения важны.</span></p>
+                                    </div>
+                                </div>
+                                <div class="modal-footer d-flex justify-content-center">
+                                    <button class="btn unique-color-dark text-white" type="submit" id="cf-submit" name="submit">Отправить заявку</button>
+                                </div>
+                            </form>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- And Modal Window -->
+
+    <!-- jQuery first, then Bootstrap JS -->
+    <script src="{{ STATIC_URL }}js/jquery-3.3.1.min.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
+    <script src="{{ STATIC_URL }}js/mdb.min.js"></script>
+    <!-- Optional JavaScript -->
+	<script src="{{ STATIC_URL }}js/wow.min.js"></script>
+    <script src="{{ STATIC_URL }}js/owl.carousel.min.js"></script>
+    <script src="{{ STATIC_URL }}js/counter.js"></script>
+    <script src="{{ STATIC_URL }}js/typed.min.js"></script>
+    <script src="{{ STATIC_URL }}js/jquery.malihu.PageScroll2id.min.js"></script>
+    <script src="{{ STATIC_URL }}js/maskedinput.min.js"></script>
+    <script src="{{ STATIC_URL }}js/custom.js"></script>
+	<script type="text/javascript">
+    $(document).ready(function() {
+      new WOW().init();
+    });
+    </script>
+     {% render_block "js" %}
+
+</body></html>
