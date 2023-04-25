@@ -11,7 +11,7 @@
 <form action="" method="get">
 <td>{{ filterset.form.s_name }}
 <td>{{ filterset.form.name }}
-<td>{{ filterset.form.city_id }}
+<td>{{ filterset.form.city  }}
 <td>{{ filterset.form.email }}
 <td>{{ filterset.form.phone }}
 
@@ -24,7 +24,7 @@
     <tr>
         <td><a href="{{ i.get_absolute_url }}">{{ i.s_name }}</a></td>
         <td>{{ i.name|truncatechars:20 }}</td>
-        <td>{{ i.city_id }}</td>
+        <td>{{ i.city | city_tag }}</td>
         <td>{{ i.email }}</td>
         <td>{{ i.phone }}</td>
 

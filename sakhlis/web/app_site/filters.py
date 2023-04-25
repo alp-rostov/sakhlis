@@ -1,6 +1,7 @@
-from django_filters import FilterSet, ModelChoiceFilter, CharFilter
-from .models import RepairerList, CityDirectory
+from django_filters import FilterSet, ChoiceFilter, CharFilter
+from .models import RepairerList
 from django import forms
+from .models import CITY_CHOICES
 
 
 class RepFilter(FilterSet):
@@ -12,16 +13,17 @@ class RepFilter(FilterSet):
         widget=forms.TextInput(attrs={"class": "myfield"})
         )
     name = CharFilter(
-            field_name='head_article',
+            field_name='name',
             label='Имя',
             lookup_expr='startswith'
         )
 
-    city_id = ModelChoiceFilter(
-        field_name='city_id__name',
+    city = ChoiceFilter(
+        field_name='city',
         label='Город',
         lookup_expr='exact',
-        queryset=CityDirectory.objects.order_by('name').all(),
+        choices=CITY_CHOICES
+
     )
 
     email = CharFilter(
@@ -38,4 +40,4 @@ class RepFilter(FilterSet):
 
     class Meta:
         model = RepairerList
-        fields = ['s_name', 'name', 'city_id', 'email', 'phone', ]
+        fields = ['s_name', 'name', 'city', 'email', 'phone', ]

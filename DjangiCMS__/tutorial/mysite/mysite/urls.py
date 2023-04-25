@@ -1,10 +1,11 @@
 from cms.sitemaps import CMSSitemap
 from django.conf import settings
+from django.conf.urls import url
 from django.conf.urls.i18n import i18n_patterns
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.contrib.sitemaps.views import sitemap
-from django.urls import include, path
+from django.urls import include, path, re_path
 
 admin.autodiscover()
 
@@ -13,7 +14,11 @@ urlpatterns = [
 ]
 
 
-urlpatterns += i18n_patterns(path("admin/", admin.site.urls), path("", include("cms.urls")))
+urlpatterns += i18n_patterns(
+    path("admin/", admin.site.urls),
+    re_path(r'^www/', include('www.urls')),
+    path("", include("cms.urls"))
+)
 
 # This is only needed when using runserver.
 if settings.DEBUG:
