@@ -10,10 +10,13 @@ class RepairerL(ListView):
     model = RepairerList
     context_object_name = 'repairer'
     template_name = 'repairerlist.html'
+    queryset = RepairerList.objects.all().order_by('s_name').values('s_name', 'city', 'name',
+                                                                    'phone', 'email', 'foto', 'pk')
 
     def get_queryset(self):
         queryset = super().get_queryset()
         self.filterset = RepFilter(self.request.GET, queryset)
+        # print(self.filterset.queryset[1].rating_sum)
         return self.filterset.qs
 
     def get_context_data(self, **kwargs):
@@ -44,6 +47,7 @@ class RepaierUpdate(UpdateView):
 class RepaierDelete(DeleteView):
     model = RepairerList
     template_name = 'repaier_delete.html'
+
 
 def home(request):
     return render(request, 'index.html')
