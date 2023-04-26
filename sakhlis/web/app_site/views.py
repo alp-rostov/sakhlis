@@ -1,3 +1,4 @@
+from django.shortcuts import render
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from .models import RepairerList
 from .filters import RepFilter
@@ -9,7 +10,6 @@ class RepairerL(ListView):
     model = RepairerList
     context_object_name = 'repairer'
     template_name = 'repairerlist.html'
-    paginate_by = 2
 
     def get_queryset(self):
         queryset = super().get_queryset()
@@ -44,4 +44,6 @@ class RepaierUpdate(UpdateView):
 class RepaierDelete(DeleteView):
     model = RepairerList
     template_name = 'repaier_delete.html'
-    success_url = '/'
+
+def home(request):
+    return render(request, 'index.html')

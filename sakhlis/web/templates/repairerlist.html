@@ -6,7 +6,7 @@
 {% block body %}
 <h1>Список мастеров</h1>
 
-<table width="1300" border="0">
+<table width="1300" border="1">
     <tr>
 <form action="" method="get">
 <td>{{ filterset.form.s_name }}
@@ -16,18 +16,22 @@
 <td>{{ filterset.form.phone }}
 
     <input type="submit" value="Найти" />
+    <input type="reset" value="Очистить" />
 </form>
 </tr>
 
     {% for i in repairer %}
 
     <tr>
-        <td><a href="{{ i.get_absolute_url }}">{{ i.s_name }}</a></td>
-        <td>{{ i.name|truncatechars:20 }}</td>
+        <td><a href="{{ i.pk }}">{{ i.s_name }}</a></td>
+        <td>{{ i.name }}</td>
         <td>{{ i.city | city_tag }}</td>
         <td>{{ i.email }}</td>
         <td>{{ i.phone }}</td>
 
+
+        <td><a href="delete/{{ i.pk }}">Удалить</a> | <td><a href="create/{{ i.pk }}">Изменить</td>
+</td>
 
         <td><img src="media/{{ i.foto|default:'images/1.jpg' }}" width="100">    </td>
 
@@ -38,27 +42,27 @@
 </table>
 
 
-{% if page_obj.has_previous %}
-<a href="?{% url_replace page=1 %}">1</a>
-{% if page_obj.previous_page_number != 1 %}
-...
-<a href="?{% url_replace page=page_obj.previous_page_number %}">{{ page_obj.previous_page_number }}</a>
-{% endif %}
-{% endif %}
+<!--{% if page_obj.has_previous %}-->
+<!--<a href="?{% url_replace page=1 %}">1</a>-->
+<!--{% if page_obj.previous_page_number != 1 %}-->
+<!--...-->
+<!--<a href="?{% url_replace page=page_obj.previous_page_number %}">{{ page_obj.previous_page_number }}</a>-->
+<!--{% endif %}-->
+<!--{% endif %}-->
 
-{# Информация о текущей странице #}
-{{ page_obj.number }}
+<!--{# Информация о текущей странице #}-->
+<!--{{ page_obj.number }}-->
 
-{# Информация о следующих страницах #}
-{% if page_obj.has_next %}
-<a href="?{% url_replace page=page_obj.next_page_number %}">{{ page_obj.next_page_number }}</a>
-{% if paginator.num_pages != page_obj.next_page_number %}
-...
-<a href="?{% url_replace page=page_obj.paginator.num_pages %}">{{ page_obj.paginator.num_pages }}</a>
-{% endif %}
-{% endif %}
+<!--{# Информация о следующих страницах #}-->
+<!--{% if page_obj.has_next %}-->
+<!--<a href="?{% url_replace page=page_obj.next_page_number %}">{{ page_obj.next_page_number }}</a>-->
+<!--{% if paginator.num_pages != page_obj.next_page_number %}-->
+<!--...-->
+<!--<a href="?{% url_replace page=page_obj.paginator.num_pages %}">{{ page_obj.paginator.num_pages }}</a>-->
+<!--{% endif %}-->
+<!--{% endif %}-->
 
-{{ get }}
+<!--{{ get }}-->
 
 
 {% endblock body %}

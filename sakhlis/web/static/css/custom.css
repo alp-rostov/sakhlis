@@ -63,7 +63,7 @@ h2, h3{
 
 h2:after {
     content: "";
-    background: url(../images/underline1.png) no-repeat;
+    background: url('../images/underline1.png') no-repeat;
     width: 94px;
     height: 11px;
     position: absolute;
@@ -115,7 +115,7 @@ header h1 {
 
 .bg_img {
     background-image: linear-gradient(135deg, #febb79,
-        rgba(0, 0, 0, 0.5), rgba(52, 72, 106, 0.3)), url(../images/master-na-chas_1.jpg);
+        rgba(0, 0, 0, 0.5), rgba(52, 72, 106, 0.3)), url('../images/master-na-chas_1.jpg');
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: cover;
