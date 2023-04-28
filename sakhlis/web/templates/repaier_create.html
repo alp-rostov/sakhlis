@@ -1,6 +1,8 @@
 {% extends 'flatpages/default.html' %}
 
 {% block body %}
+{{ request.user.username }}
+<button> <a href="/app/logout/">Выйти</a> </button>
 <h1>Форма редактирования</h1>
 <hr>
 <form action="" method="post" enctype="multipart/form-data">

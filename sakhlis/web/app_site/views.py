@@ -1,5 +1,6 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
 from .models import RepairerList
 from .filters import RepFilter
 from .forms import RepairerForm
@@ -22,7 +23,6 @@ class RepairerL(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['filterset'] = self.filterset
-        # context['get'] = CityDirectory.objects.all()
         return context
 
 
@@ -32,10 +32,11 @@ class RepaierD(DetailView):
     context_object_name = 'rep'
 
 
-class RepaierCreate(CreateView):
+class RepaierCreate(LoginRequiredMixin, CreateView):
     model = RepairerList
     template_name = 'repaier_create.html'
     form_class = RepairerForm
+
 
 
 class RepaierUpdate(UpdateView):
@@ -47,6 +48,7 @@ class RepaierUpdate(UpdateView):
 class RepaierDelete(DeleteView):
     model = RepairerList
     template_name = 'repaier_delete.html'
+    success_url = '/app'
 
 
 def home(request):

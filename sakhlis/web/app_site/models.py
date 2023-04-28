@@ -45,5 +45,4 @@ class RepairerList(models.Model):
         return f"{self.name} {self.s_name}"
 
     def get_absolute_url(self):
-        print()
         return reverse('list_repair')
