@@ -1,12 +1,11 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from .models import RepairerList, OrderList
 from .filters import RepFilter
 from .forms import RepairerForm, BaseRegisterForm, OrderForm
-import telebot
 
-# Create your views here.
+
 class RepairerL(ListView):
     model = RepairerList
     context_object_name = 'repairer'

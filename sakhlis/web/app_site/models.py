@@ -10,20 +10,38 @@ CITY_CHOICES = [
     ('TB', 'Тбилиси'),
     ('BT', 'Батуми'),
     ('RS', 'Рустави'),
-
 ]
+
+AREA_CHOICES = [
+    ('--', 'Район'),
+    ('DB', 'Дидубе'),
+    ('KR', 'Крцаниси'),
+    ('ND', 'Надзаладеви'),
+    ('GR', 'Грмагеле'),
+    ('ZG', 'Згвис'),
+    ('GL', 'Глдани'),
+    ('DI', 'Дигоми'),
+    ('DD', 'Диди Дигоми'),
+    ('IS', 'Исани'),
+    ('SM', 'Самгори'),
+]
+
+
+
 
 class OrderList(models.Model):
     time_in = models.DateTimeField(auto_now_add=True)
     time_out = models.DateTimeField(null=True)
-    repairer_id = models.ForeignKey("RepairerList", on_delete=models.SET_NULL, null=True)
-    price = models.DecimalField(decimal_places=2, max_digits=7, null=True)
+    repairer_id = models.ForeignKey("RepairerList", on_delete=models.SET_NULL, null=True, verbose_name='Мастер')
+    price = models.DecimalField(decimal_places=2, max_digits=7, null=True, verbose_name='Стоимость работ')
     text_order = models.CharField(max_length=1500, verbose_name='Описание проблемы')
     customer_name = models.CharField(max_length=50, verbose_name='Ваше имя')
     customer_phone = models.CharField(validators=[phoneNumberRegex], max_length=16, verbose_name='Номер телефона')
-    customer_feedback = models.CharField(max_length=2500, null=True)
-    address_city = models.CharField(max_length=2, choices=CITY_CHOICES,  default='TB')
-    address_street_app = models.CharField(max_length=150, verbose_name='Адрес')
+    customer_feedback = models.CharField(max_length=2500, null=True, verbose_name='Комментарий')
+    address_city = models.CharField(max_length=2, choices=CITY_CHOICES,  default='TB', null=True, verbose_name='Город')
+    address_area = models.CharField(max_length=3, choices=AREA_CHOICES, default='', null=True, verbose_name='Район')
+    address_street_app = models.CharField(max_length=150, verbose_name='Улица', null=True )
+    address_num = models.CharField(max_length=10, verbose_name='Номер дома', null=True)
 
 
 

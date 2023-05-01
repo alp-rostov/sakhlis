@@ -1,7 +1,7 @@
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django import forms
-from .models import RepairerList, OrderList
+from .models import RepairerList, OrderList, AREA_CHOICES
 
 
 class RepairerForm(forms.ModelForm):
@@ -25,9 +25,20 @@ class OrderForm(forms.ModelForm):
         widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Телефон"})
     )
 
+    address_area = forms.ChoiceField(
+        label='Район',
+        widget=forms.Select(attrs={"class": "form-control", 'placeholder': "Район"}),
+        choices=AREA_CHOICES
+    )
+
     address_street_app = forms.CharField(
-        label='Адрес',
-        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Адрес"})
+        label='Улица',
+        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Улица"})
+    )
+
+    address_num = forms.CharField(
+        label='Номер дома',
+        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Номер дома"})
     )
 
 
@@ -36,13 +47,10 @@ class OrderForm(forms.ModelForm):
         fields = ('text_order',
                   'customer_name',
                   'customer_phone',
+                  'address_area',
                   'address_street_app',
+                  'address_num',
                 )
-
-
-
-
-
 
 
 class BaseRegisterForm(UserCreationForm):

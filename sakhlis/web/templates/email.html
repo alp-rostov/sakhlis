@@ -1,3 +1,5 @@
+{% load custom_filters %}
+{% load custom_tags %}
 <html>
 <head></head>
 <body>
@@ -13,11 +15,11 @@
 <p style="color: grey; font-size: 16px;">Имя:
     <span style="color: #222; font-weight: 500;">{{ instance.customer_name }}</span></p>
 <p style="color: grey; font-size: 16px;">Телефон: <span style="color: #222; font-weight: 500;">
-    <a href="mailto:{{ email }}">{{ instance.customer_phone }}</a></span></p>
+     <a href="tel:{{ instance.customer_phone }}">{{ instance.customer_phone }}</a></span></p>
 <p style="color: grey; font-size: 16px;">Адрес: <span style="color: #222; font-weight: 500;">
-    <a href="mailto:{{ email }}">{{ instance.address_street_app }}</a></span></p>
+    {{ instance.address_area | area_tag }}, {{ instance.address_street_app }}, {{ instance.address_num }}</span></p>
 <p style="color: grey; font-size: 16px;">Описание проблемы: <span style="color: #222; font-weight: 500;">
-    <a href="mailto:{{ email }}">{{ instance.text_order }}</a></span></p>
+    {{ instance.text_order }}</span></p>
 
 
 </div>
