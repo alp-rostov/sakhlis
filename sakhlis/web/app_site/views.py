@@ -1,10 +1,10 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.shortcuts import render
+from django.contrib.auth.models import User
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
-from .models import RepairerList
+from .models import RepairerList, OrderList
 from .filters import RepFilter
-from .forms import RepairerForm
-
+from .forms import RepairerForm, BaseRegisterForm, OrderForm
+import telebot
 
 # Create your views here.
 class RepairerL(ListView):
@@ -17,7 +17,6 @@ class RepairerL(ListView):
     def get_queryset(self):
         queryset = super().get_queryset()
         self.filterset = RepFilter(self.request.GET, queryset)
-        # print(self.filterset.queryset[1].rating_sum)
         return self.filterset.qs
 
     def get_context_data(self, **kwargs):
@@ -50,6 +49,23 @@ class RepaierDelete(DeleteView):
     template_name = 'repaier_delete.html'
     success_url = '/app'
 
+class BaseRegisterView(CreateView):
+    model = User
+    form_class = BaseRegisterForm
+    success_url = '/'
 
-def home(request):
-    return render(request, 'index.html')
+class NewOrder(CreateView):
+    model = OrderList
+    template_name = 'index.html'
+    form_class = OrderForm
+    success_url = '/app'
+
+
+
+
+
+
+
+
+
+

@@ -513,27 +513,30 @@
                                 <span aria-hidden="true">×</span>
                                 </button>
 				    </div>
-                            <form method="post" action="js/contact-form.php" name="contactform" id="contactform">
+                            <form method="post" action="" >
+                                {% csrf_token %}
+                                <div class="md-form mb-4">
+
+                                </div>
+
                                 <div class="md-form mb-4">
                                     <i class="fas fa-user prefix grey-text"></i>
-                                    <input name="name" id="name" type="text" value placeholder="Имя" class="form-control" autocomplete="off">
+                                        {{ form.customer_name }}
                                 </div>
-                               <!--div class="md-form mb-4">
-                                    <i class="fas fa-envelope prefix grey-text"></i>
-                                    <input name="email" id="email" type="text" value="" placeholder="Email" class="form-control" autocomplete="off" />
+                               <div class="md-form mb-4">
+                                    <i class="fas fa-phone prefix grey-text"></i>
+                                          
+                                          {{ form.customer_phone }}
                                 </div-->
                                 <div class="md-form mb-4">
                                     <i class="fas fa-home prefix grey-text"></i>
-                                    <input name="home" id="home" type="text" value placeholder="Ваш адрес" class="form-control" autocomplete="off">
+                                        {{ form.address_street_app }}
                                 </div>
                                 <div class="md-form mb-4">
-                                    <i class="fas fa-phone prefix grey-text"></i>
-                                    <input name="phone" id="phone" type="text" value placeholder="Телефон" class="form-control" autocomplete="off">
-                                </div>
-                                <div class="md-form">
                                     <i class="fas fa-pencil prefix grey-text"></i>
-                                    <textarea name="comments" id="comments" class="md-textarea form-control" rows="2" placeholder="Опишите задачу"></textarea>
-                                                                    </div>
+                                        {{ form.text_order }}
+                                </div>
+
                                 <div class="modal-footer d-flex justify-content-center">
                                     <button class="btn unique-color-dark text-white" type="submit" id="cf-submit" name="submit">Отправить заявку</button>
                                 </div>

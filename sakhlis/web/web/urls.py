@@ -20,7 +20,6 @@ from app_site import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("pages/", include("django.contrib.flatpages.urls")),
-    path('', views.home),
     path('app/', include('app_site.urls')),
 
 ]

@@ -27,7 +27,6 @@ class OrderList(models.Model):
 
 
 
-
 class RepairerList(models.Model):
     name = models.CharField(max_length=100, verbose_name='Имя')
     s_name = models.CharField(max_length=100, null=True, verbose_name='Фамилия')

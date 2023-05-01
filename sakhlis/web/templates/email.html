@@ -1,0 +1,25 @@
+<html>
+<head></head>
+<body>
+<div style="width: 100%; background: #e74c3c; padding: 0 0 5px;">
+    <p style="display: block; text-align: center; width: 100%; color: #fff; font-size: 24px;
+              text-decoration: none;" target="_blank">
+        Заказ на работы № {{ instance.pk }}
+    </p>
+</div>
+
+<div style="background: #f9f9f9; padding: 20px;">
+<!--    <h1 style="text-align: center; font-size: 22px; font-weight: 600;"></h1>-->
+<p style="color: grey; font-size: 16px;">Имя:
+    <span style="color: #222; font-weight: 500;">{{ instance.customer_name }}</span></p>
+<p style="color: grey; font-size: 16px;">Телефон: <span style="color: #222; font-weight: 500;">
+    <a href="mailto:{{ email }}">{{ instance.customer_phone }}</a></span></p>
+<p style="color: grey; font-size: 16px;">Адрес: <span style="color: #222; font-weight: 500;">
+    <a href="mailto:{{ email }}">{{ instance.address_street_app }}</a></span></p>
+<p style="color: grey; font-size: 16px;">Описание проблемы: <span style="color: #222; font-weight: 500;">
+    <a href="mailto:{{ email }}">{{ instance.text_order }}</a></span></p>
+
+
+</div>
+</body>
+</html>
