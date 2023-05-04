@@ -5,7 +5,6 @@ from .models import RepairerList, OrderList
 from .filters import RepFilter
 from .forms import RepairerForm, BaseRegisterForm, OrderForm
 
-
 class RepairerL(ListView):
     model = RepairerList
     context_object_name = 'repairer'
@@ -58,11 +57,6 @@ class NewOrder(CreateView):
     template_name = 'index.html'
     form_class = OrderForm
     success_url = '/app'
-
-
-
-
-
 
 
 

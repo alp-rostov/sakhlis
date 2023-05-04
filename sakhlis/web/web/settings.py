@@ -153,8 +153,8 @@ EMAIL_HOST_PASSWORD = 'sLvPgeF2ReHzfX7psU9y'  # пароль от почты
 EMAIL_USE_SSL = True  # Яндекс использует ssl, подробнее о том, что это, почитайте в дополнительных источниках, но включать его здесь обязательно
 
 
-# ADMINS = [
-#     ('Администратор', 'alprostov.1982@gmail.com'),
-#     # список всех админов в формате ('имя', 'их почта')
-# ]
-# SERVER_EMAIL = 'alp-rostov@mail.ru'  # это будет у нас вместо аргумента FROM в массовой рассылке
+CELERY_BROKER_URL = 'redis://localhost:6379'
+CELERY_RESULT_BACKEND = 'redis://localhost:6379'
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
