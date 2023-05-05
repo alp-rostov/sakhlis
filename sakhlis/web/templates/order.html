@@ -1,0 +1,24 @@
+{% extends 'flatpages/default.html' %}
+{% load custom_filters %}
+{% load custom_tags %}
+
+{% block body %}
+
+<table  width="1000">
+
+<tr><td>Имя: </td><td>{{ order.customer_name}}</td></tr>
+<tr><td>Телефон: </td><td>{{ order.customer_phone }}</td></tr>
+<tr><td>Адрес: </td><td>{{ order.address_city | choice_tag:'city'}},
+    {{ order.address_area | choice_tag:'area' }},
+    {{ order.address_street_app}}, {{ order.address_num}}</td></tr>
+<tr><td>Описание проблемы: </td><td>{{ order.text_order}}</td></tr>
+
+<tr><td>Время поступления : </td><td>{{ order.time_in}}</td></tr>
+<tr><td>Время окончания: </td><td>{{ order.time_out}}</td></tr>
+<tr><td>Мастер: </td><td>{{ order.repairer_id}}</td></tr>
+
+
+</table>
+
+
+{% endblock body %}

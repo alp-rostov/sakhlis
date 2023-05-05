@@ -6,5 +6,8 @@ register = template.Library()
 
 @register.filter()
 def choice_tag(value, A):
-    a = dict(CITY_CHOICES) if A=='city' else dict(AREA_CHOICES)
-    return f'{a[value]}'
+    try:
+        a = dict(CITY_CHOICES) if A=='city' else dict(AREA_CHOICES)
+        return f'{a[value]}'
+    except KeyError:
+        return f''

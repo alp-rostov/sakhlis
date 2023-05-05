@@ -13,7 +13,6 @@ CITY_CHOICES = [
 ]
 
 AREA_CHOICES = [
-    ('--', 'Район'),
     ('DB', 'Дидубе'),
     ('KR', 'Крцаниси'),
     ('ND', 'Надзаладеви'),
@@ -26,9 +25,6 @@ AREA_CHOICES = [
     ('SM', 'Самгори'),
 ]
 
-
-
-
 class OrderList(models.Model):
     time_in = models.DateTimeField(auto_now_add=True)
     time_out = models.DateTimeField(null=True)
@@ -36,8 +32,7 @@ class OrderList(models.Model):
     price = models.DecimalField(decimal_places=2, max_digits=7, null=True, verbose_name='Стоимость работ')
     text_order = models.CharField(max_length=1500, verbose_name='Описание проблемы')
     customer_name = models.CharField(max_length=50, verbose_name='Ваше имя')
-    customer_phone = models.CharField(validators=[phoneNumberRegex], max_length=16, verbose_name='Номер телефона')
-    customer_feedback = models.CharField(max_length=2500, null=True, verbose_name='Комментарий')
+    customer_phone = models.CharField(max_length=16, verbose_name='Номер телефона')
     address_city = models.CharField(max_length=2, choices=CITY_CHOICES,  default='TB', null=True, verbose_name='Город')
     address_area = models.CharField(max_length=3, choices=AREA_CHOICES, default='', null=True, verbose_name='Район')
     address_street_app = models.CharField(max_length=150, verbose_name='Улица', null=True )
@@ -48,9 +43,7 @@ class OrderList(models.Model):
 class RepairerList(models.Model):
     name = models.CharField(max_length=100, verbose_name='Имя')
     s_name = models.CharField(max_length=100, null=True, verbose_name='Фамилия')
-
     phone = models.CharField(validators=[phoneNumberRegex], max_length=16, unique=True, verbose_name='Телефон')
-
     city = models.CharField(max_length=2, choices=CITY_CHOICES,  default='TB')
     email = models.EmailField(max_length=200, null=True, verbose_name='Электронная почта')
     foto = models.ImageField(upload_to="images/",  null=True, blank=True, verbose_name='Фотография:')

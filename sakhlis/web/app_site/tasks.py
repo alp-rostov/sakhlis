@@ -32,7 +32,7 @@ def send_order_information(inst):
     keyboard.add(*button)
 
     html_content = render_to_string('email.html', {'instance': instance, })
-    subject_ = f'<b>Заказ на работы № {instance.pk} от {instance.time_in.strftime("%m/%d/%Y, %H:%M:%S")}</b>'
+    subject_ = f'<b>Заказ на работы № {instance.pk} от {instance.time_in.strftime("%m/%d/%Y")}</b>'
     from_ = 'alp-rostov@mail.ru'
     area = dict(AREA_CHOICES).get(instance.address_area)
     text = subject_ + f'\n ' \

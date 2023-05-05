@@ -28,7 +28,8 @@ class OrderForm(forms.ModelForm):
     address_area = forms.ChoiceField(
         label='Район',
         widget=forms.Select(attrs={"class": "form-control", 'placeholder': "Район"}),
-        choices=AREA_CHOICES
+        choices=[('', 'Выбрать значение')]+AREA_CHOICES,
+
     )
 
     address_street_app = forms.CharField(
