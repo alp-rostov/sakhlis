@@ -41,7 +41,7 @@ def send_order_information(inst):
                       f'АДРЕС: {area},  {instance.address_street_app}, ' \
                       f'{instance.address_num} \n ' \
                       f'ОПИСАНИЕ ПРОБЛЕМЫ: {instance.text_order} \n' \
-                      f'{map_}' \
+                      f'{map_}  \n' \
                       f'<b>ОТПРАВИТЬ ЗАКАЗ МАСТЕРУ:</b>' \
 
     msg = EmailMultiAlternatives(

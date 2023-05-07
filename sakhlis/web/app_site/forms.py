@@ -9,10 +9,11 @@ class RepairerForm(forms.ModelForm):
         model = RepairerList
         fields = '__all__'
 
+
 class OrderForm(forms.ModelForm):
     text_order = forms.CharField(
         label='Текст заказа',
-        widget=forms.Textarea(attrs={"class": "md-textarea form-control", 'placeholder': "Опишите задачу", 'rows':'2'})
+        widget=forms.Textarea(attrs={"class": "md-textarea form-control", 'placeholder': "Опишите задачу", 'rows': '2'})
         )
 
     customer_name = forms.CharField(
@@ -22,13 +23,13 @@ class OrderForm(forms.ModelForm):
 
     customer_phone = forms.CharField(
         label='Телефон',
-        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Телефон"})
+        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Телефон", 'type': 'tel'})
     )
 
     address_area = forms.ChoiceField(
         label='Район',
         widget=forms.Select(attrs={"class": "form-control", 'placeholder': "Район"}),
-        choices=[('', 'Выбрать значение')]+AREA_CHOICES,
+        choices=[('', 'Выбрать район')]+AREA_CHOICES,
 
     )
 
@@ -42,7 +43,6 @@ class OrderForm(forms.ModelForm):
         widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Номер дома"})
     )
 
-
     class Meta:
         model = OrderList
         fields = ('text_order',
@@ -51,13 +51,13 @@ class OrderForm(forms.ModelForm):
                   'address_area',
                   'address_street_app',
                   'address_num',
-                )
+                  )
 
 
 class BaseRegisterForm(UserCreationForm):
-    email = forms.EmailField(label = "Email")
-    first_name = forms.CharField(label = "Имя")
-    last_name = forms.CharField(label = "Фамилия")
+    email = forms.EmailField(label="Email")
+    first_name = forms.CharField(label="Имя")
+    last_name = forms.CharField(label="Фамилия")
 
     class Meta:
         model = User
@@ -66,4 +66,5 @@ class BaseRegisterForm(UserCreationForm):
                   "last_name",
                   "email",
                   "password1",
-                  "password2", )
+                  "password2",
+                  )

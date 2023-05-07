@@ -30,20 +30,31 @@
 </form>
 </tr>
 
-    {% for i in order %}
+{% regroup order by time_in|date:"d.m.Y" as day %}
 
+    {% for y in day %}
     <tr>
-        <td><a href="list_order/{{i.pk }}">{{ i.time_in }}</a></td>
-        <td>{{ i.time_out }}</td>
-        <td>{{ i.address_city | choice_tag:'city' }}</td>
-        <td>{{ i.address_area | choice_tag:'area'}}</td>
-        <td>{{ i.address_street_app }}</td>
+        <td>
+            <b>{{ y.grouper }}</b>
+        </td>
+    <tr>
 
-        <td><a href="list_order/delete/{{ i.pk }}">Удалить</a></td>
-        <td><a href="create/{{ i.pk }}">Изменить</td>
+        {% for i in y.list %}
+        <tr>
+            <td>
+            <a href="list_order/{{i.pk }}">{{ i.time_in | date:"H:i"}}</a></td>
+
+            <td>{{ i.time_out }}</td>
+            <td>{{ i.address_city | choice_tag:'city' }}</td>
+            <td>{{ i.address_area | choice_tag:'area'}}</td>
+            <td>{{ i.address_street_app }}</td>
+
+            <td><a href="list_order/delete/{{ i.pk }}">Удалить</a></td>
+            <td><a href="create/{{ i.pk }}">Изменить</td>
+        </tr>
+        {% endfor %}
 
 
-    </tr>
     {% endfor %}
 </table>
 

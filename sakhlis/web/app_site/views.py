@@ -80,7 +80,7 @@ class OrderManagementSystem(ListView):
     model = OrderList
     context_object_name = 'order'
     template_name = 'orderlist.html'
-
+    ordering = ['-time_in']
     def get_queryset(self):
         queryset = super().get_queryset()
         self.filterset = OrderFilter(self.request.GET, queryset)
@@ -96,9 +96,11 @@ class OrderDatail(DetailView):
     template_name = 'order.html'
     context_object_name = 'order'
 
+
 class OrderDelete(DeleteView):
     model = OrderList
     template_name = 'order_delete.html'
     success_url = '/app/list_order'
+
 
 

@@ -25,6 +25,7 @@ AREA_CHOICES = [
     ('SM', 'Самгори'),
 ]
 
+
 class OrderList(models.Model):
     time_in = models.DateTimeField(auto_now_add=True)
     time_out = models.DateTimeField(null=True)
@@ -35,9 +36,8 @@ class OrderList(models.Model):
     customer_phone = models.CharField(max_length=16, verbose_name='Номер телефона')
     address_city = models.CharField(max_length=2, choices=CITY_CHOICES,  default='TB', null=True, verbose_name='Город')
     address_area = models.CharField(max_length=3, choices=AREA_CHOICES, default='', null=True, verbose_name='Район')
-    address_street_app = models.CharField(max_length=150, verbose_name='Улица', null=True )
+    address_street_app = models.CharField(max_length=150, verbose_name='Улица', null=True)
     address_num = models.CharField(max_length=10, verbose_name='Номер дома', null=True)
-
 
 
 class RepairerList(models.Model):

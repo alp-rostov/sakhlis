@@ -42,6 +42,7 @@ class RepFilter(FilterSet):
         model = RepairerList
         fields = ['s_name', 'name', 'city', 'email', 'phone', ]
 
+
 class OrderFilter(FilterSet):
     text_order = CharFilter(
         field_name='text_order',
@@ -87,15 +88,16 @@ class OrderFilter(FilterSet):
         field_name="time_in",
         widget=forms.DateInput(attrs={'type': 'date'}),
         label='Дата поступления заказа',
-        lookup_expr='exact',
+        lookup_expr='icontains',
     )
 
     time_out = DateFilter(
         field_name="time_out",
         widget=forms.DateInput(attrs={'type': 'date'}),
         label='Дата выполнения заказа',
-        lookup_expr='exact',
+        lookup_expr='icontains',
     )
+
     class Meta:
         model = OrderList
         fields = ['text_order', 'customer_name', 'customer_phone',
