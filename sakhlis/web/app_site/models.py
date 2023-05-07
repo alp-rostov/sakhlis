@@ -27,8 +27,8 @@ AREA_CHOICES = [
 
 
 class OrderList(models.Model):
-    time_in = models.DateTimeField(auto_now_add=True)
-    time_out = models.DateTimeField(null=True)
+    time_in = models.DateTimeField(auto_now_add=True, verbose_name='Дата заказа')
+    time_out = models.DateTimeField(null=True, verbose_name='Дата выполнения')
     repairer_id = models.ForeignKey("RepairerList", on_delete=models.SET_NULL, null=True, verbose_name='Мастер')
     price = models.DecimalField(decimal_places=2, max_digits=7, null=True, verbose_name='Стоимость работ')
     text_order = models.CharField(max_length=1500, verbose_name='Описание проблемы')

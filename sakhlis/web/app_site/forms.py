@@ -51,8 +51,13 @@ class OrderForm(forms.ModelForm):
                   'address_area',
                   'address_street_app',
                   'address_num',
+
                   )
 
+class OrderFormUpdate(forms.ModelForm):
+    class Meta:
+        model = OrderList
+        fields = '__all__'
 
 class BaseRegisterForm(UserCreationForm):
     email = forms.EmailField(label="Email")
