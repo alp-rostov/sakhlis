@@ -6,8 +6,12 @@
 <h1>Форма редактирования заказов</h1>
 <hr>
 <form action="" method="post" enctype="multipart/form-data">
+    <b>дата заказа: {{ time_in }}</b><br>
     {% csrf_token %}
     {{ form.as_p }}
+    {{ form.time_in.value}}
     <input type="submit" value="Save" />
 </form>
+
+
 {% endblock body %}

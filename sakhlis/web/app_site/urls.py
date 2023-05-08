@@ -1,12 +1,12 @@
 from django.contrib.auth.views import LoginView, LogoutView
 from django.urls import path
-from .views import RepairerL, RepaierD, RepaierCreate, RepaierUpdate, RepaierDelete, BaseRegisterView, NewOrder, \
-    OrderManagementSystem, OrderDelete, OrderDatail, OrderUpdate
+from .views import RepairerL, RepaierD, RepaierCreate, RepaierUpdate, RepaierDelete, BaseRegisterView,  \
+    OrderManagementSystem, OrderDelete, OrderDatail, OrderUpdate, OrderCreate
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('', NewOrder.as_view(), name='new-oder'),
+    path('', OrderCreate.as_view(), name='new-oder'),
     path('list_order', OrderManagementSystem.as_view(), name='list_order'),
     path('list_order/<int:pk>', OrderDatail.as_view(), name='datail_order'),
     path('list_order/delete/<int:pk>', OrderDelete.as_view()),

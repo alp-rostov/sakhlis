@@ -1,4 +1,4 @@
-from django_filters import FilterSet, ChoiceFilter, CharFilter, DateFilter
+from django_filters import FilterSet, ChoiceFilter, CharFilter, DateFilter, BooleanFilter, ModelChoiceFilter
 from .models import RepairerList, OrderList, AREA_CHOICES
 from django import forms
 from .models import CITY_CHOICES
@@ -91,11 +91,12 @@ class OrderFilter(FilterSet):
         lookup_expr='icontains',
     )
 
-    time_out = DateFilter(
-        field_name="time_out",
-        widget=forms.DateInput(attrs={'type': 'date'}),
-        label='Дата выполнения заказа',
-        lookup_expr='icontains',
+    time_out = BooleanFilter(
+        field_name='time_out',
+        label='Текущие работы',
+        lookup_expr='isnull',
+        widget=forms.Select(attrs={'class': 'sss'},  choices=[('', 'Все'), ('True', 'в работе'), ('False', 'выполнено')]),
+        # # choices=[('','Все'),('2','выполненные'),('','В работе')]
     )
 
     class Meta:

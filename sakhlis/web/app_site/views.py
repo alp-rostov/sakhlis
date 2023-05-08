@@ -1,3 +1,5 @@
+from pprint import pprint
+
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
@@ -53,11 +55,11 @@ class BaseRegisterView(CreateView):
     success_url = '/'
 
 
-class NewOrder(CreateView):
+class OrderCreate(CreateView):
     model = OrderList
     template_name = 'order_create.html'
     form_class = OrderForm
-    success_url = '/app'
+    success_url = ''
 
 class OrderManagementSystem(ListView):
     model = OrderList
@@ -84,6 +86,11 @@ class OrderUpdate(UpdateView):
     template_name = 'order_update.html'
     form_class = OrderFormUpdate
     success_url = '/app/list_order'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['time_in'] = self.object.time_in
+        return context
 
 class OrderDelete(DeleteView):
     model = OrderList

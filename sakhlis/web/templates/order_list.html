@@ -11,7 +11,6 @@
 <table width="1300" border="1">
     <tr>
 <th>{{ filterset.form.time_in.label }}</th>
-<th>{{ filterset.form.time_out.label }}</th>
 <th>{{ filterset.form.address_city.label }}</th>
 <th>{{ filterset.form.address_area.label }}</th>
 <th>{{ filterset.form.address_street_app.label }}</th>
@@ -20,8 +19,7 @@
 
     <tr>
 <form action="" method="get">
-<td>{{ filterset.form.time_in }}</td>
-<td>{{ filterset.form.time_out }}</td>
+<td>{{ filterset.form.time_in }} | {{ filterset.form.time_out }}</td>
 <td>{{ filterset.form.address_city }}</td>
 <td>{{ filterset.form.address_area }}</td>
 <td>{{ filterset.form.address_street_app }}</td>
@@ -34,7 +32,7 @@
 
     {% for y in day %}
     <tr>
-        <td>
+        <td  colspan="6">
             <b>{{ y.grouper }}</b>
         </td>
     <tr>
@@ -42,9 +40,9 @@
         {% for i in y.list %}
         <tr>
             <td>
-            <a href="list_order/{{i.pk }}">{{ i.time_in | date:"H:i"}}</a></td>
+            <a href="list_order/{{i.pk }}">{{ i.time_in | date:"H:i"}}</a> {{ i.time_out | finish_order_tag }}</td>
 
-            <td>{{ i.time_out }}</td>
+
             <td>{{ i.address_city | choice_tag:'city' }}</td>
             <td>{{ i.address_area | choice_tag:'area'}}</td>
             <td>{{ i.address_street_app }}</td>
