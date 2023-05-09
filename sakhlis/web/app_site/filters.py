@@ -1,8 +1,7 @@
-from django_filters import FilterSet, ChoiceFilter, CharFilter, DateFilter, BooleanFilter, ModelChoiceFilter
-from .models import RepairerList, OrderList, AREA_CHOICES
-from django import forms
+from django_filters import FilterSet, ChoiceFilter, CharFilter, DateFilter, BooleanFilter
+from .models import RepairerList, OrderList
 from .models import CITY_CHOICES
-
+from django import forms
 
 class RepFilter(FilterSet):
 
@@ -70,14 +69,6 @@ class OrderFilter(FilterSet):
 
     )
 
-    address_area = ChoiceFilter(
-        field_name='address_area',
-        label='Район',
-        lookup_expr='exact',
-        choices=AREA_CHOICES
-
-    )
-
     address_street_app = CharFilter(
         field_name='street',
         label='Улица',
@@ -96,12 +87,11 @@ class OrderFilter(FilterSet):
         label='Текущие работы',
         lookup_expr='isnull',
         widget=forms.Select(attrs={'class': 'sss'},  choices=[('', 'Все'), ('True', 'в работе'), ('False', 'выполнено')]),
-        # # choices=[('','Все'),('2','выполненные'),('','В работе')]
     )
 
     class Meta:
         model = OrderList
         fields = ['text_order', 'customer_name', 'customer_phone',
-                  'address_city', 'address_area', 'address_street_app',
-                  'time_in', 'time_out']
+                  'address_city', 'address_street_app',
+                  'time_in', 'time_out', 'repairer_id']
 

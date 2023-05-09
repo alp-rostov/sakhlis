@@ -9,7 +9,6 @@
 <tr><td>Имя: </td><td>{{ order.customer_name}}</td></tr>
 <tr><td>Телефон: </td><td>{{ order.customer_phone }}</td></tr>
 <tr><td>Адрес: </td><td>{{ order.address_city | choice_tag:'city'}},
-    {{ order.address_area | choice_tag:'area' }},
     {{ order.address_street_app}}, {{ order.address_num}}</td></tr>
 <tr><td>Описание проблемы: </td><td>{{ order.text_order}}</td></tr>
 

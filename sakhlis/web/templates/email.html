@@ -17,7 +17,7 @@
 <p style="color: grey; font-size: 16px;">Телефон: <span style="color: #222; font-weight: 500;">
      <a href="tel:{{ instance.customer_phone }}">{{ instance.customer_phone }}</a></span></p>
 <p style="color: grey; font-size: 16px;">Адрес: <span style="color: #222; font-weight: 500;">
-    {{ instance.address_area | choice_tag:'area' }}, {{ instance.address_street_app }}, {{ instance.address_num }}</span></p>
+    {{ instance.address_area }}, {{ instance.address_street_app }}, {{ instance.address_num }}</span></p>
 <p style="color: grey; font-size: 16px;">Описание проблемы: <span style="color: #222; font-weight: 500;">
     {{ instance.text_order }}</span></p>
 

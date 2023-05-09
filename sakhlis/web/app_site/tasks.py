@@ -5,7 +5,7 @@ from django.template.loader import render_to_string
 from geopy.geocoders import Nominatim
 from telebot import types
 
-from .models import OrderList, RepairerList, AREA_CHOICES
+from .models import OrderList, RepairerList
 
 TOKEN = "6082335579:AAHqLPJB2RSdczDSbshpYV5Q7oqmyIcnbFI"
 CHAT_ID = 5621399532
@@ -34,11 +34,10 @@ def send_order_information(inst):
     html_content = render_to_string('email.html', {'instance': instance, })
     subject_ = f'<b>Заказ на работы № {instance.pk} от {instance.time_in.strftime("%m/%d/%Y")}</b>'
     from_ = 'alp-rostov@mail.ru'
-    area = dict(AREA_CHOICES).get(instance.address_area)
     text = subject_ + f'\n ' \
                       f'ИМЯ: {instance.customer_name} \n' \
                       f'ТЕЛЕФОН: {instance.customer_phone} \n ' \
-                      f'АДРЕС: {area},  {instance.address_street_app}, ' \
+                      f'АДРЕС: {instance.address_street_app}, ' \
                       f'{instance.address_num} \n ' \
                       f'ОПИСАНИЕ ПРОБЛЕМЫ: {instance.text_order} \n' \
                       f'{map_}  \n' \

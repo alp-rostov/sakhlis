@@ -1,11 +1,11 @@
-from pprint import pprint
-
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
+from django.http import HttpResponse
+from django.shortcuts import redirect
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from .models import RepairerList, OrderList
 from .filters import RepFilter, OrderFilter
-from .forms import RepairerForm, BaseRegisterForm, OrderForm, OrderFormUpdate
+from .forms import RepairerForm, BaseRegisterForm, OrderForm
 
 
 class RepairerL(ListView):
@@ -59,13 +59,14 @@ class OrderCreate(CreateView):
     model = OrderList
     template_name = 'order_create.html'
     form_class = OrderForm
-    success_url = ''
+    success_url = '/'
 
 class OrderManagementSystem(ListView):
     model = OrderList
     context_object_name = 'order'
     template_name = 'order_list.html'
     ordering = ['-time_in']
+
     def get_queryset(self):
         queryset = super().get_queryset()
         self.filterset = OrderFilter(self.request.GET, queryset)
@@ -84,8 +85,8 @@ class OrderDatail(DetailView):
 class OrderUpdate(UpdateView):
     model = OrderList
     template_name = 'order_update.html'
-    form_class = OrderFormUpdate
-    success_url = '/app/list_order'
+    form_class = OrderForm
+    success_url = '/list_order'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -95,8 +96,14 @@ class OrderUpdate(UpdateView):
 class OrderDelete(DeleteView):
     model = OrderList
     template_name = 'order_delete.html'
-    success_url = '/app/list_order'
+    success_url = '/list_order'
 
-
-
+def OrderAddRepaier(request):
+    d=request.GET['pk_order']
+    r=OrderList.objects.get(pk=d)
+    b=RepairerList.objects.get(pk=20)
+    r.repairer_id = b
+    r.save()
+    print(r.repairer_id)
+    return redirect('/')
 

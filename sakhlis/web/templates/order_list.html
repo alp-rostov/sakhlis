@@ -12,8 +12,8 @@
     <tr>
 <th>{{ filterset.form.time_in.label }}</th>
 <th>{{ filterset.form.address_city.label }}</th>
-<th>{{ filterset.form.address_area.label }}</th>
 <th>{{ filterset.form.address_street_app.label }}</th>
+<th>{{ filterset.form.repairer_id.label }}</th>
 
 </tr>
 
@@ -21,10 +21,11 @@
 <form action="" method="get">
 <td>{{ filterset.form.time_in }} | {{ filterset.form.time_out }}</td>
 <td>{{ filterset.form.address_city }}</td>
-<td>{{ filterset.form.address_area }}</td>
 <td>{{ filterset.form.address_street_app }}</td>
+<td>{{ filterset.form.repairer_id }}</td>
+
 <td><input type="submit" value="Найти" /></td>
-<td><input type="reset" value="Очистить" /></td>
+
 </form>
 </tr>
 
@@ -44,7 +45,6 @@
 
 
             <td>{{ i.address_city | choice_tag:'city' }}</td>
-            <td>{{ i.address_area | choice_tag:'area'}}</td>
             <td>{{ i.address_street_app }}</td>
 
             <td><a href="list_order/delete/{{ i.pk }}">Удалить</a></td>

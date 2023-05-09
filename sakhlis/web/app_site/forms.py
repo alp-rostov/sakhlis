@@ -1,7 +1,9 @@
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django import forms
-from .models import RepairerList, OrderList, AREA_CHOICES
+from django.forms import DateTimeInput
+
+from .models import RepairerList, OrderList
 
 
 class RepairerForm(forms.ModelForm):
@@ -26,13 +28,6 @@ class OrderForm(forms.ModelForm):
         widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Телефон", 'type': 'tel'})
     )
 
-    address_area = forms.ChoiceField(
-        label='Район',
-        widget=forms.Select(attrs={"class": "form-control", 'placeholder': "Район"}),
-        choices=[('', 'Выбрать район')]+AREA_CHOICES,
-
-    )
-
     address_street_app = forms.CharField(
         label='Улица',
         widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Улица"})
@@ -43,21 +38,25 @@ class OrderForm(forms.ModelForm):
         widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Номер дома"})
     )
 
+    time_out = forms.DateTimeField(
+        label='Дата выполнения',
+        widget=DateTimeInput(attrs={'type': 'datetime-local'}),
+        required=False
+
+    )
+
     class Meta:
         model = OrderList
         fields = ('text_order',
                   'customer_name',
                   'customer_phone',
-                  'address_area',
                   'address_street_app',
                   'address_num',
-
+                  'repairer_id',
+                  'price',
+                  'time_out'
                   )
 
-class OrderFormUpdate(forms.ModelForm):
-    class Meta:
-        model = OrderList
-        fields = '__all__'
 
 class BaseRegisterForm(UserCreationForm):
     email = forms.EmailField(label="Email")
