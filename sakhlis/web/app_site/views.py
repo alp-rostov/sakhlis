@@ -99,11 +99,12 @@ class OrderDelete(DeleteView):
     success_url = '/list_order'
 
 def OrderAddRepaier(request):
-    d=request.GET['pk_order']
-    r=OrderList.objects.get(pk=d)
-    b=RepairerList.objects.get(pk=20)
-    r.repairer_id = b
-    r.save()
-    print(r.repairer_id)
-    return redirect('/')
-
+    order = OrderList.objects.get(pk=request.GET['pk_order'])
+    repaier = RepairerList.objects.get(pk=request.GET['pk_repairer'])
+    if order and repaier:
+        if not order.repairer_id:
+            order.repairer_id = repaier
+            order.save()
+            return redirect(f'/list_order/{order.pk}')
+        else:
+            return redirect(f'/')  # TODO настроить сообщение, что ремонтник уже указан

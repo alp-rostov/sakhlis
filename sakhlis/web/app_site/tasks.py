@@ -1,6 +1,5 @@
 import telebot
 from celery import shared_task
-from django.core.mail import EmailMultiAlternatives
 from django.template.loader import render_to_string
 from geopy.geocoders import Nominatim
 from telebot import types
@@ -27,13 +26,14 @@ def send_order_information(inst):
     keyboard = types.InlineKeyboardMarkup()
     button = []
     for i in repairer:
-        url_ = f'http://127.0.0.1:8000/app/{i.get("pk")}'
+        url_ = f'http://127.0.0.1:8000/add?pk_order=' \
+               f'{instance.pk}&pk_repairer={i.get("pk")}'       # link to add repaier_id in order
         button.append(types.InlineKeyboardButton(text=i.get("s_name"), url=url_))
     keyboard.add(*button)
 
-    html_content = render_to_string('email.html', {'instance': instance, })
+    # html_content = render_to_string('email.html', {'instance': instance, })
     subject_ = f'<b>Заказ на работы № {instance.pk} от {instance.time_in.strftime("%m/%d/%Y")}</b>'
-    from_ = 'alp-rostov@mail.ru'
+    # from_ = 'alp-rostov@mail.ru'
     text = subject_ + f'\n ' \
                       f'ИМЯ: {instance.customer_name} \n' \
                       f'ТЕЛЕФОН: {instance.customer_phone} \n ' \
@@ -43,13 +43,13 @@ def send_order_information(inst):
                       f'{map_}  \n' \
                       f'<b>ОТПРАВИТЬ ЗАКАЗ МАСТЕРУ:</b>' \
 
-    msg = EmailMultiAlternatives(
-        subject=subject_,
-        body='',  # это то же, что и message
-        from_email=from_,
-        to=['alprostov.1982@gmail.com'],  # это то же, что и recipients_list
-    )
-    msg.attach_alternative(html_content, "text/html")  # добавляем html
+    # msg = EmailMultiAlternatives(
+    #     subject=subject_,
+    #     body='',  # это то же, что и message
+    #     from_email=from_,
+    #     to=['alprostov.1982@gmail.com'],  # это то же, что и recipients_list
+    # )
+    # msg.attach_alternative(html_content, "text/html")  # добавляем html
 
     # msg.send()  # отсылаем письмо о новом заказе на почту
 
