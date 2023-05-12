@@ -15,5 +15,5 @@ def choice_tag(value, A):
 
 @register.filter()
 def finish_order_tag(value):
-    return f'заказ выполнен' if value else f'в работе'
+    return f'' if value else f' в работе...'
 

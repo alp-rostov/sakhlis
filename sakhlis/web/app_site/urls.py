@@ -13,8 +13,8 @@ urlpatterns = [
     path('list_order/update/<int:pk>', OrderUpdate.as_view()),
     path('add', OrderAddRepaier),
 
-    path('list', RepairerL.as_view(), name='list_repair'),
-    path('list/<int:pk>', RepaierD.as_view(), name='datail_repair'),
+    path('list_repair', RepairerL.as_view(), name='list_repair'),
+    path('list_repair/<int:pk>', RepaierD.as_view(), name='datail_repair'),
     path('create', RepaierCreate.as_view()),
     path('create/<int:pk>', RepaierUpdate.as_view()),
     path('delete/<int:pk>', RepaierDelete.as_view()),

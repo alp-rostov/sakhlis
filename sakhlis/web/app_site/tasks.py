@@ -56,3 +56,7 @@ def send_order_information(inst):
     bot = telebot.TeleBot(TOKEN)
 
     bot.send_message(CHAT_ID, text, reply_markup=keyboard,  parse_mode='HTML')
+
+@shared_task
+def printw():
+    print('ssssssssssss')

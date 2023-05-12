@@ -23,14 +23,14 @@
     {% for i in repairer %}
 
     <tr>
-        <td><a href="list/{{ i.pk }}">{{ i.s_name }}</a></td>
+        <td><a href="list_repair/{{ i.pk }}">{{ i.s_name }}</a></td>
         <td>{{ i.name }}</td>
         <td>{{ i.city | choice_tag:'city' }}</td>
         <td>{{ i.email }}</td>
         <td>{{ i.phone }}</td>
 
 
-        <td><a href="delete/{{ i.pk }}">Удалить</a> | <td><a href="create/{{ i.pk }}">Изменить</td>
+        <td><a href="delete/{{ i.pk }}">Удалить</a> | <td><a href="create/{{ i.pk }}">Изменить</a></td>
 </td>
 
         <td><img src="media/{{ i.foto|default:'images/1.jpg' }}" width="100">    </td>

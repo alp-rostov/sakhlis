@@ -2,6 +2,7 @@
 {% load custom_filters %}
 {% load custom_tags %}
 
+
 {% block body %}
 
 <table  width="1000">
@@ -15,9 +16,20 @@
 <tr><td>Время поступления : </td><td>{{ order.time_in}}</td></tr>
 <tr><td>Время окончания: </td><td>{{ order.time_out}}</td></tr>
 <tr><td>Мастер: </td><td>{{ order.repairer_id}}</td></tr>
+<tr><td colspan="2">
 
 
-</table>
+    {% for service in services %}
+    {{ service.service_id__name }} | {{ service.quantity }}  | {{ service.price }} | {{ service.min_price}}  <br>
+    {% endfor %}<br>
+<h3>итого {{ sum }}
+</h3>
+
+
+
+
+</td></tr>
+</table>| {{ service.quantity }} | {{ service.price }}
 
 
 {% endblock body %}

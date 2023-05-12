@@ -1,14 +1,15 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
+from django.db.models import F, Min
 from django.http import HttpResponse
 from django.shortcuts import redirect
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
-from .models import RepairerList, OrderList
+from .models import RepairerList, OrderList, Invoice
 from .filters import RepFilter, OrderFilter
 from .forms import RepairerForm, BaseRegisterForm, OrderForm
 
 
-class RepairerL(ListView):
+class RepairerL(LoginRequiredMixin, ListView):
     model = RepairerList
     context_object_name = 'repairer'
     template_name = 'repairer_list.html'
@@ -81,6 +82,14 @@ class OrderDatail(DetailView):
     model = OrderList
     template_name = 'order_detail.html'
     context_object_name = 'order'
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['services'] = Invoice.objects.filter\
+            (order_id=context['order'].id).annotate(min_price=F('price')*F('quantity'))
+        context['sum'] = sum(i.min_price for i in context['services'])
+
+        return context
+
 
 class OrderUpdate(UpdateView):
     model = OrderList
@@ -108,3 +117,6 @@ def OrderAddRepaier(request):
             return redirect(f'/list_order/{order.pk}')
         else:
             return redirect(f'/')  # TODO настроить сообщение, что ремонтник уже указан
+
+
+

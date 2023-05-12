@@ -7,3 +7,15 @@ app = Celery('web')
 app.config_from_object('django.conf:settings', namespace='CELERY')
 
 app.autodiscover_tasks()
+
+#
+# app.conf.beat_schedule = {
+#     'action_every_5_seconds': {
+#         'task': 'app_site.tasks.printw',
+#         'schedule': 5,
+#     },
+# }
+
+@app.task(bind=True, ignore_result=True)
+def debug_task(self):
+    print(f'Request: {self.request!r}')

@@ -8,21 +8,21 @@
 
 <h1>Список заказов</h1>
 
-<table width="1300" border="1">
+<table  border="1">
     <tr>
 <th>{{ filterset.form.time_in.label }}</th>
-<th>{{ filterset.form.address_city.label }}</th>
-<th>{{ filterset.form.address_street_app.label }}</th>
+<th>{{ filterset.form.address_city.label }} | {{ filterset.form.address_street_app.label }}</th>
 <th>{{ filterset.form.repairer_id.label }}</th>
+<th>Стоимость</th>
 
 </tr>
 
     <tr>
 <form action="" method="get">
 <td>{{ filterset.form.time_in }} | {{ filterset.form.time_out }}</td>
-<td>{{ filterset.form.address_city }}</td>
-<td>{{ filterset.form.address_street_app }}</td>
+<td>{{ filterset.form.address_city }} | {{ filterset.form.address_street_app }}</td>
 <td>{{ filterset.form.repairer_id }}</td>
+<td></td>
 
 <td><input type="submit" value="Найти" /></td>
 
@@ -41,18 +41,19 @@
         {% for i in y.list %}
         <tr>
             <td>
-            <a href="list_order/{{i.pk }}">{{ i.time_in | date:"H:i"}}</a> {{ i.time_out | finish_order_tag }}</td>
+            <a href="list_order/{{i.pk }}">Заказа №{{ i.pk}}</a>{{ i.time_out | finish_order_tag }}<br>
+            {{ i.address_city | choice_tag:'city' }}, {{ i.address_street_app }}, {{ i.address_num }}</td>
 
+            <td>{{ i.repairer_id }}</td>
+            <td>{{ i.text_order|truncatewords:7 }}</td>
+            <td>{{ i.price }}</td>
+            <td>
+                {% if request.user.is_authenticated %}
+                <a href="list_order/delete/{{ i.pk }}">Удалить</a> | <a href="list_order/update/{{ i.pk }}">Изменить</a></td>
+                {% endif %}
+            </tr>
 
-            <td>{{ i.address_city | choice_tag:'city' }}</td>
-            <td>{{ i.address_street_app }}</td>
-
-            <td><a href="list_order/delete/{{ i.pk }}">Удалить</a></td>
-    <td><a href="list_order/update/{{ i.pk }}">Изменить</a></td>
-        </tr>
         {% endfor %}
-
-
     {% endfor %}
 </table>
 

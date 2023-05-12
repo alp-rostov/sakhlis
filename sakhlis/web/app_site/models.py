@@ -20,9 +20,28 @@ WORK_CHOICES = [
     ('OT', 'Ремонт окон, дверей'),
 
 ]
+QUANTITY_CHOICES = [
+    ('SV', 'Услуга'),
+    ('ME', 'Метр'),
+    ('QL', 'Килограмм'),
+    ('TH', 'Штука'),
 
-class OrderCategory(models.Model):
-    pass
+]
+
+class Service(models.Model):
+    name = models.CharField(null=True, blank=True, max_length=500, verbose_name='Услуга')
+    type = models.CharField(choices=WORK_CHOICES, null=True, blank=True, max_length=3, verbose_name='Вид работ')
+    def __str__(self):
+        return f"{self.name}"
+
+
+class Invoice(models.Model):
+    service_id = models.ForeignKey('Service', on_delete=models.CASCADE, null=True, blank=True, )
+    order_id = models.ForeignKey('OrderList', on_delete=models.CASCADE, null=True, blank=True,)
+    quantity_type = models.CharField(choices=QUANTITY_CHOICES, max_length=3, null=True, blank=True, verbose_name='Измерение')
+    quantity = models.DecimalField(decimal_places=2, max_digits=7, null=True, blank=True,  verbose_name='Количество')
+    price = models.DecimalField(decimal_places=2, max_digits=7, null=True, blank=True,  verbose_name='Цена')
+
 class OrderList(models.Model):
     time_in = models.DateTimeField(auto_now_add=True, verbose_name='Дата заказа')
     time_out = models.DateTimeField(null=True, blank=True, verbose_name='Дата выполнения')
@@ -35,7 +54,10 @@ class OrderList(models.Model):
     work_type = models.CharField(max_length=3, choices=WORK_CHOICES, default='', null=True, blank=True, verbose_name='Вид работ')
     address_street_app = models.CharField(max_length=150, verbose_name='Улица', null=True, blank=True)
     address_num = models.CharField(max_length=10, verbose_name='Номер дома', null=True, blank=True)
+    services = models.ManyToManyField('Service', through='Invoice')
 
+    def __str__(self):
+        return f"{self.customer_name}"
 
 class RepairerList(models.Model):
     name = models.CharField(max_length=100, verbose_name='Имя')
