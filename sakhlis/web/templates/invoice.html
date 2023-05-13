@@ -1,0 +1,16 @@
+{% extends 'flatpages/default.html' %}
+
+{% block body %}
+
+<h1>СЧЕТ</h1>
+<hr>
+<button> <a href="/app/logout/">Выйти</a> </button>
+<hr>
+<form action="" method="post" enctype="multipart/form-data">
+
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="hidden" name="order_id" id="id_order_id" value="{{ order_pk.pk }}">
+        <input type="submit" value="Save" />
+</form>
+{% endblock body %}

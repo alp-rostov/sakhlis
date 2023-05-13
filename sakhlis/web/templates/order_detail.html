@@ -6,21 +6,23 @@
 {% block body %}
 
 <table  width="1000">
+<tr><td colspan="2"><h1>Заказ № {{ order.pk}} от {{ order.time_in}} </h1>
+<h3>{{ order.time_out | finish_order_tag }}<h3>
+</td></tr>
 
 <tr><td>Имя: </td><td>{{ order.customer_name}}</td></tr>
 <tr><td>Телефон: </td><td>{{ order.customer_phone }}</td></tr>
 <tr><td>Адрес: </td><td>{{ order.address_city | choice_tag:'city'}},
     {{ order.address_street_app}}, {{ order.address_num}}</td></tr>
 <tr><td>Описание проблемы: </td><td>{{ order.text_order}}</td></tr>
+<tr><td>Цена: </td><td>{{ order.price}}</td></tr>
 
-<tr><td>Время поступления : </td><td>{{ order.time_in}}</td></tr>
-<tr><td>Время окончания: </td><td>{{ order.time_out}}</td></tr>
 <tr><td>Мастер: </td><td>{{ order.repairer_id}}</td></tr>
 <tr><td colspan="2">
 
 
     {% for service in services %}
-    {{ service.service_id__name }} | {{ service.quantity }}  | {{ service.price }} | {{ service.min_price}}  <br>
+    {{ service.service_id }} | {{ service.quantity }}  | {{ service.price }} | {{ service.min_price}}  <br>
     {% endfor %}<br>
 <h3>итого {{ sum }}
 </h3>

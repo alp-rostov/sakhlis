@@ -1,9 +1,14 @@
+from pprint import pprint
+
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django import forms
-from django.forms import DateTimeInput
+from django.contrib.sites import requests
+from django.forms import DateTimeInput, SelectDateWidget
+from django.contrib.admin.widgets import AdminDateWidget, AdminTimeWidget
 
-from .models import RepairerList, OrderList
+
+from .models import RepairerList, OrderList, Invoice
 
 
 class RepairerForm(forms.ModelForm):
@@ -15,27 +20,32 @@ class RepairerForm(forms.ModelForm):
 class OrderForm(forms.ModelForm):
     text_order = forms.CharField(
         label='Текст заказа',
-        widget=forms.Textarea(attrs={"class": "md-textarea form-control", 'placeholder': "Опишите задачу", 'rows': '2'})
+        widget=forms.Textarea(attrs={"class": "md-textarea form-control", 'placeholder': "Опишите задачу", 'rows': '2'}),
+        required=False
         )
 
     customer_name = forms.CharField(
         label='Ваше имя',
-        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Ваше имя"})
+        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Ваше имя"}),
+        required=False
     )
 
     customer_phone = forms.CharField(
         label='Телефон',
-        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Телефон", 'type': 'tel'})
+        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Телефон", 'type': 'tel'}),
+        required=False
     )
 
     address_street_app = forms.CharField(
         label='Улица',
-        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Улица"})
+        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Улица"}),
+        required = False
     )
 
     address_num = forms.CharField(
         label='Номер дома',
-        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Номер дома"})
+        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Номер дома"}),
+        required = False
     )
 
     time_out = forms.DateTimeField(
@@ -72,3 +82,10 @@ class BaseRegisterForm(UserCreationForm):
                   "password1",
                   "password2",
                   )
+
+
+class InvoiceForm(forms.ModelForm):
+    class Meta:
+        model = Invoice
+        fields = ('service_id',  'quantity_type', 'quantity', 'price',)
+

@@ -1,12 +1,15 @@
+from pprint import pprint
+
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
-from django.db.models import F, Min
-from django.http import HttpResponse
+from django.db.models import F
 from django.shortcuts import redirect
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from requests import request
+
 from .models import RepairerList, OrderList, Invoice
 from .filters import RepFilter, OrderFilter
-from .forms import RepairerForm, BaseRegisterForm, OrderForm
+from .forms import RepairerForm, BaseRegisterForm, OrderForm, InvoiceForm
 
 
 class RepairerL(LoginRequiredMixin, ListView):
@@ -50,6 +53,7 @@ class RepaierDelete(DeleteView):
     template_name = 'repaier_delete.html'
     success_url = '/app'
 
+
 class BaseRegisterView(CreateView):
     model = User
     form_class = BaseRegisterForm
@@ -61,6 +65,7 @@ class OrderCreate(CreateView):
     template_name = 'order_create.html'
     form_class = OrderForm
     success_url = '/'
+
 
 class OrderManagementSystem(ListView):
     model = OrderList
@@ -78,16 +83,17 @@ class OrderManagementSystem(ListView):
         context['filterset'] = self.filterset
         return context
 
+
 class OrderDatail(DetailView):
     model = OrderList
     template_name = 'order_detail.html'
     context_object_name = 'order'
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['services'] = Invoice.objects.filter\
-            (order_id=context['order'].id).annotate(min_price=F('price')*F('quantity'))
+        context['services'] = Invoice.objects.filter(order_id=context['order'].id).\
+            annotate(min_price=F('price')*F('quantity'))
         context['sum'] = sum(i.min_price for i in context['services'])
-
         return context
 
 
@@ -102,10 +108,12 @@ class OrderUpdate(UpdateView):
         context['time_in'] = self.object.time_in
         return context
 
+
 class OrderDelete(DeleteView):
     model = OrderList
     template_name = 'order_delete.html'
     success_url = '/list_order'
+
 
 def OrderAddRepaier(request):
     order = OrderList.objects.get(pk=request.GET['pk_order'])
@@ -119,4 +127,14 @@ def OrderAddRepaier(request):
             return redirect(f'/')  # TODO настроить сообщение, что ремонтник уже указан
 
 
+class InvoiceCreate(CreateView):
+    model = Invoice
+    template_name = 'invoice.html'
+    context_object_name = 'invoice'
+    form_class = InvoiceForm
 
+    def form_valid(self, form,  **kwargs):
+        invoice = form.save(commit=False)
+        invoice.order_id = OrderList.objects.get(pk=self.kwargs['order_pk'])
+        invoice.save()
+        return redirect(f'/list_order/{self.kwargs["order_pk"]}')

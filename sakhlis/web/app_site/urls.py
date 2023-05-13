@@ -1,7 +1,6 @@
 from django.contrib.auth.views import LoginView, LogoutView
 from django.urls import path
-from .views import RepairerL, RepaierD, RepaierCreate, RepaierUpdate, RepaierDelete, BaseRegisterView, \
-    OrderManagementSystem, OrderDelete, OrderDatail, OrderUpdate, OrderCreate, OrderAddRepaier
+from .views import *
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -12,6 +11,8 @@ urlpatterns = [
     path('list_order/delete/<int:pk>', OrderDelete.as_view()),
     path('list_order/update/<int:pk>', OrderUpdate.as_view()),
     path('add', OrderAddRepaier),
+
+    path('invoice/<int:order_pk>', InvoiceCreate.as_view()),
 
     path('list_repair', RepairerL.as_view(), name='list_repair'),
     path('list_repair/<int:pk>', RepaierD.as_view(), name='datail_repair'),
@@ -26,4 +27,5 @@ urlpatterns = [
 ]
 
 if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)  # для выгрузки картинок из БД в шаблон.
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    # для выгрузки картинок из БД в шаблон.
