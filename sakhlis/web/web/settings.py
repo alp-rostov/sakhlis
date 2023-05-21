@@ -41,8 +41,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'django.contrib.flatpages',
-    'app_site',
     'django_filters',
+    'debug_toolbar',
+    'app_site',
+
+
 
 ]
 SITE_ID = 1
@@ -57,9 +60,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
+
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
 ROOT_URLCONF = 'web.urls'
+
 
 TEMPLATES = [
     {
@@ -162,3 +168,7 @@ CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TIMEZONE = "Australia/Tasmania"
 CELERY_TASK_TRACK_STARTED = True
 CELERY_TASK_TIME_LIMIT = 30 * 60
+
+INTERNAL_IPS = [
+    "127.0.0.1",
+]

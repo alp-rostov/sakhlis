@@ -1,4 +1,6 @@
-from django_filters import FilterSet, ChoiceFilter, CharFilter, DateFilter, BooleanFilter
+from pprint import pprint
+
+from django_filters import FilterSet, ChoiceFilter, CharFilter, DateFilter, BooleanFilter, ModelChoiceFilter
 from .models import RepairerList, OrderList
 from .models import CITY_CHOICES
 from django import forms
@@ -88,6 +90,7 @@ class OrderFilter(FilterSet):
         lookup_expr='isnull',
         widget=forms.Select(attrs={'class': 'sss'},  choices=[('', 'Все'), ('True', 'в работе'), ('False', 'выполнено')]),
     )
+
 
     class Meta:
         model = OrderList

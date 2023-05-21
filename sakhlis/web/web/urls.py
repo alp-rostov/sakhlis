@@ -21,5 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("pages/", include("django.contrib.flatpages.urls")),
     path('', include('app_site.urls')),
+    path('__debug__/', include('debug_toolbar.urls')),
 
 ]
+
