@@ -3,11 +3,13 @@ from pprint import pprint
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
 from django.db.models import F
+from django.forms import inlineformset_factory
 from django.shortcuts import redirect
+from django.views.decorators.http import require_http_methods
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from requests import request
 
-from .models import RepairerList, OrderList, Invoice
+from .models import RepairerList, OrderList, Invoice, Service
 from .filters import RepFilter, OrderFilter
 from .forms import RepairerForm, BaseRegisterForm, OrderForm, InvoiceForm
 
@@ -91,10 +93,11 @@ class OrderDatail(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['services'] = Invoice.objects.filter(order_id=context['order'].id).\
+        context['services'] = self.object.invoice_set.all().\
             annotate(min_price=F('price')*F('quantity'))
         context['sum'] = sum(i.min_price for i in context['services'])
         return context
+
 
 
 class OrderUpdate(UpdateView):
@@ -105,7 +108,21 @@ class OrderUpdate(UpdateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['time_in'] = self.object.time_in
+
+        ServicesFormSet = inlineformset_factory(Service, Invoice, form=ServiceForm, fields='__all__', fk_name='service_id', extra=1)
+        queryset_ = Service.objects.get(pk='8')
+        print(queryset_)
+        b = ServicesFormSet(instance=queryset_)
+        pprint(b)
+        context['ServiceForm'] = b
+
+        if self.request.POST:
+            pass
+        else:
+            pass
+            # context['ServiceForm'] = ServiceForm()
+            # context['formset'] = ServicesFormSet(queryset=Service.objects.filter(order_id={self.kwargs["pk"]}))
+            # print(context['formset'])
         return context
 
 
@@ -114,7 +131,7 @@ class OrderDelete(DeleteView):
     template_name = 'order_delete.html'
     success_url = '/list_order'
 
-
+@require_http_methods(["GET"])
 def OrderAddRepaier(request):
     order = OrderList.objects.get(pk=request.GET['pk_order'])
     repaier = RepairerList.objects.get(pk=request.GET['pk_repairer'])

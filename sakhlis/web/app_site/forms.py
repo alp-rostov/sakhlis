@@ -8,7 +8,7 @@ from django.forms import DateTimeInput, SelectDateWidget
 from django.contrib.admin.widgets import AdminDateWidget, AdminTimeWidget
 
 
-from .models import RepairerList, OrderList, Invoice
+from .models import *
 
 
 class RepairerForm(forms.ModelForm):
@@ -89,3 +89,8 @@ class InvoiceForm(forms.ModelForm):
         model = Invoice
         fields = ('service_id',  'quantity_type', 'quantity', 'price',)
 
+
+class ServiceForm(forms.ModelForm):
+    class Meta:
+        model = Service
+        fields = '__all__'

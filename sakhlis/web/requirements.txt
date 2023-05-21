@@ -34,6 +34,7 @@ prompt-toolkit==3.0.38
 pyTelegramBotAPI==4.11.0
 pytz==2023.3
 pytz-deprecation-shim==0.1.0.post0
+redis==4.5.5
 requests==2.29.0
 six==1.16.0
 sqlparse==0.4.3
