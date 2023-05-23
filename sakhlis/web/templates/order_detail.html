@@ -17,12 +17,13 @@
 <tr><td>Описание проблемы: </td><td>{{ order.text_order}}</td></tr>
 <tr><td>Цена: </td><td>{{ order.price}}</td></tr>
 
-<tr><td>Мастер: </td><td>{{ order.repairer_id__name}}</td></tr>
+<tr><td>Мастер: </td><td>{{ order.repairer_id}}</td></tr>
 <tr><td colspan="2">
 
 
-    {% for service in services %}
-    {{ service.service_id }} | {{ service.quantity }}  | {{ service.price }} | {{ service.min_price}}  <br>
+   {% for service in order.invoice_set.all %}
+
+    {{ service.service_id }} | {{ service.quantity }}  | {{ service.price }} | {{ service.sum}}  <br>
     {% endfor %}<br>
 <h3>итого {{ sum }}
 </h3>

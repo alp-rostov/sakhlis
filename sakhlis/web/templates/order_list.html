@@ -47,7 +47,7 @@
             <td>{{ i.repairer_id }}</td>
             <td>{{ i.text_order|truncatewords:7 }}</td>
             <td>{{ i.price }}</td>
-            <td>{% for d in i.services.all %} {{ d }}<br>{% endfor %}</td>
+            <td>{% for d in i.invoice_set.all %} {{d.service_id}} | {{ d.quantity }}|{{ d.price }} <br>{% endfor %}</td>
             <td>
                 {% if request.user.is_authenticated %}
                 <a href="list_order/delete/{{ i.pk }}">Удалить</a> | <a href="list_order/update/{{ i.pk }}">Изменить</a></td>

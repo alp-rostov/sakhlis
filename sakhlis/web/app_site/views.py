@@ -2,7 +2,7 @@ from pprint import pprint
 
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
-from django.db.models import F
+from django.db.models import F, Prefetch
 from django.forms import inlineformset_factory
 from django.shortcuts import redirect
 from django.views.decorators.http import require_http_methods
@@ -18,8 +18,10 @@ class RepairerL(LoginRequiredMixin, ListView):
     model = RepairerList
     context_object_name = 'repairer'
     template_name = 'repairer_list.html'
-    queryset = RepairerList.objects.all().order_by('s_name').values('s_name', 'city', 'name',
-                                                                    'phone', 'email', 'foto', 'pk')
+    queryset = RepairerList.objects \
+        .all() \
+        .order_by('s_name') \
+        .values('s_name', 'city', 'name', 'phone', 'email', 'foto', 'pk')
 
     def get_queryset(self):
         queryset = super().get_queryset()
@@ -74,15 +76,16 @@ class OrderManagementSystem(ListView):
     context_object_name = 'order'
     template_name = 'order_list.html'
     ordering = ['-time_in']
-    queryset = OrderList.objects.select_related('repairer_id').all().prefetch_related('services')\
-
-        # .values('pk', 'text_order', 'time_in', 'price',
-        #                                                                     'time_out', 'time_in',
-        #                                                                     'address_city', 'address_street_app',
-        #                                                                     'address_num', 'repairer_id__name', 'services')
+    queryset = OrderList.objects \
+        .all() \
+        .select_related('repairer_id') \
+        .prefetch_related(Prefetch('invoice_set', Invoice.objects
+                                   .all()
+                                   .select_related('service_id')))
 
     def get_queryset(self):
         queryset = super().get_queryset()
+
         self.filterset = OrderFilter(self.request.GET, queryset)
         return self.filterset.qs
 
@@ -97,16 +100,18 @@ class OrderDatail(DetailView):
     model = OrderList
     template_name = 'order_detail.html'
     context_object_name = 'order'
-    queryset = OrderList.objects.all().select_related('repairer_id')
+    queryset = OrderList.objects \
+        .all() \
+        .select_related('repairer_id') \
+        .prefetch_related(Prefetch('invoice_set', Invoice.objects
+                                   .all()
+                                   .select_related('service_id').annotate(sum=F('price') * F('quantity'))))
+
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['services'] = self.object.invoice_set.all(). \
-            annotate(min_price=F('price') * F('quantity'))
-        context['sum'] = sum(i.min_price for i in context['services'])
+        context['sum'] = sum(i.get('sum') for i in self.object.invoice_set.all().values('sum'))
         return context
-
-
-
 
 
 class OrderUpdate(UpdateView):
@@ -115,25 +120,25 @@ class OrderUpdate(UpdateView):
     form_class = OrderForm
     success_url = '/list_order'
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-
-        ServicesFormSet = inlineformset_factory(Service, Invoice, form=ServiceForm, fields='__all__',
-                                                fk_name='service_id', extra=1)
-        queryset_ = Service.objects.get(pk='8')
-        print(queryset_)
-        b = ServicesFormSet(instance=queryset_)
-        pprint(b)
-        context['ServiceForm'] = b
-
-        if self.request.POST:
-            pass
-        else:
-            pass
-            # context['ServiceForm'] = ServiceForm()
-            # context['formset'] = ServicesFormSet(queryset=Service.objects.filter(order_id={self.kwargs["pk"]}))
-            # print(context['formset'])
-        return context
+    # def get_context_data(self, **kwargs):
+    #     context = super().get_context_data(**kwargs)
+    #
+    #     ServicesFormSet = inlineformset_factory(Service, Invoice, form=ServiceForm, fields='__all__',
+    #                                             fk_name='service_id', extra=1)
+    #     queryset_ = Service.objects.get(pk='8')
+    #     print(queryset_)
+    #     b = ServicesFormSet(instance=queryset_)
+    #     pprint(b)
+    #     context['ServiceForm'] = b
+    #
+    #     if self.request.POST:
+    #         pass
+    #     else:
+    #         pass
+    # context['ServiceForm'] = ServiceForm()
+    # context['formset'] = ServicesFormSet(queryset=Service.objects.filter(order_id={self.kwargs["pk"]}))
+    # print(context['formset'])
+    # return context
 
 
 class OrderDelete(DeleteView):
