@@ -1,0 +1,17 @@
+{% extends 'flatpages/default.html' %}
+{% load custom_filters %}
+{% load custom_tags %}
+
+
+{% block body %}
+<h1>статистика</h1>
+
+{% for i in a %}
+ | {{ i.time_in__date}} | {{ i.sum }}<br>
+{% endfor%}
+<hr>
+{% for i1 in b %}
+ | {{ i1.repairer_id__name}} | {{ i1.sum }}<br>
+{% endfor%}
+
+{% endblock body %}

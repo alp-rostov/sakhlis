@@ -1,9 +1,7 @@
 import telebot
 from celery import shared_task
-from django.template.loader import render_to_string
 from geopy.geocoders import Nominatim
 from telebot import types
-
 from .models import OrderList, RepairerList
 
 TOKEN = "6082335579:AAHqLPJB2RSdczDSbshpYV5Q7oqmyIcnbFI"
@@ -43,20 +41,7 @@ def send_order_information(inst):
                       f'{map_}  \n' \
                       f'<b>ОТПРАВИТЬ ЗАКАЗ МАСТЕРУ:</b>' \
 
-    # msg = EmailMultiAlternatives(
-    #     subject=subject_,
-    #     body='',  # это то же, что и message
-    #     from_email=from_,
-    #     to=['alprostov.1982@gmail.com'],  # это то же, что и recipients_list
-    # )
-    # msg.attach_alternative(html_content, "text/html")  # добавляем html
-
-    # msg.send()  # отсылаем письмо о новом заказе на почту
 
     bot = telebot.TeleBot(TOKEN)
 
     bot.send_message(CHAT_ID, text, reply_markup=keyboard,  parse_mode='HTML')
-
-@shared_task
-def printw():
-    print('ssssssssssss')

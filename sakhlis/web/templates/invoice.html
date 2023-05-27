@@ -6,10 +6,39 @@
 <hr>
 <button> <a href="/app/logout/">Выйти</a> </button>
 <hr>
-<form action="" method="post" enctype="multipart/form-data">
+<form action="" method="post" >
+номер счета № {{ invoice }} от : {{ info.time_in }}
+
+
+    <table width="500"><tr>
+        <td>исполнитель ИП ГОЦИН С.А. </td><td>заказчик</td>
+    </tr>
+        <tr>
+        <td>Код: 302265920</td><td>Код</td>
+    </tr>
+        <tr>
+        <td>Адрес:Тбилиси, Зураба Патаридзе 8</td><td>Адрес:</td>
+    </tr>
+        <tr>
+        <td>Телефон: 995-598-259-119</td><td>Телефон:</td>
+    </tr>
+        <tr>
+        <td>Банк: JSC CREDO BANK</td><td></td>
+    </tr>
+          <tr>
+        <td>Код : JSCRGE22</td><td></td>
+    </tr>
+        <tr>
+        <td>Счет : GE18CD0360000030597044</td><td></td>
+    </tr>
+    </table>
+
 
     {% csrf_token %}
-    {{ form.as_p }}
+{{ form.management_form }}
+    {% for g in form %}
+    {{ g.as_table }}<br>
+    {% endfor %}
     <input type="hidden" name="order_id" id="id_order_id" value="{{ order_pk.pk }}">
         <input type="submit" value="Save" />
 </form>
