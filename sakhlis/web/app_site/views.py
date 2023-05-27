@@ -1,6 +1,3 @@
-from datetime import date
-from pprint import pprint
-
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
 from django.db.models import F, Prefetch, Count, Sum
@@ -83,14 +80,12 @@ class OrderManagementSystem(ListView):
 
     def get_queryset(self):
         queryset = super().get_queryset()
-
         self.filterset = OrderFilter(self.request.GET, queryset)
         return self.filterset.qs
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['filterset'] = self.filterset
-
         return context
 
 
@@ -111,26 +106,6 @@ class OrderUpdate(UpdateView):
     template_name = 'order_update.html'
     form_class = OrderForm
     success_url = '/list_order'
-
-    # def get_context_data(self, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-    #
-    #     ServicesFormSet = inlineformset_factory(Service, Invoice, form=ServiceForm, fields='__all__',
-    #                                             fk_name='service_id', extra=1)
-    #     queryset_ = Service.objects.get(pk='8')
-    #     print(queryset_)
-    #     b = ServicesFormSet(instance=queryset_)
-    #     pprint(b)
-    #     context['ServiceForm'] = b
-    #
-    #     if self.request.POST:
-    #         pass
-    #     else:
-    #         pass
-    # context['ServiceForm'] = ServiceForm()
-    # context['formset'] = ServicesFormSet(queryset=Service.objects.filter(order_id={self.kwargs["pk"]}))
-    # print(context['formset'])
-    # return context
 
 
 class OrderDelete(DeleteView):

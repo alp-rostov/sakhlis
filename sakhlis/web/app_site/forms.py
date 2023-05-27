@@ -1,13 +1,7 @@
-from pprint import pprint
-
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django import forms
-from django.contrib.sites import requests
-from django.forms import DateTimeInput, SelectDateWidget, formset_factory, modelformset_factory
-from django.contrib.admin.widgets import AdminDateWidget, AdminTimeWidget
-
-
+from django.forms import DateTimeInput
 from .models import *
 
 
@@ -36,6 +30,12 @@ class OrderForm(forms.ModelForm):
         required=False
     )
 
+    customer_code = forms.CharField(
+        label='Код организации',
+        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Код организации"}),
+        required=False
+    )
+
     address_street_app = forms.CharField(
         label='Улица',
         widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Улица"}),
@@ -48,7 +48,7 @@ class OrderForm(forms.ModelForm):
         required = False
     )
 
-    time_out = forms.DateTimeField(
+    time_out = forms.DateTimeField(           # TODO настроить корректное отображение даты
         label='Дата выполнения',
         widget=DateTimeInput(attrs={'type': 'datetime-local'}),
         required=False
@@ -64,7 +64,8 @@ class OrderForm(forms.ModelForm):
                   'address_num',
                   'repairer_id',
                   'price',
-                  'time_out'
+                  'time_out',
+                  'customer_code',
                   )
 
 

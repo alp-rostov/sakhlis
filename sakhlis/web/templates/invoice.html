@@ -7,29 +7,28 @@
 <button> <a href="/app/logout/">Выйти</a> </button>
 <hr>
 <form action="" method="post" >
-номер счета № {{ invoice }} от : {{ info.time_in }}
-
+    <h2>Номер счета № {{ invoice }} от : {{ info.time_in }}</h2>
 
     <table width="500"><tr>
-        <td>исполнитель ИП ГОЦИН С.А. </td><td>заказчик</td>
+        <td><h3>Исполнитель:</h3> ИП ГОЦИН С.А. </td><td><h3>Заказчик:</h3> {{ info.customer_name }}</td>
     </tr>
         <tr>
-        <td>Код: 302265920</td><td>Код</td>
+            <td><br><b>Код:</b> 302265920</td><td><b>Код:</b> {{ info.customer_code }}</td>
     </tr>
         <tr>
-        <td>Адрес:Тбилиси, Зураба Патаридзе 8</td><td>Адрес:</td>
+        <td><br><b>Адрес:</b> Тбилиси, Зураба Патаридзе 8</td><td><b>Адрес: </b>{{ info.address_city }}, {{ info.address_street_app }}, {{ info.address_num }}</td>
     </tr>
         <tr>
-        <td>Телефон: 995-598-259-119</td><td>Телефон:</td>
+            <td><br><b>Телефон: 995-598-259-119</b></td><td><b>Телефон:</b> {{ info.customer_phone }}</td>
     </tr>
         <tr>
-        <td>Банк: JSC CREDO BANK</td><td></td>
+        <td><br><b>Банк:</b> JSC CREDO BANK</td><td></td>
     </tr>
           <tr>
-        <td>Код : JSCRGE22</td><td></td>
+        <td><br><b>Код банка:</b> JSCRGE22</td><td></td>
     </tr>
         <tr>
-        <td>Счет : GE18CD0360000030597044</td><td></td>
+        <td><br><b>Счет:</b> GE18CD0360000030597044</td><td></td>
     </tr>
     </table>
 
