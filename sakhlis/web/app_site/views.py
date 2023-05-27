@@ -7,7 +7,7 @@ from django.db.models import F, Prefetch, Count, Sum
 from django.forms import inlineformset_factory, formset_factory, modelformset_factory
 from django.shortcuts import redirect
 from django.views.decorators.http import require_http_methods
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView, FormView
 from .models import RepairerList, OrderList, Invoice, Service
 from .filters import RepFilter, OrderFilter
 from .forms import RepairerForm, BaseRegisterForm, OrderForm, InvoiceForm
@@ -152,28 +152,28 @@ def OrderAddRepaier(request):
             return redirect(f'/')  # TODO настроить сообщение, что ремонтник уже указан
 
 
-class InvoiceCreate(CreateView):
-    model = Invoice
+class InvoiceCreate(FormView):
     template_name = 'invoice.html'
     context_object_name = 'invoice'
-    form_class = InvoiceForm
-
 
     def get_form(self, form_class=None):
-        AuthorFormSet = modelformset_factory(Invoice, fields='__all__')
+        AuthorFormSet = modelformset_factory(Invoice, exclude=('order_id',))
         formset=AuthorFormSet(queryset=Invoice.objects.filter(order_id=self.kwargs.get('order_pk')))
         return formset
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data()
         context['info'] = OrderList.objects.get(pk=self.kwargs.get('order_pk'))
-
         return context
 
     def post(self, formset, **kwargs):
+        b=OrderList.objects.get(pk=self.kwargs.get('order_pk'))
         AuthorFormSet = modelformset_factory(Invoice, fields='__all__')
         formset = AuthorFormSet(self.request.POST)
-        pprint(formset)
-        instances = formset.save()
+        instances = formset.save(commit=False)
+        for instance in instances:
+            instance.order_id = b
+            instance.save()
         return redirect(f'/list_order/{self.kwargs.get("order_pk")}')
 
 
