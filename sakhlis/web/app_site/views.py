@@ -1,3 +1,5 @@
+from pprint import pprint
+
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
 from django.db.models import F, Prefetch, Count, Sum
@@ -132,8 +134,8 @@ class InvoiceCreate(FormView):
     context_object_name = 'invoice'
 
     def get_form(self, form_class=None):
-        AuthorFormSet = modelformset_factory(Invoice, exclude=('order_id',))
-        formset=AuthorFormSet(queryset=Invoice.objects.filter(order_id=self.kwargs.get('order_pk')))
+        InvoiceFormSet = modelformset_factory(Invoice, exclude=('order_id',))
+        formset = InvoiceFormSet(queryset=Invoice.objects.filter(order_id=self.kwargs.get('order_pk')))
         return formset
 
     def get_context_data(self, **kwargs):
@@ -150,6 +152,12 @@ class InvoiceCreate(FormView):
             instance.order_id = b
             instance.save()
         return redirect(f'/list_order/{self.kwargs.get("order_pk")}')
+
+@require_http_methods(["GET"])
+def DeleteIvoiceService(request, **kwargs):
+    if request.user.is_authenticated:
+        Invoice.objects.get(pk=kwargs.get("invoice_pk")).delete()
+    return redirect(f'/invoice/{ kwargs.get("order_pk") }')
 
 
 class Statistica(TemplateView):

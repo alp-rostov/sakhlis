@@ -85,6 +85,7 @@ class RepairerList(models.Model):
     rating_sum = models.IntegerField(default=0, blank=True, null=True)
     rating_num = models.IntegerField(default=0, blank=True, null=True)
 
+
     def __str__(self):
         return f"{self.name} {self.s_name}"
 

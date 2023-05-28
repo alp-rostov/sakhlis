@@ -7,9 +7,9 @@
 <button> <a href="/app/logout/">Выйти</a> </button>
 <hr>
 <form action="" method="post" >
-    <h2>Номер счета № {{ invoice }} от : {{ info.time_in }}</h2>
+    <h2>Номер счета № {{ info.id }} от : {{ info.time_in }}</h2>
 
-    <table width="500"><tr>
+    <table width="700"><tr>
         <td><h3>Исполнитель:</h3> ИП ГОЦИН С.А. </td><td><h3>Заказчик:</h3> {{ info.customer_name }}</td>
     </tr>
         <tr>
@@ -36,9 +36,11 @@
     {% csrf_token %}
 {{ form.management_form }}
     {% for g in form %}
-    {{ g.as_table }}<br>
+    {{ g.as_table }}<a href="delete/{{ g.id.value }}/{{ info.id }}">удалить</a>
+<br>
+
     {% endfor %}
-    <input type="hidden" name="order_id" id="id_order_id" value="{{ order_pk.pk }}">
+
         <input type="submit" value="Save" />
 </form>
 {% endblock body %}

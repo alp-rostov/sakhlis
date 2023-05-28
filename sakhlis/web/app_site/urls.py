@@ -13,6 +13,9 @@ urlpatterns = [
     path('add', OrderAddRepaier),
 
     path('invoice/<int:order_pk>', InvoiceCreate.as_view()),
+    path('invoice/delete/<int:invoice_pk>/<int:order_pk>', DeleteIvoiceService),
+
+
 
     path('list_repair', RepairerL.as_view(), name='list_repair'),
     path('list_repair/<int:pk>', RepaierD.as_view(), name='datail_repair'),
