@@ -30,7 +30,7 @@
         <td>{{ i.phone }}</td>
 
 
-        <td><a href="delete/{{ i.pk }}">Удалить</a> | <td><a href="create/{{ i.pk }}">Изменить</a></td>
+        <td><a href="{% url 'delete_repair' i.pk %}">Удалить</a> | <td><a href="{% url 'update_repair' i.pk %}">Изменить</a></td>
 </td>
 
         <td><img src="media/{{ i.foto|default:'images/1.jpg' }}" width="100">    </td>

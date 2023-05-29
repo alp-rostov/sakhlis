@@ -3,13 +3,13 @@ from pprint import pprint
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
 from django.db.models import F, Prefetch, Count, Sum
-from django.forms import inlineformset_factory, formset_factory, modelformset_factory
+from django.forms import modelformset_factory
 from django.shortcuts import redirect
 from django.views.decorators.http import require_http_methods
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView, FormView
-from .models import RepairerList, OrderList, Invoice, Service
+from .models import RepairerList, OrderList, Invoice
 from .filters import RepFilter, OrderFilter
-from .forms import RepairerForm, BaseRegisterForm, OrderForm, InvoiceForm
+from .forms import RepairerForm, BaseRegisterForm, OrderForm
 
 class RepairerL(LoginRequiredMixin, ListView):
     model = RepairerList
@@ -169,4 +169,4 @@ class Statistica(TemplateView):
         context['a'] = OrderList.objects.values('time_in__date').annotate(sum=Sum(F('price')))
         context['b'] = OrderList.objects.values('repairer_id__name').annotate(sum=Sum(F('price')), con=Count(F('id')))
 
-        return  context
+        return context

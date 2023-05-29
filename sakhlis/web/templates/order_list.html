@@ -41,7 +41,7 @@
         {% for i in y.list %}
         <tr>
             <td>
-            <a href="list_order/{{i.pk }}">Заказа №{{ i.pk}}</a>{{ i.time_out | finish_order_tag }}<br>
+            <a href="{% url 'list_detail' i.pk %}">Заказа №{{ i.pk}}</a>{{ i.time_out | finish_order_tag }}<br>
             {{ i.address_city | choice_tag:'city' }}, {{ i.address_street_app }}, {{ i.address_num }}</td>
 
             <td>{{ i.repairer_id }}</td>
@@ -50,8 +50,8 @@
             <td>{% for d in i.invoice_set.all %} {{d.service_id}} | {{ d.quantity }}|{{ d.price }} <br>{% endfor %}</td>
             <td>
                 {% if request.user.is_authenticated %}
-                <a href="list_order/delete/{{ i.pk }}">Удалить</a> | <a href="list_order/update/{{ i.pk }}">Изменить
-                | <a href="invoice/{{ i.pk }}">Счет</a></td>
+                <a href="{% url 'delete' i.pk %}">Удалить</a> | <a href="{% url 'update' i.pk %}">Изменить
+                | <a href="{% url 'invoice' i.pk %}">Счет</a></td>
                 {% endif %}
             </tr>
 

@@ -1,6 +1,5 @@
 import telebot
 from celery import shared_task
-from telebot import types
 from .models import OrderList, RepairerList
 from .utils import set_coordinates_address, add_telegram_button
 

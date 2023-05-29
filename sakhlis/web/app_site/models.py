@@ -30,7 +30,8 @@ QUANTITY_CHOICES = [
 
 class Service(models.Model):
     """name type """
-    name = models.CharField(null=True, blank=True, max_length=500, verbose_name='Услуга')
+    name = models.\
+        CharField(null=True, blank=True, max_length=500, verbose_name='Услуга')
     type = models.CharField(choices=WORK_CHOICES, null=True, blank=True, max_length=3, verbose_name='Вид работ')
 
     def __str__(self):
@@ -40,7 +41,7 @@ class Service(models.Model):
 class Invoice(models.Model):
     """service_id order_id quantity_type quantity price"""
     service_id = models.ForeignKey('Service', on_delete=models.CASCADE, null=True, blank=True, )
-    order_id = models.ForeignKey('OrderList', on_delete=models.CASCADE, null=True, blank=True,)
+    order_id = models.ForeignKey('OrderList', on_delete=models.CASCADE, null=True, blank=True, )
     quantity_type = models.CharField(choices=QUANTITY_CHOICES, max_length=3, null=True, blank=True,
                                      verbose_name='Измерение')
     quantity = models.DecimalField(decimal_places=2, max_digits=7, null=True, blank=True, verbose_name='Количество')
@@ -49,13 +50,14 @@ class Invoice(models.Model):
     def __str__(self):
         return f"{self.quantity}"
 
+
 class OrderList(models.Model):
     """time_in time_out repairer_id price text_order customer_name customer_phone address_city address_street_app
     address_num work_type services """
     time_in = models.DateTimeField(auto_now_add=True, verbose_name='Дата заказа')
     time_out = models.DateTimeField(null=True, blank=True, verbose_name='Дата выполнения')
     repairer_id = models.ForeignKey("RepairerList", on_delete=models.SET_NULL, null=True, blank=True,
-                                    verbose_name='Мастер', default='',)
+                                    verbose_name='Мастер', default='', )
     price = models.DecimalField(decimal_places=2, max_digits=7, null=True, blank=True, verbose_name='Стоимость работ')
     text_order = models.CharField(max_length=1500, verbose_name='Описание проблемы', blank=True, null=True)
     customer_name = models.CharField(max_length=50, verbose_name='Ваше имя')
@@ -84,7 +86,6 @@ class RepairerList(models.Model):
     active = models.BooleanField(default=False)
     rating_sum = models.IntegerField(default=0, blank=True, null=True)
     rating_num = models.IntegerField(default=0, blank=True, null=True)
-
 
     def __str__(self):
         return f"{self.name} {self.s_name}"

@@ -6,9 +6,11 @@
 </head>
 
 <body>
-<p><a href="/list_order">Управление заказами</a></p>
-<p><a href="/list_repair">Управление мастерами</a></p>
-<p><p><a href="/stat">Отчетность</a></p>
+<p><a href="{% url 'home' %}">Домой</a></p>
+
+<p><a href="{% url 'list_order' %}">Управление заказами</a></p>
+<p><a href="{% url 'list_repair' %}">Управление мастерами</a></p>
+<p><p><a href="{% url 'stat' %}">Отчетность</a></p>
 
 <p></p>
 {% block body %}
