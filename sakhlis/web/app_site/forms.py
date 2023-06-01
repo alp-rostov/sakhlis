@@ -86,6 +86,10 @@ class BaseRegisterForm(UserCreationForm):
 
 
 class InvoiceForm(forms.ModelForm):
+    service_id = forms.ModelChoiceField(
+        label='',
+        queryset=Service.objects.all()
+    )
     class Meta:
         model = Invoice
         fields = ('service_id',  'quantity_type', 'quantity', 'price',)

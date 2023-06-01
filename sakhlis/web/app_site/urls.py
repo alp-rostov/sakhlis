@@ -14,7 +14,7 @@ urlpatterns = [
 
     path('invoice/<int:order_pk>', InvoiceCreate.as_view(), name='invoice'),
     path('invoice/delete/<int:invoice_pk>/<int:order_pk>', DeleteIvoiceService, name='delete_service_from_invoice'),
-
+    path('invoice/prf/', CreateIvoicePDF, name='invoice_pdf'),
 
 
     path('list_repair', RepairerL.as_view(), name='list_repair'),
@@ -29,6 +29,7 @@ urlpatterns = [
     path('register/', BaseRegisterView.as_view(template_name='register.html'), name='signup'),
 
     path('stat/', Statistica.as_view(), name='stat'),
+
 
 ]
 

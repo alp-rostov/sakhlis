@@ -4,13 +4,16 @@ from telebot import types
 
 def set_coordinates_address(street: str, city: str) -> str:
     """ setting of coordinates by street and city """
-    geolocator = Nominatim(user_agent="app_site", )
-    location = geolocator.geocode({'street': {street}, 'city': {city}}, addressdetails=True)
-
-    if location:
-        return f'https://yandex.ru/maps/?pt={location.longitude},{location.latitude}&z=18&l=map'
+    try:
+        geolocator = Nominatim(user_agent="app_site", )
+        location = geolocator.geocode({'street': {street}, 'city': {city}}, addressdetails=True)
+    except TypeError:
+        return ' '
     else:
-        return ''
+        if location:
+            return f'https://yandex.ru/maps/?pt={location.longitude},{location.latitude}&z=18&l=map'
+        else:
+            return ' '
 
 
 def add_telegram_button(repairer: list, order_pk: int):

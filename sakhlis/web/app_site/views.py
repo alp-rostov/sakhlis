@@ -9,7 +9,8 @@ from django.views.decorators.http import require_http_methods
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView, FormView
 from .models import RepairerList, OrderList, Invoice
 from .filters import RepFilter, OrderFilter
-from .forms import RepairerForm, BaseRegisterForm, OrderForm
+from .forms import RepairerForm, BaseRegisterForm, OrderForm, InvoiceForm
+
 
 class RepairerL(LoginRequiredMixin, ListView):
     model = RepairerList
@@ -74,11 +75,13 @@ class OrderManagementSystem(ListView):
     template_name = 'order_list.html'
     ordering = ['-time_in']
     queryset = OrderList.objects \
-        .all() \
         .select_related('repairer_id') \
         .prefetch_related(Prefetch('invoice_set', Invoice.objects
-                                   .all()
-                                   .select_related('service_id')))
+                                   .select_related('service_id')
+                                   .defer('quantity_type', 'service_id__type')))\
+                .defer('work_type', 'customer_name', 'customer_phone', 'customer_code', 'repairer_id__phone',
+               'repairer_id__city', 'repairer_id__email', 'repairer_id__foto', 'repairer_id__active',
+               'repairer_id__rating_sum', 'repairer_id__rating_num')
 
     def get_queryset(self):
         queryset = super().get_queryset()
@@ -99,8 +102,11 @@ class OrderDatail(DetailView):
         .annotate(sum=Sum(F('invoice__price') * F('invoice__quantity')))\
         .select_related('repairer_id') \
         .prefetch_related(Prefetch('invoice_set', Invoice.objects
-                                   .all()
-                                   .select_related('service_id').annotate(sum=F('price') * F('quantity'))))
+                                   .defer('quantity_type', 'service_id__type')
+                                   .select_related('service_id').annotate(sum=F('price') * F('quantity'))))\
+                                   .defer('work_type', 'customer_code', 'repairer_id__phone', 'repairer_id__city',
+                                          'repairer_id__email', 'repairer_id__foto', 'repairer_id__active',
+                                          'repairer_id__rating_sum', 'repairer_id__rating_num')
 
 
 class OrderUpdate(UpdateView):
@@ -134,8 +140,12 @@ class InvoiceCreate(FormView):
     context_object_name = 'invoice'
 
     def get_form(self, form_class=None):
-        InvoiceFormSet = modelformset_factory(Invoice, exclude=('order_id',))
-        formset = InvoiceFormSet(queryset=Invoice.objects.filter(order_id=self.kwargs.get('order_pk')))
+        InvoiceFormSet = modelformset_factory(Invoice, form=InvoiceForm, exclude=('order_id',))
+        formset = InvoiceFormSet(queryset=Invoice.objects
+                                 .filter(order_id=self.kwargs.get('order_pk'))
+                                 .select_related('service_id')
+                                 .defer('service_id__type'))
+
         return formset
 
     def get_context_data(self, **kwargs):
@@ -170,3 +180,14 @@ class Statistica(TemplateView):
         context['b'] = OrderList.objects.values('repairer_id__name').annotate(sum=Sum(F('price')), con=Count(F('id')))
 
         return context
+
+from reportlab.pdfgen.canvas import Canvas
+@require_http_methods(["GET"])
+def CreateIvoicePDF(request, **kwargs):
+    canvas = Canvas("hello.pdf")
+    canvas.drawString(72, 72, "Hello, World")
+    canvas.save()
+    return redirect(f'/list_order')
+
+
+

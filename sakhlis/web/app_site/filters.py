@@ -90,7 +90,12 @@ class OrderFilter(FilterSet):
         lookup_expr='isnull',
         widget=forms.Select(attrs={'class': 'sss'},  choices=[('', 'Все'), ('True', 'в работе'), ('False', 'выполнено')]),
     )
-
+    repairer_id = ModelChoiceFilter(
+        field_name='repairer_id',
+        label='Мастер-',
+        lookup_expr='exact',
+        queryset=RepairerList.objects.only('name', 's_name')
+    )
 
     class Meta:
         model = OrderList
