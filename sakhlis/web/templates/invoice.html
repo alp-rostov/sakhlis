@@ -43,5 +43,7 @@
 
         <input type="submit" value="Save" />
 </form>
-<a href="{% url 'invoice_pdf' %}">PDF</a>
+<a href="pdf/{{ info.id }}">PDF</a>
+
+
 {% endblock body %}

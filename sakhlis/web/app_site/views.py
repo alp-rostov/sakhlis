@@ -1,3 +1,4 @@
+from datetime import date
 from pprint import pprint
 
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -124,7 +125,7 @@ class OrderDelete(DeleteView):
 
 @require_http_methods(["GET"])
 def OrderAddRepaier(request):
-    order = OrderList.objects.get(pk=request.GET['pk_order'])
+    order = Info.get_info(request.GET['pk_order']) #OrderList.objects.get(pk=request.GET['pk_order'])
     repaier = RepairerList.objects.get(pk=request.GET['pk_repairer'])
     if order and repaier:
         if not order.repairer_id:
@@ -134,8 +135,11 @@ def OrderAddRepaier(request):
         else:
             return redirect(f'/')  # TODO настроить сообщение, что ремонтник уже указан
 
+class Info:
+    def get_info(self, spk:int):
+        return OrderList.objects.get(pk=spk)
 
-class InvoiceCreate(FormView):
+class InvoiceCreate(Info, FormView):
     template_name = 'invoice.html'
     context_object_name = 'invoice'
 
@@ -150,11 +154,11 @@ class InvoiceCreate(FormView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data()
-        context['info'] = OrderList.objects.get(pk=self.kwargs.get('order_pk'))
+        context['info'] = self.get_info(self.kwargs.get('order_pk'))
         return context
 
     def post(self, formset, **kwargs):
-        b=OrderList.objects.get(pk=self.kwargs.get('order_pk'))
+        b=self.get_info(self.kwargs.get('order_pk'))
         AuthorFormSet = modelformset_factory(Invoice, fields='__all__')
         formset = AuthorFormSet(self.request.POST)
         instances = formset.save(commit=False)
@@ -181,13 +185,67 @@ class Statistica(TemplateView):
 
         return context
 
-from reportlab.pdfgen.canvas import Canvas
+from django.http import FileResponse
+import  io
+from reportlab.pdfgen import canvas
+from reportlab.lib.units import inch
+# from easy_pdf.rendering import render_to_pdf_response
+
 @require_http_methods(["GET"])
 def CreateIvoicePDF(request, **kwargs):
-    canvas = Canvas("hello.pdf")
-    canvas.drawString(72, 72, "Hello, World")
-    canvas.save()
-    return redirect(f'/list_order')
+    # get information
+    info=OrderList.objects \
+        .annotate(sum=Sum(F('invoice__price') * F('invoice__quantity'))) \
+        .prefetch_related(Prefetch('invoice_set', Invoice.objects
+                                   .defer('quantity_type', 'service_id__type')
+                                   .select_related('service_id').annotate(sum=F('price') * F('quantity')))) \
+        .defer('work_type', 'customer_code', 'repairer_id__phone', 'repairer_id__city',
+               'repairer_id__email', 'repairer_id__foto', 'repairer_id__active',
+               'repairer_id__rating_sum', 'repairer_id__rating_num') \
+        .get(pk=kwargs.get("order_pk"))
+
+    # Create Bytestream buffer
+    buf = io.BytesIO()
+    # Create a canvas
+    c = canvas.Canvas(buf, bottomup=0)
+    # Create a text object
+    textob = c.beginText()
+    textob.setTextOrigin(inch, inch)
+    textob.setFont("Times-Roman", 25)
+    # Add some lines of text
+    line = f'Invoice {info.pk}, {info.time_in}'
+    textob.textLine(line)
+    textob.setFont("Times-Roman", 15)
+    textob.textLine(f'Company: \n {info.customer_name}')
+    textob.textLine(f'Phone: {info.customer_phone}')
+    textob.textLine(f'Code: {info.customer_code}')
+    textob.textLine(f'Address: {info.address_city}, {info.address_street_app}, {info.address_num}')
+
+    for service in info.invoice_set.all():
+        textob.textLine(f' {service.service_id} | {service.quantity} | {service.price} | {service.sum}')
+
+
+    # finish up
+    c.drawText(textob)
+    c.showPage()
+    c.save()
+    buf.seek(0)
+    return FileResponse(buf, as_attachment=True, filename=f'Invoice_{kwargs.get("order_pk")}_.pdf')
+
+# def detail_to_pdf(request, **kwargs):
+#     template= 'invoce.html'
+#     b=info=OrderList.objects \
+#         .annotate(sum=Sum(F('invoice__price') * F('invoice__quantity'))) \
+#         .select_related('repairer_id') \
+#         .prefetch_related(Prefetch('invoice_set', Invoice.objects
+#                                    .defer('quantity_type', 'service_id__type')
+#                                    .select_related('service_id').annotate(sum=F('price') * F('quantity')))) \
+#         .defer('work_type', 'customer_code', 'repairer_id__phone', 'repairer_id__city',
+#                'repairer_id__email', 'repairer_id__foto', 'repairer_id__active',
+#                'repairer_id__rating_sum', 'repairer_id__rating_num') \
+#         .get(pk={kwargs.get("order_pk")})
+#     context={info:b}
+#     return render_to_pdf_response(request, template, context)
 
 
 
