@@ -8,9 +8,12 @@ from django.forms import modelformset_factory
 from django.shortcuts import redirect
 from django.views.decorators.http import require_http_methods
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView, FormView
+from reportlab.lib import colors
+
 from .models import RepairerList, OrderList, Invoice
 from .filters import RepFilter, OrderFilter
 from .forms import RepairerForm, BaseRegisterForm, OrderForm, InvoiceForm
+from .utils import LetterMaker
 
 
 class RepairerL(LoginRequiredMixin, ListView):
@@ -188,7 +191,9 @@ class Statistica(TemplateView):
 from django.http import FileResponse
 import  io
 from reportlab.pdfgen import canvas
-from reportlab.lib.units import inch
+from reportlab.lib.units import inch, cm
+from reportlab.platypus import Paragraph, SimpleDocTemplate, Table, TableStyle
+from reportlab.platypus import Table as pdfTable
 # from easy_pdf.rendering import render_to_pdf_response
 
 @require_http_methods(["GET"])
@@ -206,46 +211,83 @@ def CreateIvoicePDF(request, **kwargs):
 
     # Create Bytestream buffer
     buf = io.BytesIO()
-    # Create a canvas
-    c = canvas.Canvas(buf, bottomup=0)
-    # Create a text object
-    textob = c.beginText()
-    textob.setTextOrigin(inch, inch)
-    textob.setFont("Times-Roman", 25)
-    # Add some lines of text
-    line = f'Invoice {info.pk}, {info.time_in}'
-    textob.textLine(line)
-    textob.setFont("Times-Roman", 15)
-    textob.textLine(f'Company: \n {info.customer_name}')
-    textob.textLine(f'Phone: {info.customer_phone}')
-    textob.textLine(f'Code: {info.customer_code}')
-    textob.textLine(f'Address: {info.address_city}, {info.address_street_app}, {info.address_num}')
+    # # Create a canvas
+    # c = canvas.Canvas(buf, bottomup=0)
+    #
+    #
+    # # Create a text object
+    # textob = c.beginText()
+    #
+    # textob.setTextOrigin(inch, inch)
+    #
+    # textob.setFont("Helvetica", 25)
+    #
+    #
+    # # Add some lines of text
+    # date_info = str(info.time_in)[0:10:]
+    # line = f'Invoice {info.pk}, date: {date_info}'
+    #
+    # textob.textLine(line)
+    # c.drawText(textob)
+    # # Create a table
+    # table_data = [
+    #               ['My Company: ', ' Gotsin S.A.', 'Customer company:', info.customer_name],
+    #               ['Adress Company: ', ' Tbilisi, Zuraba Pataridze.', 'Customer Adress:', info.address_street_app],
+    #               ['Code Company: ', ' 302265920', 'Customer code:', info.customer_code],
+    #               ['Phone:', '+796044586678', 'Phone:', info.customer_phone],
+    #               ['Bank:', 'Credo Bank'],
+    #               ['CODE:', 'JSCRG22'],
+    #               ['Account:', 'GE18CD0360000030597044']
+    #               ]
+    # table_data = table_data[::-1]
+    # top_row = Table(table_data)
+    #
+    # top_row.setStyle(TableStyle([('ALIGN', (0, 0), (0, 6), 'RIGHT'),
+    #                              ('ALIGN', (2, 0), (2, 6), 'RIGHT'),
+    #                              ('FONT', (2, 0), (2, 6), 'Times-Bold'),
+    #                              ('FONT', (0, 0), (0, 6), 'Times-Bold'),
+    #                              ('SIZE',(0,0),(4,6),12)
+    #                             ]
+    #                             ))
+    #
+    # w, h = top_row.wrapOn(c, 0, 0)
+    # top_row.drawOn(c, textob.getX()-10, textob.getY())
+    # table_serv=[]
+    # table_serv.append(['Name','Count','Price','Amount'])
+    # for service in info.invoice_set.all():
+    #     table_serv.append([service.service_id, service.quantity, service.price, service.sum])
+    #
+    # table_serv = table_serv[::-1]
+    #
+    #
+    # top_row_serv = Table(table_serv)
+    #
+    # top_row_serv.setStyle(TableStyle([('FONT', (0, -1), (4, -1), 'Helvetica-Bold'),
+    #                                   ('ALIGN', (0, -1), (4, -1), 'CENTER'),
+    #                              ('SIZE', (0, -1), (4, -1), 15),
+    #                                   ('LINEABOVE', (0, 0), (-1, -1), 2, colors.green),
+    #                              ]
+    #                             ))
+    #
+    # w, h = top_row_serv.wrapOn(c, 0, 0)
+    # top_row_serv.drawOn(c, textob.getX()-35, textob.getY()+200)
+    #
 
-    for service in info.invoice_set.all():
-        textob.textLine(f' {service.service_id} | {service.quantity} | {service.price} | {service.sum}')
 
 
     # finish up
-    c.drawText(textob)
-    c.showPage()
-    c.save()
+
+
+    # c.showPage()
+    # c.save()
+
+    doc = LetterMaker(buf, "The MVP", info)
+    doc.createDocument()
+    doc.savePDF()
     buf.seek(0)
     return FileResponse(buf, as_attachment=True, filename=f'Invoice_{kwargs.get("order_pk")}_.pdf')
 
-# def detail_to_pdf(request, **kwargs):
-#     template= 'invoce.html'
-#     b=info=OrderList.objects \
-#         .annotate(sum=Sum(F('invoice__price') * F('invoice__quantity'))) \
-#         .select_related('repairer_id') \
-#         .prefetch_related(Prefetch('invoice_set', Invoice.objects
-#                                    .defer('quantity_type', 'service_id__type')
-#                                    .select_related('service_id').annotate(sum=F('price') * F('quantity')))) \
-#         .defer('work_type', 'customer_code', 'repairer_id__phone', 'repairer_id__city',
-#                'repairer_id__email', 'repairer_id__foto', 'repairer_id__active',
-#                'repairer_id__rating_sum', 'repairer_id__rating_num') \
-#         .get(pk={kwargs.get("order_pk")})
-#     context={info:b}
-#     return render_to_pdf_response(request, template, context)
+
 
 
 
