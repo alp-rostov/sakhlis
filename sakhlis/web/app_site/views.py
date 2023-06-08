@@ -1,6 +1,3 @@
-from datetime import date
-from pprint import pprint
-
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
 from django.db.models import F, Prefetch, Count, Sum
@@ -8,13 +5,29 @@ from django.forms import modelformset_factory
 from django.shortcuts import redirect
 from django.views.decorators.http import require_http_methods
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView, FormView
-from reportlab.lib import colors
-
 from .models import RepairerList, OrderList, Invoice
 from .filters import RepFilter, OrderFilter
 from .forms import RepairerForm, BaseRegisterForm, OrderForm, InvoiceForm
-from .utils import LetterMaker
+from .utils import InvoiceMaker
+from django.http import FileResponse
+import io
 
+
+#___________________________________________________________________________________________________________________
+def get_info(spk:int):
+        return OrderList.objects.get(pk=spk)
+
+def get_info2():
+    return OrderList.objects \
+    .annotate(sum=Sum(F('invoice__price') * F('invoice__quantity'))) \
+    .prefetch_related(Prefetch('invoice_set', Invoice.objects
+                               .defer('quantity_type', 'service_id__type')
+                               .select_related('service_id').annotate(sum=F('price') * F('quantity')))) \
+    .defer('work_type', 'customer_code', 'repairer_id__phone', 'repairer_id__city',
+           'repairer_id__email', 'repairer_id__foto', 'repairer_id__active',
+           'repairer_id__rating_sum', 'repairer_id__rating_num') \
+
+#__________________________________________________________________________________________________________________
 
 class RepairerL(LoginRequiredMixin, ListView):
     model = RepairerList
@@ -78,14 +91,7 @@ class OrderManagementSystem(ListView):
     context_object_name = 'order'
     template_name = 'order_list.html'
     ordering = ['-time_in']
-    queryset = OrderList.objects \
-        .select_related('repairer_id') \
-        .prefetch_related(Prefetch('invoice_set', Invoice.objects
-                                   .select_related('service_id')
-                                   .defer('quantity_type', 'service_id__type')))\
-                .defer('work_type', 'customer_name', 'customer_phone', 'customer_code', 'repairer_id__phone',
-               'repairer_id__city', 'repairer_id__email', 'repairer_id__foto', 'repairer_id__active',
-               'repairer_id__rating_sum', 'repairer_id__rating_num')
+    queryset = get_info2().select_related('repairer_id')
 
     def get_queryset(self):
         queryset = super().get_queryset()
@@ -102,15 +108,7 @@ class OrderDatail(DetailView):
     model = OrderList
     template_name = 'order_detail.html'
     context_object_name = 'order'
-    queryset = OrderList.objects \
-        .annotate(sum=Sum(F('invoice__price') * F('invoice__quantity')))\
-        .select_related('repairer_id') \
-        .prefetch_related(Prefetch('invoice_set', Invoice.objects
-                                   .defer('quantity_type', 'service_id__type')
-                                   .select_related('service_id').annotate(sum=F('price') * F('quantity'))))\
-                                   .defer('work_type', 'customer_code', 'repairer_id__phone', 'repairer_id__city',
-                                          'repairer_id__email', 'repairer_id__foto', 'repairer_id__active',
-                                          'repairer_id__rating_sum', 'repairer_id__rating_num')
+    queryset = get_info2().select_related('repairer_id')
 
 
 class OrderUpdate(UpdateView):
@@ -128,7 +126,8 @@ class OrderDelete(DeleteView):
 
 @require_http_methods(["GET"])
 def OrderAddRepaier(request):
-    order = Info.get_info(request.GET['pk_order']) #OrderList.objects.get(pk=request.GET['pk_order'])
+    """Aad the repaier to order from telegram"""
+    order = get_info(request.GET['pk_order'])
     repaier = RepairerList.objects.get(pk=request.GET['pk_repairer'])
     if order and repaier:
         if not order.repairer_id:
@@ -138,11 +137,8 @@ def OrderAddRepaier(request):
         else:
             return redirect(f'/')  # TODO настроить сообщение, что ремонтник уже указан
 
-class Info:
-    def get_info(self, spk:int):
-        return OrderList.objects.get(pk=spk)
 
-class InvoiceCreate(Info, FormView):
+class InvoiceCreate(FormView):
     template_name = 'invoice.html'
     context_object_name = 'invoice'
 
@@ -157,11 +153,11 @@ class InvoiceCreate(Info, FormView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data()
-        context['info'] = self.get_info(self.kwargs.get('order_pk'))
+        context['info'] = get_info(self.kwargs.get('order_pk'))
         return context
 
     def post(self, formset, **kwargs):
-        b=self.get_info(self.kwargs.get('order_pk'))
+        b=get_info(self.kwargs.get('order_pk'))
         AuthorFormSet = modelformset_factory(Invoice, fields='__all__')
         formset = AuthorFormSet(self.request.POST)
         instances = formset.save(commit=False)
@@ -182,41 +178,25 @@ class Statistica(TemplateView):
 
     def get_context_data(self, **kwargs):
         context=super().get_context_data(**kwargs)
-        # context['b']=OrderList.objects.all().exclude(time_out=None).order_by('-time_in').annotate(sum=Sum(F('invoice__price') * F('invoice__quantity')))
         context['a'] = OrderList.objects.values('time_in__date').annotate(sum=Sum(F('price')))
         context['b'] = OrderList.objects.values('repairer_id__name').annotate(sum=Sum(F('price')), con=Count(F('id')))
 
         return context
 
-from django.http import FileResponse
-import  io
-from reportlab.pdfgen import canvas
-from reportlab.lib.units import inch, cm
-from reportlab.platypus import Paragraph, SimpleDocTemplate, Table, TableStyle
-from reportlab.platypus import Table as pdfTable
-# from easy_pdf.rendering import render_to_pdf_response
 
 @require_http_methods(["GET"])
 def CreateIvoicePDF(request, **kwargs):
-    # get information
-    info=OrderList.objects \
-        .annotate(sum=Sum(F('invoice__price') * F('invoice__quantity'))) \
-        .prefetch_related(Prefetch('invoice_set', Invoice.objects
-                                   .defer('quantity_type', 'service_id__type')
-                                   .select_related('service_id').annotate(sum=F('price') * F('quantity')))) \
-        .defer('work_type', 'customer_code', 'repairer_id__phone', 'repairer_id__city',
-               'repairer_id__email', 'repairer_id__foto', 'repairer_id__active',
-               'repairer_id__rating_sum', 'repairer_id__rating_num') \
-        .get(pk=kwargs.get("order_pk"))
-
-    # Create Bytestream buffer
+    """ Create invoice pdf-file for printing """
+    # get information from models
+    order_pk = kwargs.get("order_pk")
+    info = get_info2().get(pk=order_pk)
+    # create file
     buf = io.BytesIO()
-
-    doc = LetterMaker(buf, info)
+    doc = InvoiceMaker(buf, info)
     doc.createDocument()
     doc.savePDF()
     buf.seek(0)
-    return FileResponse(buf, as_attachment=True, filename=f'Invoice_{kwargs.get("order_pk")}_.pdf')
+    return FileResponse(buf, as_attachment=True, filename=f'Invoice_{order_pk}_.pdf')
 
 
 

@@ -33,15 +33,16 @@ def add_telegram_button(repairer: list, order_pk: int):
     return keyboard.add(*button)
 
 
-from reportlab.lib.pagesizes import letter, A4
+########################################################################
+
+from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.lib.units import mm, inch
 from reportlab.pdfgen import canvas
-from reportlab.platypus import Image, Paragraph, Table, TableStyle
+from reportlab.platypus import Paragraph, Table, TableStyle
 
 
-########################################################################
-class LetterMaker(object):
+class InvoiceMaker(object):
     """"""
 
     # ----------------------------------------------------------------------
@@ -54,67 +55,61 @@ class LetterMaker(object):
     # ----------------------------------------------------------------------
     def createDocument(self):
         """"""
-
-
         # create an invoice’s header
         date_info = str(self.info.time_in)[0:10:]
         line = f'Invoice  {self.info.pk}, date: {date_info}'
 
-
         self.createParagraph(line, *self.coord(60, 30), style='Heading1')
 
-        # create a table contain information about companies
+        # create a table containing information about companies
         data = [
-                      ['My Company: ', ' Gotsin S.A.', 'Customer company:', self.info.customer_name],
-                      ['Adress Company: ', ' Tbilisi, Zuraba Pataridze.', 'Customer Adress:', self.info.address_street_app],
-                      ['Code Company: ', ' 302265920', 'Customer code:', self.info.customer_code],
-                      ['Phone:', '+796044586678', 'Phone:', self.info.customer_phone],
-                      ['Bank:', 'Credo Bank'],
-                      ['CODE:', 'JSCRG22'],
-                      ['Account:', 'GE18CD0360000030597044']
-                      ]
+            ['My Company: ', ' Gotsin S.A.', 'Customer company:', self.info.customer_name],
+            ['Adress Company: ', ' Tbilisi, Zuraba Pataridze.', 'Customer Adress:', self.info.address_street_app],
+            ['Code Company: ', ' 302265920', 'Customer code:', self.info.customer_code],
+            ['Phone:', '+796044586678', 'Phone:', self.info.customer_phone],
+            ['Bank:', 'Credo Bank'],
+            ['CODE:', 'JSCRG22'],
+            ['Account:', 'GE18CD0360000030597044']
+        ]
         data = data[::-1]
-        table = Table(data, colWidths=1.8*inch)
-        table.setStyle(TableStyle([('ALIGN', (0, 0), (0, 6), 'RIGHT'),
-                                 ('ALIGN', (2, 0), (2, 6), 'RIGHT'),
-                                 ('FONT', (2, 0), (2, 6), 'Times-Bold'),
-                                 ('FONT', (0, 0), (0, 6), 'Times-Bold'),
-                                 ('SIZE',(0,0),(4,6),10)
-                                ]
-                                ))
-        table.wrapOn(self.c, self.width, self.height)
-        table.drawOn(self.c, *self.coord(30, 120))
 
-        # create list of services
+        a = TableStyle([('ALIGN', (0, 0), (0, 6), 'RIGHT'),
+                        ('ALIGN', (2, 0), (2, 6), 'RIGHT'),
+                        ('FONT', (2, 0), (2, 6), 'Times-Bold'),
+                        ('FONT', (0, 0), (0, 6), 'Times-Bold'),
+                        ('SIZE', (0, 0), (4, 6), 10)
+                        ]
+                       )
+
+        self.createTable(data, 30, 120, a, 1.8 * inch)
+
+        # create a table list of services
         table_serv = []
-        table_serv.append(['Name','Count','Price','Amount'])
-        i=1
-        sum_=0
+        table_serv.append(['Name', 'Count', 'Price', 'Amount'])
+        i = 1
+        sum_ = 0
         for service in self.info.invoice_set.all():
             table_serv.append([service.service_id, service.quantity, service.price, round(service.sum, 2)])
-            i = i+1
-            sum_=sum_+service.sum
-        table_serv.append(['','','Total:', round(sum_, 2)])
+            i = i + 1
+            sum_ = sum_ + service.sum
+        table_serv.append(['', '', 'Total:', round(sum_, 2)])
 
         table_serv = table_serv[::-1]
-        c_width = [200, 80, 80, 80,]
-        top_row_serv = Table(table_serv, colWidths=c_width)
-        top_row_serv.setStyle(TableStyle([
-                                             ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
-                                             ('BOTTOMPADDING', (0, 0), (-1, -1), 5),
-                                             ('TOPPADDING', (0, 0), (-1, -1), 5),
-                                             ('FONT', (0, -1), (4, -1), 'Helvetica-Bold'),
-                                             ('SIZE', (0, -1), (4, -1), 12),
-                                             ('ALIGN', (2, 0), (2, 0), 'RIGHT'),
-                                             ('SIZE', (2, 0), (3, 0), 12),
-                                     ]
-                                    ))
+        c_width = [200, 80, 80, 80]
+        b = TableStyle([
+            ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+            ('BOTTOMPADDING', (0, 0), (-1, -1), 5),
+            ('TOPPADDING', (0, 0), (-1, -1), 5),
+            ('FONT', (0, -1), (4, -1), 'Helvetica-Bold'),
+            ('SIZE', (0, -1), (4, -1), 12),
+            ('ALIGN', (2, 0), (2, 0), 'RIGHT'),
+            ('SIZE', (2, 0), (3, 0), 12),
+        ]
+        )
 
-        top_row_serv.wrapOn(self.c, self.width, self.height)
-        top_row_serv.drawOn(self.c, *self.coord(25, 100, mm))
+        self.createTable(table_serv, 70, 280, b, c_width)
 
-        self.createParagraph('Sign_____________S.A.Gostin', *self.coord(50, 110+i*10), style='Heading4')
-
+        self.createParagraph('Sign_____________S.A.Gostin', *self.coord(50, 110 + i * 10), style='Heading4')
 
     # ----------------------------------------------------------------------
     def coord(self, x, y, unit=1):
@@ -131,17 +126,26 @@ class LetterMaker(object):
         """"""
         if not style:
             style = self.styles["Normal"]
-        else: style = self.styles[style]
+        else:
+            style = self.styles[style]
         p = Paragraph(ptext, style=style)
         p.wrapOn(self.c, self.width, self.height)
         p.drawOn(self.c, *self.coord(x, y, mm))
 
     # ----------------------------------------------------------------------
+
+    def createTable(self, data, x, y, TableStyle_, c_width):
+        """"""
+        table = Table(data, colWidths=c_width)
+        table.setStyle(TableStyle_)
+        table.wrapOn(self.c, self.width, self.height)
+        table.drawOn(self.c, *self.coord(x, y))
+
+    # ---------------------------------------------
+
     def savePDF(self):
         """"""
         self.c.showPage()
         self.c.save()
 
     # ----------------------------------------------------------------------
-
-
