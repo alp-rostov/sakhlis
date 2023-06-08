@@ -211,77 +211,8 @@ def CreateIvoicePDF(request, **kwargs):
 
     # Create Bytestream buffer
     buf = io.BytesIO()
-    # # Create a canvas
-    # c = canvas.Canvas(buf, bottomup=0)
-    #
-    #
-    # # Create a text object
-    # textob = c.beginText()
-    #
-    # textob.setTextOrigin(inch, inch)
-    #
-    # textob.setFont("Helvetica", 25)
-    #
-    #
-    # # Add some lines of text
-    # date_info = str(info.time_in)[0:10:]
-    # line = f'Invoice {info.pk}, date: {date_info}'
-    #
-    # textob.textLine(line)
-    # c.drawText(textob)
-    # # Create a table
-    # table_data = [
-    #               ['My Company: ', ' Gotsin S.A.', 'Customer company:', info.customer_name],
-    #               ['Adress Company: ', ' Tbilisi, Zuraba Pataridze.', 'Customer Adress:', info.address_street_app],
-    #               ['Code Company: ', ' 302265920', 'Customer code:', info.customer_code],
-    #               ['Phone:', '+796044586678', 'Phone:', info.customer_phone],
-    #               ['Bank:', 'Credo Bank'],
-    #               ['CODE:', 'JSCRG22'],
-    #               ['Account:', 'GE18CD0360000030597044']
-    #               ]
-    # table_data = table_data[::-1]
-    # top_row = Table(table_data)
-    #
-    # top_row.setStyle(TableStyle([('ALIGN', (0, 0), (0, 6), 'RIGHT'),
-    #                              ('ALIGN', (2, 0), (2, 6), 'RIGHT'),
-    #                              ('FONT', (2, 0), (2, 6), 'Times-Bold'),
-    #                              ('FONT', (0, 0), (0, 6), 'Times-Bold'),
-    #                              ('SIZE',(0,0),(4,6),12)
-    #                             ]
-    #                             ))
-    #
-    # w, h = top_row.wrapOn(c, 0, 0)
-    # top_row.drawOn(c, textob.getX()-10, textob.getY())
-    # table_serv=[]
-    # table_serv.append(['Name','Count','Price','Amount'])
-    # for service in info.invoice_set.all():
-    #     table_serv.append([service.service_id, service.quantity, service.price, service.sum])
-    #
-    # table_serv = table_serv[::-1]
-    #
-    #
-    # top_row_serv = Table(table_serv)
-    #
-    # top_row_serv.setStyle(TableStyle([('FONT', (0, -1), (4, -1), 'Helvetica-Bold'),
-    #                                   ('ALIGN', (0, -1), (4, -1), 'CENTER'),
-    #                              ('SIZE', (0, -1), (4, -1), 15),
-    #                                   ('LINEABOVE', (0, 0), (-1, -1), 2, colors.green),
-    #                              ]
-    #                             ))
-    #
-    # w, h = top_row_serv.wrapOn(c, 0, 0)
-    # top_row_serv.drawOn(c, textob.getX()-35, textob.getY()+200)
-    #
 
-
-
-    # finish up
-
-
-    # c.showPage()
-    # c.save()
-
-    doc = LetterMaker(buf, "The MVP", info)
+    doc = LetterMaker(buf, info)
     doc.createDocument()
     doc.savePDF()
     buf.seek(0)

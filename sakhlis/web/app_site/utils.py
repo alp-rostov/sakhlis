@@ -33,7 +33,7 @@ def add_telegram_button(repairer: list, order_pk: int):
     return keyboard.add(*button)
 
 
-from reportlab.lib.pagesizes import letter
+from reportlab.lib.pagesizes import letter, A4
 from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.lib.units import mm, inch
 from reportlab.pdfgen import canvas
@@ -45,22 +45,23 @@ class LetterMaker(object):
     """"""
 
     # ----------------------------------------------------------------------
-    def __init__(self, pdf_file, org, info):
+    def __init__(self, pdf_file, info):
         self.c = canvas.Canvas(pdf_file, bottomup=0)
         self.styles = getSampleStyleSheet()
-        self.width, self.height = letter
-        self.organization = org
+        self.width, self.height = A4
         self.info = info
 
     # ----------------------------------------------------------------------
     def createDocument(self):
         """"""
-        voffset = 25
+
 
         # create an invoice’s header
         date_info = str(self.info.time_in)[0:10:]
-        line = f'Invoice {self.info.pk}, date: {date_info}'
-        self.createParagraph(line, 50, 260, style='Heading1')
+        line = f'Invoice  {self.info.pk}, date: {date_info}'
+
+
+        self.createParagraph(line, *self.coord(60, 30), style='Heading1')
 
         # create a table contain information about companies
         data = [
@@ -81,26 +82,38 @@ class LetterMaker(object):
                                  ('SIZE',(0,0),(4,6),10)
                                 ]
                                 ))
-        table.wrapOn(self.c, 0, 0)
-        table.drawOn(self.c, *self.coord(10, 250, mm))
+        table.wrapOn(self.c, self.width, self.height)
+        table.drawOn(self.c, *self.coord(30, 120))
 
         # create list of services
         table_serv = []
         table_serv.append(['Name','Count','Price','Amount'])
+        i=1
+        sum_=0
         for service in self.info.invoice_set.all():
-            table_serv.append([service.service_id, service.quantity, service.price, service.sum])
-        table_serv = table_serv[::-1]
-        top_row_serv = Table(table_serv, colWidths=1.5*inch)
-        top_row_serv.setStyle(TableStyle([('FONT', (0, -1), (4, -1), 'Helvetica-Bold'),
-                                          ('ALIGN', (0, 0), (4, -1), 'CENTER'),
-                                     ('SIZE', (0, -1), (4, -1), 12),
+            table_serv.append([service.service_id, service.quantity, service.price, round(service.sum, 2)])
+            i = i+1
+            sum_=sum_+service.sum
+        table_serv.append(['','','Total:', round(sum_, 2)])
 
+        table_serv = table_serv[::-1]
+        c_width = [200, 80, 80, 80,]
+        top_row_serv = Table(table_serv, colWidths=c_width)
+        top_row_serv.setStyle(TableStyle([
+                                             ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+                                             ('BOTTOMPADDING', (0, 0), (-1, -1), 5),
+                                             ('TOPPADDING', (0, 0), (-1, -1), 5),
+                                             ('FONT', (0, -1), (4, -1), 'Helvetica-Bold'),
+                                             ('SIZE', (0, -1), (4, -1), 12),
+                                             ('ALIGN', (2, 0), (2, 0), 'RIGHT'),
+                                             ('SIZE', (2, 0), (3, 0), 12),
                                      ]
                                     ))
 
         top_row_serv.wrapOn(self.c, self.width, self.height)
-        top_row_serv.drawOn(self.c, *self.coord(18, 200, mm))
+        top_row_serv.drawOn(self.c, *self.coord(25, 100, mm))
 
+        self.createParagraph('Sign_____________S.A.Gostin', *self.coord(50, 110+i*10), style='Heading4')
 
 
     # ----------------------------------------------------------------------
@@ -109,7 +122,7 @@ class LetterMaker(object):
         # http://stackoverflow.com/questions/4726011/wrap-text-in-a-table-reportlab
         Helper class to help position flowables in Canvas objects
         """
-        x, y = x * unit, self.height - y * unit
+        x, y = x * unit, y * unit
         return x, y
 
         # ----------------------------------------------------------------------
