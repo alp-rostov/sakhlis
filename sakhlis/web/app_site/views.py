@@ -14,7 +14,7 @@ import io
 
 
 #___________________________________________________________________________________________________________________
-def get_info(spk:int):
+def get_info1(spk:int):
         return OrderList.objects.get(pk=spk)
 
 def get_info2():
@@ -23,7 +23,7 @@ def get_info2():
     .prefetch_related(Prefetch('invoice_set', Invoice.objects
                                .defer('quantity_type', 'service_id__type')
                                .select_related('service_id').annotate(sum=F('price') * F('quantity')))) \
-    .defer('work_type', 'customer_code', 'repairer_id__phone', 'repairer_id__city',
+    .defer('customer_code', 'repairer_id__phone', 'repairer_id__city',
            'repairer_id__email', 'repairer_id__foto', 'repairer_id__active',
            'repairer_id__rating_sum', 'repairer_id__rating_num') \
 
@@ -110,13 +110,22 @@ class OrderDatail(DetailView):
     context_object_name = 'order'
     queryset = get_info2().select_related('repairer_id')
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['repairer'] = RepairerList.objects.all()
+        return context
+
 
 class OrderUpdate(UpdateView):
     model = OrderList
     template_name = 'order_update.html'
     form_class = OrderForm
     success_url = '/list_order'
-
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['time_in']=self.object.time_in
+        context['pk'] = self.object.pk
+        return context
 
 class OrderDelete(DeleteView):
     model = OrderList
@@ -127,11 +136,12 @@ class OrderDelete(DeleteView):
 @require_http_methods(["GET"])
 def OrderAddRepaier(request):
     """Aad the repaier to order from telegram"""
-    order = get_info(request.GET['pk_order'])
+    order = get_info1(request.GET['pk_order'])
     repaier = RepairerList.objects.get(pk=request.GET['pk_repairer'])
     if order and repaier:
         if not order.repairer_id:
             order.repairer_id = repaier
+            order.order_status = 'SND'
             order.save()
             return redirect(f'/list_order/{order.pk}')
         else:
@@ -153,11 +163,11 @@ class InvoiceCreate(FormView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data()
-        context['info'] = get_info(self.kwargs.get('order_pk'))
+        context['info'] = get_info1(self.kwargs.get('order_pk'))
         return context
 
     def post(self, formset, **kwargs):
-        b=get_info(self.kwargs.get('order_pk'))
+        b=get_info1(self.kwargs.get('order_pk'))
         AuthorFormSet = modelformset_factory(Invoice, fields='__all__')
         formset = AuthorFormSet(self.request.POST)
         instances = formset.save(commit=False)

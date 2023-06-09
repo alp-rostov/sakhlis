@@ -27,6 +27,22 @@ QUANTITY_CHOICES = [
 
 ]
 
+QUANTITY_CHOICES = [
+    ('SV', 'Услуга'),
+    ('ME', 'Метр'),
+    ('QL', 'Килограмм'),
+    ('TH', 'Штука'),
+
+]
+
+ORDER_STATUS = [
+    ('BEG', 'Заявка получен'),
+    ('SND', 'Направлена мастеру'),
+    ('END', 'Заявка выполнена'),
+    ('CNL', 'Заявка отменена'),
+
+]
+
 
 class Service(models.Model):
     """name type """
@@ -53,7 +69,7 @@ class Invoice(models.Model):
 
 class OrderList(models.Model):
     """time_in time_out repairer_id price text_order customer_name customer_phone address_city address_street_app
-    address_num work_type services """
+    address_num work_type services order_status"""
     time_in = models.DateTimeField(auto_now_add=True, verbose_name='Дата заказа')
     time_out = models.DateTimeField(null=True, blank=True, verbose_name='Дата выполнения')
     repairer_id = models.ForeignKey("RepairerList", on_delete=models.SET_NULL, null=True, blank=True,
@@ -65,8 +81,8 @@ class OrderList(models.Model):
     customer_code = models.CharField(max_length=16, verbose_name='Код организации', blank=True, null=True)
     address_city = models.CharField(max_length=2, choices=CITY_CHOICES, default='TB', null=True, blank=True,
                                     verbose_name='Город')
-    work_type = models.CharField(max_length=3, choices=WORK_CHOICES, default='', null=True, blank=True,
-                                 verbose_name='Вид работ')
+    order_status = models.CharField(max_length=3, choices=ORDER_STATUS, default='BEG', null=True, blank=True,
+                                    verbose_name='Статус заказа')
     address_street_app = models.CharField(max_length=150, verbose_name='Улица', null=True, blank=True)
     address_num = models.CharField(max_length=10, verbose_name='Номер дома', null=True, blank=True)
     services = models.ManyToManyField('Service', through='Invoice')

@@ -1,5 +1,3 @@
-from pprint import pprint
-
 from django_filters import FilterSet, ChoiceFilter, CharFilter, DateFilter, BooleanFilter, ModelChoiceFilter
 from .models import RepairerList, OrderList
 from .models import CITY_CHOICES
@@ -45,23 +43,6 @@ class RepFilter(FilterSet):
 
 
 class OrderFilter(FilterSet):
-    text_order = CharFilter(
-        field_name='text_order',
-        label='Описание проблемы',
-        lookup_expr='startswith',
-        widget=forms.TextInput(attrs={"class": "myfield"})
-    )
-    customer_name = CharFilter(
-        field_name='customer_name',
-        label='Имя клиента',
-        lookup_expr='startswith'
-    )
-
-    customer_phone = CharFilter(
-        field_name='customer_phone',
-        label='Телефон',
-        lookup_expr='icontains'
-    )
 
     address_city = ChoiceFilter(
         field_name='address_city',
@@ -71,12 +52,6 @@ class OrderFilter(FilterSet):
 
     )
 
-    address_street_app = CharFilter(
-        field_name='street',
-        label='Улица',
-        lookup_expr='icontains'
-    )
-
     time_in = DateFilter(
         field_name="time_in",
         widget=forms.DateInput(attrs={'type': 'date'}),
@@ -84,12 +59,7 @@ class OrderFilter(FilterSet):
         lookup_expr='icontains',
     )
 
-    time_out = BooleanFilter(
-        field_name='time_out',
-        label='Текущие работы',
-        lookup_expr='isnull',
-        widget=forms.Select(attrs={'class': 'sss'},  choices=[('', 'Все'), ('True', 'в работе'), ('False', 'выполнено')]),
-    )
+
     repairer_id = ModelChoiceFilter(
         field_name='repairer_id',
         label='Мастер-',
@@ -99,7 +69,5 @@ class OrderFilter(FilterSet):
 
     class Meta:
         model = OrderList
-        fields = ['text_order', 'customer_name', 'customer_phone',
-                  'address_city', 'address_street_app',
-                  'time_in', 'time_out', 'repairer_id']
+        fields = ['address_city', 'time_in', 'time_out', 'order_status', 'repairer_id']
 

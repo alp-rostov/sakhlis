@@ -1,6 +1,11 @@
 from geopy.geocoders import Nominatim
-from reportlab.lib import colors
 from telebot import types
+from reportlab.lib.pagesizes import A4
+from reportlab.lib.styles import getSampleStyleSheet
+from reportlab.lib.units import mm, inch
+from reportlab.pdfgen import canvas
+from reportlab.platypus import Paragraph, Table, TableStyle
+
 
 
 def set_coordinates_address(street: str, city: str) -> str:
@@ -16,6 +21,7 @@ def set_coordinates_address(street: str, city: str) -> str:
         else:
             return ' '
 
+########################################################################
 
 def add_telegram_button(repairer: list, order_pk: int):
     """
@@ -34,12 +40,6 @@ def add_telegram_button(repairer: list, order_pk: int):
 
 
 ########################################################################
-
-from reportlab.lib.pagesizes import A4
-from reportlab.lib.styles import getSampleStyleSheet
-from reportlab.lib.units import mm, inch
-from reportlab.pdfgen import canvas
-from reportlab.platypus import Paragraph, Table, TableStyle
 
 
 class InvoiceMaker(object):
@@ -149,3 +149,9 @@ class InvoiceMaker(object):
         self.c.save()
 
     # ----------------------------------------------------------------------
+
+def order_status():
+    status = ['Заказ получен', 'Направлен мастеру', 'Выполнен', 'Отменен']
+
+
+    return status

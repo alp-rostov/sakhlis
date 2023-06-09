@@ -2,12 +2,11 @@
 {% load custom_filters %}
 {% load custom_tags %}
 
-
 {% block body %}
 
 <table  width="1000">
 <tr><td colspan="2"><h1>Заказ № {{ order.pk}} от {{ order.time_in}} </h1>
-<h3>{{ order.time_out | finish_order_tag }}<h3>
+    <h3>Статус заказа: {{ order.order_status  | choice_tag:'status_order'}}</h3>
 </td></tr>
 
 <tr><td>Имя: </td><td>{{ order.customer_name}}</td></tr>
@@ -16,8 +15,19 @@
     {{ order.address_street_app}}, {{ order.address_num}}</td></tr>
 <tr><td>Описание проблемы: </td><td>{{ order.text_order}}</td></tr>
 <tr><td>Цена: </td><td>{{ order.price}}</td></tr>
+<tr><td>Дата выполнения: </td><td>{{ order.time_out }}</td></tr>
 
+    {% if order.repairer_id %}
 <tr><td>Мастер: </td><td>{{ order.repairer_id}}</td></tr>
+    {% else %}
+
+<tr><td>Направить заказ мастеру: </td><td>{%  for i in repairer  %}
+
+    <a href="../add?pk_order={{ order.pk }}&pk_repairer={{i.pk}}">{{ i.s_name }} {{ i.name}}</a><br>
+    {% endfor %}
+</td></tr>
+
+    {% endif %}
 <tr><td colspan="2">
 
 
