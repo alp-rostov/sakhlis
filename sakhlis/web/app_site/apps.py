@@ -7,3 +7,4 @@ class AppSiteConfig(AppConfig):
     def ready(self):
         import app_site.signals
 
+

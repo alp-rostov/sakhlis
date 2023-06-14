@@ -3,13 +3,14 @@ from django.contrib.auth.models import User
 from django.db.models import F, Prefetch, Count, Sum
 from django.forms import modelformset_factory
 from django.shortcuts import redirect
+from django.urls import reverse, reverse_lazy
 from django.views.decorators.http import require_http_methods
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView, FormView
 from .models import RepairerList, OrderList, Invoice
 from .filters import RepFilter, OrderFilter
 from .forms import RepairerForm, BaseRegisterForm, OrderForm, InvoiceForm
 from .utils import InvoiceMaker
-from django.http import FileResponse
+from django.http import FileResponse, HttpResponseNotFound, Http404, HttpResponseRedirect
 import io
 
 
@@ -76,14 +77,14 @@ class RepaierDelete(DeleteView):
 class BaseRegisterView(CreateView):
     model = User
     form_class = BaseRegisterForm
-    success_url = '/'
+    success_url = reverse_lazy('home')
 
 
 class OrderCreate(CreateView):
     model = OrderList
     template_name = 'order_create.html'
     form_class = OrderForm
-    success_url = '/'
+    success_url = reverse_lazy('home')
 
 
 class OrderManagementSystem(ListView):
@@ -120,7 +121,7 @@ class OrderUpdate(UpdateView):
     model = OrderList
     template_name = 'order_update.html'
     form_class = OrderForm
-    success_url = '/list_order'
+    success_url = reverse_lazy('list_order')
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['time_in']=self.object.time_in
@@ -130,22 +131,25 @@ class OrderUpdate(UpdateView):
 class OrderDelete(DeleteView):
     model = OrderList
     template_name = 'order_delete.html'
-    success_url = '/list_order'
+    success_url = reverse_lazy("list_order")
 
 
 @require_http_methods(["GET"])
 def OrderAddRepaier(request):
     """Aad the repaier to order from telegram"""
-    order = get_info1(request.GET['pk_order'])
-    repaier = RepairerList.objects.get(pk=request.GET['pk_repairer'])
-    if order and repaier:
-        if not order.repairer_id:
-            order.repairer_id = repaier
-            order.order_status = 'SND'
-            order.save()
-            return redirect(f'/list_order/{order.pk}')
-        else:
-            return redirect(f'/')  # TODO настроить сообщение, что ремонтник уже указан
+    if request.GET:
+        order = get_info1(request.GET['pk_order'])
+        repaier = RepairerList.objects.get(pk=request.GET['pk_repairer'])
+        if order and repaier:
+            if not order.repairer_id:
+                order.repairer_id = repaier
+                order.order_status = 'SND'
+                order.save()
+                return HttpResponseRedirect(reverse('update', args=(order.pk,)))
+            else:
+                return redirect('home')  # TODO настроить сообщение, что ремонтник уже указан
+    else:
+        raise Http404()
 
 
 class InvoiceCreate(FormView):
@@ -153,7 +157,7 @@ class InvoiceCreate(FormView):
     context_object_name = 'invoice'
 
     def get_form(self, form_class=None):
-        InvoiceFormSet = modelformset_factory(Invoice, form=InvoiceForm, exclude=('order_id',))
+        InvoiceFormSet = modelformset_factory(Invoice, form=InvoiceForm, exclude=('order_id',), extra=0)
         formset = InvoiceFormSet(queryset=Invoice.objects
                                  .filter(order_id=self.kwargs.get('order_pk'))
                                  .select_related('service_id')
@@ -174,21 +178,21 @@ class InvoiceCreate(FormView):
         for instance in instances:
             instance.order_id = b
             instance.save()
-        return redirect(f'/list_order/{self.kwargs.get("order_pk")}')
+        return HttpResponseRedirect(reverse('list_detail', args=(self.kwargs.get("order_pk"),)))
 
 @require_http_methods(["GET"])
 def DeleteIvoiceService(request, **kwargs):
     if request.user.is_authenticated:
         Invoice.objects.get(pk=kwargs.get("invoice_pk")).delete()
-    return redirect(f'/invoice/{ kwargs.get("order_pk") }')
-
+    # return redirect(f'/invoice/{ kwargs.get("order_pk") }')
+    return HttpResponseRedirect(reverse('invoice', args=(kwargs.get("order_pk"),)))
 
 class Statistica(TemplateView):
     template_name = 'statistica.html'
 
     def get_context_data(self, **kwargs):
         context=super().get_context_data(**kwargs)
-        context['a'] = OrderList.objects.values('time_in__date').annotate(sum=Sum(F('price')))
+        context['a'] = OrderList.objects.values('time_in__month', 'time_in__year').annotate(sum=Sum(F('price')))
         context['b'] = OrderList.objects.values('repairer_id__name').annotate(sum=Sum(F('price')), con=Count(F('id')))
 
         return context
@@ -207,6 +211,9 @@ def CreateIvoicePDF(request, **kwargs):
     doc.savePDF()
     buf.seek(0)
     return FileResponse(buf, as_attachment=True, filename=f'Invoice_{order_pk}_.pdf')
+
+def pageNotFound(request, exception):
+    return HttpResponseNotFound('страница не найдена')
 
 
 

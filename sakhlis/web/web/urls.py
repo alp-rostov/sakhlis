@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from app_site.views import pageNotFound
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("pages/", include("django.contrib.flatpages.urls")),
@@ -24,4 +26,6 @@ urlpatterns = [
     path('__debug__/', include('debug_toolbar.urls')),
 
 ]
+
+handler404 = pageNotFound
 

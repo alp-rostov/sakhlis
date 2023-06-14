@@ -64,7 +64,10 @@ class OrderFilter(FilterSet):
         field_name='repairer_id',
         label='Мастер-',
         lookup_expr='exact',
-        queryset=RepairerList.objects.only('name', 's_name')
+        queryset=RepairerList.objects.only('name', 's_name'),
+        null_label='Мастер не указан',
+        empty_label='Все'
+
     )
 
     class Meta:
