@@ -39,36 +39,57 @@
 
     {% csrf_token %}
 {{ form.management_form }}
-    <div id="ingrd-list">
+    <div id="ingredient-form-list">
     {% for g in form %}
-    <div class="ingrd">
+    <div class="ingredient-form">
     {{ g.as_table }}<a href="delete/{{ g.id.value }}/{{ info.id }}">удалить</a>
         <br></div>
     {% endfor %}
     </div>
-    <div id="empty_form" class="">{{ form.empty_form }}</div>
+    <div id="empty-form" class="hidden">{{ form.empty_form }}</div>
     <button id="add-more" type="button">add-more</button>
         <button type="submit"> "Save" </button>
 </form>
+
 <script>
+
 const addMoreBtn=document.getElementById('add-more')
 const totalNewForms = document.getElementById('id_form-TOTAL_FORMS')
+
+
 addMoreBtn.addEventListener('click', add_new_form)
 
 function add_new_form(event){
     if (event) {
     event.preventDefault()
     }
-const currentForms = document.getElementsByClassName('ingrd')
-const currentFormCount = currentForms.length + 1
-const formCopyTarget = document.getElementById('ingrd-list')
-const emptyFromEl=document.getElementById('empty_form').cloneNode(true)
-emptyFromEl.setAttribute('class','ingr' )
-emptyFromEl.setAttribute('id','form-${currentFormCount}' )
+    const currentIngredientForms = document.getElementsByClassName('ingredient-form')
+    const currentFormCount = currentIngredientForms.length // + 1
+    const formCopyTarget = document.getElementById('ingredient-form-list')
+    const copyEmptyFromEl=document.getElementById('empty-form').cloneNode(true)
+    copyEmptyFromEl.setAttribute('class', 'ingredient-form')
+    copyEmptyFromEl.setAttribute('id',`form-${currentFormCount}`)
+    const regex = new RegExp('__prefix__', 'g')
+    copyEmptyFromEl.innerHTML=copyEmptyFromEl.innerHTML.replace(regex,
+     currentFormCount)
+    totalNewForms.setAttribute('value', currentFormCount+1)
+    formCopyTarget.append(copyEmptyFromEl)
 
-formCopyTarget.append(emptyFromEl)
+
+
+
+
+
+<!--const -->
+
+
+
+
+
+
 }
 </script>
+
 <a href="pdf/{{ info.id }}">PDF</a>
 
 
