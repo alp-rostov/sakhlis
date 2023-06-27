@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django_filters import FilterSet, ChoiceFilter, CharFilter, DateFilter, BooleanFilter, ModelChoiceFilter
 from .models import RepairerList, OrderList
 from .models import CITY_CHOICES
@@ -5,17 +6,6 @@ from django import forms
 
 class RepFilter(FilterSet):
 
-    s_name = CharFilter(
-        field_name='s_name',
-        label='Фамилия',
-        lookup_expr='startswith',
-        widget=forms.TextInput(attrs={"class": "myfield"})
-        )
-    name = CharFilter(
-            field_name='name',
-            label='Имя',
-            lookup_expr='startswith'
-        )
 
     city = ChoiceFilter(
         field_name='city',
@@ -39,7 +29,7 @@ class RepFilter(FilterSet):
 
     class Meta:
         model = RepairerList
-        fields = ['s_name', 'name', 'city', 'email', 'phone', ]
+        fields = ['city', 'email', 'phone', ]
 
 
 class OrderFilter(FilterSet):
@@ -64,7 +54,7 @@ class OrderFilter(FilterSet):
         field_name='repairer_id',
         label='Мастер-',
         lookup_expr='exact',
-        queryset=RepairerList.objects.only('name', 's_name'),
+        queryset=User.objects.only('last_name', 'first_name'),
         null_label='Мастер не указан',
         empty_label='Все'
 

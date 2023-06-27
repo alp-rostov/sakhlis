@@ -1,0 +1,27 @@
+{% extends 'flatpages/default.html' %}
+{% load custom_tags %}
+
+
+{% block body %}
+<h1>Личный кабинет</h1>
+
+<table width="1300" border="1">
+    <tr>
+
+        <td><a href="list_repair/{{ i.user }}">{{ user.last_name }} {{ user.first_name }}</a></td>
+        <td> {{ user.email }}</td>
+
+
+
+
+
+
+
+
+    </tr>
+</table>
+
+
+
+
+{% endblock body %}

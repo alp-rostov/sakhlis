@@ -1,4 +1,4 @@
-from django.contrib.auth.views import LoginView, LogoutView
+from django.contrib.auth.views import LoginView, LogoutView, PasswordResetView
 from django.urls import path
 from .views import *
 from django.conf import settings
@@ -18,18 +18,15 @@ urlpatterns = [
     path('invoice/pdf_/<int:order_pk>', CreateIvoicePDF, ),
 
     path('list_repair', RepairerL.as_view(), name='list_repair'),
-    path('list_repair/<int:pk>', RepaierD.as_view()),
-    path('create', RepaierCreate.as_view()),
-    path('create/<int:pk>', RepaierUpdate.as_view(), name='update_repair'),
-    path('delete/<int:pk>', RepaierDelete.as_view(),  name='delete_repair'),
 
 
     path('login/', LoginView.as_view(template_name='login.html'), name='login'),
     path('logout/', LogoutView.as_view(template_name='logout.html'), name='logout'),
-    path('register/', BaseRegisterView.as_view(template_name='register.html'), name='signup'),
+    path('register/', BaseRegisterView.as_view(), name='signup'),
+
 
     path('stat/', Statistica.as_view(), name='stat'),
-
+    path('repaierman/<int:pk>', RepaiermanSpace.as_view(), name='repaierman'),
 
 ]
 

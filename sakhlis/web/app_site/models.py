@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.db import models
 from django.core.validators import RegexValidator
 from django.shortcuts import get_object_or_404
@@ -88,7 +89,7 @@ class OrderList(models.Model):
     address_num work_type services order_status"""
     time_in = models.DateTimeField(auto_now_add=True, verbose_name='Дата заказа')
     time_out = models.DateTimeField(null=True, blank=True, verbose_name='Дата выполнения')
-    repairer_id = models.ForeignKey("RepairerList", on_delete=models.SET_NULL, null=True, blank=True,
+    repairer_id = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True,
                                     verbose_name='Мастер', default='', )
     price = models.DecimalField(decimal_places=2, max_digits=7, null=True, blank=True, verbose_name='Стоимость работ')
     text_order = models.CharField(max_length=1500, verbose_name='Описание проблемы', blank=True, null=True)
@@ -109,18 +110,13 @@ class OrderList(models.Model):
 
 class RepairerList(models.Model):
     """name s_name phone city email foto active rating_sum rating_num"""
-    name = models.CharField(max_length=100, verbose_name='Имя')
-    s_name = models.CharField(max_length=100, null=True, verbose_name='Фамилия')
     phone = models.CharField(validators=[phoneNumberRegex], max_length=16, unique=True, verbose_name='Телефон')
     city = models.CharField(max_length=2, choices=CITY_CHOICES, default='TB')
-    email = models.EmailField(max_length=200, null=True, blank=True, verbose_name='Электронная почта')
     foto = models.ImageField(upload_to="images/", null=True, blank=True, verbose_name='Фотография:')
-    active = models.BooleanField(default=False)
     rating_sum = models.IntegerField(default=0, blank=True, null=True)
     rating_num = models.IntegerField(default=0, blank=True, null=True)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, blank=True, null=True)
 
-    def __str__(self):
-        return f"{self.name} {self.s_name}"
 
     def get_absolute_url(self):
         return reverse('list_repair')

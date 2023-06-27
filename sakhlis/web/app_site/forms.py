@@ -6,9 +6,10 @@ from .models import *
 
 
 class RepairerForm(forms.ModelForm):
+
     class Meta:
         model = RepairerList
-        fields = '__all__'
+        fields = ('phone', 'city', 'foto')
 
 
 class OrderForm(forms.ModelForm):
@@ -75,7 +76,6 @@ class BaseRegisterForm(UserCreationForm):
     email = forms.EmailField(label="Email")
     first_name = forms.CharField(label="Имя")
     last_name = forms.CharField(label="Фамилия")
-
     class Meta:
         model = User
         fields = ("username",

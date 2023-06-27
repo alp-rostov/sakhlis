@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from app_site.views import pageNotFound
+# from app_site.views import pageNotFound
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,5 +27,5 @@ urlpatterns = [
 
 ]
 
-handler404 = pageNotFound
-
+# handler404 = pageNotFound
+#

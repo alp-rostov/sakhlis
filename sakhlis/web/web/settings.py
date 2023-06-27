@@ -25,9 +25,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = str(os.environ.get('DEBUG')) == 1
+# DEBUG = str(os.environ.get('DEBUG')) == 1
+DEBUG = True
 
 ALLOWED_HOSTS = []
+
 if not DEBUG:
     ALLOWED_HOSTS += [os.environ.get('ALLOWED_HOST')]
 
@@ -59,7 +61,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
 
     "debug_toolbar.middleware.DebugToolbarMiddleware",
@@ -144,12 +145,14 @@ STATICFILES_DIRS = [
     BASE_DIR / "static/",
 ]
 
+
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 LOGIN_URL = '/login/'
 LOGOUT_URL = '/logout/'
 LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 CELERY_BROKER_URL = 'redis://localhost:6379'
 CELERY_RESULT_BACKEND = 'redis://localhost:6379'

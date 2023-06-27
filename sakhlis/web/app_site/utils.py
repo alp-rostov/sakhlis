@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from geopy.geocoders import Nominatim
 from telebot import types
 from reportlab.lib.pagesizes import A4
@@ -15,21 +16,16 @@ def set_coordinates_address(street: str, city: str) -> str:
         location = geolocator.geocode({'street': {street}, 'city': {city}}, addressdetails=True)
     except TypeError:
         return ' '
-    else:
-        if location:
-            return f'https://yandex.ru/maps/?pt={location.longitude},{location.latitude}&z=18&l=map'
-        else:
-            return ' '
+    if location:
+        return f'https://yandex.ru/maps/?pt={location.longitude},{location.latitude}&z=18&l=map'
 
-########################################################################
 
-def add_telegram_button(repairer: list, order_pk: int):
+def add_telegram_button(repairer: list, order_pk: int) -> types.InlineKeyboardMarkup:
     """
     creating buttons for telegram message.
     repairer -> list of tuples (id repairer, s_name repairer)
     order_pk -> order`s number
     """
-    # создание кнопок в телеграмм
     keyboard = types.InlineKeyboardMarkup()
     button = []
     for i in repairer:
@@ -39,21 +35,16 @@ def add_telegram_button(repairer: list, order_pk: int):
     return keyboard.add(*button)
 
 
-########################################################################
-
-
 class InvoiceMaker(object):
     """"""
 
-    # ----------------------------------------------------------------------
     def __init__(self, pdf_file, info):
         self.c = canvas.Canvas(pdf_file, bottomup=0)
         self.styles = getSampleStyleSheet()
         self.width, self.height = A4
         self.info = info
 
-    # ----------------------------------------------------------------------
-    def createDocument(self):
+    def createDocument(self) -> None:
         """"""
         # create an invoice’s header
         date_info = str(self.info.time_in)[0:10:]
@@ -112,7 +103,7 @@ class InvoiceMaker(object):
         self.createParagraph('Sign_____________S.A.Gostin', *self.coord(50, 110 + i * 10), style='Heading4')
 
     # ----------------------------------------------------------------------
-    def coord(self, x, y, unit=1):
+    def coord(self, x, y, unit=1) -> tuple:
         """
         # http://stackoverflow.com/questions/4726011/wrap-text-in-a-table-reportlab
         Helper class to help position flowables in Canvas objects

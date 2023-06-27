@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from .models import OrderList
@@ -12,3 +13,9 @@ def send_post_new_order(instance, created, **kwargs):
     if created:
         send_order_information.apply_async([instance.pk], countdown=20, expires=3600)
 
+
+@receiver(post_save, sender=User)
+def create_user_profile(sender, instance, created, **kwargs):
+    if created:
+      print(instance.last_name)
+      pass
