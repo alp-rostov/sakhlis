@@ -7,10 +7,12 @@
 <body>
 <h2> Регистрация </h2>
 <form method="post" enctype="multipart/form-data">
-{% csrf_token %}
-{{ form.as_p }}
-{{ repaier.as_p }}
-<input type="submit" value="Продолжить">
+    {% csrf_token %}
+    {% for i in form %}
+        <p>{{i.label}}: {{ i }}</p>
+        <div class="form-error">{{ i.errors }}</div>
+    {% endfor %}
+    <button type="submit">Регистрация</button>
 </form>
 </body>
 </html>

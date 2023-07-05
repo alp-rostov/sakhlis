@@ -3,11 +3,14 @@
 {% block body %}
 {{ request.user.username }}
 <button> <a href="/app/logout/">Выйти</a> </button>
-<h1>Форма редактирования</h1>
+<h1>{{ request.user.username }}</h1>
 <hr>
 <form action="" method="post" enctype="multipart/form-data">
     {% csrf_token %}
-    {{ form.as_p }}
+    {{ UserForm }}
+
     <input type="submit" value="Save" />
 </form>
+
+
 {% endblock body %}

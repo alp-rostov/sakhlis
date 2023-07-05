@@ -22,8 +22,9 @@ urlpatterns = [
 
     path('login/', LoginView.as_view(template_name='login.html'), name='login'),
     path('logout/', LogoutView.as_view(template_name='logout.html'), name='logout'),
-    path('register/', BaseRegisterView.as_view(), name='signup'),
 
+    path('register/', UserRegisterView.as_view(), name='signup'),
+    path('user/<int:pk>', UserUpdate.as_view(), name='user'),
 
     path('stat/', Statistica.as_view(), name='stat'),
     path('repaierman/<int:pk>', RepaiermanSpace.as_view(), name='repaierman'),

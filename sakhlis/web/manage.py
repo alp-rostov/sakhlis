@@ -10,7 +10,7 @@ def main():
     DOT_INV_PASS = pathlib.Path() / 'env/.env'
     if DOT_INV_PASS.exists():
         dotenv.read_dotenv(str(DOT_INV_PASS))
-    else: print('no .env file')
+    else: print('no .env found')
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'web.settings')
     try:
         from django.core.management import execute_from_command_line

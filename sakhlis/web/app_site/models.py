@@ -109,7 +109,7 @@ class OrderList(models.Model):
 
 
 class RepairerList(models.Model):
-    """name s_name phone city email foto active rating_sum rating_num"""
+    """phone city foto rating_sum rating_num user"""
     phone = models.CharField(validators=[phoneNumberRegex], max_length=16, unique=True, verbose_name='Телефон')
     city = models.CharField(max_length=2, choices=CITY_CHOICES, default='TB')
     foto = models.ImageField(upload_to="images/", null=True, blank=True, verbose_name='Фотография:')
