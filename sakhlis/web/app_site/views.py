@@ -1,16 +1,19 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
+from django.core.files.storage import DefaultStorage
 from django.db.models import F, Prefetch, Count, Sum
 from django.forms import modelformset_factory
-from django.shortcuts import redirect
+from django.shortcuts import redirect, render
 from django.urls import reverse, reverse_lazy
 from django.views.decorators.http import require_http_methods
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView, FormView
+from formtools.wizard.views import SessionWizardView
+
 from .models import RepairerList, OrderList, Invoice
 from .filters import RepFilter, OrderFilter
 from .forms import OrderForm, InvoiceForm, UserRegisterForm, RepairerForm
 from .utils import InvoiceMaker
-from django.http import FileResponse, HttpResponseNotFound, Http404, HttpResponseRedirect
+from django.http import FileResponse, HttpResponseNotFound, Http404, HttpResponseRedirect, HttpResponse
 import io
 
 
@@ -61,6 +64,11 @@ class UserRegisterView(CreateView):
     form_class = UserRegisterForm
     success_url = reverse_lazy('home')
     template_name = 'register.html'
+
+    def get_success_url(self):
+        c=User.objects.get(username=self.form_class.username)
+        print(c.pk)
+        return 'home'
 
 
 class UserUpdate(DetailView):

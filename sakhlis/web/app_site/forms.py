@@ -80,7 +80,7 @@ class UserRegisterForm(UserCreationForm):
                              )
     first_name = forms.CharField(label="Имя")
     last_name = forms.CharField(label="Фамилия")
-
+    username = forms.CharField(label="Логин")
     class Meta:
         model = User
         fields = ("username",

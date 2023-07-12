@@ -42,9 +42,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'django.contrib.flatpages',
+
     'django_filters',
     'debug_toolbar',
+    'formtools',
+
     'app_site.apps.AppSiteConfig',
+
 
 
 
