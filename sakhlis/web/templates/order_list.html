@@ -1,4 +1,4 @@
-{% extends 'flatpages/default.html' %}
+{% extends 'flatpages/default_user.html' %}
 {% load custom_filters %}
 {% load custom_tags %}
 
@@ -6,28 +6,9 @@
 {% block body %}
 
 
-<h1>Список заказов</h1>
+<h2>Список заказов</h2>
 
-<table  border="1">
-    <tr>
-<th>{{ filterset.form.time_in.label }}</th>
-<th>{{ filterset.form.address_city.label }} | {{ filterset.form.address_street_app.label }}</th>
-<th>{{ filterset.form.repairer_id.label }}</th>
-<th>Стоимость</th>
-
-</tr>
-
-    <tr>
-<form action="" method="get">
-<td>{{ filterset.form.time_in }} | {{ filterset.form.order_status }}</td>
-<td>{{ filterset.form.address_city }} </td>
-<td>{{ filterset.form.repairer_id }}</td>
-<td></td>
-
-<td><input type="submit" value="Найти" /></td>
-
-</form>
-</tr>
+<table>
 
 {% regroup order by time_in|date:"d.m.Y" as day %}
     {% for y in day %}
@@ -40,7 +21,7 @@
         {% for i in y.list %}
         <tr>
             <td>
-            <a href="{% url 'list_detail' i.pk %}">Заказа №{{ i.pk}}</a>{{ i.time_out | finish_order_tag }}<br>
+            <a href="{% url 'invoice' i.pk %}">Заказа №{{ i.pk}}</a>{{ i.time_out | finish_order_tag }}<br>
             {{ i.address_city | choice_tag:'city' }}, {{ i.address_street_app }}, {{ i.address_num }}</td>
 
             <td>{{ i.customer_name }}</td>

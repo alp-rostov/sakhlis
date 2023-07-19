@@ -99,7 +99,7 @@ class InvoiceForm(forms.ModelForm):
     )
     class Meta:
         model = Invoice
-        fields = ('service_id',  'quantity_type', 'quantity', 'price',)
+        fields = ('service_id',  'quantity_type', 'quantity', 'price')
 
 
 class ServiceForm(forms.ModelForm):

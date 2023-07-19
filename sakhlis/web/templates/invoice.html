@@ -1,4 +1,6 @@
 {% extends 'flatpages/default.html' %}
+{% load custom_filters %}
+{% load custom_tags %}
 
 {% block body %}
 <style>
@@ -6,50 +8,62 @@
     display:none
     }
 </style>
-<h1>СЧЕТ</h1>
 <hr>
 <button> <a href="/app/logout/">Выйти</a> </button>
 <hr>
-<form action="" method="post" >
-    <h2>Номер счета № {{ info.id }} от : {{ info.time_in }}</h2>
+
+
+    <h1>Заявка № {{ info.id }} от : {{ info.time_in }}</h1>
 
     <table width="700"><tr>
-        <td><h3>Исполнитель:</h3> ИП ГОЦИН С.А. </td><td><h3>Заказчик:</h3> {{ info.customer_name }}</td>
+        <td><h2>Заказчик: {{ info.customer_name }}</h2></td>
     </tr>
         <tr>
-            <td><br><b>Код:</b> 302265920</td><td><b>Код:</b> {{ info.customer_code }}</td>
+        <td><b>Адрес: </b>{{ info.address_city }}, {{ info.address_street_app }}, {{ info.address_num }}</td>
     </tr>
-        <tr>
-        <td><br><b>Адрес:</b> Тбилиси, Зураба Патаридзе 8</td><td><b>Адрес: </b>{{ info.address_city }}, {{ info.address_street_app }}, {{ info.address_num }}</td>
+    <tr>
+         <td><b>Телефон:</b> {{ info.customer_phone }}</td>
     </tr>
-        <tr>
-            <td><br><b>Телефон: 995-598-259-119</b></td><td><b>Телефон:</b> {{ info.customer_phone }}</td>
+    <tr>
+         <td><b>Описание проблемы:</b> {{ info.text_order }}</td>
     </tr>
-        <tr>
-        <td><br><b>Банк:</b> JSC CREDO BANK</td><td></td>
-    </tr>
-          <tr>
-        <td><br><b>Код банка:</b> JSCRGE22</td><td></td>
-    </tr>
-        <tr>
-        <td><br><b>Счет:</b> GE18CD0360000030597044</td><td></td>
-    </tr>
+
+
     </table>
 
+
+<h3>Выполненные работы: </h3>
+<form action="" method="post" >
 
     {% csrf_token %}
 {{ form.management_form }}
     <div id="ingredient-form-list">
+        <script>var i =0</script>
     {% for g in form %}
     <div class="ingredient-form">
-    {{ g.as_table }}<a href="delete/{{ g.id.value }}/{{ info.id }}">удалить</a>
+        {{ g.as_table }} <span id="summ"> <script>price=document.getElementById('id_form-'+i+'-price').value;
+                                        quantity=document.getElementById('id_form-'+i+'-quantity').value;
+                                        i++;
+document.write('Сумма: '+price*quantity);
+</script>
+
+    </span>
+
+
+
+        <a href="delete/{{ g.id.value }}/{{ info.id }}">удалить</a>
         <br></div>
     {% endfor %}
     </div>
+
     <div id="empty-form" class="hidden">{{ form.empty_form }}</div>
     <button id="add-more" type="button">add-more</button>
         <button type="submit"> "Save" </button>
 </form>
+<script>p=document.getElementById('summ');
+
+document.write(p.innerHTML)
+</script>
 
 <script>
 
@@ -75,22 +89,20 @@ function add_new_form(event){
     totalNewForms.setAttribute('value', currentFormCount+1)
     formCopyTarget.append(copyEmptyFromEl)
 
-
-
-
-
-
-<!--const -->
-
-
-
-
-
-
 }
 </script>
 
-<a href="pdf/{{ info.id }}">PDF</a>
 
+<h3>Статус заказа: {{ info.order_status  | choice_tag:'status_order'}}</h3>
+
+
+
+
+{% if info.order_status == 'END' %}
+    <a href="pdf/{{ info.id }}">Квитанция на оплату - PDF</a>
+{% else %}
+    <a href="">Заказ выполненен - указать статус заказа</a>
+
+{% endif %}
 
 {% endblock body %}

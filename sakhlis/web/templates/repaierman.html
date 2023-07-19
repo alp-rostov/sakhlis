@@ -1,18 +1,18 @@
-{% extends 'flatpages/default.html' %}
+{% extends 'flatpages/default_user.html' %}
+{% load custom_filters %}
 {% load custom_tags %}
 
 
 {% block body %}
-<h1>Личный кабинет</h1>
+
 
 <table width="1300" border="1">
-    <tr>
-
-        <td><a href="list_repair/{{ i.user }}">{{ user.last_name }} {{ user.first_name }}</a></td>
-        <td> {{ user.email }}</td>
-
-
-
+    <tr><td>Имя пользователя:</td><td> {{ user.username }}</td>
+    <tr><td>Имя:</td><td> {{ user.first_name }}</td>
+    <tr><td>Фамилия:</td><td> {{ user.last_name }}</td>
+    <tr><td>Почта:</td><td> {{ user.email }}</td>
+    <tr><td>Телефон:</td><td> {{ user_info.phone }}</td>
+    <tr><td>Город:</td><td> {{ user_info.city | choice_tag:'city' }}</td>
 
 
 
