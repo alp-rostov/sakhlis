@@ -95,11 +95,23 @@ class UserRegisterForm(UserCreationForm):
 class InvoiceForm(forms.ModelForm):
     service_id = forms.ModelChoiceField(
         label='',
-        queryset=Service.objects.all()
+        queryset=Service.objects.all(),
+        widget = forms.Select(attrs={'placeholder': "Вид работ" }),
+
+    )
+    quantity = forms.IntegerField(
+        label='кол-во',
+        widget=forms.NumberInput(attrs={'placeholder': "Количество", "min": 1, "max": 1000000,}),
+
+
+    )
+    price = forms.DecimalField(
+        label='Цена',
+        widget=forms.NumberInput(attrs={'placeholder': "Цена", "min": 1, "max": 1000000, }),
     )
     class Meta:
         model = Invoice
-        fields = ('service_id',  'quantity_type', 'quantity', 'price')
+        fields = ('service_id',   'quantity', 'price')
 
 
 class ServiceForm(forms.ModelForm):

@@ -22,17 +22,11 @@
         <tr>
             <td>
             <a href="{% url 'invoice' i.pk %}">Заказа №{{ i.pk}}</a>{{ i.time_out | finish_order_tag }}<br>
-            {{ i.address_city | choice_tag:'city' }}, {{ i.address_street_app }}, {{ i.address_num }}</td>
+            {{ i.text_order|truncatewords:7 }}
+            </td>
+            <td width = 50></td>
+            <td>{{ i.customer_name }} | {{ i.customer_phone }}<br>{{ i.address_city | choice_tag:'city' }}, {{ i.address_street_app }}, {{ i.address_num }}</td>
 
-            <td>{{ i.customer_name }}</td>
-            <td>{{ i.text_order|truncatewords:7 }}</td>
-            <td>{{ i.price }}</td>
-            <td>{% for d in i.invoice_set.all %} {{d.service_id}} | {{ d.quantity }}|{{ d.price }} <br>{% endfor %}</td>
-            <td>
-                {% if request.user.is_authenticated %}
-                <a href="{% url 'delete' i.pk %}">Удалить</a> | <a href="{% url 'update' i.pk %}">Изменить
-                | <a href="{% url 'invoice' i.pk %}">Счет</a></td>
-                {% endif %}
             </tr>
 
         {% endfor %}

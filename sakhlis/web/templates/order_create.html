@@ -533,11 +533,21 @@
                                 <div class="md-form mb-4">
 
                                 </div>
+<script>
+    function on(){
+    text=$("#id_customer_name")
+    alert (text.val())
+    }
+
+</script>>
+
+
 
                                 <div class="md-form mb-4">
 <!--                                    <i class="fas fa-user prefix grey-text"></i>-->
                                         {{ form.customer_name.errors }}
                                         {{ form.customer_name }}
+                                    <span id="errorname"></span>
                                 </div>
                                <div class="md-form mb-4">
 <!--                                    <i class="fas fa-phone prefix grey-text"></i>-->
@@ -561,7 +571,7 @@
                                 </div>
 
                                 <div class="modal-footer d-flex justify-content-center">
-                                    <button class="btn unique-color-dark text-white" type="submit" id="cf-submit" name="submit">Отправить заявку</button>
+                                    <button class="btn unique-color-dark text-white" type="submit" id="cf-submit" onclick="on()" name="submit">Отправить заявку</button>
                                 </div>
                             </form>
                         </fieldset>

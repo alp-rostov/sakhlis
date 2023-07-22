@@ -1,4 +1,4 @@
-{% extends 'flatpages/default.html' %}
+{% extends 'flatpages/default_user.html' %}
 {% load custom_filters %}
 {% load custom_tags %}
 
@@ -27,75 +27,66 @@
     <tr>
          <td><b>Описание проблемы:</b> {{ info.text_order }}</td>
     </tr>
-
-
     </table>
 
 
 <h3>Выполненные работы: </h3>
 <form action="" method="post" >
-
-    {% csrf_token %}
+{% csrf_token %}
 {{ form.management_form }}
     <div id="ingredient-form-list">
-        <script>var i =0</script>
-    {% for g in form %}
-    <div class="ingredient-form">
-        {{ g.as_table }} <span id="summ"> <script>price=document.getElementById('id_form-'+i+'-price').value;
-                                        quantity=document.getElementById('id_form-'+i+'-quantity').value;
-                                        i++;
-document.write('Сумма: '+price*quantity);
-</script>
-
-    </span>
-
-
-
-        <a href="delete/{{ g.id.value }}/{{ info.id }}">удалить</a>
-        <br></div>
+        <script>var i =0; var summ=0</script>
+        {% for g in form %}
+        <div class="ingredient-form">
+            {{ g.as_table }}
+            <span class="wer">
+                <script>
+                    price=document.getElementById('id_form-'+i+'-price').value;
+                    quantity=document.getElementById('id_form-'+i+'-quantity').value;
+                    i++;
+                    document.write('Сумма: '+price*quantity);
+                    summ+=price*quantity
+                </script>
+            </span>
+            <a href="delete/{{ g.id.value }}/{{ info.id }}">удалить</a>
+            <br>
+        </div>
     {% endfor %}
     </div>
-
     <div id="empty-form" class="hidden">{{ form.empty_form }}</div>
     <button id="add-more" type="button">add-more</button>
-        <button type="submit"> "Save" </button>
+    <button type="submit"> "Save" </button>
 </form>
-<script>p=document.getElementById('summ');
 
-document.write(p.innerHTML)
+<script>
+    document.write('ИТОГО: '+ summ)
 </script>
 
 <script>
+    const addMoreBtn=document.getElementById('add-more')
+    const totalNewForms = document.getElementById('id_form-TOTAL_FORMS')
+    addMoreBtn.addEventListener('click', add_new_form)
 
-const addMoreBtn=document.getElementById('add-more')
-const totalNewForms = document.getElementById('id_form-TOTAL_FORMS')
-
-
-addMoreBtn.addEventListener('click', add_new_form)
-
-function add_new_form(event){
-    if (event) {
-    event.preventDefault()
+    function add_new_form(event){
+        if (event) {
+        event.preventDefault()
+        }
+        const currentIngredientForms = document.getElementsByClassName('ingredient-form')
+        const currentFormCount = currentIngredientForms.length // + 1
+        const formCopyTarget = document.getElementById('ingredient-form-list')
+        const copyEmptyFromEl=document.getElementById('empty-form').cloneNode(true)
+        copyEmptyFromEl.setAttribute('class', 'ingredient-form')
+        copyEmptyFromEl.setAttribute('id',`form-${currentFormCount}`)
+        const regex = new RegExp('__prefix__', 'g')
+        copyEmptyFromEl.innerHTML=copyEmptyFromEl.innerHTML.replace(regex,
+         currentFormCount)
+        totalNewForms.setAttribute('value', currentFormCount+1)
+        formCopyTarget.append(copyEmptyFromEl)
     }
-    const currentIngredientForms = document.getElementsByClassName('ingredient-form')
-    const currentFormCount = currentIngredientForms.length // + 1
-    const formCopyTarget = document.getElementById('ingredient-form-list')
-    const copyEmptyFromEl=document.getElementById('empty-form').cloneNode(true)
-    copyEmptyFromEl.setAttribute('class', 'ingredient-form')
-    copyEmptyFromEl.setAttribute('id',`form-${currentFormCount}`)
-    const regex = new RegExp('__prefix__', 'g')
-    copyEmptyFromEl.innerHTML=copyEmptyFromEl.innerHTML.replace(regex,
-     currentFormCount)
-    totalNewForms.setAttribute('value', currentFormCount+1)
-    formCopyTarget.append(copyEmptyFromEl)
-
-}
 </script>
 
 
 <h3>Статус заказа: {{ info.order_status  | choice_tag:'status_order'}}</h3>
-
-
 
 
 {% if info.order_status == 'END' %}
