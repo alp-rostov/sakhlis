@@ -1,16 +1,28 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django.http import HttpResponse, JsonResponse
-from django.views.generic import TemplateView, FormView
+from django.http import JsonResponse
+
 from .tasks import *
-from .forms import MyForm
+from django.views.generic import ListView
+from forms import MyForm
 
 
-class Home(FormView):
+class Home(ListView):
     template_name = 'home.html'
-    form_class = MyForm
+    model = Email
+    context_object_name = 'mail_list'
 
-def form_sent(request, *args, **kwargs):
-    sent_to_users.delay(news=request.POST['news_text'])
-    return JsonResponse()
+    def get_context_data(self, *args, **kwargs):
+        context= super(ListView, self).get_context_data(**kwargs)
+        context['form'] = MyForm
+        return context
+
+
+
+def form_sent(request):
+    sent_to_users.delay(news=request.GET.get('news_text'), idlist=request.GET.getlist('id'))
+    # print request.GET.getlist('id')
+    # print request.GET.getlist('news_text')
+    return JsonResponse({}, status=200)
+

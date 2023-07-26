@@ -15,8 +15,8 @@ class RepairerForm(forms.ModelForm):
 class OrderForm(forms.ModelForm):
     text_order = forms.CharField(
         label='Текст заказа',
-        widget=forms.Textarea(attrs={"class": "md-textarea form-control",
-                                     'placeholder': "Опишите задачу", 'rows': '2'}),
+        widget=forms.TextInput(attrs={"class": "md-textarea form-control",
+                                     'placeholder': "Опишите задачу"}),
         required=False
         )
 

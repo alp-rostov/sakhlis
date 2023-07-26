@@ -1,75 +1,39 @@
 {% extends 'default.html' %}
 
-{% block body %}
+{% block bodyinfo %}
 
+<form id="form" >
+ {% csrf_token %}
 
-<!--Header-->
-    <nav id="navigation-menu" class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
-        <div class="container">
+<table width="500" border="1">
+    <tr>
+        <th>Имя</th>
+        <th>Фамилия</th>
+        <th>День рождения</th>
+        <th>Почта</th>
+   </tr>
+    {% for i in mail_list %}
 
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav m-auto">
-                    <li class="nav-item mr-4 active">
-                        <a class="nav-link" href="#section-0">Главная <span class="sr-only">(current)</span></a>
-                    </li>
-                        <a class="nav-link btn btn-sm btn-orange btn-form cta-btn" data-toggle="modal" data-target="#exampleModal">РАССЫЛКА<i class="far fa-paper-plane animated tada delay-5s infinite ml-1"></i></a>
+    <tr>
+        <td><input type="checkbox" name="id" value={{ i.id }}> </td>
 
-                </ul>
-            </div>
-        </div>
-    </nav>
+        <td>{{ i.l_name }} </td>
+        <td>{{ i.s_name }}</td>
+        <td>{{ i.birthday }}</td>
+        <td>{{ i.email }}</td>
+   </tr>
+    {% endfor %}
+</table>
 
-    <!--And Header-->
-
-
-
-    <!-- Modal Window -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header text-center">
-                </div>
-                <div class="modal-body  mx-3">
-                    <div id="contact" class="form-container">
-                        <fieldset>
-
-
-                            <form id="form" >
-                                {% csrf_token %}
                                     <h1><div id="message"></div></h1>
                                 <div class="md-form mb-4">
                                         {{ form.news_text.errors }}
                                         {{ form.news_text }}
                                 </div>
                                 <div class="modal-footer d-flex justify-content-center">
-                                    <input class="btn unique-color-dark text-white" type="submit" name="send" value="Отправить">
+                                    <input class="btn unique-color-dark text-white" type="submit" id="btn" name="send" value="Отправить">
                                 </div>
                             </form>
 
 
-                                <script>
-                                $("#form").on("submit", function(){
-                                    $.ajax({
-                                        url: 'sent',
-                                        method: 'get',
-                                        dataType: 'json',
-                                        data: $(this).serialize(),
-                                        success: function(){
-                                        alert('Рассылка отправлен')
-                                        }
-                                    });
-
-                                });
-                                </script>
-                        </fieldset>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- And Modal Window -->
-{% endblock body %}
+{% endblock bodyinfo %}

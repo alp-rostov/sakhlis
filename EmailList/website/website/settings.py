@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/1.11/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.11/ref/settings/
 """
-
+import logging
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -143,3 +143,38 @@ EMAIL_HOST_USER = 'alp-rostov'
 EMAIL_HOST_PASSWORD = 'sLvPgeF2ReHzfX7psU9y'
 EMAIL_USE_SSL = True
 
+
+logger = logging.getLogger('django')
+
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+
+    'handlers': {
+        'file': {
+            'level': 'INFO',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'log.log'),
+            'formatter': 'simple'
+        },
+    },
+
+    'style': '{',
+    'formatters': {
+        'simple': {
+            'format': '%(asctime)s   %(message)s   ',
+            'datefmt': "%d/%b/%Y %H:%M:%S"
+        },
+
+    },
+
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+
+    }
+}

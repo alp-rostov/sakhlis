@@ -32,6 +32,7 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 </head>
 
 <body id="top">
@@ -506,7 +507,7 @@
                 </div>
             </div>
             <hr>
-            <a href="#top" type="button" class="back-to-top float-right __mPS2id mPS2id-clicked"><i class="far fa-arrow-alt-circle-up fa-2x text-danger"></i></a>
+
         </div>
         <div class="footer-copyright py-3 text-center">
             <span class="text-muted"> © 2022 |</span> <a href="#!"> Мастер на час</a>
@@ -528,46 +529,52 @@
                                 <span aria-hidden="true">×</span>
                                 </button>
 				    </div>
-                            <form method="post" action="" >
+
+                            <script type="text/javascript">
+                            $(document).ready(function() {
+
+                                $('#id_form').submit(function() {
+                                    var d=$("form input[type='text'], input[type='tel']")
+                                    var check=false;
+                                    for (i=0; i<d.length; i++){
+                                        $('form #'+i).html('');
+                                        if (d[i].value=='') {
+                                            $('form #'+i).html('Введите данные поля "' +d[i].placeholder + '"' );
+                                        check=true;
+                                        }
+                                    }
+                                    if (check) return false;
+                                });
+                            });
+                            </script>
+                            <form method="post" action="" name="form" id="id_form">
                                 {% csrf_token %}
                                 <div class="md-form mb-4">
-
-                                </div>
-<script>
-    function on(){
-    text=$("#id_customer_name")
-    alert (text.val())
-    }
-
-</script>>
-
-
-
-                                <div class="md-form mb-4">
-<!--                                    <i class="fas fa-user prefix grey-text"></i>-->
-                                        {{ form.customer_name.errors }}
-                                        {{ form.customer_name }}
-                                    <span id="errorname"></span>
+<!--                                <i class="fas fa-user prefix grey-text"></i>-->
+                                    {{ form.customer_name.errors }}
+                                    {{ form.customer_name }}
+                                    <span id="0"></span>
                                 </div>
                                <div class="md-form mb-4">
-<!--                                    <i class="fas fa-phone prefix grey-text"></i>-->
-                                          {{ form.customer_phone.errors }}
-                                          {{ form.customer_phone }}
-                                </div-->
-                                <div class="md-form mb-4">
-<!--                                    <i class="fas fa-home prefix grey-text"></i><br>-->
-
-                                        {{ form.customer_street_app.errors }}
-                                        {{ form.customer_num.errors }}
-
-                                        {{ form.address_street_app }}
-                                        {{ form.address_num }}
+<!--                                <i class="fas fa-phone prefix grey-text"></i>-->
+                                    {{ form.customer_phone.errors }}
+                                    {{ form.customer_phone }}
+                                    <span id="1"></span>
                                 </div>
                                 <div class="md-form mb-4">
-<!--                                    <i class="fas fa-pencil prefix grey-text"></i>-->
-                                        {{ form.text_order.errors }}
-                                        {{ form.text_order }}
-
+<!--                                <i class="fas fa-home prefix grey-text"></i><br>-->
+                                    {{ form.customer_street_app.errors }}
+                                    {{ form.customer_num.errors }}
+                                    {{ form.address_street_app }}
+                                    <span id="2"></span>
+                                    {{ form.address_num }}
+                                    <span id="3"></span>
+                                </div>
+                                <div class="md-form mb-4">
+<!--                                <i class="fas fa-pencil prefix grey-text"></i>-->
+                                    {{ form.text_order.errors }}
+                                    {{ form.text_order }}
+                                    <span id="4"></span>
                                 </div>
 
                                 <div class="modal-footer d-flex justify-content-center">

@@ -24,34 +24,43 @@
 <div class="container">
 
 <h1 class="test">Личный кабинет: {{ user.username }}</h1>
+<script>
+$(document).ready(function() {
 
-  <script>
-    $(document).ready(function() {
-  $('#id_form').submit(function() {
-    { var d=$("form input[type='text']")
+    $('#id_form').submit(function() {
+        var d=$("form input[type='text']")
+        var mail=$("form input[type='email']")
+        var pattern = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i
 
-     for (i=0; i<d.length; i++){
-     if (d[i].value=='') {
-     $('form #'+i).html('Введите данные поля "' +d[i].title + '"' );
-     return false;
-     }
+        var check=false;
+        for (i=0; i<d.length; i++){
+          $('form #'+i).html('');
+          if (d[i].value=='') {
+            $('form #'+i).html('Введите данные поля "' +d[i].title + '"' );
+            check=true;
+          }
+        }
+        if(!pattern.test(mail.val())) { $('form #4').html('Введите корректные данные почты' ); return false;}
+        if (check) return false;
+    });
 
-     }
 
-  }
-
-})
-})
+});
 
 
-  </script>
+
+</script>
 
 <form name="form" id="id_form">
   <label for="id_age">Имя</label>
   <input type="text" name="name" id="id_name" title="Имя"><span id="0"></span><br>
-<input type="text" name="age" id="id_age" title="Возраст"><span id="1"></span><br>
-<input type="text" name="mail" id="mail" title="Почта"><span id="2"></span><br>
-  <span id="error"></span>
+<input type="text" name="s_name" id="id_s_name" title="Фамилия"><span id="1"></span><br>
+<input type="text" name="age" id="id_age" title="Возраст"><span id="2"></span><br>
+
+
+
+<input type="email" name="email" id="id_mail" title="Почта"><span id="4"></span><br>
+
   <br>
   <input type="submit" name="b" value="click me" >
 </form>
