@@ -35,32 +35,40 @@
 {% csrf_token %}
 {{ form.management_form }}
     <div id="ingredient-form-list">
-        <script>var i =0; var summ=0</script>
+        <script>
+            var i=0;
+            var sum=0;
+        </script>
         {% for g in form %}
         <div class="ingredient-form">
             {{ g.as_table }}
-            <span class="wer">
-                <script>
-                    price=document.getElementById('id_form-'+i+'-price').value;
-                    quantity=document.getElementById('id_form-'+i+'-quantity').value;
+               <script>
+                    price=$('#'+'id_form-'+i+'-price').val();
+                    quantity=$('#'+'id_form-'+i+'-quantity').val();
+                    sum+=price*quantity
                     i++;
-                    document.write('Сумма: '+price*quantity);
-                    summ+=price*quantity
-                </script>
-            </span>
+                    $('#'+'id_form-'+i+'-price').
+                    after(
+                        document.write(
+                            '<input type="text" value='+price*quantity+
+                            ' readonly size=3 id=amount'+i+'>'
+                        )
+                    );
+               </script>
             <a href="delete/{{ g.id.value }}/{{ info.id }}">удалить</a>
             <br>
         </div>
-    {% endfor %}
+        {% endfor %}
+        <script>
+            document.write('ИТОГО: '+ sum);
+        </script>
     </div>
     <div id="empty-form" class="hidden">{{ form.empty_form }}</div>
     <button id="add-more" type="button">add-more</button>
     <button type="submit"> "Save" </button>
 </form>
 
-<script>
-    document.write('ИТОГО: '+ summ)
-</script>
+
 
 <script>
     const addMoreBtn=document.getElementById('add-more')

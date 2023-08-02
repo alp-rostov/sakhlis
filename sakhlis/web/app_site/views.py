@@ -82,6 +82,8 @@ class OrderCreate(CreateView):
     success_url = reverse_lazy('home')
 
 
+
+
 class OrderManagementSystem(LoginRequiredMixin, ListView):
     """ list of all repair orders with Invoices"""
 
