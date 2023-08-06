@@ -100,18 +100,19 @@ class InvoiceForm(forms.ModelForm):
 
     )
     quantity = forms.IntegerField(
-        label='кол-во',
+        label='',
         widget=forms.NumberInput(attrs={'placeholder': "Количество", "min": 1, "max": 1000000,}),
 
 
     )
     price = forms.DecimalField(
-        label='Цена',
+        label='',
         widget=forms.NumberInput(attrs={'placeholder': "Цена", "min": 1, "max": 1000000, }),
     )
     class Meta:
         model = Invoice
         fields = ('service_id',   'quantity', 'price')
+
 
 
 class ServiceForm(forms.ModelForm):

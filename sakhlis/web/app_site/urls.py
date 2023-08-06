@@ -8,12 +8,12 @@ urlpatterns = [
     path('', OrderCreate.as_view(), name='home'),
     path('list_order', OrderManagementSystem.as_view(), name='list_order'),
     path('list_order/<int:pk>', OrderDatail.as_view(), name='list_detail'),
-    path('list_order/delete/<int:pk>', OrderDelete.as_view(), name='delete'),
+    # path('invoice/delete/<int:pk>', OrderDelete.as_view(), name='delete'),
     path('list_order/update/<int:pk>', OrderUpdate.as_view(), name='update'),
     path('add', OrderAddRepaier, name='add_repairer'),
 
     path('invoice/<int:order_pk>', InvoiceCreate.as_view(), name='invoice'),
-    path('invoice/delete/<int:invoice_pk>/<int:order_pk>', DeleteIvoiceService, name='delete_service_from_invoice'),
+    path('invoice/delete/<int:invoice_pk>', DeleteIvoiceService, name='delete'),
     path('invoice/pdf/<int:order_pk>', CreateIvoicePDF, name='invoice_pdf'),
     path('invoice/pdf_/<int:order_pk>', CreateIvoicePDF, ),
 

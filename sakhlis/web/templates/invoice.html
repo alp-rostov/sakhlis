@@ -31,7 +31,7 @@
 
 
 <h3>Выполненные работы: </h3>
-<form action="" method="post" >
+<form action="" method="post" id="id_form">
 {% csrf_token %}
 {{ form.management_form }}
     <div id="ingredient-form-list">
@@ -41,7 +41,9 @@
         </script>
         {% for g in form %}
         <div class="ingredient-form">
-            {{ g.as_table }}
+
+            <span  id="ddd">{{ g.as_table }}</span>
+
                <script>
                     price=$('#'+'id_form-'+i+'-price').val();
                     quantity=$('#'+'id_form-'+i+'-quantity').val();
@@ -55,7 +57,8 @@
                         )
                     );
                </script>
-            <a href="delete/{{ g.id.value }}/{{ info.id }}">удалить</a>
+
+            <a href="{% url 'delete' g.id.value %}" class="link-delete">удалить</a>
             <br>
         </div>
         {% endfor %}
@@ -66,9 +69,45 @@
     <div id="empty-form" class="hidden">{{ form.empty_form }}</div>
     <button id="add-more" type="button">add-more</button>
     <button type="submit"> "Save" </button>
+
 </form>
 
 
+    <script>
+
+    $('.link-delete').on('click', function(e) {
+        e.preventDefault();
+        var $this=$(this);
+        $.ajax({
+            url: $this.attr("href"),
+            type: "GET",
+            dataType: "json",
+            success: function(resp){
+                    $this.parents(".ingredient-form").fadeOut("slow", function(){
+                        $this.parents(".ingredient-form").remove();
+                    });
+            }
+        });
+    });
+
+       </script>
+
+<script>
+
+    $('#id_form').submit(function(e) {
+        e.preventDefault();
+        $.ajax({
+            url: '',
+            type: 'POST',
+            data: $(this).serialize(),
+            dataType: 'html',
+            success: function (e) {
+            $('#ddd').html(e);
+            },
+        });
+
+    });
+</script>
 
 <script>
     const addMoreBtn=document.getElementById('add-more')

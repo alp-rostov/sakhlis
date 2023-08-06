@@ -10,7 +10,7 @@ from .models import RepairerList, OrderList, Invoice
 from .filters import RepFilter, OrderFilter
 from .forms import OrderForm, InvoiceForm, UserRegisterForm, RepairerForm
 from .utils import InvoiceMaker
-from django.http import FileResponse, HttpResponseNotFound, Http404, HttpResponseRedirect, HttpResponse
+from django.http import FileResponse, HttpResponseNotFound, Http404, HttpResponseRedirect, HttpResponse, JsonResponse
 import io
 
 
@@ -133,9 +133,9 @@ class OrderUpdate(UpdateView):
 
 
 class OrderDelete(DeleteView):
-    model = OrderList
-    template_name = 'order_delete.html'
-    success_url = reverse_lazy("list_order")
+    model = Invoice
+
+
 
 
 @require_http_methods(["GET"])
@@ -169,7 +169,6 @@ class InvoiceCreate(FormView):
                                  .select_related('service_id')
                                  .defer('service_id__type')
                                  )
-
         return formset
 
     def get_context_data(self, **kwargs):
@@ -179,21 +178,21 @@ class InvoiceCreate(FormView):
 
     def post(self, formset, **kwargs):
         b = get_info1(self.kwargs.get('order_pk'))
-        AuthorFormSet = modelformset_factory(Invoice, fields='__all__')
+        AuthorFormSet = modelformset_factory(Invoice,form=InvoiceForm)
         formset = AuthorFormSet(self.request.POST)
         instances = formset.save(commit=False)
         for instance in instances:
             instance.order_id = b
             instance.save()
-        return HttpResponseRedirect(reverse('invoice', args=(self.kwargs.get("order_pk"),)))
+        return HttpResponse(formset.as_table())
 
 
 @require_http_methods(["GET"])
 def DeleteIvoiceService(request, **kwargs):
     if request.user.is_authenticated:
         Invoice.objects.get(pk=kwargs.get("invoice_pk")).delete()
-
-    return HttpResponseRedirect(reverse('invoice', args=(kwargs.get("order_pk"),)))
+        return JsonResponse({"message": "success"})
+    return JsonResponse({"message": "ERROR"})
 
 
 class Statistica(TemplateView):
