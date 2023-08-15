@@ -6,7 +6,8 @@
 <hr>
 <form action="" method="post">
     {% csrf_token %}
-    <p>Удаляем "{{ object.name }}"?</p>
+    <h3>Внимание! Восстановление заказа будет невозможно</h3>
+    <p>Удалить информацию о заказе "{{ object }}"?</p>
     <input type="submit" value="Delete" />
 </form>
 

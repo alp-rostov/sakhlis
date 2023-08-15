@@ -531,17 +531,7 @@
 				    </div>
 
                             <script type="text/javascript">
-
-    function fun() {
-    $("#id_form").html('<h3>Отправляется...</h3>');
-    }
-
-    function func() {
-    $("#id_form").html("<h3>ЗАЯВКА ОТПРАВЛЕННА УСПЕШНО!</h3>");
-    }
-
-
-                            $(document).ready(function() {
+             $(document).ready(function() {
 
                                 $('#id_form').submit(function(e) {
                                     e.preventDefault();
@@ -562,8 +552,8 @@
                                             type: 'POST',
                                             data: $(this).serialize(),
                                             dataType: 'text',
-                                            beforeSend: fun,
-                                            success: func,
+                                            beforeSend: function () {$("#id_form").html('<h3>Отправляется...</h3>');},
+                                            success: function (resp) {  $("#id_form").html(JSON.parse(resp).message); },
                                         });
                                     }
                                 });

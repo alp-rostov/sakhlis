@@ -6,7 +6,96 @@
 {% block body %}
 
 
-<h2>Список заказов</h2>
+<h2>Список заказов <a href="#"  onclick="disp(document.getElementById('form'))" id="ggg">Создать заказ</a></h2>
+
+
+
+
+
+
+<script>
+    function disp(form) {
+        if (form.style.display == "none") {
+            $('#form').fadeIn("slow", function(){
+                form.style.display = "block";
+                $('#ggg').html('Скрыть');
+                                        });
+
+        } else {
+             $('#form').fadeOut("slow", function(){
+                form.style.display = "none";
+                $('#ggg').html('Создать заказ');
+                                        });
+        }
+    }
+    </script>
+
+
+
+ <form method="post" action="" name="form" id="form"  style="display: none;">
+        {% csrf_token %}
+        <div class="md-form mb-4">
+
+            {{ form.customer_name.errors }}
+            {{ form.customer_name }}
+            <span id="0"></span>
+        </div>
+       <div class="md-form mb-4">
+
+            {{ form.customer_phone.errors }}
+            {{ form.customer_phone }}
+            <span id="1"></span>
+        </div>
+        <div class="md-form mb-4">
+
+            {{ form.customer_street_app.errors }}
+            {{ form.customer_num.errors }}
+            {{ form.address_street_app }}
+            <span id="2"></span>
+            {{ form.address_num }}
+            <span id="3"></span>
+        </div>
+        <div class="md-form mb-4">
+
+            {{ form.text_order.errors }}
+            {{ form.text_order }}
+            <span id="4"></span>
+        </div>
+
+
+     <button type="submit" name="submit">Отправить заявку</button>
+    </form>
+     <script type="text/javascript">
+             $(document).ready(function() {
+
+                                $('#form').submit(function(e) {
+                                    e.preventDefault();
+                                    var d=$("form input[type='text'], input[type='tel']")
+                                    var check=false;
+                                    for (i=0; i<d.length; i++){
+                                        $('form #'+i).html('');
+                                        if (d[i].value=='') {
+                                            $('form #'+i).html('Введите данные поля "' +d[i].placeholder + '"' );
+                                        check=true;
+                                        }
+                                    }
+                                    if (check) {
+                                        return false;
+                                    } else {
+                                        $.ajax({
+                                            url: 'http://127.0.0.1:8000',
+                                            type: 'POST',
+                                            data: $(this).serialize(),
+                                            dataType: 'text',
+                                            beforeSend: function () {$("#id_form").html('<h3>Отправляется...</h3>');},
+                                            success: function (resp) {  $("#id_form").html(JSON.parse(resp).message); },
+                                        });
+                                    }
+                                });
+                            });
+                            </script>
+
+
 
 <table>
 
@@ -21,7 +110,7 @@
         {% for i in y.list %}
         <tr>
             <td>
-            <a href="{% url 'invoice' i.pk %}">Заказа №{{ i.pk}}</a>{{ i.time_out | finish_order_tag }}<br>
+                <a href="{% url 'invoice' i.pk %}">Заказа №{{ i.pk}}</a>{{ i.time_out | finish_order_tag }} <a href="{% url 'delete-order' i.pk %}">Удалить</a><br>
             {{ i.text_order|truncatewords:7 }}
             </td>
             <td width = 50></td>

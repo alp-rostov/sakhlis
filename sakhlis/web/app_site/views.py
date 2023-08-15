@@ -81,7 +81,14 @@ class OrderCreate(CreateView):
     form_class = OrderForm
     success_url = reverse_lazy('home')
 
+    def post(self, request, *args, **kwargs):
+        super().post(request, *args, **kwargs)
+        return JsonResponse({'message': '<h3>Заявка отправлена успешно!</h3>'})
 
+    def form_valid(self, form):
+        if self.request.user.is_authenticated:
+            form.instance.repairer_id = self.request.user
+        return super(OrderCreate, self).form_valid(form)
 
 
 class OrderManagementSystem(LoginRequiredMixin, ListView):
@@ -100,6 +107,7 @@ class OrderManagementSystem(LoginRequiredMixin, ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        context['form'] = OrderForm
         return context
 
 
@@ -133,7 +141,10 @@ class OrderUpdate(UpdateView):
 
 
 class OrderDelete(DeleteView):
-    model = Invoice
+    model = OrderList
+    template_name = 'order_delete.html'
+    success_url = '/list_order'
+
 
 
 
@@ -179,12 +190,16 @@ class InvoiceCreate(FormView):
     def post(self, formset, **kwargs):
         b = get_info1(self.kwargs.get('order_pk'))
         AuthorFormSet = modelformset_factory(Invoice,form=InvoiceForm)
+
         formset = AuthorFormSet(self.request.POST)
+
         instances = formset.save(commit=False)
         for instance in instances:
             instance.order_id = b
             instance.save()
+
         return HttpResponse(formset.as_table())
+
 
 
 @require_http_methods(["GET"])

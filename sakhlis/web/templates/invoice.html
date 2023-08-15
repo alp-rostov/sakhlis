@@ -13,10 +13,11 @@
 <hr>
 
 
+
     <h1>Заявка № {{ info.id }} от : {{ info.time_in }}</h1>
 
     <table width="700"><tr>
-        <td><h2>Заказчик: {{ info.customer_name }}</h2></td>
+        <td><h2>Заказчик: {{ info.customer_name }}  <a href="#" id="name">изменить</a></h2></td>
     </tr>
         <tr>
         <td><b>Адрес: </b>{{ info.address_city }}, {{ info.address_street_app }}, {{ info.address_num }}</td>
@@ -42,7 +43,8 @@
         {% for g in form %}
         <div class="ingredient-form">
 
-            <span  id="ddd">{{ g.as_table }}</span>
+                {{ g.as_table }}
+
 
                <script>
                     price=$('#'+'id_form-'+i+'-price').val();
@@ -58,7 +60,7 @@
                     );
                </script>
 
-            <a href="{% url 'delete' g.id.value %}" class="link-delete">удалить</a>
+            <a href="{% url 'delete-item-of-work' g.id.value %}" class="link-delete">удалить</a>
             <br>
         </div>
         {% endfor %}
@@ -71,6 +73,21 @@
     <button type="submit"> "Save" </button>
 
 </form>
+
+    <script>
+
+    $('#name').on('click', function(e) {
+        e.preventDefault();
+
+        console.log($('#name').attr('href','555'));
+
+    });
+
+       </script>
+
+
+
+
 
 
     <script>
@@ -101,8 +118,8 @@
             type: 'POST',
             data: $(this).serialize(),
             dataType: 'html',
-            success: function (e) {
-            $('#ddd').html(e);
+            success: function () {
+
             },
         });
 
@@ -133,14 +150,14 @@
 </script>
 
 
-<h3>Статус заказа: {{ info.order_status  | choice_tag:'status_order'}}</h3>
+<!--<h3>Статус заказа: {{ info.order_status  | choice_tag:'status_order'}}</h3>-->
 
 
-{% if info.order_status == 'END' %}
-    <a href="pdf/{{ info.id }}">Квитанция на оплату - PDF</a>
-{% else %}
-    <a href="">Заказ выполненен - указать статус заказа</a>
+<!--{% if info.order_status == 'END' %}-->
+<!--    <a href="pdf/{{ info.id }}">Квитанция на оплату - PDF</a>-->
+<!--{% else %}-->
+<!--    <a href="">Заказ выполненен - указать статус заказа</a>-->
 
-{% endif %}
+<!--{% endif %}-->
 
 {% endblock body %}
