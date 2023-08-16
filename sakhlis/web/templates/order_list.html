@@ -83,12 +83,12 @@
                                         return false;
                                     } else {
                                         $.ajax({
-                                            url: 'http://127.0.0.1:8000',
+                                            url: '../',
                                             type: 'POST',
                                             data: $(this).serialize(),
                                             dataType: 'text',
                                             beforeSend: function () {$("#id_form").html('<h3>Отправляется...</h3>');},
-                                            success: function (resp) {  $("#id_form").html(JSON.parse(resp).message); },
+                                            success: function (resp) { $('#head').after("<tr><td>Заказ №</td></tr>");   },
                                         });
                                     }
                                 });
@@ -98,9 +98,9 @@
 
 
 <table>
-
+    <span id="head"> </span>
 {% regroup order by time_in|date:"d.m.Y" as day %}
-    {% for y in day %}
+    {% for y in day reversed  %}
     <tr>
         <td  colspan="6">
             <b>{{ y.grouper }}</b>

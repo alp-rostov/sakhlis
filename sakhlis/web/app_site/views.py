@@ -83,7 +83,9 @@ class OrderCreate(CreateView):
 
     def post(self, request, *args, **kwargs):
         super().post(request, *args, **kwargs)
-        return JsonResponse({'message': '<h3>Заявка отправлена успешно!</h3>'})
+        return JsonResponse({'message': f'<h3>Заявка № {self.object.pk} отправлена успешно!</h3>', 'num_order':self.object.pk})
+
+
 
     def form_valid(self, form):
         if self.request.user.is_authenticated:
@@ -97,7 +99,7 @@ class OrderManagementSystem(LoginRequiredMixin, ListView):
     model = OrderList
     context_object_name = 'order'
     template_name = 'order_list.html'
-    ordering = ['-time_in']
+
 
 
     def get_queryset(self):

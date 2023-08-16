@@ -98,8 +98,7 @@ class OrderList(models.Model):
     address_num = models.CharField(max_length=10, verbose_name='Номер дома', null=True, blank=True)
     services = models.ManyToManyField('Service', through='Invoice')
 
-    def __str__(self):
-        return f"{self.customer_name}"
+
 
 
 class RepairerList(models.Model):
