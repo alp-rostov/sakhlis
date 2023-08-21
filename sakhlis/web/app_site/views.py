@@ -1,16 +1,20 @@
+import json
+from pprint import pprint
+
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
-from django.db.models import F, Prefetch, Count, Sum
+from django.core import serializers
+from django.db.models import F, Prefetch, Sum
 from django.forms import modelformset_factory
-from django.shortcuts import redirect, render
+from django.shortcuts import redirect
 from django.urls import reverse, reverse_lazy
 from django.views.decorators.http import require_http_methods
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView, FormView
 from .models import RepairerList, OrderList, Invoice
-from .filters import RepFilter, OrderFilter
+from .filters import RepFilter
 from .forms import OrderForm, InvoiceForm, UserRegisterForm, RepairerForm
 from .utils import InvoiceMaker
-from django.http import FileResponse, HttpResponseNotFound, Http404, HttpResponseRedirect, HttpResponse, JsonResponse
+from django.http import FileResponse, Http404, HttpResponseRedirect, HttpResponse, JsonResponse
 import io
 
 
@@ -83,7 +87,16 @@ class OrderCreate(CreateView):
 
     def post(self, request, *args, **kwargs):
         super().post(request, *args, **kwargs)
-        return JsonResponse({'message': f'<h3>Заявка № {self.object.pk} отправлена успешно!</h3>', 'num_order':self.object.pk})
+        return JsonResponse({'message': f'<h3>Заявка № {self.object.pk} отправлена успешно!</h3>',
+                             'num_order':self.object.pk,
+                             'text_order': self.object.text_order,
+                             'time_in': self.object.time_in,
+                             'customer_name':self.object.customer_name,
+                             'customer_phone': self.object.customer_phone,
+                             'city': self.object.address_city,
+                             'street': self.object.address_street_app,
+                             'num': self.object.address_num,
+                             })
 
 
 
@@ -99,8 +112,6 @@ class OrderManagementSystem(LoginRequiredMixin, ListView):
     model = OrderList
     context_object_name = 'order'
     template_name = 'order_list.html'
-
-
 
     def get_queryset(self):
         queryset = super().get_queryset()
@@ -192,15 +203,21 @@ class InvoiceCreate(FormView):
     def post(self, formset, **kwargs):
         b = get_info1(self.kwargs.get('order_pk'))
         AuthorFormSet = modelformset_factory(Invoice,form=InvoiceForm)
-
         formset = AuthorFormSet(self.request.POST)
-
         instances = formset.save(commit=False)
+
+        list_num = []
         for instance in instances:
             instance.order_id = b
             instance.save()
+            list_num.append({"pk": instance.pk,
+                             "quantity": instance.quantity,
+                             "price": instance.price,
+                             "service_id": instance.service_id.pk,
+                             "service_id_name": instance.service_id.name
+                             })
 
-        return HttpResponse(formset.as_table())
+        return JsonResponse(list_num, safe=False)
 
 
 

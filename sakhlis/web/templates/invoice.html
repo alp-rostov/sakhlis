@@ -46,6 +46,7 @@
                 {{ g.as_table }}
 
 
+
                <script>
                     price=$('#'+'id_form-'+i+'-price').val();
                     quantity=$('#'+'id_form-'+i+'-quantity').val();
@@ -64,6 +65,7 @@
             <br>
         </div>
         {% endfor %}
+        <span id="uuu"></span>
         <script>
             document.write('ИТОГО: '+ sum);
         </script>
@@ -73,22 +75,6 @@
     <button type="submit"> "Save" </button>
 
 </form>
-
-    <script>
-
-    $('#name').on('click', function(e) {
-        e.preventDefault();
-
-        console.log($('#name').attr('href','555'));
-
-    });
-
-       </script>
-
-
-
-
-
 
     <script>
 
@@ -118,7 +104,9 @@
             type: 'POST',
             data: $(this).serialize(),
             dataType: 'html',
-            success: function () {
+            success: function (resp) {
+                b=JSON.parse(resp)
+                $('#uuu').html("<tr><td>ffffff"+b[0].service_id_name | b[0].quantity | b[0].price+"</td></tr>");
 
             },
         });
@@ -141,6 +129,7 @@
         const copyEmptyFromEl=document.getElementById('empty-form').cloneNode(true)
         copyEmptyFromEl.setAttribute('class', 'ingredient-form')
         copyEmptyFromEl.setAttribute('id',`form-${currentFormCount}`)
+        copyEmptyFromEl.setAttribute('class',`new`)
         const regex = new RegExp('__prefix__', 'g')
         copyEmptyFromEl.innerHTML=copyEmptyFromEl.innerHTML.replace(regex,
          currentFormCount)
@@ -159,5 +148,5 @@
 <!--    <a href="">Заказ выполненен - указать статус заказа</a>-->
 
 <!--{% endif %}-->
-
+<span id="eee"></span>
 {% endblock body %}

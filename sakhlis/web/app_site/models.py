@@ -74,8 +74,7 @@ class Invoice(models.Model):
     quantity = models.DecimalField(decimal_places=2, max_digits=7, null=True, blank=True, verbose_name='Количество')
     price = models.DecimalField(decimal_places=2, max_digits=7, null=True, blank=True, verbose_name='Цена')
 
-    def __str__(self):
-        return f"{self.quantity}"
+
 
 
 class OrderList(models.Model):
