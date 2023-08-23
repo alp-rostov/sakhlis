@@ -207,16 +207,18 @@ class InvoiceCreate(FormView):
         instances = formset.save(commit=False)
 
         list_num = []
-        for instance in instances:
-            instance.order_id = b
-            instance.save()
-            list_num.append({"pk": instance.pk,
-                             "quantity": instance.quantity,
-                             "price": instance.price,
-                             "service_id": instance.service_id.pk,
-                             "service_id_name": instance.service_id.name
-                             })
-
+        if instances:
+           for instance in instances:
+               instance.order_id = b
+               instance.save()
+               list_num.append({"pk": instance.pk,
+                                "quantity": instance.quantity,
+                                "price": instance.price,
+                                "service_id": instance.service_id.pk,
+                                "service_id_name": instance.service_id.name
+                                })
+        else:
+            list_num = [{}]
         return JsonResponse(list_num, safe=False)
 
 

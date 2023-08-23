@@ -56,7 +56,7 @@
                     after(
                         document.write(
                             '<input type="text" value='+price*quantity+
-                            ' readonly size=3 id=amount'+i+'>'
+                            ' readonly size=3 name="amount">'
                         )
                     );
                </script>
@@ -76,24 +76,7 @@
 
 </form>
 
-    <script>
 
-    $('.link-delete').on('click', function(e) {
-        e.preventDefault();
-        var $this=$(this);
-        $.ajax({
-            url: $this.attr("href"),
-            type: "GET",
-            dataType: "json",
-            success: function(resp){
-                    $this.parents(".ingredient-form").fadeOut("slow", function(){
-                        $this.parents(".ingredient-form").remove();
-                    });
-            }
-        });
-    });
-
-       </script>
 
 <script>
 
@@ -104,15 +87,56 @@
             type: 'POST',
             data: $(this).serialize(),
             dataType: 'html',
-            success: function (resp) {
-                b=JSON.parse(resp)
-                $('#uuu').html("<tr><td>ffffff"+b[0].service_id_name | b[0].quantity | b[0].price+"</td></tr>");
+            success: function (r) {
+                b=JSON.parse(r);
+                c = $('div[new="new"]');
+
+                for (i = 0; i < c.length; i++) {
+                    form_name = c[i]['id'];
+                    $("#id_" + form_name + "-quantity").attr("value", b[i].quantity);
+                    $("#id_" + form_name + "-price").attr("value", b[i].price);
+                    $("#id_" + form_name + "-id").attr("value", b[i].pk);
+                    amount=b[i].price*b[i].quantity;
+                    $("#id_" + form_name + "-price").after(
+                    ' <input type="text" value='+amount+' readonly size=3 name="amount">'+
+                    '<a href="/invoice/delete/'+b[i].pk+'" class="link-delete">удалить</a>');
+
+                }
+                c.attr("new", "-");
+                ff = $('#id_form-TOTAL_FORMS').attr("value");
+
+                $('#id_form-INITIAL_FORMS').attr("value", ff );
+
+
 
             },
         });
 
-    });
+});
 </script>
+
+
+
+    <script>
+
+    $('.link-delete').on('click', function(e) {
+        e.preventDefault();
+        var $this=$(this);
+        $.ajax({
+            url: $this.attr("href"),
+            type: "GET",
+            dataType: "json",
+            success: function(re){
+                    $this.parents(".ingredient-form").fadeOut("slow", function(){
+                        $this.parents(".ingredient-form").remove();
+                    });
+            }
+        });
+    });
+
+       </script>
+
+
 
 <script>
     const addMoreBtn=document.getElementById('add-more')
@@ -129,7 +153,7 @@
         const copyEmptyFromEl=document.getElementById('empty-form').cloneNode(true)
         copyEmptyFromEl.setAttribute('class', 'ingredient-form')
         copyEmptyFromEl.setAttribute('id',`form-${currentFormCount}`)
-        copyEmptyFromEl.setAttribute('class',`new`)
+        copyEmptyFromEl.setAttribute('new',`new`)
         const regex = new RegExp('__prefix__', 'g')
         copyEmptyFromEl.innerHTML=copyEmptyFromEl.innerHTML.replace(regex,
          currentFormCount)
