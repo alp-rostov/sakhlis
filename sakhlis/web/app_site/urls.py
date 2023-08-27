@@ -9,6 +9,7 @@ urlpatterns = [
     path('list_order', OrderManagementSystem.as_view(), name='list_order'),
     path('list_order/<int:pk>', OrderDatail.as_view(), name='list_detail'),
 
+
     path('list_order/update/<int:pk>', OrderUpdate.as_view(), name='update'),
     path('add', OrderAddRepaier, name='add_repairer'),
 

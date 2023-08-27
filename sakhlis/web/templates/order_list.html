@@ -11,8 +11,9 @@
 </style>
 
 <h2>Список заказов <a href="#"  onclick="disp(document.getElementById('form'))" id="ggg">Создать заказ</a></h2>
-
-
+<hr>
+<a href="{% url 'list_order' %}">Текущие заказы</a> | <a href="{% url 'list_order'%}?end=true">Выполненные работы</a>
+<hr>
 
 
 
@@ -150,8 +151,16 @@
 
         {% for i in y.list reversed %}
         <tr id="row_{{ i.pk }}" >
-            <td>
-                <a href="{% url 'invoice' i.pk %}" id="order_{{ i.pk }}">Заказа №{{ i.pk}}</a>{{ i.time_out | finish_order_tag }} <a href="{% url 'delete-order' i.pk %}" id="delete_{{ i.pk }}">Удалить</a><br>
+
+                {% if i.order_status == 'SND' %}
+                <td bgcolor= "#DCDCDC">
+                {% else %} <td>
+                {% endif %}
+
+
+                <a href="{% url 'invoice' i.pk %}" id="order_{{ i.pk }}">Заказ №{{ i.pk}}</a>
+
+                <a href="{% url 'delete-order' i.pk %}" id="delete_{{ i.pk }}">Удалить</a><br>
                 <span id="text_order_{{ i.pk }}">{{ i.text_order|truncatewords:7 }}</span>
             </td>
             <td width = 50></td>

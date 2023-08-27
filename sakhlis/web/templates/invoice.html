@@ -12,12 +12,10 @@
 <button> <a href="/app/logout/">Выйти</a> </button>
 <hr>
 
-
-
     <h1>Заявка № {{ info.id }} от : {{ info.time_in }}</h1>
 
     <table width="700"><tr>
-        <td><h2>Заказчик: {{ info.customer_name }}  <a href="#" id="name">изменить</a></h2></td>
+        <td><h2>Заказчик: {{ info.customer_name }}  <a href="../list_order/update/{{ info.pk}}">изменить</a></h2></td>
     </tr>
         <tr>
         <td><b>Адрес: </b>{{ info.address_city }}, {{ info.address_street_app }}, {{ info.address_num }}</td>
@@ -30,53 +28,73 @@
     </tr>
     </table>
 
-
 <h3>Выполненные работы: </h3>
 <form action="" method="post" id="id_form">
 {% csrf_token %}
 {{ form.management_form }}
-    <div id="ingredient-form-list">
-        <script>
-            var i=0;
-            var sum=0;
+    <div id="form-list">
+    <script>
+    function sum_acount(num) {
+        quantity_ = $('#id_form-'+num+'-quantity').val()
+        price_ = $('#id_form-'+num+'-price').val();
+        return price_*quantity_;
+    }
+
+    function sum_title() {
+       var form_=$('.form');
+       for (i=0; i<form_.length; i++) {
+            $('#id_form-'+i+'-sum').val(sum_acount(i));
+       }
+    }
+
+    function sum_total() {
+       var form_=$('[name="amount"]');
+       var sum_total=0;
+       for (i=0; i<form_.length; i++) {
+            sum_total=sum_total+parseInt(form_[i]['value']);
+       }
+
+       $('#total').html('ИТОГО:'+ sum_total);
+    }
+
+
+    function sum_make_input() {
+        var form_=$('.form');
+        for (i=0; i<form_.length; i++) {
+
+            var _name = 'id_form-'+i;
+            var price = $('#'+_name + '-price');
+            var amount_name1 = $('<input type="text" size=3 name="amount" id="'+_name+'-sum">');
+            amount_name1.attr('value', sum_acount(i));
+            price.after(amount_name1);
+        }
+    }
+
         </script>
         {% for g in form %}
-        <div class="ingredient-form">
-
+        <div class="form">
                 {{ g.as_table }}
-
-
-
-               <script>
-                    price=$('#'+'id_form-'+i+'-price').val();
-                    quantity=$('#'+'id_form-'+i+'-quantity').val();
-                    sum+=price*quantity
-                    i++;
-                    $('#'+'id_form-'+i+'-price').
-                    after(
-                        document.write(
-                            '<input type="text" value='+price*quantity+
-                            ' readonly size=3 name="amount">'
-                        )
-                    );
-               </script>
-
-            <a href="{% url 'delete-item-of-work' g.id.value %}" class="link-delete">удалить</a>
+            <a href="{% url 'delete-item-of-work' g.id.value %}" class="link-delete" >удалить</a>
             <br>
         </div>
         {% endfor %}
-        <span id="uuu"></span>
-        <script>
-            document.write('ИТОГО: '+ sum);
-        </script>
+
+
+
     </div>
+
     <div id="empty-form" class="hidden">{{ form.empty_form }}</div>
+    <span id="total"></span><br>
     <button id="add-more" type="button">add-more</button>
     <button type="submit"> "Save" </button>
 
 </form>
 
 
+    <script>
+        sum_make_input();
+        sum_total();
+    </script>
 
 <script>
 
@@ -88,27 +106,23 @@
             data: $(this).serialize(),
             dataType: 'html',
             success: function (r) {
-                b=JSON.parse(r);
-                c = $('div[new="new"]');
+                var b=JSON.parse(r);
+                var c = $('div[new="new"]');
 
                 for (i = 0; i < c.length; i++) {
-                    form_name = c[i]['id'];
-                    $("#id_" + form_name + "-quantity").attr("value", b[i].quantity);
-                    $("#id_" + form_name + "-price").attr("value", b[i].price);
+                    var form_name = c[i]['id'];
                     $("#id_" + form_name + "-id").attr("value", b[i].pk);
-                    amount=b[i].price*b[i].quantity;
+
+                    amount = b[i].price * b[i].quantity;
                     $("#id_" + form_name + "-price").after(
-                    ' <input type="text" value='+amount+' readonly size=3 name="amount">'+
-                    '<a href="/invoice/delete/'+b[i].pk+'" class="link-delete">удалить</a>');
-
+                    ' <input type="text" value=' + amount + ' readonly size=3 name="amount"'+
+                    'id="id_' + form_name + '-sum">'+
+                    '<a href="/invoice/delete/'+b[i].pk+'" class="link-delete" >удалить</a>');
                 }
+                sum_total()
                 c.attr("new", "-");
-                ff = $('#id_form-TOTAL_FORMS').attr("value");
-
-                $('#id_form-INITIAL_FORMS').attr("value", ff );
-
-
-
+                total_val_form = $('#id_form-TOTAL_FORMS').attr("value");
+                $('#id_form-INITIAL_FORMS').attr("value", total_val_form );
             },
         });
 
@@ -116,19 +130,32 @@
 </script>
 
 
-
     <script>
 
-    $('.link-delete').on('click', function(e) {
+    $('#id_form').on('change', function(e) {
+        e.preventDefault();
+        sum_title();
+        sum_total();
+        });
+
+$(document.body).on( "click", ".link-delete", function(e) {
         e.preventDefault();
         var $this=$(this);
         $.ajax({
             url: $this.attr("href"),
             type: "GET",
             dataType: "json",
-            success: function(re){
-                    $this.parents(".ingredient-form").fadeOut("slow", function(){
-                        $this.parents(".ingredient-form").remove();
+            success: function(){
+                        $this.parents(".form").fadeOut("slow", function(){
+                        $this.parents(".form").remove();
+
+                        var p=$('#id_form-TOTAL_FORMS');
+                        p.attr("value", p.val()-1);
+
+                        p=$('#id_form-INITIAL_FORMS');
+                        p.attr("value", p.val()-1);
+
+                        sum_total()
                     });
             }
         });
@@ -139,26 +166,28 @@
 
 
 <script>
-    const addMoreBtn=document.getElementById('add-more')
-    const totalNewForms = document.getElementById('id_form-TOTAL_FORMS')
-    addMoreBtn.addEventListener('click', add_new_form)
+    const addMoreBtn=document.getElementById('add-more');
+    const totalNewForms = document.getElementById('id_form-TOTAL_FORMS');
+    addMoreBtn.addEventListener('click', add_new_form);
 
     function add_new_form(event){
         if (event) {
-        event.preventDefault()
+        event.preventDefault();
         }
-        const currentIngredientForms = document.getElementsByClassName('ingredient-form')
-        const currentFormCount = currentIngredientForms.length // + 1
-        const formCopyTarget = document.getElementById('ingredient-form-list')
-        const copyEmptyFromEl=document.getElementById('empty-form').cloneNode(true)
-        copyEmptyFromEl.setAttribute('class', 'ingredient-form')
-        copyEmptyFromEl.setAttribute('id',`form-${currentFormCount}`)
-        copyEmptyFromEl.setAttribute('new',`new`)
-        const regex = new RegExp('__prefix__', 'g')
+        const currentForms = document.getElementsByClassName('form');
+        const currentFormCount = currentForms.length // + 1;
+        const formCopyTarget = document.getElementById('form-list');
+        const copyEmptyFromEl=document.getElementById('empty-form').cloneNode(true);
+        copyEmptyFromEl.setAttribute('class', 'form');
+        copyEmptyFromEl.setAttribute('id',`form-${currentFormCount}`);
+
+        copyEmptyFromEl.setAttribute('new',`new`);
+        const regex = new RegExp('__prefix__', 'g');
         copyEmptyFromEl.innerHTML=copyEmptyFromEl.innerHTML.replace(regex,
-         currentFormCount)
-        totalNewForms.setAttribute('value', currentFormCount+1)
-        formCopyTarget.append(copyEmptyFromEl)
+         currentFormCount);
+        totalNewForms.setAttribute('value', currentFormCount+1);
+        formCopyTarget.append(copyEmptyFromEl);
+
     }
 </script>
 

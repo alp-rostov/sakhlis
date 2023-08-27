@@ -103,6 +103,7 @@ class OrderCreate(CreateView):
     def form_valid(self, form):
         if self.request.user.is_authenticated:
             form.instance.repairer_id = self.request.user
+            form.instance.order_status = 'SND'
         return super(OrderCreate, self).form_valid(form)
 
 
@@ -114,8 +115,13 @@ class OrderManagementSystem(LoginRequiredMixin, ListView):
     template_name = 'order_list.html'
 
     def get_queryset(self):
-        queryset = super().get_queryset()
-        self.queryset = OrderList.objects.filter(repairer_id=self.request.user)
+        if self.request.GET.get('end'):
+            self.queryset = OrderList.objects.filter(repairer_id=self.request.user)&\
+                            OrderList.objects.filter(order_status='END')
+        else:
+            self.queryset = OrderList.objects.filter(repairer_id=self.request.user)&\
+                            OrderList.objects.filter(order_status__in=['SND','RCV'])
+
         return self.queryset
 
     def get_context_data(self, **kwargs):
@@ -197,7 +203,10 @@ class InvoiceCreate(FormView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data()
-        context['info'] = get_info1(self.kwargs.get('order_pk'))
+        b = get_info1(self.kwargs.get('order_pk'))
+        b.order_status = 'RCV'
+        b.save()
+        context['info'] = b
         return context
 
     def post(self, formset, **kwargs):
@@ -217,8 +226,12 @@ class InvoiceCreate(FormView):
                                 "service_id": instance.service_id.pk,
                                 "service_id_name": instance.service_id.name
                                 })
+           b.order_status = 'END'
+           b.save()
         else:
             list_num = [{}]
+
+
         return JsonResponse(list_num, safe=False)
 
 
