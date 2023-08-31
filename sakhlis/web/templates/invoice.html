@@ -18,7 +18,7 @@
         <td><h2>Заказчик: {{ info.customer_name }}  <a href="../list_order/update/{{ info.pk}}">изменить</a></h2></td>
     </tr>
         <tr>
-        <td><b>Адрес: </b>{{ info.address_city }}, {{ info.address_street_app }}, {{ info.address_num }}</td>
+        <td><b>Адрес: </b>{{ info.address_city|choice_tag:'city' }}, {{ info.address_street_app }}, {{ info.address_num }}</td>
     </tr>
     <tr>
          <td><b>Телефон:</b> {{ info.customer_phone }}</td>
@@ -192,14 +192,11 @@ $(document.body).on( "click", ".link-delete", function(e) {
 </script>
 
 
-<!--<h3>Статус заказа: {{ info.order_status  | choice_tag:'status_order'}}</h3>-->
 
 
-<!--{% if info.order_status == 'END' %}-->
-<!--    <a href="pdf/{{ info.id }}">Квитанция на оплату - PDF</a>-->
-<!--{% else %}-->
-<!--    <a href="">Заказ выполненен - указать статус заказа</a>-->
 
-<!--{% endif %}-->
+
+<a href="pdf/{{ info.id }}">Квитанция на оплату - PDF</a>
+
 <span id="eee"></span>
 {% endblock body %}

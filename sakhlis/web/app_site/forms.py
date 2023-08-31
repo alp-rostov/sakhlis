@@ -74,6 +74,7 @@ class UserRegisterForm(UserCreationForm):
 
 
 class InvoiceForm(forms.ModelForm):
+
     service_id = forms.ModelChoiceField(
         label='',
         queryset=Service.objects.all(),

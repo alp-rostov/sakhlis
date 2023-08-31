@@ -1,12 +1,8 @@
-import json
-from pprint import pprint
-
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
-from django.core import serializers
 from django.db.models import F, Prefetch, Sum
 from django.forms import modelformset_factory
-from django.shortcuts import redirect
+from django.shortcuts import redirect, get_object_or_404
 from django.urls import reverse, reverse_lazy
 from django.views.decorators.http import require_http_methods
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView, FormView
@@ -14,8 +10,9 @@ from .models import RepairerList, OrderList, Invoice
 from .filters import RepFilter
 from .forms import OrderForm, InvoiceForm, UserRegisterForm, RepairerForm
 from .utils import InvoiceMaker
-from django.http import FileResponse, Http404, HttpResponseRedirect, HttpResponse, JsonResponse
+from django.http import FileResponse, Http404, HttpResponseRedirect, JsonResponse
 import io
+
 
 
 # ___________________________________________________________________________________________________________________
@@ -99,7 +96,6 @@ class OrderCreate(CreateView):
                              })
 
 
-
     def form_valid(self, form):
         if self.request.user.is_authenticated:
             form.instance.repairer_id = self.request.user
@@ -159,6 +155,7 @@ class OrderUpdate(UpdateView):
         return context
 
 
+
 class OrderDelete(DeleteView):
     model = OrderList
     template_name = 'order_delete.html'
@@ -204,8 +201,9 @@ class InvoiceCreate(FormView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data()
         b = get_info1(self.kwargs.get('order_pk'))
-        b.order_status = 'RCV'
-        b.save()
+        if b.order_status == 'SND':
+            b.order_status = 'RCV'
+            b.save()
         context['info'] = b
         return context
 
@@ -239,9 +237,10 @@ class InvoiceCreate(FormView):
 @require_http_methods(["GET"])
 def DeleteIvoiceService(request, **kwargs):
     if request.user.is_authenticated:
-        Invoice.objects.get(pk=kwargs.get("invoice_pk")).delete()
+        b = get_object_or_404(Invoice, pk=kwargs.get("invoice_pk"))
+        b.delete()
         return JsonResponse({"message": "success"})
-    return JsonResponse({"message": "ERROR"})
+
 
 
 class Statistica(TemplateView):

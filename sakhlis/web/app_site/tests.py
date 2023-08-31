@@ -11,3 +11,7 @@
 # assert add_telegram_button([(2,4),(5,4)], 12), 'Тест не пройден 6'
 
 from models import *
+
+from models import OrderList
+
+b=OrderList.objects.all()

@@ -1,7 +1,6 @@
 from django.contrib.auth.models import User
 from django.db import models
 from django.core.validators import RegexValidator
-from django.shortcuts import get_object_or_404
 from django.urls import reverse
 
 phoneNumberRegex = RegexValidator(regex=r"^\+?1?\d{8,15}$",
@@ -32,7 +31,7 @@ QUANTITY_CHOICES = [
 
 ORDER_STATUS = [
     ('BEG', 'Заявка получена'),
-    ('SND', 'Направлена мастеру'),
+    ('p', 'Направлена мастеру'),
     ('RCV', 'Мастеру принял заявку'),
     ('END', 'Заявка выполнена'),
     ('CNL', 'Заявка отменена'),
