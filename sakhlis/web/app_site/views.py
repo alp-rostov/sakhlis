@@ -1,3 +1,5 @@
+from pprint import pprint
+
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
 from django.db.models import F, Prefetch, Sum
@@ -183,33 +185,35 @@ def OrderAddRepaier(request):
         raise Http404()
 
 
-class InvoiceCreate(FormView):
+class InvoiceCreate(DetailView):
     """ Create Invoice for payment """
-
+    model = OrderList
+    context_object_name = 'info'
     template_name = 'invoice.html'
-    context_object_name = 'invoice'
 
-    def get_form(self, form_class=None):
-        InvoiceFormSet = modelformset_factory(Invoice, form=InvoiceForm, extra=0)
-        formset = InvoiceFormSet(queryset=Invoice.objects
-                                 .filter(order_id=self.kwargs.get('order_pk'))
-                                 .select_related('service_id')
-                                 .defer('service_id__type')
-                                 )
-        return formset
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data()
-        b = get_info1(self.kwargs.get('order_pk'))
-        if b.order_status == 'SND':
-            b.order_status = 'RCV'
-            b.save()
-        context['info'] = b
+        context['invoice'] = Invoice.objects\
+                                    .filter(order_id=self.object.pk)\
+                                    .select_related('service_id')\
+                                    .defer('service_id__type')\
+                                    .annotate(amount=F('price') * F('quantity'))
+
+
+        InvoiceFormSet = modelformset_factory(Invoice, form=InvoiceForm, extra=0)
+        formset = InvoiceFormSet(queryset=Invoice.objects.none())
+        context['form'] = formset
+
+
+        if self.object.order_status == 'SND':
+            self.object.order_status = 'RCV'
+            self.object.save()
         return context
 
     def post(self, formset, **kwargs):
-        b = get_info1(self.kwargs.get('order_pk'))
-        AuthorFormSet = modelformset_factory(Invoice,form=InvoiceForm)
+        b = get_info1(self.kwargs.get('pk'))
+        AuthorFormSet = modelformset_factory(Invoice, form=InvoiceForm)
         formset = AuthorFormSet(self.request.POST)
         instances = formset.save(commit=False)
 

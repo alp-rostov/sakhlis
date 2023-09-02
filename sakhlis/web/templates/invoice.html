@@ -29,31 +29,60 @@
     </table>
 
 <h3>Выполненные работы: </h3>
-<form action="" method="post" id="id_form">
-{% csrf_token %}
-{{ form.management_form }}
-    <div id="form-list">
-    <script>
-    function sum_acount(num) {
-        quantity_ = $('#id_form-'+num+'-quantity').val()
-        price_ = $('#id_form-'+num+'-price').val();
-        return price_*quantity_;
-    }
+<table width="500" id="table_invoice">
+ <tr>
+            <th>Наименование </th>
+            <th>Количество </th>
+            <th>Цена</th>
+            <th>Сумма</th>
+            <th>----</th>
+    </tr>
 
-    function sum_title() {
-       var form_=$('.form');
-       for (i=0; i<form_.length; i++) {
-            $('#id_form-'+i+'-sum').val(sum_acount(i));
-       }
-    }
+
+      <tr class="hidden">
+            <td name="service_id"></td>
+            <td name="quantity"></td>
+            <td name="price"></td>
+            <td name="amount">0</td>
+            <td name="delete"><a href="" class="link-delete" >удалить</a></td>
+    </tr>
+
+
+{% for g in invoice %}
+
+    <tr class="form_text">
+            <td name="service_id">{{ g.service_id }} </td>
+            <td name="quantity">{{ g.quantity }} </td>
+            <td name="price">{{ g.price }}</td>
+            <td name="amount">{{ g.amount }}</td>
+            <td name="delete"><a href="{% url 'delete-item-of-work' g.pk %}" class="link-delete" >удалить</a></td>
+    </tr>
+{% endfor %}
+
+    <tr id="total"><td></td></tr>
+</table>
+
+<form action="" method="post" id="id_form">
+    {% csrf_token %}
+    <div id="form-list">
+
+    <div id="empty-form" class="hidden">{{ form.empty_form }}</div>
+    <button id="add-more" type="button">add-more</button>
+    <button type="submit"> "Save" </button>
+
+</form>
+
+
+
+
+
+{{ form.management_form }}
+
+    <script>
 
     function sum_total() {
-       var form_=$('[name="amount"]');
        var sum_total=0;
-       for (i=0; i<form_.length; i++) {
-            sum_total=sum_total+parseInt(form_[i]['value']);
-       }
-
+       $('td[name="amount"]').each(function(){sum_total += parseInt($(this).html());});
        $('#total').html('ИТОГО:'+ sum_total);
     }
 
@@ -69,32 +98,16 @@
             price.after(amount_name1);
         }
     }
+    </script>
+  <script>
 
-        </script>
-        {% for g in form %}
-        <div class="form">
-                {{ g.as_table }}
-            <a href="{% url 'delete-item-of-work' g.id.value %}" class="link-delete" >удалить</a>
-            <br>
-        </div>
-        {% endfor %}
+        sum_total();
+    </script>
+
 
 
 
     </div>
-
-    <div id="empty-form" class="hidden">{{ form.empty_form }}</div>
-    <span id="total"></span><br>
-    <button id="add-more" type="button">add-more</button>
-    <button type="submit"> "Save" </button>
-
-</form>
-
-
-    <script>
-        sum_make_input();
-        sum_total();
-    </script>
 
 <script>
 
@@ -108,21 +121,21 @@
             success: function (r) {
                 var b=JSON.parse(r);
                 var c = $('div[new="new"]');
-
                 for (i = 0; i < c.length; i++) {
                     var form_name = c[i]['id'];
-                    $("#id_" + form_name + "-id").attr("value", b[i].pk);
-
-                    amount = b[i].price * b[i].quantity;
-                    $("#id_" + form_name + "-price").after(
-                    ' <input type="text" value=' + amount + ' readonly size=3 name="amount"'+
-                    'id="id_' + form_name + '-sum">'+
-                    '<a href="/invoice/delete/'+b[i].pk+'" class="link-delete" >удалить</a>');
+                    var tr = $('tr.hidden').clone();
+                    tr.find('td[name="service_id"]').html(b[i].service_id_name);
+                    tr.find('td[name="quantity"]').html(b[i].quantity);
+                    tr.find('td[name="price"]').html(b[i].price);
+                    tr.find('td[name="amount"]').html(b[i].price*b[i].quantity);
+                    tr.find('td[name="delete"]').html('<a href="/invoice/delete/'+b[i].pk+'" class="link-delete" >удалить</a>');
+                    tr.attr('class','form_text')
+                    $('#total').before(tr);
+                    sum_total();
                 }
-                sum_total()
-                c.attr("new", "-");
-                total_val_form = $('#id_form-TOTAL_FORMS').attr("value");
-                $('#id_form-INITIAL_FORMS').attr("value", total_val_form );
+                c.remove();
+                $('#id_form-TOTAL_FORMS').attr("value", 0);
+
             },
         });
 
@@ -132,11 +145,6 @@
 
     <script>
 
-    $('#id_form').on('change', function(e) {
-        e.preventDefault();
-        sum_title();
-        sum_total();
-        });
 
 $(document.body).on( "click", ".link-delete", function(e) {
         e.preventDefault();
@@ -146,14 +154,9 @@ $(document.body).on( "click", ".link-delete", function(e) {
             type: "GET",
             dataType: "json",
             success: function(){
-                        $this.parents(".form").fadeOut("slow", function(){
-                        $this.parents(".form").remove();
+                        $this.parents(".form_text").fadeOut("slow", function(){
+                        $this.parents(".form_text").remove();
 
-                        var p=$('#id_form-TOTAL_FORMS');
-                        p.attr("value", p.val()-1);
-
-                        p=$('#id_form-INITIAL_FORMS');
-                        p.attr("value", p.val()-1);
 
                         sum_total()
                     });
@@ -175,7 +178,9 @@ $(document.body).on( "click", ".link-delete", function(e) {
         event.preventDefault();
         }
         const currentForms = document.getElementsByClassName('form');
-        const currentFormCount = currentForms.length // + 1;
+
+        const currentFormCount = currentForms.length ;
+
         const formCopyTarget = document.getElementById('form-list');
         const copyEmptyFromEl=document.getElementById('empty-form').cloneNode(true);
         copyEmptyFromEl.setAttribute('class', 'form');
@@ -184,8 +189,10 @@ $(document.body).on( "click", ".link-delete", function(e) {
         copyEmptyFromEl.setAttribute('new',`new`);
         const regex = new RegExp('__prefix__', 'g');
         copyEmptyFromEl.innerHTML=copyEmptyFromEl.innerHTML.replace(regex,
-         currentFormCount);
+        currentFormCount);
+
         totalNewForms.setAttribute('value', currentFormCount+1);
+
         formCopyTarget.append(copyEmptyFromEl);
 
     }

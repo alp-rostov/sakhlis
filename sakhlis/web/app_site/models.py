@@ -31,7 +31,7 @@ QUANTITY_CHOICES = [
 
 ORDER_STATUS = [
     ('BEG', 'Заявка получена'),
-    ('p', 'Направлена мастеру'),
+    ('SND', 'Направлена мастеру'),
     ('RCV', 'Мастеру принял заявку'),
     ('END', 'Заявка выполнена'),
     ('CNL', 'Заявка отменена'),
@@ -95,6 +95,10 @@ class OrderList(models.Model):
     address_street_app = models.CharField(max_length=150, verbose_name='Улица', null=True, blank=True)
     address_num = models.CharField(max_length=10, verbose_name='Номер дома', null=True, blank=True)
     services = models.ManyToManyField('Service', through='Invoice')
+
+    class Meta:
+        verbose_name = 'Список заказов'
+        verbose_name_plural = 'Список заказов'
 
 
 

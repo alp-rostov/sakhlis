@@ -13,7 +13,7 @@ urlpatterns = [
     path('list_order/update/<int:pk>', OrderUpdate.as_view(), name='update'),
     path('add', OrderAddRepaier, name='add_repairer'),
 
-    path('invoice/<int:order_pk>', InvoiceCreate.as_view(), name='invoice'),
+    path('invoice/<int:pk>', InvoiceCreate.as_view(), name='invoice'),
 
     path('invoice/delete-order/<int:pk>', OrderDelete.as_view(), name='delete-order'),
     path('invoice/delete/<int:invoice_pk>', DeleteIvoiceService, name='delete-item-of-work'),
