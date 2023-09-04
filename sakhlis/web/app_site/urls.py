@@ -31,7 +31,7 @@ urlpatterns = [
 
     path('stat/', Statistica.as_view(), name='stat'),
     path('repaierman/<int:pk>', RepaiermanSpace.as_view(), name='repaierman'),
-
+    path('serv', listservices),
 ]
 
 if settings.DEBUG:

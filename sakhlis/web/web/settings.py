@@ -179,3 +179,4 @@ EMAIL_HOST_USER = 'alp-rostov'  # ваше имя пользователя, на
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')  # пароль от почты
 EMAIL_USE_SSL = True  # Яндекс использует ssl, подробнее о том, что это, почитайте в дополнительных источниках, но включать его здесь обязательно
 
+DEFAULT_CHARSET = 'utf-8'

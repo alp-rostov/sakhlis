@@ -1,3 +1,4 @@
+import json
 from pprint import pprint
 
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -8,11 +9,11 @@ from django.shortcuts import redirect, get_object_or_404
 from django.urls import reverse, reverse_lazy
 from django.views.decorators.http import require_http_methods
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView, FormView
-from .models import RepairerList, OrderList, Invoice
+from .models import RepairerList, OrderList, Invoice, WORK_CHOICES, Service
 from .filters import RepFilter
 from .forms import OrderForm, InvoiceForm, UserRegisterForm, RepairerForm
 from .utils import InvoiceMaker
-from django.http import FileResponse, Http404, HttpResponseRedirect, JsonResponse
+from django.http import FileResponse, Http404, HttpResponseRedirect, JsonResponse, HttpResponse
 import io
 
 
@@ -204,6 +205,7 @@ class InvoiceCreate(DetailView):
         InvoiceFormSet = modelformset_factory(Invoice, form=InvoiceForm, extra=0)
         formset = InvoiceFormSet(queryset=Invoice.objects.none())
         context['form'] = formset
+        context['type_work'] = WORK_CHOICES
 
 
         if self.object.order_status == 'SND':
@@ -230,11 +232,12 @@ class InvoiceCreate(DetailView):
                                 })
            b.order_status = 'END'
            b.save()
+           return JsonResponse(list_num, safe=False)
         else:
-            list_num = [{}]
+            pass #TODO обработать ошибку Valuerror
 
 
-        return JsonResponse(list_num, safe=False)
+
 
 
 
@@ -291,3 +294,9 @@ class RepaiermanSpace(LoginRequiredMixin, DetailView):
         queryset = super().get_queryset()
         self.queryset = User.objects.filter(username=self.request.user)
         return self.queryset
+
+
+def listservices(request, **kwargs):
+    data = Service.objects.filter(type=request.GET.get('type_work')).values('id', 'name')
+    json_data = json.dumps(list(data))
+    return JsonResponse(json_data, safe=False)

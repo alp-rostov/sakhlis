@@ -66,17 +66,17 @@
     {% csrf_token %}
     <div id="form-list">
 
-    <div id="empty-form" class="hidden">{{ form.empty_form }}</div>
+    <div id="empty-form" class="hidden">
+        {% for u in type_work %}
+            <a href="../serv?type_work={{ u.0 }}" class="type_work">{{ u.1 }}</a>
+        {% endfor %}
+        <br> {{ form.empty_form }}</div>
+        {{ form.management_form }}
+    </div>
     <button id="add-more" type="button">add-more</button>
     <button type="submit"> "Save" </button>
 
 </form>
-
-
-
-
-
-{{ form.management_form }}
 
     <script>
 
@@ -86,28 +86,12 @@
        $('#total').html('ИТОГО:'+ sum_total);
     }
 
-
-    function sum_make_input() {
-        var form_=$('.form');
-        for (i=0; i<form_.length; i++) {
-
-            var _name = 'id_form-'+i;
-            var price = $('#'+_name + '-price');
-            var amount_name1 = $('<input type="text" size=3 name="amount" id="'+_name+'-sum">');
-            amount_name1.attr('value', sum_acount(i));
-            price.after(amount_name1);
-        }
-    }
     </script>
   <script>
 
         sum_total();
     </script>
 
-
-
-
-    </div>
 
 <script>
 
@@ -156,10 +140,23 @@ $(document.body).on( "click", ".link-delete", function(e) {
             success: function(){
                         $this.parents(".form_text").fadeOut("slow", function(){
                         $this.parents(".form_text").remove();
-
-
                         sum_total()
                     });
+            }
+        });
+    });
+
+    $(document.body).on( "click", ".type_work", function(e) {
+        e.preventDefault();
+        var $this=$(this);
+        $.ajax({
+            url: $this.attr("href"),
+            type: "GET",
+            dataType: "json",
+            success: function(b){
+                        type=JSON.parse(b);
+                        console.log(type);
+
             }
         });
     });

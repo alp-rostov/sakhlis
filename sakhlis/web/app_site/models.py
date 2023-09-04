@@ -60,6 +60,10 @@ class Service(models.Model):
         CharField(null=True, blank=True, max_length=500, verbose_name='Услуга')
     type = models.CharField(choices=WORK_CHOICES, null=True, blank=True, max_length=3, verbose_name='Вид работ')
 
+    class Meta:
+        ordering = ['type', 'name']
+        verbose_name = 'Виды работ'
+        verbose_name_plural = 'Виды работ'
     def __str__(self):
         return f"{self.name}"
 
@@ -73,6 +77,9 @@ class Invoice(models.Model):
     quantity = models.DecimalField(decimal_places=2, max_digits=7, null=True, blank=True, verbose_name='Количество')
     price = models.DecimalField(decimal_places=2, max_digits=7, null=True, blank=True, verbose_name='Цена')
 
+    class Meta:
+        verbose_name = 'Список работ заказа'
+        verbose_name_plural = 'Список работ заказа'
 
 
 
@@ -112,6 +119,10 @@ class RepairerList(models.Model):
     rating_sum = models.IntegerField(default=0, blank=True, null=True)
     rating_num = models.IntegerField(default=0, blank=True, null=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE, blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'Мастера'
+        verbose_name_plural = 'Мастера'
 
 
     def get_absolute_url(self):
