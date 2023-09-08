@@ -77,13 +77,13 @@ class InvoiceForm(forms.ModelForm):
 
     service_id = forms.ModelChoiceField(
         label='',
-        queryset=Service.objects.all(),
+        queryset = Service.objects.all(),
         widget = forms.Select(attrs={'placeholder': "Вид работ" }),
 
     )
     quantity = forms.IntegerField(
         label='',
-        widget=forms.NumberInput(attrs={'placeholder': "Количество", "min": 1, "max": 1000000,}),
+        widget=forms.NumberInput(attrs={'placeholder': "Количество", "min": 1, "max": 1000000, 'value': 1}),
 
 
     )

@@ -58,7 +58,6 @@
             <td name="delete"><a href="{% url 'delete-item-of-work' g.pk %}" class="link-delete" >удалить</a></td>
     </tr>
 {% endfor %}
-
     <tr id="total"><td></td></tr>
 </table>
 
@@ -70,9 +69,12 @@
         {% for u in type_work %}
             <a href="../serv?type_work={{ u.0 }}" class="type_work">{{ u.1 }}</a>
         {% endfor %}
+
         <br> {{ form.empty_form }}</div>
         {{ form.management_form }}
     </div>
+    <div id="error"></div>
+    Заявка выполнена: <input type="checkbox"><br>
     <button id="add-more" type="button">add-more</button>
     <button type="submit"> "Save" </button>
 
@@ -104,22 +106,25 @@
             dataType: 'html',
             success: function (r) {
                 var b=JSON.parse(r);
-                var c = $('div[new="new"]');
-                for (i = 0; i < c.length; i++) {
-                    var form_name = c[i]['id'];
-                    var tr = $('tr.hidden').clone();
-                    tr.find('td[name="service_id"]').html(b[i].service_id_name);
-                    tr.find('td[name="quantity"]').html(b[i].quantity);
-                    tr.find('td[name="price"]').html(b[i].price);
-                    tr.find('td[name="amount"]').html(b[i].price*b[i].quantity);
-                    tr.find('td[name="delete"]').html('<a href="/invoice/delete/'+b[i].pk+'" class="link-delete" >удалить</a>');
-                    tr.attr('class','form_text')
-                    $('#total').before(tr);
-                    sum_total();
+                console.log(b);
+                if (b!=='error') {
+                    var c = $('div[new="new"]');
+                    for (i = 0; i < c.length; i++) {
+                        var form_name = c[i]['id'];
+                        var tr = $('tr.hidden').clone();
+                        tr.find('td[name="service_id"]').html(b[i].service_id_name);
+                        tr.find('td[name="quantity"]').html(b[i].quantity);
+                        tr.find('td[name="price"]').html(b[i].price);
+                        tr.find('td[name="amount"]').html(b[i].price*b[i].quantity);
+                        tr.find('td[name="delete"]').html('<a href="/invoice/delete/'+b[i].pk+'" class="link-delete" >удалить</a>');
+                        tr.attr('class','form_text')
+                        $('#total').before(tr);
+                        sum_total();
+                    }
+                    c.remove();
+                    $('#id_form-TOTAL_FORMS').attr("value", 0);
                 }
-                c.remove();
-                $('#id_form-TOTAL_FORMS').attr("value", 0);
-
+                else {$('#error').html('<h4>Заполните все поля</h4>');}
             },
         });
 
@@ -154,8 +159,15 @@ $(document.body).on( "click", ".link-delete", function(e) {
             type: "GET",
             dataType: "json",
             success: function(b){
+
                         type=JSON.parse(b);
-                        console.log(type);
+                        idname=$this.closest('div').find('select');
+
+                            $(idname).empty();
+
+                          for (i = 0; i < type.length; i++) {
+                            $(idname).append('<option value='+type[i].id+'>'+type[i].name+'</option>');
+                          }
 
             }
         });
@@ -184,6 +196,7 @@ $(document.body).on( "click", ".link-delete", function(e) {
         copyEmptyFromEl.setAttribute('id',`form-${currentFormCount}`);
 
         copyEmptyFromEl.setAttribute('new',`new`);
+
         const regex = new RegExp('__prefix__', 'g');
         copyEmptyFromEl.innerHTML=copyEmptyFromEl.innerHTML.replace(regex,
         currentFormCount);
@@ -202,5 +215,4 @@ $(document.body).on( "click", ".link-delete", function(e) {
 
 <a href="pdf/{{ info.id }}">Квитанция на оплату - PDF</a>
 
-<span id="eee"></span>
 {% endblock body %}

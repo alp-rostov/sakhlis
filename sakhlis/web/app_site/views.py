@@ -1,9 +1,8 @@
 import json
-from pprint import pprint
 
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
-from django.db.models import F, Prefetch, Sum
+from django.db.models import F, Prefetch, Sum, Count
 from django.forms import modelformset_factory
 from django.shortcuts import redirect, get_object_or_404
 from django.urls import reverse, reverse_lazy
@@ -71,11 +70,7 @@ class UserUpdate(DetailView):
     form_class = UserRegisterForm
     success_url = reverse_lazy('')
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['UserForm'] = RepairerForm(initial = RepairerList.objects.get(user=77))
-        print(RepairerForm(RepairerList.objects.get(user=77)))
-        return context
+
 
 
 class OrderCreate(CreateView):
@@ -114,9 +109,12 @@ class OrderManagementSystem(LoginRequiredMixin, ListView):
     template_name = 'order_list.html'
 
     def get_queryset(self):
-        if self.request.GET.get('end'):
+        if self.request.GET.get('end') == 'end':
             self.queryset = OrderList.objects.filter(repairer_id=self.request.user)&\
                             OrderList.objects.filter(order_status='END')
+        elif self.request.GET.get('end') == 'wrk':
+            self.queryset = OrderList.objects.filter(repairer_id=self.request.user)&\
+                            OrderList.objects.filter(order_status='WRK')
         else:
             self.queryset = OrderList.objects.filter(repairer_id=self.request.user)&\
                             OrderList.objects.filter(order_status__in=['SND','RCV'])
@@ -214,10 +212,14 @@ class InvoiceCreate(DetailView):
         return context
 
     def post(self, formset, **kwargs):
+
         b = get_info1(self.kwargs.get('pk'))
         AuthorFormSet = modelformset_factory(Invoice, form=InvoiceForm)
         formset = AuthorFormSet(self.request.POST)
-        instances = formset.save(commit=False)
+        try:
+            instances = formset.save(commit=False)
+        except ValueError:
+            return JsonResponse('error', safe=False)
 
         list_num = []
         if instances:
@@ -230,11 +232,11 @@ class InvoiceCreate(DetailView):
                                 "service_id": instance.service_id.pk,
                                 "service_id_name": instance.service_id.name
                                 })
-           b.order_status = 'END'
+           b.order_status = 'WRK'
            b.save()
            return JsonResponse(list_num, safe=False)
         else:
-            pass #TODO обработать ошибку Valuerror
+            return JsonResponse({}, safe=False)
 
 
 
@@ -255,9 +257,16 @@ class Statistica(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['a'] = OrderList.objects.values('time_in__month', 'time_in__year').annotate(sum=Sum(F('price'))).filter(repairer_id=self.request.user)
-        # context['b'] = OrderList.objects.values('repairer_id__last_name').annotate(sum=Sum(F('price')),
-        #                                                                            con=Count(F('id')))
+        context['a'] = OrderList.objects\
+            .values('time_in__month', 'time_in__year')\
+            .annotate(count=Sum(F('invoice__price') * F('invoice__quantity')))\
+            .filter(repairer_id=self.request.user)
+
+
+        context['b'] = OrderList.objects\
+            .values('time_in__month', 'time_in__year')\
+            .annotate(count=Count(F('pk')))\
+            .filter(repairer_id=self.request.user)
 
         return context
 

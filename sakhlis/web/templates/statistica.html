@@ -10,15 +10,21 @@
 <b> {{ y.grouper }}</b><br>
 
     {% for i in y.list %}
-        {{ i.time_in__month | choice_tag:'month' }} | {{ i.sum }}<br>
+        {{ i.time_in__month | choice_tag:'month' }} | {{ i.sum }} | {{ i.count }}<br>
     {% endfor%}
 
 {% endfor%}
 
 <hr>
-    {% for i1 in b %}
-    {{ i1.repairer_id__name}} | {{ i1.sum }}<br>
+{% regroup b by time_in__year as year %}
+{% for y in year %}
+<b> {{ y.grouper }}</b><br>
+
+    {% for i in y.list %}
+        {{ i.time_in__month | choice_tag:'month' }} | {{ i.count }}<br>
     {% endfor%}
+
+{% endfor%}
 
 
 
