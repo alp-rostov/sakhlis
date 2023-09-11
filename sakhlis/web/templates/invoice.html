@@ -8,6 +8,14 @@
     display:none
     }
 </style>
+
+<script>
+    function disp(form) {
+            $('.type_work').fadeIn("slow", function(){
+            });
+    }
+    </script>
+
 <hr>
 <button> <a href="/app/logout/">Выйти</a> </button>
 <hr>
@@ -55,7 +63,7 @@
             <td name="quantity">{{ g.quantity }} </td>
             <td name="price">{{ g.price }}</td>
             <td name="amount">{{ g.amount }}</td>
-            <td name="delete"><a href="{% url 'delete-item-of-work' g.pk %}" class="link-delete" >удалить</a></td>
+            <td name="delete"><a href="{% url 'delete-item-of-order' g.pk %}" class="link-delete" >удалить</a></td>
     </tr>
 {% endfor %}
     <tr id="total"><td></td></tr>
@@ -65,16 +73,19 @@
     {% csrf_token %}
     <div id="form-list">
 
-    <div id="empty-form" class="hidden">
-        {% for u in type_work %}
-            <a href="../serv?type_work={{ u.0 }}" class="type_work">{{ u.1 }}</a>
-        {% endfor %}
-
-        <br> {{ form.empty_form }}</div>
+        <div id="empty-form" class="hidden">
+            <a href="#" onclick="disp(document.getElementsByClassName('type_work'))" >открыть</a>
+            <span class="type_work">
+            {% for u in type_work %}
+                <a href="../serv?type_work={{ u.0 }}" class="type_work">{{ u.1 }}</a>
+            {% endfor %}
+            </span>
+            <br> {{ form.empty_form }}
+        </div>
         {{ form.management_form }}
     </div>
     <div id="error"></div>
-    Заявка выполнена: <input type="checkbox"><br>
+    Заявка выполнена: <input type="checkbox" id="status_order" value="{{ info.id }}"><br>
     <button id="add-more" type="button">add-more</button>
     <button type="submit"> "Save" </button>
 
@@ -151,6 +162,30 @@ $(document.body).on( "click", ".link-delete", function(e) {
         });
     });
 
+
+$(document.body).on( "click", "#status_order", function(e) {
+        e.preventDefault();
+        var $this=$(this);
+        $.ajax({
+            url: '',
+            type: "GET",
+            dataType: "json",
+            success: function(e){
+                       alert("__");
+            },
+            error: function(){
+                       alert(e);
+                       console.log(e);
+            }
+        });
+    });
+
+
+
+
+
+
+
     $(document.body).on( "click", ".type_work", function(e) {
         e.preventDefault();
         var $this=$(this);
@@ -159,15 +194,22 @@ $(document.body).on( "click", ".link-delete", function(e) {
             type: "GET",
             dataType: "json",
             success: function(b){
-
                         type=JSON.parse(b);
                         idname=$this.closest('div').find('select');
-
-                            $(idname).empty();
-
-                          for (i = 0; i < type.length; i++) {
+                        $(idname).empty();
+                        for (i = 0; i < type.length; i++) {
                             $(idname).append('<option value='+type[i].id+'>'+type[i].name+'</option>');
-                          }
+                        }
+
+                        idh=$this.parent();
+
+                        idh.fadeOut("slow", function(){
+
+
+                                        });
+
+
+
 
             }
         });
@@ -207,10 +249,6 @@ $(document.body).on( "click", ".link-delete", function(e) {
 
     }
 </script>
-
-
-
-
 
 
 <a href="pdf/{{ info.id }}">Квитанция на оплату - PDF</a>

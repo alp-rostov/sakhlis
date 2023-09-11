@@ -50,8 +50,7 @@ class OrderForm(forms.ModelForm):
                   'customer_phone',
                   'address_street_app',
                   'address_num',
-                  'repairer_id'
-                  )
+                                    )
 
 class UserRegisterForm(UserCreationForm):
     email = forms.EmailField(label="",

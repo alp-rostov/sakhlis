@@ -22,10 +22,14 @@
 
     {% for i in y.list %}
         {{ i.time_in__month | choice_tag:'month' }} | {{ i.count }}<br>
-    {% endfor%}
+    {% endfor %}
 
 {% endfor%}
 
 
+<hr>
+{% for i in c %}
+    {{ i.service_id__type | choice_tag:'work_type' }} : {{ i.count }} <br>
+{% endfor %}
 
 {% endblock body %}

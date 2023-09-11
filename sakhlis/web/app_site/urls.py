@@ -16,11 +16,11 @@ urlpatterns = [
     path('invoice/<int:pk>', InvoiceCreate.as_view(), name='invoice'),
 
     path('invoice/delete-order/<int:pk>', OrderDelete.as_view(), name='delete-order'),
-    path('invoice/delete/<int:invoice_pk>', DeleteIvoiceService, name='delete-item-of-work'),
+    path('invoice/delete/<int:invoice_pk>', DeleteIvoiceService, name='delete-item-of-order'),
     path('invoice/pdf/<int:order_pk>', CreateIvoicePDF, name='invoice_pdf'),
-    path('invoice/pdf_/<int:order_pk>', CreateIvoicePDF, ),
 
-    path('list_repair', RepairerL.as_view(), name='list_repair'),
+
+
 
 
     path('login/', LoginView.as_view(template_name='login.html'), name='login'),

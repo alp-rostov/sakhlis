@@ -2,6 +2,7 @@ import json
 
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
+from django.db import transaction
 from django.db.models import F, Prefetch, Sum, Count
 from django.forms import modelformset_factory
 from django.shortcuts import redirect, get_object_or_404
@@ -14,12 +15,7 @@ from .forms import OrderForm, InvoiceForm, UserRegisterForm, RepairerForm
 from .utils import InvoiceMaker
 from django.http import FileResponse, Http404, HttpResponseRedirect, JsonResponse, HttpResponse
 import io
-
-
-
 # ___________________________________________________________________________________________________________________
-def get_info1(spk: int):
-    return OrderList.objects.get(pk=spk)
 
 
 def get_info2():
@@ -35,27 +31,6 @@ def get_info2():
 # __________________________________________________________________________________________________________________
 
 
-class RepairerL(LoginRequiredMixin, ListView):
-    """ List of repairman """
-    model = RepairerList
-    context_object_name = 'repairer'
-    template_name = 'repairer_list.html'
-    queryset = RepairerList.objects \
-        .select_related('user') \
-        .all() \
-        .values('city', 'phone', 'foto', 'user', 'user__last_name', 'user__first_name', 'user__email')
-
-    def get_queryset(self):
-        queryset = super().get_queryset()
-        self.filterset = RepFilter(self.request.GET, queryset)
-        return self.filterset.qs
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['filterset'] = self.filterset
-        return context
-
-
 class UserRegisterView(CreateView):
     """ Registration of repairman """
     model = User
@@ -63,6 +38,11 @@ class UserRegisterView(CreateView):
     success_url = reverse_lazy('home')
     template_name = 'register.html'
 
+    def post(self, request, *args, **kwargs):
+        with transaction.atomic():
+            super().post(request, *args, **kwargs)
+            RepairerList.objects.create(user=self.object)
+        return redirect('home')
 
 class UserUpdate(DetailView):
     model = User
@@ -98,7 +78,7 @@ class OrderCreate(CreateView):
         if self.request.user.is_authenticated:
             form.instance.repairer_id = self.request.user
             form.instance.order_status = 'SND'
-        return super(OrderCreate, self).form_valid(form)
+        return super(OrderCreate, self).form_valid(form) #todo переделать super()
 
 
 class OrderManagementSystem(LoginRequiredMixin, ListView):
@@ -143,7 +123,7 @@ class OrderDatail(LoginRequiredMixin, DetailView):
         return context
 
 
-class OrderUpdate(UpdateView):
+class OrderUpdate(LoginRequiredMixin, UpdateView):
     model = OrderList
     template_name = 'order_update.html'
     form_class = OrderForm
@@ -156,22 +136,18 @@ class OrderUpdate(UpdateView):
         return context
 
 
-
-class OrderDelete(DeleteView):
+class OrderDelete(LoginRequiredMixin, DeleteView):
     model = OrderList
     template_name = 'order_delete.html'
     success_url = '/list_order'
-
-
-
 
 
 @require_http_methods(["GET"])
 def OrderAddRepaier(request):
     """Aad the repaier to order from telegram"""
     if request.GET:
-        order = get_info1(request.GET['pk_order'])
-        repaier = RepairerList.objects.get(pk=request.GET['pk_repairer'])
+        order = get_object_or_404(OrderList, pk=request.GET['pk_order'])
+        repaier = get_object_or_404(RepairerList, pk=request.GET['pk_repairer'])
         if order and repaier:
             if not order.repairer_id:
                 order.repairer_id = repaier
@@ -184,7 +160,7 @@ def OrderAddRepaier(request):
         raise Http404()
 
 
-class InvoiceCreate(DetailView):
+class InvoiceCreate(LoginRequiredMixin, DetailView):
     """ Create Invoice for payment """
     model = OrderList
     context_object_name = 'info'
@@ -212,8 +188,7 @@ class InvoiceCreate(DetailView):
         return context
 
     def post(self, formset, **kwargs):
-
-        b = get_info1(self.kwargs.get('pk'))
+        b = get_object_or_404(OrderList, pk=self.kwargs.get('pk'))
         AuthorFormSet = modelformset_factory(Invoice, form=InvoiceForm)
         formset = AuthorFormSet(self.request.POST)
         try:
@@ -237,10 +212,6 @@ class InvoiceCreate(DetailView):
            return JsonResponse(list_num, safe=False)
         else:
             return JsonResponse({}, safe=False)
-
-
-
-
 
 
 @require_http_methods(["GET"])
@@ -267,6 +238,11 @@ class Statistica(TemplateView):
             .values('time_in__month', 'time_in__year')\
             .annotate(count=Count(F('pk')))\
             .filter(repairer_id=self.request.user)
+
+        context['c'] = Invoice.objects \
+            .values('service_id__type') \
+            .annotate(count=Count(F('service_id__type'))) \
+
 
         return context
 

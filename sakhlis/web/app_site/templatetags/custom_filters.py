@@ -1,5 +1,5 @@
 from django import template
-from ..models import CITY_CHOICES, ORDER_STATUS, MONTH
+from ..models import CITY_CHOICES, ORDER_STATUS, MONTH, WORK_CHOICES
 
 register = template.Library()
 
@@ -13,6 +13,8 @@ def choice_tag(value, A):
             a = dict(ORDER_STATUS)
         elif A == 'month':
             a = dict(MONTH)
+        elif A == 'work_type':
+            a = dict(WORK_CHOICES)
         return f'{a[value]}'
 
     except KeyError:
