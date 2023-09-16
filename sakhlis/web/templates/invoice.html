@@ -11,7 +11,7 @@
 
 <script>
     function disp(form) {
-            $('.type_work').fadeIn("slow", function(){
+            $(form.nextElementSibling).fadeIn("slow", function(){
             });
     }
     </script>
@@ -74,7 +74,7 @@
     <div id="form-list">
 
         <div id="empty-form" class="hidden">
-            <a href="#" onclick="disp(document.getElementsByClassName('type_work'))" >открыть</a>
+            <a href="#" onclick="disp(this)" >открыть</a>
             <span class="type_work">
             {% for u in type_work %}
                 <a href="../serv?type_work={{ u.0 }}" class="type_work">{{ u.1 }}</a>
@@ -85,7 +85,7 @@
         {{ form.management_form }}
     </div>
     <div id="error"></div>
-    Заявка выполнена: <input type="checkbox" id="status_order" value="{{ info.id }}"><br>
+
     <button id="add-more" type="button">add-more</button>
     <button type="submit"> "Save" </button>
 
@@ -181,11 +181,6 @@ $(document.body).on( "click", "#status_order", function(e) {
     });
 
 
-
-
-
-
-
     $(document.body).on( "click", ".type_work", function(e) {
         e.preventDefault();
         var $this=$(this);
@@ -196,20 +191,15 @@ $(document.body).on( "click", "#status_order", function(e) {
             success: function(b){
                         type=JSON.parse(b);
                         idname=$this.closest('div').find('select');
+                        nametype='#'+idname.attr('name')+'_type_work';
+
                         $(idname).empty();
                         for (i = 0; i < type.length; i++) {
                             $(idname).append('<option value='+type[i].id+'>'+type[i].name+'</option>');
                         }
 
-                        idh=$this.parent();
-
-                        idh.fadeOut("slow", function(){
-
-
-                                        });
-
-
-
+                        idh=$(nametype);
+                        idh.fadeOut("slow", function(){   });
 
             }
         });
@@ -238,6 +228,8 @@ $(document.body).on( "click", "#status_order", function(e) {
         copyEmptyFromEl.setAttribute('id',`form-${currentFormCount}`);
 
         copyEmptyFromEl.setAttribute('new',`new`);
+
+        copyEmptyFromEl.getElementsByClassName('type_work')[0].setAttribute('id',`form-${currentFormCount}-service_id_type_work`);
 
         const regex = new RegExp('__prefix__', 'g');
         copyEmptyFromEl.innerHTML=copyEmptyFromEl.innerHTML.replace(regex,

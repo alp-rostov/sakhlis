@@ -15,6 +15,7 @@ from .forms import OrderForm, InvoiceForm, UserRegisterForm, RepairerForm
 from .utils import InvoiceMaker
 from django.http import FileResponse, Http404, HttpResponseRedirect, JsonResponse, HttpResponse
 import io
+from django.core.paginator import Paginator
 # ___________________________________________________________________________________________________________________
 
 
@@ -87,14 +88,12 @@ class OrderManagementSystem(LoginRequiredMixin, ListView):
     model = OrderList
     context_object_name = 'order'
     template_name = 'order_list.html'
+    paginate_by = 10
 
     def get_queryset(self):
         if self.request.GET.get('end') == 'end':
             self.queryset = OrderList.objects.filter(repairer_id=self.request.user)&\
                             OrderList.objects.filter(order_status='END')
-        elif self.request.GET.get('end') == 'wrk':
-            self.queryset = OrderList.objects.filter(repairer_id=self.request.user)&\
-                            OrderList.objects.filter(order_status='WRK')
         else:
             self.queryset = OrderList.objects.filter(repairer_id=self.request.user)&\
                             OrderList.objects.filter(order_status__in=['SND','RCV'])
@@ -104,22 +103,6 @@ class OrderManagementSystem(LoginRequiredMixin, ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['form'] = OrderForm
-        return context
-
-
-class OrderDatail(LoginRequiredMixin, DetailView):
-    model = OrderList
-    template_name = 'order_detail.html'
-    context_object_name = 'order'
-
-    def get_queryset(self):
-        queryset = super().get_queryset()
-        self.queryset = OrderList.objects.filter(repairer_id=self.request.user)
-        return self.queryset
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['repairer'] = RepairerList.objects.all()
         return context
 
 
@@ -134,6 +117,8 @@ class OrderUpdate(LoginRequiredMixin, UpdateView):
         context['time_in'] = self.object.time_in
         context['pk'] = self.object.pk
         return context
+
+
 
 
 class OrderDelete(LoginRequiredMixin, DeleteView):
@@ -207,7 +192,7 @@ class InvoiceCreate(LoginRequiredMixin, DetailView):
                                 "service_id": instance.service_id.pk,
                                 "service_id_name": instance.service_id.name
                                 })
-           b.order_status = 'WRK'
+           b.order_status = 'END'
            b.save()
            return JsonResponse(list_num, safe=False)
         else:
@@ -265,20 +250,13 @@ def CreateIvoicePDF(request, **kwargs):
 
 class RepaiermanSpace(LoginRequiredMixin, DetailView):
     """ Settings личный кабинет"""
-
     template_name = 'repaierman.html'
-    model = User
+    model = RepairerList
     context_object_name = 'user'
-
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['user_info'] = self.object.repairerlist
+        context['user_info'] = self.request.user
         return context
-
-    def get_queryset(self):
-        queryset = super().get_queryset()
-        self.queryset = User.objects.filter(username=self.request.user)
-        return self.queryset
 
 
 def listservices(request, **kwargs):

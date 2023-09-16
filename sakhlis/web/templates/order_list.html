@@ -12,9 +12,7 @@
 
 <h2>Список заказов <a href="#"  onclick="disp(document.getElementById('form'))" id="ggg">Создать заказ</a></h2>
 <hr>
-<a href="{% url 'list_order' %}">Новые заказы</a> | <a href="{% url 'list_order'%}?end=wrk">Текущие заказы</a> |
-
-<a href="{% url 'list_order'%}?end=end">Выполненные работы</a>
+<a href="{% url 'list_order' %}">Новые заказы</a> | <a href="{% url 'list_order'%}?end=end">Все работы</a>
 <hr>
 
 
@@ -179,6 +177,33 @@
 
 
     {% endfor %}
+
+<tr><td colspan="3">
+    <!--           {# Добавляем пагинацию на страницу #}-->
+
+            <p>
+            {# Информация о предыдущих страницах #}
+            {% if page_obj.has_previous %}
+                <a href="?{% url_replace page=1 %}" class="p">1</a>
+                {% if page_obj.previous_page_number != 1 %}
+                    ...
+                    <a href="?{% url_replace page=page_obj.previous_page_number %}">{{ page_obj.previous_page_number }}</a>
+                {% endif %}
+            {% endif %}
+<!--             {# Информация о текущей странице #}-->
+            {{ page_obj.number }}
+<!--             {# Информация о следующих страницах #}-->
+            {% if page_obj.has_next %}
+                <a href="?{% url_replace page=page_obj.next_page_number %}">{{ page_obj.next_page_number }}</a>
+                {% if paginator.num_pages != page_obj.next_page_number %}
+                    ...
+                    <a href="?{% url_replace page=page_obj.paginator.num_pages %}">{{ page_obj.paginator.num_pages }}</a>
+                {% endif %}
+            {% endif %}
+            </p>
+
+</td></tr>
+
 
      <tr id="row_" class="hidden" bgcolor= "#DCDCDC">
             <td>

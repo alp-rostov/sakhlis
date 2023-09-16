@@ -13,8 +13,12 @@ class InvoiceAdmin(admin.ModelAdmin):
     list_display_links = ('service_id', 'order_id', 'quantity', 'price')
     list_filter = ('service_id', )
 
+class ServiceAdmin(admin.ModelAdmin):
+    list_display = ('name', 'type')
+    list_display_links = ('name', 'type')
+    list_filter = ('type', )
 
 admin.site.register(RepairerList)
-admin.site.register(Service)
+admin.site.register(Service, ServiceAdmin)
 admin.site.register(Invoice, InvoiceAdmin)
 admin.site.register(OrderList, OrderListAdmin)

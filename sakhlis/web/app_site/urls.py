@@ -7,7 +7,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('', OrderCreate.as_view(), name='home'),
     path('list_order', OrderManagementSystem.as_view(), name='list_order'),
-    path('list_order/<int:pk>', OrderDatail.as_view(), name='list_detail'),
+
 
 
     path('list_order/update/<int:pk>', OrderUpdate.as_view(), name='update'),
