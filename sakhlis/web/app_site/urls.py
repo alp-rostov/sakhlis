@@ -31,7 +31,8 @@ urlpatterns = [
 
     path('stat/', Statistica.as_view(), name='stat'),
     path('repaierman/<int:pk>', RepaiermanSpace.as_view(), name='repaierman'),
-    path('serv', listservices),
+    path('serv', listservices_for_invoice_json),
+    path('listorderjson', listorder_for_order_list_paginator_json),
 ]
 
 if settings.DEBUG:

@@ -45,7 +45,7 @@ class InvoiceMaker(object):
         self.info = info
 
     def createDocument(self) -> None:
-        """"""
+        """ create pdf-invoice """
         # create an invoice’s header
         date_info = str(self.info.time_in)[0:10:]
         line = f'Invoice  {self.info.pk}, date: {date_info}'

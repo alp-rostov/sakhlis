@@ -29,7 +29,7 @@
         <td><b>Адрес: </b>{{ info.address_city|choice_tag:'city' }}, {{ info.address_street_app }}, {{ info.address_num }}</td>
     </tr>
     <tr>
-         <td><b>Телефон:</b> {{ info.customer_phone }}</td>
+         <td><b>Телефон:</b>{{ info.customer_phone }}</td>
     </tr>
     <tr>
          <td><b>Описание проблемы:</b> {{ info.text_order }}</td>
@@ -162,23 +162,6 @@ $(document.body).on( "click", ".link-delete", function(e) {
         });
     });
 
-
-$(document.body).on( "click", "#status_order", function(e) {
-        e.preventDefault();
-        var $this=$(this);
-        $.ajax({
-            url: '',
-            type: "GET",
-            dataType: "json",
-            success: function(e){
-                       alert("__");
-            },
-            error: function(){
-                       alert(e);
-                       console.log(e);
-            }
-        });
-    });
 
 
     $(document.body).on( "click", ".type_work", function(e) {

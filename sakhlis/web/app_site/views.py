@@ -10,12 +10,12 @@ from django.urls import reverse, reverse_lazy
 from django.views.decorators.http import require_http_methods
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView, FormView
 from .models import RepairerList, OrderList, Invoice, WORK_CHOICES, Service
-from .filters import RepFilter
-from .forms import OrderForm, InvoiceForm, UserRegisterForm, RepairerForm
+
+from .forms import OrderForm, InvoiceForm, UserRegisterForm
 from .utils import InvoiceMaker
-from django.http import FileResponse, Http404, HttpResponseRedirect, JsonResponse, HttpResponse
+from django.http import FileResponse, Http404, HttpResponseRedirect, JsonResponse
 import io
-from django.core.paginator import Paginator
+
 # ___________________________________________________________________________________________________________________
 
 
@@ -88,17 +88,19 @@ class OrderManagementSystem(LoginRequiredMixin, ListView):
     model = OrderList
     context_object_name = 'order'
     template_name = 'order_list.html'
-    paginate_by = 10
 
     def get_queryset(self):
-        if self.request.GET.get('end') == 'end':
-            self.queryset = OrderList.objects.filter(repairer_id=self.request.user)&\
-                            OrderList.objects.filter(order_status='END')
-        else:
-            self.queryset = OrderList.objects.filter(repairer_id=self.request.user)&\
-                            OrderList.objects.filter(order_status__in=['SND','RCV'])
+        if self.request.GET.get('work_status'):
+            self.queryset = OrderList.objects\
+                .filter(repairer_id=self.request.user, order_status=self.request.GET.get('work_status'))\
+                .order_by("-pk")
 
-        return self.queryset
+        else:
+            self.queryset = OrderList.objects\
+                .filter(repairer_id=self.request.user, order_status__in=['SND','RCV'])\
+                .order_by("-pk")
+
+        return self.queryset[0:14]
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -259,7 +261,18 @@ class RepaiermanSpace(LoginRequiredMixin, DetailView):
         return context
 
 
-def listservices(request, **kwargs):
+def listservices_for_invoice_json(request, **kwargs):
     data = Service.objects.filter(type=request.GET.get('type_work')).values('id', 'name')
     json_data = json.dumps(list(data))
+    return JsonResponse(json_data, safe=False)
+
+def listorder_for_order_list_paginator_json(request, **kwargs):
+    print(request.user.pk)
+    data = OrderList.objects.filter(pk__lt=request.GET.get('last_pk'), repairer_id=request.user)\
+                            .order_by('-pk')\
+                            .values('pk', 'time_in', 'text_order', 'customer_name', 'customer_phone',
+                                    'address_city', 'address_street_app', 'address_num')[0:14]
+
+    json_data = json.dumps(list(data), default=str)
+
     return JsonResponse(json_data, safe=False)
