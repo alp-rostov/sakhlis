@@ -64,14 +64,14 @@ class OrderCreate(CreateView):
     def post(self, request, *args, **kwargs):
         super().post(request, *args, **kwargs)
         return JsonResponse({'message': f'<h3>Заявка № {self.object.pk} отправлена успешно!</h3>',
-                             'num_order':self.object.pk,
+                             'pk':self.object.pk,
                              'text_order': self.object.text_order,
                              'time_in': self.object.time_in,
                              'customer_name':self.object.customer_name,
                              'customer_phone': self.object.customer_phone,
-                             'city': self.object.address_city,
-                             'street': self.object.address_street_app,
-                             'num': self.object.address_num,
+                             'address_city': self.object.address_city,
+                             'address_street_app': self.object.address_street_app,
+                             'address_num': self.object.address_num,
                              })
 
 

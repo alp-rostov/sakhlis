@@ -33,6 +33,42 @@
                                         });
         }
     }
+
+
+
+     function add_order_in_html_object(r) {
+                g=$("#row_").clone();
+                g.attr("class", "");
+                g.attr("id", "row_"+r.pk);
+
+                g.find("#order_").attr("href", "invoice/"+r.pk);
+                g.find("#order_").html("Заказ №"+r.pk);
+                g.find("#order_").attr("id", "order_"+r.pk);
+
+                g.find("#delete_").attr("href", "invoice/delete-order/"+r.pk);
+                g.find("#delete_").attr("id", "delete_"+r.pk);
+
+                g.find("#text_order_").html(r.text_order);
+                g.find("#text_order_").attr("id", "text_order_"+r.pk);
+
+                g.find("#customer_name_").html(r.customer_name);
+                g.find("#customer_name_").attr("id", "customer_name_"+r.pk);
+
+                g.find("#customer_phone_").html(r.customer_phone);
+                g.find("#customer_phone_").attr("id", "customer_phone_"+r.num_order);
+
+                g.find("#city_").html(r.address_city);
+                g.find("#city_").attr("id", "city_"+r.pk);
+
+                g.find("#street_app_").html(r.address_street_app);
+                g.find("#street_app_").attr("id", "street_app_"+r.num_order);
+
+                g.find("#num_").html(r.address_num);
+                g.find("#num_").attr("id", "num_"+r.pk);
+
+     }
+
+
     </script>
 
 
@@ -93,40 +129,10 @@
                                             data: $(this).serialize(),
                                             dataType: 'text',
                                             beforeSend: function () {$("#id_form").html('<h3>Отправляется...</h3>');},
-                                            success: function (resp) {
-                                                                    r=JSON.parse(resp);
-
-                                                                    g=$("#row_").clone();
-                                                                    g.attr("class", "");
-                                                                    g.attr("id", "row_"+r.num_order);
-
-                                                                    g.find("#order_").attr("href", "invoice/"+r.num_order);
-                                                                    g.find("#order_").html("Заказ №"+r.num_order);
-                                                                    g.find("#order_").attr("id", "order_"+r.num_order);
-
-                                                                    g.find("#delete_").attr("href", "invoice/delete-order/"+r.num_order);
-                                                                    g.find("#delete_").attr("id", "delete_"+r.num_order);
-
-                                                                    g.find("#text_order_").html(r.text_order);
-                                                                    g.find("#text_order_").attr("id", "text_order_"+r.num_order);
-
-                                                                    g.find("#customer_name_").html(r.customer_name);
-                                                                    g.find("#customer_name_").attr("id", "customer_name_"+r.num_order);
-
-                                                                    g.find("#customer_phone_").html(r.customer_phone);
-                                                                    g.find("#customer_phone_").attr("id", "customer_phone_"+r.num_order);
-
-                                                                    g.find("#city_").html(r.city);
-                                                                    g.find("#city_").attr("id", "city_"+r.num_order);
-
-                                                                    g.find("#street_app_").html(r.street);
-                                                                    g.find("#street_app_").attr("id", "street_app_"+r.num_order);
-
-                                                                    g.find("#num_").html(r.num);
-                                                                    g.find("#num_").attr("id", "num_"+r.num_order);
-
+                                            success: function (resp_) {
+                                                                    b=JSON.parse(resp_);
+                                                                    add_order_in_html_object(b)
                                                                     $('#head').prepend(g);
-
                                                                     disp(document.getElementById('form'))
                                                                     $('#form')[0].reset();
                                                                        },
@@ -195,29 +201,14 @@ $(document.body).on( "click", "#next", function(e) {
 
 
                        for (i = 0; i < type.length; i++) {
-                            var tr = $('#row_').clone();
-
-                            tr.find('#order_').html('Заказ № '+type[i].pk);
-                            tr.find('#order_').attr('href', "invoice/"+type[i].pk);
-                            tr.find('#date_').html(type[i].time_in);
-                            tr.find('#delete_').attr('href', "invoice/delete-order/"+type[i].pk);
-                            tr.find('#text_order_').html(type[i].text_order);
-
-                            tr.find('#customer_name_').html(type[i].customer_name);
-                            tr.find('#customer_phone_').html(type[i].customer_phone);
-
-                            tr.find('#city_').html(type[i].address_city);
-                            tr.find('#street_app_').html(type[i].address_street_app);
-                            tr.find('#num_').html(type[i].address_num);
-                            tr.attr('class','form_text');
+                            add_order_in_html_object(type[i]);
                             $('#head').append('<tr><td  colspan="6"><hr></td></tr>');
-
                             $('#head').append('<tr><td  colspan="6"><b id="date_">'+type[i].time_in+'</b></td></tr>');
-                            $('#head').append(tr);
+                            $('#head').append(g);
 
                        }
 
-                        $('#next').attr('href', '../listorderjson?last_pk='+type[14].pk+'&work_status=end');
+                        $('#next').attr('href', '../listorderjson?last_pk='+type[13].pk+'&work_status=end');
 
             },
 
