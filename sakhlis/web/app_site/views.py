@@ -8,7 +8,7 @@ from django.forms import modelformset_factory
 from django.shortcuts import redirect, get_object_or_404
 from django.urls import reverse, reverse_lazy
 from django.views.decorators.http import require_http_methods
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView, FormView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
 from .models import RepairerList, OrderList, Invoice, WORK_CHOICES, Service
 
 from .forms import OrderForm, InvoiceForm, UserRegisterForm
@@ -19,7 +19,7 @@ import io
 # ___________________________________________________________________________________________________________________
 
 
-def get_info2():
+def get_info_for_pdf():
     return OrderList.objects \
         .annotate(sum=Sum(F('invoice__price') * F('invoice__quantity'))) \
         .prefetch_related(Prefetch('invoice_set', Invoice.objects
@@ -40,7 +40,7 @@ class UserRegisterView(CreateView):
     template_name = 'register.html'
 
     def post(self, request, *args, **kwargs):
-        with transaction.atomic():
+        with transaction.atomic():            # todo check transaction
             super().post(request, *args, **kwargs)
             RepairerList.objects.create(user=self.object)
         return redirect('home')
@@ -79,12 +79,11 @@ class OrderCreate(CreateView):
         if self.request.user.is_authenticated:
             form.instance.repairer_id = self.request.user
             form.instance.order_status = 'SND'
-        return super(OrderCreate, self).form_valid(form) #todo переделать super()
+        return super(OrderCreate, self).form_valid(form)
 
 
 class OrderManagementSystem(LoginRequiredMixin, ListView):
-    """ list of all repair orders with Invoices"""
-
+    """ list of all orders """
     model = OrderList
     context_object_name = 'order'
     template_name = 'order_list.html'
@@ -121,8 +120,6 @@ class OrderUpdate(LoginRequiredMixin, UpdateView):
         return context
 
 
-
-
 class OrderDelete(LoginRequiredMixin, DeleteView):
     model = OrderList
     template_name = 'order_delete.html'
@@ -131,7 +128,7 @@ class OrderDelete(LoginRequiredMixin, DeleteView):
 
 @require_http_methods(["GET"])
 def OrderAddRepaier(request):
-    """Aad the repaier to order from telegram"""
+    """Add the repaier to order from telegram"""
     if request.GET:
         order = get_object_or_404(OrderList, pk=request.GET['pk_order'])
         repaier = get_object_or_404(RepairerList, pk=request.GET['pk_repairer'])
@@ -148,11 +145,10 @@ def OrderAddRepaier(request):
 
 
 class InvoiceCreate(LoginRequiredMixin, DetailView):
-    """ Create Invoice for payment """
+    """ Add works to order  """
     model = OrderList
     context_object_name = 'info'
     template_name = 'invoice.html'
-
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data()
@@ -161,7 +157,6 @@ class InvoiceCreate(LoginRequiredMixin, DetailView):
                                     .select_related('service_id')\
                                     .defer('service_id__type')\
                                     .annotate(amount=F('price') * F('quantity'))
-
 
         InvoiceFormSet = modelformset_factory(Invoice, form=InvoiceForm, extra=0)
         formset = InvoiceFormSet(queryset=Invoice.objects.none())
@@ -201,25 +196,16 @@ class InvoiceCreate(LoginRequiredMixin, DetailView):
             return JsonResponse({}, safe=False)
 
 
-@require_http_methods(["GET"])
-def DeleteIvoiceService(request, **kwargs):
-    if request.user.is_authenticated:
-        b = get_object_or_404(Invoice, pk=kwargs.get("invoice_pk"))
-        b.delete()
-        return JsonResponse({"message": "success"})
-
-
 
 class Statistica(TemplateView):
     template_name = 'statistica.html'
-
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+
         context['a'] = OrderList.objects\
             .values('time_in__month', 'time_in__year')\
             .annotate(count=Sum(F('invoice__price') * F('invoice__quantity')))\
             .filter(repairer_id=self.request.user)
-
 
         context['b'] = OrderList.objects\
             .values('time_in__month', 'time_in__year')\
@@ -230,7 +216,6 @@ class Statistica(TemplateView):
             .values('service_id__type') \
             .annotate(count=Count(F('service_id__type'))) \
 
-
         return context
 
 
@@ -240,7 +225,7 @@ def CreateIvoicePDF(request, **kwargs):
 
     # get information from models
     order_pk = kwargs.get("order_pk")
-    info = get_info2().get(pk=order_pk)
+    info = get_info_for_pdf().get(pk=order_pk)
     # create file
     buf = io.BytesIO()
     doc = InvoiceMaker(buf, info)
@@ -251,7 +236,7 @@ def CreateIvoicePDF(request, **kwargs):
 
 
 class RepaiermanSpace(LoginRequiredMixin, DetailView):
-    """ Settings личный кабинет"""
+    """ """
     template_name = 'repaierman.html'
     model = RepairerList
     context_object_name = 'user'
@@ -262,17 +247,25 @@ class RepaiermanSpace(LoginRequiredMixin, DetailView):
 
 
 def listservices_for_invoice_json(request, **kwargs):
-    data = Service.objects.filter(type=request.GET.get('type_work')).values('id', 'name')
-    json_data = json.dumps(list(data))
-    return JsonResponse(json_data, safe=False)
+    """for ajax request """
+    if request.user.is_authenticated:
+        data = Service.objects.filter(type=request.GET.get('type_work')).values('id', 'name')
+        json_data = json.dumps(list(data))
+        return JsonResponse(json_data, safe=False)
 
-def listorder_for_order_list_paginator_json(request, **kwargs):
-    print(request.user.pk)
-    data = OrderList.objects.filter(pk__lt=request.GET.get('last_pk'), repairer_id=request.user)\
+def listorder_for_order_list_paginator_json(request, **kwargs):   #TODO  добавить проверку аутентификации
+    """for ajax request """
+    if request.user.is_authenticated:
+        data = OrderList.objects.filter(pk__lt=request.GET.get('last_pk'), repairer_id=request.user)\
                             .order_by('-pk')\
                             .values('pk', 'time_in', 'text_order', 'customer_name', 'customer_phone',
                                     'address_city', 'address_street_app', 'address_num')[0:14]
+        json_data = json.dumps(list(data), default=str)
+        return JsonResponse(json_data, safe=False)
 
-    json_data = json.dumps(list(data), default=str)
-
-    return JsonResponse(json_data, safe=False)
+def DeleteIvoiceService(request, **kwargs):
+    """for ajax request """
+    if request.user.is_authenticated:
+        b = get_object_or_404(Invoice, pk=kwargs.get("invoice_pk"))
+        b.delete()
+        return JsonResponse({"message": "success"})

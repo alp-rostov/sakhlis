@@ -10,7 +10,7 @@ from reportlab.platypus import Paragraph, Table, TableStyle
 
 
 def set_coordinates_address(street: str, city: str) -> str:
-    """ setting of coordinates by street and city """
+    """ setting of map coordinates by street and city """
     try:
         geolocator = Nominatim(user_agent="app_site", )
         location = geolocator.geocode({'street': {street}, 'city': {city}}, addressdetails=True)
@@ -36,7 +36,7 @@ def add_telegram_button(repairer: list, order_pk: int) -> types.InlineKeyboardMa
 
 
 class InvoiceMaker(object):
-    """"""
+    """ create pdf-invoice """
 
     def __init__(self, pdf_file, info):
         self.c = canvas.Canvas(pdf_file, bottomup=0)
@@ -45,7 +45,6 @@ class InvoiceMaker(object):
         self.info = info
 
     def createDocument(self) -> None:
-        """ create pdf-invoice """
         # create an invoice’s header
         date_info = str(self.info.time_in)[0:10:]
         line = f'Invoice  {self.info.pk}, date: {date_info}'
