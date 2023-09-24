@@ -10,7 +10,7 @@
 </style>
 
 <script>
-    function disp(form) {
+    function show_type_work(form) {
             $(form.nextElementSibling).fadeIn("slow", function(){
             });
     }
@@ -74,13 +74,13 @@
     <div id="form-list">
 
         <div id="empty-form" class="hidden">
-            <a href="#" onclick="disp(this)" >открыть</a>
+            <a href="#" onclick="show_type_work(this)" >открыть</a>
             <span class="type_work">
             {% for u in type_work %}
                 <a href="../serv?type_work={{ u.0 }}" class="type_work">{{ u.1 }}</a>
             {% endfor %}
             </span>
-            <br> {{ form.empty_form }}
+            <br> {{ form.empty_form }}<a href="#" id="delete-empty-form">удалить</a>
         </div>
         {{ form.management_form }}
     </div>
@@ -94,7 +94,7 @@
     <script>
 
     function sum_total() {
-       var sum_total=0;
+       let sum_total=0;
        $('td[name="amount"]').each(function(){sum_total += parseInt($(this).html());});
        $('#total').html('ИТОГО:'+ sum_total);
     }
@@ -116,13 +116,13 @@
             data: $(this).serialize(),
             dataType: 'html',
             success: function (r) {
-                var b=JSON.parse(r);
+                let b=JSON.parse(r);
                 console.log(b);
                 if (b!=='error') {
-                    var c = $('div[new="new"]');
+                    let c = $('div[new="new"]');
                     for (i = 0; i < c.length; i++) {
-                        var form_name = c[i]['id'];
-                        var tr = $('tr.hidden').clone();
+                        let form_name = c[i]['id'];
+                        let tr = $('tr.hidden').clone();
                         tr.find('td[name="service_id"]').html(b[i].service_id_name);
                         tr.find('td[name="quantity"]').html(b[i].quantity);
                         tr.find('td[name="price"]').html(b[i].price);
@@ -148,7 +148,7 @@
 
 $(document.body).on( "click", ".link-delete", function(e) {
         e.preventDefault();
-        var $this=$(this);
+        let $this=$(this);
         $.ajax({
             url: $this.attr("href"),
             type: "GET",
@@ -163,18 +163,23 @@ $(document.body).on( "click", ".link-delete", function(e) {
     });
 
 
+    $(document.body).on( "click", "#delete-empty-form", function(e) {
+        e.preventDefault();
+        let $this=$(this);
+        $this.parents(".form").remove();
+    });
 
     $(document.body).on( "click", ".type_work", function(e) {
         e.preventDefault();
-        var $this=$(this);
+        let $this=$(this);
         $.ajax({
             url: $this.attr("href"),
             type: "GET",
             dataType: "json",
             success: function(b){
-                        type=JSON.parse(b);
-                        idname=$this.closest('div').find('select');
-                        nametype='#'+idname.attr('name')+'_type_work';
+                        let type=JSON.parse(b);
+                        let idname=$this.closest('div').find('select');
+                        let nametype='#'+idname.attr('name')+'_type_work';
 
                         $(idname).empty();
                         for (i = 0; i < type.length; i++) {

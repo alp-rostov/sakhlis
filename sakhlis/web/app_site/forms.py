@@ -15,31 +15,32 @@ class OrderForm(forms.ModelForm):
     text_order = forms.CharField(
         label='Текст заказа',
         widget=forms.TextInput(attrs={"class": "md-textarea form-control",
-                                     'placeholder': "Опишите задачу"}),
+                                     'placeholder': "Опишите задачу", 'maxlength':1500}),
         required=False
         )
 
     customer_name = forms.CharField(
         label='Ваше имя',
-        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Имя"}),
+        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Имя", 'maxlength':50}),
         required=False
     )
 
     customer_phone = forms.CharField(
         label='Телефон',
-        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Телефон", 'type': 'tel'}),
-        required=False
+        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Телефон", 'type': 'tel', 'maxlength':16}),
+        required=False,
+
     )
 
     address_street_app = forms.CharField(
         label='Улица',
-        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Улица"}),
+        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Улица", 'maxlength':150}),
         required = False
     )
 
     address_num = forms.CharField(
         label='Номер дома',
-        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Номер дома"}),
+        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Номер дома", 'maxlength':10}),
         required = False
     )
 

@@ -17,8 +17,6 @@
 <a href="{% url 'list_order'%}?work_status=WRK">ИЗБРАННОЕ</a> |
 <hr>
 
-
-<!--  todo : if key "inter" is pushed the form must be clean and hidden -->
 <script>
     function show_create_order_form(form) {
         if (form.style.display == "none") {
@@ -34,8 +32,6 @@
                                         });
         }
     }
-
-
 
     function add_order_in_html_object(r) {
         g=$("#row_order").clone();
@@ -68,162 +64,137 @@
         g.find("#num_").attr("id", "num_"+r.pk);
         return g;
      }
-
-
     </script>
 
+<form method="post" action="" name="form" id="form"  style="display: none;">
+    {% csrf_token %}
+    <div class="md-form mb-4">
 
+        {{ form.customer_name.errors }}
+        {{ form.customer_name }}
+        <span id="0"></span>
+    </div>
+    <div class="md-form mb-4">
 
- <form method="post" action="" name="form" id="form"  style="display: none;">
-        {% csrf_token %}
-        <div class="md-form mb-4">
+        {{ form.customer_phone.errors }}
+        {{ form.customer_phone }}
+        <span id="1"></span>
+    </div>
+    <div class="md-form mb-4">
 
-            {{ form.customer_name.errors }}
-            {{ form.customer_name }}
-            <span id="0"></span>
-        </div>
-       <div class="md-form mb-4">
+        {{ form.customer_street_app.errors }}
+        {{ form.customer_num.errors }}
+        {{ form.address_street_app }}
+        <span id="2"></span>
+        {{ form.address_num }}
+        <span id="3"></span>
+    </div>
+    <div class="md-form mb-4">
 
-            {{ form.customer_phone.errors }}
-            {{ form.customer_phone }}
-            <span id="1"></span>
-        </div>
-        <div class="md-form mb-4">
+        {{ form.text_order.errors }}
+        {{ form.text_order }}
+        <span id="4"></span>
+    </div>
 
-            {{ form.customer_street_app.errors }}
-            {{ form.customer_num.errors }}
-            {{ form.address_street_app }}
-            <span id="2"></span>
-            {{ form.address_num }}
-            <span id="3"></span>
-        </div>
-        <div class="md-form mb-4">
-
-            {{ form.text_order.errors }}
-            {{ form.text_order }}
-            <span id="4"></span>
-        </div>
-
-
-     <button type="submit" name="submit">Отправить заявку</button>
-    </form>
+    <button type="submit" name="submit">Отправить заявку</button>
+</form>
      <script type="text/javascript">
-             $(document).ready(function() {
-
-                                $('#form').submit(function(e) {
-                                    e.preventDefault();
-                                    var d=$("form input[type='text'], input[type='tel']")
-                                    var check=false;
-                                    for (i=0; i<d.length; i++){
-                                        $('form #'+i).html('');
-                                        if (d[i].value=='') {
-                                            $('form #'+i).html('Введите данные поля "' +d[i].placeholder + '"' );
-                                        check=true;
-                                        }
-                                    }
-                                    if (check) {
-                                        return false;
-                                    } else {
-                                        $.ajax({
-                                            url: '../',
-                                            type: 'POST',
-                                            data: $(this).serialize(),
-                                            dataType: 'text',
-                                            beforeSend: function () {$("#id_form").html('<h3>Отправляется...</h3>');},
-                                            success: function (resp_) {
-                                                                    b=JSON.parse(resp_);
-
-                                                                    $('#head').prepend(add_order_in_html_object(b));
-                                                                    disp(document.getElementById('form'))
-                                                                    $('#form')[0].reset();
-                                                                       },
-                                        });
-                                    }
-                                });
-                            });
-                            </script>
-
-
+$(document).ready(function() {
+    $('#form').submit(function(e) {
+        e.preventDefault();
+        let d=$("form input[type='text'], input[type='tel']")
+        let check=false;
+        for (i=0; i<d.length; i++){
+            $('form #'+i).html('');
+            if (d[i].value=='') {
+                $('form #'+i).html('Введите данные поля "' +d[i].placeholder + '"' );
+            check=true;
+            }
+        }
+        if (check) {
+            return false;
+        } else {
+            $.ajax({
+                url: '../',
+                type: 'POST',
+                data: $(this).serialize(),
+                dataType: 'text',
+                beforeSend: function () {$("#id_form").html('<h3>Отправляется...</h3>');},
+                success: function (resp_) {
+                                        b=JSON.parse(resp_);
+                                        $('#head').prepend(add_order_in_html_object(b));
+                                        show_create_order_form(document.getElementById('form'))
+                                        $('#form')[0].reset();
+                                           },
+            });
+        }
+    });
+});
+</script>
 
 <table id="head" >
-
-
-{% regroup order by time_in|date:"d.m.Y" as day %}
-    {% for y in day %}
-    <tr><td  colspan="6"><hr></td></tr>
-    <tr>
-        <td  colspan="6">
-            <b>{{ y.grouper }}</b>
-        </td>
-    <tr>
-
-        {% for i in y.list %}
-
-        {% if i.order_status == 'SND' %}
-        <tr id="row_order{{ i.pk }}" bgcolor= "#DCDCDC">
-        {% else %}
+    {% regroup order by time_in|date:"d.m.Y" as day %}
+        {% for y in day %}
+        <tr><td  colspan="6"><hr></td></tr>
         <tr>
-        {% endif %}
-            <td>
-
-                <a href="{% url 'invoice' i.pk %}" id="order_{{ i.pk }}">Заказ №{{ i.pk}}</a>
-
-                <a href="{% url 'delete-order' i.pk %}" id="delete_{{ i.pk }}">Удалить</a><br>
-                <span id="text_order_{{ i.pk }}">{{ i.text_order|truncatewords:7 }}</span>
+            <td  colspan="6">
+                <b>{{ y.grouper }}</b>
             </td>
-            <td width = 50></td>
-            <td><span id="customer_name_{{ i.pk }}">{{ i.customer_name }}</span> |
-                <span id="customer_phone_{{ i.pk }}">{{ i.customer_phone }}</span><br>
-                <span id="city_{{ i.pk }}">{{ i.address_city|choice_tag:'city'}}</span>,
-                <span id="street_app_{{ i.pk }}">{{ i.address_street_app }}</span>,
-                <span id="num_{{ i.pk }}">{{ i.address_num }}</span>.
-            </td>
-            </tr>
+        <tr>
 
+            {% for i in y.list %}
+
+            {% if i.order_status == 'SND' %}
+            <tr id="row_order{{ i.pk }}" bgcolor= "#DCDCDC">
+            {% else %}
+            <tr>
+            {% endif %}
+                <td>
+
+                    <a href="{% url 'invoice' i.pk %}" id="order_{{ i.pk }}">Заказ №{{ i.pk}}</a>
+
+                    <a href="{% url 'delete-order' i.pk %}" id="delete_{{ i.pk }}">Удалить</a><br>
+                    <span id="text_order_{{ i.pk }}">{{ i.text_order|truncatewords:7 }}</span>
+                </td>
+                <td width = 50></td>
+                <td><span id="customer_name_{{ i.pk }}">{{ i.customer_name }}</span> |
+                    <span id="customer_phone_{{ i.pk }}">{{ i.customer_phone }}</span><br>
+                    <span id="city_{{ i.pk }}">{{ i.address_city|choice_tag:'city'}}</span>,
+                    <span id="street_app_{{ i.pk }}">{{ i.address_street_app }}</span>,
+                    <span id="num_{{ i.pk }}">{{ i.address_num }}</span>.
+                </td>
+                </tr>
+            {% endfor %}
         {% endfor %}
-
-
-    {% endfor %}
-
-</td>
-</tr>
-
+    </td>
+    </tr>
 
     <script>
-$(document.body).on( "click", "#next", function(e) {
+    $(document.body).on( "click", "#paginator_next", function(e) {
         e.preventDefault();
-        var $this=$(this);
+        let $this=$(this);
         $.ajax({
             url: $this.attr('href'),
             type: "GET",
             dataType: "json",
             success: function(e){
-                       type=JSON.parse(e);
-
-                       for (i = 0; i < type.length; i++) {
-                            $('#head').append('<tr><td  colspan="6"><hr></td></tr>');
-                            $('#head').append('<tr><td  colspan="6"><b id="date_">'+type[i].time_in+'</b></td></tr>');
-                            $('#head').append(add_order_in_html_object(type[i]));
-
-                       }
-                        if (type.length==14) {
-                            $('#next').attr('href', '../listorderjson?last_pk='+type[13].pk+'&work_status=end');
-                            }
-                        else {$('#next').remove();}
+                let type=JSON.parse(e);
+                for (i = 0; i < type.length; i++) {
+                    let date_order=type[i].time_in.substr(0, 10).split("-").reverse().join(".");;
+                    $('#head').append('<tr><td  colspan="6"><hr></td></tr>');
+                    $('#head').append('<tr><td  colspan="6"><b id="date_">'+date_order+'</b></td></tr>');
+                    $('#head').append(add_order_in_html_object(type[i]));
+                }
+                if (type.length==14) {
+                    $('#paginator_next').attr('href', '../listorderjson?last_pk='+type[13].pk+'&work_status=end');
+                    }
+                else {$('#paginator_next').remove();}
 
             },
 
         });
     });
-
-
     </script>
-
-
-
-
-
-
 
     <tr id="row_order" class="hidden">
 
@@ -244,7 +215,7 @@ $(document.body).on( "click", "#next", function(e) {
 <br><h2>
     {% if order.13.pk %}
 
-        <a href="../listorderjson?last_pk={{ order.13.pk }}&work_status=end" class="p" id="next">NEXT</a>
+        <a href="../listorderjson?last_pk={{ order.13.pk }}&work_status=end" class="p" id="paginator_next">NEXT</a>
     {% endif %}
 </h2>
 

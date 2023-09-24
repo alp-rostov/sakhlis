@@ -9,8 +9,7 @@ from django.shortcuts import redirect, get_object_or_404
 from django.urls import reverse, reverse_lazy
 from django.views.decorators.http import require_http_methods
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
-from .models import RepairerList, OrderList, Invoice, WORK_CHOICES, Service
-
+from .models import RepairerList, OrderList, Invoice, WORK_CHOICES, Service, ORDER_STATUS_FOR_CHECK
 from .forms import OrderForm, InvoiceForm, UserRegisterForm
 from .utils import InvoiceMaker
 from django.http import FileResponse, Http404, HttpResponseRedirect, JsonResponse
@@ -111,13 +110,14 @@ class OrderUpdate(LoginRequiredMixin, UpdateView):
     model = OrderList
     template_name = 'order_update.html'
     form_class = OrderForm
-    success_url = reverse_lazy('list_order')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['time_in'] = self.object.time_in
         context['pk'] = self.object.pk
         return context
+    def get_success_url(self):
+        return '/invoice/'+str(self.object.pk)
 
 
 class OrderDelete(LoginRequiredMixin, DeleteView):
@@ -189,7 +189,9 @@ class InvoiceCreate(LoginRequiredMixin, DetailView):
                                 "service_id": instance.service_id.pk,
                                 "service_id_name": instance.service_id.name
                                 })
-           b.order_status = 'END'
+           if b.order_status != 'WRK':
+               b.order_status = 'END'
+
            b.save()
            return JsonResponse(list_num, safe=False)
         else:
@@ -266,6 +268,18 @@ def listorder_for_order_list_paginator_json(request, **kwargs):   #TODO  доб�
 def DeleteIvoiceService(request, **kwargs):
     """for ajax request """
     if request.user.is_authenticated:
-        b = get_object_or_404(Invoice, pk=kwargs.get("invoice_pk"))
-        b.delete()
+        invoice_object = get_object_or_404(Invoice.objects.filter(repairer_id=request.user),
+                              pk=kwargs.get("invoice_pk"))
+        invoice_object.delete()
         return JsonResponse({"message": "success"})
+
+def change_work_status(request, **kwargs):
+    """for ajax request """
+    if request.user.is_authenticated:
+        b = get_object_or_404(OrderList, pk=request.GET.get("order_pk"))
+        if request.GET.get('work_status') in ORDER_STATUS_FOR_CHECK and b.repairer_id == request.user:
+            b.order_status = request.GET.get('work_status')
+            b.save()
+            return JsonResponse({"message": "success"})
+        else:
+            return JsonResponse({"message": "error"})

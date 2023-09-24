@@ -38,9 +38,10 @@ ORDER_STATUS = [
     ('RCV', 'Мастеру принял заявку'),
     ('WRK', 'Заявка в работе'),
     ('END', 'Заявка выполнена'),
-
-
 ]
+
+ORDER_STATUS_FOR_CHECK = ['BEG', 'SND', 'RCV', 'WRK', 'END']
+
 
 MONTH = [
     (1, 'Январь'),
