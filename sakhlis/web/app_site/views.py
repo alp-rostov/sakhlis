@@ -120,12 +120,12 @@ class OrderDelete(LoginRequiredMixin, DeleteView):
     success_url = '/list_order'
 
 
-@require_http_methods(["GET"])
+
 def OrderAddRepaier(request):
     """Add the repairer to order from telegram"""
     if request.GET:
         order = get_object_or_404(OrderList, pk=request.GET['pk_order'])
-        repaier = get_object_or_404(RepairerList, pk=request.GET['pk_repairer'])
+        repaier = get_object_or_404(User, pk=request.GET['pk_repairer'])
         if order and repaier:
             if not order.repairer_id:
                 order.repairer_id = repaier

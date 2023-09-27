@@ -12,7 +12,7 @@ app.autodiscover_tasks()
 # app.conf.beat_schedule = {
 #     'action_every_5_seconds': {
 #         'task': 'app_site.tasks.printw',
-#         'schedule': 5,
+#         'schedulecd': 5,
 #     },
 # }
 

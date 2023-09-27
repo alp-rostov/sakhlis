@@ -15,7 +15,7 @@ CHAT_ID = 5621399532
 def send_order_information(inst):
     """" send order`s information to telegram group"""
     instance = OrderList.objects.get(pk=inst)
-    repairer = RepairerList.objects.all().values_list('pk', 'phone')
+    repairer = User.objects.all().values_list('pk', 'username')
 
     map_ = set_coordinates_address(instance.address_street_app, 'Тбилиси')
     subject_ = f'<b>Заказ на работы № {instance.pk} от {instance.time_in.strftime("%m/%d/%Y")}</b>'
