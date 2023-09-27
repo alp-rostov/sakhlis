@@ -54,7 +54,7 @@ class OrderForm(forms.ModelForm):
                                     )
 
 class UserRegisterForm(UserCreationForm):
-    email = forms.EmailField(label="",
+    email = forms.EmailField(label="Email",
                              widget=forms.EmailInput(
                                  attrs={"class": "form-control", 'placeholder': "email"}
                                                     ),

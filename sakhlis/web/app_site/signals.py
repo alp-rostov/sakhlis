@@ -17,7 +17,6 @@ CHAT_ID = 5621399532
 #     """"sent order`s information to telegram group"""
 #     try:
 #         if created:
-#             signal.alarm(5)
 #             send_order_information.apply_async([instance.pk], countdown=5, expires=20)
 #     except OperationalError:
 #         print("ошибка отправки ассинхрон")  #TODO сделать запись в лог файл о несрабатывании ассинхрона
@@ -28,4 +27,4 @@ CHAT_ID = 5621399532
 #     if created:
 #         RepairerList.objects.create(user=instance)
 #         send_email_after_registration.apply_async([instance.pk], countdown=5, expires=20)
-
+#

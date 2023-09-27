@@ -13,7 +13,7 @@ CHAT_ID = 5621399532
 
 @shared_task
 def send_order_information(inst):
-    """" send information to telegram group about order"""
+    """" send order`s information to telegram group"""
     instance = OrderList.objects.get(pk=inst)
     repairer = RepairerList.objects.all().values_list('pk', 'phone')
 

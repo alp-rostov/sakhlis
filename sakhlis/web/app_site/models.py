@@ -119,6 +119,8 @@ class RepairerList(models.Model):
     """phone city foto rating_sum rating_num user"""
     phone = models.CharField(validators=[phoneNumberRegex], max_length=16, unique=True, verbose_name='Телефон',
                              null=True, blank=True,)
+    # telegram = models.CharField(max_length=25, unique=True, verbose_name='Телеграм',
+    #                          null=True, blank=True, )
     city = models.CharField(max_length=2, choices=CITY_CHOICES, default='TB')
     foto = models.ImageField(upload_to="images/", null=True, blank=True, verbose_name='Фотография:')
     rating_sum = models.IntegerField(default=0, blank=True, null=True)

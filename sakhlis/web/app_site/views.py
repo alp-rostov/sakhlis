@@ -16,8 +16,6 @@ from django.http import FileResponse, Http404, HttpResponseRedirect, JsonRespons
 import io
 
 # ___________________________________________________________________________________________________________________
-
-
 def get_info_for_pdf():
     return OrderList.objects \
         .annotate(sum=Sum(F('invoice__price') * F('invoice__quantity'))) \
@@ -26,13 +24,11 @@ def get_info_for_pdf():
                                    .select_related('service_id')
                                    .annotate(sum=F('price') * F('quantity')))
                           ).select_related('repairer_id')
-
-
 # __________________________________________________________________________________________________________________
 
 
 class UserRegisterView(CreateView):
-    """ Registration of repairman """
+    """ Registration of repairer """
     model = User
     form_class = UserRegisterForm
     success_url = reverse_lazy('home')
@@ -54,7 +50,7 @@ class UserUpdate(DetailView):
 
 
 class OrderCreate(CreateView):
-    """" Adding a repair order """
+    """" Add order """
     model = OrderList
     template_name = 'order_create.html'
     form_class = OrderForm
@@ -92,12 +88,10 @@ class OrderManagementSystem(LoginRequiredMixin, ListView):
             self.queryset = OrderList.objects\
                 .filter(repairer_id=self.request.user, order_status=self.request.GET.get('work_status'))\
                 .order_by("-pk")
-
         else:
             self.queryset = OrderList.objects\
                 .filter(repairer_id=self.request.user, order_status__in=['SND','RCV'])\
                 .order_by("-pk")
-
         return self.queryset[0:14]
 
     def get_context_data(self, **kwargs):
@@ -128,7 +122,7 @@ class OrderDelete(LoginRequiredMixin, DeleteView):
 
 @require_http_methods(["GET"])
 def OrderAddRepaier(request):
-    """Add the repaier to order from telegram"""
+    """Add the repairer to order from telegram"""
     if request.GET:
         order = get_object_or_404(OrderList, pk=request.GET['pk_order'])
         repaier = get_object_or_404(RepairerList, pk=request.GET['pk_repairer'])
@@ -145,7 +139,7 @@ def OrderAddRepaier(request):
 
 
 class InvoiceCreate(LoginRequiredMixin, DetailView):
-    """ Add works to order  """
+    """ Add name of works, quantity, price to order  """
     model = OrderList
     context_object_name = 'info'
     template_name = 'invoice.html'
