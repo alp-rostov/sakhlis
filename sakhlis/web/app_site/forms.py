@@ -32,6 +32,13 @@ class OrderForm(forms.ModelForm):
 
     )
 
+    customer_telegram = forms.CharField(
+        label='Телеграм',
+        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Телеграм", 'maxlength':26}),
+        required=False,
+
+    )
+
     address_street_app = forms.CharField(
         label='Улица',
         widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Улица", 'maxlength':150}),
@@ -49,6 +56,7 @@ class OrderForm(forms.ModelForm):
         fields = ('text_order',
                   'customer_name',
                   'customer_phone',
+                  'customer_telegram',
                   'address_street_app',
                   'address_num',
                                     )

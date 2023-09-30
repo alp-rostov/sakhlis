@@ -64,6 +64,7 @@ class OrderCreate(CreateView):
                              'time_in': self.object.time_in,
                              'customer_name':self.object.customer_name,
                              'customer_phone': self.object.customer_phone,
+                             'customer_telegram': self.object.customer_telegram,
                              'address_city': self.object.address_city,
                              'address_street_app': self.object.address_street_app,
                              'address_num': self.object.address_num,
