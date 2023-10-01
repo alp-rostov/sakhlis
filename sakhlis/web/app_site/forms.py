@@ -21,7 +21,7 @@ class OrderForm(forms.ModelForm):
 
     customer_name = forms.CharField(
         label='Ваше имя',
-        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Имя", 'maxlength':50}),
+        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Имя", 'maxlength':20}),
         required=False
     )
 
@@ -41,7 +41,7 @@ class OrderForm(forms.ModelForm):
 
     address_street_app = forms.CharField(
         label='Улица',
-        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Улица", 'maxlength':150}),
+        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Улица", 'maxlength':40}),
         required = False
     )
 

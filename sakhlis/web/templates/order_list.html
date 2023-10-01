@@ -51,7 +51,12 @@
         g.find("#customer_name_").attr("id", "customer_name_"+r.pk);
 
         g.find("#customer_phone_").html(r.customer_phone);
+        g.find("#customer_phone_").attr("href", "tel:+"+r.customer_phone);
         g.find("#customer_phone_").attr("id", "customer_phone_"+r.num_order);
+
+        g.find("#customer_telegram_").html(r.customer_telegram);
+        g.find("#customer_telegram_").attr("href", "https://t.me/"+r.customer_telegram);
+        g.find("#customer_telegram_").attr("id", "customer_telegram_"+r.num_order);
 
         g.find("#city_").html(r.address_city);
         g.find("#city_").attr("id", "city_"+r.pk);
@@ -163,9 +168,9 @@ $(document).ready(function() {
                 </td>
                 <td width = 50></td>
                 <td><span id="customer_name_{{ i.pk }}">{{ i.customer_name }}</span> |
-                    <span id="customer_phone_{{ i.pk }}">{{ i.customer_phone }}</span> |
-                    <span id="customer_telegram_{{ i.pk }}"><a href="https://t.me/{{ i.customer_telegram }}">
-                        {{ i.customer_telegram }}</a></span>
+                    <a href="tel:+{{ i.customer_phone }}" title="Телефон" id="customer_phone_{{ i.pk }}">{{ i.customer_phone }}</a> |
+                    <a href="https://t.me/{{ i.customer_telegram }}" title="Телеграм" id="customer_telegram_{{ i.pk }}">
+                        {{ i.customer_telegram }}</a>
                     <br>
                     <span id="city_{{ i.pk }}">{{ i.address_city|choice_tag:'city'}}</span>,
                     <span id="street_app_{{ i.pk }}">{{ i.address_street_app }}</span>,
@@ -212,7 +217,8 @@ $(document).ready(function() {
         </td>
         <td width = 50></td>
         <td><span id="customer_name_"></span>, |
-            <span id="customer_phone_"></span><br>
+            <a href="" title="Телефон" id="customer_phone_"></a> |
+            <a href="" title="Телеграм" id="customer_telegram_"></a><br>
             <span id="city_"></span>,
             <span id="street_app_"></span>,
             <span id="num_"></span>.
@@ -226,6 +232,5 @@ $(document).ready(function() {
         <a href="../listorderjson?last_pk={{ order.13.pk }}&work_status=end" class="p" id="paginator_next">NEXT</a>
     {% endif %}
 </h2>
-
 
 {% endblock body %}

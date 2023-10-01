@@ -70,11 +70,22 @@ class OrderCreate(CreateView):
                              'address_num': self.object.address_num,
                              })
 
-
     def form_valid(self, form):
         if self.request.user.is_authenticated:
             form.instance.repairer_id = self.request.user
             form.instance.order_status = 'SND'
+
+        name_telegram_customer = form.instance.customer_telegram.replace('@', '').replace('+', '')\
+            .replace('-', '')
+
+
+        if name_telegram_customer.isdigit():
+            form.instance.customer_telegram='+' + name_telegram_customer
+        else:
+            form.instance.customer_telegram = name_telegram_customer
+
+        form.instance.text_order = form.instance.text_order.replace('<', '[').replace('>', ']')
+
         return super(OrderCreate, self).form_valid(form)
 
 
