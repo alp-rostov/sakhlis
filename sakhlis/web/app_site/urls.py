@@ -1,4 +1,4 @@
-from django.contrib.auth.views import LoginView, LogoutView, PasswordResetView
+from django.contrib.auth.views import LoginView, LogoutView
 from django.urls import path
 from .views import *
 from django.conf import settings
@@ -30,7 +30,10 @@ urlpatterns = [
 
 
     path('stat/', Statistica.as_view(), name='stat'),
-    path('repaierman/<int:pk>', RepaiermanSpace.as_view(), name='repaierman'),
+    path('user/<int:pk>', UserDetailInformation.as_view(), name='user'),
+
+    # path('repaierman/<int:pk>', RepaiermanSpace.as_view(), name='repaierman'),
+
     path('serv', listservices_for_invoice_json),
     path('listorderjson', listorder_for_order_list_paginator_json),
     path('set_work_status', change_work_status),

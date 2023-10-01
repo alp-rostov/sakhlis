@@ -1,16 +1,19 @@
-{% extends 'flatpages/default.html' %}
+{% extends 'flatpages/default_user.html' %}
+{% load custom_filters %}
+{% load custom_tags %}
 
 {% block body %}
-{{ request.user.username }}
-<button> <a href="/app/logout/">Выйти</a> </button>
+
+
+
 <h1>{{ request.user.username }}</h1>
 <hr>
-<form action="" method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{ UserForm }}
+{{ user.last_name }}
+{{ user.first_name }}<br>
+{{ user.email }}<br>
+{{ profile.phone }}<br>
+{{ profile.telegram }}<br>
+{{ profile.city|choice_tag:'city' }}<br>
 
-    <input type="submit" value="Save" />
-</form>
-
-
+<img src="../media/{{ profile.foto|default:'images/1.jpg' }}" width="300">
 {% endblock body %}

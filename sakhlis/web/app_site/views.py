@@ -40,13 +40,16 @@ class UserRegisterView(CreateView):
             RepairerList.objects.create(user=self.object)
         return redirect('home')
 
-class UserUpdate(DetailView):
+class UserDetailInformation(DetailView):
     model = User
     template_name = 'repaier_update.html'
     form_class = UserRegisterForm
     success_url = reverse_lazy('')
-
-
+    context_object_name = 'user'
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['profile'] = RepairerList.objects.get(user=self.object)
+        return context
 
 
 class OrderCreate(CreateView):
@@ -223,6 +226,7 @@ class Statistica(TemplateView):
         context['c'] = Invoice.objects \
             .values('service_id__type') \
             .annotate(count=Count(F('service_id__type'))) \
+            .filter(order_id__repairer_id=self.request.user)
 
         return context
 
@@ -241,17 +245,6 @@ def CreateIvoicePDF(request, **kwargs):
     doc.savePDF()
     buf.seek(0)
     return FileResponse(buf, as_attachment=True, filename=f'Invoice_{order_pk}_.pdf')
-
-
-class RepaiermanSpace(LoginRequiredMixin, DetailView):
-    """ """
-    template_name = 'repaierman.html'
-    model = RepairerList
-    context_object_name = 'user'
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['user_info'] = self.request.user
-        return context
 
 
 def listservices_for_invoice_json(request, **kwargs):
