@@ -121,6 +121,8 @@ class RepairerList(models.Model):
     telegram = models.CharField(max_length=25, unique=True, verbose_name='Телеграм',
                              null=True, blank=True, )
     city = models.CharField(max_length=2, choices=CITY_CHOICES, default='TB')
+    profile = models.CharField(max_length=1500, null=True, blank=True, verbose_name='О себе:')
+
     foto = models.ImageField(upload_to="images/", null=True, blank=True, verbose_name='Фотография:')
     rating_sum = models.IntegerField(default=0, blank=True, null=True)
     rating_num = models.IntegerField(default=0, blank=True, null=True)

@@ -31,6 +31,7 @@ urlpatterns = [
 
     path('stat/', Statistica.as_view(), name='stat'),
     path('user/<int:pk>', UserDetailInformation.as_view(), name='user'),
+    path('update-user/<int:pk>', RepaierUpdate.as_view(), name='update-user'),
 
     # path('repaierman/<int:pk>', RepaiermanSpace.as_view(), name='repaierman'),
 

@@ -16,4 +16,6 @@
 {{ profile.city|choice_tag:'city' }}<br>
 
 <img src="../media/{{ profile.foto|default:'images/1.jpg' }}" width="300">
+
+<a href="{% url 'update-user' profile.pk %}">Изменить данные</a>
 {% endblock body %}

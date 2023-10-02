@@ -10,7 +10,7 @@ from django.urls import reverse, reverse_lazy
 from django.views.decorators.http import require_http_methods
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
 from .models import RepairerList, OrderList, Invoice, WORK_CHOICES, Service, ORDER_STATUS_FOR_CHECK
-from .forms import OrderForm, InvoiceForm, UserRegisterForm
+from .forms import OrderForm, InvoiceForm, UserRegisterForm, RepairerForm
 from .utils import InvoiceMaker
 from django.http import FileResponse, Http404, HttpResponseRedirect, JsonResponse
 import io
@@ -282,3 +282,14 @@ def change_work_status(request, **kwargs):
             return JsonResponse({"message": "success"})
         else:
             return JsonResponse({"message": "error"})
+
+
+
+
+class RepaierUpdate(UpdateView):
+    model = RepairerList
+    template_name = 'repaier_create.html'
+    form_class = RepairerForm
+
+    def get_success_url(self):
+        return '/user/' + str(self.request.user.pk)

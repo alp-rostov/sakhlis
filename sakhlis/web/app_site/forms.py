@@ -4,12 +4,6 @@ from django.contrib.auth.forms import UserCreationForm
 from django import forms
 from .models import *
 
-class RepairerForm(forms.ModelForm):
-
-    class Meta:
-        model = RepairerList
-        fields = ['phone', 'city', 'foto']
-
 
 class OrderForm(forms.ModelForm):
     text_order = forms.CharField(
@@ -61,6 +55,18 @@ class OrderForm(forms.ModelForm):
                   'address_num',
                                     )
 
+
+
+
+class RepairerForm(forms.ModelForm):
+
+    class Meta:
+        model = RepairerList
+        fields = ['phone', 'city', 'foto']
+
+
+
+
 class UserRegisterForm(UserCreationForm):
     email = forms.EmailField(label="Email",
                              widget=forms.EmailInput(
@@ -104,9 +110,15 @@ class InvoiceForm(forms.ModelForm):
         fields = ('service_id',   'quantity', 'price')
 
 
+class RepairerForm(forms.ModelForm):
 
-
-class ServiceForm(forms.ModelForm):
     class Meta:
-        model = Service
-        fields = '__all__'
+        model = RepairerList
+        fields = ('phone', 'telegram', 'city', 'foto')
+
+# class ServiceForm(forms.ModelForm):
+#     class Meta:
+#         model = Service
+#         fields = '__all__'
+
+
