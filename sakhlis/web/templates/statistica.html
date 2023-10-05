@@ -9,8 +9,10 @@
 {% for y in year %}
 <b> {{ y.grouper }}</b><br>
 
+
     {% for i in y.list %}
         {{ i.time_in__month | choice_tag:'month' }} | {{ i.sum }} | {{ i.count }}<br>
+
     {% endfor%}
 
 {% endfor%}
@@ -31,6 +33,8 @@
 {% for i in c %}
     {{ i.service_id__type | choice_tag:'work_type' }} : {{ i.count }} <br>
 {% endfor %}
+
+
 
 {% endblock body %}
 

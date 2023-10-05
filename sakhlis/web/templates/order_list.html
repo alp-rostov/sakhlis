@@ -164,12 +164,12 @@ $(document).ready(function() {
                     <a href="{% url 'invoice' i.pk %}" id="order_{{ i.pk }}">Заказ №{{ i.pk}}</a>
 
                     <a href="{% url 'delete-order' i.pk %}" id="delete_{{ i.pk }}">Удалить</a><br>
-                    <span id="text_order_{{ i.pk }}">{{ i.text_order|cut:"@" }}</span>
+                    <span id="text_order_{{ i.pk }}">{{ i.text_order|truncatechars:70 }}</span>
                 </td>
                 <td width = 50></td>
                 <td><span id="customer_name_{{ i.pk }}">{{ i.customer_name }}</span> |
                     <a href="tel:+{{ i.customer_phone }}" title="Телефон" id="customer_phone_{{ i.pk }}">{{ i.customer_phone }}</a> |
-                    <a href="https://t.me/{{ i.customer_telegram }}" title="Телеграм" id="customer_telegram_{{ i.pk }}">
+                    <a href="https://t.me/{{ i.customer_telegram|cut:'@' }}" title="Телеграм" id="customer_telegram_{{ i.pk }}">
                         {{ i.customer_telegram }}</a>
                     <br>
                     <span id="city_{{ i.pk }}">{{ i.address_city|choice_tag:'city'}}</span>,
@@ -226,7 +226,11 @@ $(document).ready(function() {
     </tr>
 </table>
 
-<br><h2>
+<br>
+
+{{ next }}
+<h2>
+
     {% if order.13.pk %}
 
         <a href="../listorderjson?last_pk={{ order.13.pk }}&work_status=end" class="p" id="paginator_next">NEXT</a>

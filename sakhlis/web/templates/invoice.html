@@ -19,7 +19,16 @@
 <hr>
 <button> <a href="/app/logout/">Выйти</a> </button>
 <hr>
+<br>
+{% if prev.pk %}
+<p align="center">
+<a href="{% url 'invoice' prev.pk %}" ><--</a>||
+{% endif %}
 
+{% if next.pk %}
+<a href="{% url 'invoice' next.pk %}" >--></a>
+{% endif %}
+</p>
     <h1>Заявка № {{ info.id }} от : {{ info.time_in }}</h1>
 
     <table width="700"><tr>
@@ -233,4 +242,5 @@ $(document.body).on( "click", ".link-delete", function(e) {
 
 <a href="pdf/{{ info.id }}">Квитанция на оплату - PDF</a>
 
-{% endblock body %}
+
+        {% endblock body %}

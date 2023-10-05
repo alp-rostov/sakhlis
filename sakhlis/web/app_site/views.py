@@ -171,7 +171,8 @@ class InvoiceCreate(LoginRequiredMixin, DetailView):
         formset = InvoiceFormSet(queryset=Invoice.objects.none())
         context['form'] = formset
         context['type_work'] = WORK_CHOICES
-
+        context['next'] = OrderList.objects.filter(pk__gt=self.object.pk).values('pk').first()
+        context['prev'] = OrderList.objects.filter(pk__lt=self.object.pk).order_by('-pk').values('pk').first()
 
         if self.object.order_status == 'SND':
             self.object.order_status = 'RCV'
@@ -254,7 +255,7 @@ def listservices_for_invoice_json(request, **kwargs):
         json_data = json.dumps(list(data))
         return JsonResponse(json_data, safe=False)
 
-def listorder_for_order_list_paginator_json(request, **kwargs):   #TODO  добавить проверку аутентификации
+def listorder_for_order_list_paginator_json(request, **kwargs):
     """for ajax request """
     if request.user.is_authenticated:
         data = OrderList.objects.filter(pk__lt=request.GET.get('last_pk'), repairer_id=request.user)\
@@ -264,10 +265,14 @@ def listorder_for_order_list_paginator_json(request, **kwargs):   #TODO  доб�
         json_data = json.dumps(list(data), default=str)
         return JsonResponse(json_data, safe=False)
 
+
+
+
+
 def DeleteIvoiceService(request, **kwargs):
     """for ajax request """
     if request.user.is_authenticated:
-        invoice_object = get_object_or_404(Invoice.objects.filter(repairer_id=request.user),
+        invoice_object = get_object_or_404(Invoice.objects.filter(order_id__repairer_id=request.user),
                               pk=kwargs.get("invoice_pk"))
         invoice_object.delete()
         return JsonResponse({"message": "success"})
