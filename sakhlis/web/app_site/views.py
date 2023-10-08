@@ -99,14 +99,15 @@ class OrderManagementSystem(LoginRequiredMixin, ListView):
     template_name = 'order_list.html'
 
     def get_queryset(self):
-        if self.request.GET.get('work_status'):
+        if not self.request.GET.get('work_status'):
             self.queryset = OrderList.objects\
-                .filter(repairer_id=self.request.user, order_status=self.request.GET.get('work_status'))\
+                .filter(repairer_id=self.request.user)\
                 .order_by("-pk")
         else:
-            self.queryset = OrderList.objects\
-                .filter(repairer_id=self.request.user, order_status__in=['SND','RCV'])\
+            self.queryset = OrderList.objects \
+                .filter(repairer_id=self.request.user, order_status=self.request.GET.get('work_status')) \
                 .order_by("-pk")
+
         return self.queryset[0:14]
 
     def get_context_data(self, **kwargs):
@@ -174,9 +175,6 @@ class InvoiceCreate(LoginRequiredMixin, DetailView):
         context['next'] = OrderList.objects.filter(pk__gt=self.object.pk).values('pk').first()
         context['prev'] = OrderList.objects.filter(pk__lt=self.object.pk).order_by('-pk').values('pk').first()
 
-        if self.object.order_status == 'SND':
-            self.object.order_status = 'RCV'
-            self.object.save()
         return context
 
     def post(self, formset, **kwargs):
@@ -199,10 +197,7 @@ class InvoiceCreate(LoginRequiredMixin, DetailView):
                                 "service_id": instance.service_id.pk,
                                 "service_id_name": instance.service_id.name
                                 })
-           if b.order_status != 'WRK':
-               b.order_status = 'END'
 
-           b.save()
            return JsonResponse(list_num, safe=False)
         else:
             return JsonResponse({}, safe=False)
@@ -284,7 +279,7 @@ def change_work_status(request, **kwargs):
         if request.GET.get('work_status') in ORDER_STATUS_FOR_CHECK and b.repairer_id == request.user:
             b.order_status = request.GET.get('work_status')
             b.save()
-            return JsonResponse({"message": "success"})
+            return JsonResponse({"message": request.GET.get('work_status')})
         else:
             return JsonResponse({"message": "error"})
 

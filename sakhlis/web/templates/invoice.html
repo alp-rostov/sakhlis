@@ -29,8 +29,31 @@
 <a href="{% url 'invoice' next.pk %}" >--></a>
 {% endif %}
 </p>
-    <h1>Заявка № {{ info.id }} от : {{ info.time_in }}</h1>
+<h1>Заявка № {{ info.id }} от : {{ info.time_in }}</h1><br>
 
+{% if info.order_status == 'SND' %}
+<p  >статус заказа: <b id="stepstatuswork">Направлен мастеру </b>  ->
+<a href="../changestatus?order_pk={{ info.pk}}&work_status=RCV" id="workstatus">ПРИНЯТЬ ЗАКАЗ</a><br>
+</p>
+{% endif %}
+
+{% if info.order_status == 'RCV' %}
+<p  >статус заказа: <b id="stepstatuswork">Заявка в работе</b>
+    <a href="../changestatus?order_pk={{ info.pk}}&work_status=END" id="workstatus">Работы выполненны</a><br>
+
+</p>
+
+{% endif %}
+
+{% if info.order_status == 'END' %}
+<p  >статус заказа: <b id="stepstatuswork">Работы выполнены</b>
+
+</p>
+
+
+{% endif %}
+
+<br>
     <table width="700"><tr>
         <td><h2>Заказчик: {{ info.customer_name }}  <a href="../list_order/update/{{ info.pk}}">изменить</a></h2></td>
     </tr>
@@ -45,8 +68,12 @@
     </tr>
     </table>
 
-<h3>Выполненные работы: </h3>
+{% if info.order_status == 'SND' %}
+<table width="500" id="table_invoice" class="hidden">
+{% else %}
 <table width="500" id="table_invoice">
+{% endif %}
+    <tr clospan="5"><td><h3>Выполненные работы: </h3></td></tr>
  <tr>
             <th>Наименование </th>
             <th>Количество </th>
@@ -170,6 +197,50 @@ $(document.body).on( "click", ".link-delete", function(e) {
             }
         });
     });
+
+
+
+
+
+
+$(document.body).on( "click", "#workstatus", function(e) {
+        e.preventDefault();
+        let $this=$(this);
+        $.ajax({
+            url: $this.attr("href"),
+            type: "GET",
+            dataType: "json",
+            success: function(r){
+                        let b=r.message;
+
+
+
+                        console.log(b);
+                        if (b=='RCV') {
+                            $('#stepstatuswork').html('Заявка в работе');
+                            $('#workstatus').html('Работы выполнены');
+                            $('#workstatus').attr('href', "../changestatus?order_pk={{ info.pk}}&work_status=END");
+                        } else
+                        if (b=='END') {
+                        $('#workstatus').remove();
+                        $('#stepstatuswork').html('Работы выполнены');
+
+                        }
+
+                        console.log
+
+
+
+            }
+        });
+    });
+
+
+
+
+
+
+
 
 
     $(document.body).on( "click", "#delete-empty-form", function(e) {

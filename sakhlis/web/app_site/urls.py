@@ -8,8 +8,6 @@ urlpatterns = [
     path('', OrderCreate.as_view(), name='home'),
     path('list_order', OrderManagementSystem.as_view(), name='list_order'),
 
-
-
     path('list_order/update/<int:pk>', OrderUpdate.as_view(), name='update'),
     path('add', OrderAddRepaier, name='add_repairer'),
 
@@ -36,6 +34,8 @@ urlpatterns = [
     # path('repaierman/<int:pk>', RepaiermanSpace.as_view(), name='repaierman'),
 
     path('serv', listservices_for_invoice_json),
+    path('changestatus', change_work_status),
+
     path('listorderjson', listorder_for_order_list_paginator_json),
     path('set_work_status', change_work_status),
 ]

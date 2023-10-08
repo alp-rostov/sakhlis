@@ -12,8 +12,9 @@
 <h2>Список заказов <a href="#"  onclick="show_create_order_form(document.getElementById('form'))"
                       id="link_create_order_form">Создать заказ</a></h2>
 <hr>
-<a href="{% url 'list_order' %}">Новые заказы</a> | <a href="{% url 'list_order'%}?work_status=END">Все работы</a> |
-<a href="{% url 'list_order'%}?work_status=WRK">ИЗБРАННОЕ</a> |
+<a href="{% url 'list_order' %}?work_status=SND">Новые заказы</a> | <a href="{% url 'list_order'%}?work_status=RCV">Заявки в работе</a> |
+<a href="{% url 'list_order'%}?work_status=END">Заявки окноченные</a>|
+
 <hr>
 
 <script>
@@ -153,12 +154,7 @@ $(document).ready(function() {
         <tr>
 
             {% for i in y.list %}
-
-            {% if i.order_status == 'SND' %}
-            <tr id="row_order{{ i.pk }}" bgcolor= "#DCDCDC">
-            {% else %}
             <tr>
-            {% endif %}
                 <td>
 
                     <a href="{% url 'invoice' i.pk %}" id="order_{{ i.pk }}">Заказ №{{ i.pk}}</a>
@@ -207,6 +203,7 @@ $(document).ready(function() {
 
         });
     });
+
     </script>
 
     <tr id="row_order" class="hidden">
@@ -233,7 +230,7 @@ $(document).ready(function() {
 
     {% if order.13.pk %}
 
-        <a href="../listorderjson?last_pk={{ order.13.pk }}&work_status=end" class="p" id="paginator_next">NEXT</a>
+        <a href="../listorderjson?last_pk={{ order.13.pk }}&work_status=ALL" class="p" id="paginator_next">NEXT</a>
     {% endif %}
 </h2>
 
