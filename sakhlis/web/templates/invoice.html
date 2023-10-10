@@ -73,7 +73,7 @@
 {% else %}
 <table width="500" id="table_invoice">
 {% endif %}
-    <tr clospan="5"><td><h3>Выполненные работы: </h3></td></tr>
+    <tr clospan="5"><td><h4>Выполненные работы: </h4></td></tr>
  <tr>
             <th>Наименование </th>
             <th>Количество </th>
@@ -103,9 +103,17 @@
     </tr>
 {% endfor %}
     <tr id="total"><td></td></tr>
+
+
+
 </table>
 
-<form action="" method="post" id="id_form">
+{% if info.order_status == 'SND' %}
+<form action="" method="post" id="id_form" class="hidden">
+{% else %}
+<form action="" method="post" id="id_form" >
+{% endif %}
+
     {% csrf_token %}
     <div id="form-list">
 
@@ -123,8 +131,8 @@
     <div id="error"></div>
 
     <button id="add-more" type="button">add-more</button>
-    <button type="submit"> "Save" </button>
-
+    <button type="submit"> "Save" </button><br>
+<a href="pdf/{{ info.id }}">Квитанция на оплату - PDF</a>
 </form>
 
     <script>
@@ -212,19 +220,19 @@ $(document.body).on( "click", "#workstatus", function(e) {
             dataType: "json",
             success: function(r){
                         let b=r.message;
-
-
-
                         console.log(b);
                         if (b=='RCV') {
+
                             $('#stepstatuswork').html('Заявка в работе');
                             $('#workstatus').html('Работы выполнены');
                             $('#workstatus').attr('href', "../changestatus?order_pk={{ info.pk}}&work_status=END");
+                            $('#id_form').attr('class', '');
+                            $('#table_invoice').attr('class', '');
+
                         } else
                         if (b=='END') {
-                        $('#workstatus').remove();
-                        $('#stepstatuswork').html('Работы выполнены');
-
+                            $('#workstatus').remove();
+                            $('#stepstatuswork').html('Работы выполнены');
                         }
 
                         console.log
@@ -311,7 +319,7 @@ $(document.body).on( "click", "#workstatus", function(e) {
 </script>
 
 
-<a href="pdf/{{ info.id }}">Квитанция на оплату - PDF</a>
+
 
 
         {% endblock body %}
