@@ -1,7 +1,6 @@
 {% extends 'flatpages/default_user.html' %}
 {% load custom_filters %}
 {% load custom_tags %}
-
 {% block body %}
 <style>
     .hidden{
@@ -9,7 +8,7 @@
     }
 </style>
 
-<a href="#"  onclick="show_create_order_form(document.getElementById('form'))"
+<a href="#----"  onclick="show_create_order_form(document.getElementById('form'))"
                       id="link_create_order_form">Создать заказ</a> |
 
 {% if request.GET.work_status == 'SND' %}
