@@ -22,6 +22,7 @@ def send_order_information(inst):
     text = subject_ + f'\n ' \
                       f'ИМЯ: {instance.customer_name} \n' \
                       f'ТЕЛЕФОН: {instance.customer_phone} \n ' \
+                      f'ТЕЛЕГРАМ: <a href = "https://t.me/{instance.customer_telegram}" >{instance.customer_telegram}</a> \n' \
                       f'АДРЕС: {instance.address_street_app}, ' \
                       f'{instance.address_num} \n ' \
                       f'ОПИСАНИЕ ПРОБЛЕМЫ: {instance.text_order} \n' \
