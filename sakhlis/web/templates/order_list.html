@@ -8,14 +8,19 @@
     display:none
     }
 </style>
+{{ request.GET.work_status  }}
 
-<h2>Список заказов <a href="#"  onclick="show_create_order_form(document.getElementById('form'))"
-                      id="link_create_order_form">Создать заказ</a></h2>
-<hr>
-<a href="{% url 'list_order' %}?work_status=SND">Новые заказы</a> | <a href="{% url 'list_order'%}?work_status=RCV">Заявки в работе</a> |
+<a href="#"  onclick="show_create_order_form(document.getElementById('form'))"
+                      id="link_create_order_form">Создать заказ</a> |
+
+
+<a href="{% url 'list_order' %}?work_status=SND">Новые заказы</a> |
+
+<a href="{% url 'list_order'%}?work_status=RCV">Заявки в работе</a> |
+
 <a href="{% url 'list_order'%}?work_status=END">Заявки окноченные</a>|
 
-<hr>
+
 
 <script>
     function show_create_order_form(form) {
@@ -38,7 +43,7 @@
         g.attr("class", "");
         g.attr("id", "row_order"+r.pk);
 
-        g.find("#order_").attr("href", "invoice/"+r.pk);
+        g.find("#order_").attr("href", "list-order/"+r.pk);
         g.find("#order_").html("Заказ №"+r.pk);
         g.find("#order_").attr("id", "order_"+r.pk);
 

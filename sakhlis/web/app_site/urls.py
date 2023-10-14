@@ -7,11 +7,11 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('', OrderCreate.as_view(), name='home'),
     path('list_order', OrderManagementSystem.as_view(), name='list_order'),
-
+    path('list_order/<int:pk>', InvoiceCreate.as_view(), name='invoice'),
     path('list_order/update/<int:pk>', OrderUpdate.as_view(), name='update'),
     path('add', OrderAddRepaier, name='add_repairer'),
 
-    path('invoice/<int:pk>', InvoiceCreate.as_view(), name='invoice'),
+
 
     path('invoice/delete-order/<int:pk>', OrderDelete.as_view(), name='delete-order'),
     path('invoice/delete/<int:invoice_pk>', DeleteIvoiceService, name='delete-item-of-order'),

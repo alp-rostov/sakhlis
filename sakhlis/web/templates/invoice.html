@@ -17,7 +17,11 @@
     </script>
 
 <hr>
-<button> <a href="/app/logout/">Выйти</a> </button>
+
+<a href="{% url 'list_order' %}?work_status=SND">Новые заказы</a> | <a href="{% url 'list_order'%}?work_status=RCV">Заявки в работе</a> |
+<a href="{% url 'list_order'%}?work_status=END">Заявки окноченные</a>|
+
+
 <hr>
 <br>
 {% if prev.pk %}
