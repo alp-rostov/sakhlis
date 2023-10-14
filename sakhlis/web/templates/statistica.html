@@ -4,6 +4,7 @@
 
 
 {% block body %}
+<img src="data:image/png;base64,{{ d }}" >
 <h1>статистика</h1>
 {% regroup a by time_in__year as year %}
 {% for y in year %}
