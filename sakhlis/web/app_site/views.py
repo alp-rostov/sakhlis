@@ -12,7 +12,8 @@ from django.shortcuts import redirect, get_object_or_404
 from django.urls import reverse, reverse_lazy
 from django.views.decorators.http import require_http_methods
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
-from .models import RepairerList, OrderList, Invoice, WORK_CHOICES, Service, ORDER_STATUS_FOR_CHECK, WORK_CHOICES_
+from .models import RepairerList, OrderList, Invoice, WORK_CHOICES, Service, ORDER_STATUS_FOR_CHECK, WORK_CHOICES_, \
+    MONTH_
 from .forms import OrderForm, InvoiceForm, UserRegisterForm, RepairerForm
 from .utils import InvoiceMaker, Graf
 from django.http import FileResponse, Http404, HttpResponseRedirect, JsonResponse
@@ -214,7 +215,7 @@ class Statistica(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
 
-        context['a'] = OrderList.objects\
+        a = OrderList.objects\
             .values('time_in__month', 'time_in__year')\
             .annotate(count=Sum(F('invoice__price') * F('invoice__quantity')))\
             .filter(repairer_id=self.request.user)
@@ -224,7 +225,7 @@ class Statistica(TemplateView):
             .annotate(count=Count(F('pk')))\
             .filter(repairer_id=self.request.user)
 
-        context['c'] = Invoice.objects \
+        c = Invoice.objects \
             .values('service_id__type') \
             .annotate(count=Count(F('service_id__type'))) \
             .order_by('-count') \
@@ -232,12 +233,24 @@ class Statistica(TemplateView):
 
         labels=[]
         sizes = []
-        for _ in context['c']:
+        for _ in c:
             labels.append(WORK_CHOICES_[_['service_id__type']])
             sizes.append(_['count'])
 
-        d=Graf(labels, sizes )
-        context['d']=d.sent()
+        d=Graf(labels, sizes)
+        context['d']=d.make_graf_pie()
+
+        labels = []
+        sizes = []
+        for _ in a:
+            b=MONTH_[_['time_in__month']-1]
+            labels.append(b)
+            sizes.append(_['count'])
+
+        d = Graf(labels, sizes)
+        context['f'] = d.make_graf_bar()
+
+
         return context
 
 

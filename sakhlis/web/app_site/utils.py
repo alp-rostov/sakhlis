@@ -147,15 +147,6 @@ class InvoiceMaker(object):
 
 
 
-
-
-
-
-
-
-
-
-
 class Graf:
     def __init__(self, labels:dict, data:dict):
         self.labels=labels
@@ -177,13 +168,30 @@ class Graf:
         ax.set_title("Структура работ")
         warnings.simplefilter("ignore", UserWarning)
         fig = plt.gcf()
-        return fig
+        return self.sent(fig)
+
+    def make_graf_bar(self):
+        fig, ax = plt.subplots()
+
+        bar_labels = self.labels
+        # bar_colors = ['tab:red', 'tab:blue', 'tab:red', 'tab:orange']
+
+        ax.bar(self.labels, self.data, label=bar_labels )
+
+        ax.set_ylabel('lar')
+        ax.set_title('Стоимость заказов в месяц')
 
 
-    def sent(self):
+        warnings.simplefilter("ignore", UserWarning)
+        fig = plt.gcf()
+        return self.sent(fig)
+
+
+
+    def sent(self, fig):
 
         buf=io.BytesIO()
-        self.make_graf_pie().savefig(buf, format='png')
+        fig.savefig(buf, format='png')
         buf.seek(0)
         string = base64.b64encode(buf.read())
 
