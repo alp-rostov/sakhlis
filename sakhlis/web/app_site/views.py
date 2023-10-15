@@ -227,9 +227,8 @@ class Statistica(TemplateView):
         context['c'] = Invoice.objects \
             .values('service_id__type') \
             .annotate(count=Count(F('service_id__type'))) \
+            .order_by('-count') \
             .filter(order_id__repairer_id=self.request.user)
-
-
 
 
 
@@ -241,9 +240,17 @@ class Statistica(TemplateView):
             labels.append(WORK_CHOICES_[_['service_id__type']])
             sizes.append(_['count'])
 
+        a = sum(sizes[5:len(sizes)])
+        labels=labels[0:4]
+        labels.append('Прочее')
+        sizes=sizes[0:4]
+        explode = (0.03, 0.01, 0.01, 0.01, 0.01)
+        sizes.append(a)
+
         fig, ax = plt.subplots()
 
-        ax.pie(sizes, labels=labels, autopct='%1.1f%%')
+        ax.pie(sizes, labels=labels, autopct='%1.1f%%',explode=explode)
+        ax.set_title("Структура работ")
 
         fig = plt.gcf()
         buf=io.BytesIO()
