@@ -2,7 +2,7 @@ import base64
 import json
 import urllib.parse
 import warnings
-
+import io
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
 from django.db import transaction
@@ -14,9 +14,9 @@ from django.views.decorators.http import require_http_methods
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
 from .models import RepairerList, OrderList, Invoice, WORK_CHOICES, Service, ORDER_STATUS_FOR_CHECK, WORK_CHOICES_
 from .forms import OrderForm, InvoiceForm, UserRegisterForm, RepairerForm
-from .utils import InvoiceMaker
+from .utils import InvoiceMaker, Graf
 from django.http import FileResponse, Http404, HttpResponseRedirect, JsonResponse
-import io
+
 
 
 
@@ -230,37 +230,14 @@ class Statistica(TemplateView):
             .order_by('-count') \
             .filter(order_id__repairer_id=self.request.user)
 
-
-
-        import matplotlib.pyplot as plt
-        warnings.simplefilter("ignore", UserWarning)
         labels=[]
         sizes = []
         for _ in context['c']:
             labels.append(WORK_CHOICES_[_['service_id__type']])
             sizes.append(_['count'])
 
-        a = sum(sizes[5:len(sizes)])
-        labels=labels[0:4]
-        labels.append('Прочее')
-        sizes=sizes[0:4]
-        explode = (0.03, 0.01, 0.01, 0.01, 0.01)
-        sizes.append(a)
-
-        fig, ax = plt.subplots()
-
-        ax.pie(sizes, labels=labels, autopct='%1.1f%%',explode=explode)
-        ax.set_title("Структура работ")
-
-        fig = plt.gcf()
-        buf=io.BytesIO()
-        fig.savefig(buf, format='png')
-        buf.seek(0)
-        string = base64.b64encode(buf.read())
-        uri = urllib.parse.quote(string)
-
-        context['d']=uri
-
+        d=Graf(labels, sizes )
+        context['d']=d.sent()
         return context
 
 

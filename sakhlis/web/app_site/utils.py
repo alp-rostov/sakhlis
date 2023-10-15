@@ -1,4 +1,5 @@
-from django.contrib.auth.models import User
+
+
 from geopy.geocoders import Nominatim
 from telebot import types
 from reportlab.lib.pagesizes import A4
@@ -6,8 +7,12 @@ from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.lib.units import mm, inch
 from reportlab.pdfgen import canvas
 from reportlab.platypus import Paragraph, Table, TableStyle
+import matplotlib.pyplot as plt
 
-
+import base64
+import urllib.parse
+import warnings
+import io
 
 def set_coordinates_address(street: str, city: str) -> str:
     """ setting of map coordinates by street and city """
@@ -139,3 +144,47 @@ class InvoiceMaker(object):
         self.c.save()
 
     # ----------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+class Graf:
+    def __init__(self, labels:dict, data:dict):
+        self.labels=labels
+        self.data=data
+
+    def make_graf_pie(self):
+
+        a = sum(self.data[5:len(self.data)])
+        self.labels=self.labels[0:4]
+        self.labels.append('Прочее')
+        self.data=self.data[0:4]
+        explode = (0.03, 0.01, 0.01, 0.01, 0.01)
+        self.data.append(a)
+
+        fig, ax = plt.subplots()
+
+        ax.pie(self.data, labels=self.labels, autopct='%1.1f%%',explode=explode)
+
+        ax.set_title("Структура работ")
+        warnings.simplefilter("ignore", UserWarning)
+        fig = plt.gcf()
+        return fig
+
+
+    def sent(self):
+
+        buf=io.BytesIO()
+        self.make_graf_pie().savefig(buf, format='png')
+        buf.seek(0)
+        string = base64.b64encode(buf.read())
+
+        return urllib.parse.quote(string)
