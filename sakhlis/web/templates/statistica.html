@@ -4,20 +4,11 @@
 
 
 {% block body %}
-<img src="data:image/png;base64,{{ d }}" >
-<img src="data:image/png;base64,{{ f }}" >
-<h1>статистика</h1>
+<img src="data:image/png;base64,{{ d }}" width="400">
+<img src="data:image/png;base64,{{ f }}" width="400">
+<img src="data:image/png;base64,{{ g }}" width="400">
 
-<hr>
-{% regroup b by time_in__year as year %}
-{% for y in year %}
-<b> {{ y.grouper }}</b><br>
 
-    {% for i in y.list %}
-        {{ i.time_in__month | choice_tag:'month' }} | {{ i.count }}<br>
-    {% endfor %}
-
-{% endfor%}
 
 
 

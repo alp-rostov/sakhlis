@@ -1,25 +1,16 @@
-import base64
 import json
-import urllib.parse
-import warnings
 import io
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.contrib.auth.models import User
 from django.db import transaction
 from django.db.models import F, Prefetch, Sum, Count
 from django.forms import modelformset_factory
 from django.shortcuts import redirect, get_object_or_404
 from django.urls import reverse, reverse_lazy
-from django.views.decorators.http import require_http_methods
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
-from .models import RepairerList, OrderList, Invoice, WORK_CHOICES, Service, ORDER_STATUS_FOR_CHECK, WORK_CHOICES_, \
-    MONTH_
+from .models import *
 from .forms import OrderForm, InvoiceForm, UserRegisterForm, RepairerForm
-from .utils import InvoiceMaker, Graf
+from .utils import InvoiceMaker, get_data_for_graf, Graph
 from django.http import FileResponse, Http404, HttpResponseRedirect, JsonResponse
-
-
-
 
 # ___________________________________________________________________________________________________________________
 def get_info_for_pdf():
@@ -121,7 +112,6 @@ class OrderManagementSystem(LoginRequiredMixin, ListView):
         context['form'] = OrderForm
         return context
 
-
 class OrderUpdate(LoginRequiredMixin, UpdateView):
     model = OrderList
     template_name = 'order_update.html'
@@ -135,13 +125,10 @@ class OrderUpdate(LoginRequiredMixin, UpdateView):
     def get_success_url(self):
         return '/invoice/'+str(self.object.pk)
 
-
 class OrderDelete(LoginRequiredMixin, DeleteView):
     model = OrderList
     template_name = 'order_delete.html'
     success_url = '/list_order'
-
-
 
 def OrderAddRepaier(request):
     """Add the repairer to order from telegram"""
@@ -212,6 +199,7 @@ class InvoiceCreate(LoginRequiredMixin, DetailView):
 
 class Statistica(TemplateView):
     template_name = 'statistica.html'
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
 
@@ -220,7 +208,7 @@ class Statistica(TemplateView):
             .annotate(count=Sum(F('invoice__price') * F('invoice__quantity')))\
             .filter(repairer_id=self.request.user)
 
-        context['b'] = OrderList.objects\
+        b = OrderList.objects\
             .values('time_in__month', 'time_in__year')\
             .annotate(count=Count(F('pk')))\
             .filter(repairer_id=self.request.user)
@@ -231,30 +219,20 @@ class Statistica(TemplateView):
             .order_by('-count') \
             .filter(order_id__repairer_id=self.request.user)
 
-        labels=[]
-        sizes = []
-        for _ in c:
-            labels.append(WORK_CHOICES_[_['service_id__type']])
-            sizes.append(_['count'])
+        labels, sizes = get_data_for_graf(c,'service_id__type','count', WORK_CHOICES_)
+        instans_graf=Graph(labels, sizes, 'Структура заказов, кол.', '')
+        context['d']=instans_graf.make_graf_pie()
 
-        d=Graf(labels, sizes)
-        context['d']=d.make_graf_pie()
+        labels, sizes = get_data_for_graf(a,'time_in__month','count', MONTH_)
+        instans_graf = Graph(labels, sizes, 'Стоимость заказов', 'lar')
+        context['f'] = instans_graf.make_graf_bar()
 
-        labels = []
-        sizes = []
-        for _ in a:
-            b=MONTH_[_['time_in__month']-1]
-            labels.append(b)
-            sizes.append(_['count'])
-
-        d = Graf(labels, sizes)
-        context['f'] = d.make_graf_bar()
-
-
+        labels, sizes = get_data_for_graf(b,'time_in__month','count', MONTH_)
+        instans_graf = Graph(labels, sizes, 'Количество заказов', 'кол')
+        context['g'] = instans_graf.make_graf_bar()
         return context
 
 
-@require_http_methods(["GET"])
 def CreateIvoicePDF(request, **kwargs):
     """ Create invoice pdf-file for printing """
 
@@ -287,10 +265,6 @@ def listorder_for_order_list_paginator_json(request, **kwargs):
         json_data = json.dumps(list(data), default=str)
         return JsonResponse(json_data, safe=False)
 
-
-
-
-
 def DeleteIvoiceService(request, **kwargs):
     """for ajax request """
     if request.user.is_authenticated:
@@ -309,9 +283,6 @@ def change_work_status(request, **kwargs):
             return JsonResponse({"message": request.GET.get('work_status')})
         else:
             return JsonResponse({"message": "error"})
-
-
-
 
 class RepaierUpdate(UpdateView):
     model = RepairerList

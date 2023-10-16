@@ -14,6 +14,15 @@ import urllib.parse
 import warnings
 import io
 
+def get_data_for_graf(queryset, labels_name:str, data_name:str, help_dict:dict) -> tuple:
+    """ return dicts using for create Graf in statistica.html """
+    labels = []
+    data = []
+    for _ in queryset:
+        labels.append(help_dict[_[labels_name]])
+        data.append(_[data_name])
+    return labels, data
+
 def set_coordinates_address(street: str, city: str) -> str:
     """ setting of map coordinates by street and city """
     try:
@@ -23,7 +32,6 @@ def set_coordinates_address(street: str, city: str) -> str:
         return ' '
     if location:
         return f'https://yandex.ru/maps/?pt={location.longitude},{location.latitude}&z=18&l=map'
-
 
 def add_telegram_button(repairer: list, order_pk: int) -> types.InlineKeyboardMarkup:
     """
@@ -39,10 +47,8 @@ def add_telegram_button(repairer: list, order_pk: int) -> types.InlineKeyboardMa
         button.append(types.InlineKeyboardButton(text=i[1], url=url_))
     return keyboard.add(*button)
 
-
 class InvoiceMaker(object):
     """ create pdf-invoice """
-
     def __init__(self, pdf_file, info):
         self.c = canvas.Canvas(pdf_file, bottomup=0)
         self.styles = getSampleStyleSheet()
@@ -106,16 +112,13 @@ class InvoiceMaker(object):
 
         self.createParagraph('Sign_____________S.A.Gostin', *self.coord(50, 110 + i * 10), style='Heading4')
 
-    # ----------------------------------------------------------------------
-    def coord(self, x, y, unit=1) -> tuple:
+   def coord(self, x, y, unit=1) -> tuple:
         """
         # http://stackoverflow.com/questions/4726011/wrap-text-in-a-table-reportlab
         Helper class to help position flowables in Canvas objects
         """
         x, y = x * unit, y * unit
         return x, y
-
-        # ----------------------------------------------------------------------
 
     def createParagraph(self, ptext, x, y, style=None):
         """"""
@@ -127,8 +130,6 @@ class InvoiceMaker(object):
         p.wrapOn(self.c, self.width, self.height)
         p.drawOn(self.c, *self.coord(x, y, mm))
 
-    # ----------------------------------------------------------------------
-
     def createTable(self, data, x, y, TableStyle_, c_width):
         """"""
         table = Table(data, colWidths=c_width)
@@ -136,21 +137,20 @@ class InvoiceMaker(object):
         table.wrapOn(self.c, self.width, self.height)
         table.drawOn(self.c, *self.coord(x, y))
 
-    # ---------------------------------------------
-
     def savePDF(self):
         """"""
         self.c.showPage()
         self.c.save()
 
-    # ----------------------------------------------------------------------
 
 
-
-class Graf:
-    def __init__(self, labels:dict, data:dict):
+class Graph:
+    """ create graph and sent to template """
+    def __init__(self, labels:dict, data:dict, name_graf:str, name_legend:str):
         self.labels=labels
         self.data=data
+        self.name_graf=name_graf
+        self.name_legend=name_legend
 
     def make_graf_pie(self):
 
@@ -158,41 +158,31 @@ class Graf:
         self.labels=self.labels[0:4]
         self.labels.append('Прочее')
         self.data=self.data[0:4]
-        explode = (0.03, 0.01, 0.01, 0.01, 0.01)
         self.data.append(a)
+        explode = (0.03, 0.01, 0.01, 0.01, 0.01)
 
         fig, ax = plt.subplots()
-
         ax.pie(self.data, labels=self.labels, autopct='%1.1f%%',explode=explode)
-
-        ax.set_title("Структура работ")
+        ax.set_title(self.name_graf)
         warnings.simplefilter("ignore", UserWarning)
         fig = plt.gcf()
         return self.sent(fig)
 
     def make_graf_bar(self):
         fig, ax = plt.subplots()
-
         bar_labels = self.labels
-        # bar_colors = ['tab:red', 'tab:blue', 'tab:red', 'tab:orange']
-
         ax.bar(self.labels, self.data, label=bar_labels )
 
-        ax.set_ylabel('lar')
-        ax.set_title('Стоимость заказов в месяц')
-
+        ax.set_ylabel(self.name_legend)
+        ax.set_title(self.name_graf)
 
         warnings.simplefilter("ignore", UserWarning)
         fig = plt.gcf()
         return self.sent(fig)
 
-
-
     def sent(self, fig):
-
         buf=io.BytesIO()
         fig.savefig(buf, format='png')
         buf.seek(0)
         string = base64.b64encode(buf.read())
-
         return urllib.parse.quote(string)
