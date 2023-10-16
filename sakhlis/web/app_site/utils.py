@@ -112,7 +112,7 @@ class InvoiceMaker(object):
 
         self.createParagraph('Sign_____________S.A.Gostin', *self.coord(50, 110 + i * 10), style='Heading4')
 
-   def coord(self, x, y, unit=1) -> tuple:
+    def coord(self, x, y, unit=1) -> tuple:
         """
         # http://stackoverflow.com/questions/4726011/wrap-text-in-a-table-reportlab
         Helper class to help position flowables in Canvas objects

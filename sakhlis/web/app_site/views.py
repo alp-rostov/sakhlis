@@ -11,6 +11,9 @@ from .models import *
 from .forms import OrderForm, InvoiceForm, UserRegisterForm, RepairerForm
 from .utils import InvoiceMaker, get_data_for_graf, Graph
 from django.http import FileResponse, Http404, HttpResponseRedirect, JsonResponse
+import io
+
+
 
 # ___________________________________________________________________________________________________________________
 def get_info_for_pdf():
@@ -112,6 +115,7 @@ class OrderManagementSystem(LoginRequiredMixin, ListView):
         context['form'] = OrderForm
         return context
 
+
 class OrderUpdate(LoginRequiredMixin, UpdateView):
     model = OrderList
     template_name = 'order_update.html'
@@ -125,10 +129,13 @@ class OrderUpdate(LoginRequiredMixin, UpdateView):
     def get_success_url(self):
         return '/invoice/'+str(self.object.pk)
 
+
 class OrderDelete(LoginRequiredMixin, DeleteView):
     model = OrderList
     template_name = 'order_delete.html'
     success_url = '/list_order'
+
+
 
 def OrderAddRepaier(request):
     """Add the repairer to order from telegram"""
@@ -199,7 +206,6 @@ class InvoiceCreate(LoginRequiredMixin, DetailView):
 
 class Statistica(TemplateView):
     template_name = 'statistica.html'
-
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
 
@@ -231,6 +237,7 @@ class Statistica(TemplateView):
         instans_graf = Graph(labels, sizes, 'Количество заказов', 'кол')
         context['g'] = instans_graf.make_graf_bar()
         return context
+
 
 
 def CreateIvoicePDF(request, **kwargs):
