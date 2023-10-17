@@ -1,30 +1,16 @@
 import json
-import io
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db import transaction
 from django.db.models import F, Prefetch, Sum, Count
 from django.forms import modelformset_factory
 from django.shortcuts import redirect, get_object_or_404
-from django.urls import reverse, reverse_lazy
+from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
 from .models import *
 from .forms import OrderForm, InvoiceForm, UserRegisterForm, RepairerForm
-from .utils import InvoiceMaker, get_data_for_graf, Graph
+from .utils import InvoiceMaker, get_data_for_graf, Graph, get_info_for_pdf
 from django.http import FileResponse, Http404, HttpResponseRedirect, JsonResponse
 import io
-
-
-
-# ___________________________________________________________________________________________________________________
-def get_info_for_pdf():
-    return OrderList.objects \
-        .annotate(sum=Sum(F('invoice__price') * F('invoice__quantity'))) \
-        .prefetch_related(Prefetch('invoice_set', Invoice.objects
-                                   .defer('quantity_type', 'service_id__type')
-                                   .select_related('service_id')
-                                   .annotate(sum=F('price') * F('quantity')))
-                          ).select_related('repairer_id')
-# __________________________________________________________________________________________________________________
 
 
 class UserRegisterView(CreateView):

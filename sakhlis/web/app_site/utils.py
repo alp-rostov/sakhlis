@@ -1,5 +1,5 @@
 
-
+from django.db.models import F, Prefetch, Sum, Count
 from geopy.geocoders import Nominatim
 from telebot import types
 from reportlab.lib.pagesizes import A4
@@ -13,6 +13,19 @@ import base64
 import urllib.parse
 import warnings
 import io
+
+from .models import OrderList, Invoice
+
+
+def get_info_for_pdf():
+    return OrderList.objects \
+        .annotate(sum=Sum(F('invoice__price') * F('invoice__quantity'))) \
+        .prefetch_related(Prefetch('invoice_set', Invoice.objects
+                                   .defer('quantity_type', 'service_id__type')
+                                   .select_related('service_id')
+                                   .annotate(sum=F('price') * F('quantity')))
+                          ).select_related('repairer_id')
+
 
 def get_data_for_graf(queryset, labels_name:str, data_name:str, help_dict:dict) -> tuple:
     """ return dicts using for create Graf in statistica.html """
@@ -151,7 +164,7 @@ class Graph:
         self.data=data
         self.name_graf=name_graf
         self.name_legend=name_legend
-
+        self.fig, self.ax = plt.subplots()
     def make_graf_pie(self):
 
         a = sum(self.data[5:len(self.data)])
@@ -160,25 +173,20 @@ class Graph:
         self.data=self.data[0:4]
         self.data.append(a)
         explode = (0.03, 0.01, 0.01, 0.01, 0.01)
-
-        fig, ax = plt.subplots()
-        ax.pie(self.data, labels=self.labels, autopct='%1.1f%%',explode=explode)
-        ax.set_title(self.name_graf)
+        self.ax.pie(self.data, labels=self.labels, autopct='%1.1f%%',explode=explode)
+        self.ax.set_title(self.name_graf)
         warnings.simplefilter("ignore", UserWarning)
-        fig = plt.gcf()
-        return self.sent(fig)
+        self.fig = plt.gcf()
+        return self.sent(self.fig)
 
     def make_graf_bar(self):
-        fig, ax = plt.subplots()
         bar_labels = self.labels
-        ax.bar(self.labels, self.data, label=bar_labels )
-
-        ax.set_ylabel(self.name_legend)
-        ax.set_title(self.name_graf)
-
+        self.ax.bar(self.labels, self.data, label=bar_labels )
+        self.ax.set_ylabel(self.name_legend)
+        self.ax.set_title(self.name_graf)
         warnings.simplefilter("ignore", UserWarning)
-        fig = plt.gcf()
-        return self.sent(fig)
+        self.fig = plt.gcf()
+        return self.sent(self.fig)
 
     def sent(self, fig):
         buf=io.BytesIO()

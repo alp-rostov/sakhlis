@@ -9,17 +9,11 @@ urlpatterns = [
     path('list_order', OrderManagementSystem.as_view(), name='list_order'),
     path('list_order/<int:pk>', InvoiceCreate.as_view(), name='invoice'),
     path('list_order/update/<int:pk>', OrderUpdate.as_view(), name='update'),
+    path('list_order/pdf/<int:order_pk>', CreateIvoicePDF, name='invoice_pdf'),
+
     path('add', OrderAddRepaier, name='add_repairer'),
-
-
-
     path('invoice/delete-order/<int:pk>', OrderDelete.as_view(), name='delete-order'),
     path('invoice/delete/<int:invoice_pk>', DeleteIvoiceService, name='delete-item-of-order'),
-    path('invoice/pdf/<int:order_pk>', CreateIvoicePDF, name='invoice_pdf'),
-
-
-
-
 
     path('login/', LoginView.as_view(template_name='login.html'), name='login'),
     path('logout/', LogoutView.as_view(template_name='logout.html'), name='logout'),
