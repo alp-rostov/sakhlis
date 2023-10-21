@@ -196,13 +196,13 @@ class Statistica(TemplateView):
         context = super().get_context_data(**kwargs)
 
         a = OrderList.objects\
-            .values('time_in__month', 'time_in__year')\
+            .values('time_in__month', )\
             .annotate(count=Sum(F('invoice__price') * F('invoice__quantity')))\
             .filter(repairer_id=self.request.user)
 
         b = OrderList.objects\
-            .values('time_in__month', 'time_in__year')\
-            .annotate(count=Count(F('pk')))\
+            .values('time_in__month', 'pk')\
+            .annotate(count=Sum(F('invoice__price') * F('invoice__quantity'))/Count(F('pk')))\
             .filter(repairer_id=self.request.user)
 
         c = Invoice.objects \
@@ -211,17 +211,41 @@ class Statistica(TemplateView):
             .order_by('-count') \
             .filter(order_id__repairer_id=self.request.user)
 
+        c_ = Invoice.objects \
+            .values('service_id__type') \
+            .annotate(count=Sum(F('price') * F('quantity'))) \
+            .order_by('-count') \
+            .filter(order_id__repairer_id=self.request.user)
+
+
+        h = OrderList.objects \
+            .values('time_in__date') \
+            .annotate(count=Sum(F('invoice__price') * F('invoice__quantity'))) \
+            .order_by('-time_in__date') \
+            .filter(repairer_id=self.request.user)[0:30:-1]
+
+
         labels, sizes = get_data_for_graf(c,'service_id__type','count', WORK_CHOICES_)
         instans_graf=Graph(labels, sizes, 'Структура заказов, кол.', '')
         context['d']=instans_graf.make_graf_pie()
 
+        labels, sizes = get_data_for_graf(c_, 'service_id__type', 'count', WORK_CHOICES_)
+        instans_graf = Graph(labels, sizes, 'Структура заказов, лар.', '')
+        context['d_'] = instans_graf.make_graf_pie()
+
         labels, sizes = get_data_for_graf(a,'time_in__month','count', MONTH_)
-        instans_graf = Graph(labels, sizes, 'Стоимость заказов', 'lar')
+        instans_graf = Graph(labels, sizes, 'Выручка', 'lar')
         context['f'] = instans_graf.make_graf_bar()
 
         labels, sizes = get_data_for_graf(b,'time_in__month','count', MONTH_)
-        instans_graf = Graph(labels, sizes, 'Количество заказов', 'кол')
+        instans_graf = Graph(labels, sizes, 'Средний чек заказа', 'кол')
         context['g'] = instans_graf.make_graf_bar()
+
+        labels, sizes = get_data_for_graf(h,'time_in__date','count')
+        instans_graf = Graph(labels, sizes, 'Динамика за 30 дней.', '')
+        context['hh'] = instans_graf.make_graf_plot()
+
+
         return context
 
 

@@ -27,13 +27,19 @@ def get_info_for_pdf():
                           ).select_related('repairer_id')
 
 
-def get_data_for_graf(queryset, labels_name:str, data_name:str, help_dict:dict) -> tuple:
+def get_data_for_graf(queryset, labels_name:str, data_name:str, help_dict:dict=None) -> tuple:
     """ return dicts using for create Graf in statistica.html """
     labels = []
     data = []
-    for _ in queryset:
-        labels.append(help_dict[_[labels_name]])
-        data.append(_[data_name])
+    if help_dict:
+        for _ in queryset:
+            labels.append(help_dict[_[labels_name]])
+            data.append(_[data_name])
+    else:
+        for _ in queryset:
+            labels.append(_[labels_name])
+            data.append(_[data_name])
+
     return labels, data
 
 def set_coordinates_address(street: str, city: str) -> str:
@@ -187,6 +193,19 @@ class Graph:
         warnings.simplefilter("ignore", UserWarning)
         self.fig = plt.gcf()
         return self.sent(self.fig)
+
+    def make_graf_plot(self):
+        bar_labels = self.labels
+        self.ax.plot(self.labels, self.data, label=bar_labels)
+
+        self.ax.set_ylabel(self.name_legend)
+        self.ax.set_title(self.name_graf)
+
+        warnings.simplefilter("ignore", UserWarning)
+        self.fig = plt.gcf()
+        return self.sent(self.fig)
+
+
 
     def sent(self, fig):
         buf=io.BytesIO()
