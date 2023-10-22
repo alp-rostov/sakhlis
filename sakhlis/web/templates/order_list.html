@@ -1,7 +1,10 @@
 {% extends 'flatpages/default_user.html' %}
 {% load custom_filters %}
 {% load custom_tags %}
-{% block body %}
+
+
+{% block subbody %}
+
 <style>
     .hidden{
     display:none
@@ -28,6 +31,10 @@
 {% else %}
 <a href="{% url 'list_order'%}?work_status=END">Заявки окноченные</a>|
 {% endif %}
+
+{% endblock subbody %}
+
+{% block body %}
 
 
 

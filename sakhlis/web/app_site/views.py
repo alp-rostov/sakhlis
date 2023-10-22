@@ -196,12 +196,12 @@ class Statistica(TemplateView):
         context = super().get_context_data(**kwargs)
 
         a = OrderList.objects\
-            .values('time_in__month', )\
+            .values('time_in__month', 'time_in__year')\
             .annotate(count=Sum(F('invoice__price') * F('invoice__quantity')))\
             .filter(repairer_id=self.request.user)
 
         b = OrderList.objects\
-            .values('time_in__month', 'pk')\
+            .values('time_in__month', 'time_in__year')\
             .annotate(count=Sum(F('invoice__price') * F('invoice__quantity'))/Count(F('pk')))\
             .filter(repairer_id=self.request.user)
 
@@ -222,7 +222,7 @@ class Statistica(TemplateView):
             .values('time_in__date') \
             .annotate(count=Sum(F('invoice__price') * F('invoice__quantity'))) \
             .order_by('-time_in__date') \
-            .filter(repairer_id=self.request.user)[0:30:-1]
+            .filter(repairer_id=self.request.user)[0:10:-1]
 
 
         labels, sizes = get_data_for_graf(c,'service_id__type','count', WORK_CHOICES_)

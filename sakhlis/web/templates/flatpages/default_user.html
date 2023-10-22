@@ -6,8 +6,22 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/mdb.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+    <!-- Owl Carusel -->
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <!-- Custom Stylesheets -->
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+
+
+
+<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">-->
+<!--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>-->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
  {% block head %}
@@ -16,6 +30,101 @@
   <script src="{% static 'js/javascript.js' %}"></script>
   </head>
   <body>
+
+
+
+{% url 'list_order' as the_url1 %}
+{% url 'stat' as the_url2 %}
+{% url 'user' request.user.id as the_url3 %}
+
+<!--Header-->
+    <nav id="navigation-menu" class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+        <div class="container">
+		<a href='index-en.html'><img src="{% static 'images/flag_en.png' %}" class="flag"></a>
+            <a href='index-ge.html'><img src="{% static 'images/flag_ge.png' %}" class="flag"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item mr-4 active">
+                        <a class="nav-link" href="{% url 'home' %}">Главная <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mr-4">
+                        {% if the_url1 in request.get_full_path  %}
+                        <a class="nav-link" href="{{ the_url1 }}"><b>Мои заказы</b></a>
+                        {% else %}
+                        <a class="nav-link" href="{{ the_url1 }}">Мои заказы</a>
+                        {% endif %}
+                    </li>
+                    <li class="nav-item mr-4" class="nav-item mr-4">
+                        {% if the_url2 in request.get_full_path  %}
+                        <a class="nav-link"  href="{{ the_url2 }}"><b>Отчетность</b></a>
+                        {% else %}
+                        <a class="nav-link"  href="{{ the_url2 }}">Отчетность</a>
+                        {% endif %}
+                    </li>
+                    <li class="nav-item mr-4">
+                        {% if the_url3 in request.get_full_path  %}
+                        <a class="nav-link" href="{{ the_url3 }}"><b>мои данные</b></a>
+                        {% else %}
+                        <a class="nav-link" href="{{ the_url3 }}">мои данные</a>
+                        {% endif %}
+                    </li>
+
+                        {% if request.user.is_authenticated %}
+                            <li class="nav-item mr-4">
+
+                            <a class="nav-link" href="{% url 'list_order' %}">{{request.user.username}}</a>
+                            </li>
+
+                                 <li class="nav-item mr-4">
+
+                            <a class="nav-link" href="{% url 'logout' %}">Выйти</a>
+
+                            </li>
+
+                          {% else %}
+                            <a class="nav-link" href="{% url 'login' %}" title='Авторизация мастера'>Авторизация</a>
+                         {% endif %}
+
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+        <header id="section-0" class="bg_img jarallax" data-jarallax="{" speed": 0.2}">
+            <div class="space">
+                    <div class="text-center">
+                        <h1 class="h1-responsive display-4 wow fadeIn" data-wow-delay="1s">Мастер на час в Тбилиси <a href="https://www.instagram.com/repairservicetbilisi/" titile="Инстаграм"><img src="{% static 'images/instagram.png' %}" width="60"></a> </h1>
+                        <hr class="hr-light-h wow fadeIn" data-wow-delay="1s">
+                        <p class="lead py-3 wow fadeIn" data-wow-delay="1s">
+                            {% block subbody %}
+
+                            {% endblock subbody%}
+                            </p>
+                        </div>
+                    </div>
+            </div>
+    </header>
+    <!--And Header-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <p><a href="{% url 'home' %}" >Домой</a></p>
 
@@ -53,6 +162,39 @@
 
 {% endblock body%}
 </div>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- jQuery first, then Bootstrap JS -->
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/mdb.min.js' %}"></script>
+    <!-- Optional JavaScript -->
+	<script src="{% static 'js/wow.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/counter.js' %}"></script>
+    <script src="{% static 'js/typed.min.js' %}"></script>
+    <script src="{% static 'js/jquery.malihu.PageScroll2id.min.js' %}"></script>
+    <script src="{% static 'js/maskedinput.min.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+	<script type="text/javascript">
+    $(document).ready(function() {
+      new WOW().init();
+    });
+    </script>
+
+
+
+
+
   </body>
 </html>
 

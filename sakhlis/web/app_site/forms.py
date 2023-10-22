@@ -114,7 +114,7 @@ class RepairerForm(forms.ModelForm):
 
     class Meta:
         model = RepairerList
-        fields = ('phone', 'telegram', 'city', 'foto')
+        fields = ('phone', 'telegram', 'profile', 'city', 'foto')
 
 # class ServiceForm(forms.ModelForm):
 #     class Meta:
