@@ -178,9 +178,9 @@ $(document).ready(function() {
             <tr>
                 <td>
 
-                    <a href="{% url 'invoice' i.pk %}" id="order_{{ i.pk }}">Заказ №{{ i.pk}}</a>
+                    <a href="{% url 'invoice' i.pk %}" id="order_{{ i.pk }}" class="mycolor">Заказ №{{ i.pk}}</a>
 
-                    <a href="{% url 'delete-order' i.pk %}" id="delete_{{ i.pk }}">Удалить</a><br>
+                    <a href="{% url 'delete-order' i.pk %}" id="delete_{{ i.pk }}" class="mycolor">Удалить</a><br>
                     <span id="text_order_{{ i.pk }}">{{ i.text_order|truncatechars:70 }}</span>
                 </td>
                 <td width = 50></td>
@@ -230,7 +230,7 @@ $(document).ready(function() {
     <tr id="row_order" class="hidden">
 
         <td>
-            <a href="" id="order_"> </a>   <a href="" id="delete_">Удалить</a><br>
+            <a href="" id="order_" class="mycolor"> </a>   <a href="" id="delete_" class="mycolor">Удалить</a><br>
             <span id="text_order_"></span>
         </td>
         <td width = 50></td>
@@ -252,7 +252,7 @@ $(document).ready(function() {
 
     {% if order.13.pk %}
 
-        <a href="../listorderjson?last_pk={{ order.13.pk }}&work_status=ALL" class="p" id="paginator_next">NEXT</a>
+        <a href="../listorderjson?last_pk={{ order.13.pk }}&work_status=ALL" class="btn btn-lg btn-orange cta-btn btn-form mt-3 mb-5 wow fadeIn waves-effect waves-light animated" id="paginator_next">NEXT</a>
     {% endif %}
 </h2>
 

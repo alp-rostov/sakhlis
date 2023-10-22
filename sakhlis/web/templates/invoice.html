@@ -16,24 +16,18 @@
     }
     </script>
 
-<hr>
-
-<a href="{% url 'list_order' %}?work_status=SND">Новые заказы</a> | <a href="{% url 'list_order'%}?work_status=RCV">Заявки в работе</a> |
-<a href="{% url 'list_order'%}?work_status=END">Заявки окноченные</a>|
-
-
-<hr>
 <br>
 {% if prev.pk %}
-<p align="center">
-<a href="{% url 'invoice' prev.pk %}" ><--</a>||
+<p align="center" class="mycolor">
+<a href="{% url 'invoice' prev.pk %}" class="mycolor"><--</a>||
 {% endif %}
 
 {% if next.pk %}
-<a href="{% url 'invoice' next.pk %}" >--></a>
+<a href="{% url 'invoice' next.pk %}" class="mycolor">--></a>
 {% endif %}
 </p>
-<h1>Заявка № {{ info.id }} от : {{ info.time_in }}</h1><br>
+
+<h2 class="h1-responsive">Заявка № {{ info.id }}<br>{{ info.time_in }}</h2>
 
 {% if info.order_status == 'SND' %}
 <p  >статус заказа: <b id="stepstatuswork">Направлен мастеру </b>  ->
@@ -59,7 +53,7 @@
 
 <br>
     <table width="700"><tr>
-        <td><h2>Заказчик: {{ info.customer_name }}  <a href="../list_order/update/{{ info.pk}}">изменить</a></h2></td>
+        <td>Заказчик: {{ info.customer_name }}  <a href="../list_order/update/{{ info.pk}}">изменить</a></td>
     </tr>
         <tr>
         <td><b>Адрес: </b>{{ info.address_city|choice_tag:'city' }}, {{ info.address_street_app }}, {{ info.address_num }}</td>

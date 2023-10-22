@@ -1,11 +1,11 @@
-{% extends 'flatpages/default.html' %}
+{% extends 'flatpages/default_user.html' %}
 {% load custom_filters %}
 {% load custom_tags %}
 
 {% block body %}
 
 <table  width="1000">
-<tr><td colspan="2"><h1>Заказ № {{ order.pk}} от {{ order.time_in}} </h1>
+<tr><td colspan="2"><h1 >Заказ № {{ order.pk}} от {{ order.time_in}} </h1>
     <h3>Статус заказа: {{ order.order_status  | choice_tag:'status_order'}}</h3>
 </td></tr>
 

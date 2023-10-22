@@ -94,76 +94,51 @@
             </div>
         </div>
     </nav>
-        <header id="section-0" class="bg_img jarallax" data-jarallax="{" speed": 0.2}">
-            <div class="space">
+
+
+
+        <section id="section-2" class="bg_img">
+            <div class=""><br>
                     <div class="text-center">
-                        <h1 class="h1-responsive display-4 wow fadeIn" data-wow-delay="1s">Мастер на час в Тбилиси <a href="https://www.instagram.com/repairservicetbilisi/" titile="Инстаграм"><img src="{% static 'images/instagram.png' %}" width="60"></a> </h1>
-                        <hr class="hr-light-h wow fadeIn" data-wow-delay="1s">
-                        <p class="lead py-3 wow fadeIn" data-wow-delay="1s">
+                        <h1 class="lead py-3" >Личный кабинет: {{ user.username }}</h1>
+                        <hr class="hr-light-h">
+                        <p class="lead py-3">
                             {% block subbody %}
 
                             {% endblock subbody%}
+
+
+
                             </p>
                         </div>
+
+
                     </div>
             </div>
-    </header>
+    </section>
     <!--And Header-->
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-<p><a href="{% url 'home' %}" >Домой</a></p>
-
-
-{% url 'list_order' as the_url1 %}
-{% url 'stat' as the_url2 %}
-{% url 'user' request.user.id as the_url3 %}
-
-<p>
-{% if the_url1 in request.get_full_path  %}
-<a href="{{ the_url1 }}"><b>Мои заказы</b></a> |
-{% else %}
-<a href="{{ the_url1 }}">Мои заказы</a> |
-{% endif %}
-
-{% if the_url2 in request.get_full_path  %}
-<a href="{{ the_url2 }}"><b>Отчетность</b></a> |
-{% else %}
-<a href="{{ the_url2 }}">Отчетность</a> |
-{% endif %}
-
-{% if the_url3 in request.get_full_path  %}
-<a href="{{ the_url3 }}"><b>мои данные</b></a> |
-{% else %}
-<a href="{{ the_url3 }}">мои данные</a> |
-{% endif %}
-
-</p>
-
-<div class="container">
-
-<h1 class="test">Личный кабинет: {{ user.username }}</h1>
-
-{% block body %}
-
-{% endblock body%}
 </div>
 
 
+
+  <!--About Me -->
+    <section id="section-1">
+        <div class="container">
+            <div class="position-relative">
+                        {% block body %}
+
+{% endblock body%}
+            </div>
+
+
+            </div>
+        </div>
+    </section>
+    <!-- And Text -->
 
 
 
