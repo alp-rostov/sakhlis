@@ -5,32 +5,6 @@
 
 {% block subbody %}
 
-<style>
-    .hidden{
-    display:none
-    }
-</style>
-
-<a href="#----"  onclick="show_create_order_form(document.getElementById('form'))"
-                      id="link_create_order_form">Создать заказ</a> |
-
-{% if request.GET.work_status == 'SND' %}
-<a href="{% url 'list_order' %}?work_status=SND"><b>Новые заказы</b></a> |
-{% else %}
-<a href="{% url 'list_order' %}?work_status=SND">Новые заказы</a> |
-{% endif %}
-
-{% if request.GET.work_status == 'RCV' %}
-<a href="{% url 'list_order'%}?work_status=RCV"><b>Заявки в работе</b></a> |
-{% else %}
-<a href="{% url 'list_order'%}?work_status=RCV">Заявки в работе</a> |
-{% endif %}
-
-{% if request.GET.work_status == 'END' %}
-<a href="{% url 'list_order'%}?work_status=END"><b>Заявки окноченные</b></a>|
-{% else %}
-<a href="{% url 'list_order'%}?work_status=END">Заявки окноченные</a>|
-{% endif %}
 
 {% endblock subbody %}
 
@@ -72,11 +46,11 @@
         g.find("#customer_name_").html(r.customer_name);
         g.find("#customer_name_").attr("id", "customer_name_"+r.pk);
 
-        g.find("#customer_phone_").html(r.customer_phone);
-        g.find("#customer_phone_").attr("href", "tel:+"+r.customer_phone);
+
+        g.find("#customer_phone_").attr("href", "tel:"+r.customer_phone);
         g.find("#customer_phone_").attr("id", "customer_phone_"+r.num_order);
 
-        g.find("#customer_telegram_").html(r.customer_telegram);
+
         g.find("#customer_telegram_").attr("href", "https://t.me/"+r.customer_telegram);
         g.find("#customer_telegram_").attr("id", "customer_telegram_"+r.num_order);
 
@@ -164,7 +138,7 @@ $(document).ready(function() {
 });
 </script>
 
-<table id="head" >
+<table id="head" width="500">
     {% regroup order by time_in|date:"d.m.Y" as day %}
         {% for y in day %}
         <tr><td  colspan="6"><hr></td></tr>
@@ -181,15 +155,17 @@ $(document).ready(function() {
                     <a href="{% url 'invoice' i.pk %}" id="order_{{ i.pk }}" class="mycolor">Заказ №{{ i.pk}}</a>
 
                     <a href="{% url 'delete-order' i.pk %}" id="delete_{{ i.pk }}" class="mycolor">Удалить</a><br>
-                    <span id="text_order_{{ i.pk }}">{{ i.text_order|truncatechars:70 }}</span>
+
+                    <p id="text_order_{{ i.pk }}" >{{ i.text_order|truncatechars:70 }}</p>
                 </td>
                 <td width = 50></td>
-                <td><span id="customer_name_{{ i.pk }}">{{ i.customer_name }}</span> |
-                    <a href="tel:+{{ i.customer_phone }}" title="Телефон" id="customer_phone_{{ i.pk }}">{{ i.customer_phone }}</a> |
+                <td><span id="customer_name_{{ i.pk }}" >{{ i.customer_name }}</span> |
+                    <a href="tel:{{ i.customer_phone }}" title="Телефон" id="customer_phone_{{ i.pk }}" class="fas fa-phone text-danger fa-sm mr-1">
+                        </a>
                     <a href="https://t.me/{{ i.customer_telegram|cut:'@' }}" title="Телеграм" id="customer_telegram_{{ i.pk }}">
-                        {{ i.customer_telegram }}</a>
+                        <img src="/static/images/telegram.gif" width="20"></a>
                     <br>
-                    <span id="city_{{ i.pk }}">{{ i.address_city|choice_tag:'city'}}</span>,
+                    <span id="city_{{ i.pk }}" >{{ i.address_city|choice_tag:'city'}}</span>,
                     <span id="street_app_{{ i.pk }}">{{ i.address_street_app }}</span>,
                     <span id="num_{{ i.pk }}">{{ i.address_num }}</span>.
                 </td>
@@ -235,8 +211,8 @@ $(document).ready(function() {
         </td>
         <td width = 50></td>
         <td><span id="customer_name_"></span>, |
-            <a href="" title="Телефон" id="customer_phone_"></a> |
-            <a href="" title="Телеграм" id="customer_telegram_"></a><br>
+            <a href="" title="Телефон" id="customer_phone_" class="fas fa-phone text-danger fa-sm mr-1"></a>
+            <a href="" title="Телеграм" id="customer_telegram_"><img src="/static/images/telegram.gif" width="20"></a><br>
             <span id="city_"></span>,
             <span id="street_app_"></span>,
             <span id="num_"></span>.

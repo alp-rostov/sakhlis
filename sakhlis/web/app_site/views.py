@@ -201,7 +201,7 @@ class Statistica(TemplateView):
             .filter(repairer_id=self.request.user)
 
         b = OrderList.objects\
-            .values('time_in__month', 'time_in__year')\
+            .values('time_in__month', 'time_in__year', 'pk')\
             .annotate(count=Sum(F('invoice__price') * F('invoice__quantity'))/Count(F('pk')))\
             .filter(repairer_id=self.request.user)
 
@@ -277,7 +277,7 @@ def listorder_for_order_list_paginator_json(request, **kwargs):
     if request.user.is_authenticated:
         data = OrderList.objects.filter(pk__lt=request.GET.get('last_pk'), repairer_id=request.user)\
                             .order_by('-pk')\
-                            .values('pk', 'time_in', 'text_order', 'customer_name', 'customer_phone',
+                            .values('pk', 'time_in', 'text_order', 'customer_name', 'customer_phone', 'customer_telegram',
                                     'address_city', 'address_street_app', 'address_num')[0:14]
         json_data = json.dumps(list(data), default=str)
         return JsonResponse(json_data, safe=False)

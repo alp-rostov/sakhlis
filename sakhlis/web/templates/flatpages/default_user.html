@@ -107,6 +107,32 @@
 
                             {% endblock subbody%}
 
+                            <style>
+                                .hidden{
+                                display:none
+                                }
+                            </style>
+
+                            <a href="#----"  onclick="show_create_order_form(document.getElementById('form'))"
+                                                  id="link_create_order_form">Создать заказ</a> |
+
+                            {% if request.GET.work_status == 'SND' %}
+                            <a href="{% url 'list_order' %}?work_status=SND"><b>Новые заказы</b></a> |
+                            {% else %}
+                            <a href="{% url 'list_order' %}?work_status=SND">Новые заказы</a> |
+                            {% endif %}
+
+                            {% if request.GET.work_status == 'RCV' %}
+                            <a href="{% url 'list_order'%}?work_status=RCV"><b>Заявки в работе</b></a> |
+                            {% else %}
+                            <a href="{% url 'list_order'%}?work_status=RCV">Заявки в работе</a> |
+                            {% endif %}
+
+                            {% if request.GET.work_status == 'END' %}
+                            <a href="{% url 'list_order'%}?work_status=END"><b>Заявки окноченные</b></a>|
+                            {% else %}
+                            <a href="{% url 'list_order'%}?work_status=END">Заявки окноченные</a>|
+                            {% endif %}
 
 
                             </p>
@@ -128,7 +154,7 @@
   <!--About Me -->
     <section id="section-1">
         <div class="container">
-            <div class="position-relative">
+            <div align="center">
                         {% block body %}
 
 {% endblock body%}
