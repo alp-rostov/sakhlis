@@ -28,6 +28,16 @@
 
 {% endblock head %}
   <script src="{% static 'js/javascript.js' %}"></script>
+
+<style>
+.hidden{
+display:none;
+}
+.sticky {
+position: sticky;
+top: 0;
+}
+</style>
   </head>
   <body>
 
@@ -97,21 +107,16 @@
 
 
 
-        <section id="section-2" class="bg_img">
-            <div class=""><br>
-                    <div class="text-center">
-                        <h1 class="lead py-3" >Личный кабинет: {{ user.username }}</h1>
+        <section id="section-0" class="bg_img sticky">
+            <div class="container"><br>
+                    <div class="text-center nav-link">
+                        <h1 class="lead py-10" >Личный кабинет: {{ user.username }}</h1>
                         <hr class="hr-light-h">
-                        <p class="lead py-3">
                             {% block subbody %}
 
                             {% endblock subbody%}
 
-                            <style>
-                                .hidden{
-                                display:none
-                                }
-                            </style>
+
 
                             <a href="#----"  onclick="show_create_order_form(document.getElementById('form'))"
                                                   id="link_create_order_form">Создать заказ</a> |
@@ -129,13 +134,10 @@
                             {% endif %}
 
                             {% if request.GET.work_status == 'END' %}
-                            <a href="{% url 'list_order'%}?work_status=END"><b>Заявки окноченные</b></a>|
+                            <a href="{% url 'list_order'%}?work_status=END"><b>Заявки окноченные</b></a>
                             {% else %}
-                            <a href="{% url 'list_order'%}?work_status=END">Заявки окноченные</a>|
+                            <a href="{% url 'list_order'%}?work_status=END">Заявки окноченные</a>
                             {% endif %}
-
-
-                            </p>
                         </div>
 
 

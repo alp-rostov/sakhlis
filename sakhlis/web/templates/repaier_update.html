@@ -5,17 +5,44 @@
 {% block body %}
 
 
+ <!--About Me -->
 
-<h1>{{ request.user.username }}</h1>
-<hr>
-{{ user.last_name }}
-{{ user.first_name }}<br>
-{{ user.email }}<br>
-{{ profile.phone }}<br>
-{{ profile.telegram }}<br>
-{{ profile.city|choice_tag:'city' }}<br>
 
-<img src="../media/{{ profile.foto|default:'images/1.jpg' }}" width="300">
 
-<a href="{% url 'update-user' profile.pk %}">Изменить данные</a>
+
+            <div class="row py-5 justify-content-md-center">
+
+                <div class="col-lg-6 col-md-10 col-sm-12">
+                    <img src="../media/{{ profile.foto|default:'images/1.jpg' }}" width="400" alt="Муж на час" class="img-fluid z-depth-1 wow fadeInLeft" data-wow-delay="0.7s">
+                </div>
+
+                <div class="col-lg-6 col-md-10 col-sm-12 pt-3 wow fadeInRight" data-wow-delay="0.8s">
+                    <p align="left">
+                             {{ user.last_name }} {{ user.first_name }}<br><strong class="mycolor"> {{ request.user.username }}</strong>    <br>
+                    <a href="{% url 'update-user' profile.pk %}" class="mycolor">Изменить данные</a>
+                    {{ user.email }}<br>
+                    {{ profile.phone }}<br>
+                    {{ profile.telegram }}<br>
+                    {{ profile.city|choice_tag:'city' }}<br>
+                <blockquote class="blockquote">
+                        <p class="mb-0" align="left">Выполнено заказов: 153<br>
+                        Выручка: 153<br>
+                        Рейтинг: 7,9
+                        </p>
+                </blockquote>
+
+
+                     </p>
+
+
+
+    <!-- About Me -->
+
+
+
 {% endblock body %}
+
+
+
+
+

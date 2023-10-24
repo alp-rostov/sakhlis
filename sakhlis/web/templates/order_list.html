@@ -54,7 +54,7 @@
         g.find("#customer_telegram_").attr("href", "https://t.me/"+r.customer_telegram);
         g.find("#customer_telegram_").attr("id", "customer_telegram_"+r.num_order);
 
-        g.find("#city_").html(r.address_city);
+        g.find("#city_").html('Тбилиси');
         g.find("#city_").attr("id", "city_"+r.pk);
 
         g.find("#street_app_").html(r.address_street_app);
@@ -154,12 +154,12 @@ $(document).ready(function() {
 
                     <a href="{% url 'invoice' i.pk %}" id="order_{{ i.pk }}" class="mycolor">Заказ №{{ i.pk}}</a>
 
-                    <a href="{% url 'delete-order' i.pk %}" id="delete_{{ i.pk }}" class="mycolor">Удалить</a><br>
+                    <a href="{% url 'delete-order' i.pk %}" id="delete_{{ i.pk }}" class="mycolor"><img src="media/images/delete.png" width="15" ></a><br>
 
                     <p id="text_order_{{ i.pk }}" >{{ i.text_order|truncatechars:70 }}</p>
                 </td>
                 <td width = 50></td>
-                <td><span id="customer_name_{{ i.pk }}" >{{ i.customer_name }}</span> |
+                <td><span id="customer_name_{{ i.pk }}" >{{ i.customer_name }}</span><br>
                     <a href="tel:{{ i.customer_phone }}" title="Телефон" id="customer_phone_{{ i.pk }}" class="fas fa-phone text-danger fa-sm mr-1">
                         </a>
                     <a href="https://t.me/{{ i.customer_telegram|cut:'@' }}" title="Телеграм" id="customer_telegram_{{ i.pk }}">
@@ -206,11 +206,11 @@ $(document).ready(function() {
     <tr id="row_order" class="hidden">
 
         <td>
-            <a href="" id="order_" class="mycolor"> </a>   <a href="" id="delete_" class="mycolor">Удалить</a><br>
+            <a href="" id="order_" class="mycolor"> </a>   <a href="" id="delete_" class="mycolor"><img src="media/images/delete.png" width="15" ></a><br>
             <span id="text_order_"></span>
         </td>
         <td width = 50></td>
-        <td><span id="customer_name_"></span>, |
+        <td><span id="customer_name_"></span><br>
             <a href="" title="Телефон" id="customer_phone_" class="fas fa-phone text-danger fa-sm mr-1"></a>
             <a href="" title="Телеграм" id="customer_telegram_"><img src="/static/images/telegram.gif" width="20"></a><br>
             <span id="city_"></span>,
