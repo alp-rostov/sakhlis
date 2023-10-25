@@ -26,7 +26,7 @@ class UserRegisterView(CreateView):
             RepairerList.objects.create(user=self.object)
         return redirect('home')
 
-class UserDetailInformation(DetailView):
+class UserDetailInformation(LoginRequiredMixin, DetailView):
     model = User
     template_name = 'repaier_update.html'
     form_class = UserRegisterForm
@@ -34,7 +34,20 @@ class UserDetailInformation(DetailView):
     context_object_name = 'user'
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['profile'] = RepairerList.objects.get(user=self.object)
+        context['profile'] = RepairerList.objects.annotate(raiting=F('rating_sum')/F('rating_num'))\
+            .get(user=self.object)
+
+
+        context['count'] =  OrderList.objects\
+            .values('repairer_id')\
+            .annotate(count=Count('repairer_id'))\
+            .filter(repairer_id=self.request.user)
+
+        context['sum'] = Invoice.objects\
+            .values('order_id__repairer_id')\
+            .annotate(count=Sum(F('price') * F('quantity')))\
+            .filter(order_id__repairer_id=self.request.user)
+
         return context
 
 

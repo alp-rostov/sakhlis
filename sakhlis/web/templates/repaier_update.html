@@ -4,45 +4,30 @@
 
 {% block body %}
 
-
- <!--About Me -->
-
-
-
-
             <div class="row py-5 justify-content-md-center">
 
                 <div class="col-lg-6 col-md-10 col-sm-12">
-                    <img src="../media/{{ profile.foto|default:'images/1.jpg' }}" width="400" alt="Муж на час" class="img-fluid z-depth-1 wow fadeInLeft" data-wow-delay="0.7s">
+                    <img src="../media/{{ profile.foto|default:'images/1.jpg' }}" width="400"
+                     alt="Муж на час" class="img-fluid z-depth-1 wow fadeInLeft" data-wow-delay="0.7s">
                 </div>
 
                 <div class="col-lg-6 col-md-10 col-sm-12 pt-3 wow fadeInRight" data-wow-delay="0.8s">
                     <p align="left">
-                             {{ user.last_name }} {{ user.first_name }}<br><strong class="mycolor"> {{ request.user.username }}</strong>    <br>
-                    <a href="{% url 'update-user' profile.pk %}" class="mycolor">Изменить данные</a>
-                    {{ user.email }}<br>
-                    {{ profile.phone }}<br>
-                    {{ profile.telegram }}<br>
-                    {{ profile.city|choice_tag:'city' }}<br>
-                <blockquote class="blockquote">
-                        <p class="mb-0" align="left">Выполнено заказов: 153<br>
-                        Выручка: 153<br>
-                        Рейтинг: 7,9
-                        </p>
-                </blockquote>
+                        {{ user.last_name }} {{ user.first_name }} | <strong class="mycolor"> {{ request.user.username }}</strong>
+                        <a href="{% url 'update-user' profile.pk %}" class="mycolor" title="изменить данные"><img src="../media/images/change.png" width="25"></a><br></a><br>
+                        {{ user.email }}<br>
+                        {{ profile.phone }}<br>
+                        {{ profile.telegram }}<br>
+                        {{ profile.city|choice_tag:'city' }}<br>
+                        <blockquote class="blockquote">
+                    <p align="left">{{ profile.profile }}</p>
+                            <p class="mb-0" align="left">Выполнено заказов: {{ count.0.count }}<br>
+                                Выручка: {{ sum.0.count }} <br>
+                                Рейтинг: {{ profile.raiting }} / {{ profile.rating_sum}} /{{ profile.rating_num}}
+                            </p>
 
-
-                     </p>
-
-
-
-    <!-- About Me -->
-
+                        </blockquote>
+                    </p>
 
 
 {% endblock body %}
-
-
-
-
-

@@ -28,7 +28,7 @@ def get_info_for_pdf():
 
 
 def get_data_for_graf(queryset, labels_name:str, data_name:str, help_dict:dict=None) -> tuple:
-    """ return dicts using for create Graf in statistica.html """
+    """ return dicts using for create Graph in statistica.html """
     labels = []
     data = []
     if help_dict:
@@ -164,7 +164,7 @@ class InvoiceMaker(object):
 
 
 class Graph:
-    """ create graph and sent to template """
+    """ create a graph and sent to template """
     def __init__(self, labels:dict, data:dict, name_graf:str, name_legend:str):
         self.labels=labels
         self.data=data
@@ -204,7 +204,6 @@ class Graph:
         warnings.simplefilter("ignore", UserWarning)
         self.fig = plt.gcf()
         return self.sent(self.fig)
-
 
 
     def sent(self, fig):

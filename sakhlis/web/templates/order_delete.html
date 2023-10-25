@@ -1,4 +1,4 @@
-{% extends 'flatpages/default.html' %}
+{% extends 'flatpages/default_user.html' %}
 
 {% block body %}
 
@@ -7,7 +7,7 @@
 <form action="" method="post">
     {% csrf_token %}
     <h3>Внимание! Восстановление заказа будет невозможно</h3>
-    <p>Удалить информацию о заказе "{{ object }}"?</p>
+    <p>Удалить информацию о заказе "{{ object.pk }}"?</p>
     <input type="submit" value="Delete" />
 </form>
 

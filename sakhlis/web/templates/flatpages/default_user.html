@@ -76,26 +76,19 @@ top: 0;
                     </li>
                     <li class="nav-item mr-4">
                         {% if the_url3 in request.get_full_path  %}
-                        <a class="nav-link" href="{{ the_url3 }}"><b>мои данные</b></a>
+                        <a class="nav-link" href="{{ the_url3 }}"><b>Мои данные</b></a>
                         {% else %}
-                        <a class="nav-link" href="{{ the_url3 }}">мои данные</a>
+                        <a class="nav-link" href="{{ the_url3 }}">Мои данные</a>
                         {% endif %}
                     </li>
 
                         {% if request.user.is_authenticated %}
                             <li class="nav-item mr-4">
 
-                            <a class="nav-link" href="{% url 'list_order' %}">{{request.user.username}}</a>
-                            </li>
-
-                                 <li class="nav-item mr-4">
-
                             <a class="nav-link" href="{% url 'logout' %}">Выйти</a>
 
                             </li>
 
-                          {% else %}
-                            <a class="nav-link" href="{% url 'login' %}" title='Авторизация мастера'>Авторизация</a>
                          {% endif %}
 
 

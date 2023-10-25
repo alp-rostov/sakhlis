@@ -156,17 +156,17 @@ $(document).ready(function() {
 
                     <a href="{% url 'delete-order' i.pk %}" id="delete_{{ i.pk }}" class="mycolor"><img src="media/images/delete.png" width="15" ></a><br>
 
-                    <p id="text_order_{{ i.pk }}" >{{ i.text_order|truncatechars:70 }}</p>
+                    <p id="text_order_{{ i.pk }}" >{{ i.text_order|truncatechars:70|capfirst }}</p>
                 </td>
                 <td width = 50></td>
-                <td><span id="customer_name_{{ i.pk }}" >{{ i.customer_name }}</span><br>
+                <td><span id="customer_name_{{ i.pk }}" >{{ i.customer_name|capfirst }}</span><br>
                     <a href="tel:{{ i.customer_phone }}" title="Телефон" id="customer_phone_{{ i.pk }}" class="fas fa-phone text-danger fa-sm mr-1">
                         </a>
                     <a href="https://t.me/{{ i.customer_telegram|cut:'@' }}" title="Телеграм" id="customer_telegram_{{ i.pk }}">
                         <img src="/static/images/telegram.gif" width="20"></a>
                     <br>
                     <span id="city_{{ i.pk }}" >{{ i.address_city|choice_tag:'city'}}</span>,
-                    <span id="street_app_{{ i.pk }}">{{ i.address_street_app }}</span>,
+                    <span id="street_app_{{ i.pk }}">{{ i.address_street_app|capfirst }}</span>,
                     <span id="num_{{ i.pk }}">{{ i.address_num }}</span>.
                 </td>
                 </tr>
