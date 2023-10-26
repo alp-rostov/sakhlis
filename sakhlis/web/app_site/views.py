@@ -1,7 +1,7 @@
 import json
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db import transaction
-from django.db.models import F, Prefetch, Sum, Count
+from django.db.models import F, Prefetch, Sum, Count, Avg
 from django.forms import modelformset_factory
 from django.shortcuts import redirect, get_object_or_404
 from django.urls import reverse_lazy
@@ -36,7 +36,6 @@ class UserDetailInformation(LoginRequiredMixin, DetailView):
         context = super().get_context_data(**kwargs)
         context['profile'] = RepairerList.objects.annotate(raiting=F('rating_sum')/F('rating_num'))\
             .get(user=self.object)
-
 
         context['count'] =  OrderList.objects\
             .values('repairer_id')\
@@ -215,7 +214,7 @@ class Statistica(TemplateView):
 
         b = OrderList.objects\
             .values('time_in__month', 'time_in__year', 'pk')\
-            .annotate(count=Sum(F('invoice__price') * F('invoice__quantity'))/Count(F('pk')))\
+            .annotate(count=Avg(F('invoice__price') * F('invoice__quantity')))\
             .filter(repairer_id=self.request.user)
 
         c = Invoice.objects \

@@ -1,8 +1,7 @@
-{% extends 'flatpages/default.html' %}
+{% extends 'flatpages/default_user.html' %}
 
 {% block body %}
-{{ request.user.username }}
-<button> <a href="/app/logout/">Выйти</a> </button>
+
 <h1>Заказ № {{ pk }} от {{ time_in|date:"d.m.Y" }}</h1>
 <hr>
 <form action="" method="post" enctype="multipart/form-data">

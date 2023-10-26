@@ -7,6 +7,7 @@
     .hidden{
     display:none
     }
+
 </style>
 
 <script>
@@ -42,7 +43,6 @@
     }
     </script>
 
-<br>
 {% if prev.pk %}
 <p align="center" class="mycolor">
 <a href="{% url 'invoice' prev.pk %}" class="mycolor"><--</a>||
@@ -53,24 +53,25 @@
 {% endif %}
 </p>
 
-<h2 class="h1-responsive">Заявка № {{ info.id }}<br>{{ info.time_in }}</h2>
+<p class="h4-responsive">Заявка № {{ info.id }}<br>{{ info.time_in }}</p>
 
 {% if info.order_status == 'SND' %}
-<p  >статус заказа: <b id="stepstatuswork">Направлен мастеру </b>  ->
-<a href="../changestatus?order_pk={{ info.pk}}&work_status=RCV" id="workstatus">ПРИНЯТЬ ЗАКАЗ</a><br>
+<p><b id="stepstatuswork">Заявка направлена мастеру </b>  <br>
+<a href="../changestatus?order_pk={{ info.pk}}&work_status=RCV" id="workstatus"
+   class="btn btn-md btn-orange" >ПРИНЯТЬ ЗАКАЗ</a><br>
 </p>
 {% endif %}
 
 {% if info.order_status == 'RCV' %}
-<p  >статус заказа: <b id="stepstatuswork">Заявка в работе</b>
-    <a href="../changestatus?order_pk={{ info.pk}}&work_status=END" id="workstatus">Работы выполненны</a><br>
+<p><b id="stepstatuswork">Заявка в работе</b><br>
+    <a href="../changestatus?order_pk={{ info.pk}}&work_status=END" id="workstatus" class="btn btn-md btn-orange">Работы выполненны</a><br>
 
 </p>
 
 {% endif %}
 
 {% if info.order_status == 'END' %}
-<p  >статус заказа: <b id="stepstatuswork">Работы выполнены</b>
+<p><b id="stepstatuswork"><i class="fas fa-check-circle about-text"></i> Работы выполнены</b>
 
 </p>
 
@@ -78,32 +79,32 @@
 {% endif %}
 
 <br>
-    <table width="700"><tr>
-        <td>Заказчик: {{ info.customer_name }}  <a href="../list_order/update/{{ info.pk}}">изменить</a></td>
+    <table class="table" ><tr>
+        <td>Заказчик:</td><td> {{ info.customer_name }}  <a href="../list_order/update/{{ info.pk}}"><img src="/media/images/change.png" width="25" ></a></td>
     </tr>
         <tr>
-        <td><b>Адрес: </b>{{ info.address_city|choice_tag:'city' }}, {{ info.address_street_app }}, {{ info.address_num }}</td>
+        <td><b>Адрес: </b></td><td>{{ info.address_city|choice_tag:'city' }}, {{ info.address_street_app }}, {{ info.address_num }}</td>
     </tr>
     <tr>
-         <td><b>Телефон:</b>{{ info.customer_phone }}</td>
+         <td><b>Телефон:</b></td><td>{{ info.customer_phone }}</td>
     </tr>
     <tr>
-         <td><b>Описание проблемы:</b> {{ info.text_order }}</td>
+         <td><b>Описание проблемы:</b></td><td> {{ info.text_order }}</td>
     </tr>
     </table>
 
 {% if info.order_status == 'SND' %}
-<table width="500" id="table_invoice" class="hidden">
+<table id="table_invoice" class="hidden">
 {% else %}
-<table width="500" id="table_invoice">
+<table id="table_invoice" class="table" >
 {% endif %}
-    <tr clospan="5"><td><h4>Выполненные работы: </h4></td></tr>
- <tr>
+
+ <tr  class="table-warning">
             <th>Наименование </th>
             <th>Количество </th>
             <th>Цена</th>
-            <th>Сумма</th>
-            <th>----</th>
+            <th >Сумма</th>
+            <th > </th>
     </tr>
 
 
@@ -112,7 +113,7 @@
             <td name="quantity"></td>
             <td name="price"></td>
             <td name="amount">0</td>
-            <td name="delete"><a href="" class="link-delete" >удалить</a></td>
+            <td name="delete"><a href="" class="link-delete" ><img src="/media/images/delete.png" width="15" ></a></td>
     </tr>
 
 
@@ -123,14 +124,18 @@
             <td name="quantity">{{ g.quantity }} </td>
             <td name="price">{{ g.price }}</td>
             <td name="amount">{{ g.amount }}</td>
-            <td name="delete"><a href="{% url 'delete-item-of-order' g.pk %}" class="link-delete" >удалить</a></td>
+            <td name="delete"><a href="{% url 'delete-item-of-order' g.pk %}" class="link-delete" ><img src="/media/images/delete.png" width="15"></a></td>
     </tr>
 {% endfor %}
-    <tr id="total"><td></td></tr>
+    <tr class="table-warning">
 
 
+<th></th><th class="h5-responsive" ></th>
+            <th class="h5-responsive "  >Итого: </th>
+            <th class="h5-responsive" id="total" > </th><th></th>
+            </tr>
 
-</table>
+</table>class="h5-responsive"
 
 {% if info.order_status == 'SND' %}
 <form action="" method="post" id="id_form" class="hidden">
@@ -148,7 +153,7 @@
                 <a href="../serv?type_work={{ u.0 }}" class="type_work">{{ u.1 }}</a>
             {% endfor %}
             </span>
-            <br> {{ form.empty_form }}<a href="#" id="delete-empty-form">удалить</a>
+            <br> {{ form.empty_form }}<a href="#" id="delete-empty-form"><img src="/media/images/delete.png" width="15"></a>
         </div>
         {{ form.management_form }}
     </div>
@@ -164,7 +169,7 @@
     function sum_total() {
        let sum_total=0;
        $('td[name="amount"]').each(function(){sum_total += parseInt($(this).html());});
-       $('#total').html('ИТОГО:'+ sum_total);
+       $('#total').html(sum_total);
     }
 
     </script>
@@ -195,7 +200,7 @@
                         tr.find('td[name="quantity"]').html(b[i].quantity);
                         tr.find('td[name="price"]').html(b[i].price);
                         tr.find('td[name="amount"]').html(b[i].price*b[i].quantity);
-                        tr.find('td[name="delete"]').html('<a href="/invoice/delete/'+b[i].pk+'" class="link-delete" >удалить</a>');
+                        tr.find('td[name="delete"]').html('<a href="/invoice/delete/'+b[i].pk+'" class="link-delete" ><img src="/media/images/delete.png" width="15"></a>');
                         tr.attr('class','form_text')
                         $('#total').before(tr);
                         sum_total();
@@ -256,7 +261,10 @@ $(document.body).on( "click", "#workstatus", function(e) {
                         } else
                         if (b=='END') {
                             $('#workstatus').remove();
-                            $('#stepstatuswork').html('Работы выполнены');
+                            $('#stepstatuswork').html('<i class="fas fa-check-circle about-text"></i> Работы выполнены');
+
+
+
                         }
 
                         console.log
