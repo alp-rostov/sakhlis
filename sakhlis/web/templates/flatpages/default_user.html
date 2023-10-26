@@ -127,9 +127,9 @@ top: 0;
                             {% endif %}
 
                             {% if request.GET.work_status == 'END' %}
-                            <a href="{% url 'list_order'%}?work_status=END"><b>Заявки окноченные</b></a>
+                            <a href="{% url 'list_order'%}?work_status=END"><b>Заявки оконченные</b></a>
                             {% else %}
-                            <a href="{% url 'list_order'%}?work_status=END">Заявки окноченные</a>
+                            <a href="{% url 'list_order'%}?work_status=END">Заявки оконченные</a>
                             {% endif %}
                         </div>
 

@@ -43,17 +43,27 @@
     }
     </script>
 
-{% if prev.pk %}
-<p align="center" class="mycolor">
-<a href="{% url 'invoice' prev.pk %}" class="mycolor"><--</a>||
+
+
+<table  width="300">
+    <tr><td>{% if prev.pk %}
+    <a href="{% url 'invoice' prev.pk %}" class="btn"><</a>
+{% endif %}
+    </td>
+
+    <td align="center" class="h6-responsive">
+Заявка № {{ info.id }}<br>{{ info.time_in }}
+    </td>
+        <td>
+
+       {% if next.pk %}
+            <a href="{% url 'invoice' next.pk %}" class="btn">></a>
 {% endif %}
 
-{% if next.pk %}
-<a href="{% url 'invoice' next.pk %}" class="mycolor">--></a>
-{% endif %}
-</p>
+    </td></tr>
+</table>
+<br>
 
-<p class="h4-responsive">Заявка № {{ info.id }}<br>{{ info.time_in }}</p>
 
 {% if info.order_status == 'SND' %}
 <p><b id="stepstatuswork">Заявка направлена мастеру </b>  <br>
@@ -66,12 +76,14 @@
 <p><b id="stepstatuswork">Заявка в работе</b><br>
     <a href="../changestatus?order_pk={{ info.pk}}&work_status=END" id="workstatus" class="btn btn-md btn-orange">Работы выполненны</a><br>
 
+
 </p>
 
 {% endif %}
 
 {% if info.order_status == 'END' %}
-<p><b id="stepstatuswork"><i class="fas fa-check-circle about-text"></i> Работы выполнены</b>
+<p><b id="stepstatuswork"><i class="fas fa-check-circle about-text"></i> Работы выполнены</b><br>
+    <a href="pdf/{{ info.id }}" class="btn btn-md btn-orange">Квитанция на оплату - PDF</a>
 
 </p>
 
@@ -135,7 +147,7 @@
             <th class="h5-responsive" id="total" > </th><th></th>
             </tr>
 
-</table>class="h5-responsive"
+</table>
 
 {% if info.order_status == 'SND' %}
 <form action="" method="post" id="id_form" class="hidden">
@@ -159,9 +171,10 @@
     </div>
     <div id="error"></div>
 
-    <button id="add-more" type="button">add-more</button>
-    <button type="submit"> "Save" </button><br>
-<a href="pdf/{{ info.id }}">Квитанция на оплату - PDF</a>
+    <button id="add-more" type="button" class="btn btn-md btn-orange">add-more</button>
+    <button type="submit" class="btn btn-md btn-orange"> "Save" </button><br>
+
+
 </form>
 
     <script>
@@ -261,7 +274,7 @@ $(document.body).on( "click", "#workstatus", function(e) {
                         } else
                         if (b=='END') {
                             $('#workstatus').remove();
-                            $('#stepstatuswork').html('<i class="fas fa-check-circle about-text"></i> Работы выполнены');
+                            $('#stepstatuswork').html('<i class="fas fa-check-circle about-text"></i> Работы выполнены<br><a href="pdf/{{ info.id }}" class="btn btn-md btn-orange">Квитанция на оплату - PDF</a>');
 
 
 
