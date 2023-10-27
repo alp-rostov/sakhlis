@@ -66,6 +66,7 @@ MIDDLEWARE = [
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
 
     "debug_toolbar.middleware.DebugToolbarMiddleware",
+    'app_site.utils.SimpleMiddleware'
 ]
 
 ROOT_URLCONF = 'web.urls'

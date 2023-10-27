@@ -125,7 +125,7 @@ class OrderUpdate(LoginRequiredMixin, UpdateView):
         context['pk'] = self.object.pk
         return context
     def get_success_url(self):
-        return '/invoice/'+str(self.object.pk)
+        return '/list_order/'+str(self.object.pk)
 
 
 class OrderDelete(LoginRequiredMixin, DeleteView):
@@ -202,7 +202,7 @@ class InvoiceCreate(LoginRequiredMixin, DetailView):
 
 
 
-class Statistica(TemplateView):
+class Statistica(LoginRequiredMixin, TemplateView):
     template_name = 'statistica.html'
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -234,7 +234,7 @@ class Statistica(TemplateView):
             .values('time_in__date') \
             .annotate(count=Sum(F('invoice__price') * F('invoice__quantity'))) \
             .order_by('-time_in__date') \
-            .filter(repairer_id=self.request.user)[0:10:-1]
+            .filter(repairer_id=self.request.user)[0:30:-1]
 
 
         labels, sizes = get_data_for_graf(c,'service_id__type','count', WORK_CHOICES_)

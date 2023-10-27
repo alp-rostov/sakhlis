@@ -138,7 +138,7 @@ $(document).ready(function() {
 });
 </script>
 
-<table id="head" width="500">
+<table id="head" class="">
     {% regroup order by time_in|date:"d.m.Y" as day %}
         {% for y in day %}
         <tr><td  colspan="6"><hr></td></tr>

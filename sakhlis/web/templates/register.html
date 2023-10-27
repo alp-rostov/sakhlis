@@ -1,19 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'flatpages/default_user.html' %}
+{% load custom_filters %}
+{% load custom_tags %}
 
+{% block body %}
 <h2> Регистрация </h2>
 <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
+    <table class="table">
     {% for i in form %}
-        <p>{{i.label}}: {{ i }}</p>
-        <div class="form-error">{{ i.errors }}</div>
+        <tr><td>{{i.label}}: </td><td>{{ i }}<br>
+            <div class="form-error">{{ i.errors }}</div></td></tr>
+
     {% endfor %}
-    <button type="submit">Регистрация</button>
+        <tr><td colspan="2" align="center">
+    <button type="submit" class="btn btn-sm btn-orange btn-form cta-btn waves-effect">Регистрация</button>
+        </td></tr>
+    </table>
 </form>
-</body>
-</html>
+        {% endblock body %}

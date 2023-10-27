@@ -1,15 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'flatpages/default_user.html' %}
+{% load custom_filters %}
+{% load custom_tags %}
+
+{% block body %}
 <h2>{{ appointment.username }} Спасибо за регистрацию!</h2>
     <p> Уважаемый  {{ appointment.last_name }} {{ appointment.first_name }} благодарим Вас
         за регистрацию на сайте мастеров/</p>
     <p>Ваше логин: {inst_.username} </p>
     <p><a href="">Личный кабинет</a></p>
 
-</body>
-</html>
+
+        {% endblock body %}

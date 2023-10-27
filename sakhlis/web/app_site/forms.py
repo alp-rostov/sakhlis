@@ -70,7 +70,7 @@ class RepairerForm(forms.ModelForm):
 class UserRegisterForm(UserCreationForm):
     email = forms.EmailField(label="Email",
                              widget=forms.EmailInput(
-                                 attrs={"class": "form-control", 'placeholder': "email"}
+                                 attrs={ 'placeholder': "@"}
                                                     ),
                              )
     first_name = forms.CharField(label="Имя")
@@ -115,10 +115,4 @@ class RepairerForm(forms.ModelForm):
     class Meta:
         model = RepairerList
         fields = ('phone', 'telegram', 'profile', 'city', 'foto')
-
-# class ServiceForm(forms.ModelForm):
-#     class Meta:
-#         model = Service
-#         fields = '__all__'
-
 

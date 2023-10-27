@@ -98,8 +98,17 @@
         <td><b>Адрес: </b></td><td>{{ info.address_city|choice_tag:'city' }}, {{ info.address_street_app }}, {{ info.address_num }}</td>
     </tr>
     <tr>
-         <td><b>Телефон:</b></td><td>{{ info.customer_phone }}</td>
+         <td><b>Телефон:</b></td><td>{{ info.customer_phone }}
+        <a href="tel:{{ info.customer_phone }}" title="Телефон" class="fas fa-phone text-danger fa-sm mr-1">
+                        </a></td>
     </tr>
+    <tr>
+         <td><b>Телеграм:</b></td><td>@{{ info.customer_telegram }}
+    <a href="https://t.me/{{ info.customer_telegram|cut:'@' }}" title="Телеграм">
+                        <img src="/static/images/telegram.gif" width="25"></a>
+        </td>
+    </tr>
+
     <tr>
          <td><b>Описание проблемы:</b></td><td> {{ info.text_order }}</td>
     </tr>
@@ -139,7 +148,8 @@
             <td name="delete"><a href="{% url 'delete-item-of-order' g.pk %}" class="link-delete" ><img src="/media/images/delete.png" width="15"></a></td>
     </tr>
 {% endfor %}
-    <tr class="table-warning">
+
+    <tr class="table-warning" id="total_">
 
 
 <th></th><th class="h5-responsive" ></th>
@@ -148,6 +158,10 @@
             </tr>
 
 </table>
+
+
+
+
 
 {% if info.order_status == 'SND' %}
 <form action="" method="post" id="id_form" class="hidden">
@@ -215,7 +229,7 @@
                         tr.find('td[name="amount"]').html(b[i].price*b[i].quantity);
                         tr.find('td[name="delete"]').html('<a href="/invoice/delete/'+b[i].pk+'" class="link-delete" ><img src="/media/images/delete.png" width="15"></a>');
                         tr.attr('class','form_text')
-                        $('#total').before(tr);
+                        $('#total_').before(tr);
                         sum_total();
                     }
                     c.remove();
@@ -269,7 +283,7 @@ $(document.body).on( "click", "#workstatus", function(e) {
                             $('#workstatus').html('Работы выполнены');
                             $('#workstatus').attr('href', "../changestatus?order_pk={{ info.pk}}&work_status=END");
                             $('#id_form').attr('class', '');
-                            $('#table_invoice').attr('class', '');
+                            $('#table_invoice').attr('class', 'table');
 
                         } else
                         if (b=='END') {
