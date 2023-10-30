@@ -46,8 +46,9 @@ INSTALLED_APPS = [
     'django_filters',
     'debug_toolbar',
     'formtools',
-
+    # 'easy_maps',
     'app_site.apps.AppSiteConfig',
+
 
 
 
@@ -66,7 +67,7 @@ MIDDLEWARE = [
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
 
     "debug_toolbar.middleware.DebugToolbarMiddleware",
-    'app_site.utils.SimpleMiddleware'
+    # 'app_site.utils.SimpleMiddleware'
 ]
 
 ROOT_URLCONF = 'web.urls'
@@ -181,3 +182,8 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')  # пароль от
 EMAIL_USE_SSL = True  # Яндекс использует ssl, подробнее о том, что это, почитайте в дополнительных источниках, но включать его здесь обязательно
 
 DEFAULT_CHARSET = 'utf-8'
+#
+# EASY_MAPS_GOOGLE_KEY = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ___0123456789'
+# EASY_MAPS_CENTER = (-41.3, 32)
+# EASY_MAPS_ZOOM = 8  # Default zoom level, see https://developers.google.com/maps/documentation/javascript/tutorial#MapOptions for more information.
+# EASY_MAPS_LANGUAGE = 'ru'

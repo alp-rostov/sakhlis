@@ -16,7 +16,6 @@ import io
 
 from .models import OrderList, Invoice
 
-
 def get_info_for_pdf():
     return OrderList.objects \
         .annotate(sum=Sum(F('invoice__price') * F('invoice__quantity'))) \
@@ -25,7 +24,6 @@ def get_info_for_pdf():
                                    .select_related('service_id')
                                    .annotate(sum=F('price') * F('quantity')))
                           ).select_related('repairer_id')
-
 
 def get_data_for_graf(queryset, labels_name:str, data_name:str, help_dict:dict=None) -> tuple:
     """ return dicts using for create Graph in statistica.html """
@@ -42,11 +40,11 @@ def get_data_for_graf(queryset, labels_name:str, data_name:str, help_dict:dict=N
 
     return labels, data
 
-def set_coordinates_address(street: str, city: str) -> str:
+def set_coordinates_address(street: str, city: str, app_num: str) -> str:
     """ setting of map coordinates by street and city """
     try:
-        geolocator = Nominatim(user_agent="app_site", )
-        location = geolocator.geocode({'street': {street}, 'city': {city}}, addressdetails=True)
+        geolocator = Nominatim(user_agent="app_site")
+        location = geolocator.geocode(street + ', ' + app_num + ', ' + city)
     except TypeError:
         return ' '
     if location:
@@ -84,9 +82,9 @@ class InvoiceMaker(object):
         # create a table containing information about companies
         data = [
             ['My Company: ', ' Gotsin S.A.', 'Customer company:', self.info.customer_name],
-            ['Adress Company: ', ' Tbilisi, Zuraba Pataridze.', 'Customer Adress:', self.info.address_street_app],
+            ['Adress Company: ', ' Tbilisi, Zuraba Pataridze.', 'Customer Adress:', self.info.address_street_app + ', ' + self.info.address_num],
             ['Code Company: ', ' 302265920', 'Customer code:', self.info.customer_code],
-            ['Phone:', '+796044586678', 'Phone:', self.info.customer_phone],
+            ['Phone:', '+995598259119', 'Phone:', self.info.customer_phone],
             ['Bank:', 'Credo Bank'],
             ['CODE:', 'JSCRG22'],
             ['Account:', 'GE18CD0360000030597044']
@@ -215,23 +213,24 @@ class Graph:
 
 
 
-class SimpleMiddleware:
-    def __init__(self, get_response):
-        self.get_response = get_response
-        # One-time configuration and initialization.
+# class SimpleMiddleware:
+#     def __init__(self, get_response):
+#         self.get_response = get_response
+#         # One-time configuration and initialization.
+#
+#     def __call__(self, request):
+#         # Code to be executed for each request before
+#         # the view (and later middleware) are called.
+#         print(request.GET)
+#         print(request.POST)
+#         print('---------------')
+#         response = self.get_response(request)
+#         print(request.GET)
+#         print(request.POST)
+#         print('++++++++++++++++')
+#         # Code to be executed for each request/response after
+#         # the view is called.
+#
+#         return response
 
-    def __call__(self, request):
-        # Code to be executed for each request before
-        # the view (and later middleware) are called.
-        print(request.GET)
-        print(request.POST)
-        print('---------------')
-        response = self.get_response(request)
-        print(request.GET)
-        print(request.POST)
-        print('++++++++++++++++')
-        # Code to be executed for each request/response after
-        # the view is called.
-
-        return response
 

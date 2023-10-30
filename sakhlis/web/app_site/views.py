@@ -8,9 +8,10 @@ from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
 from .models import *
 from .forms import OrderForm, InvoiceForm, UserRegisterForm, RepairerForm
-from .utils import InvoiceMaker, get_data_for_graf, Graph, get_info_for_pdf
+from .utils import *
 from django.http import FileResponse, Http404, HttpResponseRedirect, JsonResponse
 import io
+
 
 
 class UserRegisterView(CreateView):
@@ -57,6 +58,7 @@ class OrderCreate(CreateView):
     form_class = OrderForm
     success_url = reverse_lazy('home')
 
+
     def post(self, request, *args, **kwargs):
         super().post(request, *args, **kwargs)
         return JsonResponse({'message': f'<h3>Заявка № {self.object.pk} отправлена успешно!</h3>',
@@ -86,7 +88,7 @@ class OrderCreate(CreateView):
             form.instance.customer_telegram = name_telegram_customer
 
         form.instance.text_order = form.instance.text_order.replace('<', '[').replace('>', ']')
-
+    
         return super(OrderCreate, self).form_valid(form)
 
 
@@ -259,7 +261,6 @@ class Statistica(LoginRequiredMixin, TemplateView):
 
 
         return context
-
 
 
 def CreateIvoicePDF(request, **kwargs):

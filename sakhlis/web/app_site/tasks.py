@@ -17,7 +17,7 @@ def send_order_information(inst):
     instance = OrderList.objects.get(pk=inst)
     repairer = User.objects.all().values_list('pk', 'username')
 
-    map_ = set_coordinates_address(instance.address_street_app, 'Тбилиси')
+    map_ = set_coordinates_address(instance.address_street_app, 'Тбилиси', instance.address_num)
     subject_ = f'<b>Заказ на работы № {instance.pk} от {instance.time_in.strftime("%m/%d/%Y")}</b>'
     text = subject_ + f'\n ' \
                       f'ИМЯ: {instance.customer_name} \n' \
