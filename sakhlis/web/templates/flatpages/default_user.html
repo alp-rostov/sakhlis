@@ -33,6 +33,7 @@
 .hidden{
 display:none;
 }
+
 .sticky {
 position: sticky;
 top: 0;
@@ -110,9 +111,6 @@ top: 0;
                             {% endblock subbody%}
 
 
-
-                            <a href="#----"  onclick="show_create_order_form(document.getElementById('form'))"
-                                                  id="link_create_order_form">Создать заказ</a> |
 
                             {% if request.GET.work_status == 'SND' %}
                             <a href="{% url 'list_order' %}?work_status=SND"><b>Новые заказы</b></a> |

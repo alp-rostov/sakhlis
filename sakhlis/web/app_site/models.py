@@ -78,12 +78,6 @@ MONTH_ = ['','Январь', 'Февраль', 'Март', 'Апрель', 'Ма
 
 
 
-
-
-
-
-
-
 class Service(models.Model):
     """name type """
     name = models.\
@@ -110,8 +104,6 @@ class Invoice(models.Model):
     class Meta:
         verbose_name = 'Список работ заказа'
         verbose_name_plural = 'Список работ заказа'
-
-
 
 class OrderList(models.Model):
     """time_in time_out repairer_id price text_order customer_name customer_phone address_city address_street_app
@@ -155,11 +147,16 @@ class RepairerList(models.Model):
     rating_sum = models.IntegerField(default=0, blank=True, null=True)
     rating_num = models.IntegerField(default=0, blank=True, null=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE, blank=True, null=True)
-
     class Meta:
         verbose_name = 'Мастера'
         verbose_name_plural = 'Мастера'
-
-
     def get_absolute_url(self):
         return reverse('list_repair')
+
+class StreerTbilisi(models.Model):
+    type_street = models.CharField(max_length=50)
+    name_street = models.CharField(max_length=50)
+    class Meta:
+        verbose_name = 'Улицы Тбилиси'
+        verbose_name_plural = 'Улицы тбилиси'
+

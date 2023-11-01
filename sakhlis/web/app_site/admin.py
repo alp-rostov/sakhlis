@@ -18,7 +18,15 @@ class ServiceAdmin(admin.ModelAdmin):
     list_display_links = ('name', 'type')
     list_filter = ('type', )
 
+
+class StreetAdmin(admin.ModelAdmin):
+    list_display = ('type_street', 'name_street')
+    list_display_links = ('type_street', 'name_street')
+
+
+
 admin.site.register(RepairerList)
 admin.site.register(Service, ServiceAdmin)
 admin.site.register(Invoice, InvoiceAdmin)
 admin.site.register(OrderList, OrderListAdmin)
+admin.site.register(StreerTbilisi, StreetAdmin)

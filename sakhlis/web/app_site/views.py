@@ -172,10 +172,13 @@ class InvoiceCreate(LoginRequiredMixin, DetailView):
         formset = InvoiceFormSet(queryset=Invoice.objects.none())
         context['form'] = formset
         context['type_work'] = WORK_CHOICES
-        context['next'] = OrderList.objects.filter(pk__gt=self.object.pk).values('pk').first()
-        context['prev'] = OrderList.objects.filter(pk__lt=self.object.pk).order_by('-pk').values('pk').first()
+        context['next'] = OrderList.objects.filter(pk__gt=self.object.pk, repairer_id=self.request.user).values('pk').first()
+        context['prev'] = OrderList.objects.filter(pk__lt=self.object.pk, repairer_id=self.request.user).order_by('-pk').values('pk').first()
 
         return context
+
+    def get_queryset(self):
+        return OrderList.objects.filter(repairer_id=self.request.user)
 
     def post(self, formset, **kwargs):
         b = get_object_or_404(OrderList, pk=self.kwargs.get('pk'))

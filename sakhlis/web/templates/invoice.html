@@ -12,32 +12,6 @@
 
 <script>
     function show_type_work(form) {
-<style>
-    .hidden{
-    display:none
-    }
-</style>
-
-<a href="#----"  onclick="show_create_order_form(document.getElementById('form'))"
-                      id="link_create_order_form">Создать заказ</a> |
-
-{% if request.GET.work_status == 'SND' %}
-<a href="{% url 'list_order' %}?work_status=SND"><b>Новые заказы</b></a> |
-{% else %}
-<a href="{% url 'list_order' %}?work_status=SND">Новые заказы</a> |
-{% endif %}
-
-{% if request.GET.work_status == 'RCV' %}
-<a href="{% url 'list_order'%}?work_status=RCV"><b>Заявки в работе</b></a> |
-{% else %}
-<a href="{% url 'list_order'%}?work_status=RCV">Заявки в работе</a> |
-{% endif %}
-
-{% if request.GET.work_status == 'END' %}
-<a href="{% url 'list_order'%}?work_status=END"><b>Заявки окноченные</b></a>|
-{% else %}
-<a href="{% url 'list_order'%}?work_status=END">Заявки окноченные</a>|
-{% endif %}
             $(form.nextElementSibling).fadeIn("slow", function(){
             });
     }
@@ -46,24 +20,29 @@
 
 
 
-<table  width="300">
-    <tr><td>{% if prev.pk %}
+<table class="table">
+    <tr><td align="left">
+{% if prev.pk %}
     <a href="{% url 'invoice' prev.pk %}" class="btn"><</a>
+{% else %}
+    <a href="#" class="btn btn-gray"></a>
 {% endif %}
     </td>
 
     <td align="center" class="h6-responsive">
 Заявка № {{ info.id }}<br>{{ info.time_in }}
     </td>
-        <td>
 
-       {% if next.pk %}
-            <a href="{% url 'invoice' next.pk %}" class="btn">></a>
+    <td align="right">
+{% if next.pk %}
+    <a href="{% url 'invoice' next.pk %}" class="btn">></a>
+
+{% else %}
+    <a href="#" class="btn btn-gray"></a>
 {% endif %}
 
-    </td></tr>
+</td></tr>
 </table>
-<br>
 
 
 {% if info.order_status == 'SND' %}
@@ -174,10 +153,10 @@
     <div id="form-list">
 
         <div id="empty-form" class="hidden">
-            <a href="#" onclick="show_type_work(this)" >открыть</a>
+            <a href="#" onclick="show_type_work(this)" class="btn btn-sm">открыть</a>
             <span class="type_work">
             {% for u in type_work %}
-                <a href="../serv?type_work={{ u.0 }}" class="type_work">{{ u.1 }}</a>
+                <a href="../serv?type_work={{ u.0 }}" class="type_work btn btn-sm">{{ u.1 }}</a>
             {% endfor %}
             </span>
             <br> {{ form.empty_form }}<a href="#" id="delete-empty-form"><img src="/media/images/delete.png" width="15"></a>
