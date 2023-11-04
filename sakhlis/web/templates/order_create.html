@@ -584,6 +584,8 @@
 
                                <div class="md-form mb-4">
 <!--                               <i class="fas fa-home prefix grey-text"></i><br>-->
+                                   <datalist id="languages">
+                                   </datalist>
                                    {{ form.customer_street_app.errors }}
                                    {{ form.customer_num.errors }}
                                    {{ form.address_street_app }}
@@ -628,5 +630,31 @@
       new WOW().init();
     });
     </script>
+
+<script>
+
+ $(document.body).on( "input", "#id_address_street_app", function(e) {
+        e.preventDefault();
+
+         $.ajax({
+            url: "/street?street="+$(this).val() ,
+            type: "GET",
+
+            dataType: 'json',
+            success: function(b){
+              let type=JSON.parse(b);
+                $('#languages option').remove();
+
+                 for (i = 0; i < type.length; i++) {
+                            full_name_street=type[i].type_street+type[i].name_street
+                            $('#languages').append('<option value="'+full_name_street+'">');
+
+                        }
+            }
+        });
+    });
+
+
+</script>
 
 </body></html>

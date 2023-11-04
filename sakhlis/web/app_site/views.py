@@ -242,23 +242,24 @@ class Statistica(LoginRequiredMixin, TemplateView):
             .filter(repairer_id=self.request.user)[0:30:-1]
 
 
-        labels, sizes = get_data_for_graf(c,'service_id__type','count', WORK_CHOICES_)
+        labels, sizes = get_data_for_graph(c,'service_id__type','count', WORK_CHOICES_)
+
         instans_graf=Graph(labels, sizes, 'Структура заказов, кол.', '')
         context['d']=instans_graf.make_graf_pie()
 
-        labels, sizes = get_data_for_graf(c_, 'service_id__type', 'count', WORK_CHOICES_)
+        labels, sizes = get_data_for_graph(c_, 'service_id__type', 'count', WORK_CHOICES_)
         instans_graf = Graph(labels, sizes, 'Структура заказов, лар.', '')
         context['d_'] = instans_graf.make_graf_pie()
 
-        labels, sizes = get_data_for_graf(a,'time_in__month','count', MONTH_)
+        labels, sizes = get_data_for_graph(a,'time_in__month','count', MONTH_)
         instans_graf = Graph(labels, sizes, 'Выручка', 'lar')
         context['f'] = instans_graf.make_graf_bar()
 
-        labels, sizes = get_data_for_graf(b,'time_in__month','count', MONTH_)
+        labels, sizes = get_data_for_graph(b,'time_in__month','count', MONTH_)
         instans_graf = Graph(labels, sizes, 'Средний чек заказа', 'кол')
         context['g'] = instans_graf.make_graf_bar()
-
-        labels, sizes = get_data_for_graf(h,'time_in__date','count')
+        #
+        labels, sizes = get_data_for_graph(h,'time_in__date','count')
         instans_graf = Graph(labels, sizes, 'Динамика за 30 дней.', '')
         context['hh'] = instans_graf.make_graf_plot()
 
@@ -330,10 +331,8 @@ def change_work_status(request, **kwargs):
 
 def input_street(request, **kwargs):
     """for ajax request """
-    b = StreerTbilisi.objects.filter(name_street__istartswith=request.GET.get('street')).values('type_street', 'name_street')[0:10]
-    print(b)
+    b = StreerTbilisi.objects.filter(name_street__istartswith=request.GET.get('street')).values('type_street', 'name_street')[0:15]
     json_data = json.dumps(list(b), default=str)
-    print(json_data)
     return JsonResponse(json_data, safe=False)
 
 

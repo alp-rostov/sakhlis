@@ -25,7 +25,7 @@ def get_info_for_pdf():
                                    .annotate(sum=F('price') * F('quantity')))
                           ).select_related('repairer_id')
 
-def get_data_for_graf(queryset, labels_name:str, data_name:str, help_dict:dict=None) -> tuple:
+def get_data_for_graph(queryset, labels_name:str, data_name:str, help_dict:dict=None) -> tuple:
     """ return dicts using for create Graph in statistica.html """
     labels = []
     data = []
@@ -170,13 +170,15 @@ class Graph:
         self.name_legend=name_legend
         self.fig, self.ax = plt.subplots()
     def make_graf_pie(self):
-
-        a = sum(self.data[5:len(self.data)])
-        self.labels=self.labels[0:4]
-        self.labels.append('Прочее')
-        self.data=self.data[0:4]
-        self.data.append(a)
-        explode = (0.03, 0.01, 0.01, 0.01, 0.01)
+        explode = [0.03, 0.01, 0.01, 0.01, 0.01]
+        if len(self.labels) > 4:
+            a = sum(self.data[5:len(self.data)])
+            self.labels=self.labels[0:4]
+            self.labels.append('Прочее')
+            self.data=self.data[0:4]
+            self.data.append(a)
+        else:
+            explode=explode[0:len(self.labels)]
         self.ax.pie(self.data, labels=self.labels, autopct='%1.1f%%',explode=explode)
         self.ax.set_title(self.name_graf)
         warnings.simplefilter("ignore", UserWarning)
