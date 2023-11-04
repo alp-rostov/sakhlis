@@ -265,6 +265,16 @@ class Statistica(LoginRequiredMixin, TemplateView):
 
         return context
 
+class RepaierUpdate(UpdateView):
+    model = RepairerList
+    template_name = 'repaier_create.html'
+    form_class = RepairerForm
+
+    def get_success_url(self):
+        return '/user/' + str(self.request.user.pk)
+
+
+
 
 def CreateIvoicePDF(request, **kwargs):
     """ Create invoice pdf-file for printing """
@@ -317,10 +327,13 @@ def change_work_status(request, **kwargs):
         else:
             return JsonResponse({"message": "error"})
 
-class RepaierUpdate(UpdateView):
-    model = RepairerList
-    template_name = 'repaier_create.html'
-    form_class = RepairerForm
 
-    def get_success_url(self):
-        return '/user/' + str(self.request.user.pk)
+def input_street(request, **kwargs):
+    """for ajax request """
+    b = StreerTbilisi.objects.filter(name_street__istartswith=request.GET.get('street')).values('type_street', 'name_street')[0:10]
+    print(b)
+    json_data = json.dumps(list(b), default=str)
+    print(json_data)
+    return JsonResponse(json_data, safe=False)
+
+

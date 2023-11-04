@@ -35,7 +35,7 @@ class OrderForm(forms.ModelForm):
 
     address_street_app = forms.CharField(
         label='Улица',
-        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Улица", 'maxlength':40}),
+        widget=forms.TextInput(attrs={"class": "form-control", 'list': 'languages', 'placeholder': "Улица", 'maxlength':40}),
         required = False
     )
 
