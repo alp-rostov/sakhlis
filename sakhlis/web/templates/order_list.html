@@ -9,10 +9,10 @@
 {% endblock subbody %}
 
 {% block body %}
-
+<div align="center">
 <a href="#----"  onclick="show_create_order_form(document.getElementById('form'))"
-class="btn btn-sm btn-orange cta-btn btn-form mt-3 mb-5">Создать заказ</a>
-
+class="btn btn-sm btn-orange cta-btn btn-form mt-3 mb-5 ">Создать заказ</a>
+</div>
 
 
 <script>
@@ -142,42 +142,41 @@ $(document).ready(function() {
 });
 </script>
 
-<table id="head" class="">
-    {% regroup order by time_in|date:"d.m.Y" as day %}
-        {% for y in day %}
-        <tr><td  colspan="6"><hr></td></tr>
-        <tr>
-            <td  colspan="6">
-                <b>{{ y.grouper }}</b>
-            </td>
-        <tr>
+<div id="head" class="container">
 
-            {% for i in y.list %}
-            <tr>
-                <td>
 
-                    <a href="{% url 'invoice' i.pk %}" id="order_{{ i.pk }}" class="mycolor">Заказ №{{ i.pk}}</a>
+            {% for i in order %}
+            <div class="row p-1 mb-1 ">
+                <div class="col-md-4">
+                    {{ i.time_in }}<br>
+                    <a href="{% url 'invoice' i.pk %}" id="order_{{ i.pk }}" class="h5 mycolor">Заявка № {{ i.pk}}</a><br>
+                    <a href="{% url 'delete-order' i.pk %}" id="delete_{{ i.pk }}" class="mycolor"><img src="media/images/delete.png" width="15" ></a>
+                      <a href="../list_order/update/{{ i.pk}}"><img src="/media/images/change.png" width="25" ></a>
+                </div>
+                <div class="col-md-4 ">
+                    <span id="customer_name_{{ i.pk }}" class="fas fa-user prefix text-secondary mt-2" > {{ i.customer_name|capfirst }}</span><br>
 
-                    <a href="{% url 'delete-order' i.pk %}" id="delete_{{ i.pk }}" class="mycolor"><img src="media/images/delete.png" width="15" ></a><br>
-
-                    <p id="text_order_{{ i.pk }}" >{{ i.text_order|truncatechars:70|capfirst }}</p>
-                </td>
-                <td width = 50></td>
-                <td><span id="customer_name_{{ i.pk }}" >{{ i.customer_name|capfirst }}</span><br>
-                    <a href="tel:{{ i.customer_phone }}" title="Телефон" id="customer_phone_{{ i.pk }}" class="fas fa-phone text-danger fa-sm mr-1">
-                        </a>
-                    <a href="https://t.me/{{ i.customer_telegram|cut:'@' }}" title="Телеграм" id="customer_telegram_{{ i.pk }}">
-                        <img src="/static/images/telegram.gif" width="20"></a>
-                    <br>
-                    <span id="city_{{ i.pk }}" >{{ i.address_city|choice_tag:'city'}}</span>,
+                    <a href="tel:{{ i.customer_phone }}" title="Телефон" id="customer_phone_{{ i.pk }}" class="fas fa-phone prefix text-secondary mt-2">
+                        {{ i.customer_phone }}</a><br>
+                    <a href="https://t.me/{{ i.customer_telegram|cut:'@' }}" title="Телеграм" id="customer_telegram_{{ i.pk }}" class ="fas fa fa-paper-plane  prefix text-secondary mt-2">
+                         {{i.customer_telegram}}</a><br>
+                    <div class="fas fa-home prefix text-secondary mt-2"> <span id="city_{{ i.pk }}" >{{ i.address_city|choice_tag:'city'}}</span>,
                     <span id="street_app_{{ i.pk }}">{{ i.address_street_app|capfirst }}</span>,
-                    <span id="num_{{ i.pk }}">{{ i.address_num }}</span>.
-                </td>
-                </tr>
+                        <span id="num_{{ i.pk }}">{{ i.address_num }}</span>.</div>
+                </div>
+
+                <div class="col-md-4">
+                    <p id="text_order_{{ i.pk }}" class="text-secondary mt-2">{{ i.text_order|truncatechars:200|capfirst }}</p>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12"><hr></div>
+            </div>
             {% endfor %}
-        {% endfor %}
-    </td>
-    </tr>
+
+</div>
+
 
     <script>
     $(document.body).on( "click", "#paginator_next", function(e) {
@@ -207,23 +206,23 @@ $(document).ready(function() {
 
     </script>
 
-    <tr id="row_order" class="hidden">
+<!--    <tr id="row_order" class="hidden">-->
 
-        <td>
-            <a href="" id="order_" class="mycolor"> </a>   <a href="" id="delete_" class="mycolor"><img src="media/images/delete.png" width="15" ></a><br>
-            <span id="text_order_"></span>
-        </td>
-        <td width = 50></td>
-        <td><span id="customer_name_"></span><br>
-            <a href="" title="Телефон" id="customer_phone_" class="fas fa-phone text-danger fa-sm mr-1"></a>
-            <a href="" title="Телеграм" id="customer_telegram_"><img src="/static/images/telegram.gif" width="20"></a><br>
-            <span id="city_"></span>,
-            <span id="street_app_"></span>,
-            <span id="num_"></span>.
-        </td>
-    </tr>
+<!--        <td>-->
+<!--            <a href="" id="order_" class="mycolor"> </a>   <a href="" id="delete_" class="mycolor"><img src="media/images/delete.png" width="15" ></a><br>-->
+<!--            <span id="text_order_"></span>-->
+<!--        </td>-->
+<!--        <td width = 50></td>-->
+<!--        <td><span id="customer_name_"></span><br>-->
+<!--            <a href="" title="Телефон" id="customer_phone_" class="fas fa-phone text-danger fa-sm mr-1"></a>-->
+<!--            <a href="" title="Телеграм" id="customer_telegram_"><img src="/static/images/telegram.gif" width="20"></a><br>-->
+<!--            <span id="city_"></span>,-->
+<!--            <span id="street_app_"></span>,-->
+<!--            <span id="num_"></span>.-->
+<!--        </td>-->
+<!--    </tr>-->
 
-</table>
+</div>
 
 <br>
 
