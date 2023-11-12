@@ -101,7 +101,7 @@
 {% else %}
 <table id="table_invoice" class="table" >
 {% endif %}
-
+<thead>
  <tr  class="table-warning">
             <th>Наименование </th>
             <th>Количество </th>
@@ -109,7 +109,7 @@
             <th >Сумма</th>
             <th > </th>
     </tr>
-
+</thead>
 
       <tr class="hidden">
             <td name="service_id"></td>
@@ -119,7 +119,7 @@
             <td name="delete"><a href="" class="link-delete" ><img src="/media/images/delete.png" width="15" ></a></td>
     </tr>
 
-
+<tbody>
 {% for g in invoice %}
 
     <tr class="form_text">
@@ -130,7 +130,7 @@
             <td name="delete"><a href="{% url 'delete-item-of-order' g.pk %}" class="link-delete" ><img src="/media/images/delete.png" width="15"></a></td>
     </tr>
 {% endfor %}
-
+<tbody>
     <tr class="table-warning" id="total_">
 
 

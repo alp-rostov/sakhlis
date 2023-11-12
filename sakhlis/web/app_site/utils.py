@@ -8,6 +8,7 @@ from reportlab.lib.units import mm, inch
 from reportlab.pdfgen import canvas
 from reportlab.platypus import Paragraph, Table, TableStyle
 import matplotlib.pyplot as plt
+import matplotlib
 
 import base64
 import urllib.parse
@@ -169,50 +170,64 @@ class Graph:
         self.name_graf=name_graf
         self.name_legend=name_legend
         self.fig, self.ax = plt.subplots()
+
     def make_graf_pie(self):
-        explode = [0.03, 0.01, 0.01, 0.01, 0.01]
-        if len(self.labels) > 4:
-            a = sum(self.data[5:len(self.data)])
-            self.labels=self.labels[0:4]
-            self.labels.append('Прочее')
-            self.data=self.data[0:4]
-            self.data.append(a)
-        else:
-            explode=explode[0:len(self.labels)]
-        self.ax.pie(self.data, labels=self.labels, autopct='%1.1f%%',explode=explode)
-        self.ax.set_title(self.name_graf)
-        warnings.simplefilter("ignore", UserWarning)
-        self.fig = plt.gcf()
+        try:
+            explode = [0.03, 0.01, 0.01, 0.01, 0.01]
+            if len(self.labels) > 4:
+                a = sum(self.data[5:len(self.data)])
+                self.labels=self.labels[0:4]
+                self.labels.append('Прочее')
+                self.data=self.data[0:4]
+                self.data.append(a)
+            else:
+                explode=explode[0:len(self.labels)]
+            self.ax.pie(self.data, labels=self.labels, autopct='%1.1f%%',explode=explode)
+            self.ax.set_title(self.name_graf)
+            warnings.simplefilter("ignore", UserWarning)
+            self.fig = plt.gcf()
+        except Exception:
+            self.fig = ''
         return self.sent(self.fig)
 
     def make_graf_bar(self):
-        bar_labels = self.labels
-        self.ax.bar(self.labels, self.data, label=bar_labels )
-        self.ax.set_ylabel(self.name_legend)
-        self.ax.set_title(self.name_graf)
-        warnings.simplefilter("ignore", UserWarning)
-        self.fig = plt.gcf()
+        try:
+            bar_labels = self.labels
+            self.ax.bar(self.labels, self.data, label=bar_labels )
+            self.ax.set_ylabel(self.name_legend)
+            self.ax.set_title(self.name_graf)
+            warnings.simplefilter("ignore", UserWarning)
+            self.fig = plt.gcf()
+        except Exception:
+            self.fig =''
         return self.sent(self.fig)
 
     def make_graf_plot(self):
-        bar_labels = self.labels
-        self.ax.plot(self.labels, self.data, label=bar_labels)
+        try:
+            bar_labels = self.labels
+            self.ax.plot(self.labels, self.data, label=bar_labels)
 
-        self.ax.set_ylabel(self.name_legend)
-        self.ax.set_title(self.name_graf)
+            self.ax.set_ylabel(self.name_legend)
+            self.ax.set_title(self.name_graf)
 
-        warnings.simplefilter("ignore", UserWarning)
-        self.fig = plt.gcf()
+            warnings.simplefilter("ignore", UserWarning)
+            self.fig = plt.gcf()
+
+        except Exception:
+            self.fig=''
+
         return self.sent(self.fig)
 
 
     def sent(self, fig):
-        buf=io.BytesIO()
-        fig.savefig(buf, format='png')
-        buf.seek(0)
-        string = base64.b64encode(buf.read())
-        return urllib.parse.quote(string)
-
+        if self.fig!='':
+            buf=io.BytesIO()
+            fig.savefig(buf, format='png')
+            buf.seek(0)
+            string = base64.b64encode(buf.read())
+            return urllib.parse.quote(string)
+        else:
+            pass
 
 
 # class SimpleMiddleware:

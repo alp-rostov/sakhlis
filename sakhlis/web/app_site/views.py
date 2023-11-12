@@ -1,7 +1,7 @@
 import json
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db import transaction
-from django.db.models import F, Prefetch, Sum, Count, Avg
+from django.db.models import Avg
 from django.forms import modelformset_factory
 from django.shortcuts import redirect, get_object_or_404
 from django.urls import reverse_lazy
@@ -35,8 +35,8 @@ class UserDetailInformation(LoginRequiredMixin, DetailView):
     context_object_name = 'user'
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['profile'] = RepairerList.objects.annotate(raiting=F('rating_sum')/F('rating_num'))\
-            .get(user=self.object)
+
+        context['profile'] = RepairerList.objects.get(user=self.object)
 
         context['count'] =  OrderList.objects\
             .values('repairer_id')\
@@ -88,7 +88,7 @@ class OrderCreate(CreateView):
             form.instance.customer_telegram = name_telegram_customer
 
         form.instance.text_order = form.instance.text_order.replace('<', '[').replace('>', ']')
-    
+        form.instance.customer_phone = form.instance.customer_phone.replace(' ', '').replace('+', '')
         return super(OrderCreate, self).form_valid(form)
 
 
@@ -217,6 +217,7 @@ class Statistica(LoginRequiredMixin, TemplateView):
             .annotate(count=Sum(F('invoice__price') * F('invoice__quantity')))\
             .filter(repairer_id=self.request.user)
 
+
         b = OrderList.objects\
             .values('time_in__month', 'time_in__year', 'pk')\
             .annotate(count=Avg(F('invoice__price') * F('invoice__quantity')))\
@@ -243,7 +244,6 @@ class Statistica(LoginRequiredMixin, TemplateView):
 
 
         labels, sizes = get_data_for_graph(c,'service_id__type','count', WORK_CHOICES_)
-
         instans_graf=Graph(labels, sizes, 'Структура заказов, кол.', '')
         context['d']=instans_graf.make_graf_pie()
 
@@ -262,7 +262,6 @@ class Statistica(LoginRequiredMixin, TemplateView):
         labels, sizes = get_data_for_graph(h,'time_in__date','count')
         instans_graf = Graph(labels, sizes, 'Динамика за 30 дней.', '')
         context['hh'] = instans_graf.make_graf_plot()
-
 
         return context
 

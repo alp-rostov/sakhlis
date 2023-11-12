@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User
 from django.db import models
+from django.contrib.gis.db import models as geomodel
 from django.core.validators import RegexValidator
 from django.urls import reverse
 
@@ -128,6 +129,7 @@ class OrderList(models.Model):
     address_street_app = models.CharField(max_length=150, verbose_name='Улица', null=True, blank=True)
     address_num = models.CharField(max_length=10, verbose_name='Номер дома', null=True, blank=True)
     services = models.ManyToManyField('Service', through='Invoice')
+    # location = geomodel.PointField(geography=True, null=True, blank=True)
 
     class Meta:
         verbose_name = 'Список заказов'
@@ -145,7 +147,7 @@ class RepairerList(models.Model):
 
     foto = models.ImageField(upload_to="images/", null=True, blank=True, verbose_name='Фотография:')
     rating_sum = models.IntegerField(default=0, blank=True, null=True)
-    rating_num = models.IntegerField(default=0, blank=True, null=True)
+    rating_num = models.IntegerField(default=1, blank=True, null=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE, blank=True, null=True)
     class Meta:
         verbose_name = 'Мастера'
