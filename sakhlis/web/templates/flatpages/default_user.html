@@ -86,7 +86,7 @@ top: 0;
                         {% if request.user.is_authenticated %}
                             <li class="nav-item mr-4">
 
-                            <a class="nav-link" href="{% url 'logout' %}">Выйти</a>
+                            <a class="nav-link" href="{% url 'logout' %}">{{ user.username }} : Выйти</a>
 
                             </li>
 
@@ -102,15 +102,10 @@ top: 0;
 
 
         <section id="section-0" class="bg_img sticky">
-            <div class="container"><br>
-                    <div class="text-center nav-link">
-                        <h1 class="lead py-10" >Личный кабинет: {{ user.username }}</h1>
-                        <hr class="hr-light-h">
+                    <div class="text-center nav-link h6"><br>
                             {% block subbody %}
 
                             {% endblock subbody%}
-
-
 
                             {% if request.GET.work_status == 'SND' %}
                             <a href="{% url 'list_order' %}?work_status=SND"><b>Новые заказы</b></a> |
@@ -133,7 +128,6 @@ top: 0;
 
 
                     </div>
-            </div>
     </section>
     <!--And Header-->
 

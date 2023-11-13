@@ -79,7 +79,7 @@ class OrderCreate(CreateView):
             form.instance.order_status = 'SND'
 
         name_telegram_customer = form.instance.customer_telegram.replace('@', '').replace('+', '')\
-            .replace('-', '')
+            .replace('-', '').replace(' ', '')
 
 
         if name_telegram_customer.isdigit():

@@ -1,4 +1,3 @@
-
 from django.db.models import F, Prefetch, Sum, Count
 from geopy.geocoders import Nominatim
 from telebot import types
@@ -8,8 +7,6 @@ from reportlab.lib.units import mm, inch
 from reportlab.pdfgen import canvas
 from reportlab.platypus import Paragraph, Table, TableStyle
 import matplotlib.pyplot as plt
-import matplotlib
-
 import base64
 import urllib.parse
 import warnings
@@ -45,7 +42,7 @@ def set_coordinates_address(street: str, city: str, app_num: str) -> str:
     """ setting of map coordinates by street and city """
     try:
         geolocator = Nominatim(user_agent="app_site")
-        location = geolocator.geocode(street + ', ' + app_num + ', ' + city)
+        location = geolocator.geocode({'city': city, 'street': street+', '+app_num}, addressdetails=True)
     except TypeError:
         return ' '
     if location:

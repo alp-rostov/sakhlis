@@ -10,8 +10,8 @@
 
 {% block body %}
 <div align="center">
-<a href="#----"  onclick="show_create_order_form(document.getElementById('form'))"
-class="btn btn-sm btn-orange cta-btn btn-form mt-3 mb-5 ">Создать заказ</a>
+<a href="#"  onclick="show_create_order_form(document.getElementById('form'))"
+class="btn btn-sm btn-orange cta-btn btn-form mt-3 mb-5 " id="link_create_order_form">Создать заказ</a>
 </div>
 
 
@@ -20,7 +20,7 @@ class="btn btn-sm btn-orange cta-btn btn-form mt-3 mb-5 ">Создать зак�
         if (form.style.display == "none") {
             $('#form').fadeIn("slow", function(){
                 form.style.display = "block";
-                $('#link_create_order_form').html('Скрыть');
+                $('#link_create_order_form').html('X');
                                         });
 
         } else {
@@ -33,29 +33,37 @@ class="btn btn-sm btn-orange cta-btn btn-form mt-3 mb-5 ">Создать зак�
 
     function add_order_in_html_object(r) {
         g=$("#row_order").clone();
-        g.attr("class", "");
+        g.attr("class", "row p-1 mb-1");
         g.attr("id", "row_order"+r.pk);
 
         g.find("#order_").attr("href", "list_order/"+r.pk);
-        g.find("#order_").html("Заказ №"+r.pk);
-        g.find("#order_").attr("id", "order_"+r.pk);
+        g.find("#order_").html("Заявка №"+r.pk);
+        let date_order=r.time_in.substr(0, 10).split("-").reverse().join(".");
+        g.find("#time_in").html(date_order);
 
         g.find("#delete_").attr("href", "invoice/delete-order/"+r.pk);
         g.find("#delete_").attr("id", "delete_"+r.pk);
 
+        g.find("#edit_").attr("href", "../list_order/update/"+r.pk);
+        g.find("#edit_").attr("id", "edit_"+r.pk);
+
+
         g.find("#text_order_").html(r.text_order);
         g.find("#text_order_").attr("id", "text_order_"+r.pk);
 
-        g.find("#customer_name_").html(r.customer_name);
+        g.find("#customer_name_").html(" "+r.customer_name);
         g.find("#customer_name_").attr("id", "customer_name_"+r.pk);
 
 
         g.find("#customer_phone_").attr("href", "tel:"+r.customer_phone);
+        g.find("#customer_phone_").html(" "+ r.customer_phone);
         g.find("#customer_phone_").attr("id", "customer_phone_"+r.num_order);
 
 
         g.find("#customer_telegram_").attr("href", "https://t.me/"+r.customer_telegram);
+        g.find("#customer_telegram_").html(" @"+r.customer_telegram);
         g.find("#customer_telegram_").attr("id", "customer_telegram_"+r.num_order);
+
 
         g.find("#city_").html('Тбилиси');
         g.find("#city_").attr("id", "city_"+r.pk);
@@ -143,30 +151,31 @@ $(document).ready(function() {
 </script>
 
 <div id="head" class="container">
-
-
             {% for i in order %}
             <div class="row p-1 mb-1 ">
                 <div class="col-md-4">
-                    {{ i.time_in }}<br>
+                    <div id="time_in">{{ i.time_in }}</div><br><!--                    $('#head').append(add_order_in_html_object(type[i]));-->
+
                     <a href="{% url 'invoice' i.pk %}" id="order_{{ i.pk }}" class="h5 mycolor">Заявка № {{ i.pk}}</a><br>
                     <a href="{% url 'delete-order' i.pk %}" id="delete_{{ i.pk }}" class="mycolor"><img src="media/images/delete.png" width="15" ></a>
-                      <a href="../list_order/update/{{ i.pk}}"><img src="/media/images/change.png" width="25" ></a>
+                      <a href="../list_order/update/{{ i.pk}}" id="edit_{{ i.pk }}"><img src="/media/images/change.png" width="25" ></a>
+
                 </div>
                 <div class="col-md-4 ">
-                    <span id="customer_name_{{ i.pk }}" class="fas fa-user prefix text-secondary mt-2" > {{ i.customer_name|capfirst }}</span><br>
+                    <span id="customer_name_{{ i.pk }}" class="fas fa-user prefix text-secondary mt-3" > {{ i.customer_name|capfirst }}</span><br>
 
-                    <a href="tel:{{ i.customer_phone }}" title="Телефон" id="customer_phone_{{ i.pk }}" class="fas fa-phone prefix text-secondary mt-2">
+                    <a href="tel:{{ i.customer_phone }}" title="Телефон" id="customer_phone_{{ i.pk }}" class="fas fa-phone prefix text-secondary mt-3">
                         {{ i.customer_phone }}</a><br>
-                    <a href="https://t.me/{{ i.customer_telegram|cut:'@' }}" title="Телеграм" id="customer_telegram_{{ i.pk }}" class ="fas fa fa-paper-plane  prefix text-secondary mt-2">
-                         {{i.customer_telegram}}</a><br>
-                    <div class="fas fa-home prefix text-secondary mt-2"> <span id="city_{{ i.pk }}" >{{ i.address_city|choice_tag:'city'}}</span>,
+                    <a href="https://t.me/{{ i.customer_telegram|cut:'@' }}" title="Телеграм" id="customer_telegram_{{ i.pk }}"
+                       class ="fas fa fa-paper-plane text-secondary mt-3">
+                         @{{i.customer_telegram}}</a><br>
+                    <div class="fas fa-home prefix text-secondary mt-3"> <span id="city_{{ i.pk }}" >{{ i.address_city|choice_tag:'city'}}</span>,
                     <span id="street_app_{{ i.pk }}">{{ i.address_street_app|capfirst }}</span>,
                         <span id="num_{{ i.pk }}">{{ i.address_num }}</span>.</div>
                 </div>
 
                 <div class="col-md-4">
-                    <p id="text_order_{{ i.pk }}" class="text-secondary mt-2">{{ i.text_order|truncatechars:200|capfirst }}</p>
+                    <p id="text_order_{{ i.pk }}" class="fas text-secondary mt-3">{{ i.text_order|truncatechars:200|capfirst }}</p>
 
                 </div>
             </div>
@@ -189,10 +198,10 @@ $(document).ready(function() {
             success: function(e){
                 let type=JSON.parse(e);
                 for (i = 0; i < type.length; i++) {
-                    let date_order=type[i].time_in.substr(0, 10).split("-").reverse().join(".");;
-                    $('#head').append('<tr><td  colspan="6"><hr></td></tr>');
-                    $('#head').append('<tr><td  colspan="6"><b id="date_">'+date_order+'</b></td></tr>');
+
                     $('#head').append(add_order_in_html_object(type[i]));
+                    $('#head').append('<div class="row"><div class="col-md-12"><hr></div></div>');
+
                 }
                 if (type.length==14) {
                     $('#paginator_next').attr('href', '../listorderjson?last_pk='+type[13].pk+'&work_status=end');
@@ -206,21 +215,27 @@ $(document).ready(function() {
 
     </script>
 
-<!--    <tr id="row_order" class="hidden">-->
+    <div id="row_order" class="hidden" >
+                <div class="col-md-4">
+                    <div id="time_in"></div><br>
+                    <a href="" id="order_" class="h5 mycolor"> </a><br>
+                    <a href="" id="delete_" class="mycolor"><img src="media/images/delete.png" width="15" ></a>
+                    <a href="" id="edit_"><img src="/media/images/change.png" width="25" ></a>
+                </div>
+                <div class="col-md-4 ">
+                    <span id="customer_name_" class="fas fa-user prefix text-secondary mt-3" ></span><br>
 
-<!--        <td>-->
-<!--            <a href="" id="order_" class="mycolor"> </a>   <a href="" id="delete_" class="mycolor"><img src="media/images/delete.png" width="15" ></a><br>-->
-<!--            <span id="text_order_"></span>-->
-<!--        </td>-->
-<!--        <td width = 50></td>-->
-<!--        <td><span id="customer_name_"></span><br>-->
-<!--            <a href="" title="Телефон" id="customer_phone_" class="fas fa-phone text-danger fa-sm mr-1"></a>-->
-<!--            <a href="" title="Телеграм" id="customer_telegram_"><img src="/static/images/telegram.gif" width="20"></a><br>-->
-<!--            <span id="city_"></span>,-->
-<!--            <span id="street_app_"></span>,-->
-<!--            <span id="num_"></span>.-->
-<!--        </td>-->
-<!--    </tr>-->
+                    <a href="" title="Телефон" id="customer_phone_" class="fas fa-phone prefix text-secondary mt-3"></a><br>
+                    <a href="" title="Телеграм" id="customer_telegram_" class ="fas fa fa-paper-plane text-secondary mt-3"></a><br>
+                    <div class="fas fa-home prefix text-secondary mt-3"> <span id="city_" ></span>,
+                    <span id="street_app_"></span>,
+                        <span id="num_"></span>.</div>
+                </div>
+
+                <div class="col-md-4">
+                        <p id="text_order_" class="fas text-secondary mt-3"></p>
+                </div>
+    </div>
 
 </div>
 
@@ -258,7 +273,6 @@ $(document).ready(function() {
             }
         });
     });
-
 
 </script>
 {% endblock body %}

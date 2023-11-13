@@ -48,14 +48,14 @@
 
 
 {% if info.order_status == 'SND' %}
-<p><b id="stepstatuswork">Заявка направлена мастеру </b>  <br>
+<p align="center"><b id="stepstatuswork">Заявка направлена мастеру </b>  <br>
 <a href="../changestatus?order_pk={{ info.pk}}&work_status=RCV" id="workstatus"
    class="btn btn-md btn-orange" >ПРИНЯТЬ ЗАКАЗ</a><br>
 </p>
 {% endif %}
 
 {% if info.order_status == 'RCV' %}
-<p><b id="stepstatuswork">Заявка в работе</b><br>
+<p align="center"><b id="stepstatuswork">Заявка в работе</b><br>
     <a href="../changestatus?order_pk={{ info.pk}}&work_status=END" id="workstatus" class="btn btn-md btn-orange">Работы выполненны</a><br>
 
 
@@ -64,7 +64,7 @@
 {% endif %}
 
 {% if info.order_status == 'END' %}
-<p><b id="stepstatuswork"><i class="fas fa-check-circle about-text"></i> Работы выполнены</b><br>
+<p align="center"><b id="stepstatuswork"><i class="fas fa-check-circle about-text"></i> Работы выполнены</b><br>
     <a href="pdf/{{ info.id }}" class="btn btn-md btn-orange">Квитанция на оплату - PDF</a>
 
 </p>
@@ -166,10 +166,10 @@
         {{ form.management_form }}
     </div>
     <div id="error"></div>
-
-    <button id="add-more" type="button" class="btn btn-md btn-orange">add-more</button>
-    <button type="submit" class="btn btn-md btn-orange"> "Save" </button><br>
-
+    <div align="center">
+        <button id="add-more" type="button" class="btn btn-md btn-orange">add-more</button>
+        <button type="submit" class="btn btn-md btn-orange"> "Save" </button><br>
+    </div>>
 
 </form>
 
