@@ -25,7 +25,7 @@ urlpatterns = [
     path('user/<int:pk>', UserDetailInformation.as_view(), name='user'),
     path('update-user/<int:pk>', RepaierUpdate.as_view(), name='update-user'),
 
-    # path('repaierman/<int:pk>', RepaiermanSpace.as_view(), name='repaierman'),
+    path('ordersearch/', OrderSearchForm.as_view(), name='search-order'),
 
     path('serv', listservices_for_invoice_json),
     path('changestatus', change_work_status),

@@ -9,6 +9,8 @@
 {% endblock subbody %}
 
 {% block body %}
+
+
 <div align="center">
 <a href="#"  onclick="show_create_order_form(document.getElementById('form'))"
 class="btn btn-sm btn-orange cta-btn btn-form mt-3 mb-5 " id="link_create_order_form">Создать заказ</a>
@@ -157,7 +159,7 @@ $(document).ready(function() {
                     <div id="time_in">{{ i.time_in }}</div><br><!--                    $('#head').append(add_order_in_html_object(type[i]));-->
 
                     <a href="{% url 'invoice' i.pk %}" id="order_{{ i.pk }}" class="h5 mycolor">Заявка № {{ i.pk}}</a><br>
-                    <a href="{% url 'delete-order' i.pk %}" id="delete_{{ i.pk }}" class="mycolor"><img src="media/images/delete.png" width="15" ></a>
+                    <a href="{% url 'delete-order' i.pk %}" id="delete_{{ i.pk }}" class="mycolor"><img src="/media/images/delete.png" width="15" ></a>
                       <a href="../list_order/update/{{ i.pk}}" id="edit_{{ i.pk }}"><img src="/media/images/change.png" width="25" ></a>
 
                 </div>
@@ -239,9 +241,7 @@ $(document).ready(function() {
 
 </div>
 
-<br>
 
-{{ next }}
 <h2>
 
     {% if order.13.pk %}

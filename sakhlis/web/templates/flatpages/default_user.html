@@ -47,6 +47,7 @@ top: 0;
 {% url 'list_order' as the_url1 %}
 {% url 'stat' as the_url2 %}
 {% url 'user' request.user.id as the_url3 %}
+{% url 'search-order' as the_url4 %}
 
 <!--Header-->
     <nav id="navigation-menu" class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
@@ -120,11 +121,17 @@ top: 0;
                             {% endif %}
 
                             {% if request.GET.work_status == 'END' %}
-                            <a href="{% url 'list_order'%}?work_status=END"><b>Заявки оконченные</b></a>
+                            <a href="{% url 'list_order'%}?work_status=END"><b>Заявки оконченные</b></a> |
                             {% else %}
-                            <a href="{% url 'list_order'%}?work_status=END">Заявки оконченные</a>
+                            <a href="{% url 'list_order'%}?work_status=END">Заявки оконченные</a> |
                             {% endif %}
-                        </div>
+
+                            {% if the_url4 in request.get_full_path %}
+                            <a href="{% url 'search-order' %}"><b>Поиск</b></a>
+                            {% else %}
+                            <a href="{% url 'search-order' %}">Поиск</a>
+                            {% endif %}
+                            </div>
 
 
                     </div>

@@ -1,0 +1,93 @@
+{% extends 'flatpages/default_user.html' %}
+{% load custom_filters %}
+{% load custom_tags %}
+
+
+{% block subbody %}
+
+
+{% endblock subbody %}
+
+{% block body %}
+
+<form action="" method="get">
+
+<div class="container">
+    <div class="row p-1 ">
+        <div class="col-md-3 text-muted">
+            {{ filterset.form.time_in.label }}:<br>
+            {{ filterset.form.time_in }}<br>
+            {{ filterset.form.order_status.label }}:<br>
+            {{ filterset.form.order_status }}<br>
+            {{ filterset.form.repairer_id }}
+        </div>
+        <div class="col-md-3 text-muted">
+            {{ filterset.form.customer_name.label }}:<br>
+            {{ filterset.form.customer_name }}<br>
+            {{ filterset.form.customer_phone.label }}:<br>
+            {{ filterset.form.customer_phone }}<br>
+            {{ filterset.form.customer_telegram.label }}:<br>
+            {{ filterset.form.customer_telegram }}
+        </div>
+        <div class="col-md-3 text-muted">
+            Город: <br>Тбилиси<br>
+            {{ filterset.form.adress_street_app.label }}:<br>
+            {{ filterset.form.adress_street_app }}<br>
+            {{ filterset.form.address_num.label }}:<br>
+            {{ filterset.form.address_num }}
+        </div>
+
+        <div class="col-md-2" >
+            <input type="submit" value=" Найти " class="btn btn-sm btn-orange">
+            <input type="reset" value=" Сброс " class="btn btn-sm btn-orange">
+        </div>
+    </div>
+</form>
+
+
+
+<div id="head" class="container">
+            {% for i in order %}
+            <div class="row p-1 mb-1 ">
+                <div class="col-md-4">
+                    <div id="time_in">{{ i.time_in }}</div><br>
+
+                    <a href="{% url 'invoice' i.pk %}" id="order_{{ i.pk }}" class="h5 mycolor">Заявка № {{ i.pk}}</a><br>
+                    <a href="{% url 'delete-order' i.pk %}" id="delete_{{ i.pk }}" class="mycolor"><img src="/media/images/delete.png" width="15" ></a>
+                      <a href="../list_order/update/{{ i.pk}}" id="edit_{{ i.pk }}"><img src="/media/images/change.png" width="25" ></a>
+
+                </div>
+                <div class="col-md-4 ">
+                    <span id="customer_name_{{ i.pk }}" class="fas fa-user prefix text-secondary mt-3" > {{ i.customer_name|capfirst }}</span><br>
+
+                    <a href="tel:{{ i.customer_phone }}" title="Телефон" id="customer_phone_{{ i.pk }}" class="fas fa-phone prefix text-secondary mt-3">
+                        {{ i.customer_phone }}</a><br>
+                    <a href="https://t.me/{{ i.customer_telegram|cut:'@' }}" title="Телеграм" id="customer_telegram_{{ i.pk }}"
+                       class ="fas fa fa-paper-plane text-secondary mt-3">
+                         @{{i.customer_telegram}}</a><br>
+                    <div class="fas fa-home prefix text-secondary mt-3"> <span id="city_{{ i.pk }}" >{{ i.address_city|choice_tag:'city'}}</span>,
+                    <span id="street_app_{{ i.pk }}">{{ i.address_street_app|capfirst }}</span>,
+                        <span id="num_{{ i.pk }}">{{ i.address_num }}</span>.</div>
+                </div>
+
+                <div class="col-md-4">
+                    <p id="text_order_{{ i.pk }}" class="fas text-secondary mt-3">{{ i.text_order|truncatechars:200|capfirst }}</p>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12"><hr></div>
+            </div>
+            {% endfor %}
+
+</div>
+
+
+
+
+</div>
+
+<br>
+
+
+{% endblock body %}

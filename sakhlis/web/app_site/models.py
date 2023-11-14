@@ -77,7 +77,6 @@ MONTH_ = ['','Январь', 'Февраль', 'Март', 'Апрель', 'Ма
     'Ноябрь', 'Декабрь']
 
 
-
 class Service(models.Model):
     """name type """
     name = models.\
@@ -135,6 +134,7 @@ class OrderList(models.Model):
         verbose_name_plural = 'Список заказов'
 
 
+
 class RepairerList(models.Model):
     """phone city foto rating_sum rating_num user"""
     phone = models.CharField(validators=[phoneNumberRegex], max_length=16, unique=True, verbose_name='Телефон',
@@ -161,3 +161,5 @@ class StreerTbilisi(models.Model):
         verbose_name = 'Улицы Тбилиси'
         verbose_name_plural = 'Улицы тбилиси'
 
+    def __str__(self):
+        return f'{self.name_street} {self.type_street}'

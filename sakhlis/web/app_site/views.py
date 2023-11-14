@@ -6,6 +6,8 @@ from django.forms import modelformset_factory
 from django.shortcuts import redirect, get_object_or_404
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
+
+from .filters import OrderFilter
 from .models import *
 from .forms import OrderForm, InvoiceForm, UserRegisterForm, RepairerForm
 from .utils import *
@@ -114,6 +116,11 @@ class OrderManagementSystem(LoginRequiredMixin, ListView):
         context = super().get_context_data(**kwargs)
         context['form'] = OrderForm
         return context
+
+
+
+
+
 
 
 class OrderUpdate(LoginRequiredMixin, UpdateView):
@@ -334,4 +341,21 @@ def input_street(request, **kwargs):
     json_data = json.dumps(list(b), default=str)
     return JsonResponse(json_data, safe=False)
 
+
+
+class OrderSearchForm(ListView):
+    model = OrderList
+    context_object_name = 'order'
+    template_name = 'ordersearchform.html'
+    ordering = ['-time_in']
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        self.filterset = OrderFilter(self.request.GET, queryset)
+        return self.filterset.qs
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['filterset'] = self.filterset
+        return context
 
