@@ -224,10 +224,9 @@ class Statistica(LoginRequiredMixin, TemplateView):
             .annotate(count=Sum(F('invoice__price') * F('invoice__quantity')))\
             .filter(repairer_id=self.request.user)
 
-
         b = OrderList.objects\
-            .values('time_in__month', 'time_in__year', 'pk')\
-            .annotate(count=Avg(F('invoice__price') * F('invoice__quantity')))\
+            .values('time_in__month', 'time_in__year')\
+            .annotate(count=Count(F('pk')))\
             .filter(repairer_id=self.request.user)
 
         c = Invoice.objects \
@@ -263,7 +262,7 @@ class Statistica(LoginRequiredMixin, TemplateView):
         context['f'] = instans_graf.make_graf_bar()
 
         labels, sizes = get_data_for_graph(b,'time_in__month','count', MONTH_)
-        instans_graf = Graph(labels, sizes, 'Средний чек заказа', 'кол')
+        instans_graf = Graph(labels, sizes, 'Количество заказов', 'кол')
         context['g'] = instans_graf.make_graf_bar()
         #
         labels, sizes = get_data_for_graph(h,'time_in__date','count')
