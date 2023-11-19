@@ -87,6 +87,28 @@
 
 </div>
 
+<!--           {# Добавляем пагинацию на страницу #}-->
+
+            <div align="center">
+            {# Информация о предыдущих страницах #}
+            {% if page_obj.has_previous %}
+                <a href="?page=1" class="btn">1</a>
+                {% if page_obj.previous_page_number != 1 %}
+                    ...
+                    <a href="?page={{ page_obj.previous_page_number }}" class="btn ">{{ page_obj.previous_page_number }}</a>
+                {% endif %}
+            {% endif %}
+<!--             {# Информация о текущей странице #}-->
+            <div class="btn btn-orange">{{ page_obj.number }}</div>
+<!--             {# Информация о следующих страницах #}-->
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}" class="btn">{{ page_obj.next_page_number }}</a>
+                {% if paginator.num_pages != page_obj.next_page_number %}
+                    ...
+                    <a href="?page={{ page_obj.paginator.num_pages }}" class="btn">{{ page_obj.paginator.num_pages }}</a>
+                {% endif %}
+            {% endif %}
+            </div>
 
 
 

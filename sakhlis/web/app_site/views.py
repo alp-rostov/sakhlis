@@ -73,6 +73,7 @@ class OrderCreate(CreateView):
                              'address_city': self.object.address_city,
                              'address_street_app': self.object.address_street_app,
                              'address_num': self.object.address_num,
+                             'auth': self.request.user.is_authenticated
                              })
 
     def form_valid(self, form):
@@ -342,15 +343,18 @@ def input_street(request, **kwargs):
 
 
 
-class OrderSearchForm(ListView):
+class OrderSearchForm(LoginRequiredMixin, ListView):
     model = OrderList
     context_object_name = 'order'
     template_name = 'ordersearchform.html'
     ordering = ['-time_in']
+    paginate_by = 15
 
     def get_queryset(self):
         queryset = super().get_queryset()
-        self.filterset = OrderFilter(self.request.GET, queryset)
+        b=self.request.GET.copy()
+        b.__setitem__('repairer_id', self.request.user.pk)
+        self.filterset = OrderFilter(b, queryset)
         return self.filterset.qs
 
     def get_context_data(self, **kwargs):

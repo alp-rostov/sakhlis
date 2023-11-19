@@ -22,79 +22,89 @@
 
 
 
-<table class="table">
-    <tr><td align="left">
-{% if prev.pk %}
-    <a href="{% url 'invoice' prev.pk %}" class="btn"><</a>
-{% else %}
-    <a href="#" class="btn btn-gray"></a>
-{% endif %}
-    </td>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12" align="center">
+        {% if prev.pk %}
+            <a href="{% url 'invoice' prev.pk %}" class="btn"><</a>
+        {% endif %}
+        {% if next.pk %}
+            <a href="{% url 'invoice' next.pk %}" class="btn">></a>
+        {% endif %}
+        </div>
+    </div>
 
-    <td align="center" class="h6-responsive">
-Заявка № {{ info.id }}<br>{{ info.time_in }}
-    </td>
+    <div class="row">
+        <div class="col-md-12 h4 text-center" align="center">
+            Заявка № {{ info.id }}<br>{{ info.time_in }}
 
-    <td align="right">
-{% if next.pk %}
-    <a href="{% url 'invoice' next.pk %}" class="btn">></a>
+        </div>
+   </div>
 
-{% else %}
-    <a href="#" class="btn btn-gray"></a>
-{% endif %}
+    <div class="row">
+        <div class="col-md-12 h6 text-center" align="center">
+                  {% if info.order_status == 'SND' %}
+            <p align="center"><b id="stepstatuswork">Заявка направлена мастеру </b>  <br>
+            <a href="../changestatus?order_pk={{ info.pk}}&work_status=RCV" id="workstatus"
+               class="btn btn-md btn-orange" >ПРИНЯТЬ ЗАКАЗ</a><br>
+            </p>
+            {% endif %}
 
-</td></tr>
-</table>
+            {% if info.order_status == 'RCV' %}
+            <p align="center"><b id="stepstatuswork">Заявка в работе</b><br>
+                <a href="../changestatus?order_pk={{ info.pk}}&work_status=END" id="workstatus" class="btn btn-md btn-orange">Работы выполненны</a><br>
+            </p>
 
+            {% endif %}
 
-{% if info.order_status == 'SND' %}
-<p align="center"><b id="stepstatuswork">Заявка направлена мастеру </b>  <br>
-<a href="../changestatus?order_pk={{ info.pk}}&work_status=RCV" id="workstatus"
-   class="btn btn-md btn-orange" >ПРИНЯТЬ ЗАКАЗ</a><br>
-</p>
-{% endif %}
+            {% if info.order_status == 'END' %}
+            <p align="center"><b id="stepstatuswork"><i class="fas fa-check-circle about-text"></i> Работы выполнены</b><br>
+                <a href="pdf/{{ info.id }}" class="btn btn-md btn-orange">Квитанция на оплату - PDF</a>
 
-{% if info.order_status == 'RCV' %}
-<p align="center"><b id="stepstatuswork">Заявка в работе</b><br>
-    <a href="../changestatus?order_pk={{ info.pk}}&work_status=END" id="workstatus" class="btn btn-md btn-orange">Работы выполненны</a><br>
-
-
-</p>
-
-{% endif %}
-
-{% if info.order_status == 'END' %}
-<p align="center"><b id="stepstatuswork"><i class="fas fa-check-circle about-text"></i> Работы выполнены</b><br>
-    <a href="pdf/{{ info.id }}" class="btn btn-md btn-orange">Квитанция на оплату - PDF</a>
-
-</p>
+            </p>
 
 
-{% endif %}
+            {% endif %}
 
-<br>
-    <table class="table" ><tr>
-        <td>Заказчик:</td><td> {{ info.customer_name }}  <a href="../list_order/update/{{ info.pk}}"><img src="/media/images/change.png" width="25" ></a></td>
-    </tr>
-        <tr>
-        <td><b>Адрес: </b></td><td>{{ info.address_city|choice_tag:'city' }}, {{ info.address_street_app }}, {{ info.address_num }}</td>
-    </tr>
-    <tr>
-         <td><b>Телефон:</b></td><td>{{ info.customer_phone }}
+        </div>
+   </div>
+</div>
+
+
+<div class="table">
+    <div class="row">
+        <div class="col-md-6">Заказчик:</div><div class="col-md-6"> {{ info.customer_name }}  <a href="../list_order/update/{{ info.pk}}"><img src="/media/images/change.png" width="25" ></a></div>
+    </div>
+     <div class="row">
+            <div class="col-md-12"><hr></div>
+        </div>
+    <div class="row">
+        <div class="col-md-6">Адрес:</div><div class="col-md-6">{{ info.address_city|choice_tag:'city' }}, {{ info.address_street_app }}, {{ info.address_num }}</div>
+    </div>
+     <div class="row">
+            <div class="col-md-12"><hr></div>
+    </div>
+    <div class="row">
+         <div class="col-md-6">Телефон:</div><div class="col-md-6">{{ info.customer_phone }}
         <a href="tel:{{ info.customer_phone }}" title="Телефон" class="fas fa-phone text-danger fa-sm mr-1">
-                        </a></td>
-    </tr>
-    <tr>
-         <td><b>Телеграм:</b></td><td>@{{ info.customer_telegram }}
+                        </a></div>
+    </div>
+     <div class="row">
+            <div class="col-md-12"><hr></div>
+    </div>
+    <div class="row">
+         <div class="col-md-6">Телеграм:</div><div class="col-md-6">@{{ info.customer_telegram }}
     <a href="https://t.me/{{ info.customer_telegram|cut:'@' }}" title="Телеграм">
                         <img src="/static/images/telegram.gif" width="25"></a>
-        </td>
-    </tr>
-
-    <tr>
-         <td><b>Описание проблемы:</b></td><td> {{ info.text_order }}</td>
-    </tr>
-    </table>
+        </div>
+    </div>
+     <div class="row">
+        <div class="col-md"><hr></div>
+     </div>
+    <div class="row">
+         <div class="col-md-6">Описание проблемы:</div><div class="col-md-6"> {{ info.text_order }}</div>
+    </div>
+    </div>
 
 {% if info.order_status == 'SND' %}
 <table id="table_invoice" class="hidden">

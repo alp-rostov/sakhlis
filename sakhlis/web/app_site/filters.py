@@ -1,3 +1,4 @@
+import requests
 from django.contrib.auth.models import User
 from django_filters import FilterSet, ChoiceFilter, CharFilter, DateFilter, BooleanFilter, ModelChoiceFilter
 from .models import RepairerList, OrderList, StreerTbilisi
@@ -53,15 +54,12 @@ class OrderFilter(FilterSet):
 
 
 
-    # repairer_id = ModelChoiceFilter(
-    #     field_name='repairer_id',
-    #     label='Мастер-',
-    #     lookup_expr='exact',
-    #     queryset=User.objects.only('last_name', 'first_name'),
-    #     null_label='Мастер не указан',
-    #     empty_label='Все'
-    #
-    # )
+    repairer_id = CharFilter(
+        widget=forms.TextInput(attrs={"class": "hidden",}),
+        label='Мастер-',
+        lookup_expr='exact',
+
+    )
 
     adress_street_app = CharFilter(
         field_name='address_street_app',

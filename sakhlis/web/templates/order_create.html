@@ -531,7 +531,7 @@
 				    </div>
 
                             <script type="text/javascript">
-             $(document).ready(function() {
+                            $(document).ready(function() {
 
                                 $('#id_form').submit(function(e) {
                                     e.preventDefault();
@@ -553,7 +553,14 @@
                                             data: $(this).serialize(),
                                             dataType: 'text',
                                             beforeSend: function () {$("#id_form").html('<h3>Отправляется...</h3>');},
-                                            success: function (resp) {  $("#id_form").html(JSON.parse(resp).message); },
+                                            success: function (resp) {
+                                                if (JSON.parse(resp).auth==true) {
+                                                    window.location.href = '/list_order/'+JSON.parse(resp).pk;
+                                                }
+                                                else {
+                                                    $("#id_form").html(JSON.parse(resp).message);
+                                                }
+                                            },
                                         });
                                     }
                                 });

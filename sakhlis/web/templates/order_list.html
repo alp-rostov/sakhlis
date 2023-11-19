@@ -46,6 +46,9 @@ class="btn btn-sm btn-orange cta-btn btn-form mt-3 mb-5 " id="link_create_order_
         g.find("#delete_").attr("href", "invoice/delete-order/"+r.pk);
         g.find("#delete_").attr("id", "delete_"+r.pk);
 
+
+        g.find(".copy").attr("id", r.pk);
+
         g.find("#edit_").attr("href", "../list_order/update/"+r.pk);
         g.find("#edit_").attr("id", "edit_"+r.pk);
 
@@ -59,19 +62,19 @@ class="btn btn-sm btn-orange cta-btn btn-form mt-3 mb-5 " id="link_create_order_
 
         g.find("#customer_phone_").attr("href", "tel:"+r.customer_phone);
         g.find("#customer_phone_").html(" "+ r.customer_phone);
-        g.find("#customer_phone_").attr("id", "customer_phone_"+r.num_order);
+        g.find("#customer_phone_").attr("id", "customer_phone_"+r.pk);
 
 
         g.find("#customer_telegram_").attr("href", "https://t.me/"+r.customer_telegram);
         g.find("#customer_telegram_").html(" @"+r.customer_telegram);
-        g.find("#customer_telegram_").attr("id", "customer_telegram_"+r.num_order);
+        g.find("#customer_telegram_").attr("id", "customer_telegram_"+r.pk);
 
 
         g.find("#city_").html('Тбилиси');
         g.find("#city_").attr("id", "city_"+r.pk);
 
         g.find("#street_app_").html(r.address_street_app);
-        g.find("#street_app_").attr("id", "street_app_"+r.num_order);
+        g.find("#street_app_").attr("id", "street_app_"+r.pk);
 
         g.find("#num_").html(r.address_num);
         g.find("#num_").attr("id", "num_"+r.pk);
@@ -116,7 +119,8 @@ class="btn btn-sm btn-orange cta-btn btn-form mt-3 mb-5 " id="link_create_order_
         <span id="5"></span>
     </div>
 
-    <button type="submit" name="submit" class="btn btn-sm">Отправить заявку</button>
+    <button type="submit" name="submit" class="btn btn-sm btn-orange cta-btn btn-form mt-3 mb-5 ">Отправить заявку</button>
+
 </form>
      <script type="text/javascript">
 $(document).ready(function() {
@@ -156,11 +160,13 @@ $(document).ready(function() {
             {% for i in order %}
             <div class="row p-1 mb-1 ">
                 <div class="col-md-4">
-                    <div id="time_in">{{ i.time_in }}</div><br><!--                    $('#head').append(add_order_in_html_object(type[i]));-->
+                    <div id="time_in">{{ i.time_in }}</div><br>
 
-                    <a href="{% url 'invoice' i.pk %}" id="order_{{ i.pk }}" class="h5 mycolor">Заявка № {{ i.pk}}</a><br>
-                    <a href="{% url 'delete-order' i.pk %}" id="delete_{{ i.pk }}" class="mycolor"><img src="/media/images/delete.png" width="15" ></a>
-                      <a href="../list_order/update/{{ i.pk}}" id="edit_{{ i.pk }}"><img src="/media/images/change.png" width="25" ></a>
+                    <a href="{% url 'invoice' i.pk %}" id="order_{{ i.pk }}" class="h5 mycolor">Заявка № {{ i.pk }}</a><br>
+                    <a href="{% url 'delete-order' i.pk %}" id="delete_{{ i.pk }}" class="mycolor" title="Удалить"><img src="/media/images/delete.png" width="15" ></a>
+                      <a href="../list_order/update/{{ i.pk}}" id="edit_{{ i.pk }}" title="Редактировать"><img src="/media/images/change.png" width="25" ></a>
+                    <a href="#" id="{{ i.pk }}" class="copy" title="Копировать"><img src="/media/images/copy.png" width="30" ></a>
+
 
                 </div>
                 <div class="col-md-4 ">
@@ -185,7 +191,36 @@ $(document).ready(function() {
                 <div class="col-md-12"><hr></div>
             </div>
             {% endfor %}
+                <script>
+                    $(document.body).on( "click", ".copy", function(e) {
+                        let customer_name_pk="customer_name_"+$(this).attr('id');
+                        let name=$('#'+customer_name_pk).html();
 
+                        let customer_phone_pk="customer_phone_"+$(this).attr('id');
+                        let phone=$('#'+customer_phone_pk).html().trim();
+
+                        let customer_telegram_pk="customer_telegram_"+$(this).attr('id');
+                        let telegram=$('#'+customer_telegram_pk).html().trim();
+
+                        let customer_street_pk="street_app_"+$(this).attr('id');
+                        let street=$('#'+customer_street_pk).html();
+
+                        let num_house_pk="num_"+$(this).attr('id');
+                        let num_house=$('#'+num_house_pk).html();
+
+                        $('#form').fadeIn("slow", function(){
+                            form.style.display = "block";
+                            $('#link_create_order_form').html('X');
+                            $('[name="customer_name"]').attr("value", name);
+                            $('[name="customer_phone"]').attr("value", phone);
+                            $('[name="customer_telegram"]').attr("value", telegram);
+                            $('[name="address_street_app"]').attr("value", street);
+                            $('[name="address_num"]').attr("value", num_house);
+
+                        });
+                    });
+
+                </script>
 </div>
 
 
@@ -223,6 +258,7 @@ $(document).ready(function() {
                     <a href="" id="order_" class="h5 mycolor"> </a><br>
                     <a href="" id="delete_" class="mycolor"><img src="media/images/delete.png" width="15" ></a>
                     <a href="" id="edit_"><img src="/media/images/change.png" width="25" ></a>
+                    <a href="#" id="" class="copy"><img src="/media/images/copy.png" width="30" ></a>
                 </div>
                 <div class="col-md-4 ">
                     <span id="customer_name_" class="fas fa-user prefix text-secondary mt-3" ></span><br>
