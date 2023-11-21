@@ -120,10 +120,6 @@ class OrderManagementSystem(LoginRequiredMixin, ListView):
 
 
 
-
-
-
-
 class OrderUpdate(LoginRequiredMixin, UpdateView):
     model = OrderList
     template_name = 'order_update.html'

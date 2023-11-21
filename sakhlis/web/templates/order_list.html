@@ -145,16 +145,18 @@ $(document).ready(function() {
                 dataType: 'text',
                 beforeSend: function () {$("#id_form").html('<h3>Отправляется...</h3>');},
                 success: function (resp_) {
-                                        b=JSON.parse(resp_);
-                                        $('#head').prepend(add_order_in_html_object(b));
-                                        show_create_order_form(document.getElementById('form'))
-                                        $('#form')[0].reset();
+
+                                                    window.location.href = '/list_order/'+JSON.parse(resp_).pk;
+
+
                                            },
             });
         }
     });
 });
 </script>
+
+
 
 <div id="head" class="container">
             {% for i in order %}
@@ -252,7 +254,7 @@ $(document).ready(function() {
 
     </script>
 
-    <div id="row_order" class="hidden" >
+    <div id="row_order" class="hidden">
                 <div class="col-md-4">
                     <div id="time_in"></div><br>
                     <a href="" id="order_" class="h5 mycolor"> </a><br>

@@ -48,7 +48,7 @@ ORDER_STATUS = [
     ('BEG', 'Заявка получена'),
     ('SND', 'Направлена мастеру'),
     ('RCV', 'Мастеру принял заявку'),
-    ('WRK', 'Заявка в работе'),
+    # ('WRK', 'Заявка в работе'),
     ('END', 'Заявка выполнена'),
 ]
 
@@ -111,14 +111,10 @@ class OrderList(models.Model):
     time_out = models.DateTimeField(null=True, blank=True, verbose_name='Дата выполнения')
     repairer_id = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True,
                                     verbose_name='Мастер', default='', )
-    price = models.DecimalField(decimal_places=2, max_digits=7, null=True, blank=True, verbose_name='Стоимость работ')
     text_order = models.CharField(max_length=1500, verbose_name='Описание проблемы', blank=True, null=True)
     customer_name = models.CharField(max_length=50, verbose_name='Ваше имя')
     customer_phone = models.CharField(max_length=16, verbose_name='Телефон')
     customer_telegram = models.CharField(max_length=26, verbose_name='Telegram', blank=True, null=True)
-    # customer_whatsapp = models.CharField(max_length=16, verbose_name='WhatsApp', blank=True, null=True)
-    #
-
     customer_code = models.CharField(max_length=16, verbose_name='Код организации', blank=True, null=True)
     address_city = models.CharField(max_length=2, choices=CITY_CHOICES, default='TB', null=True, blank=True,
                                     verbose_name='Город')
@@ -127,7 +123,9 @@ class OrderList(models.Model):
     address_street_app = models.CharField(max_length=150, verbose_name='Улица', null=True, blank=True)
     address_num = models.CharField(max_length=10, verbose_name='Номер дома', null=True, blank=True)
     services = models.ManyToManyField('Service', through='Invoice')
-    # location = geomodel.PointField(geography=True, null=True, blank=True)
+
+    location_longitude = models.FloatField(verbose_name='Долгота', null=True, blank=True)
+    location_latitude = models.FloatField(verbose_name='Широта', null=True, blank=True)
 
     class Meta:
         verbose_name = 'Список заказов'
