@@ -12,11 +12,13 @@ CHAT_ID = 5621399532
 
 
 @shared_task
-def send_order_information(inst):
+def send_order_information(inst, location):
     """" send order`s information to telegram group"""
     instance = OrderList.objects.get(pk=inst)
     repairer = User.objects.all().values_list('pk', 'username')
-    map_ = set_coordinates_address(instance.address_street_app, 'Тбилиси', instance.address_num)
+    if location!=None:
+        map_= f'https://yandex.ru/maps/?pt={location[0]},{location[1]}&z=18&l=map'
+    else: map_=''
     subject_ = f'<b>Заказ на работы № {instance.pk} от {instance.time_in.strftime("%m/%d/%Y")}</b>'
     text = subject_ + f'\n ' \
                       f'ИМЯ: {instance.customer_name} \n' \

@@ -43,10 +43,12 @@ def set_coordinates_address(street: str, city: str, app_num: str) -> str:
     try:
         geolocator = Nominatim(user_agent="app_site")
         location = geolocator.geocode({'city': city, 'street': street+', '+app_num}, addressdetails=True)
+        if location:
+            return str(location.longitude), str(location.latitude)
+        else: return None
     except TypeError:
-        return ' '
-    if location:
-        return f'https://yandex.ru/maps/?pt={location.longitude},{location.latitude}&z=18&l=map'
+        return None
+
 
 def add_telegram_button(repairer: list, order_pk: int) -> types.InlineKeyboardMarkup:
     """

@@ -7,6 +7,7 @@ from kombu.exceptions import OperationalError
 
 from .models import OrderList, RepairerList
 from .tasks import send_order_information, send_email_after_registration
+from .utils import set_coordinates_address
 
 TOKEN = "6082335579:AAHqLPJB2RSdczDSbshpYV5Q7oqmyIcnbFI"
 CHAT_ID = 5621399532
@@ -17,7 +18,12 @@ def send_post_new_order(instance, created, **kwargs):
     """"sent order`s information to telegram group"""
     try:
         if created:
-            send_order_information.apply_async([instance.pk], countdown=5, expires=20)
+            location = set_coordinates_address(instance.address_street_app, 'Тбилиси', instance.address_num)
+            if location != None:
+                instance.location_longitude=float(location[0])
+                instance.location_latitude=float(location[1])
+                instance.save()
+            send_order_information.apply_async([instance.pk, location], countdown=5, expires=20)
     except OperationalError:
         print("ошибка отправки ассинхрон")  #TODO сделать запись в лог файл о несрабатывании ассинхрона
 

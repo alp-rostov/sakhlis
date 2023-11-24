@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import *
 
 class OrderListAdmin(admin.ModelAdmin):
-    list_display = ('id', 'time_in', 'text_order', 'customer_name', 'customer_phone')
+    list_display = ('id', 'time_in', 'text_order', 'customer_name', 'customer_phone', 'location_longitude', 'location_latitude')
     list_display_links = ('text_order', 'customer_name', 'customer_phone')
     search_fields = ('text_order', 'customer_phone')
     list_filter = ('order_status', 'repairer_id', 'time_in')

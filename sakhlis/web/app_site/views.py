@@ -73,8 +73,8 @@ class OrderCreate(CreateView):
                              'address_city': self.object.address_city,
                              'address_street_app': self.object.address_street_app,
                              'address_num': self.object.address_num,
-                             'auth': self.request.user.is_authenticated
-                             })
+                             'auth': self.request.user.is_authenticated,
+                               })
 
     def form_valid(self, form):
         if self.request.user.is_authenticated:
@@ -294,6 +294,27 @@ def CreateIvoicePDF(request, **kwargs):
     return FileResponse(buf, as_attachment=True, filename=f'Invoice_{order_pk}_.pdf')
 
 
+class OrderSearchForm(LoginRequiredMixin, ListView):
+    model = OrderList
+    context_object_name = 'order'
+    template_name = 'ordersearchform.html'
+    ordering = ['-time_in']
+    paginate_by = 15
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        b=self.request.GET.copy()
+        b.__setitem__('repairer_id', self.request.user.pk)
+        self.filterset = OrderFilter(b, queryset)
+        return self.filterset.qs
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['filterset'] = self.filterset
+        return context
+
+
+
 def listservices_for_invoice_json(request, **kwargs):
     """for ajax request """
     if request.user.is_authenticated:
@@ -307,7 +328,7 @@ def listorder_for_order_list_paginator_json(request, **kwargs):
         data = OrderList.objects.filter(pk__lt=request.GET.get('last_pk'), repairer_id=request.user)\
                             .order_by('-pk')\
                             .values('pk', 'time_in', 'text_order', 'customer_name', 'customer_phone', 'customer_telegram',
-                                    'address_city', 'address_street_app', 'address_num')[0:14]
+                                    'address_city', 'address_street_app', 'address_num', 'location_longitude', 'location_latitude')[0:14]
         json_data = json.dumps(list(data), default=str)
         return JsonResponse(json_data, safe=False)
 
@@ -338,23 +359,15 @@ def input_street(request, **kwargs):
     return JsonResponse(json_data, safe=False)
 
 
+def geo_map(request, **kwargs):
+    """ """
+    b = OrderList.objects.all()
+    for a in b:
 
-class OrderSearchForm(LoginRequiredMixin, ListView):
-    model = OrderList
-    context_object_name = 'order'
-    template_name = 'ordersearchform.html'
-    ordering = ['-time_in']
-    paginate_by = 15
-
-    def get_queryset(self):
-        queryset = super().get_queryset()
-        b=self.request.GET.copy()
-        b.__setitem__('repairer_id', self.request.user.pk)
-        self.filterset = OrderFilter(b, queryset)
-        return self.filterset.qs
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['filterset'] = self.filterset
-        return context
+        location = set_coordinates_address(a.address_street_app, 'Тбилиси', a.address_num)
+        if location != None:
+            a.location_longitude = float(location[0])
+            a.location_latitude = float(location[1])
+            a.save()
+    return JsonResponse({"message": "successful"})
 

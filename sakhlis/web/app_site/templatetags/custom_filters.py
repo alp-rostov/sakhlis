@@ -24,3 +24,7 @@ def choice_tag(value, A):
 @register.filter()
 def finish_order_tag(value):
     return f'' if value else f' в работе...'
+
+@register.filter()
+def change_comma_to_dot(value):
+    return str(value).replace(',', '.')

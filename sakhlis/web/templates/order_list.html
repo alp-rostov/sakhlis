@@ -78,6 +78,14 @@ class="btn btn-sm btn-orange cta-btn btn-form mt-3 mb-5 " id="link_create_order_
 
         g.find("#num_").html(r.address_num);
         g.find("#num_").attr("id", "num_"+r.pk);
+
+        if (r.location_longitude) {
+            g.find("#map_").attr("class", "");
+            g.find("#map_").attr("href", 'https://yandex.ru/maps/?pt='+r.location_longitude+','+r.location_latitude+'&z=18&l=map');
+            g.find("#map_").attr("id", "map_"+r.pk);
+
+        }
+
         return g;
      }
     </script>
@@ -173,15 +181,28 @@ $(document).ready(function() {
                 </div>
                 <div class="col-md-4 ">
                     <span id="customer_name_{{ i.pk }}" class="fas fa-user prefix text-secondary mt-3" > {{ i.customer_name|capfirst }}</span><br>
-
+                    {% if i.customer_phone|length > 2 %}
                     <a href="tel:{{ i.customer_phone }}" title="Телефон" id="customer_phone_{{ i.pk }}" class="fas fa-phone prefix text-secondary mt-3">
                         {{ i.customer_phone }}</a><br>
+                    {% endif %}
+
+                    {% if i.customer_telegram|length > 2 %}
                     <a href="https://t.me/{{ i.customer_telegram|cut:'@' }}" title="Телеграм" id="customer_telegram_{{ i.pk }}"
                        class ="fas fa fa-paper-plane text-secondary mt-3">
                          @{{i.customer_telegram}}</a><br>
-                    <div class="fas fa-home prefix text-secondary mt-3"> <span id="city_{{ i.pk }}" >{{ i.address_city|choice_tag:'city'}}</span>,
-                    <span id="street_app_{{ i.pk }}">{{ i.address_street_app|capfirst }}</span>,
-                        <span id="num_{{ i.pk }}">{{ i.address_num }}</span>.</div>
+                    {% endif %}
+
+                    <p class="fas fa-home prefix text-secondary mt-3">
+                        <span id="city_{{ i.pk }}" >{{ i.address_city|choice_tag:'city'}}</span>,
+                        <span id="street_app_{{ i.pk }}">{{ i.address_street_app|capfirst }}</span>,
+                        <span id="num_{{ i.pk }}">{{ i.address_num }}</span>.
+                        {% if i.location_longitude %}
+                            <a href= 'https://yandex.ru/maps/?pt={{ i.location_longitude|change_comma_to_dot }},{{ i.location_latitude|change_comma_to_dot }}&z=18&l=map'
+                                 id="map_{{ i.pk }}"><img src="/media/images/map.png" width="35">
+                            </a>
+                        {% endif%}
+                    </p>
+
                 </div>
 
                 <div class="col-md-4">
@@ -267,9 +288,13 @@ $(document).ready(function() {
 
                     <a href="" title="Телефон" id="customer_phone_" class="fas fa-phone prefix text-secondary mt-3"></a><br>
                     <a href="" title="Телеграм" id="customer_telegram_" class ="fas fa fa-paper-plane text-secondary mt-3"></a><br>
-                    <div class="fas fa-home prefix text-secondary mt-3"> <span id="city_" ></span>,
+                    <p class="fas fa-home prefix text-secondary mt-3"> <span id="city_" ></span>,
                     <span id="street_app_"></span>,
-                        <span id="num_"></span>.</div>
+                        <span id="num_"></span>.
+
+                        <a href= ''
+                             id="map_" class="hidden"><img src="/media/images/map.png" width="35">
+                        </a></p>
                 </div>
 
                 <div class="col-md-4">
