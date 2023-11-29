@@ -530,42 +530,7 @@
                                 </button>
 				    </div>
 
-                            <script type="text/javascript">
-                            $(document).ready(function() {
 
-                                $('#id_form').submit(function(e) {
-                                    e.preventDefault();
-                                    var d=$("form input[type='text'], input[type='tel']")
-                                    var check=false;
-                                    for (i=0; i<d.length; i++){
-                                        $('form #'+i).html('');
-                                        if (d[i].value=='') {
-                                            $('form #'+i).html('Введите данные поля "' +d[i].placeholder + '"' );
-                                        check=true;
-                                        }
-                                    }
-                                    if (check) {
-                                        return false;
-                                    } else {
-                                        $.ajax({
-                                            url: '',
-                                            type: 'POST',
-                                            data: $(this).serialize(),
-                                            dataType: 'text',
-                                            beforeSend: function () {$("#id_form").html('<h3>Отправляется...</h3>');},
-                                            success: function (resp) {
-                                                if (JSON.parse(resp).auth==true) {
-                                                    window.location.href = '/list_order/'+JSON.parse(resp).pk;
-                                                }
-                                                else {
-                                                    $("#id_form").html(JSON.parse(resp).message);
-                                                }
-                                            },
-                                        });
-                                    }
-                                });
-                            });
-                            </script>
                             <form method="post" action="" name="form" id="id_form">
                                 {% csrf_token %}
                                 <div class="md-form mb-4">
@@ -662,6 +627,31 @@
     });
 
 
+
+$(document.body).ready(function() {
+
+    $('#id_form').submit(function(e) {
+        e.preventDefault();
+
+
+            $.ajax({
+                url: '',
+                type: 'POST',
+                data: $(this).serialize(),
+                dataType: 'text',
+                beforeSend: function () {$("#id_form").html('<h3>Отправляется...</h3>');},
+                success: function (resp) {
+                    if (JSON.parse(resp).auth==true) {
+                        window.location.href = '/list_order/'+JSON.parse(resp).pk;
+                    }
+                    else {
+                        $("#id_form").html(JSON.parse(resp).message);
+                    }
+                },
+            });
+
+    });
+});
 </script>
 
 </body></html>

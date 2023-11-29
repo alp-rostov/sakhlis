@@ -8,19 +8,19 @@ class OrderForm(forms.ModelForm):
         label='Текст заказа',
         widget=forms.TextInput(attrs={"class": "md-textarea form-control",
                                      'placeholder': "Опишите задачу", 'maxlength':1500}),
-        required=False
+        required=True
         )
 
     customer_name = forms.CharField(
         label='Ваше имя',
         widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Имя", 'maxlength':20}),
-        required=False
+        required=True
     )
 
     customer_phone = forms.CharField(
         label='Телефон',
         widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Телефон", 'type': 'tel', 'maxlength':16}),
-        required=False,
+        required=True,
 
     )
 

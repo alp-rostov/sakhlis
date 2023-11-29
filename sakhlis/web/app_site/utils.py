@@ -23,8 +23,8 @@ def get_info_for_pdf():
                                    .annotate(sum=F('price') * F('quantity')))
                           ).select_related('repairer_id')
 
-def get_data_for_graph(queryset, labels_name:str, data_name:str, help_dict:dict=None) -> tuple:
-    """ return dicts using for create Graph in statistica.html """
+def get_data_for_graph(queryset, labels_name:str, data_name:str, help_dict:dict=None) -> tuple[list, list]:
+    """ return list using for create Graph in statistica.html """
     labels = []
     data = []
     if help_dict:
@@ -38,7 +38,9 @@ def get_data_for_graph(queryset, labels_name:str, data_name:str, help_dict:dict=
 
     return labels, data
 
-def set_coordinates_address(street: str, city: str, app_num: str) -> str:
+GeoPointLocation = tuple[str, str] | None
+
+def set_coordinates_address(street: str, city: str, app_num: str) -> GeoPointLocation | None:
     """ setting of map coordinates by street and city """
     try:
         geolocator = Nominatim(user_agent="app_site")
@@ -53,7 +55,7 @@ def set_coordinates_address(street: str, city: str, app_num: str) -> str:
 def add_telegram_button(repairer: list, order_pk: int) -> types.InlineKeyboardMarkup:
     """
     creating buttons for telegram message.
-    repairer -> list of tuples (id repairer, s_name repairer)
+    repairer -> list of tuples [(id repairer, s_name repairer),....]
     order_pk -> order`s number
     """
     keyboard = types.InlineKeyboardMarkup()

@@ -1,8 +1,6 @@
-import requests
-from django.contrib.auth.models import User
-from django_filters import FilterSet, ChoiceFilter, CharFilter, DateFilter, BooleanFilter, ModelChoiceFilter
-from .models import RepairerList, OrderList, StreerTbilisi
-from .models import CITY_CHOICES
+
+from django_filters import FilterSet, CharFilter, DateFilter
+from .models import *
 from django import forms
 #
 # class RepFilter(FilterSet):
@@ -55,7 +53,7 @@ class OrderFilter(FilterSet):
 
 
     repairer_id = CharFilter(
-        widget=forms.TextInput(attrs={"class": "hidden",}),
+        widget=forms.TextInput(attrs={"class": "hidden"}),
         label='Мастер-',
         lookup_expr='exact',
 

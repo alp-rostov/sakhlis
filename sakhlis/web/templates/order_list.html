@@ -80,12 +80,12 @@ class="btn btn-sm btn-orange cta-btn btn-form mt-3 mb-5 " id="link_create_order_
         g.find("#num_").attr("id", "num_"+r.pk);
 
         if (r.location_longitude) {
-            g.find("#map_").attr("class", "");
+
             g.find("#map_").attr("href", 'https://yandex.ru/maps/?pt='+r.location_longitude+','+r.location_latitude+'&z=18&l=map');
             g.find("#map_").attr("id", "map_"+r.pk);
+            g.find("#map_icon").attr("class", "fas fa-map-marker prefix text-secondary mt-3");
 
         }
-
         return g;
      }
     </script>
@@ -134,18 +134,7 @@ class="btn btn-sm btn-orange cta-btn btn-form mt-3 mb-5 " id="link_create_order_
 $(document).ready(function() {
     $('#form').submit(function(e) {
         e.preventDefault();
-        let d=$("form input[type='text'], input[type='tel']")
-        let check=false;
-        for (i=0; i<d.length; i++){
-            $('form #'+i).html('');
-            if (d[i].value=='') {
-                $('form #'+i).html('Введите данные поля "' +d[i].placeholder + '"' );
-            check=true;
-            }
-        }
-        if (check) {
-            return false;
-        } else {
+
             $.ajax({
                 url: '../',
                 type: 'POST',
@@ -153,13 +142,10 @@ $(document).ready(function() {
                 dataType: 'text',
                 beforeSend: function () {$("#id_form").html('<h3>Отправляется...</h3>');},
                 success: function (resp_) {
-
-                                                    window.location.href = '/list_order/'+JSON.parse(resp_).pk;
-
-
+                                                window.location.href = '/list_order/'+JSON.parse(resp_).pk;
                                            },
             });
-        }
+
     });
 });
 </script>
@@ -173,35 +159,36 @@ $(document).ready(function() {
                     <div id="time_in">{{ i.time_in }}</div><br>
 
                     <a href="{% url 'invoice' i.pk %}" id="order_{{ i.pk }}" class="h5 mycolor">Заявка № {{ i.pk }}</a><br>
-                    <a href="{% url 'delete-order' i.pk %}" id="delete_{{ i.pk }}" class="mycolor" title="Удалить"><img src="/media/images/delete.png" width="15" ></a>
-                      <a href="../list_order/update/{{ i.pk}}" id="edit_{{ i.pk }}" title="Редактировать"><img src="/media/images/change.png" width="25" ></a>
-                    <a href="#" id="{{ i.pk }}" class="copy" title="Копировать"><img src="/media/images/copy.png" width="30" ></a>
+
+                    <a href="{% url 'delete-order' i.pk %}" id="delete_{{ i.pk }}" class="mycolor" title="Удалить"><i class="fas fa-trash text-secondary mt-3"></i></a>&nbsp&nbsp&nbsp
+                      <a href="../list_order/update/{{ i.pk}}" id="edit_{{ i.pk }}" title="Редактировать"><i class="fas fa-pen text-secondary mt-3"> </i></a>&nbsp&nbsp&nbsp
+                    <a href="#" id="{{ i.pk }}" class="copy" title="Копировать"><i class="fas fa-copy text-secondary mt-3"></i></a>
 
 
                 </div>
                 <div class="col-md-4 ">
-                    <span id="customer_name_{{ i.pk }}" class="fas fa-user prefix text-secondary mt-3" > {{ i.customer_name|capfirst }}</span><br>
-                    {% if i.customer_phone|length > 2 %}
-                    <a href="tel:{{ i.customer_phone }}" title="Телефон" id="customer_phone_{{ i.pk }}" class="fas fa-phone prefix text-secondary mt-3">
+                    <span id="customer_name_{{ i.pk }}" class="fas fa-user prefix text-secondary mt-3" aria-hidden="true"> {{ i.customer_name|capfirst }}</span><br>
+
+                    <a href="tel:{{ i.customer_phone }}" title="Телефон" id="customer_phone_{{ i.pk }}" class="fas fa-phone prefix text-secondary mt-3" aria-hidden="true">
                         {{ i.customer_phone }}</a><br>
-                    {% endif %}
 
-                    {% if i.customer_telegram|length > 2 %}
+
                     <a href="https://t.me/{{ i.customer_telegram|cut:'@' }}" title="Телеграм" id="customer_telegram_{{ i.pk }}"
-                       class ="fas fa fa-paper-plane text-secondary mt-3">
+                       class ="fas fa fa-paper-plane text-secondary mt-3" aria-hidden="true">
                          @{{i.customer_telegram}}</a><br>
-                    {% endif %}
 
-                    <p class="fas fa-home prefix text-secondary mt-3">
+                    {% if i.location_longitude %}
+                    <a href= 'https://yandex.ru/maps/?pt={{ i.location_longitude|change_comma_to_dot }},
+                    {{ i.location_latitude|change_comma_to_dot }}&z=18&l=map' id="map_{{ i.pk }}" class="fas fa-home prefix text-secondary mt-3"
+                    title="Открыть карту" aria-hidden="true">
+                    <i  class="fas fa-map-marker prefix text-secondary mt-3" aria-hidden="true"></i>
+                    {% else %}
+                        <a href="" class="fas fa-home prefix text-secondary mt-3" aria-hidden="true">
+                    {% endif%}
                         <span id="city_{{ i.pk }}" >{{ i.address_city|choice_tag:'city'}}</span>,
                         <span id="street_app_{{ i.pk }}">{{ i.address_street_app|capfirst }}</span>,
                         <span id="num_{{ i.pk }}">{{ i.address_num }}</span>.
-                        {% if i.location_longitude %}
-                            <a href= 'https://yandex.ru/maps/?pt={{ i.location_longitude|change_comma_to_dot }},{{ i.location_latitude|change_comma_to_dot }}&z=18&l=map'
-                                 id="map_{{ i.pk }}"><img src="/media/images/map.png" width="35">
-                            </a>
-                        {% endif%}
-                    </p>
+                    </a>
 
                 </div>
 
@@ -221,7 +208,6 @@ $(document).ready(function() {
 
                         let customer_phone_pk="customer_phone_"+$(this).attr('id');
                         let phone=$('#'+customer_phone_pk).html().trim();
-
                         let customer_telegram_pk="customer_telegram_"+$(this).attr('id');
                         let telegram=$('#'+customer_telegram_pk).html().trim();
 
@@ -288,17 +274,17 @@ $(document).ready(function() {
 
                     <a href="" title="Телефон" id="customer_phone_" class="fas fa-phone prefix text-secondary mt-3"></a><br>
                     <a href="" title="Телеграм" id="customer_telegram_" class ="fas fa fa-paper-plane text-secondary mt-3"></a><br>
-                    <p class="fas fa-home prefix text-secondary mt-3"> <span id="city_" ></span>,
-                    <span id="street_app_"></span>,
-                        <span id="num_"></span>.
 
-                        <a href= ''
-                             id="map_" class="hidden"><img src="/media/images/map.png" width="35">
-                        </a></p>
+                    <a href= ''  id="map_" class="fas fa-home prefix text-secondary mt-3"  title="Открыть карту">
+                        <i  id="map_icon"></i>
+                        <span id="city_" ></span>,
+                        <span id="street_app_"></span>,
+                        <span id="num_"></span>.
+                    </a>
                 </div>
 
                 <div class="col-md-4">
-                        <p id="text_order_" class="fas text-secondary mt-3"></p>
+                    <p id="text_order_" class="fas text-secondary mt-3"></p>
                 </div>
     </div>
 
@@ -309,14 +295,16 @@ $(document).ready(function() {
 
     {% if order.13.pk %}
 
-        <a href="../listorderjson?last_pk={{ order.13.pk }}&work_status=ALL" class="btn btn-lg btn-orange cta-btn btn-form mt-3 mb-5 wow fadeIn waves-effect waves-light animated" id="paginator_next">NEXT</a>
+        <a href="../listorderjson?last_pk={{ order.13.pk }}&work_status=ALL"
+           class="btn btn-lg btn-orange cta-btn btn-form mt-3 mb-5 wow fadeIn waves-effect waves-light animated"
+           id="paginator_next">Next</a>
     {% endif %}
 </h2>
 
 
 <script>
 
- $(document.body).on( "change", "#id_address_street_app", function(e) {
+ $(document.body).on( "input", "#id_address_street_app", function(e) {
         e.preventDefault();
 
          $.ajax({

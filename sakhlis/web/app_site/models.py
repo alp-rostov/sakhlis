@@ -80,7 +80,7 @@ MONTH_ = ['','Январь', 'Февраль', 'Март', 'Апрель', 'Ма
 class Service(models.Model):
     """name type """
     name = models.\
-        CharField(null=True, blank=True, max_length=500, verbose_name='Услуга')
+        CharField(null=True, blank=True, max_length=500, verbose_name='Услуга') # better use default=""
     type = models.CharField(choices=WORK_CHOICES, null=True, blank=True, max_length=3, verbose_name='Вид работ')
 
     class Meta:
@@ -103,6 +103,9 @@ class Invoice(models.Model):
     class Meta:
         verbose_name = 'Список работ заказа'
         verbose_name_plural = 'Список работ заказа'
+
+    def __str__(self):
+        return f"{self.service_id}"
 
 class OrderList(models.Model):
     """time_in time_out repairer_id price text_order customer_name customer_phone address_city address_street_app

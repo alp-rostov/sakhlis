@@ -30,7 +30,6 @@ def send_order_information(inst, location):
                       f'{map_}  \n' \
                       f'<b>ОТПРАВИТЬ ЗАКАЗ МАСТЕРУ:</b>' \
 
-
     bot = telebot.TeleBot(TOKEN)
     bot.send_message(CHAT_ID, text, reply_markup=add_telegram_button(repairer, instance.pk),  parse_mode='HTML')
 

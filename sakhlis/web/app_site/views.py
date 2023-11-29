@@ -13,7 +13,7 @@ from .forms import OrderForm, InvoiceForm, UserRegisterForm, RepairerForm
 from .utils import *
 from django.http import FileResponse, Http404, HttpResponseRedirect, JsonResponse
 import io
-
+from django.contrib.auth.decorators import login_required
 
 
 class UserRegisterView(CreateView):
@@ -23,11 +23,7 @@ class UserRegisterView(CreateView):
     success_url = reverse_lazy('home')
     template_name = 'register.html'
 
-    def post(self, request, *args, **kwargs):
-        with transaction.atomic():            # todo check transaction
-            super().post(request, *args, **kwargs)
-            RepairerList.objects.create(user=self.object)
-        return redirect('home')
+
 
 class UserDetailInformation(LoginRequiredMixin, DetailView):
     model = User
@@ -63,6 +59,7 @@ class OrderCreate(CreateView):
 
     def post(self, request, *args, **kwargs):
         super().post(request, *args, **kwargs)
+
         return JsonResponse({'message': f'<h3>Заявка № {self.object.pk} отправлена успешно!</h3>',
                              'pk':self.object.pk,
                              'text_order': self.object.text_order,
@@ -138,24 +135,6 @@ class OrderDelete(LoginRequiredMixin, DeleteView):
     model = OrderList
     template_name = 'order_delete.html'
     success_url = '/list_order'
-
-
-
-def OrderAddRepaier(request):
-    """Add the repairer to order from telegram"""
-    if request.GET:
-        order = get_object_or_404(OrderList, pk=request.GET['pk_order'])
-        repaier = get_object_or_404(User, pk=request.GET['pk_repairer'])
-        if order and repaier:
-            if not order.repairer_id:
-                order.repairer_id = repaier
-                order.order_status = 'SND'
-                order.save()
-                return HttpResponseRedirect(reverse('update', args=(order.pk,)))
-            else:
-                return redirect('home')  # TODO настроить сообщение, что ремонтник уже указан
-    else:
-        raise Http404()
 
 
 class InvoiceCreate(LoginRequiredMixin, DetailView):
@@ -276,9 +255,6 @@ class RepaierUpdate(UpdateView):
     def get_success_url(self):
         return '/user/' + str(self.request.user.pk)
 
-
-
-
 def CreateIvoicePDF(request, **kwargs):
     """ Create invoice pdf-file for printing """
 
@@ -313,43 +289,57 @@ class OrderSearchForm(LoginRequiredMixin, ListView):
         context['filterset'] = self.filterset
         return context
 
+@login_required
+def OrderAddRepaier(request):
+    """Add the repairer to order from telegram"""
+    order = get_object_or_404(OrderList, pk=request.GET['pk_order'])
+    repaier = get_object_or_404(User, pk=request.GET['pk_repairer'])
+    if order and repaier:
+        if not order.repairer_id:
+            order.repairer_id = repaier
+            order.order_status = 'SND'
+            order.save()
+            return HttpResponseRedirect(reverse('update', args=(order.pk,)))
+        else:
+            return redirect('home')  # TODO настроить сообщение, что ремонтник уже указан
 
 
+@login_required
 def listservices_for_invoice_json(request, **kwargs):
     """for ajax request """
-    if request.user.is_authenticated:
-        data = Service.objects.filter(type=request.GET.get('type_work')).values('id', 'name')
-        json_data = json.dumps(list(data))
-        return JsonResponse(json_data, safe=False)
+    data = Service.objects.filter(type=request.GET.get('type_work')).values('id', 'name')
+    json_data = json.dumps(list(data))
+    return JsonResponse(json_data, safe=False)
 
+@login_required
 def listorder_for_order_list_paginator_json(request, **kwargs):
     """for ajax request """
-    if request.user.is_authenticated:
-        data = OrderList.objects.filter(pk__lt=request.GET.get('last_pk'), repairer_id=request.user)\
-                            .order_by('-pk')\
-                            .values('pk', 'time_in', 'text_order', 'customer_name', 'customer_phone', 'customer_telegram',
-                                    'address_city', 'address_street_app', 'address_num', 'location_longitude', 'location_latitude')[0:14]
-        json_data = json.dumps(list(data), default=str)
-        return JsonResponse(json_data, safe=False)
+    data = OrderList.objects.filter(pk__lt=request.GET.get('last_pk'), repairer_id=request.user)\
+                        .order_by('-pk')\
+                        .values('pk', 'time_in', 'text_order', 'customer_name', 'customer_phone', 'customer_telegram',
+                                'address_city', 'address_street_app', 'address_num', 'location_longitude', 'location_latitude')[0:14]
+    json_data = json.dumps(list(data), default=str)
+    return JsonResponse(json_data, safe=False)
 
+@login_required
 def DeleteIvoiceService(request, **kwargs):
     """for ajax request """
-    if request.user.is_authenticated:
-        invoice_object = get_object_or_404(Invoice.objects.filter(order_id__repairer_id=request.user),
-                              pk=kwargs.get("invoice_pk"))
-        invoice_object.delete()
-        return JsonResponse({"message": "success"})
+    invoice_object = get_object_or_404(Invoice.objects.filter(order_id__repairer_id=request.user),
+                          pk=kwargs.get("invoice_pk"))
+    invoice_object.delete()
+    return JsonResponse({"message": "success"})
 
+
+@login_required
 def change_work_status(request, **kwargs):
     """for ajax request """
-    if request.user.is_authenticated:
-        b = get_object_or_404(OrderList, pk=request.GET.get("order_pk"))
-        if request.GET.get('work_status') in ORDER_STATUS_FOR_CHECK and b.repairer_id == request.user:
-            b.order_status = request.GET.get('work_status')
-            b.save()
-            return JsonResponse({"message": request.GET.get('work_status')})
-        else:
-            return JsonResponse({"message": "error"})
+    b = get_object_or_404(OrderList, pk=request.GET.get("order_pk"))
+    if request.GET.get('work_status') in ORDER_STATUS_FOR_CHECK and b.repairer_id == request.user:
+        b.order_status = request.GET.get('work_status')
+        b.save()
+        return JsonResponse({"message": request.GET.get('work_status')})
+    else:
+        return JsonResponse({"message": "error"})
 
 
 def input_street(request, **kwargs):

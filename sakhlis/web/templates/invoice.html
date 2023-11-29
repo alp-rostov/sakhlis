@@ -71,40 +71,55 @@
 </div>
 
 
-<div class="table">
+<div>
     <div class="row">
-        <div class="col-md-6">Заказчик:</div><div class="col-md-6"> {{ info.customer_name }}  <a href="../list_order/update/{{ info.pk}}"><img src="/media/images/change.png" width="25" ></a></div>
+        <div class="col-md-4">Заказчик:</div><div class="col-md-6"> {{ info.customer_name }}
+        </div>
+        <div class="col-md-2" >
+        <a href="../list_order/update/{{ info.pk}}" class="fas fa-pen text fa-sm mr-1 btn "></a></div>
+                        </a></div>
     </div>
      <div class="row">
             <div class="col-md-12"><hr></div>
         </div>
     <div class="row">
-        <div class="col-md-6">Адрес:</div><div class="col-md-6">{{ info.address_city|choice_tag:'city' }}, {{ info.address_street_app }}, {{ info.address_num }}</div>
+        <div class="col-md-4">Адрес:</div><div class="col-md-6">{{ info.address_city|choice_tag:'city' }}, {{ info.address_street_app }}, {{ info.address_num }}</div>
+        <div class="col-md-2" >
+        <a href= 'https://yandex.ru/maps/?pt={{ info.location_longitude|change_comma_to_dot }},
+                    {{ info.location_latitude|change_comma_to_dot }}&z=18&l=map' id="map_{{ i.pk }}"
+           title="" class="fas fa-map-marker text fa-sm mr-1 btn">
+                        </a></div>
+
     </div>
      <div class="row">
             <div class="col-md-12"><hr></div>
     </div>
     <div class="row">
-         <div class="col-md-6">Телефон:</div><div class="col-md-6">{{ info.customer_phone }}
-        <a href="tel:{{ info.customer_phone }}" title="Телефон" class="fas fa-phone text-danger fa-sm mr-1">
+         <div class="col-md-4">Телефон:</div><div class="col-md-6" >{{ info.customer_phone }}</div>
+        <div class="col-md-2" >
+        <a href="tel:{{ info.customer_phone }}" title="Телефон" class="fas fa-phone text fa-sm mr-1 btn">
                         </a></div>
     </div>
      <div class="row">
             <div class="col-md-12"><hr></div>
     </div>
     <div class="row">
-         <div class="col-md-6">Телеграм:</div><div class="col-md-6">@{{ info.customer_telegram }}
-    <a href="https://t.me/{{ info.customer_telegram|cut:'@' }}" title="Телеграм">
-                        <img src="/static/images/telegram.gif" width="25"></a>
+         <div class="col-md-4">Телеграм:</div><div class="col-md-6">@{{ info.customer_telegram }}</div>
+        <div class="col-md-2">
+    <a href="https://t.me/{{ info.customer_telegram|cut:'@' }}" title="Телеграм" class="fas fa-paper-plane text fa-sm mr-1 btn">
+                        </a>
         </div>
     </div>
      <div class="row">
         <div class="col-md"><hr></div>
      </div>
     <div class="row">
-         <div class="col-md-6">Описание проблемы:</div><div class="col-md-6"> {{ info.text_order }}</div>
+         <div class="col-md-4">Описание проблемы:</div><div class="col-md-8"> {{ info.text_order }}</div>
     </div>
     </div>
+ <div class="row">
+        <div class="col-md"><hr></div>
+     </div>
 
 {% if info.order_status == 'SND' %}
 <table id="table_invoice" class="hidden">
@@ -133,7 +148,7 @@
 {% for g in invoice %}
 
     <tr class="form_text">
-            <td name="service_id">{{ g.service_id }} </td>
+            <td name="service_id">{{ g.service_id }}</td>
             <td name="quantity">{{ g.quantity }} </td>
             <td name="price">{{ g.price }}</td>
             <td name="amount">{{ g.amount }}</td>
