@@ -1,12 +1,9 @@
 import json
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.db import transaction
-from django.db.models import Avg
 from django.forms import modelformset_factory
 from django.shortcuts import redirect, get_object_or_404
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
-
 from .filters import OrderFilter
 from .models import *
 from .forms import OrderForm, InvoiceForm, UserRegisterForm, RepairerForm
@@ -360,4 +357,3 @@ def geo_map(request, **kwargs):
             a.location_latitude = float(location[1])
             a.save()
     return JsonResponse({"message": "successful"})
-

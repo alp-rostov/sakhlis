@@ -1,4 +1,6 @@
 {% load static %}
+{% load slippers %}
+
 <!DOCTYPE html><html lang="ru" prefix="og: http://ogp.me/ns#"><head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -113,140 +115,24 @@
             <div class="row">
                 <div class="col-12 columns mt-4">
                     <div class="owl-carousel owl-theme pt-5">
-                        <div class="item">
-                            <!--Card-->
-                            <div class="card testimonial-card">
-                                <!--Background color-->
-                                <div class="card-up services_gr"></div>
-                                <!--Avatar-->
-                                <div class="avatar mx-auto white">
-                                    <img src="{% static 'fonts/broken-cable.svg' %}" class="rounded-circle img-fluid">
-                                </div>
-                                <div class="card-body">
-                                    <!--Name-->
-                                    <h4 class="services_h">Услуги электрика</h4>
-                                    <hr>
-                                    <ul class="servicesLinks">
-                                        <li>Ремонт выключателя, розетки</li>
-                                        <li>Монтаж счетчика</li>
-                                        <li>Прокладка электропроводки</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <!--Card-->
-                        <div class="item">
-                            <!--Card-->
-                            <div class="card testimonial-card">
-                                <!--Background color-->
-                                <div class="card-up services_gr"></div>
-                                <!--Avatar-->
-                                <div class="avatar mx-auto white">
-                                    <img src="{% static 'fonts/leak.svg' %}" class="rounded-circle img-fluid">
-                                </div>
-                                <div class="card-body">
-                                    <!--Name-->
-                                    <h4 class="services_h">Услуги сантехника</h4>
-                                    <hr>
-                                    <ul class="servicesLinks">
-                                        <li>Устранение засора</li>
-                                        <li>Установка раковины, мойки, унитаза, смесителя</li>
-                                        <li>Устранение протечки крана</li>
-                                        <li>Прокладка водосточных труб</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!--Card-->
-                        </div>
-                        <div class="item">
-                            <!--Card-->
-                            <div class="card testimonial-card">
-                                <!--Background color-->
-                                <div class="card-up services_gr"></div>
-                                <!--Avatar-->
-                                <div class="avatar mx-auto white">
-                                    <img src="{% static 'fonts/living-room.svg' %}" class="rounded-circle img-fluid">
-                                </div>
-                                <div class="card-body">
-                                    <!--Name-->
-                                    <h4 class="services_h">Cборка мебели</h4>
-                                    <hr>
-                                    <ul class="servicesLinks">
-                                        <li>Шкафы, диваны, кухни</li>
-                                        <li>Установка встраиваемой техники</li>
-                                        <li>Подъем на этаж</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!--Card-->
-                        </div>
-                        <div class="item">
-                            <!--Card-->
-                            <div class="card testimonial-card">
-                                <!--Background color-->
-                                <div class="card-up services_gr"></div>
-                                <!--Avatar-->
-                                <div class="avatar mx-auto white">
-                                    <img src="{% static 'fonts/handyman-tools.svg' %}" class="rounded-circle img-fluid">
-                                </div>
-                                <div class="card-body">
-                                    <!--Name-->
-                                    <h4 class="services_h">Мелкий ремонт в квартире</h4>
-                                    <hr>
-                                    <ul class="servicesLinks">
-                                        <li>Монтаж карнизов и плинтусов</li>
-                                        <li>Ремонт межкомнатных дверей</li>
-                                        <li>Повесить картину, телевизор, люстру</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!--Card-->
-                        </div>
-                        <div class="item">
-                            <!--Card-->
-                            <div class="card testimonial-card">
-                                <!--Background color-->
-                                <div class="card-up services_gr"></div>
-                                <!--Avatar-->
-                                <div class="avatar mx-auto white">
-                                    <img src="{% static 'fonts/washing-machine.svg' %}" class="rounded-circle img-fluid">
-                                </div>
-                                <div class="card-body">
-                                    <!--Name-->
-                                    <h4 class="services_h">Установка бытовой техники</h4>
-                                    <hr>
-                                    <ul class="servicesLinks">
-                                        <li>Сплит-системы</li>
-                                        <li>Холодильники</li>
-                                        <li>Стиральные машины</li>
-                                        <li>Котлы</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!--Card-->
-                        </div>
-                        <div class="item">
-                            <!--Card-->
-                            <div class="card testimonial-card">
-                                <!--Background color-->
-                                <div class="card-up services_gr"></div>
-                                <!--Avatar-->
-                                <div class="avatar mx-auto white">
-                                    <img src="{% static 'fonts/3d-buildings.svg' %}" class="rounded-circle img-fluid">
-                                </div>
-                                <div class="card-body">
-                                    <!--Name-->
-                                    <h4 class="services_h">Мелкий ремонт офиса</h4>
-                                    <hr>
-                                    <ul class="servicesLinks">
-                                        <li>Офисная мебель</li>
-                                        <li>Обслуживание куллеров для воды: чистка, ремонт</li>
-                                        <li>Обслуживание сплит-систем</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!--Card-->
-                        </div>
+                            {% #card name_service="Услуги электрика" name_service1="Ремонт выключателя, розетки" name_service2="Монтаж счетчика" name_service3="Прокладка электропроводки" %}
+                            <img src="{% static 'fonts/broken-cable.svg' %}" class="rounded-circle img-fluid">
+                            {% /card %}
+                            {% #card name_service="Услуги сантехника" name_service1="Устранение засора" name_service2="Установка раковины, унитаза, смесителя" name_service3="Устранение протечки крана"  %}
+                            <img src="{% static 'fonts/leak.svg' %}" class="rounded-circle img-fluid">
+                            {% /card %}
+                            {% #card name_service="Cборка мебели" name_service1="Шкафы, диваны, кухни" name_service2="Установка встраиваемой техники" name_service3="Подъем на этаж"  %}
+                            <img src="{% static 'fonts/living-room.svg' %}" class="rounded-circle img-fluid">
+                            {% /card %}
+                            {% #card name_service="Мелкий ремонт в квартире" name_service1="Монтаж карнизов и плинтусов" name_service2="Ремонт межкомнатных дверей" name_service3="Повесить картину, телевизор, люстру"  %}
+                            <img src="{% static 'fonts/living-room.svg' %}" class="rounded-circle img-fluid">
+                            {% /card %}
+                            {% #card name_service="Установка бытовой техники" name_service1="Сплит-системы" name_service2="Холодильники" name_service3="Стиральные машины"  %}
+                            <img src="{% static 'fonts/washing-machine.svg' %}" class="rounded-circle img-fluid">
+                            {% /card %}
+                            {% #card name_service="Мелкий ремонт офиса" name_service1="Офисная мебель" name_service2="Обслуживание куллеров для воды: чистка, ремонт" name_service3="Обслуживание сплит-систем"  %}
+                            <img src="{% static 'fonts/3d-buildings.svg' %}" class="rounded-circle img-fluid">
+                            {% /card %}
                     </div>
                     <!--row-->
                 </div>
@@ -269,53 +155,15 @@
                 <div id="carousel-example-1" class="carousel no-flex testimonial-carousel slide carousel-fade" data-ride="carousel" data-interval="false">
                     <!--Slides-->
                     <div class="carousel-inner" role="listbox">
-                        <!--First slide-->
-                        <div class="carousel-item active">
-                            <div class="testimonial">
-                                <!--Avatar-->
-                                <div class="avatar mx-auto mb-4">
-                                    <img src="{% static 'images/1.jpg' %}" class="" width='250' alt="Фотогаллерея работ мастер на час: монтаж проектора">
-                                </div>
-                                <!--Content-->
-                                <p>
-                                    Монтаж и установка проектора, экрана на стену и косметический ремонт помещения.</p>
-                                <h4 class="font-weight-bold"></h4>
-                                <h6 class="font-weight-bold my-3"></h6>
-                            </div>
-                        </div>
-                        <!--First slide-->
-                        <!--Second slide-->
-                        <div class="carousel-item ">
-                            <div class="testimonial">
-                                <!--Avatar-->
-                                <div class="avatar mx-auto mb-4">
-                                    <img src="{% static 'images/2.jpg' %}" class="" width='250' alt="Фотогаллерея работ мастер на час: монтаж проектора">
-                                </div>
-                                <!--Content-->
-                                <p>
-                                    Установка кодового замка двери с открыванием по  отпечатку пальца или цифровому коду.
-                                </p>
-                                <h4 class="font-weight-bold"></h4>
-                                <h6 class="font-weight-bold my-3"></h6>
-                            </div>
-                        </div>
-                        <!--Second slide-->
-                    	 <!--Third slide-->
-                        <div class="carousel-item ">
-                            <div class="testimonial">
-                                <!--Avatar-->
-                                <div class="avatar mx-auto mb-4">
-                                    <img src="{% static 'images/3.jpg' %}" class="" width='250' alt="Фотогаллерея работ мастер на час: монтаж кухни">
-                                </div>
-                                <!--Content-->
-                                <p>
-                                    Установка освещения и бытовой техники.
-                                </p>
-                                <h4 class="font-weight-bold"></h4>
-                                <h6 class="font-weight-bold my-3"></h6>
-                            </div>
-                        </div>
-                        <!--Third slide-->
+                        {% #carusel active="active" text="Монтаж и установка проектора, экрана на стену и косметический ремонт помещения."  %}
+                        <img src="{% static 'images/1.jpg' %}" class="" width='250' alt="Фотогаллерея работ мастер на час: монтаж проектора">
+                        {% /carusel %}
+                        {% #carusel text="Установка кодового замка двери с открыванием по  отпечатку пальца или цифровому коду."  %}
+                        <img src="{% static 'images/2.jpg' %}" class="" width='250' alt="Фотогаллерея работ мастер на час: монтаж проектора">
+                        {% /carusel %}
+                        {% #carusel text=" Установка освещения и бытовой техники"  %}
+                        <img src="{% static 'images/3.jpg' %}" class="" width='250' alt="Фотогаллерея работ мастер на час: монтаж кухни">
+                        {% /carusel %}
                     </div>
                     <!--Slides-->
                     <!--Controls-->
@@ -351,46 +199,18 @@
                 <!--First column-->
                 <div class="col-md-4">
                     <!--First row-->
-                    <div class="row ">
-                        <div class="col-2">
-                            <i class="fas fa-check-circle fa-2x about-text"></i>
-                        </div>
-                        <div class="col-10">
-                            <h5 class="feature-title">Профессионализм</h5>
-                            <p>В нашей команде опытные специалисты с многолетним стажем.
-                            </p>
-                            <div style="height:15px"></div>
-                        </div>
-                    </div>
+                    {% #container head_name="Профессионализм" text="В нашей команде опытные специалисты с многолетним стажем."  %}
+                    {% /container %}
                     <!--/First row-->
-
                     <!--Second row-->
-                    <div class="row">
-                        <div class="col-2">
-                            <i class="fas fa-check-circle fa-2x about-text"></i>
-                        </div>
-                        <div class="col-10">
-                            <h5 class="feature-title">Современный инструмент</h5>
-                            <p>Мы используем в работе только качественные инструменты и расходные материалы.
-                            </p>
-                            <div style="height:15px"></div>
-                        </div>
-                    </div>
+                    {% #container head_name="Современный инструмент" text="Мы используем в работе только качественные инструменты и расходные материалы."  %}
+                    {% /container %}
                     <!--/Second row-->
 
                     <!--Third row-->
-                    <div class="row">
-                        <div class="col-2">
-                            <i class="fas fa-check-circle fa-2x about-text"></i>
-                        </div>
-                        <div class="col-10">
-                            <h5 class="feature-title">Быстрая помощь</h5>
-                            <p>Срочный выезд в течение часа.</p>
-                            <div style="height:15px"></div>
-                        </div>
-                    </div>
+                    {% #container head_name="Быстрая помощь" text="Срочный выезд в течение часа."  %}
+                    {% /container %}
                     <!--/Third row-->
-
                 </div>
                 <!--/First column-->
 
@@ -403,33 +223,13 @@
                 <!--Third column-->
                 <div class="col-md-4">
                     <!--First row-->
-                    <div class="row">
-                        <div class="col-2">
-                            <i class="fas fa-check-circle fa-2x about-text"></i>
-                        </div>
-                        <div class="col-10">
-                            <h5 class="feature-title">Порядочность</h5>
-                            <p>Гарантируем качественную и ответственную работу
-                            </p>
-                            <div style="height:15px"></div>
-                        </div>
-                    </div>
+                    {% #container head_name="Порядочность" text="Гарантируем качественную и ответственную работу."  %}
+                    {% /container %}
                     <!--/First row-->
-
                     <!--Second row-->
-                    <div class="row">
-                        <div class="col-2">
-                            <i class="fas fa-check-circle fa-2x about-text"></i>
-                        </div>
-                        <div class="col-10">
-                            <h5 class="feature-title">Бережное обращение с имуществом клиента</h5>
-                            <p>Мы не испортим пол, мебель, стены. Убираем мусор за собой.
-                            </p>
-                            <div style="height:15px"></div>
-                        </div>
-                    </div>
+                    {% #container head_name="Бережное обращение с имуществом клиента" text="Мы не испортим пол, мебель, стены. Убираем мусор за собой."  %}
+                    {% /container %}
                     <!--/Second row-->
-
                 </div>
                 <!--/Third column-->
 

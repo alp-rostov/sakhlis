@@ -1,0 +1,4 @@
+components:
+  card: "partials/card.html"
+  carusel: "partials/carusel.html"
+  container: "partials/container.html"

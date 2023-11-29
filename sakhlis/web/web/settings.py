@@ -48,11 +48,7 @@ INSTALLED_APPS = [
     'formtools',
     # 'easy_maps',
     'app_site.apps.AppSiteConfig',
-
-
-
-
-
+    'slippers',
 ]
 SITE_ID = 1
 
