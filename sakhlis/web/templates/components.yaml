@@ -1,4 +1,8 @@
 components:
   card: "partials/card.html"
+  card_order: "partials/card_for_order.html"
   carusel: "partials/carusel.html"
   container: "partials/container.html"
+  menu: "partials/menu.html"
+  form: "partials/form_for_order.html"
+  about_me: "partials/about_me.html"

@@ -1,0 +1,8 @@
+
+<li class="nav-item mr-4">
+  {% if the_url1 in request.get_full_path  %}
+    <a class="nav-link" href="{{ the_url1 }}"><b>Мои заказы</b></a>
+  {% else %}
+    <a class="nav-link" href="{{ the_url1 }}">Мои заказы</a>
+  {% endif %}
+</li>

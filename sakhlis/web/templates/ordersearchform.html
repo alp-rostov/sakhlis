@@ -1,6 +1,7 @@
 {% extends 'flatpages/default_user.html' %}
 {% load custom_filters %}
 {% load custom_tags %}
+{% load slippers %}
 
 
 {% block subbody %}
@@ -51,65 +52,113 @@
 </form>
 
 <hr>
+<div align="center">
+<a href="#"  onclick="show_create_order_form(document.getElementById('form'))"
+class="btn btn-sm btn-orange cta-btn btn-form mt-3 mb-5 " id="link_create_order_form">Создать заказ</a>
+</div>
+
+<script>
+    function show_create_order_form(form) {
+        if (form.style.display == "none") {
+            $('#form').fadeIn("slow", function(){
+                form.style.display = "block";
+                $('#link_create_order_form').html('X');
+                                        });
+
+        } else {
+             $('#form').fadeOut("slow", function(){
+                form.style.display = "none";
+                $('#link_create_order_form').html('Создать заказ');
+                                        });
+        }
+    }
+
+ function copyToClipboard(element) {
+        let address = $(element).html().replace(/(<([^>]+)>)/gi, '');
+        address=address.replaceAll('  ','' ).trim();
+        window.navigator.clipboard.writeText(address);
+    }
+
+    $(document).ready(function() {
+    $('#form').submit(function(e) {
+        e.preventDefault();
+
+            $.ajax({
+                url: '../',
+                type: 'POST',
+                data: $(this).serialize(),
+                dataType: 'text',
+                beforeSend: function () {$("#form").html('<h3>Отправляется...</h3>');},
+                success: function (resp_) {
+                                                window.location.href = '/list_order/'+JSON.parse(resp_).pk;
+                                           },
+            });
+
+    });
+});
+
+                    $(document.body).on( "click", ".copy", function(e) {
+                        let customer_name_pk="customer_name_"+$(this).attr('id');
+                        let name=$('#'+customer_name_pk).html();
+
+                        let customer_phone_pk="customer_phone_"+$(this).attr('id');
+                        let phone=$('#'+customer_phone_pk).html().trim();
+                        let customer_telegram_pk="customer_telegram_"+$(this).attr('id');
+                        let telegram=$('#'+customer_telegram_pk).html().trim();
+
+                        let customer_street_pk="street_app_"+$(this).attr('id');
+                        let street=$('#'+customer_street_pk).html();
+
+                        let num_house_pk="num_"+$(this).attr('id');
+                        let num_house=$('#'+num_house_pk).html();
+
+                        $('#form').fadeIn("slow", function(){
+                            form.style.display = "block";
+                            $('#link_create_order_form').html('X');
+                            $('[name="customer_name"]').attr("value", name);
+                            $('[name="customer_phone"]').attr("value", phone);
+                            $('[name="customer_telegram"]').attr("value", telegram);
+                            $('[name="address_street_app"]').attr("value", street);
+                            $('[name="address_num"]').attr("value", num_house);
+
+                        });
+                    });
+    </script>
+{% #form form_=form hidden="none" %}
+{% csrf_token %}
+{% /form %}
+<hr>
 
 <div id="head" class="container">
-            {% for i in order %}
-            <div class="row p-1 mb-1 ">
-                <div class="col-md-4">
-                    <div id="time_in">{{ i.time_in }}</div><br>
-
-                    <a href="{% url 'invoice' i.pk %}" id="order_{{ i.pk }}" class="h5 mycolor">Заявка № {{ i.pk}}</a><br>
-                    <a href="{% url 'delete-order' i.pk %}" id="delete_{{ i.pk }}" class="mycolor"><img src="/media/images/delete.png" width="15" ></a>
-                      <a href="../list_order/update/{{ i.pk}}" id="edit_{{ i.pk }}"><img src="/media/images/change.png" width="25" ></a>
-
-                </div>
-                <div class="col-md-4 ">
-                    <span id="customer_name_{{ i.pk }}" class="fas fa-user prefix text-secondary mt-3" > {{ i.customer_name|capfirst }}</span><br>
-
-                    <a href="tel:{{ i.customer_phone }}" title="Телефон" id="customer_phone_{{ i.pk }}" class="fas fa-phone prefix text-secondary mt-3">
-                        {{ i.customer_phone }}</a><br>
-                    <a href="https://t.me/{{ i.customer_telegram|cut:'@' }}" title="Телеграм" id="customer_telegram_{{ i.pk }}"
-                       class ="fas fa fa-paper-plane text-secondary mt-3">
-                         @{{i.customer_telegram}}</a><br>
-                    <div class="fas fa-home prefix text-secondary mt-3"> <span id="city_{{ i.pk }}" >{{ i.address_city|choice_tag:'city'}}</span>,
-                    <span id="street_app_{{ i.pk }}">{{ i.address_street_app|capfirst }}</span>,
-                        <span id="num_{{ i.pk }}">{{ i.address_num }}</span>.</div>
-                </div>
-
-                <div class="col-md-4">
-                    <p id="text_order_{{ i.pk }}" class="fas text-secondary mt-3">{{ i.text_order|truncatechars:200|capfirst }}</p>
-
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12"><hr></div>
-            </div>
-            {% endfor %}
+{% for i in order %}
+    {% #card_order  i=i %}
+    {% /card_order %}
+{% endfor %}
 
 </div>
 
 <!--           {# Добавляем пагинацию на страницу #}-->
 
-            <div align="center">
-            {# Информация о предыдущих страницах #}
-            {% if page_obj.has_previous %}
-                <a href="?page=1" class="btn">1</a>
-                {% if page_obj.previous_page_number != 1 %}
-                    ...
-                    <a href="?page={{ page_obj.previous_page_number }}" class="btn ">{{ page_obj.previous_page_number }}</a>
-                {% endif %}
-            {% endif %}
+<div align="center">
+{# Информация о предыдущих страницах #}
+{% if page_obj.has_previous %}
+    <a href="?page=1" class="btn">1</a>
+    {% if page_obj.previous_page_number != 1 %}
+        ...
+        <a href="?page={{ page_obj.previous_page_number }}" class="btn ">{{ page_obj.previous_page_number }}</a>
+    {% endif %}
+{% endif %}
 <!--             {# Информация о текущей странице #}-->
-            <div class="btn btn-orange">{{ page_obj.number }}</div>
+<div class="btn btn-orange">{{ page_obj.number }}</div>
 <!--             {# Информация о следующих страницах #}-->
-            {% if page_obj.has_next %}
-                <a href="?page={{ page_obj.next_page_number }}" class="btn">{{ page_obj.next_page_number }}</a>
-                {% if paginator.num_pages != page_obj.next_page_number %}
-                    ...
-                    <a href="?page={{ page_obj.paginator.num_pages }}" class="btn">{{ page_obj.paginator.num_pages }}</a>
-                {% endif %}
-            {% endif %}
-            </div>
+{% if page_obj.has_next %}
+    <a href="?page={{ page_obj.next_page_number }}" class="btn">{{ page_obj.next_page_number }}</a>
+    {% if paginator.num_pages != page_obj.next_page_number %}
+        ...
+        <a href="?page={{ page_obj.paginator.num_pages }}" class="btn">{{ page_obj.paginator.num_pages }}</a>
+    {% endif %}
+{% endif %}
+</div>
 
 
 

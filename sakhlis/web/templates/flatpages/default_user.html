@@ -1,4 +1,5 @@
 {% load static %}
+{% load slippers %}
 
 <!doctype html>
 <html lang="en">
@@ -50,21 +51,14 @@ top: 0;
 {% url 'search-order' as the_url4 %}
 
 <!--Header-->
-    <nav id="navigation-menu" class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
-        <div class="container">
-		<a href='index-en.html'><img src="{% static 'images/flag_en.png' %}" class="flag"></a>
-            <a href='index-ge.html'><img src="{% static 'images/flag_ge.png' %}" class="flag"></a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav m-auto">
-                    <li class="nav-item mr-4 active">
-                        <a class="nav-link" href="{% url 'home' %}">Главная <span class="sr-only">(current)</span></a>
+{% #menu %}
+  <li class="nav-item mr-4">
+                        <a class="nav-link" href="{% url 'home' %}">Главная</a>
                     </li>
-                    <li class="nav-item mr-4">
+
+                    <li class="nav-item  mr-4">
                         {% if the_url1 in request.get_full_path  %}
-                        <a class="nav-link" href="{{ the_url1 }}"><b>Мои заказы</b></a>
+                        <a class="nav-link " href="{{ the_url1 }}"><b>Мои заказы</b></a>
                         {% else %}
                         <a class="nav-link" href="{{ the_url1 }}">Мои заказы</a>
                         {% endif %}
@@ -94,11 +88,8 @@ top: 0;
                          {% endif %}
 
 
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+
+{% /menu %}
 
 
 

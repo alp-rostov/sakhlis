@@ -91,6 +91,7 @@ class Service(models.Model):
         return f"{self.name}"
 
 
+
 class Invoice(models.Model):
     """service_id order_id quantity_type quantity price"""
     service_id = models.ForeignKey('Service', on_delete=models.CASCADE, null=True, blank=True, )

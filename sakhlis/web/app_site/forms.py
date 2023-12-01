@@ -83,7 +83,8 @@ class UserRegisterForm(UserCreationForm):
                   "password1",
                   "password2"
                   )
-
+    def save(self, commit=True):
+       pass
 
 class InvoiceForm(forms.ModelForm):
 

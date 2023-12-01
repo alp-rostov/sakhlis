@@ -1,34 +1,31 @@
 {% extends 'flatpages/default_user.html' %}
 {% load custom_filters %}
 {% load custom_tags %}
+{% load static %}
+{% load slippers %}
 
 
 {% block body %}
 
-            <div class="row py-5 justify-content-md-center">
+{% #about_me head="" img=profile.foto %}
 
-                <div class="col-lg-6 col-md-10 col-sm-12">
-                    <img src="../media/{{ profile.foto|default:'images/1.jpg' }}" width="400"
-                     alt="Муж на час" class="img-fluid z-depth-1 wow fadeInLeft" data-wow-delay="0.7s">
-                </div>
-
-                <div class="col-lg-6 col-md-10 col-sm-12 pt-3 wow fadeInRight" data-wow-delay="0.8s">
-                    <p align="left">
-                        {{ user.last_name }} {{ user.first_name }} | <strong class="mycolor"> {{ request.user.username }}</strong>
-                        <a href="{% url 'update-user' profile.pk %}" class="mycolor" title="изменить данные"><img src="../media/images/change.png" width="25"></a><br></a><br>
-                        {{ user.email }}<br>
-                        {{ profile.phone }}<br>
-                        {{ profile.telegram }}<br>
-                        {{ profile.city|choice_tag:'city' }}<br>
-                        <blockquote class="blockquote">
-                    <p align="left">{{ profile.profile }}</p>
-                            <p class="mb-0" align="left">Выполнено заказов: {{ count.0.count }}<br>
-                                Выручка: {{ sum.0.count }} <br>
-                                Рейтинг: {{ profile.raiting }} / {{ profile.rating_sum}} /{{ profile.rating_num}}
-                            </p>
-
-                        </blockquote>
-                    </p>
+    <p align="left">
+        {{ user.last_name }} {{ user.first_name }} | <strong class="mycolor"> {{ request.user.username }}</strong>
+        <a href="{% url 'update-user' profile.pk %}" class="mycolor" title="изменить данные"><img src="../media/images/change.png" width="25"></a><br></a><br>
+        {{ user.email }}<br>
+        {{ profile.phone }}<br>
+        {{ profile.telegram }}<br>
+        {{ profile.city|choice_tag:'city' }}<br>
+        <blockquote class="blockquote">
+            <p align="left">{{ profile.profile }}</p>
+            <p class="mb-0" align="left">
+                Выполнено заказов: {{ count.0.count }}<br>
+                Выручка: {{ sum.0.count }} <br>
+                Рейтинг: {{ profile.raiting }} / {{ profile.rating_sum}} /{{ profile.rating_num}}
+            </p>
+        </blockquote>
+    </p>
+{% /about_me%}
 
 
 {% endblock body %}

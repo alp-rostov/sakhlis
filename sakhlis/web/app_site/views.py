@@ -21,7 +21,6 @@ class UserRegisterView(CreateView):
     template_name = 'register.html'
 
 
-
 class UserDetailInformation(LoginRequiredMixin, DetailView):
     model = User
     template_name = 'repaier_update.html'
@@ -53,24 +52,25 @@ class OrderCreate(CreateView):
     form_class = OrderForm
     success_url = reverse_lazy('home')
 
-
-    def post(self, request, *args, **kwargs):
-        super().post(request, *args, **kwargs)
-
-        return JsonResponse({'message': f'<h3>Заявка № {self.object.pk} отправлена успешно!</h3>',
-                             'pk':self.object.pk,
-                             'text_order': self.object.text_order,
-                             'time_in': self.object.time_in,
-                             'customer_name':self.object.customer_name,
-                             'customer_phone': self.object.customer_phone,
-                             'customer_telegram': self.object.customer_telegram,
-                             'address_city': self.object.address_city,
-                             'address_street_app': self.object.address_street_app,
-                             'address_num': self.object.address_num,
-                             'auth': self.request.user.is_authenticated,
-                               })
+    # def post(self, request, *args, **kwargs):
+    #     print('----------post---------------')
+    #     super().post(request, *args, **kwargs)
+    #
+    #     return JsonResponse({'message': f'<h3>Заявка № {self.object.pk} отправлена успешно!</h3>',
+    #                          'pk':self.object.pk,
+    #                          'text_order': self.object.text_order,
+    #                          'time_in': self.object.time_in,
+    #                          'customer_name':self.object.customer_name,
+    #                          'customer_phone': self.object.customer_phone,
+    #                          'customer_telegram': self.object.customer_telegram,
+    #                          'address_city': self.object.address_city,
+    #                          'address_street_app': self.object.address_street_app,
+    #                          'address_num': self.object.address_num,
+    #                          'auth': self.request.user.is_authenticated,
+    #                            })
 
     def form_valid(self, form):
+        print('-------def form_valid-------------')
         if self.request.user.is_authenticated:
             form.instance.repairer_id = self.request.user
             form.instance.order_status = 'SND'
@@ -86,7 +86,20 @@ class OrderCreate(CreateView):
 
         form.instance.text_order = form.instance.text_order.replace('<', '[').replace('>', ']')
         form.instance.customer_phone = form.instance.customer_phone.replace(' ', '').replace('+', '')
-        return super(OrderCreate, self).form_valid(form)
+
+        form.save()
+        return JsonResponse({'message': f'<h3>Заявка № {form.instance.pk} отправлена успешно!</h3>',
+                             'pk':form.instance.pk,
+                             'text_order': form.instance.text_order,
+                             'time_in': form.instance.time_in,
+                             'customer_name':form.instance.customer_name,
+                             'customer_phone': form.instance.customer_phone,
+                             'customer_telegram': form.instance.customer_telegram,
+                             'address_city': form.instance.address_city,
+                             'address_street_app': form.instance.address_street_app,
+                             'address_num': form.instance.address_num,
+                             'auth': self.request.user.is_authenticated,
+                               })
 
 
 class OrderManagementSystem(LoginRequiredMixin, ListView):
@@ -284,6 +297,7 @@ class OrderSearchForm(LoginRequiredMixin, ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['filterset'] = self.filterset
+        context['form'] = OrderForm
         return context
 
 @login_required
