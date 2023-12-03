@@ -52,42 +52,12 @@ class OrderCreate(CreateView):
     form_class = OrderForm
     success_url = reverse_lazy('home')
 
-    # def post(self, request, *args, **kwargs):
-    #     print('----------post---------------')
-    #     super().post(request, *args, **kwargs)
-    #
-    #     return JsonResponse({'message': f'<h3>Заявка № {self.object.pk} отправлена успешно!</h3>',
-    #                          'pk':self.object.pk,
-    #                          'text_order': self.object.text_order,
-    #                          'time_in': self.object.time_in,
-    #                          'customer_name':self.object.customer_name,
-    #                          'customer_phone': self.object.customer_phone,
-    #                          'customer_telegram': self.object.customer_telegram,
-    #                          'address_city': self.object.address_city,
-    #                          'address_street_app': self.object.address_street_app,
-    #                          'address_num': self.object.address_num,
-    #                          'auth': self.request.user.is_authenticated,
-    #                            })
-
     def form_valid(self, form):
-        print('-------def form_valid-------------')
         if self.request.user.is_authenticated:
             form.instance.repairer_id = self.request.user
             form.instance.order_status = 'SND'
-
-        name_telegram_customer = form.instance.customer_telegram.replace('@', '').replace('+', '')\
-            .replace('-', '').replace(' ', '')
-
-
-        if name_telegram_customer.isdigit():
-            form.instance.customer_telegram='+' + name_telegram_customer
-        else:
-            form.instance.customer_telegram = name_telegram_customer
-
-        form.instance.text_order = form.instance.text_order.replace('<', '[').replace('>', ']')
-        form.instance.customer_phone = form.instance.customer_phone.replace(' ', '').replace('+', '')
-
         form.save()
+
         return JsonResponse({'message': f'<h3>Заявка № {form.instance.pk} отправлена успешно!</h3>',
                              'pk':form.instance.pk,
                              'text_order': form.instance.text_order,
@@ -360,14 +330,14 @@ def input_street(request, **kwargs):
     return JsonResponse(json_data, safe=False)
 
 
-def geo_map(request, **kwargs):
-    """ """
-    b = OrderList.objects.all()
-    for a in b:
-
-        location = set_coordinates_address(a.address_street_app, 'Тбилиси', a.address_num)
-        if location != None:
-            a.location_longitude = float(location[0])
-            a.location_latitude = float(location[1])
-            a.save()
-    return JsonResponse({"message": "successful"})
+# def geo_map(request, **kwargs):
+#     """ """
+#     b = OrderList.objects.all()
+#     for a in b:
+#
+#         location = set_coordinates_address(a.address_street_app, 'Тбилиси', a.address_num)
+#         if location != None:
+#             a.location_longitude = float(location[0])
+#             a.location_latitude = float(location[1])
+#             a.save()
+#     return JsonResponse({"message": "successful"})

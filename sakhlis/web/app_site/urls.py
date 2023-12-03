@@ -33,7 +33,7 @@ urlpatterns = [
     path('listorderjson', listorder_for_order_list_paginator_json),
     path('set_work_status', change_work_status),
     path('street', input_street),
-    path('geo', geo_map),
+    # path('geo', geo_map),
 ]
 
 if settings.DEBUG:

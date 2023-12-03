@@ -3,112 +3,24 @@
 {% load custom_tags %}
 {% load slippers %}
 
-
 {% block subbody %}
-
-
 {% endblock subbody %}
 
 {% block body %}
 
-
 <div align="center">
-<a href="#"  onclick="show_create_order_form(document.getElementById('form'))"
-class="btn btn-sm btn-orange cta-btn btn-form mt-3 mb-5 " id="link_create_order_form">Создать заказ</a>
+    <a href="#"  onclick="show_create_order_form(document.getElementById('form'))"
+    class="btn btn-sm btn-orange cta-btn btn-form mt-3 mb-5 " id="link_create_order_form">Создать заказ</a>
 </div>
 
-
-<script>
-    function show_create_order_form(form) {
-        if (form.style.display == "none") {
-            $('#form').fadeIn("slow", function(){
-                form.style.display = "block";
-                $('#link_create_order_form').html('X');
-                                        });
-
-        } else {
-             $('#form').fadeOut("slow", function(){
-                form.style.display = "none";
-                $('#link_create_order_form').html('Создать заказ');
-                                        });
-        }
-    }
-
-    function add_order_in_html_object(r) {
-        g=$("#row_order").clone();
-        g.attr("class", "row p-1 mb-1");
-        g.attr("id", "row_order"+r.pk);
-
-        g.find("#order_").attr("href", "list_order/"+r.pk);
-        g.find("#order_").html("Заявка №"+r.pk);
-        let date_order=r.time_in.substr(0, 10).split("-").reverse().join(".");
-        g.find("#time_in").html(date_order);
-
-        g.find("#delete_").attr("href", "invoice/delete-order/"+r.pk);
-        g.find("#delete_").attr("id", "delete_"+r.pk);
-
-
-        g.find(".copy").attr("id", r.pk);
-
-        g.find("#edit_").attr("href", "../list_order/update/"+r.pk);
-        g.find("#edit_").attr("id", "edit_"+r.pk);
-
-
-        g.find("#text_order_").html(r.text_order);
-        g.find("#text_order_").attr("id", "text_order_"+r.pk);
-
-        g.find("#customer_name_").html(" "+r.customer_name);
-        g.find("#customer_name_").attr("id", "customer_name_"+r.pk);
-
-
-        g.find("#customer_phone_").attr("href", "tel:"+r.customer_phone);
-        g.find("#customer_phone_").html(" "+ r.customer_phone);
-        g.find("#customer_phone_").attr("id", "customer_phone_"+r.pk);
-
-
-        g.find("#customer_telegram_").attr("href", "https://t.me/"+r.customer_telegram);
-        g.find("#customer_telegram_").html(" @"+r.customer_telegram);
-        g.find("#customer_telegram_").attr("id", "customer_telegram_"+r.pk);
-
-
-        g.find("#city_").html('Тбилиси');
-        g.find("#city_").attr("id", "city_"+r.pk);
-
-        g.find("#street_app_").html(r.address_street_app);
-        g.find("#street_app_").attr("id", "street_app_"+r.pk);
-
-        g.find("#num_").html(r.address_num);
-        g.find("#num_").attr("id", "num_"+r.pk);
-
-        if (r.location_longitude) {
-            g.find("#map_").attr("href", 'https://yandex.ru/maps/?pt='+r.location_longitude+','+r.location_latitude+'&z=18&l=map');
-            g.find("#map_").attr("id", "map_"+r.pk);
-            g.find("#map_icon").attr("class", "fas fa-map-marker prefix text-secondary mt-3");
-        }
-        else {
-            g.find("#map_").attr("onclick", "copyToClipboard($(this))");
-            g.find("#map_").attr("title", "Скопировать адрес");
-            g.find("#map_").attr("id", "map_"+r.pk);
-        }
-        return g;
-     }
-
-    function copyToClipboard(element) {
-        let address = $(element).html().replace(/(<([^>]+)>)/gi, '');
-        address=address.replaceAll('  ','' ).trim();
-        window.navigator.clipboard.writeText(address);
-    }
-    </script>
-
 {% #form form_=form hidden="none" %}
-{% csrf_token %}
+    {% csrf_token %}
 {% /form %}
 
-     <script type="text/javascript">
-$(document).ready(function() {
-    $('#form').submit(function(e) {
-        e.preventDefault();
-
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#form').submit(function(e) {
+            e.preventDefault();
             $.ajax({
                 url: '../',
                 type: 'POST',
@@ -116,144 +28,53 @@ $(document).ready(function() {
                 dataType: 'text',
                 beforeSend: function () {$("#form").html('<h3>Отправляется...</h3>');},
                 success: function (resp_) {
-                                                window.location.href = '/list_order/'+JSON.parse(resp_).pk;
-                                           },
+                                    window.location.href = '/list_order/'+JSON.parse(resp_).pk;
+                           },
             });
-
-    });
-});
-</script>
-
-
-
-<div id="head" class="container">
-            {% for i in order %}
-                {% #card_order i=i %}
-                {% /card_order %}
-            {% endfor %}
-                <script>
-                    $(document.body).on( "click", ".copy", function(e) {
-                        let customer_name_pk="customer_name_"+$(this).attr('id');
-                        let name=$('#'+customer_name_pk).html();
-
-                        let customer_phone_pk="customer_phone_"+$(this).attr('id');
-                        let phone=$('#'+customer_phone_pk).html().trim();
-                        let customer_telegram_pk="customer_telegram_"+$(this).attr('id');
-                        let telegram=$('#'+customer_telegram_pk).html().trim();
-
-                        let customer_street_pk="street_app_"+$(this).attr('id');
-                        let street=$('#'+customer_street_pk).html();
-
-                        let num_house_pk="num_"+$(this).attr('id');
-                        let num_house=$('#'+num_house_pk).html();
-
-                        $('#form').fadeIn("slow", function(){
-                            form.style.display = "block";
-                            $('#link_create_order_form').html('X');
-                            $('[name="customer_name"]').attr("value", name);
-                            $('[name="customer_phone"]').attr("value", phone);
-                            $('[name="customer_telegram"]').attr("value", telegram);
-                            $('[name="address_street_app"]').attr("value", street);
-                            $('[name="address_num"]').attr("value", num_house);
-
-                        });
-                    });
-
-                </script>
-</div>
-
-
-    <script>
-    $(document.body).on( "click", "#paginator_next", function(e) {
-        e.preventDefault();
-        let $this=$(this);
-        $.ajax({
-            url: $this.attr('href'),
-            type: "GET",
-            dataType: "json",
-            success: function(e){
-                let type=JSON.parse(e);
-                for (i = 0; i < type.length; i++) {
-
-                    $('#head').append(add_order_in_html_object(type[i]));
-                    $('#head').append('<div class="row"><div class="col-md-12"><hr></div></div>');
-
-                }
-                if (type.length==14) {
-                    $('#paginator_next').attr('href', '../listorderjson?last_pk='+type[13].pk+'&work_status=end');
-                    }
-                else {$('#paginator_next').remove();}
-
-            },
-
         });
     });
+</script>
 
-    </script>
-
-    <div id="row_order" class="hidden">
-                <div class="col-md-4">
-                    <div id="time_in"></div><br>
-                    <a href="" id="order_" class="h5 mycolor"> </a><br>
-                    <a href="" id="delete_" class="mycolor"><img src="media/images/delete.png" width="15" ></a>
-                    <a href="" id="edit_"><img src="/media/images/change.png" width="25" ></a>
-                    <a href="#" id="" class="copy"><img src="/media/images/copy.png" width="30" ></a>
-                </div>
-                <div class="col-md-4 ">
-                    <span id="customer_name_" class="fas fa-user prefix text-secondary mt-3" ></span><br>
-
-                    <a href="" title="Телефон" id="customer_phone_" class="fas fa-phone prefix text-secondary mt-3"></a><br>
-                    <a href="" title="Телеграм" id="customer_telegram_" class ="fas fa fa-paper-plane text-secondary mt-3"></a><br>
-
-                    <a href= ''  id="map_" class="fas fa-home prefix text-secondary mt-3"  title="Открыть карту">
-                        <i  id="map_icon"></i>
-                        <span id="city_" ></span>,
-                        <span id="street_app_"></span>,
-                        <span id="num_"></span>.
-                    </a>
-                </div>
-
-                <div class="col-md-4">
-                    <p id="text_order_" class="fas text-secondary mt-3"></p>
-                </div>
-    </div>
-
+<div id="head" class="container">
+    {% for i in order %}
+        {% #card_order class_="row p-1 mb-1" i=i %}
+        {% /card_order %}
+    {% endfor %}
 </div>
+
+{% #card_order class_="hidden" id_="row_order" i='' %}
+{% /card_order %}
+
 
 
 <h2>
-
     {% if order.13.pk %}
-
         <a href="../listorderjson?last_pk={{ order.13.pk }}&work_status=ALL"
-           class="btn btn-lg btn-orange cta-btn btn-form mt-3 mb-5 wow fadeIn waves-effect waves-light animated"
-           id="paginator_next">Next</a>
+        class="btn btn-lg btn-orange cta-btn btn-form mt-3 mb-5 wow fadeIn waves-effect waves-light animated"
+        id="paginator_next">
+            Next
+        </a>
     {% endif %}
 </h2>
 
-
 <script>
-
- $(document.body).on( "input", "#id_address_street_app", function(e) {
+    $(document.body).on( "input", "#id_address_street_app", function(e) {
         e.preventDefault();
-
-         $.ajax({
+        $.ajax({
             url: "/street?street="+$(this).val() ,
             type: "GET",
 
             dataType: 'json',
             success: function(b){
-              let type=JSON.parse(b);
+                let type=JSON.parse(b);
                 $('#languages option').remove();
+                for (i = 0; i < type.length; i++) {
+                    full_name_street=type[i].type_street+type[i].name_street
+                    $('#languages').append('<option value="'+full_name_street+'">');
 
-                 for (i = 0; i < type.length; i++) {
-                            full_name_street=type[i].type_street+type[i].name_street
-                            $('#languages').append('<option value="'+full_name_street+'">');
-
-                        }
+                }
             }
         });
     });
-
 </script>
 {% endblock body %}

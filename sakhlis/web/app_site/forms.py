@@ -52,8 +52,22 @@ class OrderForm(forms.ModelForm):
                   'address_street_app',
                   'address_num',
                                     )
+    def save(self, commit=True):
+        order=super().save(commit=False)
+        dict_wrong_char = str.maketrans({'<': '', '[': '',']': '','>': '','{': '','}': '','+': '', '-': '', '@': '' })
 
+        order.text_order = order.text_order.translate(dict_wrong_char)
+        order.customer_phone = order.customer_phone.translate(dict_wrong_char)
 
+        name_telegram_customer = order.customer_telegram.translate(dict_wrong_char)
+
+        if name_telegram_customer.isdigit():
+            order.customer_telegram = '+' + name_telegram_customer
+        else:
+            order.customer_telegram = name_telegram_customer
+        if commit:
+            order.save()
+        return order
 
 
 class RepairerForm(forms.ModelForm):

@@ -5,166 +5,106 @@
 
 
 {% block subbody %}
-
-
 {% endblock subbody %}
 
 {% block body %}
 
 <form action="" method="get">
+    <div class="container">
+        <div class="row p-1 ">
+            <div class="col-md-3 text-muted">
+                {{ filterset.form.time_in_sence.label }}:<br>
+                {{ filterset.form.time_in_sence }}<br>
 
-<div class="container">
-    <div class="row p-1 ">
-        <div class="col-md-3 text-muted">
-            {{ filterset.form.time_in_sence.label }}:<br>
-            {{ filterset.form.time_in_sence }}<br>
-
-            {{ filterset.form.time_in_until.label }}:<br>
-            {{ filterset.form.time_in_until }}<br>
+                {{ filterset.form.time_in_until.label }}:<br>
+                {{ filterset.form.time_in_until }}<br>
 
 
-            {{ filterset.form.order_status.label }}:<br>
-            {{ filterset.form.order_status }}<br>
+                {{ filterset.form.order_status.label }}:<br>
+                {{ filterset.form.order_status }}<br>
             {{ filterset.form.repairer_id }}
-        </div>
-        <div class="col-md-3 text-muted">
-            {{ filterset.form.customer_name.label }}:<br>
-            {{ filterset.form.customer_name }}<br>
-            {{ filterset.form.customer_phone.label }}:<br>
-            {{ filterset.form.customer_phone }}<br>
-            {{ filterset.form.customer_telegram.label }}:<br>
-            {{ filterset.form.customer_telegram }}
-        </div>
-        <div class="col-md-3 text-muted">
-            Город: <br>Тбилиси<br>
-            {{ filterset.form.adress_street_app.label }}:<br>
-            {{ filterset.form.adress_street_app }}<br>
-            {{ filterset.form.address_num.label }}:<br>
-            {{ filterset.form.address_num }}
-
-        </div>
-
-        <div class="col-md-2" >
-            <input type="submit" value=" Найти " class="btn btn-sm btn-orange">
-            <input type="reset" value=" Сброс " class="btn btn-sm btn-orange">
+            </div>
+            <div class="col-md-3 text-muted">
+                {{ filterset.form.customer_name.label }}:<br>
+                {{ filterset.form.customer_name }}<br>
+                {{ filterset.form.customer_phone.label }}:<br>
+                {{ filterset.form.customer_phone }}<br>
+                {{ filterset.form.customer_telegram.label }}:<br>
+                {{ filterset.form.customer_telegram }}
+            </div>
+            <div class="col-md-3 text-muted">
+                Город: <br>Тбилиси<br>
+                {{ filterset.form.adress_street_app.label }}:<br>
+                {{ filterset.form.adress_street_app }}<br>
+                {{ filterset.form.address_num.label }}:<br>
+                {{ filterset.form.address_num }}
+            </div>
+            <div class="col-md-2" >
+                <input type="submit" value=" Найти " class="btn btn-sm btn-orange">
+                <input type="reset" value=" Сброс " class="btn btn-sm btn-orange">
+            </div>
         </div>
     </div>
 </form>
 
 <hr>
 <div align="center">
-<a href="#"  onclick="show_create_order_form(document.getElementById('form'))"
-class="btn btn-sm btn-orange cta-btn btn-form mt-3 mb-5 " id="link_create_order_form">Создать заказ</a>
+    <a href="#"  onclick="show_create_order_form(document.getElementById('form'))"
+    class="btn btn-sm btn-orange cta-btn btn-form mt-3 mb-5 " id="link_create_order_form">Создать заказ</a>
 </div>
 
 <script>
-    function show_create_order_form(form) {
-        if (form.style.display == "none") {
-            $('#form').fadeIn("slow", function(){
-                form.style.display = "block";
-                $('#link_create_order_form').html('X');
-                                        });
-
-        } else {
-             $('#form').fadeOut("slow", function(){
-                form.style.display = "none";
-                $('#link_create_order_form').html('Создать заказ');
-                                        });
-        }
-    }
-
- function copyToClipboard(element) {
-        let address = $(element).html().replace(/(<([^>]+)>)/gi, '');
-        address=address.replaceAll('  ','' ).trim();
-        window.navigator.clipboard.writeText(address);
-    }
-
-    $(document).ready(function() {
+$(document).ready(function() {
     $('#form').submit(function(e) {
         e.preventDefault();
 
-            $.ajax({
-                url: '../',
-                type: 'POST',
-                data: $(this).serialize(),
-                dataType: 'text',
-                beforeSend: function () {$("#form").html('<h3>Отправляется...</h3>');},
-                success: function (resp_) {
-                                                window.location.href = '/list_order/'+JSON.parse(resp_).pk;
-                                           },
-            });
-
+        $.ajax({
+            url: '../',
+            type: 'POST',
+            data: $(this).serialize(),
+            dataType: 'text',
+            beforeSend: function () {$("#form").html('<h3>Отправляется...</h3>');},
+            success: function (resp_) { window.location.href = '/list_order/'+JSON.parse(resp_).pk; },
+        });
     });
 });
 
-                    $(document.body).on( "click", ".copy", function(e) {
-                        let customer_name_pk="customer_name_"+$(this).attr('id');
-                        let name=$('#'+customer_name_pk).html();
 
-                        let customer_phone_pk="customer_phone_"+$(this).attr('id');
-                        let phone=$('#'+customer_phone_pk).html().trim();
-                        let customer_telegram_pk="customer_telegram_"+$(this).attr('id');
-                        let telegram=$('#'+customer_telegram_pk).html().trim();
-
-                        let customer_street_pk="street_app_"+$(this).attr('id');
-                        let street=$('#'+customer_street_pk).html();
-
-                        let num_house_pk="num_"+$(this).attr('id');
-                        let num_house=$('#'+num_house_pk).html();
-
-                        $('#form').fadeIn("slow", function(){
-                            form.style.display = "block";
-                            $('#link_create_order_form').html('X');
-                            $('[name="customer_name"]').attr("value", name);
-                            $('[name="customer_phone"]').attr("value", phone);
-                            $('[name="customer_telegram"]').attr("value", telegram);
-                            $('[name="address_street_app"]').attr("value", street);
-                            $('[name="address_num"]').attr("value", num_house);
-
-                        });
-                    });
-    </script>
-{% #form form_=form hidden="none" %}
-{% csrf_token %}
-{% /form %}
+</script>
+    {% #form form_=form hidden="none" %}
+        {% csrf_token %}
+    {% /form %}
 <hr>
 
 <div id="head" class="container">
-{% for i in order %}
-    {% #card_order  i=i %}
-    {% /card_order %}
-{% endfor %}
-
+    {% for i in order %}
+        {% #card_order  i=i class_="row p-1 mb-1" %}
+        {% /card_order %}
+    {% endfor %}
 </div>
 
 <!--           {# Добавляем пагинацию на страницу #}-->
-
 <div align="center">
-{# Информация о предыдущих страницах #}
-{% if page_obj.has_previous %}
-    <a href="?page=1" class="btn">1</a>
-    {% if page_obj.previous_page_number != 1 %}
-        ...
-        <a href="?page={{ page_obj.previous_page_number }}" class="btn ">{{ page_obj.previous_page_number }}</a>
+    {# Информация о предыдущих страницах #}
+    {% if page_obj.has_previous %}
+        <a href="?page=1" class="btn">1</a>
+        {% if page_obj.previous_page_number != 1 %}
+            ...
+            <a href="?page={{ page_obj.previous_page_number }}" class="btn ">{{ page_obj.previous_page_number }}</a>
+        {% endif %}
     {% endif %}
-{% endif %}
-<!--             {# Информация о текущей странице #}-->
-<div class="btn btn-orange">{{ page_obj.number }}</div>
-<!--             {# Информация о следующих страницах #}-->
-{% if page_obj.has_next %}
-    <a href="?page={{ page_obj.next_page_number }}" class="btn">{{ page_obj.next_page_number }}</a>
-    {% if paginator.num_pages != page_obj.next_page_number %}
-        ...
-        <a href="?page={{ page_obj.paginator.num_pages }}" class="btn">{{ page_obj.paginator.num_pages }}</a>
+    <!--             {# Информация о текущей странице #}-->
+    <div class="btn btn-orange">
+        {{ page_obj.number }}
+    </div>
+    <!--             {# Информация о следующих страницах #}-->
+    {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}" class="btn">{{ page_obj.next_page_number }}</a>
+        {% if paginator.num_pages != page_obj.next_page_number %}
+            ...
+            <a href="?page={{ page_obj.paginator.num_pages }}" class="btn">{{ page_obj.paginator.num_pages }}</a>
+        {% endif %}
     {% endif %}
-{% endif %}
 </div>
-
-
-
 </div>
-
-<br>
-
-
 {% endblock body %}

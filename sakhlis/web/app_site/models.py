@@ -137,6 +137,7 @@ class OrderList(models.Model):
 
 
 
+
 class RepairerList(models.Model):
     """phone city foto rating_sum rating_num user"""
     phone = models.CharField(validators=[phoneNumberRegex], max_length=16, unique=True, verbose_name='Телефон',
