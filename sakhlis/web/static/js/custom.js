@@ -295,18 +295,19 @@ $(document.body).on( "click", "#workstatus", function(e) {
             dataType: "json",
             success: function(r){
                         let b=r.message;
+                        let pk=r.pk;
                         if (b=='RCV') {
 
                             $('#stepstatuswork').html('Заявка в работе');
                             $('#workstatus').html('Работы выполнены');
-                            $('#workstatus').attr('href', "../changestatus?order_pk={{ info.id }}&work_status=END");
+                            $('#workstatus').attr('href', "../changestatus?order_pk="+pk+"&work_status=END");
                             $('#id_form').attr('class', '');
                             $('#table_invoice').attr('class', 'table');
 
                         } else
                         if (b=='END') {
                             $('#workstatus').remove();
-                            $('#stepstatuswork').html('<i class="fas fa-check-circle about-text"></i> Работы выполнены<br><a href="pdf/{{ info.id }}" class="btn btn-md btn-orange">Квитанция на оплату - PDF</a>');
+                            $('#stepstatuswork').html('<i class="fas fa-check-circle about-text"></i> Работы выполнены<br><a href="pdf/'+pk+'" class="btn btn-md btn-orange">Квитанция на оплату - PDF</a>');
                         }
 
             }

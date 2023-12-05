@@ -328,7 +328,7 @@ def change_work_status(request, **kwargs):
     if request.GET.get('work_status') in ORDER_STATUS_FOR_CHECK and b.repairer_id == request.user:
         b.order_status = request.GET.get('work_status')
         b.save()
-        return JsonResponse({"message": request.GET.get('work_status')})
+        return JsonResponse({"message": request.GET.get('work_status'), "pk": request.GET.get("order_pk")})
     else:
         return JsonResponse({"message": "error"})
 
