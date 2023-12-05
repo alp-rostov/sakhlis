@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
+import logging
 import os
 from pathlib import Path
 
@@ -68,7 +69,6 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'web.urls'
 
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -86,7 +86,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'web.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
@@ -197,3 +196,40 @@ DEFAULT_CHARSET = 'utf-8'
 # EASY_MAPS_CENTER = (-41.3, 32)
 # EASY_MAPS_ZOOM = 8  # Default zoom level, see https://developers.google.com/maps/documentation/javascript/tutorial#MapOptions for more information.
 # EASY_MAPS_LANGUAGE = 'ru'
+
+
+handler404 = 'app_site.views.Error404.as_view()'
+
+
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+
+    'handlers': {
+        'file': {
+            'level': 'WARNING',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'log.log'),
+            'formatter': 'simple'
+        },
+    },
+
+    'style': '{',
+    'formatters': {
+        'simple': {
+            'format': '%(asctime)s   %(message)s   ',
+            'datefmt': "%d/%b/%Y %H:%M:%S"
+        },
+
+    },
+
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'WARNING',
+            'propagate': True,
+        },
+
+    }
+}

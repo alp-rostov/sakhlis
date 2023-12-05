@@ -128,8 +128,11 @@ $(document.body).on( "click", ".copy", function(e) {
     let customer_name_pk="customer_name_"+$(this).attr('id');
     let name=$('#'+customer_name_pk).html();
 
+
     let customer_phone_pk="customer_phone_"+$(this).attr('id');
     let phone=$('#'+customer_phone_pk).html().trim();
+
+
     let customer_telegram_pk="customer_telegram_"+$(this).attr('id');
     let telegram=$('#'+customer_telegram_pk).html().trim();
 
@@ -141,6 +144,7 @@ $(document.body).on( "click", ".copy", function(e) {
 
     $('#form').fadeIn("slow", function(){
         form.style.display = "block";
+        form.reset();
         $('#link_create_order_form').html('X');
         $('[name="customer_name"]').attr("value", name);
         $('[name="customer_phone"]').attr("value", phone);
@@ -295,7 +299,7 @@ $(document.body).on( "click", "#workstatus", function(e) {
 
                             $('#stepstatuswork').html('Заявка в работе');
                             $('#workstatus').html('Работы выполнены');
-                            $('#workstatus').attr('href', "../changestatus?order_pk={{ info.pk}}&work_status=END");
+                            $('#workstatus').attr('href', "../changestatus?order_pk={{ info.id }}&work_status=END");
                             $('#id_form').attr('class', '');
                             $('#table_invoice').attr('class', 'table');
 

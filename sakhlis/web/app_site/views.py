@@ -1,9 +1,13 @@
 import json
+import logging
+
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.forms import modelformset_factory
 from django.shortcuts import redirect, get_object_or_404
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
+
+from .exeptions import base_view, BaseView1
 from .filters import OrderFilter
 from .models import *
 from .forms import OrderForm, InvoiceForm, UserRegisterForm, RepairerForm
@@ -12,6 +16,7 @@ from django.http import FileResponse, Http404, HttpResponseRedirect, JsonRespons
 import io
 from django.contrib.auth.decorators import login_required
 
+logger = logging.getLogger(__name__)
 
 class UserRegisterView(CreateView):
     """ Registration of repairer """
@@ -21,7 +26,7 @@ class UserRegisterView(CreateView):
     template_name = 'register.html'
 
 
-class UserDetailInformation(LoginRequiredMixin, DetailView):
+class UserDetailInformation(BaseView1, LoginRequiredMixin, DetailView):
     model = User
     template_name = 'repaier_update.html'
     form_class = UserRegisterForm
@@ -29,7 +34,6 @@ class UserDetailInformation(LoginRequiredMixin, DetailView):
     context_object_name = 'user'
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-
         context['profile'] = RepairerList.objects.get(user=self.object)
 
         context['count'] =  OrderList.objects\
@@ -45,14 +49,18 @@ class UserDetailInformation(LoginRequiredMixin, DetailView):
         return context
 
 
-class OrderCreate(CreateView):
+class OrderCreate(BaseView1, CreateView):
     """" Add order """
     model = OrderList
     template_name = 'order_create.html'
     form_class = OrderForm
     success_url = reverse_lazy('home')
 
+    def get(self, request, *args, **kwargs):
+        logger.warning('jffchgcghc')
+        return super().get(self, request, *args, **kwargs)
     def form_valid(self, form):
+
         if self.request.user.is_authenticated:
             form.instance.repairer_id = self.request.user
             form.instance.order_status = 'SND'
@@ -72,7 +80,7 @@ class OrderCreate(CreateView):
                                })
 
 
-class OrderManagementSystem(LoginRequiredMixin, ListView):
+class OrderManagementSystem(BaseView1, LoginRequiredMixin, ListView):
     """ list of all orders """
     model = OrderList
     context_object_name = 'order'
@@ -117,7 +125,7 @@ class OrderDelete(LoginRequiredMixin, DeleteView):
     success_url = '/list_order'
 
 
-class InvoiceCreate(LoginRequiredMixin, DetailView):
+class InvoiceCreate(BaseView1, LoginRequiredMixin, DetailView):
     """ Add name of works, quantity, price to order  """
     model = OrderList
     context_object_name = 'info'
@@ -169,8 +177,10 @@ class InvoiceCreate(LoginRequiredMixin, DetailView):
             return JsonResponse({}, safe=False)
 
 
+class Error404(TemplateView):
+    template_name = '404.html'
 
-class Statistica(LoginRequiredMixin, TemplateView):
+class Statistica(BaseView1, LoginRequiredMixin, TemplateView):
     template_name = 'statistica.html'
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -227,7 +237,7 @@ class Statistica(LoginRequiredMixin, TemplateView):
 
         return context
 
-class RepaierUpdate(UpdateView):
+class RepaierUpdate(BaseView1, UpdateView):
     model = RepairerList
     template_name = 'repaier_create.html'
     form_class = RepairerForm
@@ -250,7 +260,7 @@ def CreateIvoicePDF(request, **kwargs):
     return FileResponse(buf, as_attachment=True, filename=f'Invoice_{order_pk}_.pdf')
 
 
-class OrderSearchForm(LoginRequiredMixin, ListView):
+class OrderSearchForm(BaseView1, LoginRequiredMixin, ListView):
     model = OrderList
     context_object_name = 'order'
     template_name = 'ordersearchform.html'

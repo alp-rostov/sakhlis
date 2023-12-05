@@ -1,3 +1,4 @@
+import error404 as error404
 from django.contrib.auth.views import LoginView, LogoutView
 from django.urls import path
 from .views import *
@@ -19,7 +20,7 @@ urlpatterns = [
     path('logout/', LogoutView.as_view(template_name='logout.html'), name='logout'),
 
     path('register/', UserRegisterView.as_view(), name='signup'),
-
+    path('error404/', Error404.as_view(), name='error404'),
 
     path('stat/', Statistica.as_view(), name='stat'),
     path('user/<int:pk>', UserDetailInformation.as_view(), name='user'),

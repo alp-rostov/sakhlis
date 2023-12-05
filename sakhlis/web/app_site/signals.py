@@ -7,9 +7,6 @@ from .models import OrderList, RepairerList
 from .tasks import send_order_information, send_email_after_registration
 from .utils import set_coordinates_address
 
-TOKEN = "6082335579:AAHqLPJB2RSdczDSbshpYV5Q7oqmyIcnbFI"
-CHAT_ID = 5621399532
-
 
 @receiver(post_save, sender=OrderList)
 def send_post_new_order(instance, created, **kwargs):

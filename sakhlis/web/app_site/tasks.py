@@ -1,3 +1,5 @@
+import os
+
 import telebot
 from celery import shared_task
 from django.contrib.auth.models import User
@@ -7,8 +9,8 @@ from django.template.loader import render_to_string
 from .models import OrderList, RepairerList
 from .utils import set_coordinates_address, add_telegram_button
 
-TOKEN = "6082335579:AAHqLPJB2RSdczDSbshpYV5Q7oqmyIcnbFI"
-CHAT_ID = 5621399532
+TOKEN = os.environ.get('TOKEN')
+CHAT_ID = os.environ.get('CHAT_ID')
 
 
 @shared_task
