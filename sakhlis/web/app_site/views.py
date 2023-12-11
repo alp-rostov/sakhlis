@@ -2,12 +2,13 @@ import json
 import logging
 
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.db.models import Count
 from django.forms import modelformset_factory
 from django.shortcuts import redirect, get_object_or_404
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
 
-from .exeptions import base_view, BaseView1
+from .exeptions import base_view, BaseClassExeption
 from .filters import OrderFilter
 from .models import *
 from .forms import OrderForm, InvoiceForm, UserRegisterForm, RepairerForm
@@ -26,7 +27,7 @@ class UserRegisterView(CreateView):
     template_name = 'register.html'
 
 
-class UserDetailInformation(BaseView1, LoginRequiredMixin, DetailView):
+class UserDetailInformation(BaseClassExeption, LoginRequiredMixin, DetailView):
     model = User
     template_name = 'repaier_update.html'
     form_class = UserRegisterForm
@@ -49,16 +50,13 @@ class UserDetailInformation(BaseView1, LoginRequiredMixin, DetailView):
         return context
 
 
-class OrderCreate(BaseView1, CreateView):
+class OrderCreate(BaseClassExeption, CreateView):
     """" Add order """
     model = OrderList
     template_name = 'order_create.html'
     form_class = OrderForm
     success_url = reverse_lazy('home')
 
-    def get(self, request, *args, **kwargs):
-        logger.warning('jffchgcghc')
-        return super().get(self, request, *args, **kwargs)
     def form_valid(self, form):
 
         if self.request.user.is_authenticated:
@@ -68,19 +66,11 @@ class OrderCreate(BaseView1, CreateView):
 
         return JsonResponse({'message': f'<h3>Заявка № {form.instance.pk} отправлена успешно!</h3>',
                              'pk':form.instance.pk,
-                             'text_order': form.instance.text_order,
-                             'time_in': form.instance.time_in,
-                             'customer_name':form.instance.customer_name,
-                             'customer_phone': form.instance.customer_phone,
-                             'customer_telegram': form.instance.customer_telegram,
-                             'address_city': form.instance.address_city,
-                             'address_street_app': form.instance.address_street_app,
-                             'address_num': form.instance.address_num,
                              'auth': self.request.user.is_authenticated,
                                })
 
 
-class OrderManagementSystem(BaseView1, LoginRequiredMixin, ListView):
+class OrderManagementSystem(BaseClassExeption, LoginRequiredMixin, ListView):
     """ list of all orders """
     model = OrderList
     context_object_name = 'order'
@@ -125,7 +115,7 @@ class OrderDelete(LoginRequiredMixin, DeleteView):
     success_url = '/list_order'
 
 
-class InvoiceCreate(BaseView1, LoginRequiredMixin, DetailView):
+class InvoiceCreate(BaseClassExeption, LoginRequiredMixin, DetailView):
     """ Add name of works, quantity, price to order  """
     model = OrderList
     context_object_name = 'info'
@@ -180,7 +170,7 @@ class InvoiceCreate(BaseView1, LoginRequiredMixin, DetailView):
 class Error404(TemplateView):
     template_name = '404.html'
 
-class Statistica(BaseView1, LoginRequiredMixin, TemplateView):
+class Statistica(BaseClassExeption, LoginRequiredMixin, TemplateView):
     template_name = 'statistica.html'
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -237,7 +227,7 @@ class Statistica(BaseView1, LoginRequiredMixin, TemplateView):
 
         return context
 
-class RepaierUpdate(BaseView1, UpdateView):
+class RepaierUpdate(BaseClassExeption, UpdateView):
     model = RepairerList
     template_name = 'repaier_create.html'
     form_class = RepairerForm
@@ -260,7 +250,7 @@ def CreateIvoicePDF(request, **kwargs):
     return FileResponse(buf, as_attachment=True, filename=f'Invoice_{order_pk}_.pdf')
 
 
-class OrderSearchForm(BaseView1, LoginRequiredMixin, ListView):
+class OrderSearchForm(BaseClassExeption, LoginRequiredMixin, ListView):
     model = OrderList
     context_object_name = 'order'
     template_name = 'ordersearchform.html'

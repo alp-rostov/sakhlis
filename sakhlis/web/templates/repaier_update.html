@@ -11,7 +11,7 @@
 
     <p align="left">
         {{ user.last_name }} {{ user.first_name }} | <strong class="mycolor"> {{ request.user.username }}</strong>
-        <a href="{% url 'update-user' profile.pk %}" class="mycolor" title="изменить данные"><img src="../media/images/change.png" width="25"></a><br></a><br>
+        <a href="{% url 'update-user' profile.pk %}" class="mycolor" title="изменить данные"><i class="fas fa-pen text-secondary mt-3"> </i></a><br>
         {{ user.email }}<br>
         {{ profile.phone }}<br>
         {{ profile.telegram }}<br>

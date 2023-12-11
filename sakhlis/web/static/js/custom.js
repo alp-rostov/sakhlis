@@ -245,7 +245,6 @@ $('#id_form').submit(function(e) {
         dataType: 'html',
         success: function (r) {
             let b=JSON.parse(r);
-            console.log(b);
             if (b!=='error') {
                 let c = $('div[new="new"]');
                 for (i = 0; i < c.length; i++) {
@@ -341,3 +340,6 @@ $(document.body).on( "click", "#workstatus", function(e) {
 
 
 /* ================   END using in invoice  ============= */
+
+
+

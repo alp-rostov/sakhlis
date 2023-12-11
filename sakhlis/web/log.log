@@ -1,0 +1,1626 @@
+09/Dec/2023 20:49:36   INFO  Watching for file changes with StatReloader  None
+09/Dec/2023 20:49:43   INFO  "GET / HTTP/1.1" 200 43083  None
+INFO:django.server:"GET / HTTP/1.1" 200 43083
+09/Dec/2023 20:49:43   INFO  "GET /static/images/flag_en.png HTTP/1.1" 200 3087  None
+INFO:django.server:"GET /static/images/flag_en.png HTTP/1.1" 200 3087
+09/Dec/2023 20:49:43   INFO  "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0  None
+INFO:django.server:"GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+09/Dec/2023 20:49:43   INFO  "GET /static/fonts/broken-cable.svg HTTP/1.1" 200 2874  None
+INFO:django.server:"GET /static/fonts/broken-cable.svg HTTP/1.1" 200 2874
+09/Dec/2023 20:49:43   INFO  "GET /static/images/whatsapp.png HTTP/1.1" 200 167171  None
+INFO:django.server:"GET /static/images/whatsapp.png HTTP/1.1" 200 167171
+09/Dec/2023 20:49:43   INFO  "GET /static/images/instagram.png HTTP/1.1" 200 79716  None
+INFO:django.server:"GET /static/images/instagram.png HTTP/1.1" 200 79716
+09/Dec/2023 20:49:43   INFO  "GET /static/images/telegram.gif HTTP/1.1" 200 38309  None
+INFO:django.server:"GET /static/images/telegram.gif HTTP/1.1" 200 38309
+09/Dec/2023 20:49:43   INFO  "GET /static/images/flag_ge.png HTTP/1.1" 200 1771  None
+INFO:django.server:"GET /static/images/flag_ge.png HTTP/1.1" 200 1771
+09/Dec/2023 20:49:43   INFO  "GET /static/css/owl.carousel.min.css HTTP/1.1" 304 0  None
+INFO:django.server:"GET /static/css/owl.carousel.min.css HTTP/1.1" 304 0
+09/Dec/2023 20:49:43   INFO  "GET /static/js/custom.js HTTP/1.1" 304 0  None
+INFO:django.server:"GET /static/js/custom.js HTTP/1.1" 304 0
+09/Dec/2023 20:49:43   INFO  "GET /static/fonts/leak.svg HTTP/1.1" 200 756  None
+INFO:django.server:"GET /static/fonts/leak.svg HTTP/1.1" 200 756
+09/Dec/2023 20:49:43   INFO  "GET /static/fonts/washing-machine.svg HTTP/1.1" 200 1667  None
+INFO:django.server:"GET /static/fonts/washing-machine.svg HTTP/1.1" 200 1667
+09/Dec/2023 20:49:43   INFO  "GET /static/fonts/living-room.svg HTTP/1.1" 200 6568  None
+INFO:django.server:"GET /static/fonts/living-room.svg HTTP/1.1" 200 6568
+09/Dec/2023 20:49:43   INFO  "GET /static/fonts/3d-buildings.svg HTTP/1.1" 200 9453  None
+INFO:django.server:"GET /static/fonts/3d-buildings.svg HTTP/1.1" 200 9453
+09/Dec/2023 20:49:43   INFO  "GET /static/images/2.jpg HTTP/1.1" 200 73588  None
+INFO:django.server:"GET /static/images/2.jpg HTTP/1.1" 200 73588
+09/Dec/2023 20:49:43   INFO  "GET /static/images/1.jpg HTTP/1.1" 200 68159  None
+INFO:django.server:"GET /static/images/1.jpg HTTP/1.1" 200 68159
+09/Dec/2023 20:49:44   INFO  "GET /static/fonts/Roboto-Regular.woff HTTP/1.1" 200 315  None
+INFO:django.server:"GET /static/fonts/Roboto-Regular.woff HTTP/1.1" 200 315
+09/Dec/2023 20:49:44   INFO  "GET /static/fonts/Roboto-Medium.woff HTTP/1.1" 200 315  None
+INFO:django.server:"GET /static/fonts/Roboto-Medium.woff HTTP/1.1" 200 315
+09/Dec/2023 20:49:44   INFO  "GET /static/fonts/Roboto-Bold.ttf HTTP/1.1" 200 315  None
+INFO:django.server:"GET /static/fonts/Roboto-Bold.ttf HTTP/1.1" 200 315
+09/Dec/2023 20:49:44   WARNING  Not Found: /favicon.ico  None
+WARNING:django.request:Not Found: /favicon.ico
+09/Dec/2023 20:49:46   INFO  "GET /list_order HTTP/1.1" 200 54084  None
+INFO:django.server:"GET /list_order HTTP/1.1" 200 54084
+09/Dec/2023 20:49:46   INFO  "GET /static/fonts/Roboto-Regular.woff HTTP/1.1" 200 315  None
+INFO:django.server:"GET /static/fonts/Roboto-Regular.woff HTTP/1.1" 200 315
+09/Dec/2023 20:49:47   INFO  "GET /list_order/1086 HTTP/1.1" 200 25983  None
+INFO:django.server:"GET /list_order/1086 HTTP/1.1" 200 25983
+09/Dec/2023 20:49:47   INFO  "GET /static/fonts/Roboto-Light.woff2 HTTP/1.1" 200 315  None
+INFO:django.server:"GET /static/fonts/Roboto-Light.woff2 HTTP/1.1" 200 315
+09/Dec/2023 20:49:50   INFO  "GET /list_order?work_status=RCV HTTP/1.1" 200 23259  None
+INFO:django.server:"GET /list_order?work_status=RCV HTTP/1.1" 200 23259
+09/Dec/2023 20:49:53   INFO  "GET /list_order/1085 HTTP/1.1" 200 25703  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25703
+09/Dec/2023 20:49:54   INFO  "GET /static/fonts/Roboto-Regular.woff HTTP/1.1" 200 315  None
+INFO:django.server:"GET /static/fonts/Roboto-Regular.woff HTTP/1.1" 200 315
+09/Dec/2023 20:51:31   INFO  "GET /list_order/1085 HTTP/1.1" 200 25712  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25712
+09/Dec/2023 20:51:31   WARNING  Not Found: /favicon.ico  None
+WARNING:django.request:Not Found: /favicon.ico
+09/Dec/2023 20:51:39   INFO  "GET /list_order/1085 HTTP/1.1" 200 25704  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25704
+09/Dec/2023 20:53:20   INFO  "GET /list_order/1085 HTTP/1.1" 200 25704  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25704
+09/Dec/2023 20:53:21   INFO  "GET /list_order/1085 HTTP/1.1" 200 25704  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25704
+09/Dec/2023 20:53:22   INFO  "GET /list_order/1085 HTTP/1.1" 200 25704  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25704
+09/Dec/2023 20:53:35   INFO  "GET /list_order/1085 HTTP/1.1" 200 25704  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25704
+09/Dec/2023 20:53:47   INFO  "GET /list_order/1085 HTTP/1.1" 200 25813  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25813
+09/Dec/2023 20:54:04   INFO  "GET /list_order/1085 HTTP/1.1" 200 25813  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25813
+09/Dec/2023 20:54:06   INFO  "GET /list_order/1085 HTTP/1.1" 200 25716  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25716
+09/Dec/2023 20:57:50   INFO  "GET /list_order/1085 HTTP/1.1" 200 25699  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25699
+09/Dec/2023 20:57:59   INFO  "GET /list_order/1085 HTTP/1.1" 200 25692  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25692
+09/Dec/2023 20:57:59   WARNING  Not Found: /favicon.ico  None
+WARNING:django.request:Not Found: /favicon.ico
+09/Dec/2023 20:58:15   INFO  "GET /list_order/1085 HTTP/1.1" 200 25692  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25692
+09/Dec/2023 21:00:40   INFO  "GET /list_order/1085 HTTP/1.1" 200 25709  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25709
+09/Dec/2023 21:01:01   INFO  "GET /list_order/1085 HTTP/1.1" 200 25709  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25709
+09/Dec/2023 21:01:11   INFO  "GET /list_order/1085 HTTP/1.1" 200 25691  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25691
+09/Dec/2023 21:02:10   INFO  "GET /list_order/1085 HTTP/1.1" 200 25703  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25703
+09/Dec/2023 21:02:28   INFO  "GET /list_order/1085 HTTP/1.1" 200 25711  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25711
+09/Dec/2023 21:03:13   INFO  "GET /list_order/1085 HTTP/1.1" 200 25718  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25718
+09/Dec/2023 21:03:27   INFO  "GET /list_order/1085 HTTP/1.1" 200 25710  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25710
+09/Dec/2023 21:03:45   INFO  "GET /list_order/1085 HTTP/1.1" 200 25710  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25710
+09/Dec/2023 21:03:56   INFO  "GET /list_order/1085 HTTP/1.1" 200 25707  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25707
+09/Dec/2023 21:04:01   INFO  "GET /list_order/1085 HTTP/1.1" 200 25710  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25710
+09/Dec/2023 21:04:01   INFO  "GET /static/fonts/Roboto-Medium.woff2 HTTP/1.1" 200 315  None
+INFO:django.server:"GET /static/fonts/Roboto-Medium.woff2 HTTP/1.1" 200 315
+09/Dec/2023 21:04:01   INFO  - Broken pipe from ('127.0.0.1', 49116)  None
+INFO:django.server:- Broken pipe from ('127.0.0.1', 49116)
+09/Dec/2023 21:04:28   INFO  "GET /list_order/1085 HTTP/1.1" 200 25717  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25717
+09/Dec/2023 21:06:04   INFO  "GET /list_order/1085 HTTP/1.1" 200 25719  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25719
+09/Dec/2023 21:06:08   INFO  "GET /list_order/1085 HTTP/1.1" 200 25717  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25717
+09/Dec/2023 21:09:15   INFO  "GET / HTTP/1.1" 200 43081  None
+INFO:django.server:"GET / HTTP/1.1" 200 43081
+09/Dec/2023 21:09:15   WARNING  Not Found: /favicon.ico  None
+WARNING:django.request:Not Found: /favicon.ico
+09/Dec/2023 21:09:20   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+09/Dec/2023 21:10:28   INFO  "GET /list_order HTTP/1.1" 200 54084  None
+INFO:django.server:"GET /list_order HTTP/1.1" 200 54084
+09/Dec/2023 21:10:28   WARNING  Not Found: /favicon.ico  None
+WARNING:django.request:Not Found: /favicon.ico
+09/Dec/2023 21:10:29   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+09/Dec/2023 21:10:31   INFO  "GET /list_order?work_status=RCV HTTP/1.1" 200 23259  None
+INFO:django.server:"GET /list_order?work_status=RCV HTTP/1.1" 200 23259
+09/Dec/2023 21:10:32   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+09/Dec/2023 21:10:34   INFO  "GET /list_order/1085 HTTP/1.1" 200 25733  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25733
+09/Dec/2023 21:10:43   INFO  "GET /list_order/1085 HTTP/1.1" 200 25724  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25724
+09/Dec/2023 21:10:53   INFO  "GET /list_order/1085 HTTP/1.1" 200 25716  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25716
+09/Dec/2023 21:10:59   INFO  "GET /list_order/1085 HTTP/1.1" 200 25710  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25710
+09/Dec/2023 21:11:12   INFO  "GET /list_order/1085 HTTP/1.1" 200 25715  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25715
+09/Dec/2023 21:11:12   INFO  "GET /list_order/1085 HTTP/1.1" 200 25715  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25715
+09/Dec/2023 21:13:33   INFO  "GET /list_order/1085 HTTP/1.1" 200 25719  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25719
+09/Dec/2023 21:13:39   INFO  "GET /list_order/1085 HTTP/1.1" 200 25719  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25719
+09/Dec/2023 21:13:46   INFO  "GET /list_order/1085 HTTP/1.1" 200 25719  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25719
+09/Dec/2023 21:13:59   INFO  "GET /list_order/1085 HTTP/1.1" 200 25720  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25720
+09/Dec/2023 21:14:07   INFO  "GET /list_order/1085 HTTP/1.1" 200 25720  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25720
+09/Dec/2023 21:14:35   INFO  "GET /list_order/1085 HTTP/1.1" 200 25721  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25721
+09/Dec/2023 21:14:36   INFO  "GET /list_order/1085 HTTP/1.1" 200 25721  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25721
+09/Dec/2023 21:14:42   INFO  "GET /list_order/1085 HTTP/1.1" 200 25722  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25722
+09/Dec/2023 21:15:08   INFO  "GET /list_order/1085 HTTP/1.1" 200 25725  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25725
+09/Dec/2023 21:16:32   INFO  "GET /list_order/1085 HTTP/1.1" 200 25725  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25725
+09/Dec/2023 21:16:39   INFO  "GET /list_order/1085 HTTP/1.1" 200 25716  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25716
+09/Dec/2023 21:17:10   INFO  "GET /list_order/1085 HTTP/1.1" 200 25716  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25716
+09/Dec/2023 21:19:01   INFO  "GET /list_order/1085 HTTP/1.1" 200 25740  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25740
+09/Dec/2023 21:19:01   WARNING  Not Found: /favicon.ico  None
+WARNING:django.request:Not Found: /favicon.ico
+09/Dec/2023 21:19:02   INFO  "GET /list_order/1085 HTTP/1.1" 200 25740  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25740
+09/Dec/2023 21:19:02   INFO  "GET /list_order/1085 HTTP/1.1" 200 25740  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25740
+09/Dec/2023 21:19:30   INFO  "GET /list_order/1085 HTTP/1.1" 200 25734  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25734
+09/Dec/2023 21:19:31   INFO  "GET /list_order/1085 HTTP/1.1" 200 25734  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25734
+09/Dec/2023 21:19:31   INFO  "GET /list_order/1085 HTTP/1.1" 200 25734  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25734
+09/Dec/2023 21:25:27   INFO  "GET /list_order/1085 HTTP/1.1" 200 25717  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25717
+09/Dec/2023 21:25:32   INFO  "GET /list_order/1085 HTTP/1.1" 200 25717  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25717
+09/Dec/2023 21:26:02   INFO  "GET /list_order/1085 HTTP/1.1" 200 25717  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25717
+09/Dec/2023 21:26:07   INFO  "GET /list_order/1085 HTTP/1.1" 200 25717  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25717
+09/Dec/2023 21:26:07   INFO  "GET /list_order/1085 HTTP/1.1" 200 25717  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25717
+09/Dec/2023 21:26:07   INFO  "GET /list_order/1085 HTTP/1.1" 200 25717  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25717
+09/Dec/2023 21:26:19   INFO  "GET /list_order/1085 HTTP/1.1" 200 25719  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25719
+09/Dec/2023 21:28:34   INFO  "GET /list_order/1085 HTTP/1.1" 200 25717  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25717
+09/Dec/2023 21:28:38   INFO  "GET /list_order/1085 HTTP/1.1" 200 25717  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25717
+09/Dec/2023 21:28:38   INFO  "GET /list_order/1085 HTTP/1.1" 200 25718  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25718
+09/Dec/2023 21:28:48   INFO  Watching for file changes with StatReloader  None
+09/Dec/2023 21:29:06   INFO  Watching for file changes with StatReloader  None
+09/Dec/2023 21:29:16   INFO  "GET / HTTP/1.1" 200 43083  None
+INFO:django.server:"GET / HTTP/1.1" 200 43083
+09/Dec/2023 21:29:18   INFO  "GET /list_order HTTP/1.1" 200 54084  None
+INFO:django.server:"GET /list_order HTTP/1.1" 200 54084
+09/Dec/2023 21:29:20   INFO  "GET /list_order?work_status=RCV HTTP/1.1" 200 23259  None
+INFO:django.server:"GET /list_order?work_status=RCV HTTP/1.1" 200 23259
+09/Dec/2023 21:29:21   INFO  "GET /list_order/1085 HTTP/1.1" 200 25717  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25717
+09/Dec/2023 21:29:25   INFO  "POST /list_order/1085 HTTP/1.1" 200 7  None
+INFO:django.server:"POST /list_order/1085 HTTP/1.1" 200 7
+09/Dec/2023 21:29:25   INFO  "GET /__debug__/history_sidebar/?store_id=bc8fcaa41b844992a7868ba749d7d0fc HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=bc8fcaa41b844992a7868ba749d7d0fc HTTP/1.1" 200 13344
+09/Dec/2023 21:29:30   INFO  "POST /list_order/1085 HTTP/1.1" 200 213  None
+INFO:django.server:"POST /list_order/1085 HTTP/1.1" 200 213
+09/Dec/2023 21:29:30   INFO  "GET /__debug__/history_sidebar/?store_id=7d5130e47d324beda227582267af24f4 HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=7d5130e47d324beda227582267af24f4 HTTP/1.1" 200 13344
+09/Dec/2023 21:30:05   INFO  "GET /list_order/1085 HTTP/1.1" 200 26094  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 26094
+09/Dec/2023 21:30:06   INFO  "GET /list_order/1085 HTTP/1.1" 200 26094  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 26094
+09/Dec/2023 21:30:07   INFO  "GET /list_order/1085 HTTP/1.1" 200 26094  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 26094
+09/Dec/2023 21:30:11   INFO  "POST /list_order/1085 HTTP/1.1" 200 7  None
+INFO:django.server:"POST /list_order/1085 HTTP/1.1" 200 7
+09/Dec/2023 21:30:11   INFO  "GET /__debug__/history_sidebar/?store_id=2981b258b0a64f6cbb36201e0375d0c5 HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=2981b258b0a64f6cbb36201e0375d0c5 HTTP/1.1" 200 13344
+09/Dec/2023 21:30:16   INFO  "POST /list_order/1085 HTTP/1.1" 200 213  None
+INFO:django.server:"POST /list_order/1085 HTTP/1.1" 200 213
+09/Dec/2023 21:30:16   INFO  "GET /__debug__/history_sidebar/?store_id=9cf8fc6f6280451d8b076910911c90c4 HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=9cf8fc6f6280451d8b076910911c90c4 HTTP/1.1" 200 13344
+09/Dec/2023 21:30:19   INFO  "GET /list_order/1085 HTTP/1.1" 200 26471  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 26471
+09/Dec/2023 21:32:58   INFO  "GET /list_order/1085 HTTP/1.1" 200 26471  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 26471
+09/Dec/2023 21:32:58   INFO  "GET /list_order/1085 HTTP/1.1" 200 26471  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 26471
+09/Dec/2023 21:33:00   INFO  "GET /invoice/delete/1564 HTTP/1.1" 200 22  None
+INFO:django.server:"GET /invoice/delete/1564 HTTP/1.1" 200 22
+09/Dec/2023 21:33:00   INFO  "GET /__debug__/history_sidebar/?store_id=04ab58a60e2f4995bacf9ea59a0badfb HTTP/1.1" 200 13364  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=04ab58a60e2f4995bacf9ea59a0badfb HTTP/1.1" 200 13364
+09/Dec/2023 21:33:02   INFO  "GET /invoice/delete/1563 HTTP/1.1" 200 22  None
+INFO:django.server:"GET /invoice/delete/1563 HTTP/1.1" 200 22
+09/Dec/2023 21:33:02   INFO  "GET /__debug__/history_sidebar/?store_id=4cac6ac9b5af4a378d722ebc4bd1244f HTTP/1.1" 200 13364  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=4cac6ac9b5af4a378d722ebc4bd1244f HTTP/1.1" 200 13364
+09/Dec/2023 21:33:06   INFO  "GET /list_order/1085 HTTP/1.1" 200 25717  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25717
+09/Dec/2023 21:33:10   INFO  "GET /list_order/1085 HTTP/1.1" 200 25717  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25717
+09/Dec/2023 21:33:12   INFO  "GET /list_order/1085 HTTP/1.1" 200 25717  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25717
+09/Dec/2023 21:35:40   INFO  "GET /list_order/1085 HTTP/1.1" 200 25717  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25717
+09/Dec/2023 21:35:40   INFO  "GET /list_order/1085 HTTP/1.1" 200 25717  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25717
+09/Dec/2023 21:35:43   INFO  "GET /serv?type_work=BL HTTP/1.1" 200 768  None
+INFO:django.server:"GET /serv?type_work=BL HTTP/1.1" 200 768
+09/Dec/2023 21:35:43   INFO  "GET /list_order/1085 HTTP/1.1" 200 25714  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25714
+09/Dec/2023 21:35:44   INFO  "GET /__debug__/history_sidebar/?store_id=0e5ba07254144b158b6c3d2ee5069e98 HTTP/1.1" 200 13377  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=0e5ba07254144b158b6c3d2ee5069e98 HTTP/1.1" 200 13377
+09/Dec/2023 21:36:19   INFO  "GET /list_order/1085 HTTP/1.1" 200 25717  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25717
+10/Dec/2023 12:43:17   INFO  Watching for file changes with StatReloader  None
+10/Dec/2023 12:43:28   INFO  "GET /list_order HTTP/1.1" 302 0  None
+INFO:django.server:"GET /list_order HTTP/1.1" 302 0
+10/Dec/2023 12:43:28   INFO  "GET /login/?next=/list_order HTTP/1.1" 200 16029  None
+INFO:django.server:"GET /login/?next=/list_order HTTP/1.1" 200 16029
+10/Dec/2023 12:43:28   INFO  "GET /static/css/fonts.css HTTP/1.1" 304 0  None
+INFO:django.server:"GET /static/css/fonts.css HTTP/1.1" 304 0
+10/Dec/2023 12:43:28   INFO  "GET /static/js/custom.js HTTP/1.1" 200 11876  None
+INFO:django.server:"GET /static/js/custom.js HTTP/1.1" 200 11876
+10/Dec/2023 12:43:29   WARNING  Not Found: /favicon.ico  None
+WARNING:django.request:Not Found: /favicon.ico
+10/Dec/2023 12:43:29   WARNING  "GET /favicon.ico HTTP/1.1" 404 16307  None
+WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 16307
+10/Dec/2023 12:43:31   INFO  "POST /login/ HTTP/1.1" 302 0  None
+INFO:django.server:"POST /login/ HTTP/1.1" 302 0
+10/Dec/2023 12:43:31   INFO  "GET / HTTP/1.1" 200 43081  None
+INFO:django.server:"GET / HTTP/1.1" 200 43081
+10/Dec/2023 12:43:31   INFO  "GET /media/images/muzg-na-chas.jpg HTTP/1.1" 200 323830  None
+INFO:django.server:"GET /media/images/muzg-na-chas.jpg HTTP/1.1" 200 323830
+10/Dec/2023 12:43:36   INFO  "GET /list_order HTTP/1.1" 200 54084  None
+INFO:django.server:"GET /list_order HTTP/1.1" 200 54084
+10/Dec/2023 12:43:41   INFO  "GET /list_order?work_status=SND HTTP/1.1" 200 23395  None
+INFO:django.server:"GET /list_order?work_status=SND HTTP/1.1" 200 23395
+10/Dec/2023 12:43:42   INFO  "GET /list_order?work_status=RCV HTTP/1.1" 200 23259  None
+INFO:django.server:"GET /list_order?work_status=RCV HTTP/1.1" 200 23259
+10/Dec/2023 12:43:45   INFO  "GET / HTTP/1.1" 200 43081  None
+INFO:django.server:"GET / HTTP/1.1" 200 43081
+10/Dec/2023 12:43:49   INFO  "GET /street?street=Zuraba%20Patsridze%208 HTTP/1.1" 200 4  None
+INFO:django.server:"GET /street?street=Zuraba%20Patsridze%208 HTTP/1.1" 200 4
+10/Dec/2023 12:43:50   INFO  "GET /__debug__/history_sidebar/?store_id=1e8c8726ae174c56b34a464b6d323cc2 HTTP/1.1" 200 13371  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=1e8c8726ae174c56b34a464b6d323cc2 HTTP/1.1" 200 13371
+10/Dec/2023 12:43:54   INFO  "POST / HTTP/1.1" 200 203  None
+INFO:django.server:"POST / HTTP/1.1" 200 203
+10/Dec/2023 12:43:54   INFO  "GET /list_order/1087 HTTP/1.1" 200 25663  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25663
+10/Dec/2023 12:43:57   INFO  "GET /changestatus?order_pk=1087&work_status=RCV HTTP/1.1" 200 32  None
+INFO:django.server:"GET /changestatus?order_pk=1087&work_status=RCV HTTP/1.1" 200 32
+10/Dec/2023 12:43:57   INFO  "GET /__debug__/history_sidebar/?store_id=7d99b73ef8fb4e368f186893a22b3a6d HTTP/1.1" 200 13389  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=7d99b73ef8fb4e368f186893a22b3a6d HTTP/1.1" 200 13389
+10/Dec/2023 12:44:55   INFO  "GET /list_order/1087 HTTP/1.1" 200 25623  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25623
+10/Dec/2023 12:44:56   INFO  "GET /list_order/1087 HTTP/1.1" 200 25623  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25623
+10/Dec/2023 12:45:07   INFO  "GET /list_order/1087 HTTP/1.1" 200 25623  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25623
+10/Dec/2023 12:45:08   INFO  "GET /list_order/1087 HTTP/1.1" 200 25623  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25623
+10/Dec/2023 12:45:26   INFO  "GET /list_order/1087 HTTP/1.1" 200 25623  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25623
+10/Dec/2023 12:45:57   INFO  "GET /list_order/1087 HTTP/1.1" 200 25623  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25623
+10/Dec/2023 12:45:58   INFO  "GET /list_order/1087 HTTP/1.1" 200 25623  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25623
+10/Dec/2023 12:46:00   INFO  "GET /list_order/1087 HTTP/1.1" 200 25623  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25623
+10/Dec/2023 12:46:58   INFO  "GET /list_order/1087 HTTP/1.1" 200 25573  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25573
+10/Dec/2023 12:46:58   INFO  "GET /list_order/1087 HTTP/1.1" 200 25573  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25573
+10/Dec/2023 12:47:01   INFO  "GET /list_order/1087 HTTP/1.1" 200 25573  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25573
+10/Dec/2023 12:48:50   INFO  "GET / HTTP/1.1" 200 43012  None
+INFO:django.server:"GET / HTTP/1.1" 200 43012
+10/Dec/2023 12:48:50   INFO  "GET /static/css/owl.carousel.min.css HTTP/1.1" 200 4376  None
+INFO:django.server:"GET /static/css/owl.carousel.min.css HTTP/1.1" 200 4376
+10/Dec/2023 12:48:50   INFO  "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13404  None
+INFO:django.server:"GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13404
+10/Dec/2023 12:48:50   INFO  "GET /static/css/custom.css HTTP/1.1" 200 11590  None
+INFO:django.server:"GET /static/css/custom.css HTTP/1.1" 200 11590
+10/Dec/2023 12:48:50   INFO  "GET /static/css/fonts.css HTTP/1.1" 200 68940  None
+INFO:django.server:"GET /static/css/fonts.css HTTP/1.1" 200 68940
+10/Dec/2023 12:48:50   INFO  "GET /static/css/bootstrap.min.css HTTP/1.1" 200 140936  None
+INFO:django.server:"GET /static/css/bootstrap.min.css HTTP/1.1" 200 140936
+10/Dec/2023 12:48:50   INFO  "GET /static/css/mdb.min.css HTTP/1.1" 200 254562  None
+INFO:django.server:"GET /static/css/mdb.min.css HTTP/1.1" 200 254562
+10/Dec/2023 12:48:50   INFO  "GET /static/images/flag_en.png HTTP/1.1" 200 3087  None
+INFO:django.server:"GET /static/images/flag_en.png HTTP/1.1" 200 3087
+10/Dec/2023 12:48:50   INFO  "GET /static/images/flag_ge.png HTTP/1.1" 200 1771  None
+INFO:django.server:"GET /static/images/flag_ge.png HTTP/1.1" 200 1771
+10/Dec/2023 12:48:50   INFO  "GET /static/images/telegram.gif HTTP/1.1" 200 38309  None
+INFO:django.server:"GET /static/images/telegram.gif HTTP/1.1" 200 38309
+10/Dec/2023 12:48:50   INFO  "GET /static/images/whatsapp.png HTTP/1.1" 200 167171  None
+INFO:django.server:"GET /static/images/whatsapp.png HTTP/1.1" 200 167171
+10/Dec/2023 12:48:50   INFO  "GET /static/images/instagram.png HTTP/1.1" 200 79716  None
+INFO:django.server:"GET /static/images/instagram.png HTTP/1.1" 200 79716
+10/Dec/2023 12:48:50   INFO  "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 200 87412  None
+INFO:django.server:"GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 200 87412
+10/Dec/2023 12:48:50   INFO  "GET /static/js/bootstrap.min.js HTTP/1.1" 200 51039  None
+INFO:django.server:"GET /static/js/bootstrap.min.js HTTP/1.1" 200 51039
+10/Dec/2023 12:48:50   INFO  "GET /static/js/mdb.min.js HTTP/1.1" 200 207332  None
+INFO:django.server:"GET /static/js/mdb.min.js HTTP/1.1" 200 207332
+10/Dec/2023 12:48:50   INFO  "GET /static/js/wow.min.js HTTP/1.1" 200 14184  None
+INFO:django.server:"GET /static/js/wow.min.js HTTP/1.1" 200 14184
+10/Dec/2023 12:48:50   INFO  "GET /static/js/owl.carousel.min.js HTTP/1.1" 200 44342  None
+INFO:django.server:"GET /static/js/owl.carousel.min.js HTTP/1.1" 200 44342
+10/Dec/2023 12:48:50   INFO  "GET /static/js/counter.js HTTP/1.1" 200 4068  None
+INFO:django.server:"GET /static/js/counter.js HTTP/1.1" 200 4068
+10/Dec/2023 12:48:50   INFO  "GET /static/js/typed.min.js HTTP/1.1" 200 11595  None
+INFO:django.server:"GET /static/js/typed.min.js HTTP/1.1" 200 11595
+10/Dec/2023 12:48:50   INFO  "GET /static/js/maskedinput.min.js HTTP/1.1" 200 4168  None
+INFO:django.server:"GET /static/js/maskedinput.min.js HTTP/1.1" 200 4168
+10/Dec/2023 12:48:50   INFO  "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 200 12667  None
+INFO:django.server:"GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 200 12667
+10/Dec/2023 12:48:50   INFO  "GET /static/js/custom.js HTTP/1.1" 200 11831  None
+INFO:django.server:"GET /static/js/custom.js HTTP/1.1" 200 11831
+10/Dec/2023 12:48:50   INFO  "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12664  None
+INFO:django.server:"GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12664
+10/Dec/2023 12:48:50   INFO  "GET /static/fonts/broken-cable.svg HTTP/1.1" 200 2874  None
+INFO:django.server:"GET /static/fonts/broken-cable.svg HTTP/1.1" 200 2874
+10/Dec/2023 12:48:50   INFO  "GET /static/fonts/leak.svg HTTP/1.1" 200 756  None
+INFO:django.server:"GET /static/fonts/leak.svg HTTP/1.1" 200 756
+10/Dec/2023 12:48:50   INFO  "GET /static/fonts/living-room.svg HTTP/1.1" 200 6568  None
+INFO:django.server:"GET /static/fonts/living-room.svg HTTP/1.1" 200 6568
+10/Dec/2023 12:48:50   INFO  "GET /static/fonts/washing-machine.svg HTTP/1.1" 200 1667  None
+INFO:django.server:"GET /static/fonts/washing-machine.svg HTTP/1.1" 200 1667
+10/Dec/2023 12:48:50   INFO  "GET /static/fonts/3d-buildings.svg HTTP/1.1" 200 9453  None
+INFO:django.server:"GET /static/fonts/3d-buildings.svg HTTP/1.1" 200 9453
+10/Dec/2023 12:48:50   INFO  "GET /static/images/1.jpg HTTP/1.1" 200 68159  None
+INFO:django.server:"GET /static/images/1.jpg HTTP/1.1" 200 68159
+10/Dec/2023 12:48:50   INFO  "GET /static/images/2.jpg HTTP/1.1" 200 73588  None
+INFO:django.server:"GET /static/images/2.jpg HTTP/1.1" 200 73588
+10/Dec/2023 12:48:50   INFO  "GET /static/images/3.jpg HTTP/1.1" 200 64252  None
+INFO:django.server:"GET /static/images/3.jpg HTTP/1.1" 200 64252
+10/Dec/2023 12:48:50   INFO  "GET /static/images/o-mastere-na-chas.png HTTP/1.1" 200 149377  None
+INFO:django.server:"GET /static/images/o-mastere-na-chas.png HTTP/1.1" 200 149377
+10/Dec/2023 12:48:50   INFO  "GET /media/images/muzg-na-chas.jpg HTTP/1.1" 200 323830  None
+INFO:django.server:"GET /media/images/muzg-na-chas.jpg HTTP/1.1" 200 323830
+10/Dec/2023 12:48:51   INFO  "GET /static/images/underline1.png HTTP/1.1" 200 645  None
+INFO:django.server:"GET /static/images/underline1.png HTTP/1.1" 200 645
+10/Dec/2023 12:48:51   INFO  "GET /static/images/master-na-chas_1.jpg HTTP/1.1" 200 323239  None
+INFO:django.server:"GET /static/images/master-na-chas_1.jpg HTTP/1.1" 200 323239
+10/Dec/2023 12:48:51   INFO  "GET /static/images/usluga-master-na-chas.jpg HTTP/1.1" 200 159701  None
+INFO:django.server:"GET /static/images/usluga-master-na-chas.jpg HTTP/1.1" 200 159701
+10/Dec/2023 12:48:51   INFO  "GET /static/fonts/Roboto-Medium.woff2 HTTP/1.1" 200 315  None
+INFO:django.server:"GET /static/fonts/Roboto-Medium.woff2 HTTP/1.1" 200 315
+10/Dec/2023 12:48:51   INFO  "GET /static/fonts/Roboto-Regular.woff2 HTTP/1.1" 200 315  None
+INFO:django.server:"GET /static/fonts/Roboto-Regular.woff2 HTTP/1.1" 200 315
+10/Dec/2023 12:48:51   INFO  "GET /static/fonts/Roboto-Bold.woff2 HTTP/1.1" 200 315  None
+INFO:django.server:"GET /static/fonts/Roboto-Bold.woff2 HTTP/1.1" 200 315
+10/Dec/2023 12:48:51   INFO  "GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 200 74256  None
+INFO:django.server:"GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 200 74256
+10/Dec/2023 12:48:51   INFO  "GET /static/fonts/fa-regular-400.woff2 HTTP/1.1" 200 13552  None
+10/Dec/2023 12:48:51   INFO  "GET /static/fonts/fa-brands-400.woff2 HTTP/1.1" 200 74768  None
+INFO:django.server:"GET /static/fonts/fa-brands-400.woff2 HTTP/1.1" 200 74768
+INFO:django.server:"GET /static/fonts/fa-regular-400.woff2 HTTP/1.1" 200 13552
+10/Dec/2023 12:48:51   INFO  "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43  None
+INFO:django.server:"GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+10/Dec/2023 12:48:51   INFO  "GET /static/fonts/Roboto-Regular.woff HTTP/1.1" 200 315  None
+INFO:django.server:"GET /static/fonts/Roboto-Regular.woff HTTP/1.1" 200 315
+10/Dec/2023 12:48:51   INFO  "GET /static/fonts/Roboto-Bold.woff HTTP/1.1" 200 315  None
+INFO:django.server:"GET /static/fonts/Roboto-Bold.woff HTTP/1.1" 200 315
+10/Dec/2023 12:48:51   INFO  "GET /static/fonts/Roboto-Medium.woff HTTP/1.1" 200 315  None
+INFO:django.server:"GET /static/fonts/Roboto-Medium.woff HTTP/1.1" 200 315
+10/Dec/2023 12:48:51   INFO  "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527  None
+INFO:django.server:"GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+10/Dec/2023 12:48:52   INFO  "GET /static/fonts/Roboto-Regular.ttf HTTP/1.1" 200 315  None
+INFO:django.server:"GET /static/fonts/Roboto-Regular.ttf HTTP/1.1" 200 315
+10/Dec/2023 12:48:52   INFO  "GET /static/fonts/Roboto-Bold.ttf HTTP/1.1" 200 315  None
+INFO:django.server:"GET /static/fonts/Roboto-Bold.ttf HTTP/1.1" 200 315
+10/Dec/2023 12:48:52   INFO  "GET /static/fonts/Roboto-Medium.ttf HTTP/1.1" 200 315  None
+INFO:django.server:"GET /static/fonts/Roboto-Medium.ttf HTTP/1.1" 200 315
+10/Dec/2023 12:48:55   INFO  "GET /login/ HTTP/1.1" 200 15956  None
+INFO:django.server:"GET /login/ HTTP/1.1" 200 15956
+10/Dec/2023 12:48:55   INFO  "GET /static/fonts/Roboto-Light.woff2 HTTP/1.1" 200 315  None
+INFO:django.server:"GET /static/fonts/Roboto-Light.woff2 HTTP/1.1" 200 315
+10/Dec/2023 12:48:55   INFO  "GET /static/fonts/Roboto-Light.woff HTTP/1.1" 200 315  None
+INFO:django.server:"GET /static/fonts/Roboto-Light.woff HTTP/1.1" 200 315
+10/Dec/2023 12:48:55   INFO  "GET /static/fonts/Roboto-Light.ttf HTTP/1.1" 200 315  None
+INFO:django.server:"GET /static/fonts/Roboto-Light.ttf HTTP/1.1" 200 315
+10/Dec/2023 12:49:04   INFO  "POST /login/ HTTP/1.1" 302 0  None
+INFO:django.server:"POST /login/ HTTP/1.1" 302 0
+10/Dec/2023 12:49:04   INFO  "GET / HTTP/1.1" 200 43081  None
+INFO:django.server:"GET / HTTP/1.1" 200 43081
+10/Dec/2023 12:49:06   INFO  "GET /list_order HTTP/1.1" 200 53912  None
+INFO:django.server:"GET /list_order HTTP/1.1" 200 53912
+10/Dec/2023 12:49:08   INFO  "GET /list_order/1087 HTTP/1.1" 200 25573  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25573
+10/Dec/2023 12:49:12   INFO  "GET /list_order/1087 HTTP/1.1" 200 25573  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25573
+10/Dec/2023 12:49:13   INFO  "GET /static/js/custom.js HTTP/1.1" 304 0  None
+INFO:django.server:"GET /static/js/custom.js HTTP/1.1" 304 0
+10/Dec/2023 12:49:23   INFO  "GET /list_order/1087 HTTP/1.1" 200 25573  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25573
+10/Dec/2023 12:49:26   INFO  "GET /list_order/1087 HTTP/1.1" 200 25573  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25573
+10/Dec/2023 12:49:27   INFO  "GET /list_order/1087 HTTP/1.1" 200 25573  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25573
+10/Dec/2023 12:49:30   INFO  "POST /list_order/1087 HTTP/1.1" 200 2  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 2
+10/Dec/2023 12:49:30   INFO  "GET /__debug__/history_sidebar/?store_id=28da1dfe9401410bb201c69cb6c29876 HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=28da1dfe9401410bb201c69cb6c29876 HTTP/1.1" 200 13344
+10/Dec/2023 12:49:32   INFO  "GET /changestatus?order_pk=1087&work_status=END HTTP/1.1" 200 32  None
+INFO:django.server:"GET /changestatus?order_pk=1087&work_status=END HTTP/1.1" 200 32
+10/Dec/2023 12:49:32   INFO  "GET /__debug__/history_sidebar/?store_id=7326c5cf722e4bba91bc6fe93270facb HTTP/1.1" 200 13390  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=7326c5cf722e4bba91bc6fe93270facb HTTP/1.1" 200 13390
+10/Dec/2023 12:49:34   INFO  "GET /list_order/1087 HTTP/1.1" 200 25577  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25577
+10/Dec/2023 12:49:35   INFO  "GET /list_order/1087 HTTP/1.1" 200 25577  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25577
+10/Dec/2023 12:49:35   INFO  "GET /list_order/1087 HTTP/1.1" 200 25577  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25577
+10/Dec/2023 12:49:35   INFO  "GET /list_order/1087 HTTP/1.1" 200 25577  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25577
+10/Dec/2023 12:49:35   INFO  "GET /list_order/1087 HTTP/1.1" 200 25577  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25577
+10/Dec/2023 12:49:35   INFO  "GET /list_order/1087 HTTP/1.1" 200 25577  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25577
+10/Dec/2023 12:49:35   INFO  "GET /list_order/1087 HTTP/1.1" 200 25577  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25577
+10/Dec/2023 12:49:35   INFO  "GET /static/js/custom.js HTTP/1.1" 200 11876  None
+INFO:django.server:"GET /static/js/custom.js HTTP/1.1" 200 11876
+10/Dec/2023 12:49:36   INFO  "GET /list_order/1087 HTTP/1.1" 200 25577  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25577
+10/Dec/2023 12:52:43   INFO  "GET /list_order/1087 HTTP/1.1" 200 25581  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25581
+10/Dec/2023 12:52:43   INFO  "GET /static/js/custom.js HTTP/1.1" 200 11883  None
+INFO:django.server:"GET /static/js/custom.js HTTP/1.1" 200 11883
+10/Dec/2023 12:52:43   INFO  "GET /list_order/1087 HTTP/1.1" 200 25581  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25581
+10/Dec/2023 12:52:43   INFO  "GET /static/js/custom.js HTTP/1.1" 304 0  None
+INFO:django.server:"GET /static/js/custom.js HTTP/1.1" 304 0
+10/Dec/2023 12:52:44   INFO  "GET /list_order/1087 HTTP/1.1" 200 25581  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25581
+10/Dec/2023 12:52:44   INFO  "GET /static/js/custom.js HTTP/1.1" 304 0  None
+INFO:django.server:"GET /static/js/custom.js HTTP/1.1" 304 0
+10/Dec/2023 12:52:44   INFO  "GET /list_order/1087 HTTP/1.1" 200 25583  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25583
+10/Dec/2023 12:52:44   INFO  "GET /static/js/custom.js HTTP/1.1" 304 0  None
+INFO:django.server:"GET /static/js/custom.js HTTP/1.1" 304 0
+10/Dec/2023 12:52:44   INFO  "GET /list_order/1087 HTTP/1.1" 200 25581  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25581
+10/Dec/2023 12:52:44   INFO  "GET /static/js/custom.js HTTP/1.1" 304 0  None
+INFO:django.server:"GET /static/js/custom.js HTTP/1.1" 304 0
+10/Dec/2023 12:52:48   INFO  "POST /list_order/1087 HTTP/1.1" 200 2  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 2
+10/Dec/2023 12:52:48   INFO  "GET /__debug__/history_sidebar/?store_id=602382bb7bd94718aa2fe0ff7a346fe6 HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=602382bb7bd94718aa2fe0ff7a346fe6 HTTP/1.1" 200 13344
+10/Dec/2023 12:52:49   INFO  "POST /list_order/1087 HTTP/1.1" 200 2  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 2
+10/Dec/2023 12:52:49   INFO  "GET /__debug__/history_sidebar/?store_id=7cfe0294e91845ff8cd0b336537dfa7f HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=7cfe0294e91845ff8cd0b336537dfa7f HTTP/1.1" 200 13344
+10/Dec/2023 12:52:49   INFO  "POST /list_order/1087 HTTP/1.1" 200 2  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 2
+10/Dec/2023 12:52:49   INFO  "POST /list_order/1087 HTTP/1.1" 200 2  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 2
+10/Dec/2023 12:52:50   INFO  "POST /list_order/1087 HTTP/1.1" 200 2  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 2
+10/Dec/2023 12:52:50   INFO  "GET /__debug__/history_sidebar/?store_id=f0609c36ceb64da292195f00e43297c3 HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=f0609c36ceb64da292195f00e43297c3 HTTP/1.1" 200 13344
+10/Dec/2023 12:52:51   INFO  "GET /list_order/1087 HTTP/1.1" 200 25581  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25581
+10/Dec/2023 12:52:51   INFO  "GET /static/js/custom.js HTTP/1.1" 304 0  None
+INFO:django.server:"GET /static/js/custom.js HTTP/1.1" 304 0
+10/Dec/2023 12:52:52   INFO  "POST /list_order/1087 HTTP/1.1" 200 2  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 2
+10/Dec/2023 12:52:52   INFO  "POST /list_order/1087 HTTP/1.1" 200 2  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 2
+10/Dec/2023 12:52:53   INFO  "POST /list_order/1087 HTTP/1.1" 200 2  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 2
+10/Dec/2023 12:52:53   INFO  "GET /__debug__/history_sidebar/?store_id=8126224ae6004db68120e3f1e691d0d3 HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=8126224ae6004db68120e3f1e691d0d3 HTTP/1.1" 200 13344
+10/Dec/2023 12:52:56   INFO  "GET /serv?type_work=BL HTTP/1.1" 200 768  None
+INFO:django.server:"GET /serv?type_work=BL HTTP/1.1" 200 768
+10/Dec/2023 12:52:56   INFO  "GET /list_order/1087 HTTP/1.1" 200 25578  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25578
+10/Dec/2023 12:52:56   INFO  "GET /__debug__/history_sidebar/?store_id=702c2c78784f47c5bea3d5b2d1835bae HTTP/1.1" 200 13377  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=702c2c78784f47c5bea3d5b2d1835bae HTTP/1.1" 200 13377
+10/Dec/2023 12:53:00   INFO  "POST /list_order/1087 HTTP/1.1" 200 2  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 2
+10/Dec/2023 12:53:00   INFO  "GET /__debug__/history_sidebar/?store_id=7454a7aacf864ad19c93e23dac91309c HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=7454a7aacf864ad19c93e23dac91309c HTTP/1.1" 200 13344
+10/Dec/2023 12:53:00   INFO  "POST /list_order/1087 HTTP/1.1" 200 2  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 2
+10/Dec/2023 12:53:00   INFO  "POST /list_order/1087 HTTP/1.1" 200 2  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 2
+10/Dec/2023 12:53:01   INFO  "POST /list_order/1087 HTTP/1.1" 200 2  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 2
+10/Dec/2023 12:53:01   INFO  "POST /list_order/1087 HTTP/1.1" 200 2  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 2
+10/Dec/2023 12:53:01   INFO  "GET /__debug__/history_sidebar/?store_id=4cf4def36a1b4038be8761e29f71ee43 HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=4cf4def36a1b4038be8761e29f71ee43 HTTP/1.1" 200 13344
+10/Dec/2023 12:53:06   INFO  "GET /list_order/1087 HTTP/1.1" 200 25581  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25581
+10/Dec/2023 12:53:06   INFO  "GET /static/js/custom.js HTTP/1.1" 304 0  None
+INFO:django.server:"GET /static/js/custom.js HTTP/1.1" 304 0
+10/Dec/2023 12:53:08   INFO  "POST /list_order/1087 HTTP/1.1" 200 2  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 2
+10/Dec/2023 12:53:08   INFO  "GET /__debug__/history_sidebar/?store_id=2a20ad4ad0804485ac6ced553d999e2d HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=2a20ad4ad0804485ac6ced553d999e2d HTTP/1.1" 200 13344
+10/Dec/2023 12:53:27   INFO  "GET /list_order/1087 HTTP/1.1" 200 25577  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25577
+10/Dec/2023 12:53:27   INFO  "GET /static/js/custom.js HTTP/1.1" 200 11876  None
+INFO:django.server:"GET /static/js/custom.js HTTP/1.1" 200 11876
+10/Dec/2023 12:53:28   INFO  "GET /list_order/1087 HTTP/1.1" 200 25577  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25577
+10/Dec/2023 12:53:28   INFO  "GET /static/js/custom.js HTTP/1.1" 304 0  None
+INFO:django.server:"GET /static/js/custom.js HTTP/1.1" 304 0
+10/Dec/2023 12:53:28   INFO  "GET /list_order/1087 HTTP/1.1" 200 25577  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25577
+10/Dec/2023 12:53:28   INFO  "GET /static/js/custom.js HTTP/1.1" 304 0  None
+INFO:django.server:"GET /static/js/custom.js HTTP/1.1" 304 0
+10/Dec/2023 12:53:28   INFO  "GET /list_order/1087 HTTP/1.1" 200 25577  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25577
+10/Dec/2023 12:53:28   INFO  "GET /static/js/custom.js HTTP/1.1" 304 0  None
+INFO:django.server:"GET /static/js/custom.js HTTP/1.1" 304 0
+10/Dec/2023 12:53:29   INFO  "GET /list_order/1087 HTTP/1.1" 200 25577  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25577
+10/Dec/2023 12:53:29   INFO  "GET /static/js/custom.js HTTP/1.1" 304 0  None
+INFO:django.server:"GET /static/js/custom.js HTTP/1.1" 304 0
+10/Dec/2023 12:53:33   INFO  "GET /serv?type_work=BL HTTP/1.1" 200 768  None
+INFO:django.server:"GET /serv?type_work=BL HTTP/1.1" 200 768
+10/Dec/2023 12:53:33   INFO  "GET /list_order/1087 HTTP/1.1" 200 25574  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25574
+10/Dec/2023 12:53:33   INFO  "GET /__debug__/history_sidebar/?store_id=c1616a359f374ffb85e78bf8f92c71de HTTP/1.1" 200 13377  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=c1616a359f374ffb85e78bf8f92c71de HTTP/1.1" 200 13377
+10/Dec/2023 12:53:35   INFO  "POST /list_order/1087 HTTP/1.1" 200 190  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 190
+10/Dec/2023 12:53:36   INFO  "GET /__debug__/history_sidebar/?store_id=50f235ad6d2f43aa8bcdf336f5bdaf65 HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=50f235ad6d2f43aa8bcdf336f5bdaf65 HTTP/1.1" 200 13344
+10/Dec/2023 12:54:19   INFO  "GET /list_order/1087 HTTP/1.1" 200 25954  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25954
+10/Dec/2023 12:54:19   INFO  "GET /static/js/custom.js HTTP/1.1" 304 0  None
+INFO:django.server:"GET /static/js/custom.js HTTP/1.1" 304 0
+10/Dec/2023 12:54:20   INFO  "GET /list_order/1087 HTTP/1.1" 200 25954  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25954
+10/Dec/2023 12:54:20   INFO  "GET /list_order/1087 HTTP/1.1" 200 25954  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25954
+10/Dec/2023 12:54:23   INFO  "GET /serv?type_work=CL HTTP/1.1" 200 96  None
+INFO:django.server:"GET /serv?type_work=CL HTTP/1.1" 200 96
+10/Dec/2023 12:54:23   INFO  "GET /list_order/1087 HTTP/1.1" 200 25951  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25951
+10/Dec/2023 12:54:23   INFO  "GET /__debug__/history_sidebar/?store_id=579ecb5634c646b482eaa033caf67852 HTTP/1.1" 200 13377  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=579ecb5634c646b482eaa033caf67852 HTTP/1.1" 200 13377
+10/Dec/2023 12:54:29   INFO  "POST /list_order/1087 HTTP/1.1" 200 143  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 143
+10/Dec/2023 12:54:29   INFO  "GET /__debug__/history_sidebar/?store_id=2fddc79dd613413e8fc3b4581759793a HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=2fddc79dd613413e8fc3b4581759793a HTTP/1.1" 200 13344
+10/Dec/2023 12:58:55   INFO  "GET /list_order/1087 HTTP/1.1" 200 26339  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 26339
+10/Dec/2023 12:58:55   INFO  "GET /static/js/custom.js HTTP/1.1" 304 0  None
+INFO:django.server:"GET /static/js/custom.js HTTP/1.1" 304 0
+10/Dec/2023 12:58:55   INFO  "GET /list_order/1087 HTTP/1.1" 200 26339  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 26339
+10/Dec/2023 12:58:56   INFO  "GET /list_order/1087 HTTP/1.1" 200 26339  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 26339
+10/Dec/2023 12:58:57   INFO  "GET /list_order/1087 HTTP/1.1" 200 26339  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 26339
+10/Dec/2023 12:59:00   INFO  "GET /list_order/1087 HTTP/1.1" 200 26339  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 26339
+10/Dec/2023 12:59:01   INFO  "GET /list_order/1087 HTTP/1.1" 200 26339  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 26339
+10/Dec/2023 12:59:02   INFO  "GET /list_order/1087 HTTP/1.1" 200 26339  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 26339
+10/Dec/2023 12:59:02   INFO  "GET /list_order/1087 HTTP/1.1" 200 26339  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 26339
+10/Dec/2023 12:59:02   INFO  "GET /list_order/1087 HTTP/1.1" 200 26339  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 26339
+10/Dec/2023 12:59:02   INFO  "GET /list_order/1087 HTTP/1.1" 200 26339  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 26339
+10/Dec/2023 12:59:02   INFO  "GET /list_order/1087 HTTP/1.1" 200 26339  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 26339
+10/Dec/2023 12:59:06   INFO  "GET /list_order/1087 HTTP/1.1" 200 26339  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 26339
+10/Dec/2023 12:59:08   INFO  "GET /invoice/delete/1565 HTTP/1.1" 200 22  None
+INFO:django.server:"GET /invoice/delete/1565 HTTP/1.1" 200 22
+10/Dec/2023 12:59:08   INFO  "GET /__debug__/history_sidebar/?store_id=ea3b95eed872485294176e1a5a113d55 HTTP/1.1" 200 13364  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=ea3b95eed872485294176e1a5a113d55 HTTP/1.1" 200 13364
+10/Dec/2023 12:59:09   INFO  "GET /invoice/delete/1566 HTTP/1.1" 200 22  None
+INFO:django.server:"GET /invoice/delete/1566 HTTP/1.1" 200 22
+10/Dec/2023 12:59:10   INFO  "GET /__debug__/history_sidebar/?store_id=ff4204bce46e4fe2be1820c724dfbe7b HTTP/1.1" 200 13364  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=ff4204bce46e4fe2be1820c724dfbe7b HTTP/1.1" 200 13364
+10/Dec/2023 12:59:11   INFO  "GET /list_order/1087 HTTP/1.1" 200 25615  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25615
+10/Dec/2023 12:59:12   INFO  "GET /list_order/1087 HTTP/1.1" 200 25615  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25615
+10/Dec/2023 12:59:12   INFO  "GET /list_order/1087 HTTP/1.1" 200 25615  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25615
+10/Dec/2023 12:59:12   INFO  "GET /list_order/1087 HTTP/1.1" 200 25615  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25615
+10/Dec/2023 12:59:12   INFO  "GET /list_order/1087 HTTP/1.1" 200 25615  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25615
+10/Dec/2023 12:59:13   INFO  "GET /list_order/1087 HTTP/1.1" 200 25615  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25615
+10/Dec/2023 12:59:13   INFO  "GET /list_order/1087 HTTP/1.1" 200 25615  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25615
+10/Dec/2023 12:59:13   INFO  "GET /list_order/1087 HTTP/1.1" 200 25615  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25615
+10/Dec/2023 12:59:13   INFO  "GET /list_order/1087 HTTP/1.1" 200 25615  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25615
+10/Dec/2023 12:59:14   INFO  "GET /list_order/1087 HTTP/1.1" 200 25615  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25615
+10/Dec/2023 12:59:14   INFO  "GET /list_order/1087 HTTP/1.1" 200 25615  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25615
+10/Dec/2023 12:59:54   INFO  "GET /list_order/1087 HTTP/1.1" 200 25600  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25600
+10/Dec/2023 12:59:54   INFO  "GET /static/js/custom.js HTTP/1.1" 304 0  None
+INFO:django.server:"GET /static/js/custom.js HTTP/1.1" 304 0
+10/Dec/2023 13:00:03   INFO  "GET /list_order/1087 HTTP/1.1" 200 25666  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25666
+10/Dec/2023 13:00:54   INFO  "GET /list_order/1087 HTTP/1.1" 200 25673  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25673
+10/Dec/2023 13:00:54   INFO  "GET /static/js/custom.js HTTP/1.1" 304 0  None
+INFO:django.server:"GET /static/js/custom.js HTTP/1.1" 304 0
+10/Dec/2023 13:00:54   INFO  "GET /list_order/1087 HTTP/1.1" 200 25672  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25672
+10/Dec/2023 13:01:07   INFO  "GET /list_order/1087 HTTP/1.1" 200 25672  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25672
+10/Dec/2023 13:02:37   INFO  "GET /list_order/1087 HTTP/1.1" 200 25677  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25677
+10/Dec/2023 13:02:37   INFO  "GET /static/js/custom.js HTTP/1.1" 304 0  None
+INFO:django.server:"GET /static/js/custom.js HTTP/1.1" 304 0
+10/Dec/2023 13:02:37   INFO  "GET /list_order/1087 HTTP/1.1" 200 25677  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25677
+10/Dec/2023 13:02:38   INFO  "GET /list_order/1087 HTTP/1.1" 200 25679  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25679
+10/Dec/2023 13:03:25   INFO  "GET /list_order/1087 HTTP/1.1" 200 25677  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25677
+10/Dec/2023 13:03:26   INFO  "GET /list_order/1087 HTTP/1.1" 200 25677  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25677
+10/Dec/2023 13:03:26   INFO  "GET /list_order/1087 HTTP/1.1" 200 25677  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25677
+10/Dec/2023 13:03:26   INFO  "GET /list_order/1087 HTTP/1.1" 200 25677  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25677
+10/Dec/2023 13:03:26   INFO  "GET /list_order/1087 HTTP/1.1" 200 25677  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25677
+10/Dec/2023 13:04:00   INFO  "GET /list_order/1087 HTTP/1.1" 200 25600  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25600
+10/Dec/2023 13:04:00   INFO  "GET /static/js/custom.js HTTP/1.1" 304 0  None
+INFO:django.server:"GET /static/js/custom.js HTTP/1.1" 304 0
+10/Dec/2023 13:04:22   INFO  "GET /list_order/1087 HTTP/1.1" 200 25577  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25577
+10/Dec/2023 13:05:29   INFO  "GET /list_order/1087 HTTP/1.1" 200 25609  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25609
+10/Dec/2023 13:05:29   INFO  "GET /static/js/custom.js HTTP/1.1" 304 0  None
+INFO:django.server:"GET /static/js/custom.js HTTP/1.1" 304 0
+10/Dec/2023 13:05:29   INFO  "GET /list_order/1087 HTTP/1.1" 200 25609  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25609
+10/Dec/2023 13:05:29   INFO  "GET /list_order/1087 HTTP/1.1" 200 25609  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25609
+10/Dec/2023 13:05:30   INFO  "GET /list_order/1087 HTTP/1.1" 200 25609  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25609
+10/Dec/2023 13:05:30   INFO  "GET /list_order/1087 HTTP/1.1" 200 25609  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25609
+10/Dec/2023 13:05:30   INFO  "GET /list_order/1087 HTTP/1.1" 200 25609  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25609
+10/Dec/2023 13:05:35   INFO  "POST /list_order/1087 HTTP/1.1" 200 7  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 7
+10/Dec/2023 13:05:35   INFO  "GET /__debug__/history_sidebar/?store_id=08c7c1515ef443d39e28fc96178e75fe HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=08c7c1515ef443d39e28fc96178e75fe HTTP/1.1" 200 13344
+10/Dec/2023 13:05:38   INFO  "POST /list_order/1087 HTTP/1.1" 200 213  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 213
+10/Dec/2023 13:05:38   INFO  "GET /__debug__/history_sidebar/?store_id=2d2dfba0ba86420ab6d719d5d0ae7d8a HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=2d2dfba0ba86420ab6d719d5d0ae7d8a HTTP/1.1" 200 13344
+10/Dec/2023 13:06:13   INFO  "GET /list_order/1087 HTTP/1.1" 200 25986  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25986
+10/Dec/2023 13:06:14   INFO  "GET /list_order/1087 HTTP/1.1" 200 25986  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25986
+10/Dec/2023 13:06:14   INFO  "GET /list_order/1087 HTTP/1.1" 200 25986  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25986
+10/Dec/2023 13:06:15   INFO  "GET /list_order/1087 HTTP/1.1" 200 25986  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25986
+10/Dec/2023 13:06:15   INFO  "GET /list_order/1087 HTTP/1.1" 200 25986  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25986
+10/Dec/2023 13:06:15   INFO  "GET /list_order/1087 HTTP/1.1" 200 25986  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25986
+10/Dec/2023 13:06:16   INFO  "GET /list_order/1087 HTTP/1.1" 200 25986  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25986
+10/Dec/2023 13:06:18   INFO  "GET /invoice/delete/1567 HTTP/1.1" 200 22  None
+INFO:django.server:"GET /invoice/delete/1567 HTTP/1.1" 200 22
+10/Dec/2023 13:06:18   INFO  "GET /__debug__/history_sidebar/?store_id=3f340d16a5b04afea9e289dbaf39e4a3 HTTP/1.1" 200 13364  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=3f340d16a5b04afea9e289dbaf39e4a3 HTTP/1.1" 200 13364
+10/Dec/2023 13:06:20   INFO  "GET /list_order/1087 HTTP/1.1" 200 25609  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25609
+10/Dec/2023 13:06:20   INFO  "GET /list_order/1087 HTTP/1.1" 200 25609  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25609
+10/Dec/2023 13:06:51   INFO  "GET /list_order/1087 HTTP/1.1" 200 25577  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25577
+10/Dec/2023 13:06:51   INFO  "GET /static/js/custom.js HTTP/1.1" 304 0  None
+INFO:django.server:"GET /static/js/custom.js HTTP/1.1" 304 0
+10/Dec/2023 13:07:00   INFO  "GET /list_order/1087 HTTP/1.1" 200 25577  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25577
+10/Dec/2023 13:09:13   INFO  "GET /list_order/1087 HTTP/1.1" 200 25616  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25616
+10/Dec/2023 13:09:13   INFO  "GET /static/js/custom.js HTTP/1.1" 304 0  None
+INFO:django.server:"GET /static/js/custom.js HTTP/1.1" 304 0
+10/Dec/2023 13:09:14   INFO  "GET /list_order/1087 HTTP/1.1" 200 25616  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25616
+10/Dec/2023 13:09:27   INFO  "GET /serv?type_work=PL HTTP/1.1" 200 1763  None
+INFO:django.server:"GET /serv?type_work=PL HTTP/1.1" 200 1763
+10/Dec/2023 13:09:27   INFO  "GET /list_order/1087 HTTP/1.1" 200 25613  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25613
+10/Dec/2023 13:09:27   INFO  "GET /__debug__/history_sidebar/?store_id=2dd57c2df6d1482a9427bcce5430d744 HTTP/1.1" 200 13377  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=2dd57c2df6d1482a9427bcce5430d744 HTTP/1.1" 200 13377
+10/Dec/2023 13:09:28   INFO  "POST /list_order/1087 HTTP/1.1" 200 159  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 159
+10/Dec/2023 13:09:28   INFO  "GET /__debug__/history_sidebar/?store_id=6e47349abcf349f1af17d4ca19504b7b HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=6e47349abcf349f1af17d4ca19504b7b HTTP/1.1" 200 13344
+10/Dec/2023 13:10:22   INFO  "GET /list_order/1087 HTTP/1.1" 200 25984  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25984
+10/Dec/2023 13:10:25   INFO  "GET /list_order/1087 HTTP/1.1" 200 25984  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25984
+10/Dec/2023 13:10:26   INFO  "GET /invoice/delete/1568 HTTP/1.1" 200 22  None
+INFO:django.server:"GET /invoice/delete/1568 HTTP/1.1" 200 22
+10/Dec/2023 13:10:26   INFO  "GET /__debug__/history_sidebar/?store_id=dab663b232924a09a4150c4f64bdc7de HTTP/1.1" 200 13364  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=dab663b232924a09a4150c4f64bdc7de HTTP/1.1" 200 13364
+10/Dec/2023 13:10:28   INFO  "GET /list_order/1087 HTTP/1.1" 200 25627  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25627
+10/Dec/2023 13:10:31   INFO  "GET /serv?type_work=SP HTTP/1.1" 200 594  None
+INFO:django.server:"GET /serv?type_work=SP HTTP/1.1" 200 594
+10/Dec/2023 13:10:31   INFO  "GET /list_order/1087 HTTP/1.1" 200 25624  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25624
+10/Dec/2023 13:10:31   INFO  "GET /__debug__/history_sidebar/?store_id=f0bae7f201af4af69cad5c2d51d17785 HTTP/1.1" 200 13377  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=f0bae7f201af4af69cad5c2d51d17785 HTTP/1.1" 200 13377
+10/Dec/2023 13:10:33   INFO  "POST /list_order/1087 HTTP/1.1" 200 183  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 183
+10/Dec/2023 13:10:33   INFO  "GET /__debug__/history_sidebar/?store_id=b8a72126c60b4dae8aeff0b600c4d75d HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=b8a72126c60b4dae8aeff0b600c4d75d HTTP/1.1" 200 13344
+10/Dec/2023 13:11:53   INFO  "GET /list_order/1087 HTTP/1.1" 200 25999  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25999
+10/Dec/2023 13:11:53   INFO  "GET /static/js/custom.js HTTP/1.1" 304 0  None
+INFO:django.server:"GET /static/js/custom.js HTTP/1.1" 304 0
+10/Dec/2023 13:12:55   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+10/Dec/2023 13:12:55   INFO  "GET /static/js/wow.min.js.map HTTP/1.1" 200 61630  None
+INFO:django.server:"GET /static/js/wow.min.js.map HTTP/1.1" 200 61630
+10/Dec/2023 13:12:55   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+10/Dec/2023 13:12:55   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+10/Dec/2023 13:14:35   INFO  "GET /list_order/1087 HTTP/1.1" 200 25999  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25999
+10/Dec/2023 13:14:35   INFO  "GET /static/js/custom.js HTTP/1.1" 304 0  None
+INFO:django.server:"GET /static/js/custom.js HTTP/1.1" 304 0
+10/Dec/2023 13:15:23   INFO  "GET /list_order/1087 HTTP/1.1" 200 26005  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 26005
+10/Dec/2023 13:15:24   INFO  "GET /list_order/1087 HTTP/1.1" 200 26005  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 26005
+10/Dec/2023 13:15:45   INFO  "GET /list_order/1087 HTTP/1.1" 200 25942  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25942
+10/Dec/2023 13:16:21   INFO  "GET /list_order/1087 HTTP/1.1" 200 25934  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25934
+10/Dec/2023 13:16:24   INFO  "GET /serv?type_work=SP HTTP/1.1" 200 594  None
+INFO:django.server:"GET /serv?type_work=SP HTTP/1.1" 200 594
+10/Dec/2023 13:16:24   INFO  "GET /list_order/1087 HTTP/1.1" 200 25931  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25931
+10/Dec/2023 13:16:24   INFO  "GET /__debug__/history_sidebar/?store_id=7233f792a2d746598df4ce666b81c87b HTTP/1.1" 200 13377  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=7233f792a2d746598df4ce666b81c87b HTTP/1.1" 200 13377
+10/Dec/2023 13:16:27   INFO  "POST /list_order/1087 HTTP/1.1" 200 183  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 183
+10/Dec/2023 13:16:27   INFO  "GET /__debug__/history_sidebar/?store_id=58a760a057734e60b3be34c3c4c56535 HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=58a760a057734e60b3be34c3c4c56535 HTTP/1.1" 200 13344
+10/Dec/2023 13:16:35   INFO  "GET /invoice/delete/1570 HTTP/1.1" 200 22  None
+INFO:django.server:"GET /invoice/delete/1570 HTTP/1.1" 200 22
+10/Dec/2023 13:16:35   INFO  "GET /__debug__/history_sidebar/?store_id=4e41ccf019a1475595340187567b9099 HTTP/1.1" 200 13364  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=4e41ccf019a1475595340187567b9099 HTTP/1.1" 200 13364
+10/Dec/2023 13:16:36   INFO  "GET /invoice/delete/1569 HTTP/1.1" 200 22  None
+INFO:django.server:"GET /invoice/delete/1569 HTTP/1.1" 200 22
+10/Dec/2023 13:16:36   INFO  "GET /__debug__/history_sidebar/?store_id=ba7a7ebcf82d49eb8536ca3b586744df HTTP/1.1" 200 13364  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=ba7a7ebcf82d49eb8536ca3b586744df HTTP/1.1" 200 13364
+10/Dec/2023 13:19:58   INFO  "GET /list_order/1087 HTTP/1.1" 200 25564  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25564
+10/Dec/2023 13:19:58   INFO  "GET /static/js/custom.js HTTP/1.1" 304 0  None
+INFO:django.server:"GET /static/js/custom.js HTTP/1.1" 304 0
+10/Dec/2023 13:19:58   INFO  "GET /list_order/1087 HTTP/1.1" 200 25564  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25564
+10/Dec/2023 13:20:02   INFO  "GET /serv?type_work=CL HTTP/1.1" 200 96  None
+INFO:django.server:"GET /serv?type_work=CL HTTP/1.1" 200 96
+10/Dec/2023 13:20:02   INFO  "GET /list_order/1087 HTTP/1.1" 200 25563  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25563
+10/Dec/2023 13:20:03   INFO  "GET /__debug__/history_sidebar/?store_id=97475094f0bd4c3b8b5d5a2eb0b85571 HTTP/1.1" 200 13379  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=97475094f0bd4c3b8b5d5a2eb0b85571 HTTP/1.1" 200 13379
+10/Dec/2023 13:20:04   INFO  "POST /list_order/1087 HTTP/1.1" 200 142  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 142
+10/Dec/2023 13:20:04   INFO  "GET /__debug__/history_sidebar/?store_id=ce097b876f364b94bcf69ec0a4d6a9fc HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=ce097b876f364b94bcf69ec0a4d6a9fc HTTP/1.1" 200 13344
+10/Dec/2023 13:21:13   INFO  "GET /list_order/1087 HTTP/1.1" 200 25988  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25988
+10/Dec/2023 13:22:01   INFO  "GET /list_order/1087 HTTP/1.1" 200 25953  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25953
+10/Dec/2023 13:22:02   INFO  "GET /list_order/1087 HTTP/1.1" 200 25953  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25953
+10/Dec/2023 13:22:19   INFO  "GET /list_order/1087 HTTP/1.1" 200 25954  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25954
+10/Dec/2023 13:22:43   INFO  "GET /list_order/1087 HTTP/1.1" 200 25954  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25954
+10/Dec/2023 13:22:43   INFO  "GET /static/js/custom.js HTTP/1.1" 304 0  None
+INFO:django.server:"GET /static/js/custom.js HTTP/1.1" 304 0
+10/Dec/2023 13:31:22   INFO  "GET /list_order/1087 HTTP/1.1" 200 25984  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25984
+10/Dec/2023 13:31:22   INFO  "GET /static/js/custom.js HTTP/1.1" 304 0  None
+INFO:django.server:"GET /static/js/custom.js HTTP/1.1" 304 0
+10/Dec/2023 13:31:24   INFO  "GET /list_order/1087 HTTP/1.1" 200 25984  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25984
+10/Dec/2023 13:31:56   INFO  "GET /list_order/1087 HTTP/1.1" 200 25952  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25952
+10/Dec/2023 13:32:07   INFO  "GET /serv?type_work=PL HTTP/1.1" 200 1763  None
+INFO:django.server:"GET /serv?type_work=PL HTTP/1.1" 200 1763
+10/Dec/2023 13:32:07   INFO  "GET /list_order/1087 HTTP/1.1" 200 25949  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25949
+10/Dec/2023 13:32:07   INFO  "GET /__debug__/history_sidebar/?store_id=ab12c9ddcea448f89ebc3bdb244ff43e HTTP/1.1" 200 13377  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=ab12c9ddcea448f89ebc3bdb244ff43e HTTP/1.1" 200 13377
+10/Dec/2023 13:32:24   INFO  "GET /list_order/1087 HTTP/1.1" 200 25930  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25930
+10/Dec/2023 13:33:19   INFO  "GET /list_order/1087 HTTP/1.1" 200 25467  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25467
+10/Dec/2023 13:33:24   INFO  "GET /serv?type_work=EL HTTP/1.1" 200 1476  None
+INFO:django.server:"GET /serv?type_work=EL HTTP/1.1" 200 1476
+10/Dec/2023 13:33:24   INFO  "GET /list_order/1087 HTTP/1.1" 200 25464  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25464
+10/Dec/2023 13:33:24   INFO  "GET /__debug__/history_sidebar/?store_id=67de4e8dfff24f85aee231afbbeee6ec HTTP/1.1" 200 13377  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=67de4e8dfff24f85aee231afbbeee6ec HTTP/1.1" 200 13377
+10/Dec/2023 13:33:28   INFO  "POST /list_order/1087 HTTP/1.1" 200 190  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 190
+10/Dec/2023 13:33:28   INFO  "GET /__debug__/history_sidebar/?store_id=59c1f47fc845419d9aa5e22bf8cbf9c9 HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=59c1f47fc845419d9aa5e22bf8cbf9c9 HTTP/1.1" 200 13344
+10/Dec/2023 13:33:29   INFO  "POST /list_order/1087 HTTP/1.1" 200 190  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 190
+10/Dec/2023 13:33:29   INFO  "GET /__debug__/history_sidebar/?store_id=0f7077dd0630453182c580cb82147811 HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=0f7077dd0630453182c580cb82147811 HTTP/1.1" 200 13344
+10/Dec/2023 13:33:29   INFO  "POST /list_order/1087 HTTP/1.1" 200 190  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 190
+10/Dec/2023 13:33:30   INFO  "GET /__debug__/history_sidebar/?store_id=e50ef2dbbda94ef2bf42c66faa877e2f HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=e50ef2dbbda94ef2bf42c66faa877e2f HTTP/1.1" 200 13344
+10/Dec/2023 13:33:30   INFO  "POST /list_order/1087 HTTP/1.1" 200 190  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 190
+10/Dec/2023 13:33:30   INFO  "GET /__debug__/history_sidebar/?store_id=4f01283c40944e0c8f1ee591c5aba9ad HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=4f01283c40944e0c8f1ee591c5aba9ad HTTP/1.1" 200 13344
+10/Dec/2023 13:33:30   INFO  "POST /list_order/1087 HTTP/1.1" 200 190  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 190
+10/Dec/2023 13:33:30   INFO  "GET /__debug__/history_sidebar/?store_id=a8074652d2934678bf27cae1bebe3b83 HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=a8074652d2934678bf27cae1bebe3b83 HTTP/1.1" 200 13344
+10/Dec/2023 13:33:30   INFO  "POST /list_order/1087 HTTP/1.1" 200 190  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 190
+10/Dec/2023 13:33:30   INFO  "GET /__debug__/history_sidebar/?store_id=9695c7db54db4e4b8f08714f84836ee9 HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=9695c7db54db4e4b8f08714f84836ee9 HTTP/1.1" 200 13344
+10/Dec/2023 13:33:30   INFO  "POST /list_order/1087 HTTP/1.1" 200 190  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 190
+10/Dec/2023 13:33:31   INFO  "GET /__debug__/history_sidebar/?store_id=1ad833a7b64d49c38fc23d69d68730a5 HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=1ad833a7b64d49c38fc23d69d68730a5 HTTP/1.1" 200 13344
+10/Dec/2023 13:33:33   INFO  "GET /list_order/1087 HTTP/1.1" 200 28050  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 28050
+10/Dec/2023 13:33:35   INFO  "GET /invoice/delete/1578 HTTP/1.1" 200 22  None
+INFO:django.server:"GET /invoice/delete/1578 HTTP/1.1" 200 22
+10/Dec/2023 13:33:35   INFO  "GET /__debug__/history_sidebar/?store_id=6c88cd6efc67455fb3c2f5de4f0928f0 HTTP/1.1" 200 13364  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=6c88cd6efc67455fb3c2f5de4f0928f0 HTTP/1.1" 200 13364
+10/Dec/2023 13:33:36   INFO  "GET /invoice/delete/1576 HTTP/1.1" 200 22  None
+INFO:django.server:"GET /invoice/delete/1576 HTTP/1.1" 200 22
+10/Dec/2023 13:33:36   INFO  "GET /__debug__/history_sidebar/?store_id=32e0de9d554547e98e4a11a7e37497fb HTTP/1.1" 200 13364  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=32e0de9d554547e98e4a11a7e37497fb HTTP/1.1" 200 13364
+10/Dec/2023 13:33:37   INFO  "GET /invoice/delete/1574 HTTP/1.1" 200 22  None
+INFO:django.server:"GET /invoice/delete/1574 HTTP/1.1" 200 22
+10/Dec/2023 13:33:38   INFO  "GET /__debug__/history_sidebar/?store_id=1a366e73159e468c8423fb3dd3826c8b HTTP/1.1" 200 13364  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=1a366e73159e468c8423fb3dd3826c8b HTTP/1.1" 200 13364
+10/Dec/2023 13:33:38   INFO  "GET /invoice/delete/1573 HTTP/1.1" 200 22  None
+INFO:django.server:"GET /invoice/delete/1573 HTTP/1.1" 200 22
+10/Dec/2023 13:33:39   INFO  "GET /__debug__/history_sidebar/?store_id=454685ebc0874c2382092925f51917c0 HTTP/1.1" 200 13364  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=454685ebc0874c2382092925f51917c0 HTTP/1.1" 200 13364
+10/Dec/2023 13:33:39   INFO  "GET /invoice/delete/1572 HTTP/1.1" 200 22  None
+INFO:django.server:"GET /invoice/delete/1572 HTTP/1.1" 200 22
+10/Dec/2023 13:33:40   INFO  "GET /__debug__/history_sidebar/?store_id=52e6ea0cd5004ca7addd2e13731b4103 HTTP/1.1" 200 13364  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=52e6ea0cd5004ca7addd2e13731b4103 HTTP/1.1" 200 13364
+10/Dec/2023 13:33:41   INFO  "GET /invoice/delete/1571 HTTP/1.1" 200 22  None
+INFO:django.server:"GET /invoice/delete/1571 HTTP/1.1" 200 22
+10/Dec/2023 13:33:41   INFO  "GET /__debug__/history_sidebar/?store_id=e7601f249fe04471ad700648abeecc16 HTTP/1.1" 200 13364  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=e7601f249fe04471ad700648abeecc16 HTTP/1.1" 200 13364
+10/Dec/2023 13:33:42   WARNING  Not Found: /invoice/delete/1571  None
+WARNING:django.request:Not Found: /invoice/delete/1571
+10/Dec/2023 13:33:42   WARNING  "GET /invoice/delete/1571 HTTP/1.1" 404 14045  None
+WARNING:django.server:"GET /invoice/delete/1571 HTTP/1.1" 404 14045
+10/Dec/2023 13:33:42   INFO  "GET /__debug__/history_sidebar/?store_id=d5376ae290e6488b88fdd9e3c8e92e64 HTTP/1.1" 200 13363  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=d5376ae290e6488b88fdd9e3c8e92e64 HTTP/1.1" 200 13363
+10/Dec/2023 13:34:55   INFO  "GET /list_order/1087 HTTP/1.1" 200 26353  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 26353
+10/Dec/2023 13:35:01   INFO  "GET /serv?type_work=BL HTTP/1.1" 200 768  None
+INFO:django.server:"GET /serv?type_work=BL HTTP/1.1" 200 768
+10/Dec/2023 13:35:01   INFO  "GET /list_order/1087 HTTP/1.1" 200 26350  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 26350
+10/Dec/2023 13:35:01   INFO  "GET /__debug__/history_sidebar/?store_id=194b058980574ff8a71a8be8727661bb HTTP/1.1" 200 13377  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=194b058980574ff8a71a8be8727661bb HTTP/1.1" 200 13377
+10/Dec/2023 13:35:04   INFO  "POST /list_order/1087 HTTP/1.1" 200 191  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 191
+10/Dec/2023 13:35:04   INFO  "GET /__debug__/history_sidebar/?store_id=e17eb849315747349053424e56e45d13 HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=e17eb849315747349053424e56e45d13 HTTP/1.1" 200 13344
+10/Dec/2023 13:35:14   INFO  "GET /serv?type_work=CL HTTP/1.1" 200 96  None
+INFO:django.server:"GET /serv?type_work=CL HTTP/1.1" 200 96
+10/Dec/2023 13:35:14   INFO  "GET /list_order/1087 HTTP/1.1" 200 26721  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 26721
+10/Dec/2023 13:35:14   INFO  "GET /__debug__/history_sidebar/?store_id=c2c927b3fb6746f59352498ec21cf5f2 HTTP/1.1" 200 13377  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=c2c927b3fb6746f59352498ec21cf5f2 HTTP/1.1" 200 13377
+10/Dec/2023 13:35:23   INFO  "POST /list_order/1087 HTTP/1.1" 200 143  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 143
+10/Dec/2023 13:35:24   INFO  "GET /__debug__/history_sidebar/?store_id=1a12778cbf094c55bbbc2c6e93771197 HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=1a12778cbf094c55bbbc2c6e93771197 HTTP/1.1" 200 13344
+10/Dec/2023 13:35:49   INFO  "GET /serv?type_work=CL HTTP/1.1" 200 96  None
+INFO:django.server:"GET /serv?type_work=CL HTTP/1.1" 200 96
+10/Dec/2023 13:35:49   INFO  "GET /list_order/1087 HTTP/1.1" 200 27076  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 27076
+10/Dec/2023 13:35:49   INFO  "GET /__debug__/history_sidebar/?store_id=b2134b1b4e1247ae81fcb413af6762e2 HTTP/1.1" 200 13377  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=b2134b1b4e1247ae81fcb413af6762e2 HTTP/1.1" 200 13377
+10/Dec/2023 13:35:49   INFO  "GET /serv?type_work=SP HTTP/1.1" 200 594  None
+INFO:django.server:"GET /serv?type_work=SP HTTP/1.1" 200 594
+10/Dec/2023 13:35:49   INFO  "GET /list_order/1087 HTTP/1.1" 200 27076  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 27076
+10/Dec/2023 13:35:50   INFO  "GET /__debug__/history_sidebar/?store_id=3c8d5ab90e2441dd9b5708fc797e48aa HTTP/1.1" 200 13377  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=3c8d5ab90e2441dd9b5708fc797e48aa HTTP/1.1" 200 13377
+10/Dec/2023 13:35:54   INFO  "POST /list_order/1087 HTTP/1.1" 200 326  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 326
+10/Dec/2023 13:35:54   INFO  "GET /__debug__/history_sidebar/?store_id=e7d2f8b5c54e4b91bc8f46f66d4fe270 HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=e7d2f8b5c54e4b91bc8f46f66d4fe270 HTTP/1.1" 200 13344
+10/Dec/2023 13:36:24   INFO  "GET /list_order/1087 HTTP/1.1" 200 27813  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 27813
+10/Dec/2023 13:36:24   INFO  "GET /static/js/custom.js HTTP/1.1" 304 0  None
+INFO:django.server:"GET /static/js/custom.js HTTP/1.1" 304 0
+10/Dec/2023 13:36:30   INFO  "GET /invoice/delete/1582 HTTP/1.1" 200 22  None
+INFO:django.server:"GET /invoice/delete/1582 HTTP/1.1" 200 22
+10/Dec/2023 13:36:30   INFO  "GET /__debug__/history_sidebar/?store_id=747c34f2a8f74c3fbb3b9bed55539130 HTTP/1.1" 200 13364  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=747c34f2a8f74c3fbb3b9bed55539130 HTTP/1.1" 200 13364
+10/Dec/2023 13:36:31   INFO  "GET /invoice/delete/1581 HTTP/1.1" 200 22  None
+INFO:django.server:"GET /invoice/delete/1581 HTTP/1.1" 200 22
+10/Dec/2023 13:36:32   INFO  "GET /__debug__/history_sidebar/?store_id=68de03d88d5d4888a0fc8eb1c2510119 HTTP/1.1" 200 13364  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=68de03d88d5d4888a0fc8eb1c2510119 HTTP/1.1" 200 13364
+10/Dec/2023 13:36:34   INFO  "GET /invoice/delete/1580 HTTP/1.1" 200 22  None
+INFO:django.server:"GET /invoice/delete/1580 HTTP/1.1" 200 22
+10/Dec/2023 13:36:34   INFO  "GET /__debug__/history_sidebar/?store_id=0cd7398e3af34ce9910b470a0e65da3b HTTP/1.1" 200 13364  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=0cd7398e3af34ce9910b470a0e65da3b HTTP/1.1" 200 13364
+10/Dec/2023 13:36:35   INFO  "GET /invoice/delete/1579 HTTP/1.1" 200 22  None
+INFO:django.server:"GET /invoice/delete/1579 HTTP/1.1" 200 22
+10/Dec/2023 13:36:35   INFO  "GET /__debug__/history_sidebar/?store_id=eba0b6359a074f64961df6784d72e8d5 HTTP/1.1" 200 13364  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=eba0b6359a074f64961df6784d72e8d5 HTTP/1.1" 200 13364
+10/Dec/2023 13:36:37   INFO  "GET /invoice/delete/1577 HTTP/1.1" 200 22  None
+INFO:django.server:"GET /invoice/delete/1577 HTTP/1.1" 200 22
+10/Dec/2023 13:36:37   INFO  "GET /__debug__/history_sidebar/?store_id=3cf59803f85041a580c852281464aee2 HTTP/1.1" 200 13364  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=3cf59803f85041a580c852281464aee2 HTTP/1.1" 200 13364
+10/Dec/2023 13:36:38   INFO  "GET /invoice/delete/1575 HTTP/1.1" 200 22  None
+INFO:django.server:"GET /invoice/delete/1575 HTTP/1.1" 200 22
+10/Dec/2023 13:36:39   INFO  "GET /__debug__/history_sidebar/?store_id=38b332fc73db4dc1828e8f59434679c6 HTTP/1.1" 200 13364  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=38b332fc73db4dc1828e8f59434679c6 HTTP/1.1" 200 13364
+10/Dec/2023 13:36:40   INFO  "GET /list_order/1087 HTTP/1.1" 200 25629  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25629
+10/Dec/2023 13:36:44   INFO  "GET /serv?type_work=PL HTTP/1.1" 200 1763  None
+INFO:django.server:"GET /serv?type_work=PL HTTP/1.1" 200 1763
+10/Dec/2023 13:36:44   INFO  "GET /list_order/1087 HTTP/1.1" 200 25626  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25626
+10/Dec/2023 13:36:44   INFO  "GET /__debug__/history_sidebar/?store_id=e0e62d991e204a63b5baeb8bcc2fbf53 HTTP/1.1" 200 13377  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=e0e62d991e204a63b5baeb8bcc2fbf53 HTTP/1.1" 200 13377
+10/Dec/2023 13:36:46   INFO  "POST /list_order/1087 HTTP/1.1" 200 160  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 160
+10/Dec/2023 13:36:47   INFO  "GET /__debug__/history_sidebar/?store_id=39870eba03ab44c8b2585854c3e418a8 HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=39870eba03ab44c8b2585854c3e418a8 HTTP/1.1" 200 13344
+10/Dec/2023 13:37:07   INFO  "GET /list_order/1087 HTTP/1.1" 200 25936  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25936
+10/Dec/2023 13:37:12   INFO  "GET /serv?type_work=CL HTTP/1.1" 200 96  None
+INFO:django.server:"GET /serv?type_work=CL HTTP/1.1" 200 96
+10/Dec/2023 13:37:12   INFO  "GET /list_order/1087 HTTP/1.1" 200 25933  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25933
+10/Dec/2023 13:37:13   INFO  "GET /__debug__/history_sidebar/?store_id=79d7701f314640f686221ee582872304 HTTP/1.1" 200 13377  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=79d7701f314640f686221ee582872304 HTTP/1.1" 200 13377
+10/Dec/2023 13:37:15   INFO  "POST /list_order/1087 HTTP/1.1" 200 141  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 141
+10/Dec/2023 13:37:15   INFO  "GET /__debug__/history_sidebar/?store_id=a28a2f3aad004fe8ac8c66b7211f567e HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=a28a2f3aad004fe8ac8c66b7211f567e HTTP/1.1" 200 13344
+10/Dec/2023 13:37:40   INFO  "GET /list_order/1087 HTTP/1.1" 200 26287  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 26287
+10/Dec/2023 13:38:27   INFO  "GET /list_order/1087 HTTP/1.1" 200 26273  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 26273
+10/Dec/2023 13:38:29   INFO  "GET /invoice/delete/1584 HTTP/1.1" 200 22  None
+INFO:django.server:"GET /invoice/delete/1584 HTTP/1.1" 200 22
+10/Dec/2023 13:38:29   INFO  "GET /__debug__/history_sidebar/?store_id=f7cd98470b354800b22a30d8890894b6 HTTP/1.1" 200 13364  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=f7cd98470b354800b22a30d8890894b6 HTTP/1.1" 200 13364
+10/Dec/2023 13:38:31   INFO  "GET /invoice/delete/1583 HTTP/1.1" 200 22  None
+INFO:django.server:"GET /invoice/delete/1583 HTTP/1.1" 200 22
+10/Dec/2023 13:38:31   INFO  "GET /__debug__/history_sidebar/?store_id=942a8b79e3564d79a6e6acf3c631d97d HTTP/1.1" 200 13364  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=942a8b79e3564d79a6e6acf3c631d97d HTTP/1.1" 200 13364
+10/Dec/2023 19:25:48   INFO  Watching for file changes with StatReloader  None
+10/Dec/2023 19:26:01   INFO  "GET / HTTP/1.1" 200 43083  None
+INFO:django.server:"GET / HTTP/1.1" 200 43083
+10/Dec/2023 19:26:01   INFO  "GET /static/js/custom.js HTTP/1.1" 200 11876  None
+INFO:django.server:"GET /static/js/custom.js HTTP/1.1" 200 11876
+10/Dec/2023 19:26:02   WARNING  Not Found: /favicon.ico  None
+WARNING:django.request:Not Found: /favicon.ico
+10/Dec/2023 19:26:02   WARNING  "GET /favicon.ico HTTP/1.1" 404 16307  None
+WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 16307
+10/Dec/2023 19:26:03   INFO  "GET /list_order HTTP/1.1" 200 53912  None
+INFO:django.server:"GET /list_order HTTP/1.1" 200 53912
+10/Dec/2023 19:26:05   INFO  "GET /list_order/1087 HTTP/1.1" 200 25742  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25742
+10/Dec/2023 19:26:11   INFO  "GET /list_order/1086 HTTP/1.1" 200 26274  None
+INFO:django.server:"GET /list_order/1086 HTTP/1.1" 200 26274
+10/Dec/2023 19:26:37   INFO  "GET /serv?type_work=BL HTTP/1.1" 200 768  None
+INFO:django.server:"GET /serv?type_work=BL HTTP/1.1" 200 768
+10/Dec/2023 19:26:37   INFO  "GET /list_order/1086 HTTP/1.1" 200 26271  None
+INFO:django.server:"GET /list_order/1086 HTTP/1.1" 200 26271
+10/Dec/2023 19:26:37   INFO  "GET /__debug__/history_sidebar/?store_id=739a8b5282d04d87aff272bba40b56b0 HTTP/1.1" 200 13377  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=739a8b5282d04d87aff272bba40b56b0 HTTP/1.1" 200 13377
+10/Dec/2023 19:26:46   INFO  "POST /list_order/1086 HTTP/1.1" 200 190  None
+INFO:django.server:"POST /list_order/1086 HTTP/1.1" 200 190
+10/Dec/2023 19:26:46   INFO  "GET /__debug__/history_sidebar/?store_id=32c633db79f54fd58250fb107504be5b HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=32c633db79f54fd58250fb107504be5b HTTP/1.1" 200 13344
+10/Dec/2023 19:26:48   INFO  "GET /list_order/1086 HTTP/1.1" 200 26739  None
+INFO:django.server:"GET /list_order/1086 HTTP/1.1" 200 26739
+10/Dec/2023 19:27:37   INFO  "GET /list_order/1086 HTTP/1.1" 200 26368  None
+INFO:django.server:"GET /list_order/1086 HTTP/1.1" 200 26368
+10/Dec/2023 19:29:01   INFO  "GET /list_order/1086 HTTP/1.1" 200 26373  None
+INFO:django.server:"GET /list_order/1086 HTTP/1.1" 200 26373
+10/Dec/2023 20:34:42   INFO  Watching for file changes with StatReloader  None
+10/Dec/2023 20:34:46   INFO  "GET / HTTP/1.1" 200 43083  None
+INFO:django.server:"GET / HTTP/1.1" 200 43083
+10/Dec/2023 20:34:46   INFO  "GET /static/css/fonts.css HTTP/1.1" 304 0  None
+INFO:django.server:"GET /static/css/fonts.css HTTP/1.1" 304 0
+10/Dec/2023 20:34:46   INFO  "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0  None
+INFO:django.server:"GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+10/Dec/2023 20:34:46   INFO  "GET /static/js/custom.js HTTP/1.1" 200 11876  None
+INFO:django.server:"GET /static/js/custom.js HTTP/1.1" 200 11876
+10/Dec/2023 20:34:46   INFO  "GET /media/images/muzg-na-chas.jpg HTTP/1.1" 200 323830  None
+INFO:django.server:"GET /media/images/muzg-na-chas.jpg HTTP/1.1" 200 323830
+10/Dec/2023 20:34:46   INFO  "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0  None
+INFO:django.server:"GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+10/Dec/2023 20:34:46   INFO  "GET /static/images/underline1.png HTTP/1.1" 200 645  None
+INFO:django.server:"GET /static/images/underline1.png HTTP/1.1" 200 645
+10/Dec/2023 20:34:48   INFO  "GET /list_order HTTP/1.1" 200 53912  None
+INFO:django.server:"GET /list_order HTTP/1.1" 200 53912
+10/Dec/2023 20:34:51   INFO  "GET /list_order/1087 HTTP/1.1" 200 25588  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25588
+10/Dec/2023 20:35:02   INFO  "POST /list_order/1087 HTTP/1.1" 200 2  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 2
+10/Dec/2023 20:35:02   INFO  "GET /__debug__/history_sidebar/?store_id=f48f91f3a15340cdbd93606ab897dd18 HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=f48f91f3a15340cdbd93606ab897dd18 HTTP/1.1" 200 13344
+10/Dec/2023 20:35:02   INFO  "POST /list_order/1087 HTTP/1.1" 200 2  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 2
+10/Dec/2023 20:35:03   INFO  "GET /__debug__/history_sidebar/?store_id=4eb11b398b484dd8bd317f307b67c8f6 HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=4eb11b398b484dd8bd317f307b67c8f6 HTTP/1.1" 200 13344
+10/Dec/2023 20:36:18   INFO  Watching for file changes with StatReloader  None
+10/Dec/2023 20:36:24   INFO  Watching for file changes with StatReloader  None
+10/Dec/2023 20:36:26   INFO  "GET /list_order/1087 HTTP/1.1" 200 19282  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 19282
+10/Dec/2023 20:36:49   INFO  "GET /list_order/1087 HTTP/1.1" 200 25543  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25543
+10/Dec/2023 20:37:52   INFO  "GET /list_order/1087 HTTP/1.1" 200 25525  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25525
+10/Dec/2023 20:37:55   INFO  "GET /list_order/1087 HTTP/1.1" 200 25525  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25525
+10/Dec/2023 20:37:56   INFO  "GET /list_order/1087 HTTP/1.1" 200 25525  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25525
+10/Dec/2023 20:37:57   INFO  "GET /serv?type_work=SP HTTP/1.1" 200 594  None
+INFO:django.server:"GET /serv?type_work=SP HTTP/1.1" 200 594
+10/Dec/2023 20:37:57   INFO  "GET /list_order/1087 HTTP/1.1" 200 25522  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25522
+10/Dec/2023 20:37:57   INFO  "GET /__debug__/history_sidebar/?store_id=fe89ec33ab8b4fb987a21e5e15870369 HTTP/1.1" 200 13377  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=fe89ec33ab8b4fb987a21e5e15870369 HTTP/1.1" 200 13377
+10/Dec/2023 20:38:07   INFO  "POST /list_order/1087 HTTP/1.1" 200 184  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 184
+10/Dec/2023 20:38:07   INFO  "GET /__debug__/history_sidebar/?store_id=b1e3ba3be8394e87ac8c7c7573563dfa HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=b1e3ba3be8394e87ac8c7c7573563dfa HTTP/1.1" 200 13344
+10/Dec/2023 20:38:08   INFO  "POST /list_order/1087 HTTP/1.1" 200 2  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 2
+10/Dec/2023 20:38:08   INFO  "GET /__debug__/history_sidebar/?store_id=287e245d4b4c40ee882e1aca001723fa HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=287e245d4b4c40ee882e1aca001723fa HTTP/1.1" 200 13344
+10/Dec/2023 20:38:08   INFO  "POST /list_order/1087 HTTP/1.1" 200 2  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 2
+10/Dec/2023 20:38:08   INFO  "GET /__debug__/history_sidebar/?store_id=ebff028bea0349c3b7911e9720df969a HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=ebff028bea0349c3b7911e9720df969a HTTP/1.1" 200 13344
+10/Dec/2023 20:38:09   INFO  "POST /list_order/1087 HTTP/1.1" 200 2  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 2
+10/Dec/2023 20:38:09   INFO  "GET /__debug__/history_sidebar/?store_id=228aee4d3f3649ce9b5759fd883a4774 HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=228aee4d3f3649ce9b5759fd883a4774 HTTP/1.1" 200 13344
+10/Dec/2023 20:38:09   INFO  "POST /list_order/1087 HTTP/1.1" 200 2  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 2
+10/Dec/2023 20:38:09   INFO  "POST /list_order/1087 HTTP/1.1" 200 2  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 2
+10/Dec/2023 20:38:09   INFO  "GET /__debug__/history_sidebar/?store_id=6d5d448daf3b4263a7703963d9a387c9 HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=6d5d448daf3b4263a7703963d9a387c9 HTTP/1.1" 200 13344
+10/Dec/2023 20:38:11   INFO  "POST /list_order/1087 HTTP/1.1" 200 2  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 2
+10/Dec/2023 20:38:11   INFO  "GET /__debug__/history_sidebar/?store_id=85a393ea8abe4ccf97b08a0ec4bf9377 HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=85a393ea8abe4ccf97b08a0ec4bf9377 HTTP/1.1" 200 13344
+10/Dec/2023 20:38:12   INFO  "GET /list_order/1087 HTTP/1.1" 200 25892  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25892
+10/Dec/2023 20:38:18   INFO  "GET /serv?type_work=CL HTTP/1.1" 200 96  None
+INFO:django.server:"GET /serv?type_work=CL HTTP/1.1" 200 96
+10/Dec/2023 20:38:18   INFO  "GET /list_order/1087 HTTP/1.1" 200 25889  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25889
+10/Dec/2023 20:38:18   INFO  "GET /__debug__/history_sidebar/?store_id=6d83f84a0f14405898da320bcddd53e9 HTTP/1.1" 200 13377  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=6d83f84a0f14405898da320bcddd53e9 HTTP/1.1" 200 13377
+10/Dec/2023 20:38:19   INFO  "POST /list_order/1087 HTTP/1.1" 200 142  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 142
+10/Dec/2023 20:38:20   INFO  "GET /__debug__/history_sidebar/?store_id=819c4d353bc84bc1bad58f85e7703bfb HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=819c4d353bc84bc1bad58f85e7703bfb HTTP/1.1" 200 13344
+10/Dec/2023 20:38:25   INFO  "GET /serv?type_work=EL HTTP/1.1" 200 1476  None
+INFO:django.server:"GET /serv?type_work=EL HTTP/1.1" 200 1476
+10/Dec/2023 20:38:25   INFO  "GET /list_order/1087 HTTP/1.1" 200 26242  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 26242
+10/Dec/2023 20:38:25   INFO  "GET /__debug__/history_sidebar/?store_id=785a9d03499b4ba4aa6b56dad8d2450e HTTP/1.1" 200 13377  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=785a9d03499b4ba4aa6b56dad8d2450e HTTP/1.1" 200 13377
+10/Dec/2023 20:38:26   INFO  "POST /list_order/1087 HTTP/1.1" 200 2  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 2
+10/Dec/2023 20:38:27   INFO  "GET /__debug__/history_sidebar/?store_id=c453ceb36b0042d9b5ccd1bd3365448f HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=c453ceb36b0042d9b5ccd1bd3365448f HTTP/1.1" 200 13344
+10/Dec/2023 20:38:27   INFO  "POST /list_order/1087 HTTP/1.1" 200 2  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 2
+10/Dec/2023 20:38:27   INFO  "POST /list_order/1087 HTTP/1.1" 200 2  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 2
+10/Dec/2023 20:38:27   INFO  "GET /__debug__/history_sidebar/?store_id=3fa44d67b844433aa6d3f4cdbbf8143b HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=3fa44d67b844433aa6d3f4cdbbf8143b HTTP/1.1" 200 13344
+10/Dec/2023 20:38:28   INFO  "GET /list_order/1087 HTTP/1.1" 200 26245  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 26245
+10/Dec/2023 20:39:12   INFO  "GET /list_order/1087 HTTP/1.1" 200 26263  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 26263
+10/Dec/2023 20:39:15   INFO  "GET /invoice/delete/1587 HTTP/1.1" 200 22  None
+INFO:django.server:"GET /invoice/delete/1587 HTTP/1.1" 200 22
+10/Dec/2023 20:39:15   INFO  "GET /__debug__/history_sidebar/?store_id=af61f2a5c79549efaef66ada96faf1c4 HTTP/1.1" 200 13363  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=af61f2a5c79549efaef66ada96faf1c4 HTTP/1.1" 200 13363
+10/Dec/2023 20:39:16   INFO  "GET /invoice/delete/1586 HTTP/1.1" 200 22  None
+INFO:django.server:"GET /invoice/delete/1586 HTTP/1.1" 200 22
+10/Dec/2023 20:39:16   INFO  "GET /__debug__/history_sidebar/?store_id=cdc7d5eec4f549e685f4c9e6a4e39d89 HTTP/1.1" 200 13363  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=cdc7d5eec4f549e685f4c9e6a4e39d89 HTTP/1.1" 200 13363
+10/Dec/2023 20:39:18   INFO  "GET /list_order/1087 HTTP/1.1" 200 25543  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25543
+10/Dec/2023 20:40:51   INFO  "GET /list_order/1087 HTTP/1.1" 200 32009  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 32009
+10/Dec/2023 20:40:52   INFO  "GET /list_order/1087 HTTP/1.1" 200 32009  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 32009
+10/Dec/2023 20:41:07   INFO  "GET /list_order/1087 HTTP/1.1" 200 25729  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25729
+10/Dec/2023 20:41:33   INFO  "GET /list_order/1087 HTTP/1.1" 200 25729  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25729
+10/Dec/2023 20:41:33   INFO  "GET /list_order/1087 HTTP/1.1" 200 25687  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25687
+10/Dec/2023 20:41:34   INFO  "GET /list_order/1087 HTTP/1.1" 200 25687  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25687
+10/Dec/2023 20:41:34   INFO  "GET /list_order/1087 HTTP/1.1" 200 25687  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25687
+10/Dec/2023 20:41:41   INFO  "GET /serv?type_work=SP HTTP/1.1" 200 594  None
+INFO:django.server:"GET /serv?type_work=SP HTTP/1.1" 200 594
+10/Dec/2023 20:41:41   INFO  "GET /list_order/1087 HTTP/1.1" 200 25684  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25684
+10/Dec/2023 20:41:41   INFO  "GET /__debug__/history_sidebar/?store_id=d074ffd8361a4562bfa36e8aca33bb6e HTTP/1.1" 200 13377  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=d074ffd8361a4562bfa36e8aca33bb6e HTTP/1.1" 200 13377
+10/Dec/2023 20:42:15   INFO  "GET /list_order/1087 HTTP/1.1" 200 25687  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25687
+10/Dec/2023 20:42:17   INFO  "GET /list_order/1087 HTTP/1.1" 200 25653  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25653
+10/Dec/2023 20:42:18   INFO  "GET /list_order/1087 HTTP/1.1" 200 25653  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25653
+10/Dec/2023 20:42:18   INFO  "GET /list_order/1087 HTTP/1.1" 200 25653  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25653
+10/Dec/2023 20:42:42   INFO  "GET /list_order/1087 HTTP/1.1" 200 25663  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25663
+10/Dec/2023 20:42:43   INFO  "GET /list_order/1087 HTTP/1.1" 200 25663  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25663
+10/Dec/2023 20:42:49   INFO  "GET /list_order/1087 HTTP/1.1" 200 25663  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25663
+10/Dec/2023 20:42:49   INFO  "GET /list_order/1087 HTTP/1.1" 200 25663  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25663
+10/Dec/2023 20:42:50   INFO  "GET /list_order/1087 HTTP/1.1" 200 25663  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25663
+10/Dec/2023 20:43:00   INFO  "GET /list_order/1087 HTTP/1.1" 200 25663  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25663
+10/Dec/2023 20:43:02   INFO  "GET /list_order/1087 HTTP/1.1" 200 25663  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25663
+10/Dec/2023 20:43:03   INFO  "GET /list_order/1087 HTTP/1.1" 200 25663  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25663
+10/Dec/2023 20:43:03   INFO  "GET /list_order/1087 HTTP/1.1" 200 25665  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25665
+10/Dec/2023 20:43:08   INFO  "POST /list_order/1087 HTTP/1.1" 200 2  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 2
+10/Dec/2023 20:43:09   INFO  "GET /__debug__/history_sidebar/?store_id=85ca995c145740f5bbc2e94dba7b48cc HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=85ca995c145740f5bbc2e94dba7b48cc HTTP/1.1" 200 13344
+10/Dec/2023 20:43:13   INFO  "POST /list_order/1087 HTTP/1.1" 200 2  None
+INFO:django.server:"POST /list_order/1087 HTTP/1.1" 200 2
+10/Dec/2023 20:43:13   INFO  "GET /__debug__/history_sidebar/?store_id=4e4367767fa24278938ad7db24382488 HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=4e4367767fa24278938ad7db24382488 HTTP/1.1" 200 13344
+10/Dec/2023 20:43:14   INFO  "GET /serv?type_work=EL HTTP/1.1" 200 1476  None
+INFO:django.server:"GET /serv?type_work=EL HTTP/1.1" 200 1476
+10/Dec/2023 20:43:14   INFO  "GET /list_order/1087 HTTP/1.1" 200 25660  None
+INFO:django.server:"GET /list_order/1087 HTTP/1.1" 200 25660
+10/Dec/2023 20:43:14   INFO  "GET /__debug__/history_sidebar/?store_id=63c5d099f4e049919376cbc9fd373c06 HTTP/1.1" 200 13377  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=63c5d099f4e049919376cbc9fd373c06 HTTP/1.1" 200 13377
+10/Dec/2023 20:43:16   INFO  "GET /list_order?work_status=RCV HTTP/1.1" 200 23209  None
+INFO:django.server:"GET /list_order?work_status=RCV HTTP/1.1" 200 23209
+10/Dec/2023 20:43:18   INFO  "GET /list_order/1085 HTTP/1.1" 200 25753  None
+INFO:django.server:"GET /list_order/1085 HTTP/1.1" 200 25753
+10/Dec/2023 20:43:21   INFO  "GET /list_order?work_status=END HTTP/1.1" 200 54029  None
+INFO:django.server:"GET /list_order?work_status=END HTTP/1.1" 200 54029
+10/Dec/2023 20:43:24   INFO  "GET /list_order/1067 HTTP/1.1" 200 26148  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26148
+10/Dec/2023 20:43:50   INFO  "GET /static/css/custom.css HTTP/1.1" 200 11590  None
+INFO:django.server:"GET /static/css/custom.css HTTP/1.1" 200 11590
+10/Dec/2023 20:43:50   INFO  "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12664  None
+INFO:django.server:"GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12664
+10/Dec/2023 20:43:50   INFO  "GET /static/css/custom.css HTTP/1.1" 200 11590  None
+INFO:django.server:"GET /static/css/custom.css HTTP/1.1" 200 11590
+10/Dec/2023 20:43:50   INFO  "GET /static/css/custom.css HTTP/1.1" 200 11590  None
+INFO:django.server:"GET /static/css/custom.css HTTP/1.1" 200 11590
+10/Dec/2023 20:43:50   INFO  "GET /static/css/custom.css HTTP/1.1" 200 11590  None
+INFO:django.server:"GET /static/css/custom.css HTTP/1.1" 200 11590
+10/Dec/2023 20:43:50   INFO  "GET /static/css/mdb.min.css HTTP/1.1" 200 254562  None
+INFO:django.server:"GET /static/css/mdb.min.css HTTP/1.1" 200 254562
+10/Dec/2023 20:43:50   INFO  "GET /static/css/mdb.min.css HTTP/1.1" 200 254562  None
+INFO:django.server:"GET /static/css/mdb.min.css HTTP/1.1" 200 254562
+10/Dec/2023 20:43:50   INFO  "GET /static/css/custom.css HTTP/1.1" 200 11590  None
+INFO:django.server:"GET /static/css/custom.css HTTP/1.1" 200 11590
+10/Dec/2023 20:43:50   INFO  "GET /static/css/mdb.min.css HTTP/1.1" 200 254562  None
+INFO:django.server:"GET /static/css/mdb.min.css HTTP/1.1" 200 254562
+10/Dec/2023 20:43:50   INFO  "GET /static/css/mdb.min.css HTTP/1.1" 200 254562  None
+INFO:django.server:"GET /static/css/mdb.min.css HTTP/1.1" 200 254562
+10/Dec/2023 20:43:50   INFO  "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12664  None
+INFO:django.server:"GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12664
+10/Dec/2023 20:43:50   INFO  "GET /static/css/custom.css HTTP/1.1" 200 11590  None
+INFO:django.server:"GET /static/css/custom.css HTTP/1.1" 200 11590
+10/Dec/2023 20:43:50   INFO  "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12664  None
+INFO:django.server:"GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12664
+10/Dec/2023 20:43:50   INFO  "GET /list_order/1067 HTTP/1.1" 302 0  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 302 0
+10/Dec/2023 20:43:50   INFO  "GET /login/?next=/list_order/1067 HTTP/1.1" 200 15982  None
+INFO:django.server:"GET /login/?next=/list_order/1067 HTTP/1.1" 200 15982
+10/Dec/2023 20:43:50   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+10/Dec/2023 20:45:02   INFO  "GET /list_order/1067 HTTP/1.1" 200 26148  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26148
+10/Dec/2023 20:45:02   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+10/Dec/2023 20:45:03   INFO  "GET /list_order/1067 HTTP/1.1" 200 26148  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26148
+10/Dec/2023 20:45:04   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+10/Dec/2023 20:45:22   INFO  "GET /list_order/1067 HTTP/1.1" 200 26021  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26021
+10/Dec/2023 20:45:22   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+10/Dec/2023 20:45:23   INFO  "GET /list_order/1067 HTTP/1.1" 200 26021  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26021
+10/Dec/2023 20:45:23   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+10/Dec/2023 20:45:38   INFO  "GET /list_order/1067 HTTP/1.1" 200 26021  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26021
+10/Dec/2023 20:45:41   INFO  "GET /serv?type_work=ID HTTP/1.1" 200 955  None
+INFO:django.server:"GET /serv?type_work=ID HTTP/1.1" 200 955
+10/Dec/2023 20:45:41   INFO  "GET /list_order/1067 HTTP/1.1" 200 26018  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26018
+10/Dec/2023 20:45:42   INFO  "GET /__debug__/history_sidebar/?store_id=0926f827390343fe9fb706067a333a2b HTTP/1.1" 200 13377  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=0926f827390343fe9fb706067a333a2b HTTP/1.1" 200 13377
+10/Dec/2023 20:45:48   INFO  "POST /list_order/1067 HTTP/1.1" 200 166  None
+INFO:django.server:"POST /list_order/1067 HTTP/1.1" 200 166
+10/Dec/2023 20:45:48   INFO  "GET /__debug__/history_sidebar/?store_id=609e6a1993cf4051a28edd757c69f7fe HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=609e6a1993cf4051a28edd757c69f7fe HTTP/1.1" 200 13344
+10/Dec/2023 20:46:14   INFO  "GET /list_order/1067 HTTP/1.1" 200 22325  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 22325
+10/Dec/2023 20:46:14   INFO  "GET /list_order/1067 HTTP/1.1" 200 22325  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 22325
+10/Dec/2023 20:46:15   INFO  "GET /list_order/1067 HTTP/1.1" 200 22325  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 22325
+10/Dec/2023 20:46:15   INFO  "GET /list_order/1067 HTTP/1.1" 200 22325  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 22325
+10/Dec/2023 20:46:19   INFO  "GET /serv?type_work=OT HTTP/1.1" 200 828  None
+INFO:django.server:"GET /serv?type_work=OT HTTP/1.1" 200 828
+10/Dec/2023 20:46:19   INFO  "GET /list_order/1067 HTTP/1.1" 200 22322  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 22322
+10/Dec/2023 20:46:19   INFO  "GET /__debug__/history_sidebar/?store_id=51f8c969ee5a47d6b16a4b684b23e47c HTTP/1.1" 200 13375  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=51f8c969ee5a47d6b16a4b684b23e47c HTTP/1.1" 200 13375
+10/Dec/2023 20:46:29   INFO  "GET /list_order/1067 HTTP/1.1" 200 26448  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26448
+10/Dec/2023 20:46:30   INFO  "GET /list_order/1067 HTTP/1.1" 200 26448  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26448
+10/Dec/2023 20:46:34   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+10/Dec/2023 20:46:53   INFO  "GET /list_order/1067 HTTP/1.1" 200 26509  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26509
+10/Dec/2023 20:46:53   INFO  "GET /list_order/1067 HTTP/1.1" 200 26509  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26509
+10/Dec/2023 20:46:54   INFO  "GET /list_order/1067 HTTP/1.1" 200 26509  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26509
+10/Dec/2023 20:46:56   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+10/Dec/2023 20:47:24   INFO  "GET /list_order/1067 HTTP/1.1" 200 26509  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26509
+10/Dec/2023 20:47:25   INFO  "GET /list_order/1067 HTTP/1.1" 200 26382  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26382
+10/Dec/2023 20:47:25   INFO  "GET /list_order/1067 HTTP/1.1" 200 26382  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26382
+10/Dec/2023 20:47:26   INFO  "GET /list_order/1067 HTTP/1.1" 200 26382  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26382
+10/Dec/2023 20:47:42   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+10/Dec/2023 20:48:17   INFO  "GET /list_order/1067 HTTP/1.1" 200 26382  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26382
+10/Dec/2023 20:48:40   INFO  "GET /list_order/1067 HTTP/1.1" 200 26509  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26509
+10/Dec/2023 20:49:20   INFO  "GET /list_order/1067 HTTP/1.1" 200 26506  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26506
+10/Dec/2023 20:49:20   INFO  "GET /list_order/1067 HTTP/1.1" 200 26506  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26506
+10/Dec/2023 20:49:22   INFO  "GET /list_order/1067 HTTP/1.1" 200 26506  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26506
+10/Dec/2023 20:49:43   INFO  "GET /list_order/1067 HTTP/1.1" 200 26506  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26506
+10/Dec/2023 20:49:43   INFO  "GET /list_order/1067 HTTP/1.1" 200 26379  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26379
+10/Dec/2023 20:49:44   INFO  "GET /list_order/1067 HTTP/1.1" 200 26379  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26379
+10/Dec/2023 20:49:45   INFO  "GET /list_order/1067 HTTP/1.1" 200 26379  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26379
+10/Dec/2023 20:50:11   INFO  "GET /list_order/1067 HTTP/1.1" 200 26507  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26507
+10/Dec/2023 20:50:13   INFO  "GET /list_order/1067 HTTP/1.1" 200 26507  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26507
+10/Dec/2023 20:50:24   INFO  "GET /list_order/1067 HTTP/1.1" 200 26380  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26380
+10/Dec/2023 20:50:24   INFO  "GET /list_order/1067 HTTP/1.1" 200 26380  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26380
+10/Dec/2023 20:50:35   INFO  "GET /list_order/1067 HTTP/1.1" 200 26380  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26380
+10/Dec/2023 20:50:36   INFO  "GET /list_order/1067 HTTP/1.1" 200 26378  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26378
+10/Dec/2023 20:50:36   INFO  "GET /list_order/1067 HTTP/1.1" 200 26378  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26378
+10/Dec/2023 20:50:55   INFO  "GET /list_order/1067 HTTP/1.1" 200 26383  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26383
+10/Dec/2023 20:51:14   INFO  "GET /list_order/1067 HTTP/1.1" 200 26330  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26330
+10/Dec/2023 20:51:14   INFO  "GET /list_order/1067 HTTP/1.1" 200 26330  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26330
+10/Dec/2023 20:51:15   INFO  "GET /list_order/1067 HTTP/1.1" 200 26330  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26330
+10/Dec/2023 20:51:42   INFO  "GET /list_order/1067 HTTP/1.1" 200 26330  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26330
+10/Dec/2023 20:51:45   INFO  "GET /list_order/1067 HTTP/1.1" 200 26330  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26330
+10/Dec/2023 20:52:30   INFO  "GET /list_order/1067 HTTP/1.1" 200 26372  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26372
+10/Dec/2023 20:52:55   INFO  "GET /list_order/1067 HTTP/1.1" 200 26372  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26372
+10/Dec/2023 20:53:03   INFO  "GET /list_order/1067 HTTP/1.1" 200 26365  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26365
+10/Dec/2023 20:53:25   INFO  "GET /list_order/1067 HTTP/1.1" 200 26376  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26376
+10/Dec/2023 20:53:33   INFO  "GET /serv?type_work=BL HTTP/1.1" 200 768  None
+INFO:django.server:"GET /serv?type_work=BL HTTP/1.1" 200 768
+10/Dec/2023 20:53:33   INFO  "GET /list_order/1067 HTTP/1.1" 200 26373  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26373
+10/Dec/2023 20:53:34   INFO  "GET /__debug__/history_sidebar/?store_id=b18ddad321ae4c389fe1db7779152a21 HTTP/1.1" 200 13377  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=b18ddad321ae4c389fe1db7779152a21 HTTP/1.1" 200 13377
+10/Dec/2023 20:53:49   INFO  "POST /list_order/1067 HTTP/1.1" 200 191  None
+INFO:django.server:"POST /list_order/1067 HTTP/1.1" 200 191
+10/Dec/2023 20:53:49   INFO  "GET /__debug__/history_sidebar/?store_id=eec6e77d3dc042b8b0064df491b8409f HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=eec6e77d3dc042b8b0064df491b8409f HTTP/1.1" 200 13344
+10/Dec/2023 20:53:55   INFO  "GET /invoice/delete/1589 HTTP/1.1" 200 22  None
+INFO:django.server:"GET /invoice/delete/1589 HTTP/1.1" 200 22
+10/Dec/2023 20:53:55   INFO  "GET /__debug__/history_sidebar/?store_id=3e9ede1063f840feb93abfcf9d51b587 HTTP/1.1" 200 13364  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=3e9ede1063f840feb93abfcf9d51b587 HTTP/1.1" 200 13364
+10/Dec/2023 20:54:18   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+10/Dec/2023 20:55:21   INFO  "GET /list_order/1067 HTTP/1.1" 200 26503  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26503
+10/Dec/2023 20:55:27   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+10/Dec/2023 20:56:05   INFO  "GET /list_order/1067 HTTP/1.1" 200 22319  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 22319
+10/Dec/2023 20:56:06   INFO  "GET /list_order/1067 HTTP/1.1" 200 22319  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 22319
+10/Dec/2023 20:56:24   INFO  "GET /list_order/1067 HTTP/1.1" 200 26376  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26376
+10/Dec/2023 20:56:28   INFO  "GET /list_order/1067 HTTP/1.1" 200 26376  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26376
+10/Dec/2023 20:58:25   INFO  "GET /list_order/1067 HTTP/1.1" 200 26376  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26376
+10/Dec/2023 20:58:36   INFO  "GET /serv?type_work=EL HTTP/1.1" 200 1476  None
+INFO:django.server:"GET /serv?type_work=EL HTTP/1.1" 200 1476
+10/Dec/2023 20:58:36   INFO  "GET /list_order/1067 HTTP/1.1" 200 26373  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26373
+10/Dec/2023 20:58:36   INFO  "GET /__debug__/history_sidebar/?store_id=6456277c5f9d4ae0805c80465819b946 HTTP/1.1" 200 13377  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=6456277c5f9d4ae0805c80465819b946 HTTP/1.1" 200 13377
+10/Dec/2023 20:58:40   INFO  "POST /list_order/1067 HTTP/1.1" 200 190  None
+INFO:django.server:"POST /list_order/1067 HTTP/1.1" 200 190
+10/Dec/2023 20:58:40   INFO  "GET /__debug__/history_sidebar/?store_id=0c2f2280e8214855b81bc802ecfae095 HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=0c2f2280e8214855b81bc802ecfae095 HTTP/1.1" 200 13344
+10/Dec/2023 20:59:19   INFO  "GET /list_order/1067 HTTP/1.1" 200 26872  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26872
+10/Dec/2023 20:59:32   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+10/Dec/2023 21:00:14   INFO  "GET /list_order/1067 HTTP/1.1" 200 26872  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26872
+10/Dec/2023 21:00:15   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+10/Dec/2023 21:00:17   INFO  "GET /list_order/1067 HTTP/1.1" 200 26872  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26872
+10/Dec/2023 21:00:18   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+10/Dec/2023 21:00:19   INFO  "GET /list_order/1067 HTTP/1.1" 200 26872  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26872
+10/Dec/2023 21:00:19   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+10/Dec/2023 21:00:30   INFO  "GET /list_order/1067 HTTP/1.1" 200 26745  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26745
+10/Dec/2023 21:00:48   INFO  "GET /invoice/delete/1588 HTTP/1.1" 200 22  None
+INFO:django.server:"GET /invoice/delete/1588 HTTP/1.1" 200 22
+10/Dec/2023 21:00:49   INFO  "GET /__debug__/history_sidebar/?store_id=1695d02128bf489aaf108067270fe5e8 HTTP/1.1" 200 13366  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=1695d02128bf489aaf108067270fe5e8 HTTP/1.1" 200 13366
+10/Dec/2023 21:00:50   INFO  "GET /invoice/delete/1590 HTTP/1.1" 200 22  None
+INFO:django.server:"GET /invoice/delete/1590 HTTP/1.1" 200 22
+10/Dec/2023 21:00:50   INFO  "GET /__debug__/history_sidebar/?store_id=d022b2594547407e94c47e1e73989b54 HTTP/1.1" 200 13366  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=d022b2594547407e94c47e1e73989b54 HTTP/1.1" 200 13366
+10/Dec/2023 21:01:19   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+10/Dec/2023 21:02:46   INFO  "GET /list_order/1067 HTTP/1.1" 200 26015  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26015
+10/Dec/2023 21:02:50   INFO  "GET /serv?type_work=FT HTTP/1.1" 200 776  None
+INFO:django.server:"GET /serv?type_work=FT HTTP/1.1" 200 776
+10/Dec/2023 21:02:50   INFO  "GET /list_order/1067 HTTP/1.1" 200 26012  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26012
+10/Dec/2023 21:02:50   INFO  "GET /__debug__/history_sidebar/?store_id=a9521a6ea48e43f1b8d19b4946313481 HTTP/1.1" 200 13377  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=a9521a6ea48e43f1b8d19b4946313481 HTTP/1.1" 200 13377
+10/Dec/2023 21:02:57   INFO  "GET /serv?type_work=ID HTTP/1.1" 200 955  None
+INFO:django.server:"GET /serv?type_work=ID HTTP/1.1" 200 955
+10/Dec/2023 21:02:57   INFO  "GET /list_order/1067 HTTP/1.1" 200 26014  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26014
+10/Dec/2023 21:02:57   INFO  "GET /__debug__/history_sidebar/?store_id=8ffe1bd8d4f140049514a613e7288873 HTTP/1.1" 200 13379  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=8ffe1bd8d4f140049514a613e7288873 HTTP/1.1" 200 13379
+10/Dec/2023 21:03:02   INFO  "POST /list_order/1067 HTTP/1.1" 200 362  None
+INFO:django.server:"POST /list_order/1067 HTTP/1.1" 200 362
+10/Dec/2023 21:03:02   INFO  "GET /__debug__/history_sidebar/?store_id=7b13f0bf7515405aa6ccea38d7c0ae40 HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=7b13f0bf7515405aa6ccea38d7c0ae40 HTTP/1.1" 200 13344
+10/Dec/2023 21:03:18   INFO  "GET /invoice/delete/1591 HTTP/1.1" 200 22  None
+INFO:django.server:"GET /invoice/delete/1591 HTTP/1.1" 200 22
+10/Dec/2023 21:03:18   INFO  "GET /__debug__/history_sidebar/?store_id=78deafa6ddba4ff8bc72c792df55634a HTTP/1.1" 200 13364  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=78deafa6ddba4ff8bc72c792df55634a HTTP/1.1" 200 13364
+10/Dec/2023 21:03:20   INFO  "GET /invoice/delete/1592 HTTP/1.1" 200 22  None
+INFO:django.server:"GET /invoice/delete/1592 HTTP/1.1" 200 22
+10/Dec/2023 21:03:20   INFO  "GET /__debug__/history_sidebar/?store_id=79b9053e761b464999f2dbda5f292e68 HTTP/1.1" 200 13364  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=79b9053e761b464999f2dbda5f292e68 HTTP/1.1" 200 13364
+10/Dec/2023 21:03:36   INFO  "GET /list_order/1067 HTTP/1.1" 200 26048  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26048
+10/Dec/2023 21:03:41   INFO  "GET /serv?type_work=ID HTTP/1.1" 200 955  None
+INFO:django.server:"GET /serv?type_work=ID HTTP/1.1" 200 955
+10/Dec/2023 21:03:41   INFO  "GET /list_order/1067 HTTP/1.1" 200 26045  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26045
+10/Dec/2023 21:03:41   INFO  "GET /__debug__/history_sidebar/?store_id=90edfd7abe8a4d3498973d75a60aab76 HTTP/1.1" 200 13377  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=90edfd7abe8a4d3498973d75a60aab76 HTTP/1.1" 200 13377
+10/Dec/2023 21:03:50   INFO  "POST /list_order/1067 HTTP/1.1" 200 7  None
+INFO:django.server:"POST /list_order/1067 HTTP/1.1" 200 7
+10/Dec/2023 21:03:50   INFO  "GET /__debug__/history_sidebar/?store_id=6e1f3015757e4aa399eae9612dff47bc HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=6e1f3015757e4aa399eae9612dff47bc HTTP/1.1" 200 13344
+10/Dec/2023 21:04:00   INFO  "GET /list_order/1067 HTTP/1.1" 200 26048  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26048
+10/Dec/2023 21:05:00   INFO  "GET /list_order/1067 HTTP/1.1" 200 25921  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 25921
+10/Dec/2023 21:05:21   INFO  "GET /list_order/1067 HTTP/1.1" 200 26048  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26048
+10/Dec/2023 21:05:27   INFO  "GET /list_order/1067 HTTP/1.1" 200 26048  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26048
+10/Dec/2023 21:05:35   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+10/Dec/2023 21:06:02   INFO  "GET /list_order/1067 HTTP/1.1" 200 21864  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 21864
+10/Dec/2023 21:06:02   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+10/Dec/2023 21:12:58   INFO  "GET /list_order/1067 HTTP/1.1" 200 25444  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 25444
+10/Dec/2023 21:14:11   INFO  "GET /list_order/1067 HTTP/1.1" 200 25744  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 25744
+10/Dec/2023 21:14:54   INFO  "GET /list_order/1067 HTTP/1.1" 200 25792  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 25792
+10/Dec/2023 21:16:58   INFO  "GET /list_order/1067 HTTP/1.1" 200 25844  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 25844
+10/Dec/2023 21:17:02   INFO  "GET /list_order/1067 HTTP/1.1" 200 25842  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 25842
+10/Dec/2023 21:18:15   INFO  "GET /list_order/1067 HTTP/1.1" 200 25878  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 25878
+10/Dec/2023 21:20:40   INFO  "GET /list_order/1067 HTTP/1.1" 200 25867  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 25867
+10/Dec/2023 21:22:11   INFO  "GET /list_order/1067 HTTP/1.1" 200 25868  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 25868
+10/Dec/2023 21:22:11   INFO  "GET /static/js/custom.js HTTP/1.1" 304 0  None
+INFO:django.server:"GET /static/js/custom.js HTTP/1.1" 304 0
+10/Dec/2023 21:22:26   INFO  "GET /list_order/1067 HTTP/1.1" 200 25868  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 25868
+10/Dec/2023 21:22:35   INFO  "GET /list_order/1067 HTTP/1.1" 200 25870  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 25870
+10/Dec/2023 21:23:01   INFO  "GET /list_order/1067 HTTP/1.1" 200 25883  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 25883
+10/Dec/2023 21:23:04   INFO  "GET /list_order/1067 HTTP/1.1" 200 25883  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 25883
+10/Dec/2023 21:23:09   INFO  "POST /list_order/1067 HTTP/1.1" 200 2  None
+INFO:django.server:"POST /list_order/1067 HTTP/1.1" 200 2
+10/Dec/2023 21:23:09   INFO  "GET /__debug__/history_sidebar/?store_id=9f7d558a3d0648aaa4ba4474df7980c3 HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=9f7d558a3d0648aaa4ba4474df7980c3 HTTP/1.1" 200 13344
+10/Dec/2023 21:23:10   INFO  "GET /list_order/1067 HTTP/1.1" 200 25883  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 25883
+10/Dec/2023 21:23:14   INFO  "GET /serv?type_work=BL HTTP/1.1" 200 768  None
+INFO:django.server:"GET /serv?type_work=BL HTTP/1.1" 200 768
+10/Dec/2023 21:23:14   INFO  "GET /list_order/1067 HTTP/1.1" 200 25880  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 25880
+10/Dec/2023 21:23:14   INFO  "GET /__debug__/history_sidebar/?store_id=df915c6326804b66b898a4d51d042bcb HTTP/1.1" 200 13375  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=df915c6326804b66b898a4d51d042bcb HTTP/1.1" 200 13375
+10/Dec/2023 21:23:15   INFO  "GET /serv?type_work=BL HTTP/1.1" 200 768  None
+INFO:django.server:"GET /serv?type_work=BL HTTP/1.1" 200 768
+10/Dec/2023 21:23:15   INFO  "GET /list_order/1067 HTTP/1.1" 200 25880  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 25880
+10/Dec/2023 21:23:15   INFO  "GET /__debug__/history_sidebar/?store_id=57f691054d734c9ab4b3b293fcb01079 HTTP/1.1" 200 13375  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=57f691054d734c9ab4b3b293fcb01079 HTTP/1.1" 200 13375
+10/Dec/2023 21:23:52   INFO  "GET /list_order/1067 HTTP/1.1" 200 26182  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26182
+10/Dec/2023 21:24:05   INFO  "GET /list_order/1067 HTTP/1.1" 200 25883  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 25883
+10/Dec/2023 21:25:27   INFO  "GET /list_order/1067 HTTP/1.1" 200 25881  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 25881
+10/Dec/2023 21:25:28   INFO  "GET /list_order/1067 HTTP/1.1" 200 25881  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 25881
+10/Dec/2023 21:25:30   INFO  "GET /list_order/1067 HTTP/1.1" 200 25881  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 25881
+10/Dec/2023 21:25:32   INFO  "GET /list_order/1063 HTTP/1.1" 200 26292  None
+INFO:django.server:"GET /list_order/1063 HTTP/1.1" 200 26292
+10/Dec/2023 21:25:33   INFO  "GET /list_order/1067 HTTP/1.1" 200 25881  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 25881
+10/Dec/2023 21:25:57   INFO  "GET /list_order/1067 HTTP/1.1" 200 25878  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 25878
+10/Dec/2023 21:25:58   INFO  "GET /list_order/1067 HTTP/1.1" 200 25878  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 25878
+10/Dec/2023 21:25:59   INFO  "GET /list_order/1067 HTTP/1.1" 200 25878  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 25878
+10/Dec/2023 21:26:03   INFO  "GET /list_order/1067 HTTP/1.1" 200 25875  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 25875
+10/Dec/2023 21:26:03   INFO  "GET /serv?type_work=BL HTTP/1.1" 200 768  None
+INFO:django.server:"GET /serv?type_work=BL HTTP/1.1" 200 768
+10/Dec/2023 21:26:03   INFO  "GET /__debug__/history_sidebar/?store_id=e280179754bc41d1ad65777336c96361 HTTP/1.1" 200 13402  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=e280179754bc41d1ad65777336c96361 HTTP/1.1" 200 13402
+10/Dec/2023 21:26:06   INFO  "POST /list_order/1067 HTTP/1.1" 200 2  None
+INFO:django.server:"POST /list_order/1067 HTTP/1.1" 200 2
+10/Dec/2023 21:26:06   INFO  "GET /__debug__/history_sidebar/?store_id=8050d1e36d03411cb0c7c1d266ed1c62 HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=8050d1e36d03411cb0c7c1d266ed1c62 HTTP/1.1" 200 13344
+10/Dec/2023 21:26:07   INFO  "GET /list_order/1067 HTTP/1.1" 200 25878  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 25878
+10/Dec/2023 21:26:22   INFO  "GET /list_order/1067 HTTP/1.1" 200 26048  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26048
+10/Dec/2023 21:27:40   INFO  "GET /list_order/1067 HTTP/1.1" 200 25731  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 25731
+10/Dec/2023 21:27:49   INFO  "GET /list_order/1067 HTTP/1.1" 200 25735  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 25735
+10/Dec/2023 21:29:47   INFO  "GET /list_order/1067 HTTP/1.1" 200 25830  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 25830
+10/Dec/2023 21:30:57   INFO  "GET /list_order/1067 HTTP/1.1" 200 25890  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 25890
+10/Dec/2023 21:31:01   INFO  "GET /list_order/1067 HTTP/1.1" 200 25890  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 25890
+10/Dec/2023 21:31:35   INFO  "GET /list_order/1067 HTTP/1.1" 200 25885  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 25885
+10/Dec/2023 21:31:36   INFO  "GET /list_order/1067 HTTP/1.1" 200 25885  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 25885
+10/Dec/2023 21:31:44   INFO  "GET /list_order/1067 HTTP/1.1" 200 25885  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 25885
+10/Dec/2023 21:32:19   INFO  "GET /list_order/1067 HTTP/1.1" 200 26048  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26048
+10/Dec/2023 21:32:30   INFO  "GET /list_order/1067 HTTP/1.1" 200 26048  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26048
+10/Dec/2023 21:33:21   INFO  "GET /list_order/1067 HTTP/1.1" 200 26048  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26048
+10/Dec/2023 21:42:09   INFO  "GET /list_order/1067 HTTP/1.1" 200 26102  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26102
+10/Dec/2023 21:42:11   INFO  "GET /list_order/1067 HTTP/1.1" 200 26102  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26102
+10/Dec/2023 21:42:34   INFO  "GET /list_order/1067 HTTP/1.1" 200 26117  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26117
+10/Dec/2023 21:43:30   INFO  "GET /list_order/1067 HTTP/1.1" 200 26119  None
+INFO:django.server:"GET /list_order/1067 HTTP/1.1" 200 26119

@@ -1,4 +1,4 @@
-from django.db.models import F, Prefetch, Sum, Count
+from django.db.models import F, Prefetch, Sum
 from geopy.geocoders import Nominatim
 from telebot import types
 from reportlab.lib.pagesizes import A4

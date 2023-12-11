@@ -1,19 +1,15 @@
 {% extends 'flatpages/default_user.html' %}
+{% load static %}
+{% load slippers %}
 
 {% block body %}
 
 <h1>Заказ № {{ pk }} от {{ time_in|date:"d.m.Y" }}</h1>
 <hr>
-  <datalist id="languages">
-                                   </datalist>
-<form action="" method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{ form.as_p }}
-
-    <input type="submit" value="Save" />
-</form>
-
-
+  <datalist id="languages"></datalist>
+ {% #form form_=form %}
+{% csrf_token %}
+{% /form%}
 
 <script>
 

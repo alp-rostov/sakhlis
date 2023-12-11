@@ -2,13 +2,9 @@ import functools
 
 import traceback
 from datetime import datetime
-
 from django.http import JsonResponse, Http404, HttpResponseRedirect
 from django.views import View
 import logging
-
-
-
 
 logging.basicConfig(filename = "log.log")
 
@@ -43,17 +39,19 @@ def base_view(fn):
             return error_response(e)   # TODO input error into logg file
     return inner
 
-class BaseView1(View):
+class BaseClassExeption(View):
     def dispatch(self, request, *args, **kwargs):
         try:
             response = super().dispatch(request, *args, **kwargs)
         except BaseException as e:
+
             logging.warning("===========================================================")
             logging.warning("ВРЕМЯ:     " + str(datetime.now()))
             logging.warning("ОШИБКА:        "+str(e))
             logging.warning("ТРЭЙСБЭК:     " + traceback.format_exc())
             logging.warning("============================================================")
-            return JsonResponse({'message':traceback.format_exc(), 'hhh': str(e)}, status=400, safe=False, json_dumps_params=JSON_DUMPS_PARAMS)
+
+            return JsonResponse({'message':"ОШИБКА ДАННЫХ!", 'comments': str(e)}, status=400, safe=False, json_dumps_params=JSON_DUMPS_PARAMS)
 
         return response
 

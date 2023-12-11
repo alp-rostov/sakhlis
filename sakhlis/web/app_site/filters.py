@@ -3,34 +3,6 @@ from django_filters import FilterSet, CharFilter, DateFilter
 from .models import *
 from django import forms
 #
-# class RepFilter(FilterSet):
-#
-#
-#     city = ChoiceFilter(
-#         field_name='city',
-#         label='Город',
-#         lookup_expr='exact',
-#         choices=CITY_CHOICES
-#
-#     )
-#
-#     email = CharFilter(
-#         field_name='email',
-#         label='E-mail',
-#         lookup_expr='icontains'
-#     )
-#
-#     phone = CharFilter(
-#         field_name='phone',
-#         label='Телефон',
-#         lookup_expr='icontains'
-#     )
-#
-#     class Meta:
-#         model = RepairerList
-#         fields = ['city', 'email', 'phone', ]
-
-
 class OrderFilter(FilterSet):
 
 

@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     # 'easy_maps',
     'app_site.apps.AppSiteConfig',
     'slippers',
+    'crispy_forms',
 ]
 SITE_ID = 1
 
@@ -148,16 +149,14 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+STATICFILES_DIRS = [
+    BASE_DIR / "static/",
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-STATICFILES_DIRS = [
-    BASE_DIR / "static/",
-]
-
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
@@ -191,16 +190,8 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')  # пароль от
 EMAIL_USE_SSL = True  # Яндекс использует ssl, подробнее о том, что это, почитайте в дополнительных источниках, но включать его здесь обязательно
 
 DEFAULT_CHARSET = 'utf-8'
-#
-# EASY_MAPS_GOOGLE_KEY = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ___0123456789'
-# EASY_MAPS_CENTER = (-41.3, 32)
-# EASY_MAPS_ZOOM = 8  # Default zoom level, see https://developers.google.com/maps/documentation/javascript/tutorial#MapOptions for more information.
-# EASY_MAPS_LANGUAGE = 'ru'
-
 
 handler404 = 'app_site.views.Error404.as_view()'
-
-
 
 LOGGING = {
     'version': 1,
@@ -208,7 +199,7 @@ LOGGING = {
 
     'handlers': {
         'file': {
-            'level': 'WARNING',
+            'level': 'INFO',
             'class': 'logging.FileHandler',
             'filename': os.path.join(BASE_DIR, 'log.log'),
             'formatter': 'simple'
@@ -218,7 +209,7 @@ LOGGING = {
     'style': '{',
     'formatters': {
         'simple': {
-            'format': '%(asctime)s   %(message)s   ',
+            'format':  '%(asctime)s   %(levelname)s  %(message)s  %(exc_info)s',
             'datefmt': "%d/%b/%Y %H:%M:%S"
         },
 
@@ -227,9 +218,11 @@ LOGGING = {
     'loggers': {
         'django': {
             'handlers': ['file'],
-            'level': 'WARNING',
+            'level': 'INFO',
             'propagate': True,
         },
 
     }
 }
+
+CRISPY_TEMPLATE_PACK = 'uni_form'
