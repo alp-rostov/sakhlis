@@ -6,3 +6,4 @@ components:
   menu: "partials/menu.html"
   form: "partials/form_for_order.html"
   about_me: "partials/about_me.html"
+  work_status: "partials/work_status.html"

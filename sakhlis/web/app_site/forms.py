@@ -57,9 +57,10 @@ class OrderForm(forms.ModelForm):
         dict_wrong_char = str.maketrans({'<': '', '[': '',']': '','>': '','{': '','}': '','+': '', '-': '', '@': '' })
 
         order.text_order = order.text_order.translate(dict_wrong_char)
-        order.customer_phone = order.customer_phone.translate(dict_wrong_char)
 
-        name_telegram_customer = order.customer_telegram.translate(dict_wrong_char)
+        order.customer_phone = order.customer_phone.translate(dict_wrong_char).replace(' ', '')
+
+        name_telegram_customer = order.customer_telegram.translate(dict_wrong_char).replace(' ', '')
 
         if name_telegram_customer.isdigit():
             order.customer_telegram = '+' + name_telegram_customer

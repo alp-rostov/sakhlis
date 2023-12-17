@@ -211,6 +211,8 @@ function add_new_form(event){
     const currentFormCount = currentForms.length ;
 
     const formCopyTarget = document.getElementById('form-list');
+
+
     const copyEmptyFromEl=document.getElementById('empty-form').cloneNode(true);
     copyEmptyFromEl.setAttribute('class', 'form');
     copyEmptyFromEl.setAttribute('id',`form-${currentFormCount}`);
