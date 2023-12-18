@@ -298,17 +298,39 @@ $(document.body).on( "click", "#workstatus", function(e) {
                         let b=r.message;
                         let pk=r.pk;
                         if (b=='RCV') {
+                            $('#check1').attr('class', 'fas fa-check-circle text-secondary');
+                            $('#check2').attr('class', 'fas fa-check-circle about-text');
 
-                            $('#stepstatuswork').html('Заявка в работе');
+                            $('#check_text_1').attr('class', 'col-md-11');
+                            $('#check_text_2').attr('class', 'col-md-11 black-text');
+
                             $('#workstatus').html('Работы выполнены');
                             $('#workstatus').attr('href', "../changestatus?order_pk="+pk+"&work_status=END");
+
                             $('#id_form').attr('class', '');
                             $('#table_invoice').attr('class', 'table');
 
                         } else
+
+
                         if (b=='END') {
+                            $('#check1').attr('class', 'fas fa-check-circle text-secondary');
+                            $('#check2').attr('class', 'fas fa-check-circle text-secondary');
+                            $('#check3').attr('class', 'fas fa-check-circle about-text');
+
+                            $('#check_text_1').attr('class', 'col-md-11');
+                            $('#check_text_2').attr('class', 'col-md-11');
+                            $('#check_text_3').attr('class', 'col-md-11 black-text');
+
+
+                            $('#check_text_1').attr('class', 'col-md-11');
+                            $('#check_text_2').attr('class', 'col-md-11 black-text');
+
+
+
+
                             $('#workstatus').remove();
-                            $('#stepstatuswork').html('<i class="fas fa-check-circle about-text"></i> Работы выполнены<br><a href="pdf/'+pk+'" class="btn btn-md btn-orange">Квитанция на оплату - PDF</a>');
+                            $('#stepstatuswork').html('<a href="pdf/'+pk+'" class="btn btn-sm btn-orange">Квитанция на оплату - PDF</a>');
                         }
 
             }
