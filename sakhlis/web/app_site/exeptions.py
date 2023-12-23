@@ -29,16 +29,6 @@ def error_response(exception):
            "tracerback": trace}
     return ret(res, status=400)
 
-
-def base_view(fn):
-    @functools.wraps(fn)
-    def inner(request, *args, **kwargs):
-        try:
-            return fn(request, *args, **kwargs)
-        except Exception as e:
-            return error_response(e)   # TODO input error into logg file
-    return inner
-
 class BaseClassExeption(View):
     def dispatch(self, request, *args, **kwargs):
         try:

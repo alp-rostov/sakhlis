@@ -1,5 +1,7 @@
 from django.contrib.auth.forms import UserCreationForm
 from django import forms
+from django.forms import ChoiceField
+
 from .models import *
 
 
@@ -31,6 +33,16 @@ class OrderForm(forms.ModelForm):
 
     )
 
+    address_city = forms.ChoiceField(
+        choices=CITY_CHOICES,
+
+        widget=forms.RadioSelect(
+            attrs={"class": ""
+            },
+        ),
+        initial="TB"
+    )
+
     address_street_app = forms.CharField(
         label='Улица',
         widget=forms.TextInput(attrs={"class": "form-control", 'list': 'languages', 'placeholder': "Улица", 'maxlength':40}),
@@ -49,6 +61,7 @@ class OrderForm(forms.ModelForm):
                   'customer_name',
                   'customer_phone',
                   'customer_telegram',
+                  'address_city',
                   'address_street_app',
                   'address_num',
                                     )

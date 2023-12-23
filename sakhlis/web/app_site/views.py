@@ -8,7 +8,7 @@ from django.shortcuts import redirect, get_object_or_404
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
 
-from .exeptions import base_view, BaseClassExeption
+from .exeptions import BaseClassExeption
 from .filters import OrderFilter
 from .models import *
 from .forms import OrderForm, InvoiceForm, UserRegisterForm, RepairerForm

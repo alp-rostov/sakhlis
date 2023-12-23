@@ -9,7 +9,6 @@ phoneNumberRegex = RegexValidator(regex=r"^\+?1?\d{8,15}$",
 CITY_CHOICES = [
     ('TB', 'Тбилиси'),
     ('BT', 'Батуми'),
-    ('RS', 'Рустави'),
 ]
 
 WORK_CHOICES = [
