@@ -52,49 +52,45 @@ top: 0;
 
 <!--Header-->
 {% #menu %}
-  <li class="nav-item mr-4">
-                        <a class="nav-link" href="{% url 'home' %}">Главная</a>
-                    </li>
 
-                    <li class="nav-item  mr-4">
-                        {% if the_url1 in request.get_full_path  %}
-                        <a class="nav-link " href="{{ the_url1 }}"><b>Мои заказы</b></a>
-                        {% else %}
-                        <a class="nav-link" href="{{ the_url1 }}">Мои заказы</a>
-                        {% endif %}
-                    </li>
-                    <li class="nav-item mr-4" class="nav-item mr-4">
-                        {% if the_url2 in request.get_full_path  %}
-                        <a class="nav-link"  href="{{ the_url2 }}"><b>Отчетность</b></a>
-                        {% else %}
-                        <a class="nav-link"  href="{{ the_url2 }}">Отчетность</a>
-                        {% endif %}
-                    </li>
-                    <li class="nav-item mr-4">
-                        {% if the_url3 in request.get_full_path  %}
-                        <a class="nav-link" href="{{ the_url3 }}"><b>Мои данные</b></a>
-                        {% else %}
-                        <a class="nav-link" href="{{ the_url3 }}">Мои данные</a>
-                        {% endif %}
-                    </li>
+    <li class="nav-item mr-4">
+        <a class="nav-link" href="{% url 'home' %}">Главная</a>
+    </li>
 
-                        {% if request.user.is_authenticated %}
-                            <li class="nav-item mr-4">
+    <li class="nav-item  mr-4">
+        {% if the_url1 in request.get_full_path  %}
+        <a class="nav-link " href="{{ the_url1 }}"><b>Мои заказы</b></a>
+        {% else %}
+        <a class="nav-link" href="{{ the_url1 }}">Мои заказы</a>
+        {% endif %}
+    </li>
 
-                            <a class="nav-link" href="{% url 'logout' %}">{{ user.username }} : Выйти</a>
+    <li class="nav-item mr-4" class="nav-item mr-4">
+        {% if the_url2 in request.get_full_path  %}
+        <a class="nav-link"  href="{{ the_url2 }}"><b>Отчетность</b></a>
+        {% else %}
+        <a class="nav-link"  href="{{ the_url2 }}">Отчетность</a>
+        {% endif %}
+    </li>
 
-                            </li>
+    <li class="nav-item mr-4">
+        {% if the_url3 in request.get_full_path  %}
+        <a class="nav-link" href="{{ the_url3 }}"><b>Мои данные</b></a>
+        {% else %}
+        <a class="nav-link" href="{{ the_url3 }}">Мои данные</a>
+        {% endif %}
+    </li>
 
-                         {% endif %}
-
-
+    {% if request.user.is_authenticated %}
+        <li class="nav-item mr-4">
+            <a class="nav-link" href="{% url 'logout' %}">{{ user.username }} : Выйти</a>
+        </li>
+    {% endif %}
 
 {% /menu %}
 
-
-
-        <section id="section-0" class="bg_img sticky">
-                    <div class="text-center nav-link h6"><br>
+        <section id="section-0" class="bg_img">
+                    <div class="text-center h5 mt-5">
                             {% block subbody %}
 
                             {% endblock subbody%}
@@ -123,33 +119,24 @@ top: 0;
                             {% else %}
                             <a href="{% url 'search-order' %}" class="fa fa-search fa-border" aria-hidden="true"></a>
                             {% endif %}
-                            </div>
-
-
                     </div>
+
     </section>
-    <!--And Header-->
 
 
-
-
-</div>
-
-
-  <!--About Me -->
     <section id="section-1">
         <div class="container">
             <div >
                         {% block body %}
 
-{% endblock body%}
+                        {% endblock body%}
             </div>
 
 
             </div>
         </div>
     </section>
-    <!-- And Text -->
+
 
     <!-- jQuery first, then Bootstrap JS -->
     <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>

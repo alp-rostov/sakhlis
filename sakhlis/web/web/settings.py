@@ -163,7 +163,7 @@ MEDIA_URL = '/media/'
 
 LOGIN_URL = '/login/'
 LOGOUT_URL = '/logout/'
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/list_order?work_status=RCV'
 LOGOUT_REDIRECT_URL = '/'
 
 CELERY_BROKER_URL = 'redis://localhost:6379'

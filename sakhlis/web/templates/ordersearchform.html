@@ -33,7 +33,9 @@
                 {{ filterset.form.customer_telegram }}
             </div>
             <div class="col-md-3 text-muted">
-                Город: <br>Тбилиси<br>
+                {{ filterset.form.address_city.label }}:<br>
+                {{ filterset.form.address_city }}:<br>
+
                 {{ filterset.form.adress_street_app.label }}:<br>
                 {{ filterset.form.adress_street_app }}<br>
                 {{ filterset.form.address_num.label }}:<br>

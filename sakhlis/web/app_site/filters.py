@@ -1,5 +1,6 @@
 
-from django_filters import FilterSet, CharFilter, DateFilter
+from django_filters import FilterSet, CharFilter, DateFilter, ChoiceFilter, MultipleChoiceFilter, \
+    TypedMultipleChoiceFilter
 from .models import *
 from django import forms
 #
@@ -66,9 +67,16 @@ class OrderFilter(FilterSet):
 
     )
 
+    address_city = ChoiceFilter(
+        field_name='address_city',
+        label='Город',
+        lookup_expr='icontains',
+        choices=CITY_CHOICES,
 
+
+    )
     class Meta:
         model = OrderList
-        fields = ['order_status', 'repairer_id']
+        fields = ['order_status', 'repairer_id', 'address_city']
 
 

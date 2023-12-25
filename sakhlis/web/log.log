@@ -48,3 +48,375 @@ WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
 WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
 23/Dec/2023 18:43:27   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
 WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2023-12-23 19:22:28.254379
+WARNING:root:ОШИБКА:        Field.__init__() got an unexpected keyword argument 'conjoined'
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/list.py", line 154, in get
+    self.object_list = self.get_queryset()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 265, in get_queryset
+    return self.filterset.qs
+           ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/filterset.py", line 229, in qs
+    self.errors
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/filterset.py", line 202, in errors
+    return self.form.errors
+           ^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/filterset.py", line 250, in form
+    Form = self.get_form_class()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/filterset.py", line 242, in get_form_class
+    [(name, filter_.field) for name, filter_ in self.filters.items()]
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/filterset.py", line 242, in <listcomp>
+    [(name, filter_.field) for name, filter_ in self.filters.items()]
+            ^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/filters.py", line 149, in field
+    self._field = self.field_class(label=self.label, **field_kwargs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/fields.py", line 278, in __init__
+    super().__init__(*args, **kwargs)
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/fields.py", line 258, in __init__
+    super().__init__(*args, **kwargs)
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/forms/fields.py", line 859, in __init__
+    super().__init__(**kwargs)
+TypeError: Field.__init__() got an unexpected keyword argument 'conjoined'
+
+WARNING:root:============================================================
+23/Dec/2023 19:22:28   WARNING  Bad Request: /ordersearch/  None
+WARNING:django.request:Bad Request: /ordersearch/
+23/Dec/2023 19:22:28   WARNING  "GET /ordersearch/?time_in_sence=&time_in_until=&order_status=&repairer_id=51&customer_name=&customer_phone=&customer_telegram=&address_city=&adress_street_app=&address_num= HTTP/1.1" 400 120  None
+WARNING:django.server:"GET /ordersearch/?time_in_sence=&time_in_until=&order_status=&repairer_id=51&customer_name=&customer_phone=&customer_telegram=&address_city=&adress_street_app=&address_num= HTTP/1.1" 400 120
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2023-12-23 19:22:33.354412
+WARNING:root:ОШИБКА:        Field.__init__() got an unexpected keyword argument 'conjoined'
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/list.py", line 154, in get
+    self.object_list = self.get_queryset()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 265, in get_queryset
+    return self.filterset.qs
+           ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/filterset.py", line 229, in qs
+    self.errors
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/filterset.py", line 202, in errors
+    return self.form.errors
+           ^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/filterset.py", line 250, in form
+    Form = self.get_form_class()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/filterset.py", line 242, in get_form_class
+    [(name, filter_.field) for name, filter_ in self.filters.items()]
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/filterset.py", line 242, in <listcomp>
+    [(name, filter_.field) for name, filter_ in self.filters.items()]
+            ^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/filters.py", line 149, in field
+    self._field = self.field_class(label=self.label, **field_kwargs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/fields.py", line 278, in __init__
+    super().__init__(*args, **kwargs)
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/fields.py", line 258, in __init__
+    super().__init__(*args, **kwargs)
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/forms/fields.py", line 859, in __init__
+    super().__init__(**kwargs)
+TypeError: Field.__init__() got an unexpected keyword argument 'conjoined'
+
+WARNING:root:============================================================
+23/Dec/2023 19:22:33   WARNING  Bad Request: /ordersearch/  None
+WARNING:django.request:Bad Request: /ordersearch/
+23/Dec/2023 19:22:33   WARNING  "GET /ordersearch/?time_in_sence=&time_in_until=&order_status=&repairer_id=51&customer_name=&customer_phone=&customer_telegram=&address_city=&adress_street_app=&address_num= HTTP/1.1" 400 120  None
+WARNING:django.server:"GET /ordersearch/?time_in_sence=&time_in_until=&order_status=&repairer_id=51&customer_name=&customer_phone=&customer_telegram=&address_city=&adress_street_app=&address_num= HTTP/1.1" 400 120
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2023-12-23 19:22:34.015676
+WARNING:root:ОШИБКА:        Field.__init__() got an unexpected keyword argument 'conjoined'
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/list.py", line 154, in get
+    self.object_list = self.get_queryset()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 265, in get_queryset
+    return self.filterset.qs
+           ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/filterset.py", line 229, in qs
+    self.errors
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/filterset.py", line 202, in errors
+    return self.form.errors
+           ^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/filterset.py", line 250, in form
+    Form = self.get_form_class()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/filterset.py", line 242, in get_form_class
+    [(name, filter_.field) for name, filter_ in self.filters.items()]
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/filterset.py", line 242, in <listcomp>
+    [(name, filter_.field) for name, filter_ in self.filters.items()]
+            ^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/filters.py", line 149, in field
+    self._field = self.field_class(label=self.label, **field_kwargs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/fields.py", line 278, in __init__
+    super().__init__(*args, **kwargs)
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/fields.py", line 258, in __init__
+    super().__init__(*args, **kwargs)
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/forms/fields.py", line 859, in __init__
+    super().__init__(**kwargs)
+TypeError: Field.__init__() got an unexpected keyword argument 'conjoined'
+
+WARNING:root:============================================================
+23/Dec/2023 19:22:34   WARNING  Bad Request: /ordersearch/  None
+WARNING:django.request:Bad Request: /ordersearch/
+23/Dec/2023 19:22:34   WARNING  "GET /ordersearch/?time_in_sence=&time_in_until=&order_status=&repairer_id=51&customer_name=&customer_phone=&customer_telegram=&address_city=&adress_street_app=&address_num= HTTP/1.1" 400 120  None
+WARNING:django.server:"GET /ordersearch/?time_in_sence=&time_in_until=&order_status=&repairer_id=51&customer_name=&customer_phone=&customer_telegram=&address_city=&adress_street_app=&address_num= HTTP/1.1" 400 120
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2023-12-23 19:22:44.290867
+WARNING:root:ОШИБКА:        Field.__init__() got an unexpected keyword argument 'conjoined'
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/list.py", line 154, in get
+    self.object_list = self.get_queryset()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 265, in get_queryset
+    return self.filterset.qs
+           ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/filterset.py", line 229, in qs
+    self.errors
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/filterset.py", line 202, in errors
+    return self.form.errors
+           ^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/filterset.py", line 250, in form
+    Form = self.get_form_class()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/filterset.py", line 242, in get_form_class
+    [(name, filter_.field) for name, filter_ in self.filters.items()]
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/filterset.py", line 242, in <listcomp>
+    [(name, filter_.field) for name, filter_ in self.filters.items()]
+            ^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/filters.py", line 149, in field
+    self._field = self.field_class(label=self.label, **field_kwargs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/fields.py", line 278, in __init__
+    super().__init__(*args, **kwargs)
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/fields.py", line 258, in __init__
+    super().__init__(*args, **kwargs)
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/forms/fields.py", line 859, in __init__
+    super().__init__(**kwargs)
+TypeError: Field.__init__() got an unexpected keyword argument 'conjoined'
+
+WARNING:root:============================================================
+23/Dec/2023 19:22:44   WARNING  Bad Request: /ordersearch/  None
+WARNING:django.request:Bad Request: /ordersearch/
+23/Dec/2023 19:22:44   WARNING  "GET /ordersearch/ HTTP/1.1" 400 120  None
+WARNING:django.server:"GET /ordersearch/ HTTP/1.1" 400 120
+23/Dec/2023 19:27:53   WARNING  Not Found: /favicon.ico  None
+WARNING:django.request:Not Found: /favicon.ico
+23/Dec/2023 19:27:53   WARNING  "GET /favicon.ico HTTP/1.1" 404 16307  None
+WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 16307
+23/Dec/2023 19:28:39   WARNING  Not Found: /favicon.ico  None
+WARNING:django.request:Not Found: /favicon.ico
+23/Dec/2023 19:28:39   WARNING  "GET /favicon.ico HTTP/1.1" 404 16307  None
+WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 16307
+24/Dec/2023 13:02:10   WARNING  Not Found: /favicon.ico  None
+WARNING:django.request:Not Found: /favicon.ico
+24/Dec/2023 13:02:10   WARNING  "GET /favicon.ico HTTP/1.1" 404 16307  None
+WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 16307
+24/Dec/2023 17:12:01   WARNING  Not Found: /favicon.ico  None
+WARNING:django.request:Not Found: /favicon.ico
+24/Dec/2023 17:12:01   WARNING  "GET /favicon.ico HTTP/1.1" 404 16307  None
+WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 16307
+WARNING:urllib3.connectionpool:Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fed54cc5090>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /search?city=%D0%A2%D0%B1%D0%B8%D0%BB%D0%B8%D1%81%D0%B8&street=Stefane+Chrelashvili+St%2C+1&format=json&limit=1&addressdetails=1
+WARNING:urllib3.connectionpool:Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fed54b33a10>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /search?city=%D0%A2%D0%B1%D0%B8%D0%BB%D0%B8%D1%81%D0%B8&street=Stefane+Chrelashvili+St%2C+1&format=json&limit=1&addressdetails=1
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2023-12-24 17:16:07.871665
+WARNING:root:ОШИБКА:        HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?city=%D0%A2%D0%B1%D0%B8%D0%BB%D0%B8%D1%81%D0%B8&street=Stefane+Chrelashvili+St%2C+1&format=json&limit=1&addressdetails=1 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fed54ca82d0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/urllib3/util/connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/urllib3/connection.py", line 363, in connect
+    self.sock = conn = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7fed54ca82d0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/requests/adapters.py", line 487, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/urllib3/connectionpool.py", line 815, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/urllib3/connectionpool.py", line 815, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?city=%D0%A2%D0%B1%D0%B8%D0%BB%D0%B8%D1%81%D0%B8&street=Stefane+Chrelashvili+St%2C+1&format=json&limit=1&addressdetails=1 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fed54ca82d0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/geopy/adapters.py", line 457, in _request
+    resp = self.session.get(url, timeout=timeout, headers=headers)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/requests/sessions.py", line 600, in get
+    return self.request("GET", url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/requests/adapters.py", line 520, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?city=%D0%A2%D0%B1%D0%B8%D0%BB%D0%B8%D1%81%D0%B8&street=Stefane+Chrelashvili+St%2C+1&format=json&limit=1&addressdetails=1 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fed54ca82d0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/edit.py", line 184, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 65, in form_valid
+    form.save()
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/forms.py", line 83, in save
+    order.save()
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/base.py", line 892, in save_base
+    post_save.send(
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 176, in send
+    return [
+           ^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/signals.py", line 16, in send_post_new_order
+    location = set_coordinates_address(instance.address_street_app, 'Тбилиси', instance.address_num)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py", line 47, in set_coordinates_address
+    location = geolocator.geocode({'city': city, 'street': street+', '+app_num}, addressdetails=True)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/geopy/geocoders/nominatim.py", line 297, in geocode
+    return self._call_geocoder(url, callback, timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/geopy/geocoders/base.py", line 368, in _call_geocoder
+    result = self.adapter.get_json(url, timeout=timeout, headers=req_headers)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/geopy/adapters.py", line 447, in get_json
+    resp = self._request(url, timeout=timeout, headers=headers)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/geopy/adapters.py", line 469, in _request
+    raise GeocoderUnavailable(message)
+geopy.exc.GeocoderUnavailable: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?city=%D0%A2%D0%B1%D0%B8%D0%BB%D0%B8%D1%81%D0%B8&street=Stefane+Chrelashvili+St%2C+1&format=json&limit=1&addressdetails=1 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fed54ca82d0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+WARNING:root:============================================================
+24/Dec/2023 17:16:07   WARNING  Bad Request: /  None
+WARNING:django.request:Bad Request: /
+24/Dec/2023 18:18:53   WARNING  Not Found: /favicon.ico  None
+WARNING:django.request:Not Found: /favicon.ico
+24/Dec/2023 18:18:53   WARNING  "GET /favicon.ico HTTP/1.1" 404 16307  None
+WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 16307
+24/Dec/2023 19:08:40   WARNING  Not Found: /home  None
+WARNING:django.request:Not Found: /home
+24/Dec/2023 19:08:40   WARNING  "GET /home HTTP/1.1" 404 16279  None
+WARNING:django.server:"GET /home HTTP/1.1" 404 16279
+24/Dec/2023 19:10:02   WARNING  Not Found: /favicon.ico  None
+WARNING:django.request:Not Found: /favicon.ico
+24/Dec/2023 19:10:02   WARNING  "GET /favicon.ico HTTP/1.1" 404 16307  None
+WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 16307
+24/Dec/2023 20:58:00   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+24/Dec/2023 20:58:00   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+24/Dec/2023 20:58:00   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+24/Dec/2023 21:00:19   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+24/Dec/2023 21:00:19   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+24/Dec/2023 21:00:19   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+24/Dec/2023 21:17:22   WARNING  Not Found: /home  None
+WARNING:django.request:Not Found: /home
+24/Dec/2023 21:17:22   WARNING  "GET /home HTTP/1.1" 404 16279  None
+WARNING:django.server:"GET /home HTTP/1.1" 404 16279
+25/Dec/2023 05:26:29   WARNING  Not Found: /favicon.ico  None
+WARNING:django.request:Not Found: /favicon.ico
+25/Dec/2023 05:26:29   WARNING  "GET /favicon.ico HTTP/1.1" 404 16308  None
+WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 16308
+25/Dec/2023 17:05:10   WARNING  Not Found: /favicon.ico  None
+WARNING:django.request:Not Found: /favicon.ico
+25/Dec/2023 17:05:10   WARNING  "GET /favicon.ico HTTP/1.1" 404 16308  None
+WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 16308
+WARNING:urllib3.connectionpool:Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd010a88fd0>: Failed to establish a new connection: [Errno 101] Network is unreachable')': /search?city=%D0%A2%D0%B1%D0%B8%D0%BB%D0%B8%D1%81%D0%B8&street=%D1%83%D0%BB%D0%B8%D1%86%D0%B0+%D0%A8%D0%B0%D0%BB%D0%B2%D0%B0+%D0%9D%D1%83%D1%86%D1%83%D0%B1%D0%B8%D0%B4%D0%B7%D0%B5%2C+82&format=json&limit=1&addressdetails=1
+25/Dec/2023 17:44:31   WARNING  Not Found: /favicon.ico  None
+WARNING:django.request:Not Found: /favicon.ico
+25/Dec/2023 17:44:31   WARNING  "GET /favicon.ico HTTP/1.1" 404 16308  None
+WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 16308
