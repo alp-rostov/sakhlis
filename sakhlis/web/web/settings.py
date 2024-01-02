@@ -47,10 +47,10 @@ INSTALLED_APPS = [
     'django_filters',
     'debug_toolbar',
     'formtools',
-    # 'easy_maps',
     'app_site.apps.AppSiteConfig',
     'slippers',
     'crispy_forms',
+
 ]
 SITE_ID = 1
 
@@ -199,7 +199,7 @@ LOGGING = {
 
     'handlers': {
         'file': {
-            'level': 'WARNING',
+            'level': 'INFO',
             'class': 'logging.FileHandler',
             'filename': os.path.join(BASE_DIR, 'log.log'),
             'formatter': 'simple'
@@ -218,7 +218,7 @@ LOGGING = {
     'loggers': {
         'django': {
             'handlers': ['file'],
-            'level': 'WARNING',
+            'level': 'INFO',
             'propagate': True,
         },
 

@@ -1,57 +1,994 @@
-23/Dec/2023 16:15:42   WARNING  Not Found: /favicon.ico  None
+02/Jan/2024 08:33:05   INFO  "GET /login/ HTTP/1.1" 200 15539  None
+INFO:django.server:"GET /login/ HTTP/1.1" 200 15539
+02/Jan/2024 08:33:06   INFO  "POST /login/ HTTP/1.1" 302 0  None
+INFO:django.server:"POST /login/ HTTP/1.1" 302 0
+02/Jan/2024 08:33:06   INFO  "GET /list_order?work_status=RCV HTTP/1.1" 200 30691  None
+INFO:django.server:"GET /list_order?work_status=RCV HTTP/1.1" 200 30691
+02/Jan/2024 08:33:49   INFO  "GET /logout/ HTTP/1.1" 302 0  None
+INFO:django.server:"GET /logout/ HTTP/1.1" 302 0
+02/Jan/2024 08:33:50   INFO  "GET / HTTP/1.1" 200 43140  None
+INFO:django.server:"GET / HTTP/1.1" 200 43140
+02/Jan/2024 08:33:50   INFO  "GET /media/images/muzg-na-chas.jpg HTTP/1.1" 200 323830  None
+INFO:django.server:"GET /media/images/muzg-na-chas.jpg HTTP/1.1" 200 323830
+02/Jan/2024 09:14:08   INFO  "GET / HTTP/1.1" 200 43140  None
+INFO:django.server:"GET / HTTP/1.1" 200 43140
+02/Jan/2024 09:14:09   INFO  "GET /login/ HTTP/1.1" 200 15541  None
+INFO:django.server:"GET /login/ HTTP/1.1" 200 15541
+02/Jan/2024 09:14:11   INFO  "POST /login/ HTTP/1.1" 302 0  None
+INFO:django.server:"POST /login/ HTTP/1.1" 302 0
+02/Jan/2024 09:14:11   INFO  "GET /list_order?work_status=RCV HTTP/1.1" 200 30691  None
+INFO:django.server:"GET /list_order?work_status=RCV HTTP/1.1" 200 30691
+02/Jan/2024 09:14:17   INFO  "GET /list_order?work_status=END HTTP/1.1" 200 54563  None
+INFO:django.server:"GET /list_order?work_status=END HTTP/1.1" 200 54563
+02/Jan/2024 09:14:18   INFO  "GET /user/51 HTTP/1.1" 200 16508  None
+INFO:django.server:"GET /user/51 HTTP/1.1" 200 16508
+02/Jan/2024 09:14:18   INFO  "GET /media/images/%D1%8F.jpeg HTTP/1.1" 200 521837  None
+INFO:django.server:"GET /media/images/%D1%8F.jpeg HTTP/1.1" 200 521837
+02/Jan/2024 09:14:22   INFO  "GET /stat/ HTTP/1.1" 200 195690  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 195690
+02/Jan/2024 09:14:22   INFO  "GET /list_order?work_status=END HTTP/1.1" 200 54563  None
+INFO:django.server:"GET /list_order?work_status=END HTTP/1.1" 200 54563
+02/Jan/2024 09:14:56   INFO  "GET /stat/ HTTP/1.1" 200 195691  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 195691
+02/Jan/2024 09:15:05   INFO  "GET /user/51 HTTP/1.1" 200 16508  None
+INFO:django.server:"GET /user/51 HTTP/1.1" 200 16508
+02/Jan/2024 09:15:14   INFO  "GET /list_order?work_status=END HTTP/1.1" 200 54563  None
+INFO:django.server:"GET /list_order?work_status=END HTTP/1.1" 200 54563
+02/Jan/2024 09:15:15   INFO  "GET /ordersearch/ HTTP/1.1" 200 56309  None
+INFO:django.server:"GET /ordersearch/ HTTP/1.1" 200 56309
+02/Jan/2024 09:15:21   INFO  "GET / HTTP/1.1" 200 43209  None
+INFO:django.server:"GET / HTTP/1.1" 200 43209
+02/Jan/2024 09:15:31   INFO  "GET /list_order HTTP/1.1" 200 54524  None
+INFO:django.server:"GET /list_order HTTP/1.1" 200 54524
+02/Jan/2024 09:15:32   INFO  "GET /list_order?work_status=END HTTP/1.1" 200 54563  None
+INFO:django.server:"GET /list_order?work_status=END HTTP/1.1" 200 54563
+02/Jan/2024 09:15:33   INFO  "GET /ordersearch/ HTTP/1.1" 200 56309  None
+INFO:django.server:"GET /ordersearch/ HTTP/1.1" 200 56309
+02/Jan/2024 09:18:02   INFO  "GET /list_order HTTP/1.1" 200 54524  None
+INFO:django.server:"GET /list_order HTTP/1.1" 200 54524
+02/Jan/2024 09:18:06   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 09:18:06   INFO  "GET /static/js/wow.min.js.map HTTP/1.1" 200 61630  None
+INFO:django.server:"GET /static/js/wow.min.js.map HTTP/1.1" 200 61630
+02/Jan/2024 09:18:06   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 09:18:06   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 09:18:53   INFO  "GET /list_order HTTP/1.1" 200 54523  None
+INFO:django.server:"GET /list_order HTTP/1.1" 200 54523
+02/Jan/2024 09:18:53   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 09:18:53   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 09:18:54   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 09:21:54   INFO  "GET /list_order?work_status=SND HTTP/1.1" 200 25876  None
+INFO:django.server:"GET /list_order?work_status=SND HTTP/1.1" 200 25876
+02/Jan/2024 09:21:55   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 09:21:55   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 09:21:55   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 09:21:59   INFO  "GET / HTTP/1.1" 200 43209  None
+INFO:django.server:"GET / HTTP/1.1" 200 43209
+02/Jan/2024 09:21:59   INFO  "GET /media/images/muzg-na-chas.jpg HTTP/1.1" 200 323830  None
+INFO:django.server:"GET /media/images/muzg-na-chas.jpg HTTP/1.1" 200 323830
+02/Jan/2024 09:21:59   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 09:21:59   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 09:21:59   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 09:22:12   INFO  "GET /list_order HTTP/1.1" 200 54523  None
+INFO:django.server:"GET /list_order HTTP/1.1" 200 54523
+02/Jan/2024 09:22:12   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 09:22:12   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 09:22:13   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 09:23:16   INFO  "GET /list_order HTTP/1.1" 200 54080  None
+INFO:django.server:"GET /list_order HTTP/1.1" 200 54080
+02/Jan/2024 09:23:17   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 09:23:17   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 09:23:17   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 09:23:18   INFO  "GET /list_order HTTP/1.1" 200 54080  None
+INFO:django.server:"GET /list_order HTTP/1.1" 200 54080
+02/Jan/2024 09:23:18   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 09:23:18   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 09:23:18   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 09:30:47   INFO  "GET /list_order/1126 HTTP/1.1" 200 24691  None
+INFO:django.server:"GET /list_order/1126 HTTP/1.1" 200 24691
+02/Jan/2024 09:30:48   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 09:30:48   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 09:30:48   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 09:33:46   INFO  "GET /list_order/1126 HTTP/1.1" 200 24760  None
+INFO:django.server:"GET /list_order/1126 HTTP/1.1" 200 24760
+02/Jan/2024 09:33:46   WARNING  "GET /static/fonts/ HTTP/1.1" 404 1837  None
+WARNING:django.server:"GET /static/fonts/ HTTP/1.1" 404 1837
+02/Jan/2024 09:33:46   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 09:33:46   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 09:33:46   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 09:33:47   INFO  "GET /list_order/1126 HTTP/1.1" 200 24760  None
+INFO:django.server:"GET /list_order/1126 HTTP/1.1" 200 24760
+02/Jan/2024 09:33:47   WARNING  "GET /static/fonts/ HTTP/1.1" 404 1837  None
+WARNING:django.server:"GET /static/fonts/ HTTP/1.1" 404 1837
+02/Jan/2024 09:33:48   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 09:33:48   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 09:33:48   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 09:34:12   INFO  "GET /list_order/1126 HTTP/1.1" 200 24780  None
+INFO:django.server:"GET /list_order/1126 HTTP/1.1" 200 24780
+02/Jan/2024 09:34:12   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 09:34:12   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 09:34:13   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 09:34:36   INFO  "GET /list_order/1126 HTTP/1.1" 200 24765  None
+INFO:django.server:"GET /list_order/1126 HTTP/1.1" 200 24765
+02/Jan/2024 09:34:36   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 09:34:36   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 09:34:36   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 09:34:58   INFO  "GET /list_order/1126 HTTP/1.1" 200 24765  None
+INFO:django.server:"GET /list_order/1126 HTTP/1.1" 200 24765
+02/Jan/2024 09:34:58   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 09:34:58   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 09:34:58   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 09:35:01   INFO  "GET /list_order?work_status=SND HTTP/1.1" 200 25507  None
+INFO:django.server:"GET /list_order?work_status=SND HTTP/1.1" 200 25507
+02/Jan/2024 09:35:01   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 09:35:01   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 09:35:02   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 09:35:34   INFO  "GET / HTTP/1.1" 200 43209  None
+INFO:django.server:"GET / HTTP/1.1" 200 43209
+02/Jan/2024 09:35:51   INFO  "GET / HTTP/1.1" 200 43209  None
+INFO:django.server:"GET / HTTP/1.1" 200 43209
+02/Jan/2024 09:35:53   INFO  "GET / HTTP/1.1" 200 43209  None
+INFO:django.server:"GET / HTTP/1.1" 200 43209
+02/Jan/2024 09:35:54   INFO  "GET / HTTP/1.1" 200 43209  None
+INFO:django.server:"GET / HTTP/1.1" 200 43209
+02/Jan/2024 09:36:05   INFO  "GET / HTTP/1.1" 200 43140  None
+INFO:django.server:"GET / HTTP/1.1" 200 43140
+02/Jan/2024 09:36:05   INFO  "GET /static/css/owl.carousel.min.css HTTP/1.1" 200 4376  None
+INFO:django.server:"GET /static/css/owl.carousel.min.css HTTP/1.1" 200 4376
+02/Jan/2024 09:36:05   INFO  "GET /static/css/custom.css HTTP/1.1" 200 11590  None
+INFO:django.server:"GET /static/css/custom.css HTTP/1.1" 200 11590
+02/Jan/2024 09:36:05   INFO  "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13404  None
+INFO:django.server:"GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13404
+02/Jan/2024 09:36:05   INFO  "GET /static/css/fonts.css HTTP/1.1" 200 68940  None
+INFO:django.server:"GET /static/css/fonts.css HTTP/1.1" 200 68940
+02/Jan/2024 09:36:05   INFO  "GET /static/css/bootstrap.min.css HTTP/1.1" 200 140936  None
+INFO:django.server:"GET /static/css/bootstrap.min.css HTTP/1.1" 200 140936
+02/Jan/2024 09:36:05   INFO  "GET /static/css/mdb.min.css HTTP/1.1" 200 254562  None
+INFO:django.server:"GET /static/css/mdb.min.css HTTP/1.1" 200 254562
+02/Jan/2024 09:36:05   INFO  "GET /static/images/flag_ge.png HTTP/1.1" 200 1771  None
+INFO:django.server:"GET /static/images/flag_ge.png HTTP/1.1" 200 1771
+02/Jan/2024 09:36:05   INFO  "GET /static/images/flag_en.png HTTP/1.1" 200 3087  None
+INFO:django.server:"GET /static/images/flag_en.png HTTP/1.1" 200 3087
+02/Jan/2024 09:36:05   INFO  "GET /static/images/telegram.gif HTTP/1.1" 200 38309  None
+INFO:django.server:"GET /static/images/telegram.gif HTTP/1.1" 200 38309
+02/Jan/2024 09:36:05   INFO  "GET /static/images/whatsapp.png HTTP/1.1" 200 167171  None
+INFO:django.server:"GET /static/images/whatsapp.png HTTP/1.1" 200 167171
+02/Jan/2024 09:36:05   INFO  "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 200 87412  None
+INFO:django.server:"GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 200 87412
+02/Jan/2024 09:36:05   INFO  "GET /static/images/instagram.png HTTP/1.1" 200 79716  None
+INFO:django.server:"GET /static/images/instagram.png HTTP/1.1" 200 79716
+02/Jan/2024 09:36:05   INFO  "GET /static/js/bootstrap.min.js HTTP/1.1" 200 51039  None
+INFO:django.server:"GET /static/js/bootstrap.min.js HTTP/1.1" 200 51039
+02/Jan/2024 09:36:05   INFO  "GET /static/js/mdb.min.js HTTP/1.1" 200 207332  None
+INFO:django.server:"GET /static/js/mdb.min.js HTTP/1.1" 200 207332
+02/Jan/2024 09:36:05   INFO  "GET /static/js/wow.min.js HTTP/1.1" 200 14184  None
+INFO:django.server:"GET /static/js/wow.min.js HTTP/1.1" 200 14184
+02/Jan/2024 09:36:05   INFO  "GET /static/js/owl.carousel.min.js HTTP/1.1" 200 44342  None
+INFO:django.server:"GET /static/js/owl.carousel.min.js HTTP/1.1" 200 44342
+02/Jan/2024 09:36:05   INFO  "GET /static/js/counter.js HTTP/1.1" 200 4068  None
+INFO:django.server:"GET /static/js/counter.js HTTP/1.1" 200 4068
+02/Jan/2024 09:36:05   INFO  "GET /static/js/typed.min.js HTTP/1.1" 200 11595  None
+INFO:django.server:"GET /static/js/typed.min.js HTTP/1.1" 200 11595
+02/Jan/2024 09:36:06   INFO  "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 200 12667  None
+INFO:django.server:"GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 200 12667
+02/Jan/2024 09:36:06   INFO  "GET /static/js/maskedinput.min.js HTTP/1.1" 200 4168  None
+INFO:django.server:"GET /static/js/maskedinput.min.js HTTP/1.1" 200 4168
+02/Jan/2024 09:36:06   INFO  "GET /static/js/custom.js HTTP/1.1" 200 12740  None
+INFO:django.server:"GET /static/js/custom.js HTTP/1.1" 200 12740
+02/Jan/2024 09:36:06   INFO  "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12664  None
+INFO:django.server:"GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12664
+02/Jan/2024 09:36:06   INFO  "GET /static/fonts/broken-cable.svg HTTP/1.1" 200 2874  None
+INFO:django.server:"GET /static/fonts/broken-cable.svg HTTP/1.1" 200 2874
+02/Jan/2024 09:36:06   INFO  "GET /static/fonts/leak.svg HTTP/1.1" 200 756  None
+INFO:django.server:"GET /static/fonts/leak.svg HTTP/1.1" 200 756
+02/Jan/2024 09:36:06   INFO  "GET /static/fonts/living-room.svg HTTP/1.1" 200 6568  None
+INFO:django.server:"GET /static/fonts/living-room.svg HTTP/1.1" 200 6568
+02/Jan/2024 09:36:06   INFO  "GET /static/fonts/washing-machine.svg HTTP/1.1" 200 1667  None
+INFO:django.server:"GET /static/fonts/washing-machine.svg HTTP/1.1" 200 1667
+02/Jan/2024 09:36:06   INFO  "GET /static/fonts/3d-buildings.svg HTTP/1.1" 200 9453  None
+INFO:django.server:"GET /static/fonts/3d-buildings.svg HTTP/1.1" 200 9453
+02/Jan/2024 09:36:06   INFO  "GET /static/images/1.jpg HTTP/1.1" 200 68159  None
+INFO:django.server:"GET /static/images/1.jpg HTTP/1.1" 200 68159
+02/Jan/2024 09:36:06   INFO  "GET /static/images/2.jpg HTTP/1.1" 200 73588  None
+INFO:django.server:"GET /static/images/2.jpg HTTP/1.1" 200 73588
+02/Jan/2024 09:36:06   INFO  "GET /static/images/3.jpg HTTP/1.1" 200 64252  None
+INFO:django.server:"GET /static/images/3.jpg HTTP/1.1" 200 64252
+02/Jan/2024 09:36:06   INFO  "GET /static/images/o-mastere-na-chas.png HTTP/1.1" 200 149377  None
+INFO:django.server:"GET /static/images/o-mastere-na-chas.png HTTP/1.1" 200 149377
+02/Jan/2024 09:36:06   INFO  "GET /media/images/muzg-na-chas.jpg HTTP/1.1" 200 323830  None
+INFO:django.server:"GET /media/images/muzg-na-chas.jpg HTTP/1.1" 200 323830
+02/Jan/2024 09:36:06   INFO  "GET /static/images/underline1.png HTTP/1.1" 200 645  None
+INFO:django.server:"GET /static/images/underline1.png HTTP/1.1" 200 645
+02/Jan/2024 09:36:06   INFO  "GET /static/images/master-na-chas_1.jpg HTTP/1.1" 200 323239  None
+INFO:django.server:"GET /static/images/master-na-chas_1.jpg HTTP/1.1" 200 323239
+02/Jan/2024 09:36:06   INFO  "GET /static/images/usluga-master-na-chas.jpg HTTP/1.1" 200 159701  None
+INFO:django.server:"GET /static/images/usluga-master-na-chas.jpg HTTP/1.1" 200 159701
+02/Jan/2024 09:36:06   INFO  "GET /static/fonts/Roboto-Bold.woff2 HTTP/1.1" 200 315  None
+INFO:django.server:"GET /static/fonts/Roboto-Bold.woff2 HTTP/1.1" 200 315
+02/Jan/2024 09:36:06   INFO  "GET /static/fonts/fa-brands-400.woff2 HTTP/1.1" 200 74768  None
+INFO:django.server:"GET /static/fonts/fa-brands-400.woff2 HTTP/1.1" 200 74768
+02/Jan/2024 09:36:06   INFO  "GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 200 74256  None
+INFO:django.server:"GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 200 74256
+02/Jan/2024 09:36:06   INFO  "GET /static/fonts/Roboto-Medium.woff2 HTTP/1.1" 200 315  None
+INFO:django.server:"GET /static/fonts/Roboto-Medium.woff2 HTTP/1.1" 200 315
+02/Jan/2024 09:36:06   INFO  "GET /static/fonts/fa-regular-400.woff2 HTTP/1.1" 200 13552  None
+INFO:django.server:"GET /static/fonts/fa-regular-400.woff2 HTTP/1.1" 200 13552
+02/Jan/2024 09:36:06   INFO  "GET /static/fonts/Roboto-Regular.woff2 HTTP/1.1" 200 315  None
+INFO:django.server:"GET /static/fonts/Roboto-Regular.woff2 HTTP/1.1" 200 315
+02/Jan/2024 09:36:06   INFO  "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43  None
+INFO:django.server:"GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+02/Jan/2024 09:36:06   INFO  "GET /static/fonts/Roboto-Bold.woff HTTP/1.1" 200 315  None
+INFO:django.server:"GET /static/fonts/Roboto-Bold.woff HTTP/1.1" 200 315
+02/Jan/2024 09:36:06   INFO  "GET /static/fonts/Roboto-Medium.woff HTTP/1.1" 200 315  None
+INFO:django.server:"GET /static/fonts/Roboto-Medium.woff HTTP/1.1" 200 315
+02/Jan/2024 09:36:06   INFO  "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527  None
+INFO:django.server:"GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+02/Jan/2024 09:36:06   INFO  "GET /static/fonts/Roboto-Regular.woff HTTP/1.1" 200 315  None
+INFO:django.server:"GET /static/fonts/Roboto-Regular.woff HTTP/1.1" 200 315
+02/Jan/2024 09:36:06   INFO  "GET /static/fonts/Roboto-Medium.ttf HTTP/1.1" 200 315  None
+INFO:django.server:"GET /static/fonts/Roboto-Medium.ttf HTTP/1.1" 200 315
+02/Jan/2024 09:36:06   INFO  "GET /static/fonts/Roboto-Bold.ttf HTTP/1.1" 200 315  None
+INFO:django.server:"GET /static/fonts/Roboto-Bold.ttf HTTP/1.1" 200 315
+02/Jan/2024 09:36:06   INFO  "GET /static/fonts/Roboto-Regular.ttf HTTP/1.1" 200 315  None
+INFO:django.server:"GET /static/fonts/Roboto-Regular.ttf HTTP/1.1" 200 315
+02/Jan/2024 09:36:09   INFO  "GET / HTTP/1.1" 200 43140  None
+INFO:django.server:"GET / HTTP/1.1" 200 43140
+02/Jan/2024 09:36:24   INFO  "GET / HTTP/1.1" 200 43140  None
+INFO:django.server:"GET / HTTP/1.1" 200 43140
+02/Jan/2024 09:36:25   INFO  "GET / HTTP/1.1" 200 43140  None
+INFO:django.server:"GET / HTTP/1.1" 200 43140
+02/Jan/2024 09:36:52   INFO  "GET /login/ HTTP/1.1" 200 15100  None
+INFO:django.server:"GET /login/ HTTP/1.1" 200 15100
+02/Jan/2024 09:36:52   INFO  "GET /static/fonts/Roboto-Light.woff2 HTTP/1.1" 200 315  None
+INFO:django.server:"GET /static/fonts/Roboto-Light.woff2 HTTP/1.1" 200 315
+02/Jan/2024 09:36:52   INFO  "GET /static/fonts/Roboto-Light.woff HTTP/1.1" 200 315  None
+INFO:django.server:"GET /static/fonts/Roboto-Light.woff HTTP/1.1" 200 315
+02/Jan/2024 09:36:52   INFO  "GET /static/fonts/Roboto-Light.ttf HTTP/1.1" 200 315  None
+INFO:django.server:"GET /static/fonts/Roboto-Light.ttf HTTP/1.1" 200 315
+02/Jan/2024 09:36:56   INFO  "POST /login/ HTTP/1.1" 302 0  None
+INFO:django.server:"POST /login/ HTTP/1.1" 302 0
+02/Jan/2024 09:36:56   INFO  "GET /list_order?work_status=RCV HTTP/1.1" 200 30250  None
+INFO:django.server:"GET /list_order?work_status=RCV HTTP/1.1" 200 30250
+02/Jan/2024 09:37:19   INFO  "GET /__debug__/render_panel/?store_id=24e4d219d9114096ac5b6e610d7dc323&panel_id=StaticFilesPanel HTTP/1.1" 200 55022  None
+INFO:django.server:"GET /__debug__/render_panel/?store_id=24e4d219d9114096ac5b6e610d7dc323&panel_id=StaticFilesPanel HTTP/1.1" 200 55022
+02/Jan/2024 09:37:28   INFO  "GET /__debug__/render_panel/?store_id=24e4d219d9114096ac5b6e610d7dc323&panel_id=SignalsPanel HTTP/1.1" 200 2516  None
+INFO:django.server:"GET /__debug__/render_panel/?store_id=24e4d219d9114096ac5b6e610d7dc323&panel_id=SignalsPanel HTTP/1.1" 200 2516
+02/Jan/2024 09:37:30   INFO  "GET /__debug__/render_panel/?store_id=24e4d219d9114096ac5b6e610d7dc323&panel_id=TimerPanel HTTP/1.1" 200 2263  None
+INFO:django.server:"GET /__debug__/render_panel/?store_id=24e4d219d9114096ac5b6e610d7dc323&panel_id=TimerPanel HTTP/1.1" 200 2263
+02/Jan/2024 09:37:30   INFO  "GET /static/debug_toolbar/js/timer.js HTTP/1.1" 200 3686  None
+INFO:django.server:"GET /static/debug_toolbar/js/timer.js HTTP/1.1" 200 3686
+02/Jan/2024 09:37:34   INFO  "GET /__debug__/render_panel/?store_id=24e4d219d9114096ac5b6e610d7dc323&panel_id=HistoryPanel HTTP/1.1" 200 42711  None
+INFO:django.server:"GET /__debug__/render_panel/?store_id=24e4d219d9114096ac5b6e610d7dc323&panel_id=HistoryPanel HTTP/1.1" 200 42711
+02/Jan/2024 09:37:34   INFO  "GET /static/debug_toolbar/js/history.js HTTP/1.1" 200 3330  None
+INFO:django.server:"GET /static/debug_toolbar/js/history.js HTTP/1.1" 200 3330
+02/Jan/2024 09:37:50   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 09:37:50   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 09:37:50   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 09:40:13   INFO  "GET / HTTP/1.1" 200 43209  None
+INFO:django.server:"GET / HTTP/1.1" 200 43209
+02/Jan/2024 09:40:13   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 09:40:13   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 09:40:13   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 09:40:13   INFO  "GET / HTTP/1.1" 200 43209  None
+INFO:django.server:"GET / HTTP/1.1" 200 43209
+02/Jan/2024 09:40:14   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 09:40:14   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 09:40:14   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 09:40:16   INFO  "GET / HTTP/1.1" 200 43209  None
+INFO:django.server:"GET / HTTP/1.1" 200 43209
+02/Jan/2024 09:40:16   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 09:40:16   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 09:40:16   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 09:40:26   INFO  "GET / HTTP/1.1" 200 43140  None
+INFO:django.server:"GET / HTTP/1.1" 200 43140
+02/Jan/2024 09:40:26   INFO  "GET /static/css/mdb.min.css HTTP/1.1" 200 254562  None
+INFO:django.server:"GET /static/css/mdb.min.css HTTP/1.1" 200 254562
+02/Jan/2024 09:40:26   INFO  "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13404  None
+INFO:django.server:"GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13404
+02/Jan/2024 09:40:26   INFO  "GET /static/css/owl.carousel.min.css HTTP/1.1" 200 4376  None
+INFO:django.server:"GET /static/css/owl.carousel.min.css HTTP/1.1" 200 4376
+02/Jan/2024 09:40:26   INFO  "GET /static/css/bootstrap.min.css HTTP/1.1" 200 140936  None
+INFO:django.server:"GET /static/css/bootstrap.min.css HTTP/1.1" 200 140936
+02/Jan/2024 09:40:26   INFO  "GET /static/css/custom.css HTTP/1.1" 200 11110  None
+INFO:django.server:"GET /static/css/custom.css HTTP/1.1" 200 11110
+02/Jan/2024 09:40:26   INFO  "GET /static/images/flag_en.png HTTP/1.1" 200 3087  None
+INFO:django.server:"GET /static/images/flag_en.png HTTP/1.1" 200 3087
+02/Jan/2024 09:40:26   INFO  "GET /static/images/flag_ge.png HTTP/1.1" 200 1771  None
+02/Jan/2024 09:40:26   INFO  "GET /static/css/fonts.css HTTP/1.1" 200 68940  None
+INFO:django.server:"GET /static/css/fonts.css HTTP/1.1" 200 68940
+INFO:django.server:"GET /static/images/flag_ge.png HTTP/1.1" 200 1771
+02/Jan/2024 09:40:26   INFO  "GET /static/images/telegram.gif HTTP/1.1" 200 38309  None
+INFO:django.server:"GET /static/images/telegram.gif HTTP/1.1" 200 38309
+02/Jan/2024 09:40:26   INFO  "GET /static/images/instagram.png HTTP/1.1" 200 79716  None
+INFO:django.server:"GET /static/images/instagram.png HTTP/1.1" 200 79716
+02/Jan/2024 09:40:26   INFO  "GET /static/images/whatsapp.png HTTP/1.1" 200 167171  None
+INFO:django.server:"GET /static/images/whatsapp.png HTTP/1.1" 200 167171
+02/Jan/2024 09:40:26   INFO  "GET /static/js/bootstrap.min.js HTTP/1.1" 200 51039  None
+INFO:django.server:"GET /static/js/bootstrap.min.js HTTP/1.1" 200 51039
+02/Jan/2024 09:40:26   INFO  "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 200 87412  None
+INFO:django.server:"GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 200 87412
+02/Jan/2024 09:40:26   INFO  "GET /static/js/wow.min.js HTTP/1.1" 200 14184  None
+INFO:django.server:"GET /static/js/wow.min.js HTTP/1.1" 200 14184
+02/Jan/2024 09:40:26   INFO  "GET /static/js/mdb.min.js HTTP/1.1" 200 207332  None
+INFO:django.server:"GET /static/js/mdb.min.js HTTP/1.1" 200 207332
+02/Jan/2024 09:40:26   INFO  "GET /static/js/owl.carousel.min.js HTTP/1.1" 200 44342  None
+INFO:django.server:"GET /static/js/owl.carousel.min.js HTTP/1.1" 200 44342
+02/Jan/2024 09:40:26   INFO  "GET /static/js/counter.js HTTP/1.1" 200 4068  None
+INFO:django.server:"GET /static/js/counter.js HTTP/1.1" 200 4068
+02/Jan/2024 09:40:26   INFO  "GET /static/js/typed.min.js HTTP/1.1" 200 11595  None
+INFO:django.server:"GET /static/js/typed.min.js HTTP/1.1" 200 11595
+02/Jan/2024 09:40:26   INFO  "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 200 12667  None
+INFO:django.server:"GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 200 12667
+02/Jan/2024 09:40:26   INFO  "GET /static/js/maskedinput.min.js HTTP/1.1" 200 4168  None
+INFO:django.server:"GET /static/js/maskedinput.min.js HTTP/1.1" 200 4168
+02/Jan/2024 09:40:26   INFO  "GET /static/js/custom.js HTTP/1.1" 200 12740  None
+INFO:django.server:"GET /static/js/custom.js HTTP/1.1" 200 12740
+02/Jan/2024 09:40:26   INFO  "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12664  None
+INFO:django.server:"GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12664
+02/Jan/2024 09:40:26   INFO  "GET /static/fonts/broken-cable.svg HTTP/1.1" 200 2874  None
+INFO:django.server:"GET /static/fonts/broken-cable.svg HTTP/1.1" 200 2874
+02/Jan/2024 09:40:26   INFO  "GET /static/fonts/leak.svg HTTP/1.1" 200 756  None
+INFO:django.server:"GET /static/fonts/leak.svg HTTP/1.1" 200 756
+02/Jan/2024 09:40:26   INFO  "GET /static/fonts/living-room.svg HTTP/1.1" 200 6568  None
+INFO:django.server:"GET /static/fonts/living-room.svg HTTP/1.1" 200 6568
+02/Jan/2024 09:40:26   INFO  "GET /static/fonts/washing-machine.svg HTTP/1.1" 200 1667  None
+INFO:django.server:"GET /static/fonts/washing-machine.svg HTTP/1.1" 200 1667
+02/Jan/2024 09:40:26   INFO  "GET /static/fonts/3d-buildings.svg HTTP/1.1" 200 9453  None
+INFO:django.server:"GET /static/fonts/3d-buildings.svg HTTP/1.1" 200 9453
+02/Jan/2024 09:40:26   INFO  "GET /static/images/1.jpg HTTP/1.1" 200 68159  None
+INFO:django.server:"GET /static/images/1.jpg HTTP/1.1" 200 68159
+02/Jan/2024 09:40:26   INFO  "GET /static/images/2.jpg HTTP/1.1" 200 73588  None
+INFO:django.server:"GET /static/images/2.jpg HTTP/1.1" 200 73588
+02/Jan/2024 09:40:27   INFO  "GET /static/images/3.jpg HTTP/1.1" 200 64252  None
+INFO:django.server:"GET /static/images/3.jpg HTTP/1.1" 200 64252
+02/Jan/2024 09:40:27   INFO  "GET /static/images/o-mastere-na-chas.png HTTP/1.1" 200 149377  None
+INFO:django.server:"GET /static/images/o-mastere-na-chas.png HTTP/1.1" 200 149377
+02/Jan/2024 09:40:27   INFO  "GET /media/images/muzg-na-chas.jpg HTTP/1.1" 200 323830  None
+INFO:django.server:"GET /media/images/muzg-na-chas.jpg HTTP/1.1" 200 323830
+02/Jan/2024 09:40:27   INFO  "GET /static/images/underline1.png HTTP/1.1" 200 645  None
+INFO:django.server:"GET /static/images/underline1.png HTTP/1.1" 200 645
+02/Jan/2024 09:40:27   INFO  "GET /static/images/usluga-master-na-chas.jpg HTTP/1.1" 200 159701  None
+INFO:django.server:"GET /static/images/usluga-master-na-chas.jpg HTTP/1.1" 200 159701
+02/Jan/2024 09:40:27   INFO  "GET /static/images/master-na-chas_1.jpg HTTP/1.1" 200 323239  None
+INFO:django.server:"GET /static/images/master-na-chas_1.jpg HTTP/1.1" 200 323239
+02/Jan/2024 09:40:27   INFO  "GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 200 74256  None
+INFO:django.server:"GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 200 74256
+02/Jan/2024 09:40:27   INFO  "GET /static/fonts/Roboto-Regular.woff2 HTTP/1.1" 200 315  None
+INFO:django.server:"GET /static/fonts/Roboto-Regular.woff2 HTTP/1.1" 200 315
+02/Jan/2024 09:40:27   INFO  "GET /static/fonts/fa-regular-400.woff2 HTTP/1.1" 200 13552  None
+INFO:django.server:"GET /static/fonts/fa-regular-400.woff2 HTTP/1.1" 200 13552
+02/Jan/2024 09:40:27   INFO  "GET /static/fonts/fa-brands-400.woff2 HTTP/1.1" 200 74768  None
+INFO:django.server:"GET /static/fonts/fa-brands-400.woff2 HTTP/1.1" 200 74768
+02/Jan/2024 09:40:27   INFO  "GET /static/fonts/Roboto-Medium.woff2 HTTP/1.1" 200 315  None
+INFO:django.server:"GET /static/fonts/Roboto-Medium.woff2 HTTP/1.1" 200 315
+02/Jan/2024 09:40:27   INFO  "GET /static/fonts/Roboto-Bold.woff2 HTTP/1.1" 200 315  None
+INFO:django.server:"GET /static/fonts/Roboto-Bold.woff2 HTTP/1.1" 200 315
+02/Jan/2024 09:40:28   INFO  "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43  None
+INFO:django.server:"GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+02/Jan/2024 09:40:28   INFO  "GET /static/fonts/Roboto-Regular.woff HTTP/1.1" 200 315  None
+INFO:django.server:"GET /static/fonts/Roboto-Regular.woff HTTP/1.1" 200 315
+02/Jan/2024 09:40:28   INFO  "GET /static/fonts/Roboto-Medium.woff HTTP/1.1" 200 315  None
+INFO:django.server:"GET /static/fonts/Roboto-Medium.woff HTTP/1.1" 200 315
+02/Jan/2024 09:40:28   INFO  "GET /static/fonts/Roboto-Bold.woff HTTP/1.1" 200 315  None
+INFO:django.server:"GET /static/fonts/Roboto-Bold.woff HTTP/1.1" 200 315
+02/Jan/2024 09:40:28   INFO  "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527  None
+INFO:django.server:"GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+02/Jan/2024 09:40:28   INFO  "GET /static/fonts/Roboto-Bold.ttf HTTP/1.1" 200 315  None
+INFO:django.server:"GET /static/fonts/Roboto-Bold.ttf HTTP/1.1" 200 315
+02/Jan/2024 09:40:28   INFO  "GET /static/fonts/Roboto-Regular.ttf HTTP/1.1" 200 315  None
+INFO:django.server:"GET /static/fonts/Roboto-Regular.ttf HTTP/1.1" 200 315
+02/Jan/2024 09:40:28   INFO  "GET /static/fonts/Roboto-Medium.ttf HTTP/1.1" 200 315  None
+INFO:django.server:"GET /static/fonts/Roboto-Medium.ttf HTTP/1.1" 200 315
+02/Jan/2024 09:40:33   INFO  "GET /static/css/custom.css HTTP/1.1" 304 0  None
+INFO:django.server:"GET /static/css/custom.css HTTP/1.1" 304 0
+02/Jan/2024 09:40:33   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 09:40:33   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 09:40:33   INFO  "GET /static/js/wow.min.js.map HTTP/1.1" 200 61630  None
+INFO:django.server:"GET /static/js/wow.min.js.map HTTP/1.1" 200 61630
+02/Jan/2024 09:40:33   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 09:40:43   INFO  "GET / HTTP/1.1" 200 43140  None
+INFO:django.server:"GET / HTTP/1.1" 200 43140
+02/Jan/2024 09:40:43   INFO  "GET /static/css/custom.css HTTP/1.1" 304 0  None
+INFO:django.server:"GET /static/css/custom.css HTTP/1.1" 304 0
+02/Jan/2024 09:40:43   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 09:40:43   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 09:40:43   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 09:40:43   INFO  "GET / HTTP/1.1" 200 43140  None
+INFO:django.server:"GET / HTTP/1.1" 200 43140
+02/Jan/2024 09:40:43   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 09:40:43   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 09:40:43   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 09:40:43   INFO  "GET / HTTP/1.1" 200 43140  None
+INFO:django.server:"GET / HTTP/1.1" 200 43140
+02/Jan/2024 09:40:44   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 09:40:44   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 09:40:44   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 09:40:44   INFO  "GET / HTTP/1.1" 200 43140  None
+INFO:django.server:"GET / HTTP/1.1" 200 43140
+02/Jan/2024 09:40:44   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 09:40:44   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 09:40:44   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 09:40:54   INFO  "GET / HTTP/1.1" 200 43209  None
+INFO:django.server:"GET / HTTP/1.1" 200 43209
+02/Jan/2024 09:40:55   INFO  "GET / HTTP/1.1" 200 43209  None
+INFO:django.server:"GET / HTTP/1.1" 200 43209
+02/Jan/2024 09:42:40   INFO  "GET / HTTP/1.1" 200 43209  None
+INFO:django.server:"GET / HTTP/1.1" 200 43209
+02/Jan/2024 09:42:41   INFO  "GET / HTTP/1.1" 200 43209  None
+INFO:django.server:"GET / HTTP/1.1" 200 43209
+02/Jan/2024 09:42:43   INFO  "GET /list_order HTTP/1.1" 200 54000  None
+INFO:django.server:"GET /list_order HTTP/1.1" 200 54000
+02/Jan/2024 09:42:54   INFO  "GET /list_order HTTP/1.1" 200 54080  None
+INFO:django.server:"GET /list_order HTTP/1.1" 200 54080
+02/Jan/2024 09:42:55   INFO  "GET /list_order HTTP/1.1" 200 54080  None
+INFO:django.server:"GET /list_order HTTP/1.1" 200 54080
+02/Jan/2024 09:43:05   INFO  "GET /list_order HTTP/1.1" 200 54000  None
+INFO:django.server:"GET /list_order HTTP/1.1" 200 54000
+02/Jan/2024 09:43:13   INFO  "GET /list_order HTTP/1.1" 200 54080  None
+INFO:django.server:"GET /list_order HTTP/1.1" 200 54080
+02/Jan/2024 09:43:18   INFO  "GET /list_order/1126 HTTP/1.1" 200 24691  None
+INFO:django.server:"GET /list_order/1126 HTTP/1.1" 200 24691
+02/Jan/2024 09:44:49   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 09:44:49   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 09:44:49   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 09:50:59   INFO  "GET /list_order/1126 HTTP/1.1" 200 24691  None
+INFO:django.server:"GET /list_order/1126 HTTP/1.1" 200 24691
+02/Jan/2024 09:51:00   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 09:51:00   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 09:51:00   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 09:51:00   INFO  "GET /list_order/1126 HTTP/1.1" 200 24691  None
+INFO:django.server:"GET /list_order/1126 HTTP/1.1" 200 24691
+02/Jan/2024 09:51:01   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 09:51:01   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 09:51:01   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 09:51:06   INFO  "GET /list_order?work_status=END HTTP/1.1" 200 54269  None
+INFO:django.server:"GET /list_order?work_status=END HTTP/1.1" 200 54269
+02/Jan/2024 09:51:06   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 09:51:06   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 09:51:06   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 09:51:08   INFO  "GET /list_order?work_status=END HTTP/1.1" 200 54269  None
+INFO:django.server:"GET /list_order?work_status=END HTTP/1.1" 200 54269
+02/Jan/2024 09:51:08   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 09:51:08   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 09:51:08   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 09:51:09   INFO  "GET /list_order?work_status=END HTTP/1.1" 200 54269  None
+INFO:django.server:"GET /list_order?work_status=END HTTP/1.1" 200 54269
+02/Jan/2024 09:51:09   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 09:51:09   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 09:51:09   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 09:51:10   INFO  "GET /list_order?work_status=END HTTP/1.1" 200 54269  None
+INFO:django.server:"GET /list_order?work_status=END HTTP/1.1" 200 54269
+02/Jan/2024 09:51:10   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 09:51:10   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 09:51:10   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 09:51:31   INFO  "GET /list_order?work_status=END HTTP/1.1" 200 54269  None
+INFO:django.server:"GET /list_order?work_status=END HTTP/1.1" 200 54269
+02/Jan/2024 09:51:31   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 09:51:31   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 09:51:32   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 09:51:32   INFO  "GET /list_order?work_status=END HTTP/1.1" 200 54269  None
+INFO:django.server:"GET /list_order?work_status=END HTTP/1.1" 200 54269
+02/Jan/2024 09:51:32   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 09:51:32   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 09:51:33   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 09:51:34   INFO  "GET /list_order?work_status=END HTTP/1.1" 200 54269  None
+INFO:django.server:"GET /list_order?work_status=END HTTP/1.1" 200 54269
+02/Jan/2024 09:51:34   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 09:51:34   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 09:51:34   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 09:51:49   INFO  "GET /list_order?work_status=END HTTP/1.1" 200 54271  None
+INFO:django.server:"GET /list_order?work_status=END HTTP/1.1" 200 54271
+02/Jan/2024 09:51:49   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 09:51:49   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 09:51:50   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 09:51:50   INFO  "GET /list_order?work_status=END HTTP/1.1" 200 54269  None
+INFO:django.server:"GET /list_order?work_status=END HTTP/1.1" 200 54269
+02/Jan/2024 09:51:50   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 09:51:50   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 09:51:50   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 09:51:51   INFO  "GET /list_order?work_status=END HTTP/1.1" 200 54269  None
+INFO:django.server:"GET /list_order?work_status=END HTTP/1.1" 200 54269
+02/Jan/2024 09:51:51   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 09:51:51   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 09:51:51   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 09:51:52   INFO  "GET /list_order?work_status=END HTTP/1.1" 200 54269  None
+INFO:django.server:"GET /list_order?work_status=END HTTP/1.1" 200 54269
+02/Jan/2024 09:51:52   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 09:51:52   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 09:51:52   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 09:52:11   INFO  "GET / HTTP/1.1" 200 43140  None
+INFO:django.server:"GET / HTTP/1.1" 200 43140
+02/Jan/2024 09:52:11   INFO  "GET /static/css/custom.css HTTP/1.1" 304 0  None
+INFO:django.server:"GET /static/css/custom.css HTTP/1.1" 304 0
+02/Jan/2024 09:52:11   INFO  "GET /media/images/muzg-na-chas.jpg HTTP/1.1" 200 323830  None
+INFO:django.server:"GET /media/images/muzg-na-chas.jpg HTTP/1.1" 200 323830
+02/Jan/2024 09:52:14   INFO  "GET /login/ HTTP/1.1" 200 15097  None
+INFO:django.server:"GET /login/ HTTP/1.1" 200 15097
+02/Jan/2024 09:52:14   INFO  "GET /static/fonts/Roboto-Light.woff2 HTTP/1.1" 200 315  None
+INFO:django.server:"GET /static/fonts/Roboto-Light.woff2 HTTP/1.1" 200 315
+02/Jan/2024 09:52:15   INFO  "GET /static/fonts/Roboto-Light.woff HTTP/1.1" 200 315  None
+INFO:django.server:"GET /static/fonts/Roboto-Light.woff HTTP/1.1" 200 315
+02/Jan/2024 09:52:15   INFO  "GET /static/fonts/Roboto-Light.ttf HTTP/1.1" 200 315  None
+INFO:django.server:"GET /static/fonts/Roboto-Light.ttf HTTP/1.1" 200 315
+02/Jan/2024 09:52:19   INFO  "POST /login/ HTTP/1.1" 302 0  None
+INFO:django.server:"POST /login/ HTTP/1.1" 302 0
+02/Jan/2024 09:52:19   INFO  "GET /list_order?work_status=RCV HTTP/1.1" 200 30297  None
+INFO:django.server:"GET /list_order?work_status=RCV HTTP/1.1" 200 30297
+02/Jan/2024 09:52:22   INFO  "GET /list_order?work_status=RCV HTTP/1.1" 200 30297  None
+INFO:django.server:"GET /list_order?work_status=RCV HTTP/1.1" 200 30297
+02/Jan/2024 09:52:24   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 09:52:25   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 09:52:25   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 09:52:40   INFO  "GET /list_order?work_status=RCV HTTP/1.1" 200 30297  None
+INFO:django.server:"GET /list_order?work_status=RCV HTTP/1.1" 200 30297
+02/Jan/2024 09:52:41   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 09:52:41   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 09:52:41   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 09:52:59   INFO  "GET /list_order?work_status=RCV HTTP/1.1" 200 30247  None
+INFO:django.server:"GET /list_order?work_status=RCV HTTP/1.1" 200 30247
+02/Jan/2024 09:52:59   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 09:52:59   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 09:52:59   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 09:53:05   INFO  "GET /list_order?work_status=RCV HTTP/1.1" 200 30247  None
+INFO:django.server:"GET /list_order?work_status=RCV HTTP/1.1" 200 30247
+02/Jan/2024 09:54:55   INFO  "GET /static/css/custom.css HTTP/1.1" 304 0  None
+INFO:django.server:"GET /static/css/custom.css HTTP/1.1" 304 0
+02/Jan/2024 09:54:55   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 09:54:55   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 09:54:55   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 09:55:21   INFO  "GET /list_order?work_status=RCV HTTP/1.1" 200 30247  None
+INFO:django.server:"GET /list_order?work_status=RCV HTTP/1.1" 200 30247
+02/Jan/2024 09:55:21   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 09:55:21   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 09:55:21   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 09:55:22   INFO  "GET /list_order?work_status=END HTTP/1.1" 200 54119  None
+INFO:django.server:"GET /list_order?work_status=END HTTP/1.1" 200 54119
+02/Jan/2024 09:55:22   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 09:55:22   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 09:55:22   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 09:55:24   INFO  "GET /list_order?work_status=RCV HTTP/1.1" 200 30247  None
+INFO:django.server:"GET /list_order?work_status=RCV HTTP/1.1" 200 30247
+02/Jan/2024 09:55:24   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 09:55:24   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 09:55:24   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 09:57:40   INFO  "GET /list_order?work_status=END HTTP/1.1" 200 54119  None
+INFO:django.server:"GET /list_order?work_status=END HTTP/1.1" 200 54119
+02/Jan/2024 09:57:42   INFO  "GET /list_order?work_status=END HTTP/1.1" 200 54119  None
+INFO:django.server:"GET /list_order?work_status=END HTTP/1.1" 200 54119
+02/Jan/2024 09:57:43   INFO  "GET /list_order?work_status=END HTTP/1.1" 200 54119  None
+INFO:django.server:"GET /list_order?work_status=END HTTP/1.1" 200 54119
+02/Jan/2024 09:57:43   INFO  "GET /list_order?work_status=END HTTP/1.1" 200 54119  None
+INFO:django.server:"GET /list_order?work_status=END HTTP/1.1" 200 54119
+02/Jan/2024 09:57:43   INFO  "GET /list_order?work_status=SND HTTP/1.1" 200 25433  None
+INFO:django.server:"GET /list_order?work_status=SND HTTP/1.1" 200 25433
+02/Jan/2024 09:57:44   INFO  "GET / HTTP/1.1" 200 43209  None
+INFO:django.server:"GET / HTTP/1.1" 200 43209
+02/Jan/2024 09:57:46   INFO  "GET /list_order HTTP/1.1" 200 54080  None
+INFO:django.server:"GET /list_order HTTP/1.1" 200 54080
+02/Jan/2024 09:57:47   INFO  "GET / HTTP/1.1" 200 43209  None
+INFO:django.server:"GET / HTTP/1.1" 200 43209
+02/Jan/2024 09:57:51   INFO  "GET /list_order HTTP/1.1" 200 54080  None
+INFO:django.server:"GET /list_order HTTP/1.1" 200 54080
+02/Jan/2024 09:57:57   INFO  "GET /list_order/1126 HTTP/1.1" 200 24691  None
+INFO:django.server:"GET /list_order/1126 HTTP/1.1" 200 24691
+02/Jan/2024 09:58:07   INFO  "GET /list_order?work_status=END HTTP/1.1" 200 54119  None
+INFO:django.server:"GET /list_order?work_status=END HTTP/1.1" 200 54119
+02/Jan/2024 09:58:12   INFO  "GET / HTTP/1.1" 200 43209  None
+INFO:django.server:"GET / HTTP/1.1" 200 43209
+02/Jan/2024 09:59:02   INFO  "GET / HTTP/1.1" 200 43209  None
+INFO:django.server:"GET / HTTP/1.1" 200 43209
+02/Jan/2024 09:59:08   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 09:59:08   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 09:59:08   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 09:59:24   INFO  "GET /list_order HTTP/1.1" 200 54080  None
+INFO:django.server:"GET /list_order HTTP/1.1" 200 54080
+02/Jan/2024 09:59:25   INFO  "GET /list_order/1126 HTTP/1.1" 200 24691  None
+INFO:django.server:"GET /list_order/1126 HTTP/1.1" 200 24691
+02/Jan/2024 09:59:26   INFO  "GET /list_order?work_status=END HTTP/1.1" 200 54119  None
+INFO:django.server:"GET /list_order?work_status=END HTTP/1.1" 200 54119
+02/Jan/2024 09:59:28   INFO  "GET /stat/ HTTP/1.1" 200 195246  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 195246
+02/Jan/2024 09:59:29   INFO  "GET /user/51 HTTP/1.1" 200 16064  None
+INFO:django.server:"GET /user/51 HTTP/1.1" 200 16064
+02/Jan/2024 10:00:45   INFO  "GET /user/51 HTTP/1.1" 200 16064  None
+INFO:django.server:"GET /user/51 HTTP/1.1" 200 16064
+02/Jan/2024 10:00:48   INFO  "GET /stat/ HTTP/1.1" 200 195246  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 195246
+02/Jan/2024 10:00:49   INFO  "GET /list_order?work_status=END HTTP/1.1" 200 54119  None
+INFO:django.server:"GET /list_order?work_status=END HTTP/1.1" 200 54119
+02/Jan/2024 10:00:50   INFO  "GET /list_order?work_status=RCV HTTP/1.1" 200 30247  None
+INFO:django.server:"GET /list_order?work_status=RCV HTTP/1.1" 200 30247
+02/Jan/2024 10:00:51   INFO  "GET / HTTP/1.1" 200 43209  None
+INFO:django.server:"GET / HTTP/1.1" 200 43209
+02/Jan/2024 10:00:53   INFO  "GET /list_order HTTP/1.1" 200 54080  None
+INFO:django.server:"GET /list_order HTTP/1.1" 200 54080
+02/Jan/2024 10:00:54   INFO  "GET /user/51 HTTP/1.1" 200 16064  None
+INFO:django.server:"GET /user/51 HTTP/1.1" 200 16064
+02/Jan/2024 10:00:54   INFO  "GET / HTTP/1.1" 200 43209  None
+INFO:django.server:"GET / HTTP/1.1" 200 43209
+02/Jan/2024 10:02:18   INFO  "GET / HTTP/1.1" 200 43209  None
+INFO:django.server:"GET / HTTP/1.1" 200 43209
+02/Jan/2024 10:02:22   INFO  "GET /list_order HTTP/1.1" 200 54080  None
+INFO:django.server:"GET /list_order HTTP/1.1" 200 54080
+02/Jan/2024 10:02:24   INFO  "GET /list_order?work_status=RCV HTTP/1.1" 200 30247  None
+INFO:django.server:"GET /list_order?work_status=RCV HTTP/1.1" 200 30247
+02/Jan/2024 10:02:24   INFO  "GET /list_order?work_status=END HTTP/1.1" 200 54119  None
+INFO:django.server:"GET /list_order?work_status=END HTTP/1.1" 200 54119
+02/Jan/2024 10:02:26   INFO  "GET /user/51 HTTP/1.1" 200 16064  None
+INFO:django.server:"GET /user/51 HTTP/1.1" 200 16064
+02/Jan/2024 10:02:28   INFO  "GET /stat/ HTTP/1.1" 200 195247  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 195247
+02/Jan/2024 10:02:32   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 10:02:32   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 10:02:32   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 10:03:36   INFO  "GET /stat/ HTTP/1.1" 200 195246  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 195246
+02/Jan/2024 10:03:36   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 10:03:36   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 10:03:36   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 10:03:39   INFO  "GET / HTTP/1.1" 200 43209  None
+INFO:django.server:"GET / HTTP/1.1" 200 43209
+02/Jan/2024 10:03:44   INFO  "GET /list_order HTTP/1.1" 200 54080  None
+INFO:django.server:"GET /list_order HTTP/1.1" 200 54080
+02/Jan/2024 10:03:46   INFO  "GET /logout/ HTTP/1.1" 302 0  None
+INFO:django.server:"GET /logout/ HTTP/1.1" 302 0
+02/Jan/2024 10:03:46   INFO  "GET / HTTP/1.1" 200 43140  None
+INFO:django.server:"GET / HTTP/1.1" 200 43140
+02/Jan/2024 10:04:35   INFO  "GET / HTTP/1.1" 200 43140  None
+INFO:django.server:"GET / HTTP/1.1" 200 43140
+02/Jan/2024 10:04:39   INFO  "GET /login/ HTTP/1.1" 200 15097  None
+INFO:django.server:"GET /login/ HTTP/1.1" 200 15097
+02/Jan/2024 10:04:41   INFO  "POST /login/ HTTP/1.1" 302 0  None
+INFO:django.server:"POST /login/ HTTP/1.1" 302 0
+02/Jan/2024 10:04:41   INFO  "GET /list_order?work_status=RCV HTTP/1.1" 200 30247  None
+INFO:django.server:"GET /list_order?work_status=RCV HTTP/1.1" 200 30247
+02/Jan/2024 10:04:43   INFO  "GET /list_order?work_status=RCV HTTP/1.1" 200 30247  None
+INFO:django.server:"GET /list_order?work_status=RCV HTTP/1.1" 200 30247
+02/Jan/2024 10:04:45   INFO  "GET /list_order/1126 HTTP/1.1" 200 24691  None
+INFO:django.server:"GET /list_order/1126 HTTP/1.1" 200 24691
+02/Jan/2024 10:04:51   INFO  "GET /serv?type_work=CL HTTP/1.1" 200 96  None
+INFO:django.server:"GET /serv?type_work=CL HTTP/1.1" 200 96
+02/Jan/2024 10:04:51   INFO  "GET /list_order/1126 HTTP/1.1" 200 24688  None
+INFO:django.server:"GET /list_order/1126 HTTP/1.1" 200 24688
+02/Jan/2024 10:04:51   INFO  "GET /__debug__/history_sidebar/?store_id=fd2f1d18bd504d7d95e4966b7b97eba9 HTTP/1.1" 200 13377  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=fd2f1d18bd504d7d95e4966b7b97eba9 HTTP/1.1" 200 13377
+02/Jan/2024 10:04:54   INFO  "POST /list_order/1126 HTTP/1.1" 200 142  None
+INFO:django.server:"POST /list_order/1126 HTTP/1.1" 200 142
+02/Jan/2024 10:04:54   INFO  "GET /__debug__/history_sidebar/?store_id=fd068628d5fe4772b3e03113fda2b7c5 HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=fd068628d5fe4772b3e03113fda2b7c5 HTTP/1.1" 200 13344
+02/Jan/2024 10:04:56   INFO  "GET /list_order/1126 HTTP/1.1" 200 25044  None
+INFO:django.server:"GET /list_order/1126 HTTP/1.1" 200 25044
+02/Jan/2024 10:04:58   INFO  "GET /invoice/delete/1636 HTTP/1.1" 200 22  None
+INFO:django.server:"GET /invoice/delete/1636 HTTP/1.1" 200 22
+02/Jan/2024 10:04:58   INFO  "GET /__debug__/history_sidebar/?store_id=79bbbdbefc6540ae91d88cbd49314669 HTTP/1.1" 200 13363  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=79bbbdbefc6540ae91d88cbd49314669 HTTP/1.1" 200 13363
+02/Jan/2024 10:05:00   INFO  "GET /list_order/1126 HTTP/1.1" 200 24691  None
+INFO:django.server:"GET /list_order/1126 HTTP/1.1" 200 24691
+02/Jan/2024 10:05:29   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 10:05:29   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 10:05:30   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 10:05:47   INFO  "GET /list_order?work_status=SND HTTP/1.1" 200 25433  None
+INFO:django.server:"GET /list_order?work_status=SND HTTP/1.1" 200 25433
+02/Jan/2024 10:05:47   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 10:05:47   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 10:05:47   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 10:05:49   INFO  "GET /list_order?work_status=END HTTP/1.1" 200 54119  None
+INFO:django.server:"GET /list_order?work_status=END HTTP/1.1" 200 54119
+02/Jan/2024 10:05:49   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 10:05:49   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 10:05:49   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 10:05:51   INFO  "GET /list_order/1124 HTTP/1.1" 200 25145  None
+INFO:django.server:"GET /list_order/1124 HTTP/1.1" 200 25145
+02/Jan/2024 10:05:51   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 10:05:51   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 10:05:51   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 10:05:54   INFO  "GET /list_order?work_status=SND HTTP/1.1" 200 25433  None
+INFO:django.server:"GET /list_order?work_status=SND HTTP/1.1" 200 25433
+02/Jan/2024 10:05:54   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 10:05:54   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 10:05:54   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 10:06:39   INFO  "GET /list_order?work_status=SND HTTP/1.1" 200 25433  None
+INFO:django.server:"GET /list_order?work_status=SND HTTP/1.1" 200 25433
+02/Jan/2024 10:06:39   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 10:06:39   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 10:06:39   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 10:07:43   INFO  "GET /list_order?work_status=SND HTTP/1.1" 200 25433  None
+INFO:django.server:"GET /list_order?work_status=SND HTTP/1.1" 200 25433
+02/Jan/2024 10:07:43   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 10:07:43   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 10:07:43   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 10:07:44   INFO  "GET /list_order?work_status=SND HTTP/1.1" 200 25433  None
+INFO:django.server:"GET /list_order?work_status=SND HTTP/1.1" 200 25433
+02/Jan/2024 10:07:44   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
+02/Jan/2024 10:07:44   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 10:07:44   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
+WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
+02/Jan/2024 10:07:58   INFO  "GET /list_order?work_status=SND HTTP/1.1" 200 25433  None
+INFO:django.server:"GET /list_order?work_status=SND HTTP/1.1" 200 25433
+02/Jan/2024 10:07:59   INFO  "GET /list_order?work_status=SND HTTP/1.1" 200 25433  None
+INFO:django.server:"GET /list_order?work_status=SND HTTP/1.1" 200 25433
+02/Jan/2024 10:08:00   INFO  "GET /list_order?work_status=RCV HTTP/1.1" 200 30247  None
+INFO:django.server:"GET /list_order?work_status=RCV HTTP/1.1" 200 30247
+02/Jan/2024 10:08:00   INFO  "GET /list_order?work_status=END HTTP/1.1" 200 54119  None
+INFO:django.server:"GET /list_order?work_status=END HTTP/1.1" 200 54119
+02/Jan/2024 10:08:01   INFO  "GET /stat/ HTTP/1.1" 200 195247  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 195247
+02/Jan/2024 10:08:02   INFO  "GET /user/51 HTTP/1.1" 200 16064  None
+INFO:django.server:"GET /user/51 HTTP/1.1" 200 16064
+02/Jan/2024 10:08:02   INFO  "GET /media/images/%D1%8F.jpeg HTTP/1.1" 200 521837  None
+INFO:django.server:"GET /media/images/%D1%8F.jpeg HTTP/1.1" 200 521837
+02/Jan/2024 10:08:04   INFO  "GET /list_order HTTP/1.1" 200 54080  None
+INFO:django.server:"GET /list_order HTTP/1.1" 200 54080
+02/Jan/2024 10:08:04   INFO  "GET / HTTP/1.1" 200 43209  None
+INFO:django.server:"GET / HTTP/1.1" 200 43209
+02/Jan/2024 10:08:17   INFO  "GET /logout/ HTTP/1.1" 302 0  None
+INFO:django.server:"GET /logout/ HTTP/1.1" 302 0
+02/Jan/2024 10:08:17   INFO  "GET / HTTP/1.1" 200 43140  None
+INFO:django.server:"GET / HTTP/1.1" 200 43140
+02/Jan/2024 10:10:29   INFO  "GET / HTTP/1.1" 200 43140  None
+INFO:django.server:"GET / HTTP/1.1" 200 43140
+02/Jan/2024 10:10:29   INFO  "GET /media/images/muzg-na-chas.jpg HTTP/1.1" 200 323830  None
+INFO:django.server:"GET /media/images/muzg-na-chas.jpg HTTP/1.1" 200 323830
+02/Jan/2024 10:10:30   WARNING  Not Found: /favicon.ico  None
 WARNING:django.request:Not Found: /favicon.ico
-23/Dec/2023 16:15:42   WARNING  "GET /favicon.ico HTTP/1.1" 404 16307  None
+02/Jan/2024 10:10:30   WARNING  "GET /favicon.ico HTTP/1.1" 404 16307  None
 WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 16307
-23/Dec/2023 16:16:22   WARNING  Not Found: /favicon.ico  None
+02/Jan/2024 10:10:32   INFO  "GET / HTTP/1.1" 200 43140  None
+INFO:django.server:"GET / HTTP/1.1" 200 43140
+02/Jan/2024 10:10:35   INFO  "GET /login/ HTTP/1.1" 200 14557  None
+INFO:django.server:"GET /login/ HTTP/1.1" 200 14557
+02/Jan/2024 10:10:36   INFO  "POST /login/ HTTP/1.1" 302 0  None
+INFO:django.server:"POST /login/ HTTP/1.1" 302 0
+02/Jan/2024 10:10:36   INFO  "GET /list_order?work_status=RCV HTTP/1.1" 200 29707  None
+INFO:django.server:"GET /list_order?work_status=RCV HTTP/1.1" 200 29707
+02/Jan/2024 10:10:57   INFO  "GET / HTTP/1.1" 200 43209  None
+INFO:django.server:"GET / HTTP/1.1" 200 43209
+02/Jan/2024 10:10:57   INFO  "GET /static/css/custom.css HTTP/1.1" 200 11110  None
+INFO:django.server:"GET /static/css/custom.css HTTP/1.1" 200 11110
+02/Jan/2024 10:10:57   INFO  "GET /static/css/owl.carousel.min.css HTTP/1.1" 200 4376  None
+INFO:django.server:"GET /static/css/owl.carousel.min.css HTTP/1.1" 200 4376
+02/Jan/2024 10:10:57   INFO  "GET /static/css/bootstrap.min.css HTTP/1.1" 200 140936  None
+INFO:django.server:"GET /static/css/bootstrap.min.css HTTP/1.1" 200 140936
+02/Jan/2024 10:10:57   INFO  "GET /static/fonts/washing-machine.svg HTTP/1.1" 200 1667  None
+INFO:django.server:"GET /static/fonts/washing-machine.svg HTTP/1.1" 200 1667
+02/Jan/2024 10:10:57   INFO  "GET /static/fonts/3d-buildings.svg HTTP/1.1" 200 9453  None
+INFO:django.server:"GET /static/fonts/3d-buildings.svg HTTP/1.1" 200 9453
+02/Jan/2024 10:10:57   INFO  "GET /static/images/2.jpg HTTP/1.1" 200 73588  None
+INFO:django.server:"GET /static/images/2.jpg HTTP/1.1" 200 73588
+02/Jan/2024 10:10:57   INFO  "GET /static/js/custom.js HTTP/1.1" 304 0  None
+INFO:django.server:"GET /static/js/custom.js HTTP/1.1" 304 0
+02/Jan/2024 10:10:57   INFO  "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0  None
+INFO:django.server:"GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+02/Jan/2024 10:10:57   INFO  "GET /static/images/flag_en.png HTTP/1.1" 200 3087  None
+INFO:django.server:"GET /static/images/flag_en.png HTTP/1.1" 200 3087
+02/Jan/2024 10:10:57   INFO  "GET /static/images/flag_ge.png HTTP/1.1" 200 1771  None
+INFO:django.server:"GET /static/images/flag_ge.png HTTP/1.1" 200 1771
+02/Jan/2024 10:10:57   INFO  "GET /media/images/muzg-na-chas.jpg HTTP/1.1" 200 323830  None
+INFO:django.server:"GET /media/images/muzg-na-chas.jpg HTTP/1.1" 200 323830
+02/Jan/2024 10:10:57   INFO  "GET /static/images/telegram.gif HTTP/1.1" 200 38309  None
+INFO:django.server:"GET /static/images/telegram.gif HTTP/1.1" 200 38309
+02/Jan/2024 10:10:57   INFO  "GET /static/images/whatsapp.png HTTP/1.1" 200 167171  None
+INFO:django.server:"GET /static/images/whatsapp.png HTTP/1.1" 200 167171
+02/Jan/2024 10:10:57   INFO  "GET /static/images/instagram.png HTTP/1.1" 200 79716  None
+INFO:django.server:"GET /static/images/instagram.png HTTP/1.1" 200 79716
+02/Jan/2024 10:10:57   INFO  "GET /static/fonts/living-room.svg HTTP/1.1" 200 6568  None
+INFO:django.server:"GET /static/fonts/living-room.svg HTTP/1.1" 200 6568
+02/Jan/2024 10:10:57   INFO  "GET /static/fonts/leak.svg HTTP/1.1" 200 756  None
+INFO:django.server:"GET /static/fonts/leak.svg HTTP/1.1" 200 756
+02/Jan/2024 10:10:57   INFO  "GET /static/fonts/broken-cable.svg HTTP/1.1" 200 2874  None
+INFO:django.server:"GET /static/fonts/broken-cable.svg HTTP/1.1" 200 2874
+02/Jan/2024 10:10:57   INFO  "GET /static/images/1.jpg HTTP/1.1" 200 68159  None
+INFO:django.server:"GET /static/images/1.jpg HTTP/1.1" 200 68159
+02/Jan/2024 10:10:57   INFO  "GET /static/images/underline1.png HTTP/1.1" 200 645  None
+INFO:django.server:"GET /static/images/underline1.png HTTP/1.1" 200 645
+02/Jan/2024 10:10:57   INFO  "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0  None
+INFO:django.server:"GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+02/Jan/2024 10:10:57   INFO  "GET /static/fonts/Roboto-Regular.woff HTTP/1.1" 200 315  None
+INFO:django.server:"GET /static/fonts/Roboto-Regular.woff HTTP/1.1" 200 315
+02/Jan/2024 10:10:57   INFO  "GET /static/fonts/Roboto-Bold.ttf HTTP/1.1" 304 0  None
+INFO:django.server:"GET /static/fonts/Roboto-Bold.ttf HTTP/1.1" 304 0
+02/Jan/2024 10:11:01   INFO  "GET /list_order HTTP/1.1" 200 53540  None
+INFO:django.server:"GET /list_order HTTP/1.1" 200 53540
+02/Jan/2024 10:11:03   INFO  "GET /logout/ HTTP/1.1" 302 0  None
+INFO:django.server:"GET /logout/ HTTP/1.1" 302 0
+02/Jan/2024 10:11:03   INFO  "GET / HTTP/1.1" 200 43140  None
+INFO:django.server:"GET / HTTP/1.1" 200 43140
+02/Jan/2024 15:41:28   WARNING  Not Found: /list_order/  None
+WARNING:django.request:Not Found: /list_order/
+02/Jan/2024 16:11:09   INFO  Watching for file changes with StatReloader  None
+02/Jan/2024 16:11:12   INFO  "GET /list_order HTTP/1.1" 200 54082  None
+INFO:django.server:"GET /list_order HTTP/1.1" 200 54082
+02/Jan/2024 16:11:12   INFO  "GET /static/css/custom.css HTTP/1.1" 200 11110  None
+INFO:django.server:"GET /static/css/custom.css HTTP/1.1" 200 11110
+02/Jan/2024 16:11:13   WARNING  Not Found: /favicon.ico  None
 WARNING:django.request:Not Found: /favicon.ico
-23/Dec/2023 16:16:22   WARNING  "GET /favicon.ico HTTP/1.1" 404 16307  None
+02/Jan/2024 16:11:13   WARNING  "GET /favicon.ico HTTP/1.1" 404 16307  None
 WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 16307
-23/Dec/2023 16:17:54   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
-WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
-23/Dec/2023 16:17:54   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
-WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
-23/Dec/2023 16:17:55   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
-WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
-23/Dec/2023 16:18:26   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
-WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
-23/Dec/2023 16:18:26   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
-WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
-23/Dec/2023 16:18:26   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
-WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
-23/Dec/2023 16:18:26   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
-WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
-23/Dec/2023 16:18:26   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
-WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
-23/Dec/2023 16:18:26   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
-WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
-23/Dec/2023 16:18:26   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
-WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
-23/Dec/2023 16:18:26   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
-WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
-23/Dec/2023 16:18:26   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
-WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
-23/Dec/2023 16:19:05   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
-WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
-23/Dec/2023 16:19:05   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
-WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
-23/Dec/2023 16:19:05   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
-WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
-23/Dec/2023 17:47:47   WARNING  Not Found: /favicon.ico  None
-WARNING:django.request:Not Found: /favicon.ico
-23/Dec/2023 18:42:18   WARNING  Not Found: /favicon.ico  None
-WARNING:django.request:Not Found: /favicon.ico
-23/Dec/2023 18:42:18   WARNING  "GET /favicon.ico HTTP/1.1" 404 16307  None
-WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 16307
-23/Dec/2023 18:43:27   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
-WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
-23/Dec/2023 18:43:27   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
-WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
-23/Dec/2023 18:43:27   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
-WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
+02/Jan/2024 16:11:16   INFO  "GET /user/51 HTTP/1.1" 200 16064  None
+INFO:django.server:"GET /user/51 HTTP/1.1" 200 16064
+02/Jan/2024 16:11:16   INFO  "GET /media/images/%D1%8F.jpeg HTTP/1.1" 200 521837  None
+INFO:django.server:"GET /media/images/%D1%8F.jpeg HTTP/1.1" 200 521837
+02/Jan/2024 16:11:36   WARNING  Not Found: /user  None
+WARNING:django.request:Not Found: /user
+02/Jan/2024 16:11:36   WARNING  "GET /user HTTP/1.1" 404 16279  None
+WARNING:django.server:"GET /user HTTP/1.1" 404 16279
 WARNING:root:===========================================================
-WARNING:root:ВРЕМЯ:     2023-12-23 19:22:28.254379
-WARNING:root:ОШИБКА:        Field.__init__() got an unexpected keyword argument 'conjoined'
+WARNING:root:ВРЕМЯ:     2024-01-02 16:15:25.463900
+WARNING:root:ОШИБКА:        Не найден ни один пользователь, соответствующий запросу
 WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 53, in get_object
+    obj = queryset.get()
+          ^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
   File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
     response = super().dispatch(request, *args, **kwargs)
                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -61,45 +998,30 @@ WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
   File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
     return handler(request, *args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/list.py", line 154, in get
-    self.object_list = self.get_queryset()
-                       ^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 265, in get_queryset
-    return self.filterset.qs
-           ^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/filterset.py", line 229, in qs
-    self.errors
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/filterset.py", line 202, in errors
-    return self.form.errors
-           ^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/filterset.py", line 250, in form
-    Form = self.get_form_class()
-           ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/filterset.py", line 242, in get_form_class
-    [(name, filter_.field) for name, filter_ in self.filters.items()]
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/filterset.py", line 242, in <listcomp>
-    [(name, filter_.field) for name, filter_ in self.filters.items()]
-            ^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/filters.py", line 149, in field
-    self._field = self.field_class(label=self.label, **field_kwargs)
-                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/fields.py", line 278, in __init__
-    super().__init__(*args, **kwargs)
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/fields.py", line 258, in __init__
-    super().__init__(*args, **kwargs)
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/forms/fields.py", line 859, in __init__
-    super().__init__(**kwargs)
-TypeError: Field.__init__() got an unexpected keyword argument 'conjoined'
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 108, in get
+    self.object = self.get_object()
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 55, in get_object
+    raise Http404(
+django.http.response.Http404: Не найден ни один пользователь, соответствующий запросу
 
 WARNING:root:============================================================
-23/Dec/2023 19:22:28   WARNING  Bad Request: /ordersearch/  None
-WARNING:django.request:Bad Request: /ordersearch/
-23/Dec/2023 19:22:28   WARNING  "GET /ordersearch/?time_in_sence=&time_in_until=&order_status=&repairer_id=51&customer_name=&customer_phone=&customer_telegram=&address_city=&adress_street_app=&address_num= HTTP/1.1" 400 120  None
-WARNING:django.server:"GET /ordersearch/?time_in_sence=&time_in_until=&order_status=&repairer_id=51&customer_name=&customer_phone=&customer_telegram=&address_city=&adress_street_app=&address_num= HTTP/1.1" 400 120
+02/Jan/2024 16:15:25   WARNING  Bad Request: /user/11  None
+WARNING:django.request:Bad Request: /user/11
 WARNING:root:===========================================================
-WARNING:root:ВРЕМЯ:     2023-12-23 19:22:33.354412
-WARNING:root:ОШИБКА:        Field.__init__() got an unexpected keyword argument 'conjoined'
+WARNING:root:ВРЕМЯ:     2024-01-02 16:16:10.700970
+WARNING:root:ОШИБКА:        Не найден ни один пользователь, соответствующий запросу
 WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 53, in get_object
+    obj = queryset.get()
+          ^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
   File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
     response = super().dispatch(request, *args, **kwargs)
                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -109,314 +1031,13 @@ WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
   File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
     return handler(request, *args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/list.py", line 154, in get
-    self.object_list = self.get_queryset()
-                       ^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 265, in get_queryset
-    return self.filterset.qs
-           ^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/filterset.py", line 229, in qs
-    self.errors
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/filterset.py", line 202, in errors
-    return self.form.errors
-           ^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/filterset.py", line 250, in form
-    Form = self.get_form_class()
-           ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/filterset.py", line 242, in get_form_class
-    [(name, filter_.field) for name, filter_ in self.filters.items()]
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/filterset.py", line 242, in <listcomp>
-    [(name, filter_.field) for name, filter_ in self.filters.items()]
-            ^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/filters.py", line 149, in field
-    self._field = self.field_class(label=self.label, **field_kwargs)
-                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/fields.py", line 278, in __init__
-    super().__init__(*args, **kwargs)
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/fields.py", line 258, in __init__
-    super().__init__(*args, **kwargs)
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/forms/fields.py", line 859, in __init__
-    super().__init__(**kwargs)
-TypeError: Field.__init__() got an unexpected keyword argument 'conjoined'
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 108, in get
+    self.object = self.get_object()
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 55, in get_object
+    raise Http404(
+django.http.response.Http404: Не найден ни один пользователь, соответствующий запросу
 
 WARNING:root:============================================================
-23/Dec/2023 19:22:33   WARNING  Bad Request: /ordersearch/  None
-WARNING:django.request:Bad Request: /ordersearch/
-23/Dec/2023 19:22:33   WARNING  "GET /ordersearch/?time_in_sence=&time_in_until=&order_status=&repairer_id=51&customer_name=&customer_phone=&customer_telegram=&address_city=&adress_street_app=&address_num= HTTP/1.1" 400 120  None
-WARNING:django.server:"GET /ordersearch/?time_in_sence=&time_in_until=&order_status=&repairer_id=51&customer_name=&customer_phone=&customer_telegram=&address_city=&adress_street_app=&address_num= HTTP/1.1" 400 120
-WARNING:root:===========================================================
-WARNING:root:ВРЕМЯ:     2023-12-23 19:22:34.015676
-WARNING:root:ОШИБКА:        Field.__init__() got an unexpected keyword argument 'conjoined'
-WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
-    response = super().dispatch(request, *args, **kwargs)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
-    return super().dispatch(request, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
-    return handler(request, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/list.py", line 154, in get
-    self.object_list = self.get_queryset()
-                       ^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 265, in get_queryset
-    return self.filterset.qs
-           ^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/filterset.py", line 229, in qs
-    self.errors
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/filterset.py", line 202, in errors
-    return self.form.errors
-           ^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/filterset.py", line 250, in form
-    Form = self.get_form_class()
-           ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/filterset.py", line 242, in get_form_class
-    [(name, filter_.field) for name, filter_ in self.filters.items()]
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/filterset.py", line 242, in <listcomp>
-    [(name, filter_.field) for name, filter_ in self.filters.items()]
-            ^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/filters.py", line 149, in field
-    self._field = self.field_class(label=self.label, **field_kwargs)
-                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/fields.py", line 278, in __init__
-    super().__init__(*args, **kwargs)
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/fields.py", line 258, in __init__
-    super().__init__(*args, **kwargs)
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/forms/fields.py", line 859, in __init__
-    super().__init__(**kwargs)
-TypeError: Field.__init__() got an unexpected keyword argument 'conjoined'
-
-WARNING:root:============================================================
-23/Dec/2023 19:22:34   WARNING  Bad Request: /ordersearch/  None
-WARNING:django.request:Bad Request: /ordersearch/
-23/Dec/2023 19:22:34   WARNING  "GET /ordersearch/?time_in_sence=&time_in_until=&order_status=&repairer_id=51&customer_name=&customer_phone=&customer_telegram=&address_city=&adress_street_app=&address_num= HTTP/1.1" 400 120  None
-WARNING:django.server:"GET /ordersearch/?time_in_sence=&time_in_until=&order_status=&repairer_id=51&customer_name=&customer_phone=&customer_telegram=&address_city=&adress_street_app=&address_num= HTTP/1.1" 400 120
-WARNING:root:===========================================================
-WARNING:root:ВРЕМЯ:     2023-12-23 19:22:44.290867
-WARNING:root:ОШИБКА:        Field.__init__() got an unexpected keyword argument 'conjoined'
-WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
-    response = super().dispatch(request, *args, **kwargs)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
-    return super().dispatch(request, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
-    return handler(request, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/list.py", line 154, in get
-    self.object_list = self.get_queryset()
-                       ^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 265, in get_queryset
-    return self.filterset.qs
-           ^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/filterset.py", line 229, in qs
-    self.errors
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/filterset.py", line 202, in errors
-    return self.form.errors
-           ^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/filterset.py", line 250, in form
-    Form = self.get_form_class()
-           ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/filterset.py", line 242, in get_form_class
-    [(name, filter_.field) for name, filter_ in self.filters.items()]
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/filterset.py", line 242, in <listcomp>
-    [(name, filter_.field) for name, filter_ in self.filters.items()]
-            ^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/filters.py", line 149, in field
-    self._field = self.field_class(label=self.label, **field_kwargs)
-                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/fields.py", line 278, in __init__
-    super().__init__(*args, **kwargs)
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django_filters/fields.py", line 258, in __init__
-    super().__init__(*args, **kwargs)
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/forms/fields.py", line 859, in __init__
-    super().__init__(**kwargs)
-TypeError: Field.__init__() got an unexpected keyword argument 'conjoined'
-
-WARNING:root:============================================================
-23/Dec/2023 19:22:44   WARNING  Bad Request: /ordersearch/  None
-WARNING:django.request:Bad Request: /ordersearch/
-23/Dec/2023 19:22:44   WARNING  "GET /ordersearch/ HTTP/1.1" 400 120  None
-WARNING:django.server:"GET /ordersearch/ HTTP/1.1" 400 120
-23/Dec/2023 19:27:53   WARNING  Not Found: /favicon.ico  None
-WARNING:django.request:Not Found: /favicon.ico
-23/Dec/2023 19:27:53   WARNING  "GET /favicon.ico HTTP/1.1" 404 16307  None
-WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 16307
-23/Dec/2023 19:28:39   WARNING  Not Found: /favicon.ico  None
-WARNING:django.request:Not Found: /favicon.ico
-23/Dec/2023 19:28:39   WARNING  "GET /favicon.ico HTTP/1.1" 404 16307  None
-WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 16307
-24/Dec/2023 13:02:10   WARNING  Not Found: /favicon.ico  None
-WARNING:django.request:Not Found: /favicon.ico
-24/Dec/2023 13:02:10   WARNING  "GET /favicon.ico HTTP/1.1" 404 16307  None
-WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 16307
-24/Dec/2023 17:12:01   WARNING  Not Found: /favicon.ico  None
-WARNING:django.request:Not Found: /favicon.ico
-24/Dec/2023 17:12:01   WARNING  "GET /favicon.ico HTTP/1.1" 404 16307  None
-WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 16307
-WARNING:urllib3.connectionpool:Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fed54cc5090>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /search?city=%D0%A2%D0%B1%D0%B8%D0%BB%D0%B8%D1%81%D0%B8&street=Stefane+Chrelashvili+St%2C+1&format=json&limit=1&addressdetails=1
-WARNING:urllib3.connectionpool:Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fed54b33a10>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /search?city=%D0%A2%D0%B1%D0%B8%D0%BB%D0%B8%D1%81%D0%B8&street=Stefane+Chrelashvili+St%2C+1&format=json&limit=1&addressdetails=1
-WARNING:root:===========================================================
-WARNING:root:ВРЕМЯ:     2023-12-24 17:16:07.871665
-WARNING:root:ОШИБКА:        HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?city=%D0%A2%D0%B1%D0%B8%D0%BB%D0%B8%D1%81%D0%B8&street=Stefane+Chrelashvili+St%2C+1&format=json&limit=1&addressdetails=1 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fed54ca82d0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
-WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/urllib3/connection.py", line 174, in _new_conn
-    conn = connection.create_connection(
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/urllib3/util/connection.py", line 72, in create_connection
-    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib64/python3.11/socket.py", line 962, in getaddrinfo
-    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-socket.gaierror: [Errno -3] Temporary failure in name resolution
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/urllib3/connectionpool.py", line 703, in urlopen
-    httplib_response = self._make_request(
-                       ^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/urllib3/connectionpool.py", line 386, in _make_request
-    self._validate_conn(conn)
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
-    conn.connect()
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/urllib3/connection.py", line 363, in connect
-    self.sock = conn = self._new_conn()
-                       ^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/urllib3/connection.py", line 186, in _new_conn
-    raise NewConnectionError(
-urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7fed54ca82d0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/requests/adapters.py", line 487, in send
-    resp = conn.urlopen(
-           ^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/urllib3/connectionpool.py", line 815, in urlopen
-    return self.urlopen(
-           ^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/urllib3/connectionpool.py", line 815, in urlopen
-    return self.urlopen(
-           ^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/urllib3/connectionpool.py", line 787, in urlopen
-    retries = retries.increment(
-              ^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/urllib3/util/retry.py", line 592, in increment
-    raise MaxRetryError(_pool, url, error or ResponseError(cause))
-urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?city=%D0%A2%D0%B1%D0%B8%D0%BB%D0%B8%D1%81%D0%B8&street=Stefane+Chrelashvili+St%2C+1&format=json&limit=1&addressdetails=1 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fed54ca82d0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/geopy/adapters.py", line 457, in _request
-    resp = self.session.get(url, timeout=timeout, headers=headers)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/requests/sessions.py", line 600, in get
-    return self.request("GET", url, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/requests/sessions.py", line 587, in request
-    resp = self.send(prep, **send_kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/requests/sessions.py", line 701, in send
-    r = adapter.send(request, **kwargs)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/requests/adapters.py", line 520, in send
-    raise ConnectionError(e, request=request)
-requests.exceptions.ConnectionError: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?city=%D0%A2%D0%B1%D0%B8%D0%BB%D0%B8%D1%81%D0%B8&street=Stefane+Chrelashvili+St%2C+1&format=json&limit=1&addressdetails=1 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fed54ca82d0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
-    response = super().dispatch(request, *args, **kwargs)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
-    return handler(request, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/edit.py", line 184, in post
-    return super().post(request, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/edit.py", line 153, in post
-    return self.form_valid(form)
-           ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 65, in form_valid
-    form.save()
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/forms.py", line 83, in save
-    order.save()
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/base.py", line 814, in save
-    self.save_base(
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/base.py", line 892, in save_base
-    post_save.send(
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 176, in send
-    return [
-           ^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 177, in <listcomp>
-    (receiver, receiver(signal=self, sender=sender, **named))
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/signals.py", line 16, in send_post_new_order
-    location = set_coordinates_address(instance.address_street_app, 'Тбилиси', instance.address_num)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py", line 47, in set_coordinates_address
-    location = geolocator.geocode({'city': city, 'street': street+', '+app_num}, addressdetails=True)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/geopy/geocoders/nominatim.py", line 297, in geocode
-    return self._call_geocoder(url, callback, timeout=timeout)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/geopy/geocoders/base.py", line 368, in _call_geocoder
-    result = self.adapter.get_json(url, timeout=timeout, headers=req_headers)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/geopy/adapters.py", line 447, in get_json
-    resp = self._request(url, timeout=timeout, headers=headers)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/geopy/adapters.py", line 469, in _request
-    raise GeocoderUnavailable(message)
-geopy.exc.GeocoderUnavailable: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?city=%D0%A2%D0%B1%D0%B8%D0%BB%D0%B8%D1%81%D0%B8&street=Stefane+Chrelashvili+St%2C+1&format=json&limit=1&addressdetails=1 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fed54ca82d0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
-
-WARNING:root:============================================================
-24/Dec/2023 17:16:07   WARNING  Bad Request: /  None
-WARNING:django.request:Bad Request: /
-24/Dec/2023 18:18:53   WARNING  Not Found: /favicon.ico  None
-WARNING:django.request:Not Found: /favicon.ico
-24/Dec/2023 18:18:53   WARNING  "GET /favicon.ico HTTP/1.1" 404 16307  None
-WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 16307
-24/Dec/2023 19:08:40   WARNING  Not Found: /home  None
-WARNING:django.request:Not Found: /home
-24/Dec/2023 19:08:40   WARNING  "GET /home HTTP/1.1" 404 16279  None
-WARNING:django.server:"GET /home HTTP/1.1" 404 16279
-24/Dec/2023 19:10:02   WARNING  Not Found: /favicon.ico  None
-WARNING:django.request:Not Found: /favicon.ico
-24/Dec/2023 19:10:02   WARNING  "GET /favicon.ico HTTP/1.1" 404 16307  None
-WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 16307
-24/Dec/2023 20:58:00   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
-WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
-24/Dec/2023 20:58:00   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
-WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
-24/Dec/2023 20:58:00   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
-WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
-24/Dec/2023 21:00:19   WARNING  "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828  None
-WARNING:django.server:"GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828
-24/Dec/2023 21:00:19   WARNING  "GET /static/js/typed.min.js.map HTTP/1.1" 404 1816  None
-WARNING:django.server:"GET /static/js/typed.min.js.map HTTP/1.1" 404 1816
-24/Dec/2023 21:00:19   WARNING  "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834  None
-WARNING:django.server:"GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834
-24/Dec/2023 21:17:22   WARNING  Not Found: /home  None
-WARNING:django.request:Not Found: /home
-24/Dec/2023 21:17:22   WARNING  "GET /home HTTP/1.1" 404 16279  None
-WARNING:django.server:"GET /home HTTP/1.1" 404 16279
-25/Dec/2023 05:26:29   WARNING  Not Found: /favicon.ico  None
-WARNING:django.request:Not Found: /favicon.ico
-25/Dec/2023 05:26:29   WARNING  "GET /favicon.ico HTTP/1.1" 404 16308  None
-WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 16308
-25/Dec/2023 17:05:10   WARNING  Not Found: /favicon.ico  None
-WARNING:django.request:Not Found: /favicon.ico
-25/Dec/2023 17:05:10   WARNING  "GET /favicon.ico HTTP/1.1" 404 16308  None
-WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 16308
-WARNING:urllib3.connectionpool:Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd010a88fd0>: Failed to establish a new connection: [Errno 101] Network is unreachable')': /search?city=%D0%A2%D0%B1%D0%B8%D0%BB%D0%B8%D1%81%D0%B8&street=%D1%83%D0%BB%D0%B8%D1%86%D0%B0+%D0%A8%D0%B0%D0%BB%D0%B2%D0%B0+%D0%9D%D1%83%D1%86%D1%83%D0%B1%D0%B8%D0%B4%D0%B7%D0%B5%2C+82&format=json&limit=1&addressdetails=1
-25/Dec/2023 17:44:31   WARNING  Not Found: /favicon.ico  None
-WARNING:django.request:Not Found: /favicon.ico
-25/Dec/2023 17:44:31   WARNING  "GET /favicon.ico HTTP/1.1" 404 16308  None
-WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 16308
+02/Jan/2024 16:16:10   WARNING  Bad Request: /user/11  None
+WARNING:django.request:Bad Request: /user/11
