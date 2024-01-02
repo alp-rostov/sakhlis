@@ -178,12 +178,15 @@ class Statistica(BaseClassExeption, LoginRequiredMixin, TemplateView):
         a = OrderList.objects\
             .values('time_in__month', 'time_in__year')\
             .annotate(count=Sum(F('invoice__price') * F('invoice__quantity')))\
-            .filter(repairer_id=self.request.user)
+            .filter(repairer_id=self.request.user)\
+            .order_by('time_in__year')
+        print(a)
 
         b = OrderList.objects\
             .values('time_in__month', 'time_in__year')\
             .annotate(count=Count(F('pk')))\
-            .filter(repairer_id=self.request.user)
+            .filter(repairer_id=self.request.user)\
+            .order_by('time_in__year')
 
         c = Invoice.objects \
             .values('service_id__type') \

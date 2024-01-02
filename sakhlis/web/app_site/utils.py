@@ -27,10 +27,16 @@ def get_data_for_graph(queryset, labels_name:str, data_name:str, help_dict:dict=
     """ return list using for create Graph in statistica.html """
     labels = []
     data = []
+
     if help_dict:
+        c=''
         for _ in queryset:
-            labels.append(help_dict[_[labels_name]])
+
+            b=str(_.get('time_in__year')) if _.get('time_in__year')!=c and _.get('time_in__year') else ' '
+
+            labels.append(b+' '+help_dict[_[labels_name]])
             data.append(_[data_name])
+            c=_.get('time_in__year')
     else:
         for _ in queryset:
             labels.append(_[labels_name])

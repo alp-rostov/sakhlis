@@ -1,8 +1,3 @@
-from pprint import pprint
-
-
-from django.test import TestCase
-
 
 from sakhlis.web.app_site.tests.tests_models import Settings
 

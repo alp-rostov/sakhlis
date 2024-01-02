@@ -1041,3 +1041,984 @@ django.http.response.Http404: Не найден ни один пользоват
 WARNING:root:============================================================
 02/Jan/2024 16:16:10   WARNING  Bad Request: /user/11  None
 WARNING:django.request:Bad Request: /user/11
+02/Jan/2024 17:29:30   INFO  Watching for file changes with StatReloader  None
+02/Jan/2024 17:29:37   INFO  "GET /list_order HTTP/1.1" 200 54082  None
+INFO:django.server:"GET /list_order HTTP/1.1" 200 54082
+02/Jan/2024 17:29:37   INFO  "GET /static/css/custom.css HTTP/1.1" 304 0  None
+INFO:django.server:"GET /static/css/custom.css HTTP/1.1" 304 0
+02/Jan/2024 17:29:40   INFO  "GET /list_order?work_status=SND HTTP/1.1" 200 25433  None
+INFO:django.server:"GET /list_order?work_status=SND HTTP/1.1" 200 25433
+02/Jan/2024 17:30:25   INFO  "GET /street?street=%D0%9B%D0%B5%D0%B6%D0%B0%D0%B2%D0%B0 HTTP/1.1" 200 128  None
+INFO:django.server:"GET /street?street=%D0%9B%D0%B5%D0%B6%D0%B0%D0%B2%D0%B0 HTTP/1.1" 200 128
+02/Jan/2024 17:30:25   INFO  "GET /__debug__/history_sidebar/?store_id=11c7780aadd74693a489e2020ac48d0d HTTP/1.1" 200 13385  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=11c7780aadd74693a489e2020ac48d0d HTTP/1.1" 200 13385
+02/Jan/2024 17:30:46   INFO  "POST / HTTP/1.1" 200 203  None
+INFO:django.server:"POST / HTTP/1.1" 200 203
+02/Jan/2024 17:30:46   INFO  "GET /list_order/1128 HTTP/1.1" 200 24673  None
+INFO:django.server:"GET /list_order/1128 HTTP/1.1" 200 24673
+02/Jan/2024 17:30:48   INFO  "GET /changestatus?order_pk=1128&work_status=RCV HTTP/1.1" 200 32  None
+INFO:django.server:"GET /changestatus?order_pk=1128&work_status=RCV HTTP/1.1" 200 32
+02/Jan/2024 17:30:48   INFO  "GET /__debug__/history_sidebar/?store_id=7784739313d14fd992b0ef3dde79598b HTTP/1.1" 200 13389  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=7784739313d14fd992b0ef3dde79598b HTTP/1.1" 200 13389
+02/Jan/2024 17:30:51   INFO  "GET /serv?type_work=PL HTTP/1.1" 200 2428  None
+INFO:django.server:"GET /serv?type_work=PL HTTP/1.1" 200 2428
+02/Jan/2024 17:30:51   INFO  "GET /list_order/1128 HTTP/1.1" 200 24679  None
+INFO:django.server:"GET /list_order/1128 HTTP/1.1" 200 24679
+02/Jan/2024 17:30:51   INFO  "GET /__debug__/history_sidebar/?store_id=97e4abd26e7d400f8fbffcd042f3ec59 HTTP/1.1" 200 13377  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=97e4abd26e7d400f8fbffcd042f3ec59 HTTP/1.1" 200 13377
+02/Jan/2024 17:31:14   INFO  "POST /list_order/1128 HTTP/1.1" 200 160  None
+INFO:django.server:"POST /list_order/1128 HTTP/1.1" 200 160
+02/Jan/2024 17:31:15   INFO  "GET /__debug__/history_sidebar/?store_id=e28d081535f946968bb562d759b094bc HTTP/1.1" 200 13344  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=e28d081535f946968bb562d759b094bc HTTP/1.1" 200 13344
+02/Jan/2024 17:31:16   INFO  "GET /changestatus?order_pk=1128&work_status=END HTTP/1.1" 200 32  None
+INFO:django.server:"GET /changestatus?order_pk=1128&work_status=END HTTP/1.1" 200 32
+02/Jan/2024 17:31:16   INFO  "GET /__debug__/history_sidebar/?store_id=9243ee0c528d499c87925f72debf0451 HTTP/1.1" 200 13390  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=9243ee0c528d499c87925f72debf0451 HTTP/1.1" 200 13390
+02/Jan/2024 17:31:29   INFO  "GET /list_order?work_status=SND HTTP/1.1" 200 25433  None
+INFO:django.server:"GET /list_order?work_status=SND HTTP/1.1" 200 25433
+02/Jan/2024 17:32:10   INFO  "GET /street?street=%D0%9A%D0%B0%D0%B7%D0%B1%D0%B5%D0%B3%D0%B8 HTTP/1.1" 200 512  None
+INFO:django.server:"GET /street?street=%D0%9A%D0%B0%D0%B7%D0%B1%D0%B5%D0%B3%D0%B8 HTTP/1.1" 200 512
+02/Jan/2024 17:32:10   INFO  "GET /__debug__/history_sidebar/?store_id=3a1e65bb7f2141ac8e894c1238916538 HTTP/1.1" 200 13391  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=3a1e65bb7f2141ac8e894c1238916538 HTTP/1.1" 200 13391
+02/Jan/2024 17:32:20   INFO  "POST / HTTP/1.1" 200 203  None
+INFO:django.server:"POST / HTTP/1.1" 200 203
+02/Jan/2024 17:32:20   INFO  "GET /list_order/1129 HTTP/1.1" 200 24707  None
+INFO:django.server:"GET /list_order/1129 HTTP/1.1" 200 24707
+02/Jan/2024 17:32:22   INFO  "GET /changestatus?order_pk=1129&work_status=RCV HTTP/1.1" 200 32  None
+INFO:django.server:"GET /changestatus?order_pk=1129&work_status=RCV HTTP/1.1" 200 32
+02/Jan/2024 17:32:22   INFO  "GET /__debug__/history_sidebar/?store_id=b176271f9e574ae785795271543ad2a1 HTTP/1.1" 200 13389  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=b176271f9e574ae785795271543ad2a1 HTTP/1.1" 200 13389
+02/Jan/2024 17:32:37   INFO  "GET /list_order?work_status=SND HTTP/1.1" 200 25433  None
+INFO:django.server:"GET /list_order?work_status=SND HTTP/1.1" 200 25433
+02/Jan/2024 17:33:03   INFO  "GET /street?street=Demetre%20Tavdadebuli%20Stree HTTP/1.1" 200 4  None
+INFO:django.server:"GET /street?street=Demetre%20Tavdadebuli%20Stree HTTP/1.1" 200 4
+02/Jan/2024 17:33:03   INFO  "GET /__debug__/history_sidebar/?store_id=fb813028e78a4b96bf16a7ea0ff56617 HTTP/1.1" 200 13378  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=fb813028e78a4b96bf16a7ea0ff56617 HTTP/1.1" 200 13378
+02/Jan/2024 17:33:04   INFO  "GET /street?street=Demetre%20Tavdadebuli%20Stre HTTP/1.1" 200 4  None
+INFO:django.server:"GET /street?street=Demetre%20Tavdadebuli%20Stre HTTP/1.1" 200 4
+02/Jan/2024 17:33:04   INFO  "GET /__debug__/history_sidebar/?store_id=581c4a4bd726402a825027f1ea468467 HTTP/1.1" 200 13377  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=581c4a4bd726402a825027f1ea468467 HTTP/1.1" 200 13377
+02/Jan/2024 17:33:04   INFO  "GET /street?street=Demetre%20Tavdadebuli%20Str HTTP/1.1" 200 4  None
+INFO:django.server:"GET /street?street=Demetre%20Tavdadebuli%20Str HTTP/1.1" 200 4
+02/Jan/2024 17:33:04   INFO  "GET /street?street=Demetre%20Tavdadebuli%20St HTTP/1.1" 200 4  None
+INFO:django.server:"GET /street?street=Demetre%20Tavdadebuli%20St HTTP/1.1" 200 4
+02/Jan/2024 17:33:05   INFO  "GET /street?street=Demetre%20Tavdadebuli%20S HTTP/1.1" 200 4  None
+INFO:django.server:"GET /street?street=Demetre%20Tavdadebuli%20S HTTP/1.1" 200 4
+02/Jan/2024 17:33:05   INFO  "GET /street?street=Demetre%20Tavdadebuli HTTP/1.1" 200 4  None
+INFO:django.server:"GET /street?street=Demetre%20Tavdadebuli HTTP/1.1" 200 4
+02/Jan/2024 17:33:05   INFO  "GET /street?street=Demetre%20Tavdadebuli HTTP/1.1" 200 4  None
+INFO:django.server:"GET /street?street=Demetre%20Tavdadebuli HTTP/1.1" 200 4
+02/Jan/2024 17:33:05   INFO  "GET /__debug__/history_sidebar/?store_id=2fece6f6b33b48ebae78fe87e75e82dd HTTP/1.1" 200 13370  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=2fece6f6b33b48ebae78fe87e75e82dd HTTP/1.1" 200 13370
+02/Jan/2024 17:33:20   INFO  "POST / HTTP/1.1" 200 203  None
+INFO:django.server:"POST / HTTP/1.1" 200 203
+02/Jan/2024 17:33:21   INFO  "GET /list_order/1130 HTTP/1.1" 200 24682  None
+INFO:django.server:"GET /list_order/1130 HTTP/1.1" 200 24682
+02/Jan/2024 17:33:43   INFO  "GET /list_order?work_status=SND HTTP/1.1" 200 27792  None
+INFO:django.server:"GET /list_order?work_status=SND HTTP/1.1" 200 27792
+02/Jan/2024 17:33:46   INFO  "GET /list_order/1130 HTTP/1.1" 200 24682  None
+INFO:django.server:"GET /list_order/1130 HTTP/1.1" 200 24682
+02/Jan/2024 17:33:48   INFO  "GET /changestatus?order_pk=1130&work_status=RCV HTTP/1.1" 200 32  None
+INFO:django.server:"GET /changestatus?order_pk=1130&work_status=RCV HTTP/1.1" 200 32
+02/Jan/2024 17:33:48   INFO  "GET /__debug__/history_sidebar/?store_id=78b8090e847d476ca172d71042b911bf HTTP/1.1" 200 13390  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=78b8090e847d476ca172d71042b911bf HTTP/1.1" 200 13390
+02/Jan/2024 17:33:49   INFO  "GET /list_order?work_status=RCV HTTP/1.1" 200 34990  None
+INFO:django.server:"GET /list_order?work_status=RCV HTTP/1.1" 200 34990
+02/Jan/2024 17:33:59   INFO  "GET /list_order?work_status=END HTTP/1.1" 200 54060  None
+INFO:django.server:"GET /list_order?work_status=END HTTP/1.1" 200 54060
+02/Jan/2024 17:34:06   INFO  "GET /stat/ HTTP/1.1" 200 198414  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 198414
+02/Jan/2024 17:39:49   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py changed, reloading.
+02/Jan/2024 17:39:52   INFO  Watching for file changes with StatReloader  None
+02/Jan/2024 17:39:57   INFO  "GET /stat/ HTTP/1.1" 200 185208  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 185208
+02/Jan/2024 17:41:15   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py changed, reloading.
+02/Jan/2024 17:41:18   INFO  Watching for file changes with StatReloader  None
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-01-02 17:41:20.084155
+WARNING:root:ОШИБКА:        'time_in__month__year'
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 226, in get
+    context = self.get_context_data(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 216, in get_context_data
+    labels, sizes = get_data_for_graph(a,'time_in__month__year','count')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py", line 36, in get_data_for_graph
+    labels.append(_[labels_name])
+                  ~^^^^^^^^^^^^^
+KeyError: 'time_in__month__year'
+
+WARNING:root:============================================================
+02/Jan/2024 17:41:20   WARNING  Bad Request: /stat/  None
+WARNING:django.request:Bad Request: /stat/
+02/Jan/2024 17:41:20   WARNING  "GET /stat/ HTTP/1.1" 400 79  None
+WARNING:django.server:"GET /stat/ HTTP/1.1" 400 79
+02/Jan/2024 17:41:25   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py changed, reloading.
+02/Jan/2024 17:41:28   INFO  Watching for file changes with StatReloader  None
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-01-02 17:41:30.691889
+WARNING:root:ОШИБКА:        'time_in__month__years'
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 226, in get
+    context = self.get_context_data(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 216, in get_context_data
+    labels, sizes = get_data_for_graph(a,'time_in__month__years','count')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py", line 36, in get_data_for_graph
+    labels.append(_[labels_name])
+                  ~^^^^^^^^^^^^^
+KeyError: 'time_in__month__years'
+
+WARNING:root:============================================================
+02/Jan/2024 17:41:30   WARNING  Bad Request: /stat/  None
+WARNING:django.request:Bad Request: /stat/
+02/Jan/2024 17:41:30   WARNING  "GET /stat/ HTTP/1.1" 400 80  None
+WARNING:django.server:"GET /stat/ HTTP/1.1" 400 80
+02/Jan/2024 17:41:52   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py changed, reloading.
+02/Jan/2024 17:41:54   INFO  Watching for file changes with StatReloader  None
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-01-02 17:41:55.737771
+WARNING:root:ОШИБКА:        'time_in__years'
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 226, in get
+    context = self.get_context_data(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 216, in get_context_data
+    labels, sizes = get_data_for_graph(a,'time_in__years','count')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py", line 36, in get_data_for_graph
+    labels.append(_[labels_name])
+                  ~^^^^^^^^^^^^^
+KeyError: 'time_in__years'
+
+WARNING:root:============================================================
+02/Jan/2024 17:41:55   WARNING  Bad Request: /stat/  None
+WARNING:django.request:Bad Request: /stat/
+02/Jan/2024 17:41:55   WARNING  "GET /stat/ HTTP/1.1" 400 73  None
+WARNING:django.server:"GET /stat/ HTTP/1.1" 400 73
+02/Jan/2024 17:45:02   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py changed, reloading.
+02/Jan/2024 17:45:06   INFO  Watching for file changes with StatReloader  None
+02/Jan/2024 17:45:07   INFO  "GET /stat/ HTTP/1.1" 200 185208  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 185208
+02/Jan/2024 17:45:11   INFO  "GET /stat/ HTTP/1.1" 200 185207  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 185207
+02/Jan/2024 17:47:45   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py changed, reloading.
+02/Jan/2024 17:47:49   INFO  Watching for file changes with StatReloader  None
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-01-02 17:47:49.728590
+WARNING:root:ОШИБКА:        'QuerySet' object has no attribute 'orderby'
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 226, in get
+    context = self.get_context_data(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 181, in get_context_data
+    .filter(repairer_id=self.request.user).orderby('-time_in__year')
+                                           ^^^^^^^
+AttributeError: 'QuerySet' object has no attribute 'orderby'
+
+WARNING:root:============================================================
+02/Jan/2024 17:47:49   WARNING  Bad Request: /stat/  None
+WARNING:django.request:Bad Request: /stat/
+02/Jan/2024 17:47:49   WARNING  "GET /stat/ HTTP/1.1" 400 101  None
+WARNING:django.server:"GET /stat/ HTTP/1.1" 400 101
+02/Jan/2024 17:48:14   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py changed, reloading.
+02/Jan/2024 17:48:16   INFO  Watching for file changes with StatReloader  None
+02/Jan/2024 17:48:22   INFO  "GET /stat/ HTTP/1.1" 200 185208  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 185208
+02/Jan/2024 17:48:29   INFO  "GET /stat/ HTTP/1.1" 200 185207  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 185207
+02/Jan/2024 17:48:47   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py changed, reloading.
+02/Jan/2024 17:48:50   INFO  Watching for file changes with StatReloader  None
+02/Jan/2024 17:48:55   INFO  "GET /stat/ HTTP/1.1" 200 185208  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 185208
+02/Jan/2024 17:50:26   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py changed, reloading.
+02/Jan/2024 17:50:27   INFO  "GET /stat/ HTTP/1.1" 200 185207  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 185207
+02/Jan/2024 17:50:29   INFO  Watching for file changes with StatReloader  None
+02/Jan/2024 17:50:37   INFO  "GET /stat/ HTTP/1.1" 200 185208  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 185208
+02/Jan/2024 17:52:13   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py changed, reloading.
+02/Jan/2024 17:52:16   INFO  Watching for file changes with StatReloader  None
+02/Jan/2024 17:52:19   INFO  "GET /stat/ HTTP/1.1" 200 198464  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 198464
+02/Jan/2024 17:52:47   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py changed, reloading.
+02/Jan/2024 17:52:51   INFO  Watching for file changes with StatReloader  None
+02/Jan/2024 17:52:54   INFO  "GET /stat/ HTTP/1.1" 200 191784  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 191784
+02/Jan/2024 17:53:18   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py changed, reloading.
+02/Jan/2024 17:53:20   INFO  Watching for file changes with StatReloader  None
+02/Jan/2024 17:53:32   INFO  "GET /stat/ HTTP/1.1" 200 198464  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 198464
+02/Jan/2024 17:54:06   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/models.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/models.py changed, reloading.
+02/Jan/2024 17:54:09   INFO  Watching for file changes with StatReloader  None
+02/Jan/2024 17:54:12   INFO  "GET /stat/ HTTP/1.1" 200 198464  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 198464
+02/Jan/2024 17:54:15   INFO  "GET /stat/ HTTP/1.1" 200 198463  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 198463
+02/Jan/2024 17:54:19   INFO  "GET /stat/ HTTP/1.1" 200 198463  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 198463
+02/Jan/2024 17:54:34   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/models.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/models.py changed, reloading.
+02/Jan/2024 17:54:37   INFO  Watching for file changes with StatReloader  None
+02/Jan/2024 18:00:14   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/models.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/models.py changed, reloading.
+02/Jan/2024 18:00:16   INFO  Watching for file changes with StatReloader  None
+02/Jan/2024 18:00:20   INFO  "GET /stat/ HTTP/1.1" 200 192074  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 192074
+02/Jan/2024 18:00:35   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/models.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/models.py changed, reloading.
+02/Jan/2024 18:00:38   INFO  Watching for file changes with StatReloader  None
+02/Jan/2024 18:00:42   INFO  "GET /stat/ HTTP/1.1" 200 192094  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 192094
+02/Jan/2024 18:02:11   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.
+02/Jan/2024 18:02:13   INFO  Watching for file changes with StatReloader  None
+02/Jan/2024 18:02:27   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.
+02/Jan/2024 18:02:28   INFO  Watching for file changes with StatReloader  None
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-01-02 18:02:30.365284
+WARNING:root:ОШИБКА:        'dict' object has no attribute 'time_in__year'
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 226, in get
+    context = self.get_context_data(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 211, in get_context_data
+    labels, sizes = get_data_for_graph(c,'service_id__type','count', WORK_CHOICES_)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py", line 32, in get_data_for_graph
+    labels.append(help_dict[_[labels_name]]+_.time_in__year)
+                                            ^^^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'time_in__year'
+
+WARNING:root:============================================================
+02/Jan/2024 18:02:30   WARNING  Bad Request: /stat/  None
+WARNING:django.request:Bad Request: /stat/
+02/Jan/2024 18:02:30   WARNING  "GET /stat/ HTTP/1.1" 400 103  None
+WARNING:django.server:"GET /stat/ HTTP/1.1" 400 103
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-01-02 18:02:32.854675
+WARNING:root:ОШИБКА:        'dict' object has no attribute 'time_in__year'
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 226, in get
+    context = self.get_context_data(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 211, in get_context_data
+    labels, sizes = get_data_for_graph(c,'service_id__type','count', WORK_CHOICES_)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py", line 32, in get_data_for_graph
+    labels.append(help_dict[_[labels_name]]+_.time_in__year)
+                                            ^^^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'time_in__year'
+
+WARNING:root:============================================================
+02/Jan/2024 18:02:32   WARNING  Bad Request: /stat/  None
+WARNING:django.request:Bad Request: /stat/
+02/Jan/2024 18:02:32   WARNING  "GET /stat/ HTTP/1.1" 400 103  None
+WARNING:django.server:"GET /stat/ HTTP/1.1" 400 103
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-01-02 18:02:34.682512
+WARNING:root:ОШИБКА:        'dict' object has no attribute 'time_in__year'
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 226, in get
+    context = self.get_context_data(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 211, in get_context_data
+    labels, sizes = get_data_for_graph(c,'service_id__type','count', WORK_CHOICES_)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py", line 32, in get_data_for_graph
+    labels.append(help_dict[_[labels_name]]+_.time_in__year)
+                                            ^^^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'time_in__year'
+
+WARNING:root:============================================================
+02/Jan/2024 18:02:34   WARNING  Bad Request: /stat/  None
+WARNING:django.request:Bad Request: /stat/
+02/Jan/2024 18:02:34   WARNING  "GET /stat/ HTTP/1.1" 400 103  None
+WARNING:django.server:"GET /stat/ HTTP/1.1" 400 103
+02/Jan/2024 18:02:46   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.
+02/Jan/2024 18:02:48   INFO  Watching for file changes with StatReloader  None
+02/Jan/2024 18:02:57   INFO  "GET /stat/ HTTP/1.1" 200 192094  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 192094
+02/Jan/2024 18:03:24   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.
+02/Jan/2024 18:03:47   INFO  Watching for file changes with StatReloader  None
+02/Jan/2024 18:03:52   INFO  "GET /stat/ HTTP/1.1" 200 199244  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 199244
+02/Jan/2024 18:05:01   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.
+02/Jan/2024 18:05:04   INFO  Watching for file changes with StatReloader  None
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-01-02 18:05:06.261530
+WARNING:root:ОШИБКА:        'time_in__year'
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 226, in get
+    context = self.get_context_data(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 211, in get_context_data
+    labels, sizes = get_data_for_graph(c,'service_id__type','count', WORK_CHOICES_)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py", line 32, in get_data_for_graph
+    labels.append(help_dict[_[labels_name]]+_['time_in__year'])
+                                            ~^^^^^^^^^^^^^^^^^
+KeyError: 'time_in__year'
+
+WARNING:root:============================================================
+02/Jan/2024 18:05:06   WARNING  Bad Request: /stat/  None
+WARNING:django.request:Bad Request: /stat/
+02/Jan/2024 18:05:06   WARNING  "GET /stat/ HTTP/1.1" 400 72  None
+WARNING:django.server:"GET /stat/ HTTP/1.1" 400 72
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-01-02 18:05:07.353073
+WARNING:root:ОШИБКА:        'time_in__year'
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 226, in get
+    context = self.get_context_data(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 211, in get_context_data
+    labels, sizes = get_data_for_graph(c,'service_id__type','count', WORK_CHOICES_)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py", line 32, in get_data_for_graph
+    labels.append(help_dict[_[labels_name]]+_['time_in__year'])
+                                            ~^^^^^^^^^^^^^^^^^
+KeyError: 'time_in__year'
+
+WARNING:root:============================================================
+02/Jan/2024 18:05:07   WARNING  Bad Request: /stat/  None
+WARNING:django.request:Bad Request: /stat/
+02/Jan/2024 18:05:07   WARNING  "GET /stat/ HTTP/1.1" 400 72  None
+WARNING:django.server:"GET /stat/ HTTP/1.1" 400 72
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-01-02 18:05:29.020623
+WARNING:root:ОШИБКА:        'time_in__year'
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 226, in get
+    context = self.get_context_data(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 211, in get_context_data
+    labels, sizes = get_data_for_graph(c,'service_id__type','count', WORK_CHOICES_)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py", line 32, in get_data_for_graph
+    labels.append(help_dict[_[labels_name]]+_.time_in__year)
+                                            ^^^^^^^^^^^^^^^^^
+KeyError: 'time_in__year'
+
+WARNING:root:============================================================
+02/Jan/2024 18:05:29   WARNING  Bad Request: /stat/  None
+WARNING:django.request:Bad Request: /stat/
+02/Jan/2024 18:05:29   WARNING  "GET /stat/ HTTP/1.1" 400 72  None
+WARNING:django.server:"GET /stat/ HTTP/1.1" 400 72
+02/Jan/2024 18:05:29   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.
+02/Jan/2024 18:05:30   INFO  Watching for file changes with StatReloader  None
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-01-02 18:05:31.896623
+WARNING:root:ОШИБКА:        'dict' object has no attribute 'time_in__year'
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 226, in get
+    context = self.get_context_data(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 211, in get_context_data
+    labels, sizes = get_data_for_graph(c,'service_id__type','count', WORK_CHOICES_)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py", line 32, in get_data_for_graph
+    labels.append(help_dict[_[labels_name]]+_.time_in__year)
+                                            ^^^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'time_in__year'
+
+WARNING:root:============================================================
+02/Jan/2024 18:05:31   WARNING  Bad Request: /stat/  None
+WARNING:django.request:Bad Request: /stat/
+02/Jan/2024 18:05:31   WARNING  "GET /stat/ HTTP/1.1" 400 103  None
+WARNING:django.server:"GET /stat/ HTTP/1.1" 400 103
+02/Jan/2024 18:05:47   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.
+02/Jan/2024 18:05:49   INFO  Watching for file changes with StatReloader  None
+02/Jan/2024 18:05:54   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.
+02/Jan/2024 18:05:56   INFO  Watching for file changes with StatReloader  None
+02/Jan/2024 18:05:58   INFO  "GET /stat/ HTTP/1.1" 200 192094  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 192094
+02/Jan/2024 18:06:20   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.
+02/Jan/2024 18:06:23   INFO  Watching for file changes with StatReloader  None
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-01-02 18:06:27.105162
+WARNING:root:ОШИБКА:        'dict' object has no attribute 'time_in__year'
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 226, in get
+    context = self.get_context_data(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 211, in get_context_data
+    labels, sizes = get_data_for_graph(c,'service_id__type','count', WORK_CHOICES_)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py", line 32, in get_data_for_graph
+    print(_.time_in__year)
+          ^^^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'time_in__year'
+
+WARNING:root:============================================================
+02/Jan/2024 18:06:27   WARNING  Bad Request: /stat/  None
+WARNING:django.request:Bad Request: /stat/
+02/Jan/2024 18:06:27   WARNING  "GET /stat/ HTTP/1.1" 400 103  None
+WARNING:django.server:"GET /stat/ HTTP/1.1" 400 103
+02/Jan/2024 18:06:44   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.
+02/Jan/2024 18:06:46   INFO  Watching for file changes with StatReloader  None
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-01-02 18:06:48.671445
+WARNING:root:ОШИБКА:        'time_in__year'
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 226, in get
+    context = self.get_context_data(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 211, in get_context_data
+    labels, sizes = get_data_for_graph(c,'service_id__type','count', WORK_CHOICES_)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py", line 32, in get_data_for_graph
+    print(_['time_in__year'])
+          ~^^^^^^^^^^^^^^^^^
+KeyError: 'time_in__year'
+
+WARNING:root:============================================================
+02/Jan/2024 18:06:48   WARNING  Bad Request: /stat/  None
+WARNING:django.request:Bad Request: /stat/
+02/Jan/2024 18:06:48   WARNING  "GET /stat/ HTTP/1.1" 400 72  None
+WARNING:django.server:"GET /stat/ HTTP/1.1" 400 72
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-01-02 18:06:50.941852
+WARNING:root:ОШИБКА:        'time_in__year'
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 226, in get
+    context = self.get_context_data(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 211, in get_context_data
+    labels, sizes = get_data_for_graph(c,'service_id__type','count', WORK_CHOICES_)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py", line 32, in get_data_for_graph
+    print(_['time_in__year'])
+          ~^^^^^^^^^^^^^^^^^
+KeyError: 'time_in__year'
+
+WARNING:root:============================================================
+02/Jan/2024 18:06:50   WARNING  Bad Request: /stat/  None
+WARNING:django.request:Bad Request: /stat/
+02/Jan/2024 18:06:50   WARNING  "GET /stat/ HTTP/1.1" 400 72  None
+WARNING:django.server:"GET /stat/ HTTP/1.1" 400 72
+02/Jan/2024 18:07:14   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.
+02/Jan/2024 18:07:16   INFO  Watching for file changes with StatReloader  None
+02/Jan/2024 18:07:17   INFO  "GET /stat/ HTTP/1.1" 200 192094  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 192094
+02/Jan/2024 18:07:20   INFO  "GET /stat/ HTTP/1.1" 200 192093  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 192093
+02/Jan/2024 18:08:04   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.
+02/Jan/2024 18:08:06   INFO  Watching for file changes with StatReloader  None
+02/Jan/2024 18:08:33   INFO  "GET /stat/ HTTP/1.1" 200 192094  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 192094
+02/Jan/2024 18:08:53   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.
+02/Jan/2024 18:08:56   INFO  Watching for file changes with StatReloader  None
+02/Jan/2024 18:08:58   INFO  "GET /stat/ HTTP/1.1" 200 192094  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 192094
+02/Jan/2024 18:10:15   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.
+02/Jan/2024 18:10:17   INFO  Watching for file changes with StatReloader  None
+02/Jan/2024 18:10:21   INFO  "GET /stat/ HTTP/1.1" 200 192095  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 192095
+02/Jan/2024 18:10:23   INFO  "GET /stat/ HTTP/1.1" 200 192095  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 192095
+02/Jan/2024 18:10:33   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.
+02/Jan/2024 18:10:36   INFO  Watching for file changes with StatReloader  None
+02/Jan/2024 18:10:38   INFO  "GET /stat/ HTTP/1.1" 200 192095  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 192095
+02/Jan/2024 18:10:50   INFO  "GET / HTTP/1.1" 200 43209  None
+INFO:django.server:"GET / HTTP/1.1" 200 43209
+02/Jan/2024 18:10:50   INFO  "GET /media/images/muzg-na-chas.jpg HTTP/1.1" 200 323830  None
+INFO:django.server:"GET /media/images/muzg-na-chas.jpg HTTP/1.1" 200 323830
+02/Jan/2024 18:10:53   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.
+02/Jan/2024 18:10:55   INFO  Watching for file changes with StatReloader  None
+02/Jan/2024 18:11:03   INFO  "GET /list_order HTTP/1.1" 200 53916  None
+INFO:django.server:"GET /list_order HTTP/1.1" 200 53916
+02/Jan/2024 18:11:08   INFO  "GET /stat/ HTTP/1.1" 200 192095  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 192095
+02/Jan/2024 18:11:50   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.
+02/Jan/2024 18:11:53   INFO  Watching for file changes with StatReloader  None
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-01-02 18:11:56.470173
+WARNING:root:ОШИБКА:        'list' object has no attribute 'first'
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 226, in get
+    context = self.get_context_data(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 227, in get_context_data
+    labels, sizes = get_data_for_graph(h,'time_in__date','count')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py", line 30, in get_data_for_graph
+    year = queryset.first().get('time_in__year')
+           ^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'first'
+
+WARNING:root:============================================================
+02/Jan/2024 18:11:56   WARNING  Bad Request: /stat/  None
+WARNING:django.request:Bad Request: /stat/
+02/Jan/2024 18:11:56   WARNING  "GET /stat/ HTTP/1.1" 400 95  None
+WARNING:django.server:"GET /stat/ HTTP/1.1" 400 95
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-01-02 18:12:16.545445
+WARNING:root:ОШИБКА:        'list' object has no attribute 'first'
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 226, in get
+    context = self.get_context_data(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 227, in get_context_data
+    labels, sizes = get_data_for_graph(h,'time_in__date','count')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py", line 30, in get_data_for_graph
+    year = queryset.first().get('time_in__year')
+           ^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'first'
+
+WARNING:root:============================================================
+02/Jan/2024 18:12:16   WARNING  Bad Request: /stat/  None
+WARNING:django.request:Bad Request: /stat/
+02/Jan/2024 18:12:16   WARNING  "GET /stat/ HTTP/1.1" 400 95  None
+WARNING:django.server:"GET /stat/ HTTP/1.1" 400 95
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-01-02 18:12:18.624795
+WARNING:root:ОШИБКА:        'list' object has no attribute 'first'
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 226, in get
+    context = self.get_context_data(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 227, in get_context_data
+    labels, sizes = get_data_for_graph(h,'time_in__date','count')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py", line 30, in get_data_for_graph
+    year = queryset.first().get('time_in__year')
+           ^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'first'
+
+WARNING:root:============================================================
+02/Jan/2024 18:12:18   WARNING  Bad Request: /stat/  None
+WARNING:django.request:Bad Request: /stat/
+02/Jan/2024 18:12:18   WARNING  "GET /stat/ HTTP/1.1" 400 95  None
+WARNING:django.server:"GET /stat/ HTTP/1.1" 400 95
+02/Jan/2024 18:13:06   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.
+02/Jan/2024 18:13:08   INFO  Watching for file changes with StatReloader  None
+02/Jan/2024 18:13:12   INFO  "GET /stat/ HTTP/1.1" 200 192095  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 192095
+02/Jan/2024 18:14:17   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.
+02/Jan/2024 18:14:20   INFO  Watching for file changes with StatReloader  None
+02/Jan/2024 18:14:25   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.
+02/Jan/2024 18:14:27   INFO  Watching for file changes with StatReloader  None
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-01-02 18:14:28.284917
+WARNING:root:ОШИБКА:        can only concatenate str (not "NoneType") to str
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 226, in get
+    context = self.get_context_data(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 211, in get_context_data
+    labels, sizes = get_data_for_graph(c,'service_id__type','count', WORK_CHOICES_)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py", line 33, in get_data_for_graph
+    labels.append(help_dict[_[labels_name]]+_.get('time_in__year'))
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+TypeError: can only concatenate str (not "NoneType") to str
+
+WARNING:root:============================================================
+02/Jan/2024 18:14:28   WARNING  Bad Request: /stat/  None
+WARNING:django.request:Bad Request: /stat/
+02/Jan/2024 18:14:28   WARNING  "GET /stat/ HTTP/1.1" 400 107  None
+WARNING:django.server:"GET /stat/ HTTP/1.1" 400 107
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-01-02 18:14:30.847384
+WARNING:root:ОШИБКА:        can only concatenate str (not "NoneType") to str
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 226, in get
+    context = self.get_context_data(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 211, in get_context_data
+    labels, sizes = get_data_for_graph(c,'service_id__type','count', WORK_CHOICES_)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py", line 33, in get_data_for_graph
+    labels.append(help_dict[_[labels_name]]+_.get('time_in__year'))
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+TypeError: can only concatenate str (not "NoneType") to str
+
+WARNING:root:============================================================
+02/Jan/2024 18:14:30   WARNING  Bad Request: /stat/  None
+WARNING:django.request:Bad Request: /stat/
+02/Jan/2024 18:14:30   WARNING  "GET /stat/ HTTP/1.1" 400 107  None
+WARNING:django.server:"GET /stat/ HTTP/1.1" 400 107
+02/Jan/2024 18:14:43   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.
+02/Jan/2024 18:14:44   INFO  Watching for file changes with StatReloader  None
+02/Jan/2024 18:14:47   INFO  "GET /stat/ HTTP/1.1" 200 206932  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 206932
+02/Jan/2024 18:15:19   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.
+02/Jan/2024 18:15:36   INFO  Watching for file changes with StatReloader  None
+02/Jan/2024 18:15:40   INFO  "GET /stat/ HTTP/1.1" 200 171960  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 171960
+02/Jan/2024 18:15:54   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.
+02/Jan/2024 18:16:59   INFO  Watching for file changes with StatReloader  None
+02/Jan/2024 18:17:04   INFO  "GET /stat/ HTTP/1.1" 200 178800  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 178800
+02/Jan/2024 18:17:04   INFO  "GET /static/css/custom.css HTTP/1.1" 304 0  None
+INFO:django.server:"GET /static/css/custom.css HTTP/1.1" 304 0
+02/Jan/2024 18:18:12   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.
+02/Jan/2024 18:18:15   INFO  Watching for file changes with StatReloader  None
+02/Jan/2024 18:18:16   INFO  "GET /stat/ HTTP/1.1" 200 206932  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 206932
+02/Jan/2024 18:19:12   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.
+02/Jan/2024 18:19:14   INFO  Watching for file changes with StatReloader  None
+02/Jan/2024 18:19:16   INFO  "GET /stat/ HTTP/1.1" 200 184452  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 184452
+02/Jan/2024 18:19:25   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.
+02/Jan/2024 18:19:42   INFO  Watching for file changes with StatReloader  None
+02/Jan/2024 18:19:45   INFO  "GET /stat/ HTTP/1.1" 200 186444  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 186444
+02/Jan/2024 18:20:10   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.
+02/Jan/2024 18:20:13   INFO  Watching for file changes with StatReloader  None
+02/Jan/2024 18:20:15   INFO  "GET /stat/ HTTP/1.1" 200 206932  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 206932
+02/Jan/2024 18:24:49   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.
+02/Jan/2024 18:24:51   INFO  Watching for file changes with StatReloader  None
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-01-02 18:24:55.143342
+WARNING:root:ОШИБКА:        can only concatenate str (not "int") to str
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 226, in get
+    context = self.get_context_data(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 211, in get_context_data
+    labels, sizes = get_data_for_graph(c,'service_id__type','count', WORK_CHOICES_)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py", line 34, in get_data_for_graph
+    labels.append(help_dict[_[labels_name]]+b)
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~^~
+TypeError: can only concatenate str (not "int") to str
+
+WARNING:root:============================================================
+02/Jan/2024 18:24:55   WARNING  Bad Request: /stat/  None
+WARNING:django.request:Bad Request: /stat/
+02/Jan/2024 18:24:55   WARNING  "GET /stat/ HTTP/1.1" 400 102  None
+WARNING:django.server:"GET /stat/ HTTP/1.1" 400 102
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-01-02 18:24:58.466164
+WARNING:root:ОШИБКА:        can only concatenate str (not "int") to str
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 226, in get
+    context = self.get_context_data(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 211, in get_context_data
+    labels, sizes = get_data_for_graph(c,'service_id__type','count', WORK_CHOICES_)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py", line 34, in get_data_for_graph
+    labels.append(help_dict[_[labels_name]]+b)
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~^~
+TypeError: can only concatenate str (not "int") to str
+
+WARNING:root:============================================================
+02/Jan/2024 18:24:58   WARNING  Bad Request: /stat/  None
+WARNING:django.request:Bad Request: /stat/
+02/Jan/2024 18:24:58   WARNING  "GET /stat/ HTTP/1.1" 400 102  None
+WARNING:django.server:"GET /stat/ HTTP/1.1" 400 102
+02/Jan/2024 18:25:08   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.
+02/Jan/2024 18:25:09   INFO  Watching for file changes with StatReloader  None
+02/Jan/2024 18:25:12   INFO  "GET /stat/ HTTP/1.1" 200 202780  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 202780
+02/Jan/2024 18:25:21   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.
+02/Jan/2024 18:25:24   INFO  Watching for file changes with StatReloader  None
+02/Jan/2024 18:25:27   INFO  "GET /stat/ HTTP/1.1" 200 201028  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 201028
+02/Jan/2024 18:27:47   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.
+02/Jan/2024 18:27:50   INFO  Watching for file changes with StatReloader  None
+02/Jan/2024 18:27:53   INFO  "GET /stat/ HTTP/1.1" 200 198024  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 198024
+02/Jan/2024 18:28:06   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.
+02/Jan/2024 18:28:08   INFO  Watching for file changes with StatReloader  None
+02/Jan/2024 18:28:11   INFO  "GET /stat/ HTTP/1.1" 200 195910  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 195910
+02/Jan/2024 18:28:36   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.
+02/Jan/2024 18:28:38   INFO  Watching for file changes with StatReloader  None
+02/Jan/2024 18:28:40   INFO  "GET /stat/ HTTP/1.1" 200 196760  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 196760
+02/Jan/2024 18:29:01   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.
+02/Jan/2024 18:29:04   INFO  Watching for file changes with StatReloader  None
+02/Jan/2024 18:29:07   INFO  "GET /stat/ HTTP/1.1" 200 196544  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 196544
+02/Jan/2024 18:29:50   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.
+02/Jan/2024 18:30:07   INFO  Watching for file changes with StatReloader  None
+02/Jan/2024 18:30:11   INFO  "GET /stat/ HTTP/1.1" 200 196544  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 196544
+02/Jan/2024 18:30:16   INFO  "GET /stat/ HTTP/1.1" 200 196543  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 196543
+02/Jan/2024 18:30:41   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.
+02/Jan/2024 18:30:44   INFO  Watching for file changes with StatReloader  None
+02/Jan/2024 18:31:26   INFO  "GET /stat/ HTTP/1.1" 200 195909  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 195909
+02/Jan/2024 18:32:04   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.
+02/Jan/2024 18:32:18   INFO  Watching for file changes with StatReloader  None
+02/Jan/2024 18:32:22   INFO  "GET /stat/ HTTP/1.1" 200 195982  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 195982
+02/Jan/2024 18:32:25   INFO  "GET /stat/ HTTP/1.1" 200 195981  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 195981
+02/Jan/2024 18:32:44   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.
+02/Jan/2024 18:32:47   INFO  Watching for file changes with StatReloader  None
+02/Jan/2024 18:32:50   INFO  "GET /stat/ HTTP/1.1" 200 197924  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 197924
+02/Jan/2024 18:34:03   INFO  "GET /stat/ HTTP/1.1" 200 197923  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 197923
+02/Jan/2024 18:34:59   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.
+02/Jan/2024 18:35:02   INFO  Watching for file changes with StatReloader  None
+02/Jan/2024 18:35:05   INFO  "GET /stat/ HTTP/1.1" 200 196218  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 196218
+02/Jan/2024 18:35:08   INFO  "GET /stat/ HTTP/1.1" 200 196217  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 196217
+02/Jan/2024 18:35:20   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.
+02/Jan/2024 18:35:23   INFO  Watching for file changes with StatReloader  None
+02/Jan/2024 18:35:25   INFO  "GET /stat/ HTTP/1.1" 200 196176  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 196176
+02/Jan/2024 18:35:28   INFO  "GET /stat/ HTTP/1.1" 200 196175  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 196175
+02/Jan/2024 18:35:46   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.
+02/Jan/2024 18:35:49   INFO  Watching for file changes with StatReloader  None
+02/Jan/2024 18:35:57   INFO  "GET /stat/ HTTP/1.1" 200 194700  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 194700
+02/Jan/2024 18:37:10   INFO  /home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.  None
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py changed, reloading.
+02/Jan/2024 18:37:13   INFO  Watching for file changes with StatReloader  None
