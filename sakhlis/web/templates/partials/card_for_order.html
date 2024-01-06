@@ -15,6 +15,7 @@
                     <a href="{{ the_url_delete }}" id="delete_{{ i.pk }}" class="mycolor" title="Удалить"><i class="fas fa-trash text-secondary mt-3"></i></a>&nbsp&nbsp&nbsp
                       <a href="{{ the_url_update }}" id="edit_{{ i.pk }}" title="Редактировать"><i class="fas fa-pen text-secondary mt-3"> </i></a>&nbsp&nbsp&nbsp
                     <a href="#" id="{{ i.pk }}" class="copy" title="Копировать"><i class="fas fa-copy text-secondary mt-3"></i></a>
+
                 </div>
                 <div class="col-md-4 ">
                     <span id="customer_name_{{ i.pk }}" class="fas fa-user prefix text-secondary mt-3" aria-hidden="true"> {{ i.customer_name|capfirst }}</span><br>

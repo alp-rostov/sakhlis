@@ -67,7 +67,7 @@ class OrderForm(forms.ModelForm):
                                     )
     def save(self, commit=True):
         order=super().save(commit=False)
-        dict_wrong_char = str.maketrans({'<': '', '[': '',']': '','>': '','{': '','}': '','+': '', '-': '', '@': '' })
+        dict_wrong_char = str.maketrans({'<': '', '[': '',']': '','>': '','{': '','}': '','+': '', '@': '' })
 
         order.text_order = order.text_order.translate(dict_wrong_char)
 
@@ -82,14 +82,6 @@ class OrderForm(forms.ModelForm):
         if commit:
             order.save()
         return order
-
-
-class RepairerForm(forms.ModelForm):
-
-    class Meta:
-        model = RepairerList
-        fields = ['phone', 'city', 'foto']
-
 
 
 

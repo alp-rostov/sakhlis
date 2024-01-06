@@ -180,7 +180,6 @@ class Statistica(BaseClassExeption, LoginRequiredMixin, TemplateView):
             .annotate(count=Sum(F('invoice__price') * F('invoice__quantity')))\
             .filter(repairer_id=self.request.user)\
             .order_by('time_in__year')
-        print(a)
 
         b = OrderList.objects\
             .values('time_in__month', 'time_in__year')\
@@ -253,7 +252,7 @@ def CreateIvoicePDF(request, **kwargs):
     return FileResponse(buf, as_attachment=True, filename=f'Invoice_{order_pk}_.pdf')
 
 
-class OrderSearchForm(BaseClassExeption, LoginRequiredMixin, ListView):
+class OrderSearchForm( LoginRequiredMixin, ListView):
     model = OrderList
     context_object_name = 'order'
     template_name = 'ordersearchform.html'
@@ -271,6 +270,13 @@ class OrderSearchForm(BaseClassExeption, LoginRequiredMixin, ListView):
         context = super().get_context_data(**kwargs)
         context['filterset'] = self.filterset
         context['form'] = OrderForm
+
+        b=self.get_queryset()
+
+        c=Invoice.objects.filter(order_id__in=b).aggregate(Summ=Sum(F('price') * F('quantity')))
+
+        context['summ_orders'] =c.get('Summ')
+        context['count_orders'] = b.count()
         return context
 
 @login_required
