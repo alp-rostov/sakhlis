@@ -46,9 +46,11 @@
                 <input type="reset" value=" Сброс " class="btn btn-sm btn-orange">
             </div>
         </div>
-    </div>
+        <h5>Выполненно работ на сумму: {{ summ_orders }} / Кол-во работ : {{ count_orders }}</h5>
 </form>
-<h5>Выполненно работ на сумму: {{ summ_orders }} / Кол-во работ : {{ count_orders }}</h5>
+    </div>
+
+
 
 <hr>
 <div align="center">
@@ -87,27 +89,27 @@ $(document).ready(function() {
 </div>
 
 <!--           {# Добавляем пагинацию на страницу #}-->
-<div align="center">
-    {# Информация о предыдущих страницах #}
-    {% if page_obj.has_previous %}
-        <a href="?page=1" class="btn">1</a>
-        {% if page_obj.previous_page_number != 1 %}
-            ...
-            <a href="?page={{ page_obj.previous_page_number }}" class="btn ">{{ page_obj.previous_page_number }}</a>
-        {% endif %}
-    {% endif %}
-    <!--             {# Информация о текущей странице #}-->
-    <div class="btn btn-orange">
-        {{ page_obj.number }}
-    </div>
-    <!--             {# Информация о следующих страницах #}-->
-    {% if page_obj.has_next %}
-        <a href="?page={{ page_obj.next_page_number }}" class="btn">{{ page_obj.next_page_number }}</a>
-        {% if paginator.num_pages != page_obj.next_page_number %}
-            ...
-            <a href="?page={{ page_obj.paginator.num_pages }}" class="btn">{{ page_obj.paginator.num_pages }}</a>
-        {% endif %}
-    {% endif %}
-</div>
+<!--<div align="center">-->
+<!--    {# Информация о предыдущих страницах #}-->
+<!--    {% if page_obj.has_previous %}-->
+<!--        <a href="?page=1" class="btn">1</a>-->
+<!--        {% if page_obj.previous_page_number != 1 %}-->
+<!--            ...{% url_replace %}-->
+<!--            <a href="?page={{page_obj.previous_page_number }}" class="btn ">{{ page_obj.previous_page_number }}</a>-->
+<!--        {% endif %}-->
+<!--    {% endif %}-->
+<!--    &lt;!&ndash;             {# Информация о текущей странице #}&ndash;&gt;-->
+<!--    <div class="btn btn-orange">-->
+<!--        {{ page_obj.number }}-->
+<!--    </div>-->
+<!--    &lt;!&ndash;             {# Информация о следующих страницах #}&ndash;&gt;-->
+<!--    {% if page_obj.has_next %}-->
+<!--        <a href="?page={{ page_obj.next_page_number }}" class="btn">{{ page_obj.next_page_number }}</a>-->
+<!--        {% if paginator.num_pages != page_obj.next_page_number %}-->
+<!--            ...-->
+<!--            <a href="?page={{ page_obj.paginator.num_pages }}" class="btn">{{ page_obj.paginator.num_pages }}</a>-->
+<!--        {% endif %}-->
+<!--    {% endif %}-->
+<!--    </div>-->
 </div>
 {% endblock body %}

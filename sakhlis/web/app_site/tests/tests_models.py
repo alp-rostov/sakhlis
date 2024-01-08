@@ -43,8 +43,6 @@ class ModelsTestCase(Settings):
         self.assertEqual(self.ord.address_city, 'TB')
         self.assertEqual(self.ord.order_status, 'BEG')
 
-
-
     def test_invoice_model(self):
         self.assertEqual(self.inv.service_id.name, 'water tap installation')
         self.assertEqual(self.ord.invoice_set.all()[0].quantity, 1)
@@ -55,7 +53,6 @@ class ModelsTestCase(Settings):
 
     def test_user(self):
         self.assertEqual(self.user.username, 'User_test_unit')
-        # self.assertEqual(self.repaier, True)
 
 
 

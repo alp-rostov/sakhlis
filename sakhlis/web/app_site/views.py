@@ -12,8 +12,9 @@ from .exeptions import BaseClassExeption
 from .filters import OrderFilter
 from .models import *
 from .forms import OrderForm, InvoiceForm, UserRegisterForm, RepairerForm
+from .repository import DataFromRepairerList, DataFromOrderList, DataFromInvoice
 from .utils import *
-from django.http import FileResponse, Http404, HttpResponseRedirect, JsonResponse
+from django.http import FileResponse, HttpResponseRedirect, JsonResponse
 import io
 from django.contrib.auth.decorators import login_required
 
@@ -35,18 +36,9 @@ class UserDetailInformation(BaseClassExeption, LoginRequiredMixin, DetailView):
     context_object_name = 'user'
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['profile'] = RepairerList.objects.get(user=self.object)
-
-        context['count'] =  OrderList.objects\
-            .values('repairer_id')\
-            .annotate(count=Count('repairer_id'))\
-            .filter(repairer_id=self.request.user)
-
-        context['sum'] = Invoice.objects\
-            .values('order_id__repairer_id')\
-            .annotate(count=Sum(F('price') * F('quantity')))\
-            .filter(order_id__repairer_id=self.request.user)
-
+        context['profile'] = DataFromRepairerList.get_object_from_RepairerList(user=self.object)
+        context['count'] = DataFromOrderList.get_number_of_orders_from_OrderList(repairer=self.request.user)
+        context['sum'] = DataFromInvoice.get_amount_money_of_orders(repairer=self.request.user)
         return context
 
 
@@ -58,12 +50,10 @@ class OrderCreate(BaseClassExeption, CreateView):
     success_url = reverse_lazy('home')
 
     def form_valid(self, form):
-
         if self.request.user.is_authenticated:
             form.instance.repairer_id = self.request.user
             form.instance.order_status = 'SND'
         form.save()
-
         return JsonResponse({'message': f'<h3>Заявка № {form.instance.pk} отправлена успешно!</h3>',
                              'pk':form.instance.pk,
                              'auth': self.request.user.is_authenticated,
@@ -78,14 +68,10 @@ class OrderManagementSystem(BaseClassExeption, LoginRequiredMixin, ListView):
 
     def get_queryset(self):
         if not self.request.GET.get('work_status'):
-            self.queryset = OrderList.objects\
-                .filter(repairer_id=self.request.user)\
-                .order_by("-pk")
+            self.queryset = DataFromOrderList.get_data_from_OrderList_all(repairer=self.request.user)
         else:
-            self.queryset = OrderList.objects \
-                .filter(repairer_id=self.request.user, order_status=self.request.GET.get('work_status')) \
-                .order_by("-pk")
-
+            self.queryset = DataFromOrderList.get_data_from_OrderList_with_order_status(repairer=self.request.user,
+                                                                                        status_of_order=self.request.GET.get('work_status'))
         return self.queryset[0:14]
 
     def get_context_data(self, **kwargs):
@@ -123,23 +109,17 @@ class InvoiceCreate(BaseClassExeption, LoginRequiredMixin, DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data()
-        context['invoice'] = Invoice.objects\
-                                    .filter(order_id=self.object.pk)\
-                                    .select_related('service_id')\
-                                    .defer('service_id__type')\
-                                    .annotate(amount=F('price') * F('quantity'))
-
+        context['invoice'] = DataFromInvoice.get_data_from_Invoice_with_amount(order_id_=self.object.pk)
         InvoiceFormSet = modelformset_factory(Invoice, form=InvoiceForm, extra=0)
         formset = InvoiceFormSet(queryset=Invoice.objects.none())
         context['form'] = formset
         context['type_work'] = WORK_CHOICES
-        context['next'] = OrderList.objects.filter(pk__gt=self.object.pk, repairer_id=self.request.user).values('pk').first()
-        context['prev'] = OrderList.objects.filter(pk__lt=self.object.pk, repairer_id=self.request.user).order_by('-pk').values('pk').first()
-
+        context['next'] = DataFromOrderList.get_next_number_for_paginator_from_OrderList(repairer= self.request.user, pk=self.object.pk)
+        context['prev'] = DataFromOrderList.get_previous_number_for_paginator_from_OrderList(repairer= self.request.user, pk=self.object.pk)
         return context
 
     def get_queryset(self):
-        return OrderList.objects.filter(repairer_id=self.request.user)
+        return DataFromOrderList.get_data_from_OrderList_all(repairer=self.request.user)
 
     def post(self, formset, **kwargs):
         b = get_object_or_404(OrderList, pk=self.kwargs.get('pk'))
@@ -175,37 +155,11 @@ class Statistica(BaseClassExeption, LoginRequiredMixin, TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
 
-        a = OrderList.objects\
-            .values('time_in__month', 'time_in__year')\
-            .annotate(count=Sum(F('invoice__price') * F('invoice__quantity')))\
-            .filter(repairer_id=self.request.user)\
-            .order_by('time_in__year')
-
-        b = OrderList.objects\
-            .values('time_in__month', 'time_in__year')\
-            .annotate(count=Count(F('pk')))\
-            .filter(repairer_id=self.request.user)\
-            .order_by('time_in__year')
-
-        c = Invoice.objects \
-            .values('service_id__type') \
-            .annotate(count=Count(F('service_id__type'))) \
-            .order_by('-count') \
-            .filter(order_id__repairer_id=self.request.user)
-
-        c_ = Invoice.objects \
-            .values('service_id__type') \
-            .annotate(count=Sum(F('price') * F('quantity'))) \
-            .order_by('-count') \
-            .filter(order_id__repairer_id=self.request.user)
-
-
-        h = OrderList.objects \
-            .values('time_in__date') \
-            .annotate(count=Sum(F('invoice__price') * F('invoice__quantity'))) \
-            .order_by('-time_in__date') \
-            .filter(repairer_id=self.request.user)[0:30:-1]
-
+        a = DataFromOrderList.get_monthly_order_cost_from_OrderList(repairer=self.request.user)
+        b = DataFromOrderList.get_monthly_order_quantity_from_OrderList(repairer=self.request.user)
+        c = DataFromInvoice.get_quantity_of_orders_by_type(repairer=self.request.user)
+        c_ = DataFromInvoice.get_cost_of_orders_by_type(repairer=self.request.user)
+        h = DataFromOrderList.get_dayly_cost_of_orders(repairer=self.request.user)
 
         labels, sizes = get_data_for_graph(c,'service_id__type','count', WORK_CHOICES_)
         instans_graf=Graph(labels, sizes, 'Структура заказов, кол.', '')
@@ -257,7 +211,7 @@ class OrderSearchForm( LoginRequiredMixin, ListView):
     context_object_name = 'order'
     template_name = 'ordersearchform.html'
     ordering = ['-time_in']
-    paginate_by = 15
+    # paginate_by = 15
 
     def get_queryset(self):
         queryset = super().get_queryset()
@@ -337,16 +291,3 @@ def input_street(request, **kwargs):
     b = StreerTbilisi.objects.filter(name_street__istartswith=request.GET.get('street')).values('type_street', 'name_street')[0:15]
     json_data = json.dumps(list(b), default=str)
     return JsonResponse(json_data, safe=False)
-
-
-# def geo_map(request, **kwargs):
-#     """ """
-#     b = OrderList.objects.all()
-#     for a in b:
-#
-#         location = set_coordinates_address(a.address_street_app, 'Тбилиси', a.address_num)
-#         if location != None:
-#             a.location_longitude = float(location[0])
-#             a.location_latitude = float(location[1])
-#             a.save()
-#     return JsonResponse({"message": "successful"})

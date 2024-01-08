@@ -1,0 +1,3 @@
+class HomePageService:
+
+    pass
