@@ -1,4 +1,5 @@
-from django.db.models import F, Prefetch, Sum
+import _io
+
 from geopy.geocoders import Nominatim
 from telebot import types
 from reportlab.lib.pagesizes import A4
@@ -11,46 +12,14 @@ import base64
 import urllib.parse
 import warnings
 import io
+from app_site.models import OrderList
+GeoPointLocation = tuple[str, str]
 
-from .models import OrderList, Invoice
-
-def get_info_for_pdf():
-    return OrderList.objects \
-        .annotate(sum=Sum(F('invoice__price') * F('invoice__quantity'))) \
-        .prefetch_related(Prefetch('invoice_set', Invoice.objects
-                                   .defer('quantity_type', 'service_id__type')
-                                   .select_related('service_id')
-                                   .annotate(sum=F('price') * F('quantity')))
-                          ).select_related('repairer_id')
-
-def get_data_for_graph(queryset, labels_name:str, data_name:str, help_dict:dict=None) -> tuple[list, list]:
-    """ return list using for create Graph in statistica.html """
-    labels = []
-    data = []
-
-    if help_dict:
-        c=''
-        for _ in queryset:
-
-            b=str(_.get('time_in__year')) if _.get('time_in__year')!=c and _.get('time_in__year') else ' '
-
-            labels.append(b+' '+help_dict[_[labels_name]])
-            data.append(_[data_name])
-            c=_.get('time_in__year')
-    else:
-        for _ in queryset:
-            labels.append(_[labels_name])
-            data.append(_[data_name])
-
-    return labels, data
-
-GeoPointLocation = tuple[str, str] | None
-
-def set_coordinates_address(street: str, city: str, app_num: str) -> GeoPointLocation | None:
+def set_coordinates_address(street: str, city: str, house_number: str) -> GeoPointLocation | None:
     """ setting of map coordinates by street and city """
     try:
         geolocator = Nominatim(user_agent="app_site")
-        location = geolocator.geocode({'city': city, 'street': street+', '+app_num}, addressdetails=True)
+        location = geolocator.geocode({'city': city, 'street': street+', '+house_number}, addressdetails=True)
         if location:
             return str(location.longitude), str(location.latitude)
         else: return None
@@ -58,7 +27,7 @@ def set_coordinates_address(street: str, city: str, app_num: str) -> GeoPointLoc
         return None
 
 
-def add_telegram_button(repairer: list, order_pk: int) -> types.InlineKeyboardMarkup:
+def get_telegram_button(repairer: list, order_pk: int) -> types.InlineKeyboardMarkup:
     """
     creating buttons for telegram message.
     repairer -> list of tuples [(id repairer, s_name repairer),....]
@@ -73,21 +42,22 @@ def add_telegram_button(repairer: list, order_pk: int) -> types.InlineKeyboardMa
     return keyboard.add(*button)
 
 class InvoiceMaker(object):
-    """ create pdf-invoice """
-    def __init__(self, pdf_file, info):
+    """ create pdf-document -> an invoice for payment """
+    def __init__(self, pdf_file: _io.BytesIO, info: OrderList):
+        """ pdf_file = io.BytesIO()"""
         self.c = canvas.Canvas(pdf_file, bottomup=0)
         self.styles = getSampleStyleSheet()
         self.width, self.height = A4
         self.info = info
 
     def createDocument(self) -> None:
-        # create an invoice’s header
-        date_info = str(self.info.time_in)[0:10:]
-        line = f'Invoice  {self.info.pk}, date: {date_info}'
+        # create a header
+        date_info = str(self.info.time_in)[0:10]
+        line = f'Invoice № {self.info.pk}, date: {date_info}'
 
         self.createParagraph(line, *self.coord(60, 30), style='Heading1')
 
-        # create a table containing information about companies
+        # create a table containing company information
         data = [
             ['My Company: ', ' Gotsin S.A.', 'Customer company:', self.info.customer_name],
             ['Adress Company: ', ' Tbilisi, Zuraba Pataridze.', 'Customer Adress:', self.info.address_street_app + ', ' + self.info.address_num],
@@ -109,7 +79,7 @@ class InvoiceMaker(object):
 
         self.createTable(data, 30, 120, a, 1.8 * inch)
 
-        # create a table list of services
+        # create a service list
         table_serv = []
         table_serv.append(['Name', 'Count', 'Price', 'Amount'])
         i = 1
@@ -146,7 +116,6 @@ class InvoiceMaker(object):
         return x, y
 
     def createParagraph(self, ptext, x, y, style=None):
-        """"""
         if not style:
             style = self.styles["Normal"]
         else:
@@ -156,40 +125,73 @@ class InvoiceMaker(object):
         p.drawOn(self.c, *self.coord(x, y, mm))
 
     def createTable(self, data, x, y, TableStyle_, c_width):
-        """"""
         table = Table(data, colWidths=c_width)
         table.setStyle(TableStyle_)
         table.wrapOn(self.c, self.width, self.height)
         table.drawOn(self.c, *self.coord(x, y))
 
     def savePDF(self):
-        """"""
         self.c.showPage()
         self.c.save()
 
 
 
+
+
 class Graph:
     """ create a graph and sent to template """
-    def __init__(self, labels:dict, data:dict, name_graf:str, name_legend:str):
-        self.labels=labels
-        self.data=data
+
+    def __init__(self,
+                 queryset,
+                 name_X: str,
+                 data_Y: str,
+                 help_dict:dict = None,
+                 name_graf:str = '',
+                 name_legend:str = ''):
+
         self.name_graf=name_graf
         self.name_legend=name_legend
         self.fig, self.ax = plt.subplots()
+        self.queryset=queryset
+        self.name_X=name_X
+        self.data_Y=data_Y
+        self.help_dict=help_dict
+
+    def get_data_for_graph(self) -> tuple[list, list]:
+        """ return list using for create Graph in statistica.html
+        help_dict is a WORK_CHOICES_ or MONTH_
+        """
+        labels = []
+        data = []
+
+        if self.help_dict:
+            c = ''
+            for _ in self.queryset:
+                b = str(_.get('time_in__year')) if _.get('time_in__year') != c and _.get('time_in__year') else ' '
+
+                labels.append(b + ' ' + self.help_dict[_[self.name_X]])
+                data.append(_[self.data_Y])
+                c = _.get('time_in__year')
+        else:
+            for _ in self.queryset:
+                labels.append(_[self.name_X])
+                data.append(_[self.data_Y])
+
+        return labels, data
 
     def make_graf_pie(self):
+        labels, data=self.get_data_for_graph()
         try:
             explode = [0.03, 0.01, 0.01, 0.01, 0.01]
-            if len(self.labels) > 4:
-                a = sum(self.data[5:len(self.data)])
-                self.labels=self.labels[0:4]
-                self.labels.append('Прочее')
-                self.data=self.data[0:4]
-                self.data.append(a)
+            if len(labels) > 4:
+                a = sum(data[5:len(data)])
+                labels=labels[0:4]
+                labels.append('Прочее')
+                data=data[0:4]
+                data.append(a)
             else:
-                explode=explode[0:len(self.labels)]
-            self.ax.pie(self.data, labels=self.labels, autopct='%1.1f%%',explode=explode)
+                explode=explode[0:len(labels)]
+            self.ax.pie(data, labels=labels, autopct='%1.1f%%',explode=explode)
             self.ax.set_title(self.name_graf)
             warnings.simplefilter("ignore", UserWarning)
             self.fig = plt.gcf()
@@ -198,9 +200,10 @@ class Graph:
         return self.sent(self.fig)
 
     def make_graf_bar(self):
+        labels, data = self.get_data_for_graph()
         try:
-            bar_labels = self.labels
-            self.ax.bar(self.labels, self.data, label=bar_labels )
+            bar_labels = labels
+            self.ax.bar(labels, data, label=bar_labels )
             self.ax.set_ylabel(self.name_legend)
             self.ax.set_title(self.name_graf)
             warnings.simplefilter("ignore", UserWarning)
@@ -210,9 +213,10 @@ class Graph:
         return self.sent(self.fig)
 
     def make_graf_plot(self):
+        labels, data = self.get_data_for_graph()
         try:
-            bar_labels = self.labels
-            self.ax.plot(self.labels, self.data, label=bar_labels)
+            bar_labels = labels
+            self.ax.plot(labels, data, label=bar_labels)
 
             self.ax.set_ylabel(self.name_legend)
             self.ax.set_title(self.name_graf)
@@ -233,28 +237,5 @@ class Graph:
             buf.seek(0)
             string = base64.b64encode(buf.read())
             return urllib.parse.quote(string)
-        else:
-            pass
-
-
-# class SimpleMiddleware:
-#     def __init__(self, get_response):
-#         self.get_response = get_response
-#         # One-time configuration and initialization.
-#
-#     def __call__(self, request):
-#         # Code to be executed for each request before
-#         # the view (and later middleware) are called.
-#         print(request.GET)
-#         print(request.POST)
-#         print('---------------')
-#         response = self.get_response(request)
-#         print(request.GET)
-#         print(request.POST)
-#         print('++++++++++++++++')
-#         # Code to be executed for each request/response after
-#         # the view is called.
-#
-#         return response
 
 

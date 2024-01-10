@@ -15,7 +15,6 @@ class UrlTestCase(Settings):
         self.assertEqual(str(response.context['user']), 'User_test_unit')
         self.assertIn('User_test_unit', response.content.decode())
 
-
         login = self.client.login(username='User_test_unit', password='wrong_password')
         self.assertFalse(login)
 
@@ -77,3 +76,8 @@ class UrlTestCase(Settings):
 
         response = self.client.get('/user/164511456454154')
         self.assertEqual(response.status_code, 400)
+
+    def test_ordersearch_url(self):
+        login = self.client.login(username='User_test_unit', password='12345')
+        response = self.client.get('/ordersearch/')
+        self.assertEqual(response.status_code, 200)

@@ -2,7 +2,7 @@ import json
 import logging
 
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.db.models import Count
+from django.db.models import Sum, F
 from django.forms import modelformset_factory
 from django.shortcuts import redirect, get_object_or_404
 from django.urls import reverse_lazy
@@ -36,9 +36,9 @@ class UserDetailInformation(BaseClassExeption, LoginRequiredMixin, DetailView):
     context_object_name = 'user'
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['profile'] = DataFromRepairerList.get_object_from_RepairerList(user=self.object)
-        context['count'] = DataFromOrderList.get_number_of_orders_from_OrderList(repairer=self.request.user)
-        context['sum'] = DataFromInvoice.get_amount_money_of_orders(repairer=self.request.user)
+        context['profile'] = DataFromRepairerList().get_object_from_RepairerList(user=self.object)
+        context['count'] = DataFromOrderList().get_number_of_orders_from_OrderList(repairer=self.request.user)
+        context['sum'] = DataFromInvoice().get_amount_money_of_orders(repairer=self.request.user)
         return context
 
 
@@ -55,9 +55,9 @@ class OrderCreate(BaseClassExeption, CreateView):
             form.instance.order_status = 'SND'
         form.save()
         return JsonResponse({'message': f'<h3>Заявка № {form.instance.pk} отправлена успешно!</h3>',
-                             'pk':form.instance.pk,
-                             'auth': self.request.user.is_authenticated,
-                               })
+                             'pk': form.instance.pk,
+                             'auth': self.request.user.is_authenticated
+                             })
 
 
 class OrderManagementSystem(BaseClassExeption, LoginRequiredMixin, ListView):
@@ -68,18 +68,18 @@ class OrderManagementSystem(BaseClassExeption, LoginRequiredMixin, ListView):
 
     def get_queryset(self):
         if not self.request.GET.get('work_status'):
-            self.queryset = DataFromOrderList.get_data_from_OrderList_all(repairer=self.request.user)
+            self.queryset = DataFromOrderList() \
+                .get_data_from_OrderList_all(repairer=self.request.user)
         else:
-            self.queryset = DataFromOrderList.get_data_from_OrderList_with_order_status(repairer=self.request.user,
-                                                                                        status_of_order=self.request.GET.get('work_status'))
+            self.queryset = DataFromOrderList() \
+                .get_data_from_OrderList_with_order_status(repairer=self.request.user,
+                                                           status_of_order=self.request.GET.get('work_status'))
         return self.queryset[0:14]
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['form'] = OrderForm
         return context
-
-
 
 class OrderUpdate(LoginRequiredMixin, UpdateView):
     model = OrderList
@@ -109,17 +109,19 @@ class InvoiceCreate(BaseClassExeption, LoginRequiredMixin, DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data()
-        context['invoice'] = DataFromInvoice.get_data_from_Invoice_with_amount(order_id_=self.object.pk)
+        context['invoice'] = DataFromInvoice().get_data_from_Invoice_with_amount(order_id_=self.object.pk)
+        context['type_work'] = WORK_CHOICES
+        context['next'] = DataFromOrderList()\
+            .get_next_number_for_paginator_from_OrderList(repairer=self.request.user, pk=self.object.pk)
+        context['prev'] = DataFromOrderList()\
+            .get_previous_number_for_paginator_from_OrderList(repairer=self.request.user, pk=self.object.pk)
         InvoiceFormSet = modelformset_factory(Invoice, form=InvoiceForm, extra=0)
         formset = InvoiceFormSet(queryset=Invoice.objects.none())
         context['form'] = formset
-        context['type_work'] = WORK_CHOICES
-        context['next'] = DataFromOrderList.get_next_number_for_paginator_from_OrderList(repairer= self.request.user, pk=self.object.pk)
-        context['prev'] = DataFromOrderList.get_previous_number_for_paginator_from_OrderList(repairer= self.request.user, pk=self.object.pk)
         return context
 
     def get_queryset(self):
-        return DataFromOrderList.get_data_from_OrderList_all(repairer=self.request.user)
+        return DataFromOrderList().get_data_from_OrderList_all(repairer=self.request.user)
 
     def post(self, formset, **kwargs):
         b = get_object_or_404(OrderList, pk=self.kwargs.get('pk'))
@@ -150,41 +152,58 @@ class InvoiceCreate(BaseClassExeption, LoginRequiredMixin, DetailView):
 class Error404(TemplateView):
     template_name = '404.html'
 
-class Statistica(BaseClassExeption, LoginRequiredMixin, TemplateView):
+class Statistica(LoginRequiredMixin, TemplateView):
     template_name = 'statistica.html'
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
 
-        a = DataFromOrderList.get_monthly_order_cost_from_OrderList(repairer=self.request.user)
-        b = DataFromOrderList.get_monthly_order_quantity_from_OrderList(repairer=self.request.user)
-        c = DataFromInvoice.get_quantity_of_orders_by_type(repairer=self.request.user)
-        c_ = DataFromInvoice.get_cost_of_orders_by_type(repairer=self.request.user)
-        h = DataFromOrderList.get_dayly_cost_of_orders(repairer=self.request.user)
+        context['d'] = Graph(
+                             DataFromInvoice().get_quantity_of_orders_by_type(repairer=self.request.user),
+                             'service_id__type',
+                             'count',
+                             WORK_CHOICES_,
+                             'Структура заказов, кол.',
+                             '') \
+                        .make_graf_pie()
 
-        labels, sizes = get_data_for_graph(c,'service_id__type','count', WORK_CHOICES_)
-        instans_graf=Graph(labels, sizes, 'Структура заказов, кол.', '')
-        context['d']=instans_graf.make_graf_pie()
+        context['d_'] = Graph(
+                            DataFromInvoice().get_cost_of_orders_by_type(repairer=self.request.user),
+                            'service_id__type',
+                            'count', WORK_CHOICES_,
+                            'Структура заказов, лар.',
+                            '') \
+                        .make_graf_pie()
 
-        labels, sizes = get_data_for_graph(c_, 'service_id__type', 'count', WORK_CHOICES_)
-        instans_graf = Graph(labels, sizes, 'Структура заказов, лар.', '')
-        context['d_'] = instans_graf.make_graf_pie()
+        context['f'] = Graph(
+                            DataFromOrderList().get_monthly_order_cost_from_OrderList(repairer=self.request.user),
+                            'time_in__month',
+                            'count',
+                            MONTH_,
+                            'Выручка',
+                            'lar') \
+                        .make_graf_bar()
 
-        labels, sizes = get_data_for_graph(a,'time_in__month','count', MONTH_)
-        instans_graf = Graph(labels, sizes, 'Выручка', 'lar')
-        context['f'] = instans_graf.make_graf_bar()
+        context['g'] = Graph(
+                            DataFromOrderList().get_monthly_order_quantity_from_OrderList(repairer=self.request.user),
+                            'time_in__month',
+                            'count',
+                            MONTH_,
+                            'Количество заказов',
+                            'кол') \
+                        .make_graf_bar()
 
-        labels, sizes = get_data_for_graph(b,'time_in__month','count', MONTH_)
-        instans_graf = Graph(labels, sizes, 'Количество заказов', 'кол')
-        context['g'] = instans_graf.make_graf_bar()
-        #
-        labels, sizes = get_data_for_graph(h,'time_in__date','count')
-        instans_graf = Graph(labels, sizes, 'Динамика за 30 дней.', '')
-        context['hh'] = instans_graf.make_graf_plot()
-
+        context['hh'] = Graph(
+                            DataFromOrderList().get_dayly_cost_of_orders(repairer=self.request.user),
+                            'time_in__date',
+                            'count',
+                            None,
+                            'Динамика за 30 дней.',
+                            '') \
+                        .make_graf_plot()
         return context
 
 class RepaierUpdate(BaseClassExeption, UpdateView):
-    model = RepairerList
+    model = Repairer
     template_name = 'repaier_create.html'
     form_class = RepairerForm
 
@@ -196,7 +215,7 @@ def CreateIvoicePDF(request, **kwargs):
 
     # get information from models
     order_pk = kwargs.get("order_pk")
-    info = get_info_for_pdf().get(pk=order_pk)
+    info = DataFromOrderList().get_all_data_of_order_with_from_invoice().get(pk=order_pk)
     # create file
     buf = io.BytesIO()
     doc = InvoiceMaker(buf, info)
@@ -206,16 +225,15 @@ def CreateIvoicePDF(request, **kwargs):
     return FileResponse(buf, as_attachment=True, filename=f'Invoice_{order_pk}_.pdf')
 
 
-class OrderSearchForm( LoginRequiredMixin, ListView):
+class OrderSearchForm(LoginRequiredMixin, ListView):
     model = OrderList
     context_object_name = 'order'
     template_name = 'ordersearchform.html'
     ordering = ['-time_in']
-    # paginate_by = 15
 
     def get_queryset(self):
         queryset = super().get_queryset()
-        b=self.request.GET.copy()
+        b = self.request.GET.copy()
         b.__setitem__('repairer_id', self.request.user.pk)
         self.filterset = OrderFilter(b, queryset)
         return self.filterset.qs
@@ -224,13 +242,9 @@ class OrderSearchForm( LoginRequiredMixin, ListView):
         context = super().get_context_data(**kwargs)
         context['filterset'] = self.filterset
         context['form'] = OrderForm
-
-        b=self.get_queryset()
-
-        c=Invoice.objects.filter(order_id__in=b).aggregate(Summ=Sum(F('price') * F('quantity')))
-
-        context['summ_orders'] =c.get('Summ')
-        context['count_orders'] = b.count()
+        c = DataFromInvoice().get_total_cost_of_some_orders(list_of_orders=self.get_queryset())
+        context['summ_orders'] = c.get('Summ')
+        context['count_orders'] = self.get_queryset().count()
         return context
 
 @login_required
@@ -259,9 +273,11 @@ def listservices_for_invoice_json(request, **kwargs):
 def listorder_for_order_list_paginator_json(request, **kwargs):
     """for ajax request """
     data = OrderList.objects.filter(pk__lt=request.GET.get('last_pk'), repairer_id=request.user)\
-                        .order_by('-pk')\
-                        .values('pk', 'time_in', 'text_order', 'customer_name', 'customer_phone', 'customer_telegram',
-                                'address_city', 'address_street_app', 'address_num', 'location_longitude', 'location_latitude')[0:14]
+                            .order_by('-pk')\
+                            .values('pk', 'time_in', 'text_order', 'customer_name',
+                                    'customer_phone', 'customer_telegram',
+                                    'address_city', 'address_street_app',
+                                    'address_num', 'location_longitude', 'location_latitude')[0:14]
     json_data = json.dumps(list(data), default=str)
     return JsonResponse(json_data, safe=False)
 
@@ -269,7 +285,7 @@ def listorder_for_order_list_paginator_json(request, **kwargs):
 def DeleteIvoiceService(request, **kwargs):
     """for ajax request """
     invoice_object = get_object_or_404(Invoice.objects.filter(order_id__repairer_id=request.user),
-                          pk=kwargs.get("invoice_pk"))
+                                                              pk=kwargs.get("invoice_pk"))
     invoice_object.delete()
     return JsonResponse({"message": "success"})
 
@@ -288,6 +304,7 @@ def change_work_status(request, **kwargs):
 
 def input_street(request, **kwargs):
     """for ajax request """
-    b = StreerTbilisi.objects.filter(name_street__istartswith=request.GET.get('street')).values('type_street', 'name_street')[0:15]
+    b = StreerTbilisi.objects.filter(name_street__istartswith=request.GET.get('street')) \
+                             .values('type_street', 'name_street')[0:15]
     json_data = json.dumps(list(b), default=str)
     return JsonResponse(json_data, safe=False)

@@ -132,6 +132,6 @@ class InvoiceForm(forms.ModelForm):
 class RepairerForm(forms.ModelForm):
 
     class Meta:
-        model = RepairerList
+        model = Repairer
         fields = ('phone', 'telegram', 'profile', 'city', 'foto')
 

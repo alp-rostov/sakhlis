@@ -4,9 +4,12 @@ from django.test import TestCase
 from app_site.models import *
 
 
+
+
 class Settings(TestCase):
     @classmethod
     def setUpTestData(cls):
+
         cls.user_ = User.objects.create(username='User_test_unit')
         cls.user_.set_password('12345')
         cls.user_.save()
@@ -20,8 +23,8 @@ class Settings(TestCase):
         cls.inv = Invoice.objects.get(order_id=cls.ord)
         cls.serv = Service.objects.get(name='water tap installation')
 
-        cls.repaier = RepairerList.objects.filter(user=cls.user).exists()
-        cls.repaier_=RepairerList.objects.filter(user=cls.user).first()
+        cls.repaier = Repairer.objects.filter(user=cls.user).exists()
+        cls.repaier_=Repairer.objects.filter(user=cls.user).first()
         cls.repaier_.phone='+999999999'
         cls.repaier_.save()
 
@@ -31,7 +34,7 @@ class ModelsTestCase(Settings):
         self.assertEqual(self.repaier_.phone, '+999999999')
 
     def test_validator_repair_model(self):
-        repair = RepairerList(phone='+34346dfndfdfberdht erth ertd3464')
+        repair = Repairer(phone='+34346dfndfdfberdht erth ertd3464')
         with self.assertRaises(ValidationError):
             repair.full_clean()
             repair.save()

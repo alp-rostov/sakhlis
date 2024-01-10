@@ -6,8 +6,8 @@ from django.contrib.auth.models import User
 from django.core.mail import EmailMultiAlternatives
 from django.template.loader import render_to_string
 
-from .models import OrderList, RepairerList
-from .utils import set_coordinates_address, add_telegram_button
+from .models import OrderList, Repairer
+from .utils import set_coordinates_address,get_telegram_button
 
 TOKEN = os.environ.get('TOKEN')
 CHAT_ID = os.environ.get('CHAT_ID')
@@ -33,7 +33,7 @@ def send_order_information(inst, location):
                       f'<b>ОТПРАВИТЬ ЗАКАЗ МАСТЕРУ:</b>' \
 
     bot = telebot.TeleBot(TOKEN)
-    bot.send_message(CHAT_ID, text, reply_markup=add_telegram_button(repairer, instance.pk),  parse_mode='HTML')
+    bot.send_message(CHAT_ID, text, reply_markup=get_telegram_button(repairer, instance.pk),  parse_mode='HTML')
 
 
 @shared_task

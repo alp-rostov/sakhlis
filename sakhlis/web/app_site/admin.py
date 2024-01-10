@@ -25,7 +25,7 @@ class StreetAdmin(admin.ModelAdmin):
 
 
 
-admin.site.register(RepairerList)
+admin.site.register(Repairer)
 admin.site.register(Service, ServiceAdmin)
 admin.site.register(Invoice, InvoiceAdmin)
 admin.site.register(OrderList, OrderListAdmin)
