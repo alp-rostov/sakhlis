@@ -64,7 +64,6 @@ class DataFromOrderList:
 
     def get_all_data_of_order_with_from_invoice(self):
         return self.model \
-            .annotate(sum=Sum(F('invoice__price') * F('invoice__quantity'))) \
             .prefetch_related(Prefetch('invoice_set', Invoice.objects
                                        .defer('quantity_type', 'service_id__type')
                                        .select_related('service_id')

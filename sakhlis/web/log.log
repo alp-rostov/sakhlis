@@ -2819,3 +2819,488 @@ django.http.response.Http404: Не найден ни один пользоват
 WARNING:root:============================================================
 11/Jan/2024 14:51:01   WARNING  Bad Request: /user/164511456454154  None
 WARNING:django.request:Bad Request: /user/164511456454154
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-01-11 14:59:56.614745
+WARNING:root:ОШИБКА:        Не найден ни один пользователь, соответствующий запросу
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 53, in get_object
+    obj = queryset.get()
+          ^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 108, in get
+    self.object = self.get_object()
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 55, in get_object
+    raise Http404(
+django.http.response.Http404: Не найден ни один пользователь, соответствующий запросу
+
+WARNING:root:============================================================
+11/Jan/2024 14:59:56   WARNING  Bad Request: /user/164511456454154  None
+WARNING:django.request:Bad Request: /user/164511456454154
+11/Jan/2024 15:01:55   INFO  Watching for file changes with StatReloader  None
+11/Jan/2024 15:02:07   INFO  Watching for file changes with StatReloader  None
+11/Jan/2024 15:02:10   INFO  "GET /list_order HTTP/1.1" 200 53825  None
+INFO:django.server:"GET /list_order HTTP/1.1" 200 53825
+11/Jan/2024 15:02:10   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+11/Jan/2024 15:02:13   INFO  "GET / HTTP/1.1" 200 43209  None
+INFO:django.server:"GET / HTTP/1.1" 200 43209
+11/Jan/2024 15:02:13   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+11/Jan/2024 15:02:19   INFO  "GET /list_order HTTP/1.1" 200 53823  None
+INFO:django.server:"GET /list_order HTTP/1.1" 200 53823
+11/Jan/2024 15:02:19   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+11/Jan/2024 15:02:32   INFO  "GET /list_order?work_status=SND HTTP/1.1" 200 23098  None
+INFO:django.server:"GET /list_order?work_status=SND HTTP/1.1" 200 23098
+11/Jan/2024 15:02:32   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+11/Jan/2024 15:02:34   INFO  "GET /list_order?work_status=RCV HTTP/1.1" 200 25399  None
+INFO:django.server:"GET /list_order?work_status=RCV HTTP/1.1" 200 25399
+11/Jan/2024 15:02:34   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+11/Jan/2024 15:02:37   INFO  "GET /list_order HTTP/1.1" 200 53823  None
+INFO:django.server:"GET /list_order HTTP/1.1" 200 53823
+11/Jan/2024 15:02:37   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+11/Jan/2024 15:02:40   INFO  "GET /admin/ HTTP/1.1" 200 23008  None
+INFO:django.server:"GET /admin/ HTTP/1.1" 200 23008
+11/Jan/2024 15:02:44   INFO  "GET /admin/app_site/orderlist/ HTTP/1.1" 200 90618  None
+INFO:django.server:"GET /admin/app_site/orderlist/ HTTP/1.1" 200 90618
+11/Jan/2024 15:02:44   INFO  "GET /admin/jsi18n/ HTTP/1.1" 200 16066  None
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 16066
+11/Jan/2024 15:02:55   INFO  "GET /admin/app_site/orderlist/1112/change/ HTTP/1.1" 200 32195  None
+INFO:django.server:"GET /admin/app_site/orderlist/1112/change/ HTTP/1.1" 200 32195
+11/Jan/2024 15:02:55   INFO  "GET /admin/jsi18n/ HTTP/1.1" 200 16066  None
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 16066
+11/Jan/2024 15:03:00   INFO  "GET /admin/app_site/orderlist/ HTTP/1.1" 200 90616  None
+INFO:django.server:"GET /admin/app_site/orderlist/ HTTP/1.1" 200 90616
+11/Jan/2024 15:03:10   INFO  "GET /admin/app_site/orderlist/1096/change/ HTTP/1.1" 200 32134  None
+INFO:django.server:"GET /admin/app_site/orderlist/1096/change/ HTTP/1.1" 200 32134
+11/Jan/2024 15:03:10   INFO  "GET /admin/jsi18n/ HTTP/1.1" 200 16066  None
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 16066
+11/Jan/2024 15:03:16   INFO  "POST /admin/app_site/orderlist/1096/change/ HTTP/1.1" 302 0  None
+INFO:django.server:"POST /admin/app_site/orderlist/1096/change/ HTTP/1.1" 302 0
+11/Jan/2024 15:03:16   INFO  "GET /admin/app_site/orderlist/ HTTP/1.1" 200 90870  None
+INFO:django.server:"GET /admin/app_site/orderlist/ HTTP/1.1" 200 90870
+11/Jan/2024 15:03:16   INFO  "GET /admin/jsi18n/ HTTP/1.1" 200 16066  None
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 16066
+11/Jan/2024 15:03:19   INFO  "GET /list_order?work_status=RCV HTTP/1.1" 200 27809  None
+INFO:django.server:"GET /list_order?work_status=RCV HTTP/1.1" 200 27809
+11/Jan/2024 15:03:19   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+11/Jan/2024 15:05:26   INFO  "GET /street?street=V HTTP/1.1" 200 4  None
+INFO:django.server:"GET /street?street=V HTTP/1.1" 200 4
+11/Jan/2024 15:05:26   INFO  "GET /__debug__/history_sidebar/?store_id=ed00f5605e00413a9fb0ee8a65e2fcbd HTTP/1.1" 200 13350  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=ed00f5605e00413a9fb0ee8a65e2fcbd HTTP/1.1" 200 13350
+11/Jan/2024 15:05:27   INFO  "GET /street?street=Vb HTTP/1.1" 200 4  None
+INFO:django.server:"GET /street?street=Vb HTTP/1.1" 200 4
+11/Jan/2024 15:05:27   INFO  "GET /__debug__/history_sidebar/?store_id=44ef5442dcac4e7ea40d638ece8e7692 HTTP/1.1" 200 13351  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=44ef5442dcac4e7ea40d638ece8e7692 HTTP/1.1" 200 13351
+11/Jan/2024 15:05:27   INFO  "GET /street?street=V HTTP/1.1" 200 4  None
+INFO:django.server:"GET /street?street=V HTTP/1.1" 200 4
+11/Jan/2024 15:05:27   INFO  "GET /street?street= HTTP/1.1" 200 1574  None
+INFO:django.server:"GET /street?street= HTTP/1.1" 200 1574
+11/Jan/2024 15:05:28   INFO  "GET /__debug__/history_sidebar/?store_id=f01c80ab7196405a8f6916535e74a30f HTTP/1.1" 200 13349  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=f01c80ab7196405a8f6916535e74a30f HTTP/1.1" 200 13349
+11/Jan/2024 15:05:28   INFO  "GET /street?street=%D0%9C HTTP/1.1" 200 2800  None
+INFO:django.server:"GET /street?street=%D0%9C HTTP/1.1" 200 2800
+11/Jan/2024 15:05:28   INFO  "GET /street?street=%D0%9C%D0%B8 HTTP/1.1" 200 2689  None
+INFO:django.server:"GET /street?street=%D0%9C%D0%B8 HTTP/1.1" 200 2689
+11/Jan/2024 15:05:29   INFO  "GET /__debug__/history_sidebar/?store_id=770bbd92149a4b539094743f09351669 HTTP/1.1" 200 13361  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=770bbd92149a4b539094743f09351669 HTTP/1.1" 200 13361
+11/Jan/2024 15:05:29   INFO  "GET /street?street=%D0%9C%D0%B8%D0%BD HTTP/1.1" 200 334  None
+INFO:django.server:"GET /street?street=%D0%9C%D0%B8%D0%BD HTTP/1.1" 200 334
+11/Jan/2024 15:05:29   INFO  "GET /__debug__/history_sidebar/?store_id=1d81a4a7da0f45fcb30372f34342b3ca HTTP/1.1" 200 13365  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=1d81a4a7da0f45fcb30372f34342b3ca HTTP/1.1" 200 13365
+11/Jan/2024 15:05:31   INFO  "GET /street?street=%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%AD%D0%BB%D0%B8%D0%B7%D0%B1%D0%B0%D1%80%D0%B0%20%D0%9C%D0%B8%D0%BD%D0%B4%D0%B5%D0%BB%D0%B8 HTTP/1.1" 200 4  None
+INFO:django.server:"GET /street?street=%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%AD%D0%BB%D0%B8%D0%B7%D0%B1%D0%B0%D1%80%D0%B0%20%D0%9C%D0%B8%D0%BD%D0%B4%D0%B5%D0%BB%D0%B8 HTTP/1.1" 200 4
+11/Jan/2024 15:05:31   INFO  "GET /__debug__/history_sidebar/?store_id=516d873389f54a61858a7030ae07397a HTTP/1.1" 200 13474  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=516d873389f54a61858a7030ae07397a HTTP/1.1" 200 13474
+11/Jan/2024 15:05:43   INFO  "POST / HTTP/1.1" 200 203  None
+INFO:django.server:"POST / HTTP/1.1" 200 203
+11/Jan/2024 15:05:43   INFO  "GET /list_order/1149 HTTP/1.1" 200 24689  None
+INFO:django.server:"GET /list_order/1149 HTTP/1.1" 200 24689
+11/Jan/2024 15:05:43   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+11/Jan/2024 15:05:48   INFO  "GET /changestatus?order_pk=1149&work_status=RCV HTTP/1.1" 200 32  None
+INFO:django.server:"GET /changestatus?order_pk=1149&work_status=RCV HTTP/1.1" 200 32
+11/Jan/2024 15:05:48   INFO  "GET /__debug__/history_sidebar/?store_id=15ca4e59d39b4239b836ee2957a44ea8 HTTP/1.1" 200 13389  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=15ca4e59d39b4239b836ee2957a44ea8 HTTP/1.1" 200 13389
+11/Jan/2024 15:05:50   INFO  "GET /list_order?work_status=RCV HTTP/1.1" 200 30176  None
+INFO:django.server:"GET /list_order?work_status=RCV HTTP/1.1" 200 30176
+11/Jan/2024 15:05:50   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+11/Jan/2024 15:05:59   INFO  "GET /list_order?work_status=END HTTP/1.1" 200 53966  None
+INFO:django.server:"GET /list_order?work_status=END HTTP/1.1" 200 53966
+11/Jan/2024 15:05:59   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+11/Jan/2024 15:06:04   INFO  "GET /stat/ HTTP/1.1" 200 190065  None
+INFO:django.server:"GET /stat/ HTTP/1.1" 200 190065
+11/Jan/2024 15:06:04   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+11/Jan/2024 15:55:40   INFO  Watching for file changes with StatReloader  None
+11/Jan/2024 15:55:44   INFO  "GET /list_order HTTP/1.1" 200 53871  None
+INFO:django.server:"GET /list_order HTTP/1.1" 200 53871
+11/Jan/2024 15:55:44   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+11/Jan/2024 15:55:48   INFO  "GET /list_order/1130 HTTP/1.1" 200 25101  None
+INFO:django.server:"GET /list_order/1130 HTTP/1.1" 200 25101
+11/Jan/2024 15:55:48   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+11/Jan/2024 15:55:50   INFO  "GET /list_order/pdf/1130 HTTP/1.1" 200 2718  None
+INFO:django.server:"GET /list_order/pdf/1130 HTTP/1.1" 200 2718
+11/Jan/2024 15:55:59   INFO  "GET /list_order?work_status=RCV HTTP/1.1" 200 30176  None
+INFO:django.server:"GET /list_order?work_status=RCV HTTP/1.1" 200 30176
+11/Jan/2024 15:55:59   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+11/Jan/2024 15:56:00   INFO  "GET /list_order?work_status=END HTTP/1.1" 200 53966  None
+INFO:django.server:"GET /list_order?work_status=END HTTP/1.1" 200 53966
+11/Jan/2024 15:56:00   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+11/Jan/2024 15:56:02   INFO  "GET /listorderjson?last_pk=1123&work_status=ALL HTTP/1.1" 200 9257  None
+INFO:django.server:"GET /listorderjson?last_pk=1123&work_status=ALL HTTP/1.1" 200 9257
+11/Jan/2024 15:56:02   INFO  "GET /__debug__/history_sidebar/?store_id=f88e0ab2b6f444ab8577fc08f91bbe02 HTTP/1.1" 200 13410  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=f88e0ab2b6f444ab8577fc08f91bbe02 HTTP/1.1" 200 13410
+11/Jan/2024 15:56:07   INFO  "GET /list_order/1113 HTTP/1.1" 200 25151  None
+INFO:django.server:"GET /list_order/1113 HTTP/1.1" 200 25151
+11/Jan/2024 15:56:07   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+11/Jan/2024 15:56:11   INFO  "GET /list_order/1112 HTTP/1.1" 200 24867  None
+INFO:django.server:"GET /list_order/1112 HTTP/1.1" 200 24867
+11/Jan/2024 15:56:11   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+11/Jan/2024 15:56:21   INFO  "GET /list_order/1098 HTTP/1.1" 200 25139  None
+INFO:django.server:"GET /list_order/1098 HTTP/1.1" 200 25139
+11/Jan/2024 15:56:21   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+11/Jan/2024 15:56:25   INFO  "GET /listorderjson?last_pk=1098&work_status=end HTTP/1.1" 200 8028  None
+INFO:django.server:"GET /listorderjson?last_pk=1098&work_status=end HTTP/1.1" 200 8028
+11/Jan/2024 15:56:25   INFO  "GET /__debug__/history_sidebar/?store_id=dbc45a6f03bd4fffa67495237192e6dd HTTP/1.1" 200 13410  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=dbc45a6f03bd4fffa67495237192e6dd HTTP/1.1" 200 13410
+11/Jan/2024 15:56:28   INFO  "GET /list_order/1096 HTTP/1.1" 200 25178  None
+INFO:django.server:"GET /list_order/1096 HTTP/1.1" 200 25178
+11/Jan/2024 15:56:28   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+11/Jan/2024 15:56:35   INFO  "GET /listorderjson?last_pk=1067&work_status=end HTTP/1.1" 200 8768  None
+INFO:django.server:"GET /listorderjson?last_pk=1067&work_status=end HTTP/1.1" 200 8768
+11/Jan/2024 15:56:35   INFO  "GET /__debug__/history_sidebar/?store_id=5169d20513d840e894f32444e691857f HTTP/1.1" 200 13410  None
+INFO:django.server:"GET /__debug__/history_sidebar/?store_id=5169d20513d840e894f32444e691857f HTTP/1.1" 200 13410
+11/Jan/2024 15:56:38   INFO  "GET /list_order/1063 HTTP/1.1" 200 25552  None
+INFO:django.server:"GET /list_order/1063 HTTP/1.1" 200 25552
+11/Jan/2024 15:56:38   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+11/Jan/2024 15:56:40   INFO  "GET /list_order/pdf/1063 HTTP/1.1" 200 2753  None
+INFO:django.server:"GET /list_order/pdf/1063 HTTP/1.1" 200 2753
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-01-11 16:52:05.539225
+WARNING:root:ОШИБКА:        Не найден ни один пользователь, соответствующий запросу
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 53, in get_object
+    obj = queryset.get()
+          ^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 108, in get
+    self.object = self.get_object()
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 55, in get_object
+    raise Http404(
+django.http.response.Http404: Не найден ни один пользователь, соответствующий запросу
+
+WARNING:root:============================================================
+11/Jan/2024 16:52:05   WARNING  Bad Request: /user/164511456454154  None
+WARNING:django.request:Bad Request: /user/164511456454154
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-01-11 16:57:54.783968
+WARNING:root:ОШИБКА:        Не найден ни один пользователь, соответствующий запросу
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 53, in get_object
+    obj = queryset.get()
+          ^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 108, in get
+    self.object = self.get_object()
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 55, in get_object
+    raise Http404(
+django.http.response.Http404: Не найден ни один пользователь, соответствующий запросу
+
+WARNING:root:============================================================
+11/Jan/2024 16:57:54   WARNING  Bad Request: /user/164511456454154  None
+WARNING:django.request:Bad Request: /user/164511456454154
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-01-11 16:58:13.040193
+WARNING:root:ОШИБКА:        Не найден ни один пользователь, соответствующий запросу
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 53, in get_object
+    obj = queryset.get()
+          ^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 108, in get
+    self.object = self.get_object()
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 55, in get_object
+    raise Http404(
+django.http.response.Http404: Не найден ни один пользователь, соответствующий запросу
+
+WARNING:root:============================================================
+11/Jan/2024 16:58:13   WARNING  Bad Request: /user/164511456454154  None
+WARNING:django.request:Bad Request: /user/164511456454154
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-01-11 16:58:53.988755
+WARNING:root:ОШИБКА:        Не найден ни один пользователь, соответствующий запросу
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 53, in get_object
+    obj = queryset.get()
+          ^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 108, in get
+    self.object = self.get_object()
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 55, in get_object
+    raise Http404(
+django.http.response.Http404: Не найден ни один пользователь, соответствующий запросу
+
+WARNING:root:============================================================
+11/Jan/2024 16:58:53   WARNING  Bad Request: /user/164511456454154  None
+WARNING:django.request:Bad Request: /user/164511456454154
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-01-11 16:59:18.341688
+WARNING:root:ОШИБКА:        Не найден ни один пользователь, соответствующий запросу
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 53, in get_object
+    obj = queryset.get()
+          ^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 108, in get
+    self.object = self.get_object()
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 55, in get_object
+    raise Http404(
+django.http.response.Http404: Не найден ни один пользователь, соответствующий запросу
+
+WARNING:root:============================================================
+11/Jan/2024 16:59:18   WARNING  Bad Request: /user/164511456454154  None
+WARNING:django.request:Bad Request: /user/164511456454154
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-01-11 17:02:55.605270
+WARNING:root:ОШИБКА:        Не найден ни один пользователь, соответствующий запросу
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 53, in get_object
+    obj = queryset.get()
+          ^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 108, in get
+    self.object = self.get_object()
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 55, in get_object
+    raise Http404(
+django.http.response.Http404: Не найден ни один пользователь, соответствующий запросу
+
+WARNING:root:============================================================
+11/Jan/2024 17:02:55   WARNING  Bad Request: /user/164511456454154  None
+WARNING:django.request:Bad Request: /user/164511456454154
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-01-11 17:03:45.564402
+WARNING:root:ОШИБКА:        Не найден ни один пользователь, соответствующий запросу
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 53, in get_object
+    obj = queryset.get()
+          ^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 108, in get
+    self.object = self.get_object()
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 55, in get_object
+    raise Http404(
+django.http.response.Http404: Не найден ни один пользователь, соответствующий запросу
+
+WARNING:root:============================================================
+11/Jan/2024 17:03:45   WARNING  Bad Request: /user/164511456454154  None
+WARNING:django.request:Bad Request: /user/164511456454154
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-01-11 17:03:56.443137
+WARNING:root:ОШИБКА:        Не найден ни один пользователь, соответствующий запросу
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 53, in get_object
+    obj = queryset.get()
+          ^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 108, in get
+    self.object = self.get_object()
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 55, in get_object
+    raise Http404(
+django.http.response.Http404: Не найден ни один пользователь, соответствующий запросу
+
+WARNING:root:============================================================
+11/Jan/2024 17:03:56   WARNING  Bad Request: /user/164511456454154  None
+WARNING:django.request:Bad Request: /user/164511456454154
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-01-11 17:05:13.241509
+WARNING:root:ОШИБКА:        Не найден ни один пользователь, соответствующий запросу
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 53, in get_object
+    obj = queryset.get()
+          ^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 108, in get
+    self.object = self.get_object()
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 55, in get_object
+    raise Http404(
+django.http.response.Http404: Не найден ни один пользователь, соответствующий запросу
+
+WARNING:root:============================================================
+11/Jan/2024 17:05:13   WARNING  Bad Request: /user/164511456454154  None
+WARNING:django.request:Bad Request: /user/164511456454154

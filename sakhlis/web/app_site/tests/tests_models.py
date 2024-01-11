@@ -9,7 +9,8 @@ from app_site.models import *
 class Settings(TestCase):
     @classmethod
     def setUpTestData(cls):
-
+        cls.data = {'text_order': 'test text of order', 'customer_name': 'Sergei', 'customer_phone': '+995555555555',
+                'address_city': 'TB'}
         cls.user_ = User.objects.create(username='User_test_unit')
         cls.user_.set_password('12345')
         cls.user_.save()

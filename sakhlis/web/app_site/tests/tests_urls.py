@@ -5,17 +5,16 @@ from sakhlis.web.app_site.tests.tests_models import Settings
 class UrlTestCase(Settings):
 
     def test_home_url(self):
-        data = {'text_order': 'test text of order', 'customer_name': 'Sergei', 'customer_phone': '+995555555555',
-                'address_city': 'TB'}
+
         # without login:
             # check GET
         response=self.client.get('/')
         self.assertEqual(response.status_code, 200)
             # check POST
-        response = self.client.post('/', data)
-        chek_post = OrderList.objects.get(text_order="test text of order")
-        self.assertEqual(chek_post.customer_name, 'Sergei')
-        self.assertEqual(chek_post.repairer_id, None)
+        response = self.client.post('/', self.data)
+        check_post = OrderList.objects.get(text_order="test text of order")
+        self.assertEqual(check_post.customer_name, 'Sergei')
+        self.assertEqual(check_post.repairer_id, None)
         OrderList.objects.filter(text_order="test text of order").delete()
 
         # with login
@@ -26,10 +25,10 @@ class UrlTestCase(Settings):
         self.assertEqual(str(response.context['user']), 'User_test_unit')
         self.assertIn('User_test_unit', response.content.decode())
             # check POST
-        response = self.client.post('/', data)
-        chek_post = OrderList.objects.get(text_order="test text of order")
-        self.assertEqual(chek_post.customer_name, 'Sergei')
-        self.assertEqual(chek_post.repairer_id.username, 'User_test_unit')
+        response = self.client.post('/', self.data)
+        check_post = OrderList.objects.get(text_order="test text of order")
+        self.assertEqual(check_post.customer_name, 'Sergei')
+        self.assertEqual(check_post.repairer_id.username, 'User_test_unit')
         OrderList.objects.filter(text_order="test text of order").delete()
 
             # check GET with wrong login:
