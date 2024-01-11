@@ -6,7 +6,7 @@ from app_site.models import *
 class DataFromRepairerList:
     model = Repairer.objects
 
-    def get_object_from_RepairerList(self, user:User) ->Repairer:
+    def get_object_from_RepairerList(self, user:User) -> Repairer:
         return self.model.get(user=user)
 
 class DataFromOrderList:
@@ -74,12 +74,12 @@ class DataFromOrderList:
 
 class DataFromInvoice:
     model = Invoice.objects
+
     def get_amount_money_of_orders(self, repairer:User) -> float:
         return self.model\
             .values('order_id__repairer_id')\
             .annotate(sum=Sum(F('price') * F('quantity')))\
             .filter(order_id__repairer_id=repairer)[0]['sum']
-
 
     def get_data_from_Invoice_with_amount(self, order_id_: int):
         return self.model \

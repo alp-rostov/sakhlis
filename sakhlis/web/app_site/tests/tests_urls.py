@@ -1,20 +1,38 @@
-
+from app_site.models import OrderList
 from sakhlis.web.app_site.tests.tests_models import Settings
 
 
 class UrlTestCase(Settings):
 
     def test_home_url(self):
+        data = {'text_order': 'test text of order', 'customer_name': 'Sergei', 'customer_phone': '+995555555555',
+                'address_city': 'TB'}
+        # without login:
+            # check GET
         response=self.client.get('/')
         self.assertEqual(response.status_code, 200)
-        self.assertNotIn('User_test_unit', response.content.decode())
+            # check POST
+        response = self.client.post('/', data)
+        chek_post = OrderList.objects.get(text_order="test text of order")
+        self.assertEqual(chek_post.customer_name, 'Sergei')
+        self.assertEqual(chek_post.repairer_id, None)
+        OrderList.objects.filter(text_order="test text of order").delete()
 
+        # with login
+            # check GET
         login = self.client.login(username='User_test_unit', password='12345')
         response = self.client.get('/')
         self.assertTrue(login)
         self.assertEqual(str(response.context['user']), 'User_test_unit')
         self.assertIn('User_test_unit', response.content.decode())
+            # check POST
+        response = self.client.post('/', data)
+        chek_post = OrderList.objects.get(text_order="test text of order")
+        self.assertEqual(chek_post.customer_name, 'Sergei')
+        self.assertEqual(chek_post.repairer_id.username, 'User_test_unit')
+        OrderList.objects.filter(text_order="test text of order").delete()
 
+            # check GET with wrong login:
         login = self.client.login(username='User_test_unit', password='wrong_password')
         self.assertFalse(login)
 
@@ -25,6 +43,8 @@ class UrlTestCase(Settings):
         response = self.client.get('/stat/')
         self.assertIn('User_test_unit', response.content.decode())
         self.assertEqual(response.status_code, 200)
+
+
     def test_list_order_url(self):
         response = self.client.get('/list_order')
         self.assertEqual(response.status_code, 302)

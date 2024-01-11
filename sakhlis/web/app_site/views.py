@@ -20,6 +20,7 @@ from django.contrib.auth.decorators import login_required
 
 logger = logging.getLogger(__name__)
 
+
 class UserRegisterView(CreateView):
     """ Registration of repairer """
     model = User
@@ -80,6 +81,7 @@ class OrderManagementSystem(BaseClassExeption, LoginRequiredMixin, ListView):
         context = super().get_context_data(**kwargs)
         context['form'] = OrderForm
         return context
+
 
 class OrderUpdate(LoginRequiredMixin, UpdateView):
     model = OrderList
@@ -152,8 +154,10 @@ class InvoiceCreate(BaseClassExeption, LoginRequiredMixin, DetailView):
 class Error404(TemplateView):
     template_name = '404.html'
 
+
 class Statistica(LoginRequiredMixin, TemplateView):
     template_name = 'statistica.html'
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
 
@@ -202,6 +206,7 @@ class Statistica(LoginRequiredMixin, TemplateView):
                         .make_graf_plot()
         return context
 
+
 class RepaierUpdate(BaseClassExeption, UpdateView):
     model = Repairer
     template_name = 'repaier_create.html'
@@ -209,6 +214,7 @@ class RepaierUpdate(BaseClassExeption, UpdateView):
 
     def get_success_url(self):
         return '/user/' + str(self.request.user.pk)
+
 
 def CreateIvoicePDF(request, **kwargs):
     """ Create invoice pdf-file for printing """
@@ -247,6 +253,7 @@ class OrderSearchForm(LoginRequiredMixin, ListView):
         context['count_orders'] = self.get_queryset().count()
         return context
 
+
 @login_required
 def OrderAddRepaier(request):
     """Add the repairer to order from telegram"""
@@ -269,6 +276,7 @@ def listservices_for_invoice_json(request, **kwargs):
     json_data = json.dumps(list(data))
     return JsonResponse(json_data, safe=False)
 
+
 @login_required
 def listorder_for_order_list_paginator_json(request, **kwargs):
     """for ajax request """
@@ -280,6 +288,7 @@ def listorder_for_order_list_paginator_json(request, **kwargs):
                                     'address_num', 'location_longitude', 'location_latitude')[0:14]
     json_data = json.dumps(list(data), default=str)
     return JsonResponse(json_data, safe=False)
+
 
 @login_required
 def DeleteIvoiceService(request, **kwargs):

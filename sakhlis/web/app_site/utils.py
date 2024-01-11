@@ -13,6 +13,7 @@ import urllib.parse
 import warnings
 import io
 from app_site.models import OrderList
+
 GeoPointLocation = tuple[str, str]
 
 def set_coordinates_address(street: str, city: str, house_number: str) -> GeoPointLocation | None:
@@ -25,7 +26,6 @@ def set_coordinates_address(street: str, city: str, house_number: str) -> GeoPoi
         else: return None
     except TypeError:
         return None
-
 
 def get_telegram_button(repairer: list, order_pk: int) -> types.InlineKeyboardMarkup:
     """
@@ -134,13 +134,8 @@ class InvoiceMaker(object):
         self.c.showPage()
         self.c.save()
 
-
-
-
-
 class Graph:
-    """ create a graph and sent to template """
-
+    """ create a graph"""
     def __init__(self,
                  queryset,
                  name_X: str,
@@ -151,16 +146,13 @@ class Graph:
 
         self.name_graf=name_graf
         self.name_legend=name_legend
-        self.fig, self.ax = plt.subplots()
         self.queryset=queryset
         self.name_X=name_X
         self.data_Y=data_Y
-        self.help_dict=help_dict
-
+        self.help_dict=help_dict     # help_dict is a WORK_CHOICES_ or MONTH_ or None
+        self.fig, self.ax = plt.subplots()
     def get_data_for_graph(self) -> tuple[list, list]:
-        """ return list using for create Graph in statistica.html
-        help_dict is a WORK_CHOICES_ or MONTH_
-        """
+
         labels = []
         data = []
 
@@ -168,7 +160,6 @@ class Graph:
             c = ''
             for _ in self.queryset:
                 b = str(_.get('time_in__year')) if _.get('time_in__year') != c and _.get('time_in__year') else ' '
-
                 labels.append(b + ' ' + self.help_dict[_[self.name_X]])
                 data.append(_[self.data_Y])
                 c = _.get('time_in__year')
@@ -176,11 +167,10 @@ class Graph:
             for _ in self.queryset:
                 labels.append(_[self.name_X])
                 data.append(_[self.data_Y])
-
         return labels, data
 
     def make_graf_pie(self):
-        labels, data=self.get_data_for_graph()
+        labels, data = self.get_data_for_graph()
         try:
             explode = [0.03, 0.01, 0.01, 0.01, 0.01]
             if len(labels) > 4:
@@ -229,10 +219,9 @@ class Graph:
 
         return self.sent(self.fig)
 
-
     def sent(self, fig):
-        if self.fig!='':
-            buf=io.BytesIO()
+        if self.fig != '':
+            buf = io.BytesIO()
             fig.savefig(buf, format='png')
             buf.seek(0)
             string = base64.b64encode(buf.read())
