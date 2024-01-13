@@ -63,8 +63,8 @@ class UrlTestCase(Settings):
 
         login = self.client.login(username='User_test_unit', password='12345')
         response = self.client.get('/user/'+str(self.user_.pk))
-        self.assertIn('User_test_unit', response.content.decode())
         self.assertEqual(response.status_code, 200)
+        self.assertIn('User_test_unit', response.content.decode())
 
 
     def test_404_url(self):
@@ -74,6 +74,9 @@ class UrlTestCase(Settings):
     def test_login_url(self):
         response=self.client.get('/login/')
         self.assertEqual(response.status_code, 200)
+        login = self.client.login(username='User_test_unit', password='12345')
+        response = self.client.get('/logout')
+        self.assertEqual(response.status_code, 301)
 
     def test_logout_url(self):
         response = self.client.get('/logout')
@@ -82,7 +85,6 @@ class UrlTestCase(Settings):
     def test_register_url(self):
         response = self.client.get('/register/')
         self.assertEqual(response.status_code, 200)
-
 
     def test_user_url(self):
         response = self.client.get('/user/'+str(self.user.pk))

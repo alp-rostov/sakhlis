@@ -1,27 +1,28 @@
 import os
-
 import telebot
+
 from celery import shared_task
 from django.contrib.auth.models import User
-from django.core.mail import EmailMultiAlternatives
-from django.template.loader import render_to_string
+from django.shortcuts import get_object_or_404
 
 from .models import OrderList, Repairer
-from .utils import set_coordinates_address,get_telegram_button
+from .utils import get_telegram_button, Location
 
 TOKEN = os.environ.get('TOKEN')
 CHAT_ID = os.environ.get('CHAT_ID')
 
+@shared_task
+def task_save_location_(inst: int):
+    order = get_object_or_404(OrderList, pk=inst)
+    Location(order).save_location()
 
 @shared_task
-def send_order_information(inst, location):
+def send_order_information(inst: int):
     """" send order`s information to telegram group"""
     instance = OrderList.objects.get(pk=inst)
     repairer = User.objects.all().values_list('pk', 'username')
-    if location!=None:
-        map_= f'https://yandex.ru/maps/?pt={location[0]},{location[1]}&z=18&l=map'
-    else: map_=''
     subject_ = f'<b>Заказ на работы № {instance.pk} от {instance.time_in.strftime("%m/%d/%Y")}</b>'
+    map_= Location(instance).print_yandex_location()
     text = subject_ + f'\n ' \
                       f'ИМЯ: {instance.customer_name} \n' \
                       f'ТЕЛЕФОН: {instance.customer_phone} \n ' \
@@ -36,26 +37,6 @@ def send_order_information(inst, location):
     bot.send_message(CHAT_ID, text, reply_markup=get_telegram_button(repairer, instance.pk),  parse_mode='HTML')
 
 
-@shared_task
-def send_email_after_registration(inst):
-    """" send welcome letter to repairman after registration """
-    inst_ = User.objects.get(pk=inst)
-
-    html_content = render_to_string(
-        'email_registration.html',
-        {
-            'appointment': inst_,
-        }
-    )
-
-
-    msg = EmailMultiAlternatives(
-        subject=f'Регистрацмя на сайте SAKHLIS-REMONTI.GE',  #TODO сделать нормальный шаблон...
-        from_email='alp-rostov@mail.ru',
-        to=[inst_.email],
-    )
-    msg.attach_alternative(html_content, "text/html")  # добавляем html
-    msg.send()  # отсылаем
 
 
 

@@ -3,78 +3,11 @@ from django.db import models
 from django.core.validators import RegexValidator
 from django.urls import reverse
 
+from .constants import CITY_CHOICES, ORDER_STATUS, WORK_CHOICES, QUANTITY_CHOICES
+
 phoneNumberRegex = RegexValidator(regex=r"^\+?1?\d{8,15}$",
                                   message="Phone number must be entered in the "
                                           "format: '+999999999'. Up to 15 digits allowed.")
-CITY_CHOICES = [
-    ('TB', 'Тбилиси'),
-    ('BT', 'Батуми'),
-]
-
-WORK_CHOICES = [
-    ('EL', 'Электрика'),
-    ('PL', 'Сантехника'),
-    ('SP', 'Кондиционирование'),
-    ('FT', 'Ремонт/сборка мебели'),
-    ('OT', 'Ремонт окон, дверей'),
-    ('ID', 'Монтаж техники'),
-    ('BL', 'Строительные работы'),
-    ('CL', 'Клининг'),
-
-]
-
-WORK_CHOICES_ = {
-    'EL': 'Электрика',
-    'PL': 'Сантехника',
-    'SP': 'Кондиционирование',
-    'FT': 'Ремонт/сборка мебели',
-    'OT': 'Ремонт окон, дверей',
-    'ID': 'Монтаж техники',
-    'BL': 'Строительные работы',
-    'CL': 'Клининг'
-}
-
-
-QUANTITY_CHOICES = [
-    ('SV', 'Услуга'),
-    ('ME', 'Метр'),
-    ('QL', 'Килограмм'),
-    ('TH', 'Штука'),
-
-]
-
-ORDER_STATUS = [
-    ('BEG', 'Заявка получена'),
-    ('SND', 'Направлена мастеру'),
-    ('RCV', 'Мастеру принял заявку'),
-    # ('WRK', 'Заявка в работе'),
-    ('END', 'Заявка выполнена'),
-]
-
-ORDER_STATUS_FOR_CHECK = ['BEG', 'SND', 'RCV', 'WRK', 'END']
-
-
-MONTH = [
-    (1, 'Январь'),
-    (2, 'Февраль'),
-    (3, 'Март'),
-    (4, 'Апрель'),
-    (5, 'Май'),
-    (6, 'Июнь'),
-    (7, 'Июль'),
-    (8, 'Август'),
-    (9, 'Сентябрь'),
-    (10, 'Октябрь'),
-    (11, 'Ноябрь'),
-    (12, 'Декабрь'),
-
-]
-
-
-MONTH_ = ['','Янв', 'Фев', 'Март', 'Апр', 'Май',
-    'Июнь', 'Июль', 'Авг', 'Сент', 'Окт',
-    'Нояб', 'Дек']
-
 
 class Service(models.Model):
     """name type """

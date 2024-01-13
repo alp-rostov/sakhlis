@@ -12,20 +12,38 @@ import base64
 import urllib.parse
 import warnings
 import io
-from app_site.models import OrderList
 
-GeoPointLocation = tuple[str, str]
+from .models import OrderList
 
-def set_coordinates_address(street: str, city: str, house_number: str) -> GeoPointLocation | None:
-    """ setting of map coordinates by street and city """
-    try:
+
+class Location:
+    def __init__(self, instance: OrderList):
+        self.instance = instance
+
+    def set_location(self):
         geolocator = Nominatim(user_agent="app_site")
-        location = geolocator.geocode({'city': city, 'street': street+', '+house_number}, addressdetails=True)
+        location = geolocator.geocode({'city': 'Тбилиси',
+                                   'street': str(self.instance.address_street_app)+', '+str(self.instance.address_num)},
+                                    addressdetails=True)
         if location:
             return str(location.longitude), str(location.latitude)
-        else: return None
-    except TypeError:
         return None
+
+    def save_location(self):
+        try:
+            longitude, latitude = self.set_location()
+            self.instance.location_longitude = float(longitude)
+            self.instance.location_latitude = float(latitude)
+            self.instance.save()
+        except (TypeError, AttributeError):
+            return None
+
+    def print_yandex_location(self):
+        if self.instance.location_longitude != None:
+            return f'https://yandex.ru/maps/?pt={self.instance.location_longitude},{self.instance.location_latitude}&z=18&l=map'
+        return ' '
+
+
 
 def get_telegram_button(repairer: list, order_pk: int) -> types.InlineKeyboardMarkup:
     """
@@ -133,6 +151,7 @@ class InvoiceMaker(object):
     def savePDF(self):
         self.c.showPage()
         self.c.save()
+
 
 class Graph:
     """ create a graph"""

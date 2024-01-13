@@ -1,5 +1,5 @@
 from django import template
-from ..models import CITY_CHOICES, ORDER_STATUS, MONTH, WORK_CHOICES
+from app_site.constants import CITY_CHOICES, ORDER_STATUS, MONTH, WORK_CHOICES
 
 register = template.Library()
 

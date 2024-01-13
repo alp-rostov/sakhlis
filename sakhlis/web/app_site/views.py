@@ -2,26 +2,25 @@ import json
 import logging
 
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.db.models import Sum, F
+from django.contrib.auth.decorators import login_required
+from django.http import FileResponse, HttpResponseRedirect, JsonResponse
 from django.forms import modelformset_factory
 from django.shortcuts import redirect, get_object_or_404
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
 
+from .constants import *
 from .exeptions import BaseClassExeption
 from .filters import OrderFilter
 from .models import *
 from .forms import OrderForm, InvoiceForm, UserRegisterForm, RepairerForm
 from .repository import DataFromRepairerList, DataFromOrderList, DataFromInvoice
 from .utils import *
-from django.http import FileResponse, HttpResponseRedirect, JsonResponse
-import io
-from django.contrib.auth.decorators import login_required
 
 logger = logging.getLogger(__name__)
 
 
-class UserRegisterView(CreateView):
+class UserRegisterView(BaseClassExeption, CreateView):
     """ Registration of repairer """
     model = User
     form_class = UserRegisterForm
@@ -83,7 +82,7 @@ class OrderManagementSystem(BaseClassExeption, LoginRequiredMixin, ListView):
         return context
 
 
-class OrderUpdate(LoginRequiredMixin, UpdateView):
+class OrderUpdate(BaseClassExeption, LoginRequiredMixin, UpdateView):
     model = OrderList
     template_name = 'order_update.html'
     form_class = OrderForm
@@ -97,7 +96,7 @@ class OrderUpdate(LoginRequiredMixin, UpdateView):
         return '/list_order/'+str(self.object.pk)
 
 
-class OrderDelete(LoginRequiredMixin, DeleteView):
+class OrderDelete(BaseClassExeption, LoginRequiredMixin, DeleteView):
     model = OrderList
     template_name = 'order_delete.html'
     success_url = '/list_order'
@@ -155,7 +154,7 @@ class Error404(TemplateView):
     template_name = '404.html'
 
 
-class Statistica(LoginRequiredMixin, TemplateView):
+class Statistica(BaseClassExeption, LoginRequiredMixin, TemplateView):
     template_name = 'statistica.html'
 
     def get_context_data(self, **kwargs):
@@ -216,22 +215,7 @@ class RepaierUpdate(BaseClassExeption, UpdateView):
         return '/user/' + str(self.request.user.pk)
 
 
-def CreateIvoicePDF(request, **kwargs):
-    """ Create invoice pdf-file for printing """
-
-    # get information from models
-    order_pk = kwargs.get("order_pk")
-    info = DataFromOrderList().get_all_data_of_order_with_from_invoice().get(pk=order_pk)
-    # create file
-    buf = io.BytesIO()
-    doc = InvoiceMaker(buf, info)
-    doc.createDocument()
-    doc.savePDF()
-    buf.seek(0)
-    return FileResponse(buf, as_attachment=True, filename=f'Invoice_{order_pk}_.pdf')
-
-
-class OrderSearchForm(LoginRequiredMixin, ListView):
+class OrderSearchForm(BaseClassExeption, LoginRequiredMixin, ListView):
     model = OrderList
     context_object_name = 'order'
     template_name = 'ordersearchform.html'
@@ -252,6 +236,21 @@ class OrderSearchForm(LoginRequiredMixin, ListView):
         context['summ_orders'] = c.get('Summ')
         context['count_orders'] = self.get_queryset().count()
         return context
+
+
+def CreateIvoicePDF(request, **kwargs):
+    """ Create invoice pdf-file for printing """
+
+    # get information from models
+    order_pk = kwargs.get("order_pk")
+    info = DataFromOrderList().get_all_data_of_order_with_from_invoice().get(pk=order_pk)
+    # create file
+    buf = io.BytesIO()
+    doc = InvoiceMaker(buf, info)
+    doc.createDocument()
+    doc.savePDF()
+    buf.seek(0)
+    return FileResponse(buf, as_attachment=True, filename=f'Invoice_{order_pk}_.pdf')
 
 
 @login_required
