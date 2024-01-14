@@ -159,49 +159,47 @@ class Graph:
                  queryset,
                  name_X: str,
                  data_Y: str,
-                 help_dict:dict = None,
-                 name_graf:str = '',
-                 name_legend:str = ''):
+                 help_dict: dict = None,          # help_dict is a WORK_CHOICES_ or MONTH_ or None
+                 name_graf: str = '',
+                 name_legend: str = ''):
 
-        self.name_graf=name_graf
-        self.name_legend=name_legend
-        self.queryset=queryset
-        self.name_X=name_X
-        self.data_Y=data_Y
-        self.help_dict=help_dict     # help_dict is a WORK_CHOICES_ or MONTH_ or None
+        self.name_X = name_X
+        self.data_Y = data_Y
         self.fig, self.ax = plt.subplots()
-    def get_data_for_graph(self) -> tuple[list, list]:
+        self.ax.set_ylabel(name_legend)
+        self.ax.set_title(name_graf)
 
-        labels = []
-        data = []
+        def get_data_for_graph(queryset) -> tuple[list, list]:
+            labels = []
+            data = []
+            if help_dict:
+                c = ''
+                for _ in queryset:
+                    b = str(_.get('time_in__year')) if _.get('time_in__year') != c and _.get('time_in__year') else ' '
+                    labels.append(b + ' ' + help_dict[_[self.name_X]])
+                    data.append(_[self.data_Y])
+                    c = _.get('time_in__year')
+            else:
+                for _ in queryset:
+                    labels.append(_[self.name_X])
+                    data.append(_[self.data_Y])
+            return labels, data
 
-        if self.help_dict:
-            c = ''
-            for _ in self.queryset:
-                b = str(_.get('time_in__year')) if _.get('time_in__year') != c and _.get('time_in__year') else ' '
-                labels.append(b + ' ' + self.help_dict[_[self.name_X]])
-                data.append(_[self.data_Y])
-                c = _.get('time_in__year')
-        else:
-            for _ in self.queryset:
-                labels.append(_[self.name_X])
-                data.append(_[self.data_Y])
-        return labels, data
+        self.labels, self.data = get_data_for_graph(queryset)
 
     def make_graf_pie(self):
-        labels, data = self.get_data_for_graph()
         try:
             explode = [0.03, 0.01, 0.01, 0.01, 0.01]
-            if len(labels) > 4:
-                a = sum(data[5:len(data)])
-                labels=labels[0:4]
-                labels.append('Прочее')
-                data=data[0:4]
-                data.append(a)
+            if len(self.labels) > 4:
+                a = sum(self.data[5:len(self.data)])
+                self.labels = self.labels[0:4]
+                self.labels.append('Прочее')
+                self.data = self.data[0:4]
+                self.data.append(a)
             else:
-                explode=explode[0:len(labels)]
-            self.ax.pie(data, labels=labels, autopct='%1.1f%%',explode=explode)
-            self.ax.set_title(self.name_graf)
+                explode=explode[0:len(self.labels)]
+            self.ax.pie(self.data, labels=self.labels, autopct='%1.1f%%', explode=explode)
+
             warnings.simplefilter("ignore", UserWarning)
             self.fig = plt.gcf()
         except Exception:
@@ -209,27 +207,17 @@ class Graph:
         return self.sent(self.fig)
 
     def make_graf_bar(self):
-        labels, data = self.get_data_for_graph()
         try:
-            bar_labels = labels
-            self.ax.bar(labels, data, label=bar_labels )
-            self.ax.set_ylabel(self.name_legend)
-            self.ax.set_title(self.name_graf)
+            self.ax.bar(self.labels, self.data, label=self.labels)
             warnings.simplefilter("ignore", UserWarning)
             self.fig = plt.gcf()
         except Exception:
-            self.fig =''
+            self.fig = ''
         return self.sent(self.fig)
 
     def make_graf_plot(self):
-        labels, data = self.get_data_for_graph()
         try:
-            bar_labels = labels
-            self.ax.plot(labels, data, label=bar_labels)
-
-            self.ax.set_ylabel(self.name_legend)
-            self.ax.set_title(self.name_graf)
-
+            self.ax.plot(self.labels, self.data, label=self.labels)
             warnings.simplefilter("ignore", UserWarning)
             self.fig = plt.gcf()
 

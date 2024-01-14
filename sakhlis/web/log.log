@@ -842,3 +842,232 @@ django.http.response.Http404: Не найден ни один пользоват
 WARNING:root:============================================================
 13/Jan/2024 21:02:55   WARNING  Bad Request: /user/164511456454154  None
 WARNING:django.request:Bad Request: /user/164511456454154
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-01-14 07:02:05.429214
+WARNING:root:ОШИБКА:        Не найден ни один пользователь, соответствующий запросу
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 53, in get_object
+    obj = queryset.get()
+          ^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 108, in get
+    self.object = self.get_object()
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 55, in get_object
+    raise Http404(
+django.http.response.Http404: Не найден ни один пользователь, соответствующий запросу
+
+WARNING:root:============================================================
+14/Jan/2024 07:02:05   WARNING  Bad Request: /user/164511456454154  None
+WARNING:django.request:Bad Request: /user/164511456454154
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-01-14 10:25:45.561622
+WARNING:root:ОШИБКА:        Не найден ни один пользователь, соответствующий запросу
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 53, in get_object
+    obj = queryset.get()
+          ^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 108, in get
+    self.object = self.get_object()
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 55, in get_object
+    raise Http404(
+django.http.response.Http404: Не найден ни один пользователь, соответствующий запросу
+
+WARNING:root:============================================================
+14/Jan/2024 10:25:45   WARNING  Bad Request: /user/164511456454154  None
+WARNING:django.request:Bad Request: /user/164511456454154
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-01-14 10:25:54.152072
+WARNING:root:ОШИБКА:        Не найден ни один пользователь, соответствующий запросу
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 53, in get_object
+    obj = queryset.get()
+          ^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 108, in get
+    self.object = self.get_object()
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 55, in get_object
+    raise Http404(
+django.http.response.Http404: Не найден ни один пользователь, соответствующий запросу
+
+WARNING:root:============================================================
+14/Jan/2024 10:25:54   WARNING  Bad Request: /user/164511456454154  None
+WARNING:django.request:Bad Request: /user/164511456454154
+14/Jan/2024 10:26:09   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+14/Jan/2024 10:26:09   WARNING  Not Found: /favicon.ico  None
+WARNING:django.request:Not Found: /favicon.ico
+14/Jan/2024 10:26:09   WARNING  "GET /favicon.ico HTTP/1.1" 404 16307  None
+WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 16307
+14/Jan/2024 10:26:11   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+14/Jan/2024 10:26:18   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+14/Jan/2024 10:28:43   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+14/Jan/2024 10:28:48   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+14/Jan/2024 10:29:13   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+14/Jan/2024 10:29:51   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+14/Jan/2024 10:31:11   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+14/Jan/2024 10:32:15   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+14/Jan/2024 10:32:29   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-01-14 10:41:40.959955
+WARNING:root:ОШИБКА:        'QuerySet' object has no attribute 'help_dict'
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 226, in get
+    context = self.get_context_data(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 163, in get_context_data
+    context['d'] = Graph(DataFromInvoice().get_quantity_of_orders_by_type(repairer=self.request.user),
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py", line 192, in __init__
+    self.labels, self.data = get_data_for_graph(queryset)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py", line 179, in get_data_for_graph
+    if self.help_dict:
+       ^^^^^^^^^^^^^^
+AttributeError: 'QuerySet' object has no attribute 'help_dict'
+
+WARNING:root:============================================================
+14/Jan/2024 10:41:41   WARNING  Bad Request: /stat/  None
+WARNING:django.request:Bad Request: /stat/
+14/Jan/2024 10:41:41   WARNING  "GET /stat/ HTTP/1.1" 400 103  None
+WARNING:django.server:"GET /stat/ HTTP/1.1" 400 103
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-01-14 10:43:04.419245
+WARNING:root:ОШИБКА:        'Graph' object has no attribute 'make_graf_bar'
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 226, in get
+    context = self.get_context_data(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 173, in get_context_data
+    .make_graf_bar()
+     ^^^^^^^^^^^^^
+AttributeError: 'Graph' object has no attribute 'make_graf_bar'
+
+WARNING:root:============================================================
+14/Jan/2024 10:43:04   WARNING  Bad Request: /stat/  None
+WARNING:django.request:Bad Request: /stat/
+14/Jan/2024 10:43:04   WARNING  "GET /stat/ HTTP/1.1" 400 104  None
+WARNING:django.server:"GET /stat/ HTTP/1.1" 400 104
+14/Jan/2024 10:44:31   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+14/Jan/2024 10:46:20   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+14/Jan/2024 10:46:34   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+14/Jan/2024 10:46:39   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+14/Jan/2024 10:46:43   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+14/Jan/2024 10:46:48   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+14/Jan/2024 10:46:56   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+14/Jan/2024 10:47:11   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+14/Jan/2024 10:47:13   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+14/Jan/2024 10:47:23   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+14/Jan/2024 10:47:47   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+14/Jan/2024 10:47:48   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+14/Jan/2024 10:47:56   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+14/Jan/2024 10:48:09   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+14/Jan/2024 10:51:57   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+14/Jan/2024 10:52:00   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+14/Jan/2024 10:52:01   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+14/Jan/2024 10:52:04   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+14/Jan/2024 10:52:08   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+14/Jan/2024 10:52:12   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+14/Jan/2024 10:52:27   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+14/Jan/2024 10:52:50   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+14/Jan/2024 10:52:53   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+14/Jan/2024 10:52:57   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
