@@ -1,1293 +1,334 @@
-13/Jan/2024 19:44:29   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 19:44:31   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 19:44:34   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 19:44:39   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 19:44:52   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-WARNING:root:===========================================================
-WARNING:root:ВРЕМЯ:     2024-01-13 19:44:58.449168
-WARNING:root:ОШИБКА:        'NoneType' object has no attribute 'longitude'
-WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
-    response = super().dispatch(request, *args, **kwargs)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
-    return handler(request, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/edit.py", line 184, in post
-    return super().post(request, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/edit.py", line 153, in post
-    return self.form_valid(form)
-           ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 56, in form_valid
-    form.save()
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/forms.py", line 83, in save
-    order.save()
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/base.py", line 814, in save
-    self.save_base(
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/base.py", line 892, in save_base
-    post_save.send(
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 176, in send
-    return [
-           ^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 177, in <listcomp>
-    (receiver, receiver(signal=self, sender=sender, **named))
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/signals.py", line 16, in send_post_new_order
-    Location(instance.pk).save_location()
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py", line 33, in save_location
-    longitude, latitude = self.set_location()
-                          ^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py", line 29, in set_location
-    return str(location.longitude), str(location.latitude)
-               ^^^^^^^^^^^^^^^^^^
-AttributeError: 'NoneType' object has no attribute 'longitude'
-
-WARNING:root:============================================================
-13/Jan/2024 19:44:58   WARNING  Bad Request: /  None
-WARNING:django.request:Bad Request: /
-13/Jan/2024 19:44:58   WARNING  "POST / HTTP/1.1" 400 103  None
-WARNING:django.server:"POST / HTTP/1.1" 400 103
-13/Jan/2024 19:46:47   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 19:46:51   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 19:46:52   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 19:46:53   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 19:46:54   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 19:46:56   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 19:46:57   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 19:47:00   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 19:47:01   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 19:47:08   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 19:47:11   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 19:47:21   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 19:48:58   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 19:48:59   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 19:49:01   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 19:49:02   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 19:49:04   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 19:49:05   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 19:49:10   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 19:49:17   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 19:49:28   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 19:52:34   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 19:52:40   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 19:52:44   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-WARNING:root:===========================================================
-WARNING:root:ВРЕМЯ:     2024-01-13 19:52:51.940096
-WARNING:root:ОШИБКА:        cannot unpack non-iterable NoneType object
-WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
-    response = super().dispatch(request, *args, **kwargs)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
-    return handler(request, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/edit.py", line 184, in post
-    return super().post(request, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/edit.py", line 153, in post
-    return self.form_valid(form)
-           ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 56, in form_valid
-    form.save()
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/forms.py", line 83, in save
-    order.save()
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/base.py", line 814, in save
-    self.save_base(
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/base.py", line 892, in save_base
-    post_save.send(
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 176, in send
-    return [
-           ^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 177, in <listcomp>
-    (receiver, receiver(signal=self, sender=sender, **named))
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/signals.py", line 16, in send_post_new_order
-    Location(instance.pk).save_location()
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py", line 34, in save_location
-    longitude, latitude = self.set_location()
-    ^^^^^^^^^^^^^^^^^^^
-TypeError: cannot unpack non-iterable NoneType object
-
-WARNING:root:============================================================
-13/Jan/2024 19:52:51   WARNING  Bad Request: /  None
-WARNING:django.request:Bad Request: /
-13/Jan/2024 19:52:51   WARNING  "POST / HTTP/1.1" 400 99  None
-WARNING:django.server:"POST / HTTP/1.1" 400 99
-13/Jan/2024 19:54:22   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 19:54:24   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 19:54:29   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 19:54:29   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 19:54:31   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 19:54:32   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 19:54:33   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 19:54:34   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 19:54:36   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 19:54:37   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 19:54:43   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 19:54:47   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 19:54:49   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-WARNING:root:===========================================================
-WARNING:root:ВРЕМЯ:     2024-01-13 19:54:58.302024
-WARNING:root:ОШИБКА:        cannot unpack non-iterable NoneType object
-WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
-    response = super().dispatch(request, *args, **kwargs)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
-    return handler(request, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/edit.py", line 184, in post
-    return super().post(request, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/edit.py", line 153, in post
-    return self.form_valid(form)
-           ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 56, in form_valid
-    form.save()
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/forms.py", line 83, in save
-    order.save()
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/base.py", line 814, in save
-    self.save_base(
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/base.py", line 892, in save_base
-    post_save.send(
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 176, in send
-    return [
-           ^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 177, in <listcomp>
-    (receiver, receiver(signal=self, sender=sender, **named))
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/signals.py", line 16, in send_post_new_order
-    Location(instance.pk).save_location()
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py", line 34, in save_location
-    longitude, latitude = self.set_location()
-    ^^^^^^^^^^^^^^^^^^^
-TypeError: cannot unpack non-iterable NoneType object
-
-WARNING:root:============================================================
-13/Jan/2024 19:54:58   WARNING  Bad Request: /  None
-WARNING:django.request:Bad Request: /
-13/Jan/2024 19:54:58   WARNING  "POST / HTTP/1.1" 400 99  None
-WARNING:django.server:"POST / HTTP/1.1" 400 99
-13/Jan/2024 19:55:50   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 19:57:12   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 19:57:14   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 19:57:15   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 19:57:17   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 19:57:19   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-WARNING:root:===========================================================
-WARNING:root:ВРЕМЯ:     2024-01-13 19:59:33.262969
-WARNING:root:ОШИБКА:        cannot unpack non-iterable NoneType object
-WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
-    response = super().dispatch(request, *args, **kwargs)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
-    return handler(request, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/edit.py", line 184, in post
-    return super().post(request, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/edit.py", line 153, in post
-    return self.form_valid(form)
-           ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 56, in form_valid
-    form.save()
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/forms.py", line 83, in save
-    order.save()
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/base.py", line 814, in save
-    self.save_base(
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/base.py", line 892, in save_base
-    post_save.send(
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 176, in send
-    return [
-           ^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 177, in <listcomp>
-    (receiver, receiver(signal=self, sender=sender, **named))
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/signals.py", line 16, in send_post_new_order
-    Location(instance.pk).save_location()
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py", line 34, in save_location
-    longitude, latitude = self.set_location()
-    ^^^^^^^^^^^^^^^^^^^
-TypeError: cannot unpack non-iterable NoneType object
-
-WARNING:root:============================================================
-13/Jan/2024 19:59:33   WARNING  Bad Request: /  None
-WARNING:django.request:Bad Request: /
-13/Jan/2024 19:59:33   WARNING  "POST / HTTP/1.1" 400 99  None
-WARNING:django.server:"POST / HTTP/1.1" 400 99
-13/Jan/2024 20:13:53   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 20:13:57   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 20:13:58   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 20:14:00   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-WARNING:root:===========================================================
-WARNING:root:ВРЕМЯ:     2024-01-13 20:14:07.420268
-WARNING:root:ОШИБКА:        save_location_() missing 1 required positional argument: 'inst'
-WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
-    response = super().dispatch(request, *args, **kwargs)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
-    return handler(request, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/edit.py", line 184, in post
-    return super().post(request, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/edit.py", line 153, in post
-    return self.form_valid(form)
-           ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 56, in form_valid
-    form.save()
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/forms.py", line 83, in save
-    order.save()
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/base.py", line 814, in save
-    self.save_base(
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/base.py", line 892, in save_base
-    post_save.send(
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 176, in send
-    return [
-           ^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 177, in <listcomp>
-    (receiver, receiver(signal=self, sender=sender, **named))
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/signals.py", line 15, in send_post_new_order
-    save_location_().apply_async([instance.pk], countdown=5, expires=20)
-    ^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/celery/local.py", line 188, in __call__
-    return self._get_current_object()(*a, **kw)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/celery/app/task.py", line 392, in __call__
-    return self.run(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: save_location_() missing 1 required positional argument: 'inst'
-
-WARNING:root:============================================================
-13/Jan/2024 20:14:07   WARNING  Bad Request: /  None
-WARNING:django.request:Bad Request: /
-13/Jan/2024 20:14:07   WARNING  "POST / HTTP/1.1" 400 120  None
-WARNING:django.server:"POST / HTTP/1.1" 400 120
-13/Jan/2024 20:14:54   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 20:15:02   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 20:17:31   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 20:17:33   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-WARNING:root:===========================================================
-WARNING:root:ВРЕМЯ:     2024-01-13 20:17:41.929424
-WARNING:root:ОШИБКА:        Field 'id' expected a number but got <OrderList: OrderList object (1185)>.
-WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2055, in get_prep_value
-    return int(value)
-           ^^^^^^^^^^
-TypeError: int() argument must be a string, a bytes-like object or a real number, not 'OrderList'
-
-The above exception was the direct cause of the following exception:
-
+29/Jan/2024 19:27:50   ERROR  Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.  (<class 'django.core.exceptions.DisallowedHost'>, DisallowedHost("Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS."), <traceback object at 0x7fcf49543b80>)
 Traceback (most recent call last):
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
-    response = super().dispatch(request, *args, **kwargs)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
-    return handler(request, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/edit.py", line 184, in post
-    return super().post(request, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/edit.py", line 153, in post
-    return self.form_valid(form)
-           ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 56, in form_valid
-    form.save()
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/forms.py", line 83, in save
-    order.save()
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/base.py", line 814, in save
-    self.save_base(
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/base.py", line 892, in save_base
-    post_save.send(
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 176, in send
-    return [
-           ^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 177, in <listcomp>
-    (receiver, receiver(signal=self, sender=sender, **named))
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/signals.py", line 16, in send_post_new_order
-    Location(instance).save_location()
-    ^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py", line 22, in __init__
-    self.instance = OrderList.objects.get(pk=ord_pk)
-                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 623, in get
-    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
-                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 1436, in filter
-    return self._filter_or_exclude(False, args, kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 1454, in _filter_or_exclude
-    clone._filter_or_exclude_inplace(negate, args, kwargs)
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 1461, in _filter_or_exclude_inplace
-    self._query.add_q(Q(*args, **kwargs))
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1498, in add_q
-    clause, _ = self._add_q(q_object, self.used_aliases)
-                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1529, in _add_q
-    child_clause, needed_inner = self.build_filter(
-                                 ^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1444, in build_filter
-    condition = self.build_lookup(lookups, col, value)
-                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1271, in build_lookup
-    lookup = lookup_class(lhs, rhs)
-             ^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/lookups.py", line 27, in __init__
-    self.rhs = self.get_prep_lookup()
-               ^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/lookups.py", line 341, in get_prep_lookup
-    return super().get_prep_lookup()
-           ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/lookups.py", line 85, in get_prep_lookup
-    return self.lhs.output_field.get_prep_value(self.rhs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2057, in get_prep_value
-    raise e.__class__(
-TypeError: Field 'id' expected a number but got <OrderList: OrderList object (1185)>.
-
-WARNING:root:============================================================
-13/Jan/2024 20:17:41   WARNING  Bad Request: /  None
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/http/request.py", line 167, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+29/Jan/2024 19:27:50   WARNING  Bad Request: /  None
 WARNING:django.request:Bad Request: /
-13/Jan/2024 20:17:41   WARNING  "POST / HTTP/1.1" 400 131  None
-WARNING:django.server:"POST / HTTP/1.1" 400 131
-13/Jan/2024 20:17:50   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+30/Jan/2024 07:13:01   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
 WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 20:19:43   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 20:19:44   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 20:19:48   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 20:19:51   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 20:19:52   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-WARNING:root:===========================================================
-WARNING:root:ВРЕМЯ:     2024-01-13 20:20:00.003958
-WARNING:root:ОШИБКА:        Field 'id' expected a number but got <OrderList: OrderList object (1186)>.
-WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2055, in get_prep_value
-    return int(value)
-           ^^^^^^^^^^
-TypeError: int() argument must be a string, a bytes-like object or a real number, not 'OrderList'
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
-    response = super().dispatch(request, *args, **kwargs)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
-    return handler(request, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/edit.py", line 184, in post
-    return super().post(request, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/edit.py", line 153, in post
-    return self.form_valid(form)
-           ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 56, in form_valid
-    form.save()
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/forms.py", line 83, in save
-    order.save()
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/base.py", line 814, in save
-    self.save_base(
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/base.py", line 892, in save_base
-    post_save.send(
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 176, in send
-    return [
-           ^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 177, in <listcomp>
-    (receiver, receiver(signal=self, sender=sender, **named))
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/signals.py", line 16, in send_post_new_order
-    Location(instance).save_location()
-    ^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py", line 22, in __init__
-    self.instance = OrderList.objects.get(pk=ord_pk)
-                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 623, in get
-    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
-                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 1436, in filter
-    return self._filter_or_exclude(False, args, kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 1454, in _filter_or_exclude
-    clone._filter_or_exclude_inplace(negate, args, kwargs)
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 1461, in _filter_or_exclude_inplace
-    self._query.add_q(Q(*args, **kwargs))
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1498, in add_q
-    clause, _ = self._add_q(q_object, self.used_aliases)
-                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1529, in _add_q
-    child_clause, needed_inner = self.build_filter(
-                                 ^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1444, in build_filter
-    condition = self.build_lookup(lookups, col, value)
-                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1271, in build_lookup
-    lookup = lookup_class(lhs, rhs)
-             ^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/lookups.py", line 27, in __init__
-    self.rhs = self.get_prep_lookup()
-               ^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/lookups.py", line 341, in get_prep_lookup
-    return super().get_prep_lookup()
-           ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/lookups.py", line 85, in get_prep_lookup
-    return self.lhs.output_field.get_prep_value(self.rhs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2057, in get_prep_value
-    raise e.__class__(
-TypeError: Field 'id' expected a number but got <OrderList: OrderList object (1186)>.
-
-WARNING:root:============================================================
-13/Jan/2024 20:20:00   WARNING  Bad Request: /  None
-WARNING:django.request:Bad Request: /
-13/Jan/2024 20:20:00   WARNING  "POST / HTTP/1.1" 400 131  None
-WARNING:django.server:"POST / HTTP/1.1" 400 131
-13/Jan/2024 20:20:26   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 20:20:38   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 20:20:41   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-WARNING:root:===========================================================
-WARNING:root:ВРЕМЯ:     2024-01-13 20:20:48.844608
-WARNING:root:ОШИБКА:        cannot unpack non-iterable NoneType object
-WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
-    response = super().dispatch(request, *args, **kwargs)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
-    return handler(request, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/edit.py", line 184, in post
-    return super().post(request, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/edit.py", line 153, in post
-    return self.form_valid(form)
-           ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 56, in form_valid
-    form.save()
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/forms.py", line 83, in save
-    order.save()
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/base.py", line 814, in save
-    self.save_base(
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/base.py", line 892, in save_base
-    post_save.send(
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 176, in send
-    return [
-           ^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 177, in <listcomp>
-    (receiver, receiver(signal=self, sender=sender, **named))
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/signals.py", line 16, in send_post_new_order
-    Location(instance.pk).save_location()
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py", line 35, in save_location
-    longitude, latitude = self.set_location()
-    ^^^^^^^^^^^^^^^^^^^
-TypeError: cannot unpack non-iterable NoneType object
-
-WARNING:root:============================================================
-13/Jan/2024 20:20:48   WARNING  Bad Request: /  None
-WARNING:django.request:Bad Request: /
-13/Jan/2024 20:20:48   WARNING  "POST / HTTP/1.1" 400 99  None
-WARNING:django.server:"POST / HTTP/1.1" 400 99
-13/Jan/2024 20:21:57   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 20:22:05   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 20:22:09   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 20:22:13   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 20:22:23   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 20:22:25   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 20:22:27   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 20:22:29   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 20:22:30   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 20:22:31   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 20:22:33   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 20:22:34   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 20:22:35   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 20:22:37   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 20:22:38   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 20:22:39   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 20:23:56   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 20:23:58   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 20:24:14   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-WARNING:root:===========================================================
-WARNING:root:ВРЕМЯ:     2024-01-13 20:24:19.039718
-WARNING:root:ОШИБКА:        save_location_() missing 1 required positional argument: 'inst'
-WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
-    response = super().dispatch(request, *args, **kwargs)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
-    return handler(request, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/edit.py", line 184, in post
-    return super().post(request, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/edit.py", line 153, in post
-    return self.form_valid(form)
-           ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 56, in form_valid
-    form.save()
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/forms.py", line 83, in save
-    order.save()
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/base.py", line 814, in save
-    self.save_base(
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/base.py", line 892, in save_base
-    post_save.send(
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 176, in send
-    return [
-           ^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 177, in <listcomp>
-    (receiver, receiver(signal=self, sender=sender, **named))
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/signals.py", line 15, in send_post_new_order
-    save_location_().apply_async([instance.pk], countdown=5, expires=20)
-    ^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/celery/local.py", line 188, in __call__
-    return self._get_current_object()(*a, **kw)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/celery/app/task.py", line 392, in __call__
-    return self.run(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: save_location_() missing 1 required positional argument: 'inst'
-
-WARNING:root:============================================================
-13/Jan/2024 20:24:19   WARNING  Bad Request: /  None
-WARNING:django.request:Bad Request: /
-13/Jan/2024 20:24:19   WARNING  "POST / HTTP/1.1" 400 120  None
-WARNING:django.server:"POST / HTTP/1.1" 400 120
-13/Jan/2024 20:27:11   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-WARNING:root:===========================================================
-WARNING:root:ВРЕМЯ:     2024-01-13 20:27:16.654732
-WARNING:root:ОШИБКА:        save_location_() missing 1 required positional argument: 'inst'
-WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
-    response = super().dispatch(request, *args, **kwargs)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
-    return handler(request, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/edit.py", line 184, in post
-    return super().post(request, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/edit.py", line 153, in post
-    return self.form_valid(form)
-           ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 56, in form_valid
-    form.save()
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/forms.py", line 83, in save
-    order.save()
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/base.py", line 814, in save
-    self.save_base(
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/base.py", line 892, in save_base
-    post_save.send(
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 176, in send
-    return [
-           ^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 177, in <listcomp>
-    (receiver, receiver(signal=self, sender=sender, **named))
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/signals.py", line 15, in send_post_new_order
-    save_location_().apply_async([instance.pk], countdown=5, expires=20)
-    ^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/celery/local.py", line 188, in __call__
-    return self._get_current_object()(*a, **kw)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/celery/app/task.py", line 392, in __call__
-    return self.run(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: save_location_() missing 1 required positional argument: 'inst'
-
-WARNING:root:============================================================
-13/Jan/2024 20:27:16   WARNING  Bad Request: /  None
-WARNING:django.request:Bad Request: /
-13/Jan/2024 20:27:16   WARNING  "POST / HTTP/1.1" 400 120  None
-WARNING:django.server:"POST / HTTP/1.1" 400 120
-13/Jan/2024 20:28:30   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-WARNING:root:===========================================================
-WARNING:root:ВРЕМЯ:     2024-01-13 20:28:34.840957
-WARNING:root:ОШИБКА:        save_location_() missing 1 required positional argument: 'inst'
-WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
-    response = super().dispatch(request, *args, **kwargs)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
-    return handler(request, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/edit.py", line 184, in post
-    return super().post(request, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/edit.py", line 153, in post
-    return self.form_valid(form)
-           ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 56, in form_valid
-    form.save()
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/forms.py", line 83, in save
-    order.save()
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/base.py", line 814, in save
-    self.save_base(
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/base.py", line 892, in save_base
-    post_save.send(
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 176, in send
-    return [
-           ^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 177, in <listcomp>
-    (receiver, receiver(signal=self, sender=sender, **named))
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/signals.py", line 16, in send_post_new_order
-    save_location_().apply_async([instance.pk], countdown=5, expires=20)
-    ^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/celery/local.py", line 188, in __call__
-    return self._get_current_object()(*a, **kw)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/celery/app/task.py", line 392, in __call__
-    return self.run(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: save_location_() missing 1 required positional argument: 'inst'
-
-WARNING:root:============================================================
-13/Jan/2024 20:28:34   WARNING  Bad Request: /  None
-WARNING:django.request:Bad Request: /
-13/Jan/2024 20:28:34   WARNING  "POST / HTTP/1.1" 400 120  None
-WARNING:django.server:"POST / HTTP/1.1" 400 120
-13/Jan/2024 20:29:24   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 20:29:29   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 20:30:04   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-WARNING:root:===========================================================
-WARNING:root:ВРЕМЯ:     2024-01-13 20:30:08.241855
-WARNING:root:ОШИБКА:        save_location_() missing 1 required positional argument: 'inst'
-WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
-    response = super().dispatch(request, *args, **kwargs)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
-    return handler(request, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/edit.py", line 184, in post
-    return super().post(request, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/edit.py", line 153, in post
-    return self.form_valid(form)
-           ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 56, in form_valid
-    form.save()
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/forms.py", line 83, in save
-    order.save()
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/base.py", line 814, in save
-    self.save_base(
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/base.py", line 892, in save_base
-    post_save.send(
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 176, in send
-    return [
-           ^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 177, in <listcomp>
-    (receiver, receiver(signal=self, sender=sender, **named))
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/signals.py", line 15, in send_post_new_order
-    save_location_().apply_async([instance.pk], countdown=5, expires=20)
-    ^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/celery/local.py", line 188, in __call__
-    return self._get_current_object()(*a, **kw)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/celery/app/task.py", line 392, in __call__
-    return self.run(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: save_location_() missing 1 required positional argument: 'inst'
-
-WARNING:root:============================================================
-13/Jan/2024 20:30:08   WARNING  Bad Request: /  None
-WARNING:django.request:Bad Request: /
-13/Jan/2024 20:30:08   WARNING  "POST / HTTP/1.1" 400 120  None
-WARNING:django.server:"POST / HTTP/1.1" 400 120
-13/Jan/2024 20:31:04   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 20:31:08   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 20:31:39   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 20:31:45   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 20:31:57   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 20:32:11   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 20:32:17   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-13/Jan/2024 20:32:31   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-WARNING:root:===========================================================
-WARNING:root:ВРЕМЯ:     2024-01-13 21:02:55.832004
-WARNING:root:ОШИБКА:        Не найден ни один пользователь, соответствующий запросу
-WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 53, in get_object
-    obj = queryset.get()
-          ^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
-    raise self.model.DoesNotExist(
-django.contrib.auth.models.User.DoesNotExist: User matching query does not exist.
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
-    response = super().dispatch(request, *args, **kwargs)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
-    return super().dispatch(request, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
-    return handler(request, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 108, in get
-    self.object = self.get_object()
-                  ^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 55, in get_object
-    raise Http404(
-django.http.response.Http404: Не найден ни один пользователь, соответствующий запросу
-
-WARNING:root:============================================================
-13/Jan/2024 21:02:55   WARNING  Bad Request: /user/164511456454154  None
-WARNING:django.request:Bad Request: /user/164511456454154
-WARNING:root:===========================================================
-WARNING:root:ВРЕМЯ:     2024-01-14 07:02:05.429214
-WARNING:root:ОШИБКА:        Не найден ни один пользователь, соответствующий запросу
-WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 53, in get_object
-    obj = queryset.get()
-          ^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
-    raise self.model.DoesNotExist(
-django.contrib.auth.models.User.DoesNotExist: User matching query does not exist.
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
-    response = super().dispatch(request, *args, **kwargs)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
-    return super().dispatch(request, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
-    return handler(request, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 108, in get
-    self.object = self.get_object()
-                  ^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 55, in get_object
-    raise Http404(
-django.http.response.Http404: Не найден ни один пользователь, соответствующий запросу
-
-WARNING:root:============================================================
-14/Jan/2024 07:02:05   WARNING  Bad Request: /user/164511456454154  None
-WARNING:django.request:Bad Request: /user/164511456454154
-WARNING:root:===========================================================
-WARNING:root:ВРЕМЯ:     2024-01-14 10:25:45.561622
-WARNING:root:ОШИБКА:        Не найден ни один пользователь, соответствующий запросу
-WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 53, in get_object
-    obj = queryset.get()
-          ^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
-    raise self.model.DoesNotExist(
-django.contrib.auth.models.User.DoesNotExist: User matching query does not exist.
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
-    response = super().dispatch(request, *args, **kwargs)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
-    return super().dispatch(request, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
-    return handler(request, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 108, in get
-    self.object = self.get_object()
-                  ^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 55, in get_object
-    raise Http404(
-django.http.response.Http404: Не найден ни один пользователь, соответствующий запросу
-
-WARNING:root:============================================================
-14/Jan/2024 10:25:45   WARNING  Bad Request: /user/164511456454154  None
-WARNING:django.request:Bad Request: /user/164511456454154
-WARNING:root:===========================================================
-WARNING:root:ВРЕМЯ:     2024-01-14 10:25:54.152072
-WARNING:root:ОШИБКА:        Не найден ни один пользователь, соответствующий запросу
-WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 53, in get_object
-    obj = queryset.get()
-          ^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
-    raise self.model.DoesNotExist(
-django.contrib.auth.models.User.DoesNotExist: User matching query does not exist.
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
-    response = super().dispatch(request, *args, **kwargs)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
-    return super().dispatch(request, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
-    return handler(request, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 108, in get
-    self.object = self.get_object()
-                  ^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/detail.py", line 55, in get_object
-    raise Http404(
-django.http.response.Http404: Не найден ни один пользователь, соответствующий запросу
-
-WARNING:root:============================================================
-14/Jan/2024 10:25:54   WARNING  Bad Request: /user/164511456454154  None
-WARNING:django.request:Bad Request: /user/164511456454154
-14/Jan/2024 10:26:09   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-14/Jan/2024 10:26:09   WARNING  Not Found: /favicon.ico  None
+30/Jan/2024 07:13:01   WARNING  Not Found: /favicon.ico  None
 WARNING:django.request:Not Found: /favicon.ico
-14/Jan/2024 10:26:09   WARNING  "GET /favicon.ico HTTP/1.1" 404 16307  None
+30/Jan/2024 07:13:01   WARNING  "GET /favicon.ico HTTP/1.1" 404 16307  None
 WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 16307
-14/Jan/2024 10:26:11   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-14/Jan/2024 10:26:18   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-14/Jan/2024 10:28:43   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-14/Jan/2024 10:28:48   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-14/Jan/2024 10:29:13   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-14/Jan/2024 10:29:51   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-14/Jan/2024 10:31:11   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-14/Jan/2024 10:32:15   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-14/Jan/2024 10:32:29   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-WARNING:root:===========================================================
-WARNING:root:ВРЕМЯ:     2024-01-14 10:41:40.959955
-WARNING:root:ОШИБКА:        'QuerySet' object has no attribute 'help_dict'
-WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
-    response = super().dispatch(request, *args, **kwargs)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
-    return super().dispatch(request, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
-    return handler(request, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 226, in get
-    context = self.get_context_data(**kwargs)
-              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 163, in get_context_data
-    context['d'] = Graph(DataFromInvoice().get_quantity_of_orders_by_type(repairer=self.request.user),
-                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py", line 192, in __init__
-    self.labels, self.data = get_data_for_graph(queryset)
-                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/utils.py", line 179, in get_data_for_graph
-    if self.help_dict:
-       ^^^^^^^^^^^^^^
-AttributeError: 'QuerySet' object has no attribute 'help_dict'
-
-WARNING:root:============================================================
-14/Jan/2024 10:41:41   WARNING  Bad Request: /stat/  None
-WARNING:django.request:Bad Request: /stat/
-14/Jan/2024 10:41:41   WARNING  "GET /stat/ HTTP/1.1" 400 103  None
-WARNING:django.server:"GET /stat/ HTTP/1.1" 400 103
-WARNING:root:===========================================================
-WARNING:root:ВРЕМЯ:     2024-01-14 10:43:04.419245
-WARNING:root:ОШИБКА:        'Graph' object has no attribute 'make_graf_bar'
-WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
-    response = super().dispatch(request, *args, **kwargs)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
-    return super().dispatch(request, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
-    return handler(request, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 226, in get
-    context = self.get_context_data(**kwargs)
-              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 173, in get_context_data
-    .make_graf_bar()
-     ^^^^^^^^^^^^^
-AttributeError: 'Graph' object has no attribute 'make_graf_bar'
-
-WARNING:root:============================================================
-14/Jan/2024 10:43:04   WARNING  Bad Request: /stat/  None
-WARNING:django.request:Bad Request: /stat/
-14/Jan/2024 10:43:04   WARNING  "GET /stat/ HTTP/1.1" 400 104  None
-WARNING:django.server:"GET /stat/ HTTP/1.1" 400 104
-14/Jan/2024 10:44:31   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-14/Jan/2024 10:46:20   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-14/Jan/2024 10:46:34   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-14/Jan/2024 10:46:39   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-14/Jan/2024 10:46:43   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-14/Jan/2024 10:46:48   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-14/Jan/2024 10:46:56   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-14/Jan/2024 10:47:11   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-14/Jan/2024 10:47:13   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-14/Jan/2024 10:47:23   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-14/Jan/2024 10:47:47   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-14/Jan/2024 10:47:48   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-14/Jan/2024 10:47:56   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-14/Jan/2024 10:48:09   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-14/Jan/2024 10:51:57   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-14/Jan/2024 10:52:00   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-14/Jan/2024 10:52:01   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-14/Jan/2024 10:52:04   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-14/Jan/2024 10:52:08   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-14/Jan/2024 10:52:12   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-14/Jan/2024 10:52:27   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-14/Jan/2024 10:52:50   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-14/Jan/2024 10:52:53   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-14/Jan/2024 10:52:57   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 10:54:52   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 10:54:53   WARNING  Not Found: /favicon.ico  None
-WARNING:django.request:Not Found: /favicon.ico
-26/Jan/2024 10:54:53   WARNING  "GET /favicon.ico HTTP/1.1" 404 16307  None
-WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 16307
-26/Jan/2024 10:54:55   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:18:24   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:18:28   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:18:40   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:18:41   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:18:43   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:18:46   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:19:02   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:19:03   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:19:05   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:19:07   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:19:10   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:19:20   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:21:13   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:21:14   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:21:17   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:21:18   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:21:20   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:24:34   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:24:44   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:24:46   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:24:49   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:25:20   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:25:48   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:25:52   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:26:03   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:26:27   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:26:39   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:26:52   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:27:03   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:27:34   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:27:56   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:28:07   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:28:10   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:28:14   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:28:15   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:28:20   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:28:22   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:28:39   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:28:54   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:28:56   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:29:00   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:29:02   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:29:04   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:29:05   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:29:09   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:29:11   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:29:12   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:29:14   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:29:16   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:29:17   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:29:18   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:29:20   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:29:21   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:29:23   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:29:24   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:29:26   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:29:28   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:29:29   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:29:30   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:29:32   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:29:34   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:29:35   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:29:37   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:29:39   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:29:40   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:29:42   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:29:45   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:29:48   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:29:55   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:30:01   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:30:17   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:32:57   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:33:00   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:33:04   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:34:54   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:35:14   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:36:01   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:38:12   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:38:47   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:39:32   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:40:29   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:40:34   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:40:48   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:41:03   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:41:15   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:41:17   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:41:41   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:41:59   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:43:10   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:44:00   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:44:01   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:44:03   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:45:02   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:45:45   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:46:26   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:47:04   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:47:34   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:47:37   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:47:41   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:47:55   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:47:59   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:48:07   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:48:09   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:48:11   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:48:13   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
-WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-26/Jan/2024 11:48:26   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+30/Jan/2024 07:13:03   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+30/Jan/2024 07:13:06   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+30/Jan/2024 07:14:03   ERROR  Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.  (<class 'django.core.exceptions.DisallowedHost'>, DisallowedHost("Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS."), <traceback object at 0x7fbfa4130b00>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/http/request.py", line 167, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+30/Jan/2024 07:14:03   WARNING  Bad Request: /  None
+WARNING:django.request:Bad Request: /
+30/Jan/2024 07:14:27   ERROR  Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.  (<class 'django.core.exceptions.DisallowedHost'>, DisallowedHost("Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS."), <traceback object at 0x7f1a8ec91680>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/http/request.py", line 167, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+30/Jan/2024 07:14:27   WARNING  Bad Request: /  None
+WARNING:django.request:Bad Request: /
+30/Jan/2024 07:14:32   ERROR  Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.  (<class 'django.core.exceptions.DisallowedHost'>, DisallowedHost("Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS."), <traceback object at 0x7f1a8eca46c0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/http/request.py", line 167, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+30/Jan/2024 07:14:32   WARNING  Bad Request: /  None
+WARNING:django.request:Bad Request: /
+30/Jan/2024 07:17:52   WARNING  Not Found: /static/images/whatsapp.png  None
+WARNING:django.request:Not Found: /static/images/whatsapp.png
+30/Jan/2024 07:17:52   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+30/Jan/2024 07:17:52   WARNING  Not Found: /static/images/o-mastere-na-chas.png  None
+WARNING:django.request:Not Found: /static/images/o-mastere-na-chas.png
+30/Jan/2024 07:17:53   WARNING  Not Found: /static/images/usluga-master-na-chas.jpg  None
+WARNING:django.request:Not Found: /static/images/usluga-master-na-chas.jpg
+30/Jan/2024 07:18:22   WARNING  Not Found: /static/images/whatsapp.png  None
+WARNING:django.request:Not Found: /static/images/whatsapp.png
+30/Jan/2024 07:18:22   WARNING  Not Found: /static/images/o-mastere-na-chas.png  None
+WARNING:django.request:Not Found: /static/images/o-mastere-na-chas.png
+30/Jan/2024 07:18:22   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+30/Jan/2024 07:18:35   ERROR  Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.  (<class 'django.core.exceptions.DisallowedHost'>, DisallowedHost("Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS."), <traceback object at 0x7fd56c554780>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/http/request.py", line 167, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+30/Jan/2024 07:18:36   WARNING  Bad Request: /  None
+WARNING:django.request:Bad Request: /
+30/Jan/2024 07:18:36   ERROR  Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.  (<class 'django.core.exceptions.DisallowedHost'>, DisallowedHost("Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS."), <traceback object at 0x7fd56c5e4880>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/http/request.py", line 167, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+ERROR:django.security.DisallowedHost:Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/http/request.py", line 167, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+30/Jan/2024 07:18:36   WARNING  Bad Request: /  None
+WARNING:django.request:Bad Request: /
+30/Jan/2024 07:18:37   ERROR  Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.  (<class 'django.core.exceptions.DisallowedHost'>, DisallowedHost("Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS."), <traceback object at 0x7fd56c5e66c0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/http/request.py", line 167, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+ERROR:django.security.DisallowedHost:Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/http/request.py", line 167, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+30/Jan/2024 07:18:37   WARNING  Bad Request: /  None
+WARNING:django.request:Bad Request: /
+30/Jan/2024 07:18:39   ERROR  Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.  (<class 'django.core.exceptions.DisallowedHost'>, DisallowedHost("Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS."), <traceback object at 0x7fd56c5e8740>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/http/request.py", line 167, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+ERROR:django.security.DisallowedHost:Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/http/request.py", line 167, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+30/Jan/2024 07:18:39   WARNING  Bad Request: /admin/  None
+WARNING:django.request:Bad Request: /admin/
+30/Jan/2024 07:18:40   ERROR  Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.  (<class 'django.core.exceptions.DisallowedHost'>, DisallowedHost("Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS."), <traceback object at 0x7fd56c5e6540>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/http/request.py", line 167, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+ERROR:django.security.DisallowedHost:Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/http/request.py", line 167, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+30/Jan/2024 07:18:40   WARNING  Bad Request: /admin/  None
+WARNING:django.request:Bad Request: /admin/
+30/Jan/2024 07:18:49   ERROR  Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.  (<class 'django.core.exceptions.DisallowedHost'>, DisallowedHost("Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS."), <traceback object at 0x7fd56c5e42c0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/http/request.py", line 167, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+ERROR:django.security.DisallowedHost:Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/http/request.py", line 167, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+30/Jan/2024 07:18:49   WARNING  Bad Request: /admin/  None
+WARNING:django.request:Bad Request: /admin/
+30/Jan/2024 07:19:01   WARNING  Not Found: /static/images/whatsapp.png  None
+WARNING:django.request:Not Found: /static/images/whatsapp.png
+30/Jan/2024 07:19:01   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+30/Jan/2024 07:19:01   WARNING  Not Found: /static/images/o-mastere-na-chas.png  None
+WARNING:django.request:Not Found: /static/images/o-mastere-na-chas.png
+30/Jan/2024 07:19:01   WARNING  Not Found: /static/images/usluga-master-na-chas.jpg  None
+WARNING:django.request:Not Found: /static/images/usluga-master-na-chas.jpg
+30/Jan/2024 07:19:26   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+30/Jan/2024 07:47:11   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+30/Jan/2024 07:47:13   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+30/Jan/2024 07:54:04   ERROR  "GET / HTTP/1.1" 500 59  None
+ERROR:django.server:"GET / HTTP/1.1" 500 59
+30/Jan/2024 08:24:01   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+30/Jan/2024 08:24:29   ERROR  Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.  (<class 'django.core.exceptions.DisallowedHost'>, DisallowedHost("Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS."), <traceback object at 0x7f6c82959600>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/http/request.py", line 167, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+30/Jan/2024 08:24:29   WARNING  Bad Request: /  None
+WARNING:django.request:Bad Request: /
+30/Jan/2024 08:25:05   ERROR  Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.  (<class 'django.core.exceptions.DisallowedHost'>, DisallowedHost("Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS."), <traceback object at 0x7f6c82961180>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/http/request.py", line 167, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+30/Jan/2024 08:25:05   WARNING  Bad Request: /list_order  None
+WARNING:django.request:Bad Request: /list_order
+30/Jan/2024 08:26:13   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+30/Jan/2024 08:26:13   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 4239
+30/Jan/2024 08:27:50   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+30/Jan/2024 16:14:36   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+30/Jan/2024 16:14:39   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+30/Jan/2024 16:14:40   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+30/Jan/2024 16:14:47   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+30/Jan/2024 16:29:23   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+30/Jan/2024 16:29:46   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+30/Jan/2024 16:30:04   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+30/Jan/2024 16:30:12   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+30/Jan/2024 16:30:15   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+30/Jan/2024 16:38:22   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+30/Jan/2024 16:38:24   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+30/Jan/2024 16:38:30   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
 WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798

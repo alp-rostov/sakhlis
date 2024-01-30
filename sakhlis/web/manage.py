@@ -7,7 +7,7 @@ import pathlib
 
 def main():
     """Run administrative tasks."""
-    DOT_INV_PASS = pathlib.Path() / 'env/.env'
+    DOT_INV_PASS = pathlib.Path() / '.env'
     if DOT_INV_PASS.exists():
         dotenv.read_dotenv(str(DOT_INV_PASS))
     else: print('no .env found')

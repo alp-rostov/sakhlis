@@ -1,8 +1,5 @@
-/sakhlis/venv/
+/venv3/
 /sakhlis/.idea/
-/sakhlis/web/env/
-
-/EmailList/venv/
-/EmailList/.idea/
-/sakhlis/env/
-/venv/
+/sakhlis/web/.env
+/sakhlis/web/.Docker.env
+/sakhlis/web/log.log
