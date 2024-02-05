@@ -10,7 +10,7 @@
 
 {% block body %}
 
-<h2> Войти в систему </h2>
+<h2> Sign in </h2>
 <form method="post" action="{% url 'login' %}">
 {% csrf_token %}
 <table>
@@ -24,8 +24,8 @@
 </tr>
 </table>
 
-<input type="submit" value="Войти" class="btn btn-sm btn-orange btn-form cta-btn waves-effect">
+<input type="submit" value="Submit" class="btn btn-sm btn-orange btn-form cta-btn waves-effect">
 </form>
 <button class="btn btn-sm btn-orange btn-form cta-btn waves-effect"> <a href="{% url 'signup' %}" >
-    Регистрация </a></button>
+    Registration </a></button>
 {% endblock body %}

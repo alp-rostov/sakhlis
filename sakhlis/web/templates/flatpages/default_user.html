@@ -50,7 +50,7 @@ top: 0;
 {% #menu %}
 
     <li class="nav-item mr-4">
-        <a class="nav-link" href="{% url 'home' %}">Mail</a>
+        <a class="nav-link" href="{% url 'home' %}">Main</a>
     </li>
 
     <li class="nav-item  mr-4">
@@ -79,7 +79,7 @@ top: 0;
 
     {% if request.user.is_authenticated %}
         <li class="nav-item mr-4">
-            <a class="nav-link" href="{% url 'logout' %}">{{ user.username }} : Exit</a>
+            <a class="nav-link" href="{% url 'logout' %}">{{ user.username }} : Log out</a>
         </li>
     {% endif %}
 

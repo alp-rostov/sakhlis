@@ -10,11 +10,11 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <!-- Fav Icon -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <title>Мастер на час в Тбилиси | Мелкие ремонтные работы</title>
-    <meta name="description" content="Услуги по ремонту в Тбилиси ✔ Вызвать мастера на дом ✔ Услуги электрика, сантехника, мелкий ремонт квартир">
+    <title>Repair service in Tbilisi</title>
+    <meta name="description" content="">
     <!-- Facebook -->
-	<meta property="og:title" content="Мастер на час в Тбилиси">
-	<meta property="og:description" content="Услуги по ремонту в Тбилиси ✔ Вызвать мастера на дом ✔ Услуги электрика, сантехника, мелкий ремонт квартир">
+	<meta property="og:title" content="Repair service in Tbilisi and Batumi">
+	<meta property="og:description" content="Repair service in Tbilisi and Batumi">
 	<meta property="og:image" content="images/master-na-chas.jpg">
 	<meta property="og:image:width" content>
 	<meta property="og:image:height" content>
@@ -45,19 +45,19 @@
 {% #menu %}
 
   <li class="nav-item mr-4 active">
-                        <a class="nav-link" href="#section-0">Главная <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#section-0">Mail <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item mr-4">
-                        <a class="nav-link" href="#section-1">Услуги</a>
+                        <a class="nav-link" href="#section-1">Services</a>
                     </li>
                     <li class="nav-item mr-4">
-                        <a class="nav-link" href="#section-3">Фото</a>
+                        <a class="nav-link" href="#section-3">Photo</a>
                     </li>
                     <li class="nav-item mr-4">
-                        <a class="nav-link" href="#section-2">О нас</a>
+                        <a class="nav-link" href="#section-2">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link btn btn-sm btn-orange btn-form cta-btn" data-toggle="modal" data-target="#exampleModal">Оставить заявку <i class="far fa-paper-plane animated tada delay-5s infinite ml-1"></i></a>
+                        <a class="nav-link btn btn-sm btn-orange btn-form cta-btn" data-toggle="modal" data-target="#exampleModal">Send request <i class="far fa-paper-plane animated tada delay-5s infinite ml-1"></i></a>
                     </li>
  {% if request.user.is_authenticated %}
         <li class="nav-item mr-4">
@@ -67,11 +67,11 @@
 
              <li class="nav-item mr-4">
 
-        <a class="nav-link" href="{% url 'logout' %}">Выйти</a>
+        <a class="nav-link" href="{% url 'logout' %}">Log out</a>
 
         </li>
     {% else %}
-    <li class="nav-item mr-4"><a class="nav-link" href="{% url 'login' %}" title='Авторизация мастера'>Авторизация</a>
+    <li class="nav-item mr-4"><a class="nav-link" href="{% url 'login' %}" title='Sign in'>Sign in</a>
     </li>
         {% endif %}
 {% /menu %}
@@ -83,11 +83,11 @@
 			      <a class="mx-2" title="Telegram" href="https://t.me/+79604458687"><img src="{% static 'images/telegram.gif' %}" width="40"></a>
             		<!--WhatsApp-->
             		<a class="mx-2" title="WhatsApp" href="https://wa.me/+79604458687"><img src="{% static 'images/whatsapp.png' %}" width="45"></a>
-                        <h1 class="h1-responsive display-4 wow fadeIn" data-wow-delay="1s">Мастер на час в Тбилиси <a href="https://www.instagram.com/repairservicetbilisi/" titile="Инстаграм"><img src="{% static 'images/instagram.png' %}" width="60"></a> </h1>
+                        <h1 class="h1-responsive display-4 wow fadeIn" data-wow-delay="1s">Repair service in Tbilisi <a href="https://www.instagram.com/repairservicetbilisi/" titile="Инстаграм"><img src="{% static 'images/instagram.png' %}" width="60"></a> </h1>
                         <hr class="hr-light-h wow fadeIn" data-wow-delay="1s">
-                        <p class="lead py-3 wow fadeIn" data-wow-delay="1s">Нужны мужские руки? Домашний мастер быстро решит <br>любые проблемы с ремонтом в квартире, доме и офисе!</p>
+                        <p class="lead py-3 wow fadeIn" data-wow-delay="1s">Do you need working hands? Serviceman quickly will solve the problem of repair at the home or office.</p>
                         <div class="flex-center">
-                            <button class="btn btn-lg btn-orange cta-btn btn-form mt-3 mb-5 wow fadeIn" data-toggle="modal" data-target="#exampleModal" data-wow-delay="1s">Сделать заявку <i class="far fa-paper-plane animated tada delay-5s infinite ml-1"></i></button>
+                            <button class="btn btn-lg btn-orange cta-btn btn-form mt-3 mb-5 wow fadeIn" data-toggle="modal" data-target="#exampleModal" data-wow-delay="1s">Send request <i class="far fa-paper-plane animated tada delay-5s infinite ml-1"></i></button>
                         </div>
                     </div>
             </div>
@@ -98,7 +98,7 @@
     <section id="section-1" class="row_bg">
         <div class="container">
             <div class="position-relative">
-                <h2 class="h1-responsive">Услуга<strong class="mycolor"> «Мастер на час»</strong></h2>
+                <h2 class="h1-responsive">Service<strong class="mycolor">"Master for an hour"</strong></h2>
             </div>
             <div class="row">
                 <div class="col-12 columns mt-4">
