@@ -1,69 +1,68 @@
 CITY_CHOICES = [
-    ('TB', 'Тбилиси'),
-    ('BT', 'Батуми'),
+    ('TB', 'Tbilisi'),
+    ('BT', 'Batumi'),
 ]
 
 WORK_CHOICES = [
-    ('EL', 'Электрика'),
-    ('PL', 'Сантехника'),
-    ('SP', 'Кондиционирование'),
-    ('FT', 'Ремонт/сборка мебели'),
-    ('OT', 'Ремонт окон, дверей'),
-    ('ID', 'Монтаж техники'),
-    ('BL', 'Строительные работы'),
-    ('CL', 'Клининг'),
+    ('EL', 'Electrician'),
+    ('PL', 'Plumbing'),
+    ('SP', 'Conditioning'),
+    ('FT', 'Furniture repair/installation'),
+    ('OT', 'Repair of windows and doors'),
+    ('ID', 'Installation of equipment'),
+    ('BL', 'Construction works'),
+    ('CL', 'Cleaning'),
 
 ]
 
 WORK_CHOICES_ = {
-    'EL': 'Электрика',
-    'PL': 'Сантехника',
-    'SP': 'Кондиционирование',
-    'FT': 'Ремонт/сборка мебели',
-    'OT': 'Ремонт окон, дверей',
-    'ID': 'Монтаж техники',
-    'BL': 'Строительные работы',
-    'CL': 'Клининг'
+    'EL': 'Electrician',
+    'PL': 'Plumbing',
+    'SP': 'Conditioning',
+    'FT': 'Furniture repair/installation',
+    'OT': 'Repair of windows and doors',
+    'ID': 'Installation of equipment',
+    'BL': 'Construction works',
+    'CL': 'Cleaning'
 }
 
 
 QUANTITY_CHOICES = [
-    ('SV', 'Услуга'),
-    ('ME', 'Метр'),
-    ('QL', 'Килограмм'),
-    ('TH', 'Штука'),
+    ('SV', 'Service'),
+    ('ME', 'Meter'),
+    ('QL', 'Kilogram'),
+    ('TH', 'Thing'),
 
 ]
 
 ORDER_STATUS = [
-    ('BEG', 'Заявка получена'),
-    ('SND', 'Направлена мастеру'),
-    ('RCV', 'Мастеру принял заявку'),
-    # ('WRK', 'Заявка в работе'),
-    ('END', 'Заявка выполнена'),
+    ('BEG', 'Request received'),
+    ('SND', 'Request has been sent to the master'),
+    ('RCV', 'Master accepted the request'),
+    ('END', 'Request finished'),
 ]
 
 ORDER_STATUS_FOR_CHECK = ['BEG', 'SND', 'RCV', 'WRK', 'END']
 
 
 MONTH = [
-    (1, 'Январь'),
-    (2, 'Февраль'),
-    (3, 'Март'),
-    (4, 'Апрель'),
-    (5, 'Май'),
-    (6, 'Июнь'),
-    (7, 'Июль'),
-    (8, 'Август'),
-    (9, 'Сентябрь'),
-    (10, 'Октябрь'),
-    (11, 'Ноябрь'),
-    (12, 'Декабрь'),
+    (1, 'January'),
+    (2, 'February'),
+    (3, 'March'),
+    (4, 'April'),
+    (5, 'May'),
+    (6, 'June'),
+    (7, 'July'),
+    (8, 'August'),
+    (9, 'September'),
+    (10, 'October'),
+    (11, 'November'),
+    (12, 'December'),
 
 ]
 
 
-MONTH_ = ['','Янв', 'Фев', 'Март', 'Апр', 'Май',
-    'Июнь', 'Июль', 'Авг', 'Сент', 'Окт',
-    'Нояб', 'Дек']
+MONTH_ = ['','Jan', 'Feb', 'Mch', 'Aprl', 'May',
+    'Jun', 'Jul', 'Aug', 'Sept', 'Oct',
+    'Nov', 'Dec']
 

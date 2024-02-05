@@ -193,7 +193,7 @@ class Graph:
             if len(self.labels) > 4:
                 a = sum(self.data[5:len(self.data)])
                 self.labels = self.labels[0:4]
-                self.labels.append('Прочее')
+                self.labels.append('Other')
                 self.data = self.data[0:4]
                 self.data.append(a)
             else:

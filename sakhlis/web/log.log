@@ -1,334 +1,1776 @@
-29/Jan/2024 19:27:50   ERROR  Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.  (<class 'django.core.exceptions.DisallowedHost'>, DisallowedHost("Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS."), <traceback object at 0x7fcf49543b80>)
-Traceback (most recent call last):
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
-    response = get_response(request)
-               ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
-    response = self.process_request(request)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
-    host = request.get_host()
-           ^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/http/request.py", line 167, in get_host
-    raise DisallowedHost(msg)
-django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
-29/Jan/2024 19:27:50   WARNING  Bad Request: /  None
-WARNING:django.request:Bad Request: /
-30/Jan/2024 07:13:01   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+30/Jan/2024 19:54:55   WARNING  Session data corrupted  None
+WARNING:django.security.SuspiciousSession:Session data corrupted
+30/Jan/2024 19:54:55   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
 WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-30/Jan/2024 07:13:01   WARNING  Not Found: /favicon.ico  None
+30/Jan/2024 19:54:56   WARNING  Session data corrupted  None
+WARNING:django.security.SuspiciousSession:Session data corrupted
+30/Jan/2024 19:54:56   WARNING  Session data corrupted  None
+WARNING:django.security.SuspiciousSession:Session data corrupted
+30/Jan/2024 19:54:56   WARNING  Not Found: /favicon.ico  None
 WARNING:django.request:Not Found: /favicon.ico
-30/Jan/2024 07:13:01   WARNING  "GET /favicon.ico HTTP/1.1" 404 16307  None
+30/Jan/2024 19:54:56   WARNING  "GET /favicon.ico HTTP/1.1" 404 16307  None
 WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 16307
-30/Jan/2024 07:13:03   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+30/Jan/2024 19:54:58   WARNING  Session data corrupted  None
+WARNING:django.security.SuspiciousSession:Session data corrupted
+30/Jan/2024 19:54:58   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
 WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-30/Jan/2024 07:13:06   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+30/Jan/2024 19:55:00   WARNING  Session data corrupted  None
+WARNING:django.security.SuspiciousSession:Session data corrupted
+30/Jan/2024 19:55:00   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
 WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-30/Jan/2024 07:14:03   ERROR  Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.  (<class 'django.core.exceptions.DisallowedHost'>, DisallowedHost("Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS."), <traceback object at 0x7fbfa4130b00>)
-Traceback (most recent call last):
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
-    response = get_response(request)
-               ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
-    response = self.process_request(request)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
-    host = request.get_host()
-           ^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/http/request.py", line 167, in get_host
-    raise DisallowedHost(msg)
-django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
-30/Jan/2024 07:14:03   WARNING  Bad Request: /  None
-WARNING:django.request:Bad Request: /
-30/Jan/2024 07:14:27   ERROR  Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.  (<class 'django.core.exceptions.DisallowedHost'>, DisallowedHost("Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS."), <traceback object at 0x7f1a8ec91680>)
-Traceback (most recent call last):
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
-    response = get_response(request)
-               ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
-    response = self.process_request(request)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
-    host = request.get_host()
-           ^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/http/request.py", line 167, in get_host
-    raise DisallowedHost(msg)
-django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
-30/Jan/2024 07:14:27   WARNING  Bad Request: /  None
-WARNING:django.request:Bad Request: /
-30/Jan/2024 07:14:32   ERROR  Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.  (<class 'django.core.exceptions.DisallowedHost'>, DisallowedHost("Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS."), <traceback object at 0x7f1a8eca46c0>)
-Traceback (most recent call last):
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
-    response = get_response(request)
-               ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
-    response = self.process_request(request)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
-    host = request.get_host()
-           ^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/http/request.py", line 167, in get_host
-    raise DisallowedHost(msg)
-django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
-30/Jan/2024 07:14:32   WARNING  Bad Request: /  None
-WARNING:django.request:Bad Request: /
-30/Jan/2024 07:17:52   WARNING  Not Found: /static/images/whatsapp.png  None
-WARNING:django.request:Not Found: /static/images/whatsapp.png
-30/Jan/2024 07:17:52   WARNING  Not Found: /static/js/counter.js  None
-WARNING:django.request:Not Found: /static/js/counter.js
-30/Jan/2024 07:17:52   WARNING  Not Found: /static/images/o-mastere-na-chas.png  None
-WARNING:django.request:Not Found: /static/images/o-mastere-na-chas.png
-30/Jan/2024 07:17:53   WARNING  Not Found: /static/images/usluga-master-na-chas.jpg  None
-WARNING:django.request:Not Found: /static/images/usluga-master-na-chas.jpg
-30/Jan/2024 07:18:22   WARNING  Not Found: /static/images/whatsapp.png  None
-WARNING:django.request:Not Found: /static/images/whatsapp.png
-30/Jan/2024 07:18:22   WARNING  Not Found: /static/images/o-mastere-na-chas.png  None
-WARNING:django.request:Not Found: /static/images/o-mastere-na-chas.png
-30/Jan/2024 07:18:22   WARNING  Not Found: /static/js/counter.js  None
-WARNING:django.request:Not Found: /static/js/counter.js
-30/Jan/2024 07:18:35   ERROR  Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.  (<class 'django.core.exceptions.DisallowedHost'>, DisallowedHost("Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS."), <traceback object at 0x7fd56c554780>)
-Traceback (most recent call last):
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
-    response = get_response(request)
-               ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
-    response = self.process_request(request)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
-    host = request.get_host()
-           ^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/http/request.py", line 167, in get_host
-    raise DisallowedHost(msg)
-django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
-30/Jan/2024 07:18:36   WARNING  Bad Request: /  None
-WARNING:django.request:Bad Request: /
-30/Jan/2024 07:18:36   ERROR  Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.  (<class 'django.core.exceptions.DisallowedHost'>, DisallowedHost("Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS."), <traceback object at 0x7fd56c5e4880>)
-Traceback (most recent call last):
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
-    response = get_response(request)
-               ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
-    response = self.process_request(request)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
-    host = request.get_host()
-           ^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/http/request.py", line 167, in get_host
-    raise DisallowedHost(msg)
-django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
-ERROR:django.security.DisallowedHost:Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
-Traceback (most recent call last):
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
-    response = get_response(request)
-               ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
-    response = self.process_request(request)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
-    host = request.get_host()
-           ^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/http/request.py", line 167, in get_host
-    raise DisallowedHost(msg)
-django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
-30/Jan/2024 07:18:36   WARNING  Bad Request: /  None
-WARNING:django.request:Bad Request: /
-30/Jan/2024 07:18:37   ERROR  Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.  (<class 'django.core.exceptions.DisallowedHost'>, DisallowedHost("Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS."), <traceback object at 0x7fd56c5e66c0>)
-Traceback (most recent call last):
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
-    response = get_response(request)
-               ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
-    response = self.process_request(request)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
-    host = request.get_host()
-           ^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/http/request.py", line 167, in get_host
-    raise DisallowedHost(msg)
-django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
-ERROR:django.security.DisallowedHost:Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
-Traceback (most recent call last):
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
-    response = get_response(request)
-               ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
-    response = self.process_request(request)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
-    host = request.get_host()
-           ^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/http/request.py", line 167, in get_host
-    raise DisallowedHost(msg)
-django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
-30/Jan/2024 07:18:37   WARNING  Bad Request: /  None
-WARNING:django.request:Bad Request: /
-30/Jan/2024 07:18:39   ERROR  Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.  (<class 'django.core.exceptions.DisallowedHost'>, DisallowedHost("Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS."), <traceback object at 0x7fd56c5e8740>)
-Traceback (most recent call last):
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
-    response = get_response(request)
-               ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
-    response = self.process_request(request)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
-    host = request.get_host()
-           ^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/http/request.py", line 167, in get_host
-    raise DisallowedHost(msg)
-django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
-ERROR:django.security.DisallowedHost:Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
-Traceback (most recent call last):
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
-    response = get_response(request)
-               ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
-    response = self.process_request(request)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
-    host = request.get_host()
-           ^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/http/request.py", line 167, in get_host
-    raise DisallowedHost(msg)
-django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
-30/Jan/2024 07:18:39   WARNING  Bad Request: /admin/  None
-WARNING:django.request:Bad Request: /admin/
-30/Jan/2024 07:18:40   ERROR  Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.  (<class 'django.core.exceptions.DisallowedHost'>, DisallowedHost("Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS."), <traceback object at 0x7fd56c5e6540>)
-Traceback (most recent call last):
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
-    response = get_response(request)
-               ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
-    response = self.process_request(request)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
-    host = request.get_host()
-           ^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/http/request.py", line 167, in get_host
-    raise DisallowedHost(msg)
-django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
-ERROR:django.security.DisallowedHost:Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
-Traceback (most recent call last):
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
-    response = get_response(request)
-               ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
-    response = self.process_request(request)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
-    host = request.get_host()
-           ^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/http/request.py", line 167, in get_host
-    raise DisallowedHost(msg)
-django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
-30/Jan/2024 07:18:40   WARNING  Bad Request: /admin/  None
-WARNING:django.request:Bad Request: /admin/
-30/Jan/2024 07:18:49   ERROR  Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.  (<class 'django.core.exceptions.DisallowedHost'>, DisallowedHost("Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS."), <traceback object at 0x7fd56c5e42c0>)
-Traceback (most recent call last):
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
-    response = get_response(request)
-               ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
-    response = self.process_request(request)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
-    host = request.get_host()
-           ^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/http/request.py", line 167, in get_host
-    raise DisallowedHost(msg)
-django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
-ERROR:django.security.DisallowedHost:Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
-Traceback (most recent call last):
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
-    response = get_response(request)
-               ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
-    response = self.process_request(request)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
-    host = request.get_host()
-           ^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/http/request.py", line 167, in get_host
-    raise DisallowedHost(msg)
-django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
-30/Jan/2024 07:18:49   WARNING  Bad Request: /admin/  None
-WARNING:django.request:Bad Request: /admin/
-30/Jan/2024 07:19:01   WARNING  Not Found: /static/images/whatsapp.png  None
-WARNING:django.request:Not Found: /static/images/whatsapp.png
-30/Jan/2024 07:19:01   WARNING  Not Found: /static/js/counter.js  None
-WARNING:django.request:Not Found: /static/js/counter.js
-30/Jan/2024 07:19:01   WARNING  Not Found: /static/images/o-mastere-na-chas.png  None
-WARNING:django.request:Not Found: /static/images/o-mastere-na-chas.png
-30/Jan/2024 07:19:01   WARNING  Not Found: /static/images/usluga-master-na-chas.jpg  None
-WARNING:django.request:Not Found: /static/images/usluga-master-na-chas.jpg
-30/Jan/2024 07:19:26   WARNING  Not Found: /static/js/counter.js  None
-WARNING:django.request:Not Found: /static/js/counter.js
-30/Jan/2024 07:47:11   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+30/Jan/2024 19:55:04   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
 WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-30/Jan/2024 07:47:13   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+30/Jan/2024 19:55:37   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
 WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-30/Jan/2024 07:54:04   ERROR  "GET / HTTP/1.1" 500 59  None
-ERROR:django.server:"GET / HTTP/1.1" 500 59
-30/Jan/2024 08:24:01   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+30/Jan/2024 19:56:16   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
 WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-30/Jan/2024 08:24:29   ERROR  Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.  (<class 'django.core.exceptions.DisallowedHost'>, DisallowedHost("Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS."), <traceback object at 0x7f6c82959600>)
-Traceback (most recent call last):
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
-    response = get_response(request)
-               ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
-    response = self.process_request(request)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
-    host = request.get_host()
-           ^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/http/request.py", line 167, in get_host
-    raise DisallowedHost(msg)
-django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
-30/Jan/2024 08:24:29   WARNING  Bad Request: /  None
-WARNING:django.request:Bad Request: /
-30/Jan/2024 08:25:05   ERROR  Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.  (<class 'django.core.exceptions.DisallowedHost'>, DisallowedHost("Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS."), <traceback object at 0x7f6c82961180>)
-Traceback (most recent call last):
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
-    response = get_response(request)
-               ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
-    response = self.process_request(request)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
-    host = request.get_host()
-           ^^^^^^^^^^^^^^^^^^
-  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/http/request.py", line 167, in get_host
-    raise DisallowedHost(msg)
-django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
-30/Jan/2024 08:25:05   WARNING  Bad Request: /list_order  None
-WARNING:django.request:Bad Request: /list_order
-30/Jan/2024 08:26:13   WARNING  Not Found: /static/js/counter.js  None
+30/Jan/2024 19:56:18   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+30/Jan/2024 19:56:21   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+30/Jan/2024 19:56:30   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+30/Jan/2024 19:56:32   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+30/Jan/2024 19:56:33   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+30/Jan/2024 19:56:34   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+30/Jan/2024 19:56:41   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+31/Jan/2024 08:18:26   WARNING  Session data corrupted  None
+WARNING:django.security.SuspiciousSession:Session data corrupted
+31/Jan/2024 08:18:27   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+31/Jan/2024 08:18:27   WARNING  Session data corrupted  None
+WARNING:django.security.SuspiciousSession:Session data corrupted
+31/Jan/2024 08:18:27   WARNING  Session data corrupted  None
+WARNING:django.security.SuspiciousSession:Session data corrupted
+31/Jan/2024 08:18:27   WARNING  Not Found: /favicon.ico  None
+WARNING:django.request:Not Found: /favicon.ico
+31/Jan/2024 08:18:27   WARNING  "GET /favicon.ico HTTP/1.1" 404 16307  None
+WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 16307
+31/Jan/2024 08:18:32   WARNING  Session data corrupted  None
+WARNING:django.security.SuspiciousSession:Session data corrupted
+31/Jan/2024 08:18:32   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+31/Jan/2024 08:18:34   WARNING  Session data corrupted  None
+WARNING:django.security.SuspiciousSession:Session data corrupted
+31/Jan/2024 08:18:34   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+31/Jan/2024 08:19:54   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+31/Jan/2024 08:20:08   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+31/Jan/2024 08:20:29   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+31/Jan/2024 08:20:48   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+31/Jan/2024 08:21:47   WARNING  Not Found: /static/js/counter.js  None
 WARNING:django.request:Not Found: /static/js/counter.js
-30/Jan/2024 08:26:13   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 4239  None
+31/Jan/2024 08:21:47   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 4239  None
 WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 4239
-30/Jan/2024 08:27:50   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+31/Jan/2024 08:21:49   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+31/Jan/2024 08:21:49   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 4239
+31/Jan/2024 08:21:51   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+31/Jan/2024 08:21:51   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 4239
+31/Jan/2024 08:21:57   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+31/Jan/2024 08:21:57   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 4239
+31/Jan/2024 08:22:05   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+31/Jan/2024 08:22:05   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 4239
+31/Jan/2024 08:22:08   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+31/Jan/2024 08:22:08   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 4239
+31/Jan/2024 08:22:11   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+31/Jan/2024 08:22:11   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 4239
+31/Jan/2024 08:22:13   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+31/Jan/2024 08:22:13   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 4239
+31/Jan/2024 08:22:16   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+31/Jan/2024 08:22:16   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 4113  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 4113
+31/Jan/2024 08:36:24   ERROR  Internal Server Error: /  (<class 'django.core.exceptions.ImproperlyConfigured'>, ImproperlyConfigured('The SECRET_KEY setting must not be empty.'), <traceback object at 0x7f6f54d56180>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/middleware.py", line 12, in process_request
+    request._messages = default_storage(request)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/__init__.py", line 12, in default_storage
+    return import_string(settings.MESSAGE_STORAGE)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 16, in __init__
+    self.storages = [
+                    ^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 17, in <listcomp>
+    storage_class(*args, **kwargs) for storage_class in self.storage_classes
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/cookie.py", line 77, in __init__
+    self.signer = signing.get_cookie_signer(salt=self.key_salt)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/signing.py", line 114, in get_cookie_signer
+    key=_cookie_signer_key(settings.SECRET_KEY),
+                           ^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/conf/__init__.py", line 111, in __getattr__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/middleware.py", line 12, in process_request
+    request._messages = default_storage(request)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/__init__.py", line 12, in default_storage
+    return import_string(settings.MESSAGE_STORAGE)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 16, in __init__
+    self.storages = [
+                    ^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 17, in <listcomp>
+    storage_class(*args, **kwargs) for storage_class in self.storage_classes
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/cookie.py", line 77, in __init__
+    self.signer = signing.get_cookie_signer(salt=self.key_salt)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/signing.py", line 114, in get_cookie_signer
+    key=_cookie_signer_key(settings.SECRET_KEY),
+                           ^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/conf/__init__.py", line 111, in __getattr__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+31/Jan/2024 08:36:24   ERROR  Internal Server Error: /favicon.ico  (<class 'django.core.exceptions.ImproperlyConfigured'>, ImproperlyConfigured('The SECRET_KEY setting must not be empty.'), <traceback object at 0x7f6f54ddecc0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/middleware.py", line 12, in process_request
+    request._messages = default_storage(request)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/__init__.py", line 12, in default_storage
+    return import_string(settings.MESSAGE_STORAGE)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 16, in __init__
+    self.storages = [
+                    ^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 17, in <listcomp>
+    storage_class(*args, **kwargs) for storage_class in self.storage_classes
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/cookie.py", line 77, in __init__
+    self.signer = signing.get_cookie_signer(salt=self.key_salt)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/signing.py", line 114, in get_cookie_signer
+    key=_cookie_signer_key(settings.SECRET_KEY),
+                           ^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/conf/__init__.py", line 111, in __getattr__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+ERROR:django.request:Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/middleware.py", line 12, in process_request
+    request._messages = default_storage(request)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/__init__.py", line 12, in default_storage
+    return import_string(settings.MESSAGE_STORAGE)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 16, in __init__
+    self.storages = [
+                    ^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 17, in <listcomp>
+    storage_class(*args, **kwargs) for storage_class in self.storage_classes
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/cookie.py", line 77, in __init__
+    self.signer = signing.get_cookie_signer(salt=self.key_salt)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/signing.py", line 114, in get_cookie_signer
+    key=_cookie_signer_key(settings.SECRET_KEY),
+                           ^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/conf/__init__.py", line 111, in __getattr__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+31/Jan/2024 08:36:27   ERROR  Internal Server Error: /admin/  (<class 'django.core.exceptions.ImproperlyConfigured'>, ImproperlyConfigured('The SECRET_KEY setting must not be empty.'), <traceback object at 0x7f6f54ddec40>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/middleware.py", line 12, in process_request
+    request._messages = default_storage(request)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/__init__.py", line 12, in default_storage
+    return import_string(settings.MESSAGE_STORAGE)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 16, in __init__
+    self.storages = [
+                    ^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 17, in <listcomp>
+    storage_class(*args, **kwargs) for storage_class in self.storage_classes
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/cookie.py", line 77, in __init__
+    self.signer = signing.get_cookie_signer(salt=self.key_salt)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/signing.py", line 114, in get_cookie_signer
+    key=_cookie_signer_key(settings.SECRET_KEY),
+                           ^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/conf/__init__.py", line 111, in __getattr__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+ERROR:django.request:Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/middleware.py", line 12, in process_request
+    request._messages = default_storage(request)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/__init__.py", line 12, in default_storage
+    return import_string(settings.MESSAGE_STORAGE)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 16, in __init__
+    self.storages = [
+                    ^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 17, in <listcomp>
+    storage_class(*args, **kwargs) for storage_class in self.storage_classes
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/cookie.py", line 77, in __init__
+    self.signer = signing.get_cookie_signer(salt=self.key_salt)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/signing.py", line 114, in get_cookie_signer
+    key=_cookie_signer_key(settings.SECRET_KEY),
+                           ^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/conf/__init__.py", line 111, in __getattr__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+31/Jan/2024 08:36:28   ERROR  Internal Server Error: /admin/  (<class 'django.core.exceptions.ImproperlyConfigured'>, ImproperlyConfigured('The SECRET_KEY setting must not be empty.'), <traceback object at 0x7f6f54df4380>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/middleware.py", line 12, in process_request
+    request._messages = default_storage(request)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/__init__.py", line 12, in default_storage
+    return import_string(settings.MESSAGE_STORAGE)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 16, in __init__
+    self.storages = [
+                    ^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 17, in <listcomp>
+    storage_class(*args, **kwargs) for storage_class in self.storage_classes
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/cookie.py", line 77, in __init__
+    self.signer = signing.get_cookie_signer(salt=self.key_salt)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/signing.py", line 114, in get_cookie_signer
+    key=_cookie_signer_key(settings.SECRET_KEY),
+                           ^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/conf/__init__.py", line 111, in __getattr__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+ERROR:django.request:Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/middleware.py", line 12, in process_request
+    request._messages = default_storage(request)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/__init__.py", line 12, in default_storage
+    return import_string(settings.MESSAGE_STORAGE)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 16, in __init__
+    self.storages = [
+                    ^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 17, in <listcomp>
+    storage_class(*args, **kwargs) for storage_class in self.storage_classes
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/cookie.py", line 77, in __init__
+    self.signer = signing.get_cookie_signer(salt=self.key_salt)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/signing.py", line 114, in get_cookie_signer
+    key=_cookie_signer_key(settings.SECRET_KEY),
+                           ^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/conf/__init__.py", line 111, in __getattr__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+31/Jan/2024 08:36:28   ERROR  Internal Server Error: /favicon.ico  (<class 'django.core.exceptions.ImproperlyConfigured'>, ImproperlyConfigured('The SECRET_KEY setting must not be empty.'), <traceback object at 0x7f6f54df6180>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/middleware.py", line 12, in process_request
+    request._messages = default_storage(request)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/__init__.py", line 12, in default_storage
+    return import_string(settings.MESSAGE_STORAGE)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 16, in __init__
+    self.storages = [
+                    ^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 17, in <listcomp>
+    storage_class(*args, **kwargs) for storage_class in self.storage_classes
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/cookie.py", line 77, in __init__
+    self.signer = signing.get_cookie_signer(salt=self.key_salt)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/signing.py", line 114, in get_cookie_signer
+    key=_cookie_signer_key(settings.SECRET_KEY),
+                           ^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/conf/__init__.py", line 111, in __getattr__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+ERROR:django.request:Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/middleware.py", line 12, in process_request
+    request._messages = default_storage(request)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/__init__.py", line 12, in default_storage
+    return import_string(settings.MESSAGE_STORAGE)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 16, in __init__
+    self.storages = [
+                    ^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 17, in <listcomp>
+    storage_class(*args, **kwargs) for storage_class in self.storage_classes
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/cookie.py", line 77, in __init__
+    self.signer = signing.get_cookie_signer(salt=self.key_salt)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/signing.py", line 114, in get_cookie_signer
+    key=_cookie_signer_key(settings.SECRET_KEY),
+                           ^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/conf/__init__.py", line 111, in __getattr__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+31/Jan/2024 08:37:07   WARNING  Not Found: /static/css/mdb.min.css  None
+WARNING:django.request:Not Found: /static/css/mdb.min.css
+31/Jan/2024 08:37:07   WARNING  Not Found: /static/css/bootstrap.min.css  None
+WARNING:django.request:Not Found: /static/css/bootstrap.min.css
+31/Jan/2024 08:37:07   WARNING  Not Found: /static/css/fonts.css  None
+WARNING:django.request:Not Found: /static/css/fonts.css
+31/Jan/2024 08:37:07   WARNING  Not Found: /static/css/owl.carousel.min.css  None
+WARNING:django.request:Not Found: /static/css/owl.carousel.min.css
+31/Jan/2024 08:37:07   WARNING  Not Found: /static/css/custom.css  None
+WARNING:django.request:Not Found: /static/css/custom.css
+31/Jan/2024 08:37:07   WARNING  Not Found: /static/images/flag_en.png  None
+WARNING:django.request:Not Found: /static/images/flag_en.png
+31/Jan/2024 08:37:07   WARNING  Not Found: /static/images/flag_ge.png  None
+WARNING:django.request:Not Found: /static/images/flag_ge.png
+31/Jan/2024 08:37:07   WARNING  Not Found: /static/images/telegram.gif  None
+WARNING:django.request:Not Found: /static/images/telegram.gif
+31/Jan/2024 08:37:07   WARNING  Not Found: /static/images/whatsapp.png  None
+WARNING:django.request:Not Found: /static/images/whatsapp.png
+31/Jan/2024 08:37:07   WARNING  Not Found: /static/images/instagram.png  None
+WARNING:django.request:Not Found: /static/images/instagram.png
+31/Jan/2024 08:37:07   WARNING  Not Found: /static/js/jquery-3.3.1.min.js  None
+WARNING:django.request:Not Found: /static/js/jquery-3.3.1.min.js
+31/Jan/2024 08:37:07   WARNING  Not Found: /static/js/bootstrap.min.js  None
+WARNING:django.request:Not Found: /static/js/bootstrap.min.js
+31/Jan/2024 08:37:07   WARNING  Not Found: /static/js/mdb.min.js  None
+WARNING:django.request:Not Found: /static/js/mdb.min.js
+31/Jan/2024 08:37:07   WARNING  Not Found: /static/js/wow.min.js  None
+WARNING:django.request:Not Found: /static/js/wow.min.js
+31/Jan/2024 08:37:07   WARNING  Not Found: /static/js/owl.carousel.min.js  None
+WARNING:django.request:Not Found: /static/js/owl.carousel.min.js
+31/Jan/2024 08:37:07   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+31/Jan/2024 08:37:07   WARNING  Not Found: /static/js/typed.min.js  None
+WARNING:django.request:Not Found: /static/js/typed.min.js
+31/Jan/2024 08:37:07   WARNING  Not Found: /static/js/jquery.malihu.PageScroll2id.min.js  None
+WARNING:django.request:Not Found: /static/js/jquery.malihu.PageScroll2id.min.js
+31/Jan/2024 08:37:07   WARNING  Not Found: /static/js/maskedinput.min.js  None
+WARNING:django.request:Not Found: /static/js/maskedinput.min.js
+31/Jan/2024 08:37:07   WARNING  Not Found: /static/js/custom.js  None
+WARNING:django.request:Not Found: /static/js/custom.js
+31/Jan/2024 08:37:07   WARNING  Not Found: /static/fonts/broken-cable.svg  None
+WARNING:django.request:Not Found: /static/fonts/broken-cable.svg
+31/Jan/2024 08:37:07   WARNING  Not Found: /static/fonts/leak.svg  None
+WARNING:django.request:Not Found: /static/fonts/leak.svg
+31/Jan/2024 08:37:07   WARNING  Not Found: /static/fonts/living-room.svg  None
+WARNING:django.request:Not Found: /static/fonts/living-room.svg
+31/Jan/2024 08:37:07   WARNING  Not Found: /static/fonts/washing-machine.svg  None
+WARNING:django.request:Not Found: /static/fonts/washing-machine.svg
+31/Jan/2024 08:37:08   WARNING  Not Found: /static/fonts/3d-buildings.svg  None
+WARNING:django.request:Not Found: /static/fonts/3d-buildings.svg
+31/Jan/2024 08:37:08   WARNING  Not Found: /static/images/1.jpg  None
+WARNING:django.request:Not Found: /static/images/1.jpg
+31/Jan/2024 08:37:08   WARNING  Not Found: /static/images/2.jpg  None
+WARNING:django.request:Not Found: /static/images/2.jpg
+31/Jan/2024 08:37:08   WARNING  Not Found: /static/images/3.jpg  None
+WARNING:django.request:Not Found: /static/images/3.jpg
+31/Jan/2024 08:37:08   WARNING  Not Found: /static/images/o-mastere-na-chas.png  None
+WARNING:django.request:Not Found: /static/images/o-mastere-na-chas.png
+31/Jan/2024 08:37:08   WARNING  Not Found: /media/images/muzg-na-chas.jpg  None
+WARNING:django.request:Not Found: /media/images/muzg-na-chas.jpg
+31/Jan/2024 08:37:08   WARNING  Not Found: /static/fonts/living-room.svg  None
+WARNING:django.request:Not Found: /static/fonts/living-room.svg
+31/Jan/2024 08:37:08   WARNING  Not Found: /favicon.ico  None
+WARNING:django.request:Not Found: /favicon.ico
+31/Jan/2024 08:37:20   WARNING  Not Found: /static/css/mdb.min.css  None
+WARNING:django.request:Not Found: /static/css/mdb.min.css
+31/Jan/2024 08:37:20   WARNING  Not Found: /static/css/bootstrap.min.css  None
+WARNING:django.request:Not Found: /static/css/bootstrap.min.css
+31/Jan/2024 08:37:20   WARNING  Not Found: /static/css/fonts.css  None
+WARNING:django.request:Not Found: /static/css/fonts.css
+31/Jan/2024 08:37:20   WARNING  Not Found: /static/css/owl.carousel.min.css  None
+WARNING:django.request:Not Found: /static/css/owl.carousel.min.css
+31/Jan/2024 08:37:20   WARNING  Not Found: /static/css/custom.css  None
+WARNING:django.request:Not Found: /static/css/custom.css
+31/Jan/2024 08:37:20   WARNING  Not Found: /static/images/flag_en.png  None
+WARNING:django.request:Not Found: /static/images/flag_en.png
+31/Jan/2024 08:37:20   WARNING  Not Found: /static/images/flag_ge.png  None
+WARNING:django.request:Not Found: /static/images/flag_ge.png
+31/Jan/2024 08:37:20   WARNING  Not Found: /static/images/telegram.gif  None
+WARNING:django.request:Not Found: /static/images/telegram.gif
+31/Jan/2024 08:37:20   WARNING  Not Found: /static/images/whatsapp.png  None
+WARNING:django.request:Not Found: /static/images/whatsapp.png
+31/Jan/2024 08:37:20   WARNING  Not Found: /static/images/instagram.png  None
+WARNING:django.request:Not Found: /static/images/instagram.png
+31/Jan/2024 08:37:20   WARNING  Not Found: /static/js/jquery-3.3.1.min.js  None
+WARNING:django.request:Not Found: /static/js/jquery-3.3.1.min.js
+31/Jan/2024 08:37:20   WARNING  Not Found: /static/js/bootstrap.min.js  None
+WARNING:django.request:Not Found: /static/js/bootstrap.min.js
+31/Jan/2024 08:37:20   WARNING  Not Found: /static/js/mdb.min.js  None
+WARNING:django.request:Not Found: /static/js/mdb.min.js
+31/Jan/2024 08:37:20   WARNING  Not Found: /static/fonts/living-room.svg  None
+WARNING:django.request:Not Found: /static/fonts/living-room.svg
+31/Jan/2024 08:37:20   WARNING  Not Found: /static/fonts/broken-cable.svg  None
+WARNING:django.request:Not Found: /static/fonts/broken-cable.svg
+31/Jan/2024 08:37:20   WARNING  Not Found: /static/fonts/leak.svg  None
+WARNING:django.request:Not Found: /static/fonts/leak.svg
+31/Jan/2024 08:37:20   WARNING  Not Found: /static/js/wow.min.js  None
+WARNING:django.request:Not Found: /static/js/wow.min.js
+31/Jan/2024 08:37:20   WARNING  Not Found: /static/js/owl.carousel.min.js  None
+WARNING:django.request:Not Found: /static/js/owl.carousel.min.js
+31/Jan/2024 08:37:20   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+31/Jan/2024 08:37:20   WARNING  Not Found: /static/js/typed.min.js  None
+WARNING:django.request:Not Found: /static/js/typed.min.js
+31/Jan/2024 08:37:20   WARNING  Not Found: /static/js/jquery.malihu.PageScroll2id.min.js  None
+WARNING:django.request:Not Found: /static/js/jquery.malihu.PageScroll2id.min.js
+31/Jan/2024 08:37:20   WARNING  Not Found: /static/js/maskedinput.min.js  None
+WARNING:django.request:Not Found: /static/js/maskedinput.min.js
+31/Jan/2024 08:37:20   WARNING  Not Found: /static/js/custom.js  None
+WARNING:django.request:Not Found: /static/js/custom.js
+31/Jan/2024 08:37:20   WARNING  Not Found: /static/fonts/washing-machine.svg  None
+WARNING:django.request:Not Found: /static/fonts/washing-machine.svg
+31/Jan/2024 08:37:20   WARNING  Not Found: /static/fonts/3d-buildings.svg  None
+WARNING:django.request:Not Found: /static/fonts/3d-buildings.svg
+31/Jan/2024 08:37:20   WARNING  Not Found: /static/images/1.jpg  None
+WARNING:django.request:Not Found: /static/images/1.jpg
+31/Jan/2024 08:37:20   WARNING  Not Found: /static/images/2.jpg  None
+WARNING:django.request:Not Found: /static/images/2.jpg
+31/Jan/2024 08:37:20   WARNING  Not Found: /static/images/3.jpg  None
+WARNING:django.request:Not Found: /static/images/3.jpg
+31/Jan/2024 08:37:20   WARNING  Not Found: /static/images/o-mastere-na-chas.png  None
+WARNING:django.request:Not Found: /static/images/o-mastere-na-chas.png
+31/Jan/2024 08:37:20   WARNING  Not Found: /media/images/muzg-na-chas.jpg  None
+WARNING:django.request:Not Found: /media/images/muzg-na-chas.jpg
+31/Jan/2024 08:37:21   WARNING  Not Found: /static/css/mdb.min.css  None
+WARNING:django.request:Not Found: /static/css/mdb.min.css
+31/Jan/2024 08:37:21   WARNING  Not Found: /static/css/bootstrap.min.css  None
+WARNING:django.request:Not Found: /static/css/bootstrap.min.css
+31/Jan/2024 08:37:21   WARNING  Not Found: /static/css/fonts.css  None
+WARNING:django.request:Not Found: /static/css/fonts.css
+31/Jan/2024 08:37:21   WARNING  Not Found: /static/css/owl.carousel.min.css  None
+WARNING:django.request:Not Found: /static/css/owl.carousel.min.css
+31/Jan/2024 08:37:21   WARNING  Not Found: /static/css/custom.css  None
+WARNING:django.request:Not Found: /static/css/custom.css
+31/Jan/2024 08:37:21   WARNING  Not Found: /static/images/flag_en.png  None
+WARNING:django.request:Not Found: /static/images/flag_en.png
+31/Jan/2024 08:37:21   WARNING  Not Found: /static/images/flag_ge.png  None
+WARNING:django.request:Not Found: /static/images/flag_ge.png
+31/Jan/2024 08:37:21   WARNING  Not Found: /static/images/telegram.gif  None
+WARNING:django.request:Not Found: /static/images/telegram.gif
+31/Jan/2024 08:37:21   WARNING  Not Found: /static/images/whatsapp.png  None
+WARNING:django.request:Not Found: /static/images/whatsapp.png
+31/Jan/2024 08:37:21   WARNING  Not Found: /static/images/instagram.png  None
+WARNING:django.request:Not Found: /static/images/instagram.png
+31/Jan/2024 08:37:21   WARNING  Not Found: /static/js/jquery-3.3.1.min.js  None
+WARNING:django.request:Not Found: /static/js/jquery-3.3.1.min.js
+31/Jan/2024 08:37:21   WARNING  Not Found: /static/js/bootstrap.min.js  None
+WARNING:django.request:Not Found: /static/js/bootstrap.min.js
+31/Jan/2024 08:37:21   WARNING  Not Found: /static/js/mdb.min.js  None
+WARNING:django.request:Not Found: /static/js/mdb.min.js
+31/Jan/2024 08:37:21   WARNING  Not Found: /static/fonts/leak.svg  None
+WARNING:django.request:Not Found: /static/fonts/leak.svg
+31/Jan/2024 08:37:21   WARNING  Not Found: /static/fonts/living-room.svg  None
+WARNING:django.request:Not Found: /static/fonts/living-room.svg
+31/Jan/2024 08:37:21   WARNING  Not Found: /static/fonts/broken-cable.svg  None
+WARNING:django.request:Not Found: /static/fonts/broken-cable.svg
+31/Jan/2024 08:37:21   WARNING  Not Found: /static/js/wow.min.js  None
+WARNING:django.request:Not Found: /static/js/wow.min.js
+31/Jan/2024 08:37:21   WARNING  Not Found: /static/js/owl.carousel.min.js  None
+WARNING:django.request:Not Found: /static/js/owl.carousel.min.js
+31/Jan/2024 08:37:21   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+31/Jan/2024 08:37:21   WARNING  Not Found: /static/js/typed.min.js  None
+WARNING:django.request:Not Found: /static/js/typed.min.js
+31/Jan/2024 08:37:21   WARNING  Not Found: /static/js/jquery.malihu.PageScroll2id.min.js  None
+WARNING:django.request:Not Found: /static/js/jquery.malihu.PageScroll2id.min.js
+31/Jan/2024 08:37:21   WARNING  Not Found: /static/js/maskedinput.min.js  None
+WARNING:django.request:Not Found: /static/js/maskedinput.min.js
+31/Jan/2024 08:37:21   WARNING  Not Found: /static/js/custom.js  None
+WARNING:django.request:Not Found: /static/js/custom.js
+31/Jan/2024 08:37:21   WARNING  Not Found: /static/fonts/washing-machine.svg  None
+WARNING:django.request:Not Found: /static/fonts/washing-machine.svg
+31/Jan/2024 08:37:21   WARNING  Not Found: /static/fonts/3d-buildings.svg  None
+WARNING:django.request:Not Found: /static/fonts/3d-buildings.svg
+31/Jan/2024 08:37:21   WARNING  Not Found: /static/images/1.jpg  None
+WARNING:django.request:Not Found: /static/images/1.jpg
+31/Jan/2024 08:37:21   WARNING  Not Found: /static/images/2.jpg  None
+WARNING:django.request:Not Found: /static/images/2.jpg
+31/Jan/2024 08:37:21   WARNING  Not Found: /static/images/3.jpg  None
+WARNING:django.request:Not Found: /static/images/3.jpg
+31/Jan/2024 08:37:21   WARNING  Not Found: /static/images/o-mastere-na-chas.png  None
+WARNING:django.request:Not Found: /static/images/o-mastere-na-chas.png
+31/Jan/2024 08:37:21   WARNING  Not Found: /media/images/muzg-na-chas.jpg  None
+WARNING:django.request:Not Found: /media/images/muzg-na-chas.jpg
+31/Jan/2024 08:37:31   ERROR  Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.  (<class 'django.core.exceptions.DisallowedHost'>, DisallowedHost("Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS."), <traceback object at 0x7f1043453e40>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/http/request.py", line 167, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+31/Jan/2024 08:37:32   WARNING  Bad Request: /  None
+WARNING:django.request:Bad Request: /
+31/Jan/2024 08:38:00   WARNING  Not Found: /static/css/mdb.min.css  None
+WARNING:django.request:Not Found: /static/css/mdb.min.css
+31/Jan/2024 08:38:00   WARNING  Not Found: /static/css/bootstrap.min.css  None
+WARNING:django.request:Not Found: /static/css/bootstrap.min.css
+31/Jan/2024 08:38:00   WARNING  Not Found: /static/css/fonts.css  None
+WARNING:django.request:Not Found: /static/css/fonts.css
+31/Jan/2024 08:38:00   WARNING  Not Found: /static/css/owl.carousel.min.css  None
+WARNING:django.request:Not Found: /static/css/owl.carousel.min.css
+31/Jan/2024 08:38:00   WARNING  Not Found: /static/css/custom.css  None
+WARNING:django.request:Not Found: /static/css/custom.css
+31/Jan/2024 08:38:00   WARNING  Not Found: /static/debug_toolbar/js/toolbar.js  None
+WARNING:django.request:Not Found: /static/debug_toolbar/js/toolbar.js
+31/Jan/2024 08:38:00   WARNING  Not Found: /static/images/flag_en.png  None
+WARNING:django.request:Not Found: /static/images/flag_en.png
+31/Jan/2024 08:38:00   WARNING  Not Found: /static/images/flag_ge.png  None
+WARNING:django.request:Not Found: /static/images/flag_ge.png
+31/Jan/2024 08:38:00   WARNING  Not Found: /static/images/telegram.gif  None
+WARNING:django.request:Not Found: /static/images/telegram.gif
+31/Jan/2024 08:38:00   WARNING  Not Found: /static/images/whatsapp.png  None
+WARNING:django.request:Not Found: /static/images/whatsapp.png
+31/Jan/2024 08:38:00   WARNING  Not Found: /static/images/instagram.png  None
+WARNING:django.request:Not Found: /static/images/instagram.png
+31/Jan/2024 08:38:00   WARNING  Not Found: /static/js/jquery-3.3.1.min.js  None
+WARNING:django.request:Not Found: /static/js/jquery-3.3.1.min.js
+31/Jan/2024 08:38:00   WARNING  Not Found: /static/fonts/living-room.svg  None
+WARNING:django.request:Not Found: /static/fonts/living-room.svg
+31/Jan/2024 08:38:00   WARNING  Not Found: /static/fonts/leak.svg  None
+WARNING:django.request:Not Found: /static/fonts/leak.svg
+31/Jan/2024 08:38:00   WARNING  Not Found: /static/fonts/broken-cable.svg  None
+WARNING:django.request:Not Found: /static/fonts/broken-cable.svg
+31/Jan/2024 08:38:00   WARNING  Not Found: /static/js/bootstrap.min.js  None
+WARNING:django.request:Not Found: /static/js/bootstrap.min.js
+31/Jan/2024 08:38:00   WARNING  Not Found: /static/js/mdb.min.js  None
+WARNING:django.request:Not Found: /static/js/mdb.min.js
+31/Jan/2024 08:38:00   WARNING  Not Found: /static/js/wow.min.js  None
+WARNING:django.request:Not Found: /static/js/wow.min.js
+31/Jan/2024 08:38:00   WARNING  Not Found: /static/js/owl.carousel.min.js  None
+WARNING:django.request:Not Found: /static/js/owl.carousel.min.js
+31/Jan/2024 08:38:00   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+31/Jan/2024 08:38:00   WARNING  Not Found: /static/js/typed.min.js  None
+WARNING:django.request:Not Found: /static/js/typed.min.js
+31/Jan/2024 08:38:01   WARNING  Not Found: /static/js/jquery.malihu.PageScroll2id.min.js  None
+WARNING:django.request:Not Found: /static/js/jquery.malihu.PageScroll2id.min.js
+31/Jan/2024 08:38:01   WARNING  Not Found: /static/js/maskedinput.min.js  None
+WARNING:django.request:Not Found: /static/js/maskedinput.min.js
+31/Jan/2024 08:38:01   WARNING  Not Found: /static/js/custom.js  None
+WARNING:django.request:Not Found: /static/js/custom.js
+31/Jan/2024 08:38:01   WARNING  Not Found: /static/debug_toolbar/css/toolbar.css  None
+WARNING:django.request:Not Found: /static/debug_toolbar/css/toolbar.css
+31/Jan/2024 08:38:01   WARNING  Not Found: /static/fonts/washing-machine.svg  None
+WARNING:django.request:Not Found: /static/fonts/washing-machine.svg
+31/Jan/2024 08:38:01   WARNING  Not Found: /static/fonts/3d-buildings.svg  None
+WARNING:django.request:Not Found: /static/fonts/3d-buildings.svg
+31/Jan/2024 08:38:01   WARNING  Not Found: /static/images/1.jpg  None
+WARNING:django.request:Not Found: /static/images/1.jpg
+31/Jan/2024 08:38:01   WARNING  Not Found: /static/images/2.jpg  None
+WARNING:django.request:Not Found: /static/images/2.jpg
+31/Jan/2024 08:38:01   WARNING  Not Found: /static/images/3.jpg  None
+WARNING:django.request:Not Found: /static/images/3.jpg
+31/Jan/2024 08:38:01   WARNING  Not Found: /static/images/o-mastere-na-chas.png  None
+WARNING:django.request:Not Found: /static/images/o-mastere-na-chas.png
+31/Jan/2024 08:38:01   WARNING  Not Found: /static/debug_toolbar/css/print.css  None
+WARNING:django.request:Not Found: /static/debug_toolbar/css/print.css
+31/Jan/2024 08:38:16   WARNING  Not Found: /static/css/mdb.min.css  None
+WARNING:django.request:Not Found: /static/css/mdb.min.css
+31/Jan/2024 08:38:16   WARNING  Not Found: /static/css/bootstrap.min.css  None
+WARNING:django.request:Not Found: /static/css/bootstrap.min.css
+31/Jan/2024 08:38:16   WARNING  Not Found: /static/css/fonts.css  None
+WARNING:django.request:Not Found: /static/css/fonts.css
+31/Jan/2024 08:38:16   WARNING  Not Found: /static/css/owl.carousel.min.css  None
+WARNING:django.request:Not Found: /static/css/owl.carousel.min.css
+31/Jan/2024 08:38:16   WARNING  Not Found: /static/css/custom.css  None
+WARNING:django.request:Not Found: /static/css/custom.css
+31/Jan/2024 08:38:16   WARNING  Not Found: /static/debug_toolbar/js/toolbar.js  None
+WARNING:django.request:Not Found: /static/debug_toolbar/js/toolbar.js
+31/Jan/2024 08:38:16   WARNING  Not Found: /static/images/flag_en.png  None
+WARNING:django.request:Not Found: /static/images/flag_en.png
+31/Jan/2024 08:38:16   WARNING  Not Found: /static/images/flag_ge.png  None
+WARNING:django.request:Not Found: /static/images/flag_ge.png
+31/Jan/2024 08:38:16   WARNING  Not Found: /static/js/jquery-3.3.1.min.js  None
+WARNING:django.request:Not Found: /static/js/jquery-3.3.1.min.js
+31/Jan/2024 08:38:16   WARNING  Not Found: /static/js/bootstrap.min.js  None
+WARNING:django.request:Not Found: /static/js/bootstrap.min.js
+31/Jan/2024 08:38:16   WARNING  Not Found: /static/js/mdb.min.js  None
+WARNING:django.request:Not Found: /static/js/mdb.min.js
+31/Jan/2024 08:38:16   WARNING  Not Found: /static/js/wow.min.js  None
+WARNING:django.request:Not Found: /static/js/wow.min.js
+31/Jan/2024 08:38:16   WARNING  Not Found: /static/js/owl.carousel.min.js  None
+WARNING:django.request:Not Found: /static/js/owl.carousel.min.js
+31/Jan/2024 08:38:16   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+31/Jan/2024 08:38:16   WARNING  Not Found: /static/js/typed.min.js  None
+WARNING:django.request:Not Found: /static/js/typed.min.js
+31/Jan/2024 08:38:16   WARNING  Not Found: /static/js/jquery.malihu.PageScroll2id.min.js  None
+WARNING:django.request:Not Found: /static/js/jquery.malihu.PageScroll2id.min.js
+31/Jan/2024 08:38:16   WARNING  Not Found: /static/js/maskedinput.min.js  None
+WARNING:django.request:Not Found: /static/js/maskedinput.min.js
+31/Jan/2024 08:38:16   WARNING  Not Found: /static/js/custom.js  None
+WARNING:django.request:Not Found: /static/js/custom.js
+31/Jan/2024 08:38:16   WARNING  Not Found: /static/debug_toolbar/css/toolbar.css  None
+WARNING:django.request:Not Found: /static/debug_toolbar/css/toolbar.css
+31/Jan/2024 08:38:16   WARNING  Not Found: /static/debug_toolbar/css/print.css  None
+WARNING:django.request:Not Found: /static/debug_toolbar/css/print.css
+01/Feb/2024 05:59:05   WARNING  Not Found: /static/images/flag_en.png  None
+WARNING:django.request:Not Found: /static/images/flag_en.png
+01/Feb/2024 05:59:05   WARNING  Not Found: /static/css/owl.carousel.min.css  None
+WARNING:django.request:Not Found: /static/css/owl.carousel.min.css
+01/Feb/2024 05:59:05   WARNING  "GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4113  None
+WARNING:django.server:"GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4113
+01/Feb/2024 05:59:05   WARNING  "GET /static/images/flag_en.png HTTP/1.1" 404 4113  None
+WARNING:django.server:"GET /static/images/flag_en.png HTTP/1.1" 404 4113
+01/Feb/2024 05:59:05   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+01/Feb/2024 05:59:05   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 4113  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 4113
+01/Feb/2024 05:59:05   WARNING  Not Found: /static/js/typed.min.js  None
+WARNING:django.request:Not Found: /static/js/typed.min.js
+01/Feb/2024 05:59:05   WARNING  "GET /static/js/typed.min.js HTTP/1.1" 404 4113  None
+WARNING:django.server:"GET /static/js/typed.min.js HTTP/1.1" 404 4113
+01/Feb/2024 05:59:05   WARNING  Not Found: /static/js/maskedinput.min.js  None
+WARNING:django.request:Not Found: /static/js/maskedinput.min.js
+01/Feb/2024 05:59:05   WARNING  "GET /static/js/maskedinput.min.js HTTP/1.1" 404 4113  None
+WARNING:django.server:"GET /static/js/maskedinput.min.js HTTP/1.1" 404 4113
+01/Feb/2024 05:59:05   WARNING  Not Found: /media/images/muzg-na-chas.jpg  None
+WARNING:django.request:Not Found: /media/images/muzg-na-chas.jpg
+01/Feb/2024 05:59:05   WARNING  "GET /media/images/muzg-na-chas.jpg HTTP/1.1" 404 4113  None
+WARNING:django.server:"GET /media/images/muzg-na-chas.jpg HTTP/1.1" 404 4113
+01/Feb/2024 05:59:05   WARNING  Not Found: /static/fonts/broken-cable.svg  None
+01/Feb/2024 05:59:05   WARNING  Not Found: /static/fonts/living-room.svg  None
+WARNING:django.request:Not Found: /static/fonts/broken-cable.svg
+WARNING:django.request:Not Found: /static/fonts/living-room.svg
+01/Feb/2024 05:59:05   WARNING  "GET /static/fonts/living-room.svg HTTP/1.1" 404 4113  None
+WARNING:django.server:"GET /static/fonts/living-room.svg HTTP/1.1" 404 4113
+01/Feb/2024 05:59:05   WARNING  "GET /static/fonts/broken-cable.svg HTTP/1.1" 404 4113  None
+WARNING:django.server:"GET /static/fonts/broken-cable.svg HTTP/1.1" 404 4113
+01/Feb/2024 05:59:05   WARNING  Not Found: /favicon.ico  None
+WARNING:django.request:Not Found: /favicon.ico
+01/Feb/2024 05:59:05   WARNING  "GET /favicon.ico HTTP/1.1" 404 4113  None
+WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 4113
+01/Feb/2024 05:59:07   WARNING  Not Found: /static/css/owl.carousel.min.css  None
+WARNING:django.request:Not Found: /static/css/owl.carousel.min.css
+01/Feb/2024 05:59:07   WARNING  "GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4113  None
+WARNING:django.server:"GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4113
+01/Feb/2024 05:59:07   WARNING  Not Found: /static/images/flag_en.png  None
+WARNING:django.request:Not Found: /static/images/flag_en.png
+01/Feb/2024 05:59:07   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+01/Feb/2024 05:59:07   WARNING  "GET /static/images/flag_en.png HTTP/1.1" 404 4113  None
+WARNING:django.server:"GET /static/images/flag_en.png HTTP/1.1" 404 4113
+01/Feb/2024 05:59:07   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 4113  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 4113
+01/Feb/2024 05:59:07   WARNING  Not Found: /static/js/typed.min.js  None
+WARNING:django.request:Not Found: /static/js/typed.min.js
+01/Feb/2024 05:59:07   WARNING  Not Found: /static/js/maskedinput.min.js  None
+WARNING:django.request:Not Found: /static/js/maskedinput.min.js
+01/Feb/2024 05:59:07   WARNING  "GET /static/js/typed.min.js HTTP/1.1" 404 4113  None
+WARNING:django.server:"GET /static/js/typed.min.js HTTP/1.1" 404 4113
+01/Feb/2024 05:59:07   WARNING  "GET /static/js/maskedinput.min.js HTTP/1.1" 404 4113  None
+WARNING:django.server:"GET /static/js/maskedinput.min.js HTTP/1.1" 404 4113
+01/Feb/2024 05:59:09   WARNING  Not Found: /static/images/flag_en.png  None
+WARNING:django.request:Not Found: /static/images/flag_en.png
+01/Feb/2024 05:59:09   WARNING  Not Found: /static/css/owl.carousel.min.css  None
+WARNING:django.request:Not Found: /static/css/owl.carousel.min.css
+01/Feb/2024 05:59:09   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+01/Feb/2024 05:59:09   WARNING  "GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239  None
+01/Feb/2024 05:59:09   WARNING  "GET /static/images/flag_en.png HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239
+WARNING:django.server:"GET /static/images/flag_en.png HTTP/1.1" 404 4239
+01/Feb/2024 05:59:09   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 4239
+01/Feb/2024 05:59:09   WARNING  Not Found: /static/js/maskedinput.min.js  None
+WARNING:django.request:Not Found: /static/js/maskedinput.min.js
+01/Feb/2024 05:59:09   WARNING  Not Found: /static/js/typed.min.js  None
+WARNING:django.request:Not Found: /static/js/typed.min.js
+01/Feb/2024 05:59:09   WARNING  "GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239  None
+01/Feb/2024 05:59:09   WARNING  "GET /static/js/typed.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/typed.min.js HTTP/1.1" 404 4239
+WARNING:django.server:"GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239
+01/Feb/2024 05:59:15   WARNING  Not Found: /static/css/owl.carousel.min.css  None
+WARNING:django.request:Not Found: /static/css/owl.carousel.min.css
+01/Feb/2024 05:59:15   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+01/Feb/2024 05:59:15   WARNING  "GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239
+01/Feb/2024 05:59:15   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 4239
+01/Feb/2024 05:59:15   WARNING  Not Found: /static/images/flag_en.png  None
+WARNING:django.request:Not Found: /static/images/flag_en.png
+01/Feb/2024 05:59:15   WARNING  "GET /static/images/flag_en.png HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/images/flag_en.png HTTP/1.1" 404 4239
+01/Feb/2024 05:59:15   WARNING  Not Found: /static/js/typed.min.js  None
+WARNING:django.request:Not Found: /static/js/typed.min.js
+01/Feb/2024 05:59:15   WARNING  Not Found: /static/js/maskedinput.min.js  None
+WARNING:django.request:Not Found: /static/js/maskedinput.min.js
+01/Feb/2024 05:59:15   WARNING  "GET /static/js/typed.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/typed.min.js HTTP/1.1" 404 4239
+01/Feb/2024 05:59:15   WARNING  "GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239
+01/Feb/2024 05:59:16   WARNING  Not Found: /static/images/flag_en.png  None
+WARNING:django.request:Not Found: /static/images/flag_en.png
+01/Feb/2024 05:59:16   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+01/Feb/2024 05:59:16   WARNING  Not Found: /static/css/owl.carousel.min.css  None
+WARNING:django.request:Not Found: /static/css/owl.carousel.min.css
+01/Feb/2024 05:59:16   WARNING  "GET /static/images/flag_en.png HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/images/flag_en.png HTTP/1.1" 404 4239
+01/Feb/2024 05:59:16   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 4239
+01/Feb/2024 05:59:16   WARNING  "GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239
+01/Feb/2024 05:59:16   WARNING  Not Found: /static/js/maskedinput.min.js  None
+WARNING:django.request:Not Found: /static/js/maskedinput.min.js
+01/Feb/2024 05:59:16   WARNING  Not Found: /static/js/typed.min.js  None
+WARNING:django.request:Not Found: /static/js/typed.min.js
+01/Feb/2024 05:59:16   WARNING  "GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239
+01/Feb/2024 05:59:16   WARNING  "GET /static/js/typed.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/typed.min.js HTTP/1.1" 404 4239
+01/Feb/2024 05:59:22   WARNING  Not Found: /static/images/flag_en.png  None
+WARNING:django.request:Not Found: /static/images/flag_en.png
+01/Feb/2024 05:59:22   WARNING  Not Found: /static/js/counter.js  None
+01/Feb/2024 05:59:22   WARNING  Not Found: /static/css/owl.carousel.min.css  None
+WARNING:django.request:Not Found: /static/js/counter.js
+WARNING:django.request:Not Found: /static/css/owl.carousel.min.css
+01/Feb/2024 05:59:22   WARNING  "GET /static/images/flag_en.png HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/images/flag_en.png HTTP/1.1" 404 4239
+01/Feb/2024 05:59:22   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 4239
+01/Feb/2024 05:59:22   WARNING  "GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239
+01/Feb/2024 05:59:22   WARNING  Not Found: /static/js/maskedinput.min.js  None
+WARNING:django.request:Not Found: /static/js/maskedinput.min.js
+01/Feb/2024 05:59:22   WARNING  Not Found: /static/js/typed.min.js  None
+WARNING:django.request:Not Found: /static/js/typed.min.js
+01/Feb/2024 05:59:22   WARNING  "GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239
+01/Feb/2024 05:59:22   WARNING  "GET /static/js/typed.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/typed.min.js HTTP/1.1" 404 4239
+01/Feb/2024 05:59:27   WARNING  Not Found: /static/css/owl.carousel.min.css  None
+WARNING:django.request:Not Found: /static/css/owl.carousel.min.css
+01/Feb/2024 05:59:27   WARNING  "GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239
+01/Feb/2024 05:59:27   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+01/Feb/2024 05:59:27   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 4239
+01/Feb/2024 05:59:27   WARNING  Not Found: /static/images/flag_en.png  None
+WARNING:django.request:Not Found: /static/images/flag_en.png
+01/Feb/2024 05:59:27   WARNING  "GET /static/images/flag_en.png HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/images/flag_en.png HTTP/1.1" 404 4239
+01/Feb/2024 05:59:27   WARNING  Not Found: /static/js/typed.min.js  None
+WARNING:django.request:Not Found: /static/js/typed.min.js
+01/Feb/2024 05:59:27   WARNING  Not Found: /static/js/maskedinput.min.js  None
+WARNING:django.request:Not Found: /static/js/maskedinput.min.js
+01/Feb/2024 05:59:27   WARNING  "GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239
+01/Feb/2024 05:59:27   WARNING  "GET /static/js/typed.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/typed.min.js HTTP/1.1" 404 4239
+01/Feb/2024 05:59:33   WARNING  Not Found: /static/css/owl.carousel.min.css  None
+WARNING:django.request:Not Found: /static/css/owl.carousel.min.css
+01/Feb/2024 05:59:33   WARNING  "GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239
+01/Feb/2024 05:59:33   WARNING  Not Found: /static/images/flag_en.png  None
+WARNING:django.request:Not Found: /static/images/flag_en.png
+01/Feb/2024 05:59:33   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+01/Feb/2024 05:59:33   WARNING  "GET /static/images/flag_en.png HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/images/flag_en.png HTTP/1.1" 404 4239
+01/Feb/2024 05:59:33   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 4239
+01/Feb/2024 05:59:33   WARNING  Not Found: /static/js/maskedinput.min.js  None
+WARNING:django.request:Not Found: /static/js/maskedinput.min.js
+01/Feb/2024 05:59:33   WARNING  Not Found: /static/js/typed.min.js  None
+WARNING:django.request:Not Found: /static/js/typed.min.js
+01/Feb/2024 05:59:33   WARNING  "GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239
+01/Feb/2024 05:59:33   WARNING  "GET /static/js/typed.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/typed.min.js HTTP/1.1" 404 4239
+01/Feb/2024 05:59:36   WARNING  Not Found: /static/css/owl.carousel.min.css  None
+WARNING:django.request:Not Found: /static/css/owl.carousel.min.css
+01/Feb/2024 05:59:36   WARNING  "GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239
+01/Feb/2024 05:59:36   WARNING  Not Found: /static/images/flag_en.png  None
+WARNING:django.request:Not Found: /static/images/flag_en.png
+01/Feb/2024 05:59:36   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+01/Feb/2024 05:59:36   WARNING  "GET /static/images/flag_en.png HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/images/flag_en.png HTTP/1.1" 404 4239
+01/Feb/2024 05:59:36   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 4239
+01/Feb/2024 05:59:36   WARNING  Not Found: /static/js/typed.min.js  None
+WARNING:django.request:Not Found: /static/js/typed.min.js
+01/Feb/2024 05:59:36   WARNING  "GET /static/js/typed.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/typed.min.js HTTP/1.1" 404 4239
+01/Feb/2024 05:59:36   WARNING  Not Found: /static/js/maskedinput.min.js  None
+WARNING:django.request:Not Found: /static/js/maskedinput.min.js
+01/Feb/2024 05:59:36   WARNING  "GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239
+01/Feb/2024 05:59:41   WARNING  Not Found: /static/css/owl.carousel.min.css  None
+WARNING:django.request:Not Found: /static/css/owl.carousel.min.css
+01/Feb/2024 05:59:41   WARNING  "GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239
+01/Feb/2024 05:59:41   WARNING  Not Found: /static/images/flag_en.png  None
+WARNING:django.request:Not Found: /static/images/flag_en.png
+01/Feb/2024 05:59:41   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+01/Feb/2024 05:59:41   WARNING  "GET /static/images/flag_en.png HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/images/flag_en.png HTTP/1.1" 404 4239
+01/Feb/2024 05:59:41   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 4239
+01/Feb/2024 05:59:41   WARNING  Not Found: /static/js/maskedinput.min.js  None
+WARNING:django.request:Not Found: /static/js/maskedinput.min.js
+01/Feb/2024 05:59:41   WARNING  Not Found: /static/js/typed.min.js  None
+WARNING:django.request:Not Found: /static/js/typed.min.js
+01/Feb/2024 05:59:41   WARNING  "GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239
+01/Feb/2024 05:59:41   WARNING  "GET /static/js/typed.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/typed.min.js HTTP/1.1" 404 4239
+01/Feb/2024 06:01:11   WARNING  Not Found: /static/css/owl.carousel.min.css  None
+WARNING:django.request:Not Found: /static/css/owl.carousel.min.css
+01/Feb/2024 06:01:11   WARNING  "GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239
+01/Feb/2024 06:01:11   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+01/Feb/2024 06:01:11   WARNING  Not Found: /static/images/flag_en.png  None
+WARNING:django.request:Not Found: /static/images/flag_en.png
+01/Feb/2024 06:01:11   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 4239
+01/Feb/2024 06:01:11   WARNING  "GET /static/images/flag_en.png HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/images/flag_en.png HTTP/1.1" 404 4239
+01/Feb/2024 06:01:11   WARNING  Not Found: /static/js/maskedinput.min.js  None
+WARNING:django.request:Not Found: /static/js/maskedinput.min.js
+01/Feb/2024 06:01:11   WARNING  Not Found: /static/js/typed.min.js  None
+WARNING:django.request:Not Found: /static/js/typed.min.js
+01/Feb/2024 06:01:11   WARNING  "GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239
+01/Feb/2024 06:01:11   WARNING  "GET /static/js/typed.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/typed.min.js HTTP/1.1" 404 4239
+01/Feb/2024 06:01:56   WARNING  Not Found: /static/css/owl.carousel.min.css  None
+WARNING:django.request:Not Found: /static/css/owl.carousel.min.css
+01/Feb/2024 06:01:56   WARNING  Not Found: /static/images/flag_en.png  None
+WARNING:django.request:Not Found: /static/images/flag_en.png
+01/Feb/2024 06:01:56   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+01/Feb/2024 06:01:56   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 4239
+01/Feb/2024 06:01:56   WARNING  "GET /static/images/flag_en.png HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/images/flag_en.png HTTP/1.1" 404 4239
+01/Feb/2024 06:01:56   WARNING  "GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239
+01/Feb/2024 06:01:56   WARNING  Not Found: /static/js/maskedinput.min.js  None
+WARNING:django.request:Not Found: /static/js/maskedinput.min.js
+01/Feb/2024 06:01:56   WARNING  Not Found: /static/js/typed.min.js  None
+WARNING:django.request:Not Found: /static/js/typed.min.js
+01/Feb/2024 06:01:56   WARNING  "GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239
+01/Feb/2024 06:01:56   WARNING  "GET /static/js/typed.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/typed.min.js HTTP/1.1" 404 4239
+01/Feb/2024 06:02:04   WARNING  Not Found: /static/css/owl.carousel.min.css  None
+WARNING:django.request:Not Found: /static/css/owl.carousel.min.css
+01/Feb/2024 06:02:04   WARNING  Not Found: /static/images/flag_en.png  None
+WARNING:django.request:Not Found: /static/images/flag_en.png
+01/Feb/2024 06:02:04   WARNING  "GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239
+01/Feb/2024 06:02:04   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+01/Feb/2024 06:02:04   WARNING  "GET /static/images/flag_en.png HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/images/flag_en.png HTTP/1.1" 404 4239
+01/Feb/2024 06:02:04   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 4239
+01/Feb/2024 06:02:04   WARNING  Not Found: /static/js/maskedinput.min.js  None
+WARNING:django.request:Not Found: /static/js/maskedinput.min.js
+01/Feb/2024 06:02:04   WARNING  Not Found: /static/js/typed.min.js  None
+WARNING:django.request:Not Found: /static/js/typed.min.js
+01/Feb/2024 06:02:04   WARNING  "GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239
+01/Feb/2024 06:02:04   WARNING  "GET /static/js/typed.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/typed.min.js HTTP/1.1" 404 4239
+01/Feb/2024 06:02:09   WARNING  Not Found: /static/css/owl.carousel.min.css  None
+WARNING:django.request:Not Found: /static/css/owl.carousel.min.css
+01/Feb/2024 06:02:09   WARNING  "GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239
+01/Feb/2024 06:02:09   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+01/Feb/2024 06:02:09   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 4239
+01/Feb/2024 06:02:09   WARNING  Not Found: /static/images/flag_en.png  None
+WARNING:django.request:Not Found: /static/images/flag_en.png
+01/Feb/2024 06:02:09   WARNING  "GET /static/images/flag_en.png HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/images/flag_en.png HTTP/1.1" 404 4239
+01/Feb/2024 06:02:09   WARNING  Not Found: /static/js/typed.min.js  None
+WARNING:django.request:Not Found: /static/js/typed.min.js
+01/Feb/2024 06:02:09   WARNING  "GET /static/js/typed.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/typed.min.js HTTP/1.1" 404 4239
+01/Feb/2024 06:02:09   WARNING  Not Found: /static/js/maskedinput.min.js  None
+WARNING:django.request:Not Found: /static/js/maskedinput.min.js
+01/Feb/2024 06:02:09   WARNING  "GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239
+01/Feb/2024 06:02:34   WARNING  Not Found: /static/images/flag_en.png  None
+WARNING:django.request:Not Found: /static/images/flag_en.png
+01/Feb/2024 06:02:34   WARNING  Not Found: /static/css/owl.carousel.min.css  None
+WARNING:django.request:Not Found: /static/css/owl.carousel.min.css
+01/Feb/2024 06:02:34   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+01/Feb/2024 06:02:34   WARNING  "GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239
+01/Feb/2024 06:02:34   WARNING  "GET /static/images/flag_en.png HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/images/flag_en.png HTTP/1.1" 404 4239
+01/Feb/2024 06:02:34   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 4239
+01/Feb/2024 06:02:34   WARNING  Not Found: /static/js/typed.min.js  None
+WARNING:django.request:Not Found: /static/js/typed.min.js
+01/Feb/2024 06:02:34   WARNING  Not Found: /static/js/maskedinput.min.js  None
+WARNING:django.request:Not Found: /static/js/maskedinput.min.js
+01/Feb/2024 06:02:34   WARNING  "GET /static/js/typed.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/typed.min.js HTTP/1.1" 404 4239
+01/Feb/2024 06:02:34   WARNING  "GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239
+01/Feb/2024 06:02:42   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+01/Feb/2024 06:02:42   WARNING  Not Found: /static/images/flag_en.png  None
+WARNING:django.request:Not Found: /static/images/flag_en.png
+01/Feb/2024 06:02:42   WARNING  Not Found: /static/css/owl.carousel.min.css  None
+WARNING:django.request:Not Found: /static/css/owl.carousel.min.css
+01/Feb/2024 06:02:42   WARNING  "GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239
+01/Feb/2024 06:02:42   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 4239  None
+01/Feb/2024 06:02:42   WARNING  "GET /static/images/flag_en.png HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/images/flag_en.png HTTP/1.1" 404 4239
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 4239
+01/Feb/2024 06:02:42   WARNING  Not Found: /static/js/typed.min.js  None
+WARNING:django.request:Not Found: /static/js/typed.min.js
+01/Feb/2024 06:02:42   WARNING  Not Found: /static/js/maskedinput.min.js  None
+WARNING:django.request:Not Found: /static/js/maskedinput.min.js
+01/Feb/2024 06:02:42   WARNING  "GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239
+01/Feb/2024 06:02:42   WARNING  "GET /static/js/typed.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/typed.min.js HTTP/1.1" 404 4239
+01/Feb/2024 06:02:44   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+01/Feb/2024 06:02:44   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 4239
+01/Feb/2024 06:02:44   WARNING  Not Found: /static/images/flag_en.png  None
+WARNING:django.request:Not Found: /static/images/flag_en.png
+01/Feb/2024 06:02:44   WARNING  Not Found: /static/css/owl.carousel.min.css  None
+WARNING:django.request:Not Found: /static/css/owl.carousel.min.css
+01/Feb/2024 06:02:44   WARNING  "GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239
+01/Feb/2024 06:02:44   WARNING  "GET /static/images/flag_en.png HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/images/flag_en.png HTTP/1.1" 404 4239
+01/Feb/2024 06:02:44   WARNING  Not Found: /static/js/typed.min.js  None
+WARNING:django.request:Not Found: /static/js/typed.min.js
+01/Feb/2024 06:02:44   WARNING  "GET /static/js/typed.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/typed.min.js HTTP/1.1" 404 4239
+01/Feb/2024 06:02:44   WARNING  Not Found: /static/js/maskedinput.min.js  None
+WARNING:django.request:Not Found: /static/js/maskedinput.min.js
+01/Feb/2024 06:02:44   WARNING  "GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239
+01/Feb/2024 06:02:51   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+01/Feb/2024 06:02:51   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 4239
+01/Feb/2024 06:02:51   WARNING  Not Found: /static/css/owl.carousel.min.css  None
+WARNING:django.request:Not Found: /static/css/owl.carousel.min.css
+01/Feb/2024 06:02:51   WARNING  Not Found: /static/images/flag_en.png  None
+WARNING:django.request:Not Found: /static/images/flag_en.png
+01/Feb/2024 06:02:51   WARNING  "GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239
+01/Feb/2024 06:02:51   WARNING  "GET /static/images/flag_en.png HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/images/flag_en.png HTTP/1.1" 404 4239
+01/Feb/2024 06:02:51   WARNING  Not Found: /static/js/typed.min.js  None
+WARNING:django.request:Not Found: /static/js/typed.min.js
+01/Feb/2024 06:02:51   WARNING  "GET /static/js/typed.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/typed.min.js HTTP/1.1" 404 4239
+01/Feb/2024 06:02:51   WARNING  Not Found: /static/js/maskedinput.min.js  None
+WARNING:django.request:Not Found: /static/js/maskedinput.min.js
+01/Feb/2024 06:02:51   WARNING  "GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239
+01/Feb/2024 06:03:56   WARNING  Not Found: /static/css/owl.carousel.min.css  None
+WARNING:django.request:Not Found: /static/css/owl.carousel.min.css
+01/Feb/2024 06:03:56   WARNING  "GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239
+01/Feb/2024 06:03:56   WARNING  Not Found: /static/images/flag_en.png  None
+WARNING:django.request:Not Found: /static/images/flag_en.png
+01/Feb/2024 06:03:56   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+01/Feb/2024 06:03:56   WARNING  "GET /static/images/flag_en.png HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/images/flag_en.png HTTP/1.1" 404 4239
+01/Feb/2024 06:03:56   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 4239
+01/Feb/2024 06:03:56   WARNING  Not Found: /static/js/typed.min.js  None
+WARNING:django.request:Not Found: /static/js/typed.min.js
+01/Feb/2024 06:03:56   WARNING  "GET /static/js/typed.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/typed.min.js HTTP/1.1" 404 4239
+01/Feb/2024 06:03:56   WARNING  Not Found: /static/js/maskedinput.min.js  None
+WARNING:django.request:Not Found: /static/js/maskedinput.min.js
+01/Feb/2024 06:03:56   WARNING  "GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239
+01/Feb/2024 06:04:13   WARNING  Not Found: /static/images/flag_en.png  None
+WARNING:django.request:Not Found: /static/images/flag_en.png
+01/Feb/2024 06:04:13   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+01/Feb/2024 06:04:13   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 4239
+01/Feb/2024 06:04:13   WARNING  Not Found: /static/css/owl.carousel.min.css  None
+WARNING:django.request:Not Found: /static/css/owl.carousel.min.css
+01/Feb/2024 06:04:13   WARNING  "GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239
+01/Feb/2024 06:04:13   WARNING  "GET /static/images/flag_en.png HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/images/flag_en.png HTTP/1.1" 404 4239
+01/Feb/2024 06:04:13   WARNING  Not Found: /static/js/maskedinput.min.js  None
+WARNING:django.request:Not Found: /static/js/maskedinput.min.js
+01/Feb/2024 06:04:13   WARNING  Not Found: /static/js/typed.min.js  None
+WARNING:django.request:Not Found: /static/js/typed.min.js
+01/Feb/2024 06:04:13   WARNING  "GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239
+01/Feb/2024 06:04:13   WARNING  "GET /static/js/typed.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/typed.min.js HTTP/1.1" 404 4239
+01/Feb/2024 06:04:15   WARNING  Not Found: /static/css/owl.carousel.min.css  None
+WARNING:django.request:Not Found: /static/css/owl.carousel.min.css
+01/Feb/2024 06:04:15   WARNING  "GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239
+01/Feb/2024 06:04:15   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+01/Feb/2024 06:04:15   WARNING  Not Found: /static/images/flag_en.png  None
+WARNING:django.request:Not Found: /static/images/flag_en.png
+01/Feb/2024 06:04:15   WARNING  "GET /static/images/flag_en.png HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/images/flag_en.png HTTP/1.1" 404 4239
+01/Feb/2024 06:04:15   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 4239
+01/Feb/2024 06:04:15   WARNING  Not Found: /static/js/typed.min.js  None
+WARNING:django.request:Not Found: /static/js/typed.min.js
+01/Feb/2024 06:04:15   WARNING  Not Found: /static/js/maskedinput.min.js  None
+WARNING:django.request:Not Found: /static/js/maskedinput.min.js
+01/Feb/2024 06:04:15   WARNING  "GET /static/js/typed.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/typed.min.js HTTP/1.1" 404 4239
+01/Feb/2024 06:04:15   WARNING  "GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239
+01/Feb/2024 06:04:17   WARNING  Not Found: /static/css/owl.carousel.min.css  None
+WARNING:django.request:Not Found: /static/css/owl.carousel.min.css
+01/Feb/2024 06:04:17   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+01/Feb/2024 06:04:17   WARNING  "GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239
+01/Feb/2024 06:04:17   WARNING  Not Found: /static/images/flag_en.png  None
+WARNING:django.request:Not Found: /static/images/flag_en.png
+01/Feb/2024 06:04:17   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 4239
+01/Feb/2024 06:04:17   WARNING  "GET /static/images/flag_en.png HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/images/flag_en.png HTTP/1.1" 404 4239
+01/Feb/2024 06:04:17   WARNING  Not Found: /static/js/maskedinput.min.js  None
+WARNING:django.request:Not Found: /static/js/maskedinput.min.js
+01/Feb/2024 06:04:17   WARNING  Not Found: /static/js/typed.min.js  None
+WARNING:django.request:Not Found: /static/js/typed.min.js
+01/Feb/2024 06:04:17   WARNING  "GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239
+01/Feb/2024 06:04:17   WARNING  "GET /static/js/typed.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/typed.min.js HTTP/1.1" 404 4239
+01/Feb/2024 06:04:22   WARNING  Not Found: /static/images/flag_en.png  None
+WARNING:django.request:Not Found: /static/images/flag_en.png
+01/Feb/2024 06:04:22   WARNING  Not Found: /static/css/owl.carousel.min.css  None
+WARNING:django.request:Not Found: /static/css/owl.carousel.min.css
+01/Feb/2024 06:04:22   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+01/Feb/2024 06:04:22   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 4239
+01/Feb/2024 06:04:22   WARNING  "GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239
+01/Feb/2024 06:04:22   WARNING  "GET /static/images/flag_en.png HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/images/flag_en.png HTTP/1.1" 404 4239
+01/Feb/2024 06:04:22   WARNING  Not Found: /static/js/maskedinput.min.js  None
+WARNING:django.request:Not Found: /static/js/maskedinput.min.js
+01/Feb/2024 06:04:22   WARNING  Not Found: /static/js/typed.min.js  None
+WARNING:django.request:Not Found: /static/js/typed.min.js
+01/Feb/2024 06:04:22   WARNING  "GET /static/js/typed.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/typed.min.js HTTP/1.1" 404 4239
+01/Feb/2024 06:04:22   WARNING  "GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239
+01/Feb/2024 06:04:29   WARNING  Not Found: /static/css/owl.carousel.min.css  None
+WARNING:django.request:Not Found: /static/css/owl.carousel.min.css
+01/Feb/2024 06:04:29   WARNING  "GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239
+01/Feb/2024 06:04:29   WARNING  Not Found: /static/images/flag_en.png  None
+WARNING:django.request:Not Found: /static/images/flag_en.png
+01/Feb/2024 06:04:29   WARNING  "GET /static/images/flag_en.png HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/images/flag_en.png HTTP/1.1" 404 4239
+01/Feb/2024 06:04:29   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+01/Feb/2024 06:04:29   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 4239
+01/Feb/2024 06:04:29   WARNING  Not Found: /static/js/maskedinput.min.js  None
+WARNING:django.request:Not Found: /static/js/maskedinput.min.js
+01/Feb/2024 06:04:29   WARNING  Not Found: /static/js/typed.min.js  None
+WARNING:django.request:Not Found: /static/js/typed.min.js
+01/Feb/2024 06:04:29   WARNING  "GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239
+01/Feb/2024 06:04:29   WARNING  "GET /static/js/typed.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/typed.min.js HTTP/1.1" 404 4239
+01/Feb/2024 19:13:10   WARNING  Not Found: /static/css/owl.carousel.min.css  None
+WARNING:django.request:Not Found: /static/css/owl.carousel.min.css
+01/Feb/2024 19:13:10   WARNING  "GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239
+01/Feb/2024 19:13:10   WARNING  Not Found: /static/images/flag_en.png  None
+WARNING:django.request:Not Found: /static/images/flag_en.png
+01/Feb/2024 19:13:10   WARNING  "GET /static/images/flag_en.png HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/images/flag_en.png HTTP/1.1" 404 4239
+01/Feb/2024 19:13:10   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+01/Feb/2024 19:13:10   WARNING  Not Found: /static/js/typed.min.js  None
+WARNING:django.request:Not Found: /static/js/typed.min.js
+01/Feb/2024 19:13:10   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 4239
+01/Feb/2024 19:13:10   WARNING  "GET /static/js/typed.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/typed.min.js HTTP/1.1" 404 4239
+01/Feb/2024 19:13:10   WARNING  Not Found: /static/js/maskedinput.min.js  None
+WARNING:django.request:Not Found: /static/js/maskedinput.min.js
+01/Feb/2024 19:13:10   WARNING  "GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239
+01/Feb/2024 19:13:10   WARNING  Not Found: /static/images/master-na-chas_1.jpg  None
+WARNING:django.request:Not Found: /static/images/master-na-chas_1.jpg
+01/Feb/2024 19:13:10   WARNING  "GET /static/images/master-na-chas_1.jpg HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/images/master-na-chas_1.jpg HTTP/1.1" 404 4239
+01/Feb/2024 19:13:11   WARNING  Not Found: /favicon.ico  None
+WARNING:django.request:Not Found: /favicon.ico
+01/Feb/2024 19:13:11   WARNING  "GET /favicon.ico HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 4239
+01/Feb/2024 19:13:12   WARNING  Not Found: /static/css/owl.carousel.min.css  None
+WARNING:django.request:Not Found: /static/css/owl.carousel.min.css
+01/Feb/2024 19:13:12   WARNING  Not Found: /static/images/flag_en.png  None
+WARNING:django.request:Not Found: /static/images/flag_en.png
+01/Feb/2024 19:13:12   WARNING  "GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239
+01/Feb/2024 19:13:12   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+01/Feb/2024 19:13:12   WARNING  "GET /static/images/flag_en.png HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/images/flag_en.png HTTP/1.1" 404 4239
+01/Feb/2024 19:13:12   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 4239
+01/Feb/2024 19:13:12   WARNING  Not Found: /static/js/typed.min.js  None
+WARNING:django.request:Not Found: /static/js/typed.min.js
+01/Feb/2024 19:13:12   WARNING  Not Found: /static/js/maskedinput.min.js  None
+WARNING:django.request:Not Found: /static/js/maskedinput.min.js
+01/Feb/2024 19:13:12   WARNING  "GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239
+01/Feb/2024 19:13:12   WARNING  "GET /static/js/typed.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/typed.min.js HTTP/1.1" 404 4239
+01/Feb/2024 19:13:16   WARNING  Not Found: /static/images/flag_en.png  None
+WARNING:django.request:Not Found: /static/images/flag_en.png
+01/Feb/2024 19:13:16   WARNING  "GET /static/images/flag_en.png HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/images/flag_en.png HTTP/1.1" 404 4239
+01/Feb/2024 19:13:16   WARNING  Not Found: /static/css/owl.carousel.min.css  None
+WARNING:django.request:Not Found: /static/css/owl.carousel.min.css
+01/Feb/2024 19:13:16   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+01/Feb/2024 19:13:16   WARNING  "GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239
+01/Feb/2024 19:13:16   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 4239
+01/Feb/2024 19:13:16   WARNING  Not Found: /static/js/typed.min.js  None
+WARNING:django.request:Not Found: /static/js/typed.min.js
+01/Feb/2024 19:13:16   WARNING  "GET /static/js/typed.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/typed.min.js HTTP/1.1" 404 4239
+01/Feb/2024 19:13:16   WARNING  Not Found: /static/js/maskedinput.min.js  None
+WARNING:django.request:Not Found: /static/js/maskedinput.min.js
+01/Feb/2024 19:13:16   WARNING  "GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239
+01/Feb/2024 19:13:16   WARNING  Not Found: /static/images/flag_en.png  None
+WARNING:django.request:Not Found: /static/images/flag_en.png
+01/Feb/2024 19:13:16   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+01/Feb/2024 19:13:16   WARNING  Not Found: /static/css/owl.carousel.min.css  None
+WARNING:django.request:Not Found: /static/css/owl.carousel.min.css
+01/Feb/2024 19:13:16   WARNING  "GET /static/images/flag_en.png HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/images/flag_en.png HTTP/1.1" 404 4239
+01/Feb/2024 19:13:16   WARNING  "GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239
+01/Feb/2024 19:13:16   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 4239
+01/Feb/2024 19:13:16   WARNING  Not Found: /static/js/maskedinput.min.js  None
+WARNING:django.request:Not Found: /static/js/maskedinput.min.js
+01/Feb/2024 19:13:16   WARNING  Not Found: /static/js/typed.min.js  None
+WARNING:django.request:Not Found: /static/js/typed.min.js
+01/Feb/2024 19:13:16   WARNING  "GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239
+01/Feb/2024 19:13:16   WARNING  "GET /static/js/typed.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/typed.min.js HTTP/1.1" 404 4239
+01/Feb/2024 19:13:22   WARNING  Not Found: /static/images/flag_en.png  None
+WARNING:django.request:Not Found: /static/images/flag_en.png
+01/Feb/2024 19:13:22   WARNING  Not Found: /static/css/owl.carousel.min.css  None
+WARNING:django.request:Not Found: /static/css/owl.carousel.min.css
+01/Feb/2024 19:13:22   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+01/Feb/2024 19:13:22   WARNING  "GET /static/images/flag_en.png HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/images/flag_en.png HTTP/1.1" 404 4239
+01/Feb/2024 19:13:22   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 4239
+01/Feb/2024 19:13:22   WARNING  "GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239
+01/Feb/2024 19:13:22   WARNING  Not Found: /static/js/typed.min.js  None
+WARNING:django.request:Not Found: /static/js/typed.min.js
+01/Feb/2024 19:13:22   WARNING  "GET /static/js/typed.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/typed.min.js HTTP/1.1" 404 4239
+01/Feb/2024 19:13:22   WARNING  Not Found: /static/js/maskedinput.min.js  None
+WARNING:django.request:Not Found: /static/js/maskedinput.min.js
+01/Feb/2024 19:13:22   WARNING  "GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239
+01/Feb/2024 19:13:23   WARNING  Not Found: /static/images/flag_en.png  None
+WARNING:django.request:Not Found: /static/images/flag_en.png
+01/Feb/2024 19:13:23   WARNING  Not Found: /static/css/owl.carousel.min.css  None
+WARNING:django.request:Not Found: /static/css/owl.carousel.min.css
+01/Feb/2024 19:13:23   WARNING  "GET /static/images/flag_en.png HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/images/flag_en.png HTTP/1.1" 404 4239
+01/Feb/2024 19:13:23   WARNING  Not Found: /media/images/20231222_173850.jpg  None
+WARNING:django.request:Not Found: /media/images/20231222_173850.jpg
+01/Feb/2024 19:13:23   WARNING  "GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239
+01/Feb/2024 19:13:23   WARNING  "GET /media/images/20231222_173850.jpg HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /media/images/20231222_173850.jpg HTTP/1.1" 404 4239
+01/Feb/2024 19:13:23   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+01/Feb/2024 19:13:23   WARNING  Not Found: /static/js/typed.min.js  None
+WARNING:django.request:Not Found: /static/js/typed.min.js
+01/Feb/2024 19:13:23   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 4239
+01/Feb/2024 19:13:23   WARNING  "GET /static/js/typed.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/typed.min.js HTTP/1.1" 404 4239
+01/Feb/2024 19:13:23   WARNING  Not Found: /static/js/maskedinput.min.js  None
+WARNING:django.request:Not Found: /static/js/maskedinput.min.js
+01/Feb/2024 19:13:23   WARNING  "GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239
+01/Feb/2024 19:13:24   WARNING  Not Found: /static/css/owl.carousel.min.css  None
+WARNING:django.request:Not Found: /static/css/owl.carousel.min.css
+01/Feb/2024 19:13:24   WARNING  "GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4113  None
+WARNING:django.server:"GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4113
+01/Feb/2024 19:13:24   WARNING  Not Found: /static/images/flag_en.png  None
+WARNING:django.request:Not Found: /static/images/flag_en.png
+01/Feb/2024 19:13:24   WARNING  "GET /static/images/flag_en.png HTTP/1.1" 404 4113  None
+WARNING:django.server:"GET /static/images/flag_en.png HTTP/1.1" 404 4113
+01/Feb/2024 19:13:24   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+01/Feb/2024 19:13:24   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 4113  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 4113
+01/Feb/2024 19:13:24   WARNING  Not Found: /static/js/typed.min.js  None
+WARNING:django.request:Not Found: /static/js/typed.min.js
+01/Feb/2024 19:13:24   WARNING  "GET /static/js/typed.min.js HTTP/1.1" 404 4113  None
+WARNING:django.server:"GET /static/js/typed.min.js HTTP/1.1" 404 4113
+01/Feb/2024 19:13:24   WARNING  Not Found: /static/js/maskedinput.min.js  None
+WARNING:django.request:Not Found: /static/js/maskedinput.min.js
+01/Feb/2024 19:13:24   WARNING  "GET /static/js/maskedinput.min.js HTTP/1.1" 404 4113  None
+WARNING:django.server:"GET /static/js/maskedinput.min.js HTTP/1.1" 404 4113
+01/Feb/2024 19:13:24   WARNING  Not Found: /static/fonts/broken-cable.svg  None
+WARNING:django.request:Not Found: /static/fonts/broken-cable.svg
+01/Feb/2024 19:13:24   WARNING  "GET /static/fonts/broken-cable.svg HTTP/1.1" 404 4113  None
+WARNING:django.server:"GET /static/fonts/broken-cable.svg HTTP/1.1" 404 4113
+01/Feb/2024 19:13:24   WARNING  Not Found: /static/fonts/living-room.svg  None
+WARNING:django.request:Not Found: /static/fonts/living-room.svg
+01/Feb/2024 19:13:24   WARNING  "GET /static/fonts/living-room.svg HTTP/1.1" 404 4113  None
+WARNING:django.server:"GET /static/fonts/living-room.svg HTTP/1.1" 404 4113
+01/Feb/2024 19:13:24   WARNING  Not Found: /media/images/muzg-na-chas.jpg  None
+WARNING:django.request:Not Found: /media/images/muzg-na-chas.jpg
+01/Feb/2024 19:13:24   WARNING  "GET /media/images/muzg-na-chas.jpg HTTP/1.1" 404 4113  None
+WARNING:django.server:"GET /media/images/muzg-na-chas.jpg HTTP/1.1" 404 4113
+01/Feb/2024 19:13:28   WARNING  Not Found: /static/css/owl.carousel.min.css  None
+WARNING:django.request:Not Found: /static/css/owl.carousel.min.css
+01/Feb/2024 19:13:28   WARNING  Not Found: /static/js/counter.js  None
+01/Feb/2024 19:13:28   WARNING  Not Found: /static/images/flag_en.png  None
+WARNING:django.request:Not Found: /static/js/counter.js
+WARNING:django.request:Not Found: /static/images/flag_en.png
+01/Feb/2024 19:13:28   WARNING  "GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4113  None
+WARNING:django.server:"GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4113
+01/Feb/2024 19:13:28   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 4113  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 4113
+01/Feb/2024 19:13:28   WARNING  "GET /static/images/flag_en.png HTTP/1.1" 404 4113  None
+WARNING:django.server:"GET /static/images/flag_en.png HTTP/1.1" 404 4113
+01/Feb/2024 19:13:28   WARNING  Not Found: /static/js/typed.min.js  None
+WARNING:django.request:Not Found: /static/js/typed.min.js
+01/Feb/2024 19:13:28   WARNING  Not Found: /static/js/maskedinput.min.js  None
+WARNING:django.request:Not Found: /static/js/maskedinput.min.js
+01/Feb/2024 19:13:28   WARNING  "GET /static/js/typed.min.js HTTP/1.1" 404 4113  None
+WARNING:django.server:"GET /static/js/typed.min.js HTTP/1.1" 404 4113
+01/Feb/2024 19:13:28   WARNING  "GET /static/js/maskedinput.min.js HTTP/1.1" 404 4113  None
+WARNING:django.server:"GET /static/js/maskedinput.min.js HTTP/1.1" 404 4113
+01/Feb/2024 19:13:30   WARNING  Not Found: /static/images/flag_en.png  None
+WARNING:django.request:Not Found: /static/images/flag_en.png
+01/Feb/2024 19:13:30   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+01/Feb/2024 19:13:30   WARNING  Not Found: /static/css/owl.carousel.min.css  None
+WARNING:django.request:Not Found: /static/css/owl.carousel.min.css
+01/Feb/2024 19:13:30   WARNING  "GET /static/images/flag_en.png HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/images/flag_en.png HTTP/1.1" 404 4239
+01/Feb/2024 19:13:30   WARNING  "GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239  None
+01/Feb/2024 19:13:30   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4239
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 4239
+01/Feb/2024 19:13:30   WARNING  Not Found: /static/js/maskedinput.min.js  None
+WARNING:django.request:Not Found: /static/js/maskedinput.min.js
+01/Feb/2024 19:13:30   WARNING  Not Found: /static/js/typed.min.js  None
+WARNING:django.request:Not Found: /static/js/typed.min.js
+01/Feb/2024 19:13:30   WARNING  "GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/maskedinput.min.js HTTP/1.1" 404 4239
+01/Feb/2024 19:13:30   WARNING  "GET /static/js/typed.min.js HTTP/1.1" 404 4239  None
+WARNING:django.server:"GET /static/js/typed.min.js HTTP/1.1" 404 4239
+01/Feb/2024 19:13:49   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
 WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-30/Jan/2024 16:14:36   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+01/Feb/2024 19:13:52   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
 WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-30/Jan/2024 16:14:39   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+01/Feb/2024 19:13:53   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
 WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-30/Jan/2024 16:14:40   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+01/Feb/2024 19:14:35   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
 WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-30/Jan/2024 16:14:47   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+01/Feb/2024 19:14:36   WARNING  Not Found: /favicon.ico  None
+WARNING:django.request:Not Found: /favicon.ico
+01/Feb/2024 19:14:36   WARNING  "GET /favicon.ico HTTP/1.1" 404 16307  None
+WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 16307
+01/Feb/2024 19:14:37   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
 WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-30/Jan/2024 16:29:23   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+01/Feb/2024 19:14:40   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
 WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-30/Jan/2024 16:29:46   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+01/Feb/2024 19:15:10   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
 WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-30/Jan/2024 16:30:04   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+01/Feb/2024 19:15:10   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
 WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-30/Jan/2024 16:30:12   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+01/Feb/2024 19:15:11   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
 WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-30/Jan/2024 16:30:15   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+01/Feb/2024 19:15:14   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
 WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-30/Jan/2024 16:38:22   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+01/Feb/2024 19:16:52   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
 WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-30/Jan/2024 16:38:24   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+01/Feb/2024 19:17:28   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
 WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
-30/Jan/2024 16:38:30   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+01/Feb/2024 19:17:31   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+01/Feb/2024 19:17:33   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+01/Feb/2024 19:18:40   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+01/Feb/2024 19:18:54   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+01/Feb/2024 19:18:55   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+01/Feb/2024 19:18:56   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+01/Feb/2024 19:19:18   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+01/Feb/2024 19:19:20   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+01/Feb/2024 19:19:25   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+01/Feb/2024 19:19:26   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+01/Feb/2024 19:19:30   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+01/Feb/2024 19:19:43   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+01/Feb/2024 19:19:49   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+01/Feb/2024 19:19:57   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+01/Feb/2024 19:20:01   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+01/Feb/2024 19:20:11   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+01/Feb/2024 19:20:46   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+01/Feb/2024 19:20:53   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+01/Feb/2024 19:20:55   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+01/Feb/2024 19:21:11   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+01/Feb/2024 19:21:19   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+01/Feb/2024 19:21:29   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+01/Feb/2024 19:21:30   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+01/Feb/2024 19:21:31   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+01/Feb/2024 19:21:34   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+01/Feb/2024 19:21:37   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+01/Feb/2024 19:21:38   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+01/Feb/2024 19:21:38   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+02/Feb/2024 13:42:23   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+02/Feb/2024 13:42:24   WARNING  Not Found: /favicon.ico  None
+WARNING:django.request:Not Found: /favicon.ico
+02/Feb/2024 13:42:24   WARNING  "GET /favicon.ico HTTP/1.1" 404 16307  None
+WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 16307
+02/Feb/2024 13:42:26   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+02/Feb/2024 13:42:27   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+02/Feb/2024 13:43:44   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+02/Feb/2024 13:43:50   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+02/Feb/2024 13:43:51   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+02/Feb/2024 13:44:08   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+02/Feb/2024 13:44:11   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+02/Feb/2024 13:44:31   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+02/Feb/2024 13:44:39   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+02/Feb/2024 13:45:00   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+02/Feb/2024 13:45:37   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+02/Feb/2024 13:45:47   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+02/Feb/2024 13:45:48   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+02/Feb/2024 13:45:52   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+02/Feb/2024 13:46:06   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+02/Feb/2024 13:46:13   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+02/Feb/2024 13:46:21   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+02/Feb/2024 13:46:24   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+02/Feb/2024 13:46:26   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+02/Feb/2024 13:47:09   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+02/Feb/2024 13:47:11   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+03/Feb/2024 07:54:15   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+03/Feb/2024 07:54:18   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+03/Feb/2024 07:54:24   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+03/Feb/2024 07:54:27   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+03/Feb/2024 07:54:48   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+03/Feb/2024 07:55:08   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+03/Feb/2024 07:55:13   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+03/Feb/2024 07:55:26   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+03/Feb/2024 07:55:36   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+03/Feb/2024 07:55:50   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+03/Feb/2024 07:55:56   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+03/Feb/2024 07:56:13   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+03/Feb/2024 07:56:24   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+03/Feb/2024 07:56:25   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+03/Feb/2024 07:56:27   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+03/Feb/2024 07:58:51   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+03/Feb/2024 07:58:53   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+03/Feb/2024 07:58:54   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+03/Feb/2024 07:58:57   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+03/Feb/2024 07:58:59   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+03/Feb/2024 07:59:09   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+03/Feb/2024 07:59:10   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+03/Feb/2024 15:45:10   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+03/Feb/2024 15:45:10   WARNING  Not Found: /favicon.ico  None
+WARNING:django.request:Not Found: /favicon.ico
+03/Feb/2024 15:45:10   WARNING  "GET /favicon.ico HTTP/1.1" 404 16307  None
+WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 16307
+03/Feb/2024 15:45:12   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+03/Feb/2024 15:45:13   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+03/Feb/2024 15:45:29   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+03/Feb/2024 15:45:34   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+03/Feb/2024 15:45:48   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+03/Feb/2024 15:46:24   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+03/Feb/2024 15:46:29   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+03/Feb/2024 23:45:33   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+03/Feb/2024 23:45:34   WARNING  Not Found: /favicon.ico  None
+WARNING:django.request:Not Found: /favicon.ico
+03/Feb/2024 23:45:34   WARNING  "GET /favicon.ico HTTP/1.1" 404 16307  None
+WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 16307
+03/Feb/2024 23:45:42   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+03/Feb/2024 23:46:00   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+03/Feb/2024 23:46:03   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+04/Feb/2024 11:21:42   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+04/Feb/2024 11:21:43   WARNING  Not Found: /favicon.ico  None
+WARNING:django.request:Not Found: /favicon.ico
+04/Feb/2024 11:21:43   WARNING  "GET /favicon.ico HTTP/1.1" 404 16307  None
+WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 16307
+04/Feb/2024 11:21:49   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+04/Feb/2024 11:22:43   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+04/Feb/2024 11:22:49   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+04/Feb/2024 11:22:51   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+04/Feb/2024 11:22:53   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+04/Feb/2024 11:22:54   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+04/Feb/2024 11:22:57   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+04/Feb/2024 11:22:57   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+04/Feb/2024 11:22:58   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+04/Feb/2024 11:22:58   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+04/Feb/2024 11:22:58   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+04/Feb/2024 11:22:58   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+04/Feb/2024 11:23:00   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+04/Feb/2024 11:33:29   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+04/Feb/2024 11:33:33   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+04/Feb/2024 17:13:24   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+04/Feb/2024 17:13:24   WARNING  Not Found: /favicon.ico  None
+WARNING:django.request:Not Found: /favicon.ico
+04/Feb/2024 17:13:24   WARNING  "GET /favicon.ico HTTP/1.1" 404 16307  None
+WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 16307
+04/Feb/2024 17:13:28   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+04/Feb/2024 17:13:32   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+04/Feb/2024 17:13:33   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+04/Feb/2024 17:13:34   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+04/Feb/2024 17:13:39   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+04/Feb/2024 17:13:47   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 14:23:03   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 14:23:04   WARNING  Not Found: /favicon.ico  None
+WARNING:django.request:Not Found: /favicon.ico
+05/Feb/2024 14:23:04   WARNING  "GET /favicon.ico HTTP/1.1" 404 16307  None
+WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 16307
+05/Feb/2024 14:23:07   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 14:23:10   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 14:23:11   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 14:23:13   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 14:23:24   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 14:24:01   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 14:24:07   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 14:24:23   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 14:25:19   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 14:25:23   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 14:25:40   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 14:25:43   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 14:25:48   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 14:26:06   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 14:26:24   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 14:26:40   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 14:26:46   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 14:27:02   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 14:27:32   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 14:27:36   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 14:27:39   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 14:27:42   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 14:27:54   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 14:28:18   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 14:28:22   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 14:28:39   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 14:28:45   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 14:30:10   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 14:30:38   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 14:30:49   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 14:30:52   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 14:30:54   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 14:31:04   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 14:32:22   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 14:32:26   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 14:32:28   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 14:32:30   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 14:32:31   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 14:32:34   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 14:32:38   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 14:32:43   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 14:32:52   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 14:32:54   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 14:32:56   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 14:32:57   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 14:42:40   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 14:47:32   WARNING  Not Found: /фв  None
+WARNING:django.request:Not Found: /фв
+05/Feb/2024 14:47:32   WARNING  "GET /%D1%84%D0%B2 HTTP/1.1" 404 16295  None
+WARNING:django.server:"GET /%D1%84%D0%B2 HTTP/1.1" 404 16295
+05/Feb/2024 15:07:52   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 15:07:55   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 15:07:57   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 15:08:29   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 15:08:32   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 15:10:49   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 15:12:40   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
 WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
