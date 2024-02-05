@@ -24,14 +24,14 @@ def send_order_information(inst: int):
     subject_ = f'<b>Заказ на работы № {instance.pk} от {instance.time_in.strftime("%m/%d/%Y")}</b>'
     map_= Location(instance).print_yandex_location()
     text = subject_ + f'\n ' \
-                      f'ИМЯ: {instance.customer_name} \n' \
-                      f'ТЕЛЕФОН: {instance.customer_phone} \n ' \
-                      f'ТЕЛЕГРАМ: <a href = "https://t.me/{instance.customer_telegram}" >{instance.customer_telegram}</a> \n' \
-                      f'АДРЕС: {instance.address_street_app}, ' \
+                      f'NAME: {instance.customer_name} \n' \
+                      f'PHONE: {instance.customer_phone} \n ' \
+                      f'TELEGRAM: <a href = "https://t.me/{instance.customer_telegram}" >{instance.customer_telegram}</a> \n' \
+                      f'ADDRESS: {instance.address_street_app}, ' \
                       f'{instance.address_num} \n ' \
-                      f'ОПИСАНИЕ ПРОБЛЕМЫ: {instance.text_order} \n' \
+                      f'Description: {instance.text_order} \n' \
                       f'{map_}  \n' \
-                      f'<b>ОТПРАВИТЬ ЗАКАЗ МАСТЕРУ:</b>' \
+                      f'<b>Send a request to the master:</b>' \
 
     bot = telebot.TeleBot(TOKEN)
     bot.send_message(CHAT_ID, text, reply_markup=get_telegram_button(repairer, instance.pk),  parse_mode='HTML')

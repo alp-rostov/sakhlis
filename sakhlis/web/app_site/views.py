@@ -161,23 +161,23 @@ class Statistica(BaseClassExeption, LoginRequiredMixin, TemplateView):
         context = super().get_context_data(**kwargs)
 
         context['d'] = Graph(DataFromInvoice().get_quantity_of_orders_by_type(repairer=self.request.user),
-                             'service_id__type', 'count', WORK_CHOICES_, 'Структура заказов, кол.', '') \
+                             'service_id__type', 'count', WORK_CHOICES_, 'Order structure, quantity.', '') \
                         .make_graf_pie()
 
         context['d_'] = Graph(DataFromInvoice().get_cost_of_orders_by_type(repairer=self.request.user),
-                            'service_id__type', 'count', WORK_CHOICES_, 'Структура заказов, лар.', '') \
+                            'service_id__type', 'count', WORK_CHOICES_, 'Order structure, lar.', '') \
                         .make_graf_pie()
 
         context['f'] = Graph(DataFromOrderList().get_monthly_order_cost_from_OrderList(repairer=self.request.user),
-                            'time_in__month', 'count', MONTH_, 'Выручка', 'lar') \
+                            'time_in__month', 'count', MONTH_, 'Earnings', 'lar') \
                         .make_graf_bar()
 
         context['g'] = Graph(DataFromOrderList().get_monthly_order_quantity_from_OrderList(repairer=self.request.user),
-                            'time_in__month',  'count', MONTH_, 'Количество заказов', 'кол') \
+                            'time_in__month',  'count', MONTH_, 'Order`s quantity', 'quantity') \
                         .make_graf_bar()
 
         context['hh'] = Graph(DataFromOrderList().get_dayly_cost_of_orders(repairer=self.request.user),
-                            'time_in__date', 'count', None, 'Динамика за 30 дней.', '') \
+                            'time_in__date', 'count', None, 'Dynamics', '') \
                         .make_graf_plot()
         return context
 

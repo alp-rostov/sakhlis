@@ -10,31 +10,31 @@
                 <div class="col-md-4">
                     <div id="time_in">{{ i.time_in }}</div><br>
 
-                    <a href="{{ the_url_invoice }}" id="order_{{ i.pk }}" class="h5 mycolor">Заявка № {{ i.pk }}</a><br>
+                    <a href="{{ the_url_invoice }}" id="order_{{ i.pk }}" class="h5 mycolor">Order № {{ i.pk }}</a><br>
 
-                    <a href="{{ the_url_delete }}" id="delete_{{ i.pk }}" class="mycolor" title="Удалить"><i class="fas fa-trash text-secondary mt-3"></i></a>&nbsp&nbsp&nbsp
-                      <a href="{{ the_url_update }}" id="edit_{{ i.pk }}" title="Редактировать"><i class="fas fa-pen text-secondary mt-3"> </i></a>&nbsp&nbsp&nbsp
-                    <a href="#" id="{{ i.pk }}" class="copy" title="Копировать"><i class="fas fa-copy text-secondary mt-3"></i></a>
+                    <a href="{{ the_url_delete }}" id="delete_{{ i.pk }}" class="mycolor" title="Delete"><i class="fas fa-trash text-secondary mt-3"></i></a>&nbsp&nbsp&nbsp
+                      <a href="{{ the_url_update }}" id="edit_{{ i.pk }}" title="Edit"><i class="fas fa-pen text-secondary mt-3"> </i></a>&nbsp&nbsp&nbsp
+                    <a href="#" id="{{ i.pk }}" class="copy" title="Copy"><i class="fas fa-copy text-secondary mt-3"></i></a>
 
                 </div>
                 <div class="col-md-4 ">
                     <span id="customer_name_{{ i.pk }}" class="fas fa-user prefix text-secondary mt-3" aria-hidden="true"> {{ i.customer_name|capfirst }}</span><br>
 
-                    <a href="tel:{{ i.customer_phone }}" title="Телефон" id="customer_phone_{{ i.pk }}" class="fas fa-phone prefix text-secondary mt-3" aria-hidden="true">
+                    <a href="tel:{{ i.customer_phone }}" title="Phone" id="customer_phone_{{ i.pk }}" class="fas fa-phone prefix text-secondary mt-3" aria-hidden="true">
                         {{ i.customer_phone }}</a><br>
 
 
-                    <a href="https://t.me/{{ i.customer_telegram|cut:'@' }}" title="Телеграм" id="customer_telegram_{{ i.pk }}"
+                    <a href="https://t.me/{{ i.customer_telegram|cut:'@' }}" title="Telegram" id="customer_telegram_{{ i.pk }}"
                        class ="fas fa fa-paper-plane text-secondary mt-3" aria-hidden="true">
                          @{{i.customer_telegram}}</a><br>
 
                     {% if i.location_longitude  %}
                     <a href= 'https://yandex.ru/maps/?pt={{ i.location_longitude|change_comma_to_dot }},
                     {{ i.location_latitude|change_comma_to_dot }}&z=18&l=map' id="map_{{ i.pk }}" class="fas fa-home prefix text-secondary mt-3"
-                    title="Открыть карту" aria-hidden="true" >
+                    title="Open map" aria-hidden="true" >
                     <i  class="fas fa-map-marker prefix text-secondary mt-3" aria-hidden="true"></i>
                     {% elif i.pk and i.location_longitude is None %}
-                        <a href="#" title="Скопировать адрес" class="fas fa-home prefix text-secondary mt-3" aria-hidden="true" id="map_{{ i.pk }}" onclick="copyToClipboard($(this))">
+                        <a href="#" title="Copy address" class="fas fa-home prefix text-secondary mt-3" aria-hidden="true" id="map_{{ i.pk }}" onclick="copyToClipboard($(this))">
                         <i class="fas fa-copy text-secondary mt-3"></i>
                     {% else %}
                         <a href="" title="" class="fas fa-home prefix text-secondary mt-3" aria-hidden="true" id="map_" onclick="copyToClipboard($(this))">

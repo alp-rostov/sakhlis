@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Repair service in Tbilisi</title>
 
 
     <!-- Bootstrap CSS -->
@@ -50,36 +50,36 @@ top: 0;
 {% #menu %}
 
     <li class="nav-item mr-4">
-        <a class="nav-link" href="{% url 'home' %}">Главная</a>
+        <a class="nav-link" href="{% url 'home' %}">Mail</a>
     </li>
 
     <li class="nav-item  mr-4">
         {% if the_url1 in request.get_full_path  %}
-        <a class="nav-link " href="{{ the_url1 }}"><b>Мои заказы</b></a>
+        <a class="nav-link " href="{{ the_url1 }}"><b>My orders</b></a>
         {% else %}
-        <a class="nav-link" href="{{ the_url1 }}">Мои заказы</a>
+        <a class="nav-link" href="{{ the_url1 }}">My orders</a>
         {% endif %}
     </li>
 
     <li class="nav-item mr-4" class="nav-item mr-4">
         {% if the_url2 in request.get_full_path  %}
-        <a class="nav-link"  href="{{ the_url2 }}"><b>Отчетность</b></a>
+        <a class="nav-link"  href="{{ the_url2 }}"><b>Statistics</b></a>
         {% else %}
-        <a class="nav-link"  href="{{ the_url2 }}">Отчетность</a>
+        <a class="nav-link"  href="{{ the_url2 }}">Statistics</a>
         {% endif %}
     </li>
 
     <li class="nav-item mr-4">
         {% if the_url3 in request.get_full_path  %}
-        <a class="nav-link" href="{{ the_url3 }}"><b>Мои данные</b></a>
+        <a class="nav-link" href="{{ the_url3 }}"><b>My details</b></a>
         {% else %}
-        <a class="nav-link" href="{{ the_url3 }}">Мои данные</a>
+        <a class="nav-link" href="{{ the_url3 }}">My details</a>
         {% endif %}
     </li>
 
     {% if request.user.is_authenticated %}
         <li class="nav-item mr-4">
-            <a class="nav-link" href="{% url 'logout' %}">{{ user.username }} : Выйти</a>
+            <a class="nav-link" href="{% url 'logout' %}">{{ user.username }} : Exit</a>
         </li>
     {% endif %}
 
@@ -92,26 +92,26 @@ top: 0;
                             {% endblock subbody%}
 
                             {% if request.GET.work_status == 'SND' %}
-                            <a href="{% url 'list_order' %}?work_status=SND"><b>Новые заказы</b></a> |
+                            <a href="{% url 'list_order' %}?work_status=SND"><b>New orders</b></a> |
                             {% else %}
-                            <a href="{% url 'list_order' %}?work_status=SND">Новые заказы</a> |
+                            <a href="{% url 'list_order' %}?work_status=SND">New orders</a> |
                             {% endif %}
 
                             {% if request.GET.work_status == 'RCV' %}
-                            <a href="{% url 'list_order'%}?work_status=RCV"><b>Заявки в работе</b></a> |
+                            <a href="{% url 'list_order'%}?work_status=RCV"><b>Orders in progress</b></a> |
                             {% else %}
-                            <a href="{% url 'list_order'%}?work_status=RCV">Заявки в работе</a> |
+                            <a href="{% url 'list_order'%}?work_status=RCV">Orders in progress</a> |
                             {% endif %}
 
                             {% if request.GET.work_status == 'END' %}
-                            <a href="{% url 'list_order'%}?work_status=END"><b>Заявки оконченные</b></a> |
+                            <a href="{% url 'list_order'%}?work_status=END"><b>Completed orders</b></a> |
                             {% else %}
-                            <a href="{% url 'list_order'%}?work_status=END">Заявки оконченные</a> |
+                            <a href="{% url 'list_order'%}?work_status=END">Completed orders</a> |
                             {% endif %}
 
 
                             {% if the_url4 in request.get_full_path %}
-                            <a href="{% url 'search-order' %}" class="fa fa-search fa-border " aria-hidden="true" title="Поиск"><b></b></a>
+                            <a href="{% url 'search-order' %}" class="fa fa-search fa-border " aria-hidden="true" title="find"><b></b></a>
                             {% else %}
                             <a href="{% url 'search-order' %}" class="fa fa-search fa-border" aria-hidden="true"></a>
                             {% endif %}
