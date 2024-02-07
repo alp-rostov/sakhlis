@@ -10,7 +10,7 @@ class OrderFilter(FilterSet):
     time_in_sence = DateFilter(
         field_name="time_in__date",
         widget=forms.DateInput(attrs={'type': 'date'}),
-        label='От',
+        label='from',
         lookup_expr='gte'
     )
 
@@ -18,63 +18,69 @@ class OrderFilter(FilterSet):
     time_in_until = DateFilter(
         field_name="time_in__date",
         widget=forms.DateInput(attrs={'type': 'date'}),
-        label='До',
+        label='to',
         lookup_expr='lte'
     )
 
 
-
-
     repairer_id = CharFilter(
         widget=forms.TextInput(attrs={"class": "hidden"}),
-        label='Мастер-',
+        label='Master-',
         lookup_expr='exact',
 
     )
 
     adress_street_app = CharFilter(
         field_name='address_street_app',
-        label='Улица',
+        label='Street',
         lookup_expr='icontains',
 
     )
 
     address_num = CharFilter(
         field_name='address_num',
-        label='Номер дома',
+        label='House number',
         lookup_expr='icontains',
 
     )
 
     customer_name = CharFilter(
         field_name='customer_name',
-        label='Имя заказчика',
+        label='Сustomer name',
         lookup_expr='icontains',
 
     )
 
     customer_phone = CharFilter(
         field_name='customer_phone',
-        label='Телефон',
+        label='Phone',
         lookup_expr='icontains',
 
     )
 
     customer_telegram = CharFilter(
         field_name='customer_telegram',
-        label='Телеграм',
+        label='Telegram',
         lookup_expr='icontains',
 
     )
 
     address_city = ChoiceFilter(
         field_name='address_city',
-        label='Город',
+        label='City',
         lookup_expr='icontains',
         choices=CITY_CHOICES,
 
+    )
+
+    address_city = ChoiceFilter(
+        field_name='address_city',
+        label='City',
+        lookup_expr='icontains',
+        choices=CITY_CHOICES,
 
     )
+
     class Meta:
         model = OrderList
         fields = ['order_status', 'repairer_id', 'address_city']

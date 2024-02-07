@@ -37,7 +37,7 @@ QUANTITY_CHOICES = [
 
 ORDER_STATUS = [
     ('BEG', 'Request received'),
-    ('SND', 'Request has been sent to the master'),
+    ('SND', 'Request sent to the master'),
     ('RCV', 'Master accepted the request'),
     ('END', 'Request finished'),
 ]

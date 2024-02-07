@@ -1976,3 +1976,1243 @@ WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
 WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
 05/Feb/2024 20:49:19   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
 WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 20:54:04   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 20:54:08   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 20:54:15   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 20:54:32   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 20:54:39   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 20:54:41   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 20:55:56   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 20:56:11   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 20:56:16   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 21:50:37   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 21:50:54   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 21:51:04   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 21:51:05   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 21:51:07   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 21:51:09   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 21:51:10   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 21:51:10   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 21:51:11   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 21:51:12   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 21:51:12   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 21:51:13   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 21:51:14   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 21:51:14   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 21:51:27   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 22:37:40   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 22:37:43   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 22:37:44   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 22:37:50   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 22:38:04   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+05/Feb/2024 22:38:11   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+06/Feb/2024 06:52:25   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+06/Feb/2024 06:52:25   WARNING  Not Found: /favicon.ico  None
+WARNING:django.request:Not Found: /favicon.ico
+06/Feb/2024 06:52:25   WARNING  "GET /favicon.ico HTTP/1.1" 404 15499  None
+WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 15499
+06/Feb/2024 06:53:42   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+06/Feb/2024 06:55:16   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+06/Feb/2024 06:55:18   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+06/Feb/2024 06:55:23   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+06/Feb/2024 06:55:47   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+06/Feb/2024 06:55:53   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+06/Feb/2024 06:57:52   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+06/Feb/2024 07:00:13   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+06/Feb/2024 07:00:17   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+06/Feb/2024 07:00:58   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+06/Feb/2024 07:03:50   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+06/Feb/2024 07:06:12   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+06/Feb/2024 07:06:37   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+06/Feb/2024 07:06:51   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+06/Feb/2024 07:06:57   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+06/Feb/2024 07:07:00   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+06/Feb/2024 07:07:53   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+06/Feb/2024 07:07:54   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+06/Feb/2024 20:15:12   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+06/Feb/2024 20:15:13   WARNING  Not Found: /favicon.ico  None
+WARNING:django.request:Not Found: /favicon.ico
+06/Feb/2024 20:15:13   WARNING  "GET /favicon.ico HTTP/1.1" 404 15499  None
+WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 15499
+06/Feb/2024 20:15:34   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+06/Feb/2024 20:18:46   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+06/Feb/2024 20:19:29   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+06/Feb/2024 20:19:30   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+06/Feb/2024 20:19:33   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+06/Feb/2024 20:19:44   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+06/Feb/2024 20:20:06   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+06/Feb/2024 20:20:10   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+06/Feb/2024 20:20:18   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+06/Feb/2024 20:20:27   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+06/Feb/2024 20:26:35   ERROR  Invalid HTTP_HOST header: '0.0.0.0:8084'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.  (<class 'django.core.exceptions.DisallowedHost'>, DisallowedHost("Invalid HTTP_HOST header: '0.0.0.0:8084'. You may need to add '0.0.0.0' to ALLOWED_HOSTS."), <traceback object at 0x7fd0f7a1d040>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/http/request.py", line 167, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '0.0.0.0:8084'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+06/Feb/2024 20:26:35   ERROR  Invalid HTTP_HOST header: '0.0.0.0:8084'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.  (<class 'django.core.exceptions.DisallowedHost'>, DisallowedHost("Invalid HTTP_HOST header: '0.0.0.0:8084'. You may need to add '0.0.0.0' to ALLOWED_HOSTS."), <traceback object at 0x7fd0f7926240>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/http/request.py", line 167, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '0.0.0.0:8084'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+06/Feb/2024 20:26:37   ERROR  Invalid HTTP_HOST header: '0.0.0.0:8084'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.  (<class 'django.core.exceptions.DisallowedHost'>, DisallowedHost("Invalid HTTP_HOST header: '0.0.0.0:8084'. You may need to add '0.0.0.0' to ALLOWED_HOSTS."), <traceback object at 0x7fd0f79c3180>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/http/request.py", line 167, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '0.0.0.0:8084'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+06/Feb/2024 20:26:37   ERROR  Invalid HTTP_HOST header: '0.0.0.0:8084'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.  (<class 'django.core.exceptions.DisallowedHost'>, DisallowedHost("Invalid HTTP_HOST header: '0.0.0.0:8084'. You may need to add '0.0.0.0' to ALLOWED_HOSTS."), <traceback object at 0x7fd0f79c5f00>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/http/request.py", line 167, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '0.0.0.0:8084'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+07/Feb/2024 15:15:36   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+07/Feb/2024 15:15:37   WARNING  Not Found: /favicon.ico  None
+WARNING:django.request:Not Found: /favicon.ico
+07/Feb/2024 15:15:37   WARNING  "GET /favicon.ico HTTP/1.1" 404 15499  None
+WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 15499
+07/Feb/2024 15:15:39   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+07/Feb/2024 15:15:44   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+07/Feb/2024 15:15:58   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+07/Feb/2024 18:49:40   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+07/Feb/2024 18:49:53   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+07/Feb/2024 18:50:01   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+07/Feb/2024 18:50:05   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+07/Feb/2024 22:22:01   ERROR  "GET / HTTP/1.1" 500 59  None
+ERROR:django.server:"GET / HTTP/1.1" 500 59
+07/Feb/2024 22:22:01   ERROR  "GET /favicon.ico HTTP/1.1" 500 59  None
+ERROR:django.server:"GET /favicon.ico HTTP/1.1" 500 59
+07/Feb/2024 22:23:10   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+07/Feb/2024 22:23:10   WARNING  Not Found: /favicon.ico  None
+WARNING:django.request:Not Found: /favicon.ico
+07/Feb/2024 22:23:10   WARNING  "GET /favicon.ico HTTP/1.1" 404 15499  None
+WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 15499
+07/Feb/2024 22:24:09   ERROR  Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.  (<class 'django.core.exceptions.DisallowedHost'>, DisallowedHost("Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS."), <traceback object at 0x7fa3b1925840>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/http/request.py", line 167, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+07/Feb/2024 22:24:09   ERROR  Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.  (<class 'django.core.exceptions.DisallowedHost'>, DisallowedHost("Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS."), <traceback object at 0x7fa3b184c8c0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/http/request.py", line 167, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+07/Feb/2024 22:28:13   ERROR  Internal Server Error: /  (<class 'django.core.exceptions.ImproperlyConfigured'>, ImproperlyConfigured('The SECRET_KEY setting must not be empty.'), <traceback object at 0x7f9fdf613f40>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/middleware.py", line 12, in process_request
+    request._messages = default_storage(request)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/__init__.py", line 12, in default_storage
+    return import_string(settings.MESSAGE_STORAGE)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 16, in __init__
+    self.storages = [
+                    ^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 17, in <listcomp>
+    storage_class(*args, **kwargs) for storage_class in self.storage_classes
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/cookie.py", line 77, in __init__
+    self.signer = signing.get_cookie_signer(salt=self.key_salt)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/signing.py", line 114, in get_cookie_signer
+    key=_cookie_signer_key(settings.SECRET_KEY),
+                           ^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/conf/__init__.py", line 111, in __getattr__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/middleware.py", line 12, in process_request
+    request._messages = default_storage(request)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/__init__.py", line 12, in default_storage
+    return import_string(settings.MESSAGE_STORAGE)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 16, in __init__
+    self.storages = [
+                    ^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 17, in <listcomp>
+    storage_class(*args, **kwargs) for storage_class in self.storage_classes
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/cookie.py", line 77, in __init__
+    self.signer = signing.get_cookie_signer(salt=self.key_salt)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/signing.py", line 114, in get_cookie_signer
+    key=_cookie_signer_key(settings.SECRET_KEY),
+                           ^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/conf/__init__.py", line 111, in __getattr__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+07/Feb/2024 22:28:13   ERROR  Internal Server Error: /favicon.ico  (<class 'django.core.exceptions.ImproperlyConfigured'>, ImproperlyConfigured('The SECRET_KEY setting must not be empty.'), <traceback object at 0x7f9fdf6a4900>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/middleware.py", line 12, in process_request
+    request._messages = default_storage(request)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/__init__.py", line 12, in default_storage
+    return import_string(settings.MESSAGE_STORAGE)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 16, in __init__
+    self.storages = [
+                    ^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 17, in <listcomp>
+    storage_class(*args, **kwargs) for storage_class in self.storage_classes
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/cookie.py", line 77, in __init__
+    self.signer = signing.get_cookie_signer(salt=self.key_salt)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/signing.py", line 114, in get_cookie_signer
+    key=_cookie_signer_key(settings.SECRET_KEY),
+                           ^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/conf/__init__.py", line 111, in __getattr__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+ERROR:django.request:Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/middleware.py", line 12, in process_request
+    request._messages = default_storage(request)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/__init__.py", line 12, in default_storage
+    return import_string(settings.MESSAGE_STORAGE)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 16, in __init__
+    self.storages = [
+                    ^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 17, in <listcomp>
+    storage_class(*args, **kwargs) for storage_class in self.storage_classes
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/cookie.py", line 77, in __init__
+    self.signer = signing.get_cookie_signer(salt=self.key_salt)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/signing.py", line 114, in get_cookie_signer
+    key=_cookie_signer_key(settings.SECRET_KEY),
+                           ^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/conf/__init__.py", line 111, in __getattr__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+07/Feb/2024 22:28:15   ERROR  Internal Server Error: /  (<class 'django.core.exceptions.ImproperlyConfigured'>, ImproperlyConfigured('The SECRET_KEY setting must not be empty.'), <traceback object at 0x7f9fdf6a6900>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/middleware.py", line 12, in process_request
+    request._messages = default_storage(request)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/__init__.py", line 12, in default_storage
+    return import_string(settings.MESSAGE_STORAGE)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 16, in __init__
+    self.storages = [
+                    ^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 17, in <listcomp>
+    storage_class(*args, **kwargs) for storage_class in self.storage_classes
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/cookie.py", line 77, in __init__
+    self.signer = signing.get_cookie_signer(salt=self.key_salt)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/signing.py", line 114, in get_cookie_signer
+    key=_cookie_signer_key(settings.SECRET_KEY),
+                           ^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/conf/__init__.py", line 111, in __getattr__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/middleware.py", line 12, in process_request
+    request._messages = default_storage(request)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/__init__.py", line 12, in default_storage
+    return import_string(settings.MESSAGE_STORAGE)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 16, in __init__
+    self.storages = [
+                    ^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 17, in <listcomp>
+    storage_class(*args, **kwargs) for storage_class in self.storage_classes
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/cookie.py", line 77, in __init__
+    self.signer = signing.get_cookie_signer(salt=self.key_salt)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/signing.py", line 114, in get_cookie_signer
+    key=_cookie_signer_key(settings.SECRET_KEY),
+                           ^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/conf/__init__.py", line 111, in __getattr__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+07/Feb/2024 22:28:15   ERROR  Internal Server Error: /favicon.ico  (<class 'django.core.exceptions.ImproperlyConfigured'>, ImproperlyConfigured('The SECRET_KEY setting must not be empty.'), <traceback object at 0x7f9fdf6b4940>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/middleware.py", line 12, in process_request
+    request._messages = default_storage(request)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/__init__.py", line 12, in default_storage
+    return import_string(settings.MESSAGE_STORAGE)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 16, in __init__
+    self.storages = [
+                    ^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 17, in <listcomp>
+    storage_class(*args, **kwargs) for storage_class in self.storage_classes
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/cookie.py", line 77, in __init__
+    self.signer = signing.get_cookie_signer(salt=self.key_salt)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/signing.py", line 114, in get_cookie_signer
+    key=_cookie_signer_key(settings.SECRET_KEY),
+                           ^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/conf/__init__.py", line 111, in __getattr__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+ERROR:django.request:Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/middleware.py", line 12, in process_request
+    request._messages = default_storage(request)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/__init__.py", line 12, in default_storage
+    return import_string(settings.MESSAGE_STORAGE)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 16, in __init__
+    self.storages = [
+                    ^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 17, in <listcomp>
+    storage_class(*args, **kwargs) for storage_class in self.storage_classes
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/cookie.py", line 77, in __init__
+    self.signer = signing.get_cookie_signer(salt=self.key_salt)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/signing.py", line 114, in get_cookie_signer
+    key=_cookie_signer_key(settings.SECRET_KEY),
+                           ^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/conf/__init__.py", line 111, in __getattr__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+07/Feb/2024 22:28:16   ERROR  Internal Server Error: /  (<class 'django.core.exceptions.ImproperlyConfigured'>, ImproperlyConfigured('The SECRET_KEY setting must not be empty.'), <traceback object at 0x7f9fdf6a4b40>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/middleware.py", line 12, in process_request
+    request._messages = default_storage(request)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/__init__.py", line 12, in default_storage
+    return import_string(settings.MESSAGE_STORAGE)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 16, in __init__
+    self.storages = [
+                    ^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 17, in <listcomp>
+    storage_class(*args, **kwargs) for storage_class in self.storage_classes
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/cookie.py", line 77, in __init__
+    self.signer = signing.get_cookie_signer(salt=self.key_salt)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/signing.py", line 114, in get_cookie_signer
+    key=_cookie_signer_key(settings.SECRET_KEY),
+                           ^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/conf/__init__.py", line 111, in __getattr__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/middleware.py", line 12, in process_request
+    request._messages = default_storage(request)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/__init__.py", line 12, in default_storage
+    return import_string(settings.MESSAGE_STORAGE)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 16, in __init__
+    self.storages = [
+                    ^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 17, in <listcomp>
+    storage_class(*args, **kwargs) for storage_class in self.storage_classes
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/cookie.py", line 77, in __init__
+    self.signer = signing.get_cookie_signer(salt=self.key_salt)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/signing.py", line 114, in get_cookie_signer
+    key=_cookie_signer_key(settings.SECRET_KEY),
+                           ^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/conf/__init__.py", line 111, in __getattr__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+07/Feb/2024 22:28:16   ERROR  Internal Server Error: /favicon.ico  (<class 'django.core.exceptions.ImproperlyConfigured'>, ImproperlyConfigured('The SECRET_KEY setting must not be empty.'), <traceback object at 0x7f9fdf613900>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/middleware.py", line 12, in process_request
+    request._messages = default_storage(request)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/__init__.py", line 12, in default_storage
+    return import_string(settings.MESSAGE_STORAGE)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 16, in __init__
+    self.storages = [
+                    ^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 17, in <listcomp>
+    storage_class(*args, **kwargs) for storage_class in self.storage_classes
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/cookie.py", line 77, in __init__
+    self.signer = signing.get_cookie_signer(salt=self.key_salt)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/signing.py", line 114, in get_cookie_signer
+    key=_cookie_signer_key(settings.SECRET_KEY),
+                           ^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/conf/__init__.py", line 111, in __getattr__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+ERROR:django.request:Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/middleware.py", line 12, in process_request
+    request._messages = default_storage(request)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/__init__.py", line 12, in default_storage
+    return import_string(settings.MESSAGE_STORAGE)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 16, in __init__
+    self.storages = [
+                    ^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 17, in <listcomp>
+    storage_class(*args, **kwargs) for storage_class in self.storage_classes
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/cookie.py", line 77, in __init__
+    self.signer = signing.get_cookie_signer(salt=self.key_salt)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/signing.py", line 114, in get_cookie_signer
+    key=_cookie_signer_key(settings.SECRET_KEY),
+                           ^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/conf/__init__.py", line 111, in __getattr__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+07/Feb/2024 22:28:18   ERROR  Internal Server Error: /list_order  (<class 'django.core.exceptions.ImproperlyConfigured'>, ImproperlyConfigured('The SECRET_KEY setting must not be empty.'), <traceback object at 0x7f9fdf6b5c80>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/middleware.py", line 12, in process_request
+    request._messages = default_storage(request)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/__init__.py", line 12, in default_storage
+    return import_string(settings.MESSAGE_STORAGE)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 16, in __init__
+    self.storages = [
+                    ^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 17, in <listcomp>
+    storage_class(*args, **kwargs) for storage_class in self.storage_classes
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/cookie.py", line 77, in __init__
+    self.signer = signing.get_cookie_signer(salt=self.key_salt)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/signing.py", line 114, in get_cookie_signer
+    key=_cookie_signer_key(settings.SECRET_KEY),
+                           ^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/conf/__init__.py", line 111, in __getattr__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+ERROR:django.request:Internal Server Error: /list_order
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/middleware.py", line 12, in process_request
+    request._messages = default_storage(request)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/__init__.py", line 12, in default_storage
+    return import_string(settings.MESSAGE_STORAGE)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 16, in __init__
+    self.storages = [
+                    ^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 17, in <listcomp>
+    storage_class(*args, **kwargs) for storage_class in self.storage_classes
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/cookie.py", line 77, in __init__
+    self.signer = signing.get_cookie_signer(salt=self.key_salt)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/signing.py", line 114, in get_cookie_signer
+    key=_cookie_signer_key(settings.SECRET_KEY),
+                           ^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/conf/__init__.py", line 111, in __getattr__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+07/Feb/2024 22:28:18   ERROR  Internal Server Error: /list_order  (<class 'django.core.exceptions.ImproperlyConfigured'>, ImproperlyConfigured('The SECRET_KEY setting must not be empty.'), <traceback object at 0x7f9fdf6c0100>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/middleware.py", line 12, in process_request
+    request._messages = default_storage(request)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/__init__.py", line 12, in default_storage
+    return import_string(settings.MESSAGE_STORAGE)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 16, in __init__
+    self.storages = [
+                    ^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 17, in <listcomp>
+    storage_class(*args, **kwargs) for storage_class in self.storage_classes
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/cookie.py", line 77, in __init__
+    self.signer = signing.get_cookie_signer(salt=self.key_salt)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/signing.py", line 114, in get_cookie_signer
+    key=_cookie_signer_key(settings.SECRET_KEY),
+                           ^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/conf/__init__.py", line 111, in __getattr__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+ERROR:django.request:Internal Server Error: /list_order
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/middleware.py", line 12, in process_request
+    request._messages = default_storage(request)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/__init__.py", line 12, in default_storage
+    return import_string(settings.MESSAGE_STORAGE)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 16, in __init__
+    self.storages = [
+                    ^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 17, in <listcomp>
+    storage_class(*args, **kwargs) for storage_class in self.storage_classes
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/cookie.py", line 77, in __init__
+    self.signer = signing.get_cookie_signer(salt=self.key_salt)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/signing.py", line 114, in get_cookie_signer
+    key=_cookie_signer_key(settings.SECRET_KEY),
+                           ^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/conf/__init__.py", line 111, in __getattr__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+07/Feb/2024 22:28:21   ERROR  Internal Server Error: /admin/  (<class 'django.core.exceptions.ImproperlyConfigured'>, ImproperlyConfigured('The SECRET_KEY setting must not be empty.'), <traceback object at 0x7f9fdf6c2780>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/middleware.py", line 12, in process_request
+    request._messages = default_storage(request)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/__init__.py", line 12, in default_storage
+    return import_string(settings.MESSAGE_STORAGE)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 16, in __init__
+    self.storages = [
+                    ^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 17, in <listcomp>
+    storage_class(*args, **kwargs) for storage_class in self.storage_classes
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/cookie.py", line 77, in __init__
+    self.signer = signing.get_cookie_signer(salt=self.key_salt)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/signing.py", line 114, in get_cookie_signer
+    key=_cookie_signer_key(settings.SECRET_KEY),
+                           ^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/conf/__init__.py", line 111, in __getattr__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+ERROR:django.request:Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/middleware.py", line 12, in process_request
+    request._messages = default_storage(request)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/__init__.py", line 12, in default_storage
+    return import_string(settings.MESSAGE_STORAGE)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 16, in __init__
+    self.storages = [
+                    ^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 17, in <listcomp>
+    storage_class(*args, **kwargs) for storage_class in self.storage_classes
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/cookie.py", line 77, in __init__
+    self.signer = signing.get_cookie_signer(salt=self.key_salt)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/signing.py", line 114, in get_cookie_signer
+    key=_cookie_signer_key(settings.SECRET_KEY),
+                           ^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/conf/__init__.py", line 111, in __getattr__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+07/Feb/2024 22:28:21   ERROR  Internal Server Error: /admin/  (<class 'django.core.exceptions.ImproperlyConfigured'>, ImproperlyConfigured('The SECRET_KEY setting must not be empty.'), <traceback object at 0x7f9fdf6c8c00>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/middleware.py", line 12, in process_request
+    request._messages = default_storage(request)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/__init__.py", line 12, in default_storage
+    return import_string(settings.MESSAGE_STORAGE)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 16, in __init__
+    self.storages = [
+                    ^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 17, in <listcomp>
+    storage_class(*args, **kwargs) for storage_class in self.storage_classes
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/cookie.py", line 77, in __init__
+    self.signer = signing.get_cookie_signer(salt=self.key_salt)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/signing.py", line 114, in get_cookie_signer
+    key=_cookie_signer_key(settings.SECRET_KEY),
+                           ^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/conf/__init__.py", line 111, in __getattr__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+ERROR:django.request:Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/middleware.py", line 12, in process_request
+    request._messages = default_storage(request)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/__init__.py", line 12, in default_storage
+    return import_string(settings.MESSAGE_STORAGE)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 16, in __init__
+    self.storages = [
+                    ^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/fallback.py", line 17, in <listcomp>
+    storage_class(*args, **kwargs) for storage_class in self.storage_classes
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/messages/storage/cookie.py", line 77, in __init__
+    self.signer = signing.get_cookie_signer(salt=self.key_salt)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/signing.py", line 114, in get_cookie_signer
+    key=_cookie_signer_key(settings.SECRET_KEY),
+                           ^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/conf/__init__.py", line 111, in __getattr__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+07/Feb/2024 22:30:56   WARNING  Not Found: /static/css/mdb.min.css  None
+WARNING:django.request:Not Found: /static/css/mdb.min.css
+07/Feb/2024 22:30:56   WARNING  Not Found: /static/css/bootstrap.min.css  None
+WARNING:django.request:Not Found: /static/css/bootstrap.min.css
+07/Feb/2024 22:30:56   WARNING  Not Found: /static/css/fonts.css  None
+WARNING:django.request:Not Found: /static/css/fonts.css
+07/Feb/2024 22:30:56   WARNING  Not Found: /static/css/owl.carousel.min.css  None
+WARNING:django.request:Not Found: /static/css/owl.carousel.min.css
+07/Feb/2024 22:30:56   WARNING  Not Found: /static/css/custom.css  None
+WARNING:django.request:Not Found: /static/css/custom.css
+07/Feb/2024 22:30:56   WARNING  Not Found: /static/images/flag_en.png  None
+WARNING:django.request:Not Found: /static/images/flag_en.png
+07/Feb/2024 22:30:56   WARNING  Not Found: /static/images/flag_ge.png  None
+WARNING:django.request:Not Found: /static/images/flag_ge.png
+07/Feb/2024 22:30:56   WARNING  Not Found: /static/images/telegram.gif  None
+WARNING:django.request:Not Found: /static/images/telegram.gif
+07/Feb/2024 22:30:56   WARNING  Not Found: /static/images/whatsapp.png  None
+WARNING:django.request:Not Found: /static/images/whatsapp.png
+07/Feb/2024 22:30:56   WARNING  Not Found: /static/images/instagram.png  None
+WARNING:django.request:Not Found: /static/images/instagram.png
+07/Feb/2024 22:30:56   WARNING  Not Found: /static/js/jquery-3.3.1.min.js  None
+WARNING:django.request:Not Found: /static/js/jquery-3.3.1.min.js
+07/Feb/2024 22:30:56   WARNING  Not Found: /static/js/bootstrap.min.js  None
+WARNING:django.request:Not Found: /static/js/bootstrap.min.js
+07/Feb/2024 22:30:56   WARNING  Not Found: /static/js/mdb.min.js  None
+WARNING:django.request:Not Found: /static/js/mdb.min.js
+07/Feb/2024 22:30:57   WARNING  Not Found: /static/js/wow.min.js  None
+WARNING:django.request:Not Found: /static/js/wow.min.js
+07/Feb/2024 22:30:57   WARNING  Not Found: /static/js/owl.carousel.min.js  None
+WARNING:django.request:Not Found: /static/js/owl.carousel.min.js
+07/Feb/2024 22:30:57   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+07/Feb/2024 22:30:57   WARNING  Not Found: /static/js/typed.min.js  None
+WARNING:django.request:Not Found: /static/js/typed.min.js
+07/Feb/2024 22:30:57   WARNING  Not Found: /static/js/jquery.malihu.PageScroll2id.min.js  None
+WARNING:django.request:Not Found: /static/js/jquery.malihu.PageScroll2id.min.js
+07/Feb/2024 22:30:57   WARNING  Not Found: /static/js/maskedinput.min.js  None
+WARNING:django.request:Not Found: /static/js/maskedinput.min.js
+07/Feb/2024 22:30:57   WARNING  Not Found: /static/js/custom.js  None
+WARNING:django.request:Not Found: /static/js/custom.js
+07/Feb/2024 22:30:57   WARNING  Not Found: /static/fonts/broken-cable.svg  None
+WARNING:django.request:Not Found: /static/fonts/broken-cable.svg
+07/Feb/2024 22:30:57   WARNING  Not Found: /static/fonts/leak.svg  None
+WARNING:django.request:Not Found: /static/fonts/leak.svg
+07/Feb/2024 22:30:57   WARNING  Not Found: /static/fonts/living-room.svg  None
+WARNING:django.request:Not Found: /static/fonts/living-room.svg
+07/Feb/2024 22:30:57   WARNING  Not Found: /static/fonts/washing-machine.svg  None
+WARNING:django.request:Not Found: /static/fonts/washing-machine.svg
+07/Feb/2024 22:30:57   WARNING  Not Found: /static/fonts/3d-buildings.svg  None
+WARNING:django.request:Not Found: /static/fonts/3d-buildings.svg
+07/Feb/2024 22:30:57   WARNING  Not Found: /static/images/1.jpg  None
+WARNING:django.request:Not Found: /static/images/1.jpg
+07/Feb/2024 22:30:57   WARNING  Not Found: /static/images/2.jpg  None
+WARNING:django.request:Not Found: /static/images/2.jpg
+07/Feb/2024 22:30:57   WARNING  Not Found: /static/images/3.jpg  None
+WARNING:django.request:Not Found: /static/images/3.jpg
+07/Feb/2024 22:30:57   WARNING  Not Found: /static/images/o-mastere-na-chas.png  None
+WARNING:django.request:Not Found: /static/images/o-mastere-na-chas.png
+07/Feb/2024 22:30:57   WARNING  Not Found: /media/images/muzg-na-chas.jpg  None
+WARNING:django.request:Not Found: /media/images/muzg-na-chas.jpg
+07/Feb/2024 22:30:57   WARNING  Not Found: /static/fonts/living-room.svg  None
+WARNING:django.request:Not Found: /static/fonts/living-room.svg
+07/Feb/2024 22:30:57   WARNING  Not Found: /favicon.ico  None
+WARNING:django.request:Not Found: /favicon.ico
+07/Feb/2024 22:31:01   WARNING  Not Found: /static/css/mdb.min.css  None
+WARNING:django.request:Not Found: /static/css/mdb.min.css
+07/Feb/2024 22:31:01   WARNING  Not Found: /static/css/bootstrap.min.css  None
+WARNING:django.request:Not Found: /static/css/bootstrap.min.css
+07/Feb/2024 22:31:01   WARNING  Not Found: /static/css/fonts.css  None
+WARNING:django.request:Not Found: /static/css/fonts.css
+07/Feb/2024 22:31:01   WARNING  Not Found: /static/css/owl.carousel.min.css  None
+WARNING:django.request:Not Found: /static/css/owl.carousel.min.css
+07/Feb/2024 22:31:01   WARNING  Not Found: /static/css/custom.css  None
+WARNING:django.request:Not Found: /static/css/custom.css
+07/Feb/2024 22:31:01   WARNING  Not Found: /static/images/flag_en.png  None
+WARNING:django.request:Not Found: /static/images/flag_en.png
+07/Feb/2024 22:31:01   WARNING  Not Found: /static/images/flag_ge.png  None
+WARNING:django.request:Not Found: /static/images/flag_ge.png
+07/Feb/2024 22:31:01   WARNING  Not Found: /static/images/telegram.gif  None
+WARNING:django.request:Not Found: /static/images/telegram.gif
+07/Feb/2024 22:31:01   WARNING  Not Found: /static/images/whatsapp.png  None
+WARNING:django.request:Not Found: /static/images/whatsapp.png
+07/Feb/2024 22:31:01   WARNING  Not Found: /static/images/instagram.png  None
+WARNING:django.request:Not Found: /static/images/instagram.png
+07/Feb/2024 22:31:01   WARNING  Not Found: /static/js/jquery-3.3.1.min.js  None
+WARNING:django.request:Not Found: /static/js/jquery-3.3.1.min.js
+07/Feb/2024 22:31:01   WARNING  Not Found: /static/js/bootstrap.min.js  None
+WARNING:django.request:Not Found: /static/js/bootstrap.min.js
+07/Feb/2024 22:31:01   WARNING  Not Found: /static/js/mdb.min.js  None
+WARNING:django.request:Not Found: /static/js/mdb.min.js
+07/Feb/2024 22:31:01   WARNING  Not Found: /static/fonts/leak.svg  None
+WARNING:django.request:Not Found: /static/fonts/leak.svg
+07/Feb/2024 22:31:01   WARNING  Not Found: /static/fonts/living-room.svg  None
+WARNING:django.request:Not Found: /static/fonts/living-room.svg
+07/Feb/2024 22:31:01   WARNING  Not Found: /static/fonts/broken-cable.svg  None
+WARNING:django.request:Not Found: /static/fonts/broken-cable.svg
+07/Feb/2024 22:31:01   WARNING  Not Found: /static/js/wow.min.js  None
+WARNING:django.request:Not Found: /static/js/wow.min.js
+07/Feb/2024 22:31:01   WARNING  Not Found: /static/js/owl.carousel.min.js  None
+WARNING:django.request:Not Found: /static/js/owl.carousel.min.js
+07/Feb/2024 22:31:01   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+07/Feb/2024 22:31:01   WARNING  Not Found: /static/js/typed.min.js  None
+WARNING:django.request:Not Found: /static/js/typed.min.js
+07/Feb/2024 22:31:01   WARNING  Not Found: /static/js/jquery.malihu.PageScroll2id.min.js  None
+WARNING:django.request:Not Found: /static/js/jquery.malihu.PageScroll2id.min.js
+07/Feb/2024 22:31:01   WARNING  Not Found: /static/js/maskedinput.min.js  None
+WARNING:django.request:Not Found: /static/js/maskedinput.min.js
+07/Feb/2024 22:31:01   WARNING  Not Found: /static/js/custom.js  None
+WARNING:django.request:Not Found: /static/js/custom.js
+07/Feb/2024 22:31:01   WARNING  Not Found: /static/fonts/washing-machine.svg  None
+WARNING:django.request:Not Found: /static/fonts/washing-machine.svg
+07/Feb/2024 22:31:01   WARNING  Not Found: /static/fonts/3d-buildings.svg  None
+WARNING:django.request:Not Found: /static/fonts/3d-buildings.svg
+07/Feb/2024 22:31:01   WARNING  Not Found: /static/images/1.jpg  None
+WARNING:django.request:Not Found: /static/images/1.jpg
+07/Feb/2024 22:31:01   WARNING  Not Found: /static/images/2.jpg  None
+WARNING:django.request:Not Found: /static/images/2.jpg
+07/Feb/2024 22:31:01   WARNING  Not Found: /static/images/3.jpg  None
+WARNING:django.request:Not Found: /static/images/3.jpg
+07/Feb/2024 22:31:01   WARNING  Not Found: /static/images/o-mastere-na-chas.png  None
+WARNING:django.request:Not Found: /static/images/o-mastere-na-chas.png
+07/Feb/2024 22:31:01   WARNING  Not Found: /media/images/muzg-na-chas.jpg  None
+WARNING:django.request:Not Found: /media/images/muzg-na-chas.jpg
+07/Feb/2024 22:31:26   WARNING  Not Found: /static/css/mdb.min.css  None
+WARNING:django.request:Not Found: /static/css/mdb.min.css
+07/Feb/2024 22:31:26   WARNING  Not Found: /static/css/bootstrap.min.css  None
+WARNING:django.request:Not Found: /static/css/bootstrap.min.css
+07/Feb/2024 22:31:26   WARNING  Not Found: /static/css/fonts.css  None
+WARNING:django.request:Not Found: /static/css/fonts.css
+07/Feb/2024 22:31:26   WARNING  Not Found: /static/css/owl.carousel.min.css  None
+WARNING:django.request:Not Found: /static/css/owl.carousel.min.css
+07/Feb/2024 22:31:26   WARNING  Not Found: /static/css/custom.css  None
+WARNING:django.request:Not Found: /static/css/custom.css
+07/Feb/2024 22:31:26   WARNING  Not Found: /static/images/flag_en.png  None
+WARNING:django.request:Not Found: /static/images/flag_en.png
+07/Feb/2024 22:31:26   WARNING  Not Found: /static/images/flag_ge.png  None
+WARNING:django.request:Not Found: /static/images/flag_ge.png
+07/Feb/2024 22:31:26   WARNING  Not Found: /static/images/telegram.gif  None
+WARNING:django.request:Not Found: /static/images/telegram.gif
+07/Feb/2024 22:31:26   WARNING  Not Found: /static/images/whatsapp.png  None
+WARNING:django.request:Not Found: /static/images/whatsapp.png
+07/Feb/2024 22:31:26   WARNING  Not Found: /static/images/instagram.png  None
+WARNING:django.request:Not Found: /static/images/instagram.png
+07/Feb/2024 22:31:26   WARNING  Not Found: /static/js/jquery-3.3.1.min.js  None
+WARNING:django.request:Not Found: /static/js/jquery-3.3.1.min.js
+07/Feb/2024 22:31:26   WARNING  Not Found: /static/js/bootstrap.min.js  None
+WARNING:django.request:Not Found: /static/js/bootstrap.min.js
+07/Feb/2024 22:31:26   WARNING  Not Found: /static/js/mdb.min.js  None
+WARNING:django.request:Not Found: /static/js/mdb.min.js
+07/Feb/2024 22:31:26   WARNING  Not Found: /static/fonts/broken-cable.svg  None
+WARNING:django.request:Not Found: /static/fonts/broken-cable.svg
+07/Feb/2024 22:31:26   WARNING  Not Found: /static/fonts/leak.svg  None
+WARNING:django.request:Not Found: /static/fonts/leak.svg
+07/Feb/2024 22:31:26   WARNING  Not Found: /static/fonts/living-room.svg  None
+WARNING:django.request:Not Found: /static/fonts/living-room.svg
+07/Feb/2024 22:31:26   WARNING  Not Found: /static/fonts/washing-machine.svg  None
+WARNING:django.request:Not Found: /static/fonts/washing-machine.svg
+07/Feb/2024 22:31:26   WARNING  Not Found: /static/fonts/3d-buildings.svg  None
+WARNING:django.request:Not Found: /static/fonts/3d-buildings.svg
+07/Feb/2024 22:31:26   WARNING  Not Found: /static/js/wow.min.js  None
+WARNING:django.request:Not Found: /static/js/wow.min.js
+07/Feb/2024 22:31:26   WARNING  Not Found: /static/js/owl.carousel.min.js  None
+WARNING:django.request:Not Found: /static/js/owl.carousel.min.js
+07/Feb/2024 22:31:26   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+07/Feb/2024 22:31:26   WARNING  Not Found: /static/js/typed.min.js  None
+WARNING:django.request:Not Found: /static/js/typed.min.js
+07/Feb/2024 22:31:26   WARNING  Not Found: /static/js/jquery.malihu.PageScroll2id.min.js  None
+WARNING:django.request:Not Found: /static/js/jquery.malihu.PageScroll2id.min.js
+07/Feb/2024 22:31:26   WARNING  Not Found: /static/js/maskedinput.min.js  None
+WARNING:django.request:Not Found: /static/js/maskedinput.min.js
+07/Feb/2024 22:31:26   WARNING  Not Found: /static/js/custom.js  None
+WARNING:django.request:Not Found: /static/js/custom.js
+07/Feb/2024 22:31:26   WARNING  Not Found: /static/images/1.jpg  None
+WARNING:django.request:Not Found: /static/images/1.jpg
+07/Feb/2024 22:31:26   WARNING  Not Found: /static/images/2.jpg  None
+WARNING:django.request:Not Found: /static/images/2.jpg
+07/Feb/2024 22:31:26   WARNING  Not Found: /static/images/3.jpg  None
+WARNING:django.request:Not Found: /static/images/3.jpg
+07/Feb/2024 22:31:26   WARNING  Not Found: /static/images/o-mastere-na-chas.png  None
+WARNING:django.request:Not Found: /static/images/o-mastere-na-chas.png
+07/Feb/2024 22:31:26   WARNING  Not Found: /media/images/muzg-na-chas.jpg  None
+WARNING:django.request:Not Found: /media/images/muzg-na-chas.jpg
+07/Feb/2024 22:31:55   ERROR  Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.  (<class 'django.core.exceptions.DisallowedHost'>, DisallowedHost("Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS."), <traceback object at 0x7f7e02ce5e80>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/http/request.py", line 167, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+07/Feb/2024 22:31:56   WARNING  Bad Request: /  None
+WARNING:django.request:Bad Request: /
+07/Feb/2024 22:31:59   ERROR  Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.  (<class 'django.core.exceptions.DisallowedHost'>, DisallowedHost("Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS."), <traceback object at 0x7f7e02cbabc0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/http/request.py", line 167, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+ERROR:django.security.DisallowedHost:Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/http/request.py", line 167, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+07/Feb/2024 22:31:59   WARNING  Bad Request: /  None
+WARNING:django.request:Bad Request: /
+07/Feb/2024 22:32:12   ERROR  Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.  (<class 'django.core.exceptions.DisallowedHost'>, DisallowedHost("Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS."), <traceback object at 0x7f7e02b16700>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/http/request.py", line 167, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+ERROR:django.security.DisallowedHost:Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/http/request.py", line 167, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+07/Feb/2024 22:32:12   WARNING  Bad Request: /  None
+WARNING:django.request:Bad Request: /
+07/Feb/2024 22:32:13   ERROR  Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.  (<class 'django.core.exceptions.DisallowedHost'>, DisallowedHost("Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS."), <traceback object at 0x7f7e02b21c40>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/http/request.py", line 167, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+ERROR:django.security.DisallowedHost:Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/http/request.py", line 167, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+07/Feb/2024 22:32:13   WARNING  Bad Request: /  None
+WARNING:django.request:Bad Request: /
+07/Feb/2024 22:32:26   WARNING  Not Found: /static/css/mdb.min.css  None
+WARNING:django.request:Not Found: /static/css/mdb.min.css
+07/Feb/2024 22:32:26   WARNING  Not Found: /static/css/bootstrap.min.css  None
+WARNING:django.request:Not Found: /static/css/bootstrap.min.css
+07/Feb/2024 22:32:26   WARNING  Not Found: /static/css/fonts.css  None
+WARNING:django.request:Not Found: /static/css/fonts.css
+07/Feb/2024 22:32:26   WARNING  Not Found: /static/css/owl.carousel.min.css  None
+WARNING:django.request:Not Found: /static/css/owl.carousel.min.css
+07/Feb/2024 22:32:26   WARNING  Not Found: /static/css/custom.css  None
+WARNING:django.request:Not Found: /static/css/custom.css
+07/Feb/2024 22:32:26   WARNING  Not Found: /static/debug_toolbar/js/toolbar.js  None
+WARNING:django.request:Not Found: /static/debug_toolbar/js/toolbar.js
+07/Feb/2024 22:32:26   WARNING  Not Found: /static/images/flag_en.png  None
+WARNING:django.request:Not Found: /static/images/flag_en.png
+07/Feb/2024 22:32:26   WARNING  Not Found: /static/images/flag_ge.png  None
+WARNING:django.request:Not Found: /static/images/flag_ge.png
+07/Feb/2024 22:32:26   WARNING  Not Found: /static/images/telegram.gif  None
+WARNING:django.request:Not Found: /static/images/telegram.gif
+07/Feb/2024 22:32:26   WARNING  Not Found: /static/images/whatsapp.png  None
+WARNING:django.request:Not Found: /static/images/whatsapp.png
+07/Feb/2024 22:32:26   WARNING  Not Found: /static/images/instagram.png  None
+WARNING:django.request:Not Found: /static/images/instagram.png
+07/Feb/2024 22:32:26   WARNING  Not Found: /static/js/jquery-3.3.1.min.js  None
+WARNING:django.request:Not Found: /static/js/jquery-3.3.1.min.js
+07/Feb/2024 22:32:26   WARNING  Not Found: /static/fonts/broken-cable.svg  None
+WARNING:django.request:Not Found: /static/fonts/broken-cable.svg
+07/Feb/2024 22:32:26   WARNING  Not Found: /static/fonts/living-room.svg  None
+WARNING:django.request:Not Found: /static/fonts/living-room.svg
+07/Feb/2024 22:32:26   WARNING  Not Found: /static/fonts/leak.svg  None
+WARNING:django.request:Not Found: /static/fonts/leak.svg
+07/Feb/2024 22:32:26   WARNING  Not Found: /static/js/bootstrap.min.js  None
+WARNING:django.request:Not Found: /static/js/bootstrap.min.js
+07/Feb/2024 22:32:26   WARNING  Not Found: /static/js/mdb.min.js  None
+WARNING:django.request:Not Found: /static/js/mdb.min.js
+07/Feb/2024 22:32:26   WARNING  Not Found: /static/js/wow.min.js  None
+WARNING:django.request:Not Found: /static/js/wow.min.js
+07/Feb/2024 22:32:26   WARNING  Not Found: /static/js/owl.carousel.min.js  None
+WARNING:django.request:Not Found: /static/js/owl.carousel.min.js
+07/Feb/2024 22:32:27   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+07/Feb/2024 22:32:27   WARNING  Not Found: /static/js/typed.min.js  None
+WARNING:django.request:Not Found: /static/js/typed.min.js
+07/Feb/2024 22:32:27   WARNING  Not Found: /static/js/jquery.malihu.PageScroll2id.min.js  None
+WARNING:django.request:Not Found: /static/js/jquery.malihu.PageScroll2id.min.js
+07/Feb/2024 22:32:27   WARNING  Not Found: /static/js/maskedinput.min.js  None
+WARNING:django.request:Not Found: /static/js/maskedinput.min.js
+07/Feb/2024 22:32:27   WARNING  Not Found: /static/js/custom.js  None
+WARNING:django.request:Not Found: /static/js/custom.js
+07/Feb/2024 22:32:27   WARNING  Not Found: /static/debug_toolbar/css/toolbar.css  None
+WARNING:django.request:Not Found: /static/debug_toolbar/css/toolbar.css
+07/Feb/2024 22:32:27   WARNING  Not Found: /static/fonts/washing-machine.svg  None
+WARNING:django.request:Not Found: /static/fonts/washing-machine.svg
+07/Feb/2024 22:32:27   WARNING  Not Found: /static/fonts/3d-buildings.svg  None
+WARNING:django.request:Not Found: /static/fonts/3d-buildings.svg
+07/Feb/2024 22:32:27   WARNING  Not Found: /static/images/1.jpg  None
+WARNING:django.request:Not Found: /static/images/1.jpg
+07/Feb/2024 22:32:27   WARNING  Not Found: /static/images/2.jpg  None
+WARNING:django.request:Not Found: /static/images/2.jpg
+07/Feb/2024 22:32:27   WARNING  Not Found: /static/images/3.jpg  None
+WARNING:django.request:Not Found: /static/images/3.jpg
+07/Feb/2024 22:32:27   WARNING  Not Found: /static/images/o-mastere-na-chas.png  None
+WARNING:django.request:Not Found: /static/images/o-mastere-na-chas.png
+07/Feb/2024 22:32:27   WARNING  Not Found: /static/debug_toolbar/css/print.css  None
+WARNING:django.request:Not Found: /static/debug_toolbar/css/print.css
+07/Feb/2024 22:32:29   WARNING  Not Found: /static/css/mdb.min.css  None
+WARNING:django.request:Not Found: /static/css/mdb.min.css
+07/Feb/2024 22:32:29   WARNING  Not Found: /static/css/bootstrap.min.css  None
+WARNING:django.request:Not Found: /static/css/bootstrap.min.css
+07/Feb/2024 22:32:29   WARNING  Not Found: /static/css/fonts.css  None
+WARNING:django.request:Not Found: /static/css/fonts.css
+07/Feb/2024 22:32:29   WARNING  Not Found: /static/css/owl.carousel.min.css  None
+WARNING:django.request:Not Found: /static/css/owl.carousel.min.css
+07/Feb/2024 22:32:29   WARNING  Not Found: /static/css/custom.css  None
+WARNING:django.request:Not Found: /static/css/custom.css
+07/Feb/2024 22:32:29   WARNING  Not Found: /static/images/flag_en.png  None
+WARNING:django.request:Not Found: /static/images/flag_en.png
+07/Feb/2024 22:32:29   WARNING  Not Found: /static/debug_toolbar/js/toolbar.js  None
+WARNING:django.request:Not Found: /static/debug_toolbar/js/toolbar.js
+07/Feb/2024 22:32:29   WARNING  Not Found: /static/images/flag_ge.png  None
+WARNING:django.request:Not Found: /static/images/flag_ge.png
+07/Feb/2024 22:32:29   WARNING  Not Found: /static/images/telegram.gif  None
+WARNING:django.request:Not Found: /static/images/telegram.gif
+07/Feb/2024 22:32:29   WARNING  Not Found: /static/images/whatsapp.png  None
+WARNING:django.request:Not Found: /static/images/whatsapp.png
+07/Feb/2024 22:32:29   WARNING  Not Found: /static/images/instagram.png  None
+WARNING:django.request:Not Found: /static/images/instagram.png
+07/Feb/2024 22:32:29   WARNING  Not Found: /static/js/jquery-3.3.1.min.js  None
+WARNING:django.request:Not Found: /static/js/jquery-3.3.1.min.js
+07/Feb/2024 22:32:29   WARNING  Not Found: /static/fonts/leak.svg  None
+WARNING:django.request:Not Found: /static/fonts/leak.svg
+07/Feb/2024 22:32:29   WARNING  Not Found: /static/fonts/living-room.svg  None
+WARNING:django.request:Not Found: /static/fonts/living-room.svg
+07/Feb/2024 22:32:29   WARNING  Not Found: /static/fonts/broken-cable.svg  None
+WARNING:django.request:Not Found: /static/fonts/broken-cable.svg
+07/Feb/2024 22:32:29   WARNING  Not Found: /static/js/bootstrap.min.js  None
+WARNING:django.request:Not Found: /static/js/bootstrap.min.js
+07/Feb/2024 22:32:29   WARNING  Not Found: /static/js/mdb.min.js  None
+WARNING:django.request:Not Found: /static/js/mdb.min.js
+07/Feb/2024 22:32:29   WARNING  Not Found: /static/js/wow.min.js  None
+WARNING:django.request:Not Found: /static/js/wow.min.js
+07/Feb/2024 22:32:30   WARNING  Not Found: /static/js/owl.carousel.min.js  None
+WARNING:django.request:Not Found: /static/js/owl.carousel.min.js
+07/Feb/2024 22:32:30   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+07/Feb/2024 22:32:30   WARNING  Not Found: /static/js/typed.min.js  None
+WARNING:django.request:Not Found: /static/js/typed.min.js
+07/Feb/2024 22:32:30   WARNING  Not Found: /static/js/jquery.malihu.PageScroll2id.min.js  None
+WARNING:django.request:Not Found: /static/js/jquery.malihu.PageScroll2id.min.js
+07/Feb/2024 22:32:30   WARNING  Not Found: /static/js/maskedinput.min.js  None
+WARNING:django.request:Not Found: /static/js/maskedinput.min.js
+07/Feb/2024 22:32:30   WARNING  Not Found: /static/js/custom.js  None
+WARNING:django.request:Not Found: /static/js/custom.js
+07/Feb/2024 22:32:30   WARNING  Not Found: /static/debug_toolbar/css/toolbar.css  None
+WARNING:django.request:Not Found: /static/debug_toolbar/css/toolbar.css
+07/Feb/2024 22:32:30   WARNING  Not Found: /static/fonts/washing-machine.svg  None
+WARNING:django.request:Not Found: /static/fonts/washing-machine.svg
+07/Feb/2024 22:32:30   WARNING  Not Found: /static/fonts/3d-buildings.svg  None
+WARNING:django.request:Not Found: /static/fonts/3d-buildings.svg
+07/Feb/2024 22:32:30   WARNING  Not Found: /static/images/1.jpg  None
+WARNING:django.request:Not Found: /static/images/1.jpg
+07/Feb/2024 22:32:30   WARNING  Not Found: /static/images/2.jpg  None
+WARNING:django.request:Not Found: /static/images/2.jpg
+07/Feb/2024 22:32:30   WARNING  Not Found: /static/images/3.jpg  None
+WARNING:django.request:Not Found: /static/images/3.jpg
+07/Feb/2024 22:32:30   WARNING  Not Found: /static/images/o-mastere-na-chas.png  None
+WARNING:django.request:Not Found: /static/images/o-mastere-na-chas.png
+07/Feb/2024 22:32:30   WARNING  Not Found: /static/debug_toolbar/css/print.css  None
+WARNING:django.request:Not Found: /static/debug_toolbar/css/print.css

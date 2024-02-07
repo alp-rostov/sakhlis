@@ -46,7 +46,7 @@
                 <input type="reset" value=" Сброс " class="btn btn-sm btn-orange">
             </div>
         </div>
-        <h5>Выполненно работ на сумму: {{ summ_orders }} / Кол-во работ : {{ count_orders }}</h5>
+        <h5>Amount of money : {{ summ_orders }} / Order`s quantity : {{ count_orders }}</h5>
 </form>
     </div>
 
@@ -55,7 +55,7 @@
 <hr>
 <div align="center">
     <a href="#"  onclick="show_create_order_form(document.getElementById('form'))"
-    class="btn btn-sm btn-orange cta-btn btn-form mt-3 mb-5 " id="link_create_order_form">Создать заказ</a>
+    class="btn btn-sm btn-orange cta-btn btn-form mt-3 mb-5 " id="link_create_order_form">CREATE AN ORDER</a>
 </div>
 
 <script>
@@ -68,7 +68,7 @@ $(document).ready(function() {
             type: 'POST',
             data: $(this).serialize(),
             dataType: 'text',
-            beforeSend: function () {$("#form").html('<h3>Отправляется...</h3>');},
+            beforeSend: function () {$("#form").html('<h3>Sending...</h3>');},
             success: function (resp_) { window.location.href = '/list_order/'+JSON.parse(resp_).pk; },
         });
     });

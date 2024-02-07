@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 import logging
 import os
 from pathlib import Path
-
+from django.utils.encoding import force_bytes, force_str
 from django.urls import reverse_lazy
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -23,11 +23,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = force_str(os.environ.get('SECRET_KEY'))
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 if not DEBUG:
     ALLOWED_HOSTS += ['*']
 
@@ -49,7 +49,6 @@ INSTALLED_APPS = [
     'app_site.apps.AppSiteConfig',
     'slippers',
     'crispy_forms',
-
 ]
 SITE_ID = 1
 
