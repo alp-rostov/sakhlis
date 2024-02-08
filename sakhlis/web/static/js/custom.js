@@ -108,7 +108,7 @@ function add_order_in_html_object(r) {
     }
     else {
         g.find("#map_").attr("onclick", "copyToClipboard($(this))");
-        g.find("#map_").attr("title", "Скопировать адрес");
+        g.find("#map_").attr("title", "Copy address");
         g.find("#map_").attr("id", "map_"+r.pk);
     }
     return g;
@@ -264,7 +264,7 @@ $('#id_form').submit(function(e) {
                 c.remove();
                 $('#id_form-TOTAL_FORMS').attr("value", 0);
             }
-            else {$('#error').html('<h4>Заполните все поля</h4>');}
+            else {$('#error').html('<h4>Fill in all the fields</h4>');}
         },
     });
 
@@ -304,7 +304,7 @@ $(document.body).on( "click", "#workstatus", function(e) {
                             $('#check_text_1').attr('class', 'col-md-11');
                             $('#check_text_2').attr('class', 'col-md-11 black-text');
 
-                            $('#workstatus').html('Работы выполнены');
+                            $('#workstatus').html('Order is completed');
                             $('#workstatus').attr('href', "../changestatus?order_pk="+pk+"&work_status=END");
 
                             $('#id_form').attr('class', '');
@@ -330,7 +330,7 @@ $(document.body).on( "click", "#workstatus", function(e) {
 
 
                             $('#workstatus').remove();
-                            $('#stepstatuswork').html('<a href="pdf/'+pk+'" class="btn btn-sm btn-orange">Квитанция на оплату - PDF</a>');
+                            $('#stepstatuswork').html('<a href="pdf/'+pk+'" class="btn btn-sm btn-orange">Invoice - PDF</a>');
                         }
 
             }

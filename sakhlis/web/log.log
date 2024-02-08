@@ -3216,3 +3216,87 @@ WARNING:django.request:Not Found: /static/images/3.jpg
 WARNING:django.request:Not Found: /static/images/o-mastere-na-chas.png
 07/Feb/2024 22:32:30   WARNING  Not Found: /static/debug_toolbar/css/print.css  None
 WARNING:django.request:Not Found: /static/debug_toolbar/css/print.css
+08/Feb/2024 14:49:51   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+08/Feb/2024 14:49:54   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+08/Feb/2024 14:51:10   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+08/Feb/2024 14:51:55   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+08/Feb/2024 14:51:57   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+08/Feb/2024 14:51:59   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+08/Feb/2024 14:52:08   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+08/Feb/2024 14:52:14   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+08/Feb/2024 14:52:24   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+08/Feb/2024 14:52:28   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+08/Feb/2024 14:57:19   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+08/Feb/2024 14:57:20   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+08/Feb/2024 14:57:22   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+08/Feb/2024 14:57:24   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+08/Feb/2024 17:43:04   WARNING  Session data corrupted  None
+WARNING:django.security.SuspiciousSession:Session data corrupted
+08/Feb/2024 17:43:04   WARNING  Session data corrupted  None
+WARNING:django.security.SuspiciousSession:Session data corrupted
+08/Feb/2024 17:43:04   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+08/Feb/2024 17:43:04   WARNING  Session data corrupted  None
+WARNING:django.security.SuspiciousSession:Session data corrupted
+08/Feb/2024 17:43:04   WARNING  Not Found: /favicon.ico  None
+WARNING:django.request:Not Found: /favicon.ico
+08/Feb/2024 17:43:10   WARNING  Session data corrupted  None
+WARNING:django.security.SuspiciousSession:Session data corrupted
+08/Feb/2024 17:43:10   WARNING  Session data corrupted  None
+WARNING:django.security.SuspiciousSession:Session data corrupted
+08/Feb/2024 17:43:10   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+08/Feb/2024 17:43:14   WARNING  Session data corrupted  None
+WARNING:django.security.SuspiciousSession:Session data corrupted
+08/Feb/2024 17:43:14   WARNING  Session data corrupted  None
+WARNING:django.security.SuspiciousSession:Session data corrupted
+08/Feb/2024 17:43:14   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+08/Feb/2024 17:43:16   WARNING  Session data corrupted  None
+WARNING:django.security.SuspiciousSession:Session data corrupted
+08/Feb/2024 17:43:17   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+08/Feb/2024 17:43:24   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+08/Feb/2024 17:43:25   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+08/Feb/2024 17:43:30   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+08/Feb/2024 17:43:32   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+08/Feb/2024 17:43:33   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+08/Feb/2024 17:44:31   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+08/Feb/2024 17:44:56   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+08/Feb/2024 17:53:02   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+08/Feb/2024 17:53:03   WARNING  Not Found: /favicon.ico  None
+WARNING:django.request:Not Found: /favicon.ico
+08/Feb/2024 17:53:03   WARNING  "GET /favicon.ico HTTP/1.1" 404 15499  None
+WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 15499
+08/Feb/2024 17:53:06   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+08/Feb/2024 17:53:16   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+08/Feb/2024 17:53:23   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+08/Feb/2024 17:53:25   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+08/Feb/2024 17:53:38   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
