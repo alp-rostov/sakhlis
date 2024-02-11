@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  postgers-db1:
+    image: postgres:latest
+    container_name: postgres_container1
+    environment:
+      POSTGRES_USER: 12345
+      POSTGRES_PASSWORD: 12345
+      POSTGRES_DB: post-db
+    ports:
+      - "5433:5432"
+
+  sakhlis:
+    build:
+      context: .
+    ports:
+      - "8001:8000"
+    depends_on:
+      - postgers-db1
+
+

@@ -3300,3 +3300,1963 @@ WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
 WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
 08/Feb/2024 17:53:38   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
 WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+09/Feb/2024 16:00:10   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+09/Feb/2024 16:00:11   WARNING  Not Found: /favicon.ico  None
+WARNING:django.request:Not Found: /favicon.ico
+09/Feb/2024 16:00:11   WARNING  "GET /favicon.ico HTTP/1.1" 404 15499  None
+WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 15499
+09/Feb/2024 16:00:13   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+09/Feb/2024 16:00:14   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+09/Feb/2024 16:00:32   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+09/Feb/2024 16:00:44   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+09/Feb/2024 16:00:48   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+09/Feb/2024 16:01:16   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+09/Feb/2024 16:01:19   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+09/Feb/2024 16:01:35   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+09/Feb/2024 16:01:39   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+09/Feb/2024 16:01:42   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+09/Feb/2024 16:01:46   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+09/Feb/2024 16:01:47   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+09/Feb/2024 16:01:52   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+09/Feb/2024 16:01:56   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+09/Feb/2024 16:01:59   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+10/Feb/2024 13:43:00   WARNING  Not Found: /static/css/mdb.min.css  None
+WARNING:django.request:Not Found: /static/css/mdb.min.css
+10/Feb/2024 13:43:00   WARNING  Not Found: /static/css/bootstrap.min.css  None
+WARNING:django.request:Not Found: /static/css/bootstrap.min.css
+10/Feb/2024 13:43:00   WARNING  Not Found: /static/css/custom.css  None
+WARNING:django.request:Not Found: /static/css/custom.css
+10/Feb/2024 13:43:00   WARNING  Not Found: /static/images/telegram.gif  None
+WARNING:django.request:Not Found: /static/images/telegram.gif
+10/Feb/2024 13:43:00   WARNING  Not Found: /static/images/whatsapp.png  None
+WARNING:django.request:Not Found: /static/images/whatsapp.png
+10/Feb/2024 13:43:00   WARNING  Not Found: /static/images/instagram.png  None
+WARNING:django.request:Not Found: /static/images/instagram.png
+10/Feb/2024 13:43:00   WARNING  Not Found: /static/js/mdb.min.js  None
+WARNING:django.request:Not Found: /static/js/mdb.min.js
+10/Feb/2024 13:43:00   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+10/Feb/2024 13:43:00   WARNING  Not Found: /static/images/1.jpg  None
+WARNING:django.request:Not Found: /static/images/1.jpg
+10/Feb/2024 13:43:00   WARNING  Not Found: /static/images/2.jpg  None
+WARNING:django.request:Not Found: /static/images/2.jpg
+10/Feb/2024 13:43:00   WARNING  Not Found: /static/images/3.jpg  None
+WARNING:django.request:Not Found: /static/images/3.jpg
+10/Feb/2024 13:43:00   WARNING  Not Found: /static/images/o-mastere-na-chas.png  None
+WARNING:django.request:Not Found: /static/images/o-mastere-na-chas.png
+10/Feb/2024 13:43:00   WARNING  Not Found: /static/fonts/fa-brands-400.woff2  None
+WARNING:django.request:Not Found: /static/fonts/fa-brands-400.woff2
+10/Feb/2024 13:43:00   WARNING  Not Found: /static/fonts/fa-brands-400.woff  None
+WARNING:django.request:Not Found: /static/fonts/fa-brands-400.woff
+10/Feb/2024 13:43:00   WARNING  Not Found: /static/fonts/fa-brands-400.ttf  None
+WARNING:django.request:Not Found: /static/fonts/fa-brands-400.ttf
+10/Feb/2024 13:43:00   WARNING  Not Found: /favicon.ico  None
+WARNING:django.request:Not Found: /favicon.ico
+10/Feb/2024 13:50:11   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+10/Feb/2024 13:50:12   WARNING  Not Found: /favicon.ico  None
+WARNING:django.request:Not Found: /favicon.ico
+10/Feb/2024 13:50:12   WARNING  "GET /favicon.ico HTTP/1.1" 404 15499  None
+WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 15499
+10/Feb/2024 13:50:14   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+10/Feb/2024 13:50:17   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+10/Feb/2024 13:50:21   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+10/Feb/2024 13:51:59   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+10/Feb/2024 13:52:38   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+10/Feb/2024 13:52:40   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+10/Feb/2024 13:52:45   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+11/Feb/2024 14:31:46   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+11/Feb/2024 14:31:46   WARNING  Not Found: /favicon.ico  None
+WARNING:django.request:Not Found: /favicon.ico
+11/Feb/2024 14:31:46   WARNING  "GET /favicon.ico HTTP/1.1" 404 15499  None
+WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 15499
+11/Feb/2024 14:32:26   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+11/Feb/2024 14:32:30   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+11/Feb/2024 14:34:10   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+11/Feb/2024 14:34:24   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+11/Feb/2024 14:34:27   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+11/Feb/2024 14:34:29   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+11/Feb/2024 14:34:30   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+11/Feb/2024 14:34:34   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+11/Feb/2024 14:34:39   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+11/Feb/2024 15:54:17   WARNING  Not Found: /static/css/mdb.min.css  None
+WARNING:django.request:Not Found: /static/css/mdb.min.css
+11/Feb/2024 15:54:17   WARNING  Not Found: /static/css/owl.carousel.min.css  None
+WARNING:django.request:Not Found: /static/css/owl.carousel.min.css
+11/Feb/2024 15:54:17   WARNING  "GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4045
+11/Feb/2024 15:54:17   WARNING  Not Found: /static/css/bootstrap.min.css  None
+WARNING:django.request:Not Found: /static/css/bootstrap.min.css
+11/Feb/2024 15:54:17   WARNING  Not Found: /static/css/fonts.css  None
+11/Feb/2024 15:54:17   WARNING  "GET /static/css/mdb.min.css HTTP/1.1" 404 4045  None
+WARNING:django.request:Not Found: /static/css/fonts.css
+11/Feb/2024 15:54:17   WARNING  "GET /static/css/bootstrap.min.css HTTP/1.1" 404 4045  None
+11/Feb/2024 15:54:17   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.server:"GET /static/css/mdb.min.css HTTP/1.1" 404 4045
+11/Feb/2024 15:54:17   WARNING  "GET /static/css/fonts.css HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css HTTP/1.1" 404 4045
+WARNING:django.request:Not Found: /static/js/counter.js
+11/Feb/2024 15:54:17   WARNING  Not Found: /static/css/custom.css  None
+11/Feb/2024 15:54:17   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/css/fonts.css HTTP/1.1" 404 4045
+WARNING:django.request:Not Found: /static/css/custom.css
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 4045
+11/Feb/2024 15:54:17   WARNING  Not Found: /static/js/bootstrap.min.js  None
+WARNING:django.request:Not Found: /static/js/bootstrap.min.js
+11/Feb/2024 15:54:17   WARNING  "GET /static/css/custom.css HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/css/custom.css HTTP/1.1" 404 4045
+11/Feb/2024 15:54:17   WARNING  Not Found: /static/js/mdb.min.js  None
+WARNING:django.request:Not Found: /static/js/mdb.min.js
+11/Feb/2024 15:54:17   WARNING  "GET /static/js/bootstrap.min.js HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js HTTP/1.1" 404 4045
+11/Feb/2024 15:54:17   WARNING  "GET /static/js/mdb.min.js HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/js/mdb.min.js HTTP/1.1" 404 4045
+11/Feb/2024 15:54:17   WARNING  Not Found: /static/js/jquery-3.3.1.min.js  None
+WARNING:django.request:Not Found: /static/js/jquery-3.3.1.min.js
+11/Feb/2024 15:54:17   WARNING  "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 404 4045
+11/Feb/2024 15:54:17   WARNING  Not Found: /static/js/wow.min.js  None
+WARNING:django.request:Not Found: /static/js/wow.min.js
+11/Feb/2024 15:54:17   WARNING  "GET /static/js/wow.min.js HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/js/wow.min.js HTTP/1.1" 404 4045
+11/Feb/2024 15:54:17   WARNING  Not Found: /static/js/owl.carousel.min.js  None
+WARNING:django.request:Not Found: /static/js/owl.carousel.min.js
+11/Feb/2024 15:54:17   WARNING  "GET /static/js/owl.carousel.min.js HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/js/owl.carousel.min.js HTTP/1.1" 404 4045
+11/Feb/2024 15:54:17   WARNING  Not Found: /static/js/typed.min.js  None
+WARNING:django.request:Not Found: /static/js/typed.min.js
+11/Feb/2024 15:54:17   WARNING  "GET /static/js/typed.min.js HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/js/typed.min.js HTTP/1.1" 404 4045
+11/Feb/2024 15:54:17   WARNING  Not Found: /static/js/jquery.malihu.PageScroll2id.min.js  None
+WARNING:django.request:Not Found: /static/js/jquery.malihu.PageScroll2id.min.js
+11/Feb/2024 15:54:17   WARNING  "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 4045
+11/Feb/2024 15:54:17   WARNING  Not Found: /static/js/custom.js  None
+WARNING:django.request:Not Found: /static/js/custom.js
+11/Feb/2024 15:54:17   WARNING  Not Found: /static/js/maskedinput.min.js  None
+WARNING:django.request:Not Found: /static/js/maskedinput.min.js
+11/Feb/2024 15:54:17   WARNING  "GET /static/js/maskedinput.min.js HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/js/maskedinput.min.js HTTP/1.1" 404 4045
+11/Feb/2024 15:54:17   WARNING  "GET /static/js/custom.js HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/js/custom.js HTTP/1.1" 404 4045
+11/Feb/2024 15:54:17   WARNING  Not Found: /static/images/flag_en.png  None
+WARNING:django.request:Not Found: /static/images/flag_en.png
+11/Feb/2024 15:54:17   WARNING  "GET /static/images/flag_en.png HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/images/flag_en.png HTTP/1.1" 404 4045
+11/Feb/2024 15:54:17   WARNING  Not Found: /static/images/flag_ge.png  None
+WARNING:django.request:Not Found: /static/images/flag_ge.png
+11/Feb/2024 15:54:17   WARNING  "GET /static/images/flag_ge.png HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/images/flag_ge.png HTTP/1.1" 404 4045
+11/Feb/2024 15:54:17   WARNING  Not Found: /static/images/telegram.gif  None
+WARNING:django.request:Not Found: /static/images/telegram.gif
+11/Feb/2024 15:54:17   WARNING  "GET /static/images/telegram.gif HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/images/telegram.gif HTTP/1.1" 404 4045
+11/Feb/2024 15:54:17   WARNING  Not Found: /static/js/bootstrap.min.js  None
+WARNING:django.request:Not Found: /static/js/bootstrap.min.js
+11/Feb/2024 15:54:17   WARNING  "GET /static/js/bootstrap.min.js HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js HTTP/1.1" 404 4045
+11/Feb/2024 15:54:17   WARNING  Not Found: /static/images/whatsapp.png  None
+WARNING:django.request:Not Found: /static/images/whatsapp.png
+11/Feb/2024 15:54:17   WARNING  "GET /static/images/whatsapp.png HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/images/whatsapp.png HTTP/1.1" 404 4045
+11/Feb/2024 15:54:17   WARNING  Not Found: /static/fonts/broken-cable.svg  None
+WARNING:django.request:Not Found: /static/fonts/broken-cable.svg
+11/Feb/2024 15:54:17   WARNING  "GET /static/fonts/broken-cable.svg HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/fonts/broken-cable.svg HTTP/1.1" 404 4045
+11/Feb/2024 15:54:17   WARNING  Not Found: /static/images/instagram.png  None
+WARNING:django.request:Not Found: /static/images/instagram.png
+11/Feb/2024 15:54:17   WARNING  "GET /static/images/instagram.png HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/images/instagram.png HTTP/1.1" 404 4045
+11/Feb/2024 15:54:17   WARNING  Not Found: /static/fonts/leak.svg  None
+WARNING:django.request:Not Found: /static/fonts/leak.svg
+11/Feb/2024 15:54:17   WARNING  "GET /static/fonts/leak.svg HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/fonts/leak.svg HTTP/1.1" 404 4045
+11/Feb/2024 15:54:17   WARNING  Not Found: /static/fonts/living-room.svg  None
+WARNING:django.request:Not Found: /static/fonts/living-room.svg
+11/Feb/2024 15:54:17   WARNING  "GET /static/fonts/living-room.svg HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/fonts/living-room.svg HTTP/1.1" 404 4045
+11/Feb/2024 15:54:17   WARNING  Not Found: /static/fonts/washing-machine.svg  None
+WARNING:django.request:Not Found: /static/fonts/washing-machine.svg
+11/Feb/2024 15:54:17   WARNING  "GET /static/fonts/washing-machine.svg HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/fonts/washing-machine.svg HTTP/1.1" 404 4045
+11/Feb/2024 15:54:17   WARNING  Not Found: /static/fonts/3d-buildings.svg  None
+WARNING:django.request:Not Found: /static/fonts/3d-buildings.svg
+11/Feb/2024 15:54:17   WARNING  Not Found: /static/js/mdb.min.js  None
+WARNING:django.request:Not Found: /static/js/mdb.min.js
+11/Feb/2024 15:54:17   WARNING  "GET /static/fonts/3d-buildings.svg HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/fonts/3d-buildings.svg HTTP/1.1" 404 4045
+11/Feb/2024 15:54:17   WARNING  "GET /static/js/mdb.min.js HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/js/mdb.min.js HTTP/1.1" 404 4045
+11/Feb/2024 15:54:17   WARNING  Not Found: /static/images/1.jpg  None
+WARNING:django.request:Not Found: /static/images/1.jpg
+11/Feb/2024 15:54:17   WARNING  "GET /static/images/1.jpg HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/images/1.jpg HTTP/1.1" 404 4045
+11/Feb/2024 15:54:17   WARNING  Not Found: /static/images/2.jpg  None
+WARNING:django.request:Not Found: /static/images/2.jpg
+11/Feb/2024 15:54:17   WARNING  "GET /static/images/2.jpg HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/images/2.jpg HTTP/1.1" 404 4045
+11/Feb/2024 15:54:17   WARNING  Not Found: /static/images/3.jpg  None
+WARNING:django.request:Not Found: /static/images/3.jpg
+11/Feb/2024 15:54:17   WARNING  "GET /static/images/3.jpg HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/images/3.jpg HTTP/1.1" 404 4045
+11/Feb/2024 15:54:17   WARNING  Not Found: /static/images/o-mastere-na-chas.png  None
+WARNING:django.request:Not Found: /static/images/o-mastere-na-chas.png
+11/Feb/2024 15:54:17   WARNING  "GET /static/images/o-mastere-na-chas.png HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/images/o-mastere-na-chas.png HTTP/1.1" 404 4045
+11/Feb/2024 15:54:17   WARNING  Not Found: /media/images/muzg-na-chas.jpg  None
+WARNING:django.request:Not Found: /media/images/muzg-na-chas.jpg
+11/Feb/2024 15:54:17   WARNING  "GET /media/images/muzg-na-chas.jpg HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /media/images/muzg-na-chas.jpg HTTP/1.1" 404 4045
+11/Feb/2024 15:54:17   WARNING  Not Found: /static/js/wow.min.js  None
+WARNING:django.request:Not Found: /static/js/wow.min.js
+11/Feb/2024 15:54:17   WARNING  "GET /static/js/wow.min.js HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/js/wow.min.js HTTP/1.1" 404 4045
+11/Feb/2024 15:54:17   WARNING  Not Found: /static/js/owl.carousel.min.js  None
+WARNING:django.request:Not Found: /static/js/owl.carousel.min.js
+11/Feb/2024 15:54:17   WARNING  "GET /static/js/owl.carousel.min.js HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/js/owl.carousel.min.js HTTP/1.1" 404 4045
+11/Feb/2024 15:54:17   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+11/Feb/2024 15:54:17   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 4045
+11/Feb/2024 15:54:17   WARNING  Not Found: /static/js/typed.min.js  None
+WARNING:django.request:Not Found: /static/js/typed.min.js
+11/Feb/2024 15:54:17   WARNING  "GET /static/js/typed.min.js HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/js/typed.min.js HTTP/1.1" 404 4045
+11/Feb/2024 15:54:17   WARNING  Not Found: /static/js/jquery.malihu.PageScroll2id.min.js  None
+WARNING:django.request:Not Found: /static/js/jquery.malihu.PageScroll2id.min.js
+11/Feb/2024 15:54:17   WARNING  "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 4045
+11/Feb/2024 15:54:17   WARNING  Not Found: /static/js/maskedinput.min.js  None
+WARNING:django.request:Not Found: /static/js/maskedinput.min.js
+11/Feb/2024 15:54:17   WARNING  "GET /static/js/maskedinput.min.js HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/js/maskedinput.min.js HTTP/1.1" 404 4045
+11/Feb/2024 15:54:17   WARNING  Not Found: /static/js/custom.js  None
+WARNING:django.request:Not Found: /static/js/custom.js
+11/Feb/2024 15:54:17   WARNING  "GET /static/js/custom.js HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/js/custom.js HTTP/1.1" 404 4045
+11/Feb/2024 15:54:17   WARNING  Not Found: /favicon.ico  None
+WARNING:django.request:Not Found: /favicon.ico
+11/Feb/2024 15:54:22   ERROR  Internal Server Error: /login/  (<class 'django.db.utils.ProgrammingError'>, ProgrammingError('relation "django_site" does not exist\nLINE 1: ..."django_site"."domain", "django_site"."name" FROM "django_si...\n                                                             ^\n'), <traceback object at 0x7fd971688180>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedTable: relation "django_site" does not exist
+LINE 1: ..."django_site"."domain", "django_site"."name" FROM "django_si...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/decorators/debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/views.py", line 90, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/views.py", line 114, in get_context_data
+    current_site = get_current_site(self.request)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sites/models.py", line 59, in get_current
+    return self._get_site_by_id(site_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 633, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 380, in __len__
+    self._fetch_all()
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1560, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: relation "django_site" does not exist
+LINE 1: ..."django_site"."domain", "django_site"."name" FROM "django_si...
+                                                             ^
+
+ERROR:django.request:Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedTable: relation "django_site" does not exist
+LINE 1: ..."django_site"."domain", "django_site"."name" FROM "django_si...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/decorators/debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/views.py", line 90, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/views.py", line 114, in get_context_data
+    current_site = get_current_site(self.request)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sites/models.py", line 59, in get_current
+    return self._get_site_by_id(site_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 633, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 380, in __len__
+    self._fetch_all()
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1560, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: relation "django_site" does not exist
+LINE 1: ..."django_site"."domain", "django_site"."name" FROM "django_si...
+                                                             ^
+
+11/Feb/2024 15:54:22   ERROR  "GET /login/ HTTP/1.1" 500 145  None
+ERROR:django.server:"GET /login/ HTTP/1.1" 500 145
+11/Feb/2024 15:57:08   WARNING  Not Found: /static/css/mdb.min.css  None
+WARNING:django.request:Not Found: /static/css/mdb.min.css
+11/Feb/2024 15:57:08   WARNING  Not Found: /static/css/bootstrap.min.css  None
+WARNING:django.request:Not Found: /static/css/bootstrap.min.css
+11/Feb/2024 15:57:09   WARNING  "GET /static/css/mdb.min.css HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/css/mdb.min.css HTTP/1.1" 404 4045
+11/Feb/2024 15:57:09   WARNING  Not Found: /static/css/fonts.css  None
+WARNING:django.request:Not Found: /static/css/fonts.css
+11/Feb/2024 15:57:09   WARNING  "GET /static/css/fonts.css HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/css/fonts.css HTTP/1.1" 404 4045
+11/Feb/2024 15:57:09   WARNING  "GET /static/css/bootstrap.min.css HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/css/bootstrap.min.css HTTP/1.1" 404 4045
+11/Feb/2024 15:57:09   WARNING  Not Found: /static/css/owl.carousel.min.css  None
+WARNING:django.request:Not Found: /static/css/owl.carousel.min.css
+11/Feb/2024 15:57:09   WARNING  "GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/css/owl.carousel.min.css HTTP/1.1" 404 4045
+11/Feb/2024 15:57:09   WARNING  Not Found: /static/css/custom.css  None
+WARNING:django.request:Not Found: /static/css/custom.css
+11/Feb/2024 15:57:09   WARNING  "GET /static/css/custom.css HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/css/custom.css HTTP/1.1" 404 4045
+11/Feb/2024 15:57:09   WARNING  Not Found: /static/js/jquery-3.3.1.min.js  None
+WARNING:django.request:Not Found: /static/js/jquery-3.3.1.min.js
+11/Feb/2024 15:57:09   WARNING  "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 404 4045
+11/Feb/2024 15:57:09   WARNING  Not Found: /static/js/bootstrap.min.js  None
+WARNING:django.request:Not Found: /static/js/bootstrap.min.js
+11/Feb/2024 15:57:09   WARNING  "GET /static/js/bootstrap.min.js HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/js/bootstrap.min.js HTTP/1.1" 404 4045
+11/Feb/2024 15:57:09   WARNING  Not Found: /static/js/mdb.min.js  None
+WARNING:django.request:Not Found: /static/js/mdb.min.js
+11/Feb/2024 15:57:09   WARNING  "GET /static/js/mdb.min.js HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/js/mdb.min.js HTTP/1.1" 404 4045
+11/Feb/2024 15:57:09   WARNING  Not Found: /static/js/owl.carousel.min.js  None
+WARNING:django.request:Not Found: /static/js/owl.carousel.min.js
+11/Feb/2024 15:57:09   WARNING  "GET /static/js/owl.carousel.min.js HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/js/owl.carousel.min.js HTTP/1.1" 404 4045
+11/Feb/2024 15:57:09   WARNING  Not Found: /static/js/wow.min.js  None
+WARNING:django.request:Not Found: /static/js/wow.min.js
+11/Feb/2024 15:57:09   WARNING  "GET /static/js/wow.min.js HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/js/wow.min.js HTTP/1.1" 404 4045
+11/Feb/2024 15:57:09   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+11/Feb/2024 15:57:09   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 4045
+11/Feb/2024 15:57:09   WARNING  Not Found: /static/js/typed.min.js  None
+WARNING:django.request:Not Found: /static/js/typed.min.js
+11/Feb/2024 15:57:09   WARNING  "GET /static/js/typed.min.js HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/js/typed.min.js HTTP/1.1" 404 4045
+11/Feb/2024 15:57:09   WARNING  Not Found: /static/images/flag_en.png  None
+WARNING:django.request:Not Found: /static/images/flag_en.png
+11/Feb/2024 15:57:09   WARNING  "GET /static/images/flag_en.png HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/images/flag_en.png HTTP/1.1" 404 4045
+11/Feb/2024 15:57:09   WARNING  Not Found: /static/js/jquery.malihu.PageScroll2id.min.js  None
+WARNING:django.request:Not Found: /static/js/jquery.malihu.PageScroll2id.min.js
+11/Feb/2024 15:57:09   WARNING  "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 4045
+11/Feb/2024 15:57:09   WARNING  Not Found: /static/js/maskedinput.min.js  None
+WARNING:django.request:Not Found: /static/js/maskedinput.min.js
+11/Feb/2024 15:57:09   WARNING  Not Found: /static/images/flag_ge.png  None
+WARNING:django.request:Not Found: /static/images/flag_ge.png
+11/Feb/2024 15:57:09   WARNING  "GET /static/js/maskedinput.min.js HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/js/maskedinput.min.js HTTP/1.1" 404 4045
+11/Feb/2024 15:57:09   WARNING  "GET /static/images/flag_ge.png HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/images/flag_ge.png HTTP/1.1" 404 4045
+11/Feb/2024 15:57:09   WARNING  Not Found: /static/js/custom.js  None
+WARNING:django.request:Not Found: /static/js/custom.js
+11/Feb/2024 15:57:09   WARNING  "GET /static/js/custom.js HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/js/custom.js HTTP/1.1" 404 4045
+11/Feb/2024 15:57:09   WARNING  Not Found: /static/js/mdb.min.js  None
+WARNING:django.request:Not Found: /static/js/mdb.min.js
+11/Feb/2024 15:57:09   WARNING  "GET /static/js/mdb.min.js HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/js/mdb.min.js HTTP/1.1" 404 4045
+11/Feb/2024 15:57:09   WARNING  Not Found: /static/js/wow.min.js  None
+WARNING:django.request:Not Found: /static/js/wow.min.js
+11/Feb/2024 15:57:09   WARNING  "GET /static/js/wow.min.js HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/js/wow.min.js HTTP/1.1" 404 4045
+11/Feb/2024 15:57:09   WARNING  Not Found: /static/js/owl.carousel.min.js  None
+WARNING:django.request:Not Found: /static/js/owl.carousel.min.js
+11/Feb/2024 15:57:09   WARNING  "GET /static/js/owl.carousel.min.js HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/js/owl.carousel.min.js HTTP/1.1" 404 4045
+11/Feb/2024 15:57:09   WARNING  Not Found: /static/js/counter.js  None
+WARNING:django.request:Not Found: /static/js/counter.js
+11/Feb/2024 15:57:09   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 4045
+11/Feb/2024 15:57:09   WARNING  Not Found: /static/js/typed.min.js  None
+WARNING:django.request:Not Found: /static/js/typed.min.js
+11/Feb/2024 15:57:09   WARNING  "GET /static/js/typed.min.js HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/js/typed.min.js HTTP/1.1" 404 4045
+11/Feb/2024 15:57:09   WARNING  Not Found: /static/js/jquery.malihu.PageScroll2id.min.js  None
+WARNING:django.request:Not Found: /static/js/jquery.malihu.PageScroll2id.min.js
+11/Feb/2024 15:57:09   WARNING  "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 4045
+11/Feb/2024 15:57:09   WARNING  Not Found: /static/js/maskedinput.min.js  None
+WARNING:django.request:Not Found: /static/js/maskedinput.min.js
+11/Feb/2024 15:57:09   WARNING  "GET /static/js/maskedinput.min.js HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/js/maskedinput.min.js HTTP/1.1" 404 4045
+11/Feb/2024 15:57:09   WARNING  Not Found: /static/js/custom.js  None
+WARNING:django.request:Not Found: /static/js/custom.js
+11/Feb/2024 15:57:09   WARNING  "GET /static/js/custom.js HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/js/custom.js HTTP/1.1" 404 4045
+11/Feb/2024 15:57:16   WARNING  Not Found: /static/admin/css/base.css  None
+WARNING:django.request:Not Found: /static/admin/css/base.css
+11/Feb/2024 15:57:16   WARNING  "GET /static/admin/css/base.css HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/admin/css/base.css HTTP/1.1" 404 4045
+11/Feb/2024 15:57:16   WARNING  Not Found: /static/admin/css/login.css  None
+WARNING:django.request:Not Found: /static/admin/css/login.css
+11/Feb/2024 15:57:16   WARNING  Not Found: /static/admin/js/theme.js  None
+11/Feb/2024 15:57:16   WARNING  Not Found: /static/admin/css/dark_mode.css  None
+WARNING:django.request:Not Found: /static/admin/js/theme.js
+11/Feb/2024 15:57:16   WARNING  "GET /static/admin/css/login.css HTTP/1.1" 404 4045  None
+WARNING:django.request:Not Found: /static/admin/css/dark_mode.css
+11/Feb/2024 15:57:16   WARNING  "GET /static/admin/js/theme.js HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/admin/js/theme.js HTTP/1.1" 404 4045
+WARNING:django.server:"GET /static/admin/css/login.css HTTP/1.1" 404 4045
+11/Feb/2024 15:57:16   WARNING  "GET /static/admin/css/dark_mode.css HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/admin/css/dark_mode.css HTTP/1.1" 404 4045
+11/Feb/2024 15:57:16   WARNING  Not Found: /static/admin/css/nav_sidebar.css  None
+WARNING:django.request:Not Found: /static/admin/css/nav_sidebar.css
+11/Feb/2024 15:57:16   WARNING  "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 4045
+11/Feb/2024 15:57:16   WARNING  Not Found: /static/admin/js/nav_sidebar.js  None
+WARNING:django.request:Not Found: /static/admin/js/nav_sidebar.js
+11/Feb/2024 15:57:16   WARNING  "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 4045
+11/Feb/2024 15:57:16   WARNING  Not Found: /static/admin/css/responsive.css  None
+WARNING:django.request:Not Found: /static/admin/css/responsive.css
+11/Feb/2024 15:57:16   WARNING  "GET /static/admin/css/responsive.css HTTP/1.1" 404 4045  None
+WARNING:django.server:"GET /static/admin/css/responsive.css HTTP/1.1" 404 4045
+11/Feb/2024 15:57:27   WARNING  Not Found: /static/admin/css/base.css  None
+WARNING:django.request:Not Found: /static/admin/css/base.css
+11/Feb/2024 15:57:27   WARNING  Not Found: /static/admin/js/theme.js  None
+WARNING:django.request:Not Found: /static/admin/js/theme.js
+11/Feb/2024 15:57:27   WARNING  "GET /static/admin/css/base.css HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/css/base.css HTTP/1.1" 404 4167
+11/Feb/2024 15:57:27   WARNING  Not Found: /static/admin/css/responsive.css  None
+WARNING:django.request:Not Found: /static/admin/css/responsive.css
+11/Feb/2024 15:57:27   WARNING  Not Found: /static/admin/js/nav_sidebar.js  None
+WARNING:django.request:Not Found: /static/admin/js/nav_sidebar.js
+11/Feb/2024 15:57:27   WARNING  Not Found: /static/admin/css/dark_mode.css  None
+WARNING:django.request:Not Found: /static/admin/css/dark_mode.css
+11/Feb/2024 15:57:27   WARNING  "GET /static/admin/css/responsive.css HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/css/responsive.css HTTP/1.1" 404 4167
+11/Feb/2024 15:57:27   WARNING  "GET /static/admin/js/theme.js HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/js/theme.js HTTP/1.1" 404 4167
+11/Feb/2024 15:57:27   WARNING  "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 4167
+11/Feb/2024 15:57:27   WARNING  Not Found: /static/admin/css/nav_sidebar.css  None
+WARNING:django.request:Not Found: /static/admin/css/nav_sidebar.css
+11/Feb/2024 15:57:27   WARNING  "GET /static/admin/css/dark_mode.css HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/css/dark_mode.css HTTP/1.1" 404 4167
+11/Feb/2024 15:57:27   WARNING  "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 4167
+11/Feb/2024 15:57:27   WARNING  Not Found: /static/admin/css/dashboard.css  None
+WARNING:django.request:Not Found: /static/admin/css/dashboard.css
+11/Feb/2024 15:57:27   WARNING  "GET /static/admin/css/dashboard.css HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/css/dashboard.css HTTP/1.1" 404 4167
+11/Feb/2024 15:57:33   WARNING  Not Found: /static/admin/css/base.css  None
+WARNING:django.request:Not Found: /static/admin/css/base.css
+11/Feb/2024 15:57:33   WARNING  Not Found: /static/admin/js/vendor/jquery/jquery.min.js  None
+WARNING:django.request:Not Found: /static/admin/js/vendor/jquery/jquery.min.js
+11/Feb/2024 15:57:33   WARNING  "GET /static/admin/css/base.css HTTP/1.1" 404 4167  None
+11/Feb/2024 15:57:33   WARNING  Not Found: /static/admin/css/nav_sidebar.css  None
+11/Feb/2024 15:57:33   WARNING  Not Found: /static/admin/js/theme.js  None
+WARNING:django.server:"GET /static/admin/css/base.css HTTP/1.1" 404 4167
+11/Feb/2024 15:57:33   WARNING  Not Found: /static/admin/js/nav_sidebar.js  None
+WARNING:django.request:Not Found: /static/admin/css/nav_sidebar.css
+11/Feb/2024 15:57:33   WARNING  "GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 404 4167  None
+WARNING:django.request:Not Found: /static/admin/js/theme.js
+11/Feb/2024 15:57:33   WARNING  Not Found: /static/admin/css/dark_mode.css  None
+11/Feb/2024 15:57:33   WARNING  "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 4167  None
+WARNING:django.request:Not Found: /static/admin/js/nav_sidebar.js
+11/Feb/2024 15:57:33   WARNING  "GET /static/admin/js/theme.js HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 404 4167
+WARNING:django.request:Not Found: /static/admin/css/dark_mode.css
+WARNING:django.server:"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 4167
+11/Feb/2024 15:57:33   WARNING  "GET /static/admin/css/dark_mode.css HTTP/1.1" 404 4167  None
+11/Feb/2024 15:57:33   WARNING  "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/js/theme.js HTTP/1.1" 404 4167
+WARNING:django.server:"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 4167
+WARNING:django.server:"GET /static/admin/css/dark_mode.css HTTP/1.1" 404 4167
+11/Feb/2024 15:57:33   WARNING  Not Found: /static/admin/js/vendor/xregexp/xregexp.min.js  None
+WARNING:django.request:Not Found: /static/admin/js/vendor/xregexp/xregexp.min.js
+11/Feb/2024 15:57:33   WARNING  "GET /static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 404 4167
+11/Feb/2024 15:57:33   WARNING  Not Found: /static/admin/css/changelists.css  None
+WARNING:django.request:Not Found: /static/admin/css/changelists.css
+11/Feb/2024 15:57:33   WARNING  Not Found: /static/admin/js/core.js  None
+WARNING:django.request:Not Found: /static/admin/js/core.js
+11/Feb/2024 15:57:33   WARNING  Not Found: /static/admin/css/responsive.css  None
+WARNING:django.request:Not Found: /static/admin/css/responsive.css
+11/Feb/2024 15:57:33   WARNING  "GET /static/admin/css/changelists.css HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/css/changelists.css HTTP/1.1" 404 4167
+11/Feb/2024 15:57:33   WARNING  "GET /static/admin/js/core.js HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/js/core.js HTTP/1.1" 404 4167
+11/Feb/2024 15:57:33   WARNING  "GET /static/admin/css/responsive.css HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/css/responsive.css HTTP/1.1" 404 4167
+11/Feb/2024 15:57:33   WARNING  Not Found: /static/admin/js/jquery.init.js  None
+WARNING:django.request:Not Found: /static/admin/js/jquery.init.js
+11/Feb/2024 15:57:33   WARNING  "GET /static/admin/js/jquery.init.js HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/js/jquery.init.js HTTP/1.1" 404 4167
+11/Feb/2024 15:57:33   WARNING  Not Found: /static/admin/js/admin/RelatedObjectLookups.js  None
+WARNING:django.request:Not Found: /static/admin/js/admin/RelatedObjectLookups.js
+11/Feb/2024 15:57:33   WARNING  Not Found: /static/admin/js/actions.js  None
+WARNING:django.request:Not Found: /static/admin/js/actions.js
+11/Feb/2024 15:57:33   WARNING  Not Found: /static/admin/js/urlify.js  None
+WARNING:django.request:Not Found: /static/admin/js/urlify.js
+11/Feb/2024 15:57:33   WARNING  "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 404 4167
+11/Feb/2024 15:57:33   WARNING  "GET /static/admin/js/actions.js HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/js/actions.js HTTP/1.1" 404 4167
+11/Feb/2024 15:57:33   WARNING  Not Found: /static/admin/js/filters.js  None
+WARNING:django.request:Not Found: /static/admin/js/filters.js
+11/Feb/2024 15:57:33   WARNING  Not Found: /static/admin/js/prepopulate.js  None
+11/Feb/2024 15:57:33   WARNING  "GET /static/admin/js/urlify.js HTTP/1.1" 404 4167  None
+WARNING:django.request:Not Found: /static/admin/js/prepopulate.js
+11/Feb/2024 15:57:33   WARNING  "GET /static/admin/js/filters.js HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/js/filters.js HTTP/1.1" 404 4167
+11/Feb/2024 15:57:33   WARNING  "GET /static/admin/js/prepopulate.js HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/js/urlify.js HTTP/1.1" 404 4167
+WARNING:django.server:"GET /static/admin/js/prepopulate.js HTTP/1.1" 404 4167
+11/Feb/2024 15:57:33   WARNING  Not Found: /static/admin/js/vendor/jquery/jquery.min.js  None
+WARNING:django.request:Not Found: /static/admin/js/vendor/jquery/jquery.min.js
+11/Feb/2024 15:57:33   WARNING  "GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 404 4167
+11/Feb/2024 15:57:34   WARNING  Not Found: /static/admin/js/jquery.init.js  None
+WARNING:django.request:Not Found: /static/admin/js/jquery.init.js
+11/Feb/2024 15:57:34   WARNING  "GET /static/admin/js/jquery.init.js HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/js/jquery.init.js HTTP/1.1" 404 4167
+11/Feb/2024 15:57:34   WARNING  Not Found: /static/admin/js/core.js  None
+WARNING:django.request:Not Found: /static/admin/js/core.js
+11/Feb/2024 15:57:34   WARNING  "GET /static/admin/js/core.js HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/js/core.js HTTP/1.1" 404 4167
+11/Feb/2024 15:57:34   WARNING  Not Found: /static/admin/js/admin/RelatedObjectLookups.js  None
+WARNING:django.request:Not Found: /static/admin/js/admin/RelatedObjectLookups.js
+11/Feb/2024 15:57:34   WARNING  "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 404 4167
+11/Feb/2024 15:57:34   WARNING  Not Found: /static/admin/js/actions.js  None
+WARNING:django.request:Not Found: /static/admin/js/actions.js
+11/Feb/2024 15:57:34   WARNING  "GET /static/admin/js/actions.js HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/js/actions.js HTTP/1.1" 404 4167
+11/Feb/2024 15:57:34   WARNING  Not Found: /static/admin/js/urlify.js  None
+WARNING:django.request:Not Found: /static/admin/js/urlify.js
+11/Feb/2024 15:57:34   WARNING  "GET /static/admin/js/urlify.js HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/js/urlify.js HTTP/1.1" 404 4167
+11/Feb/2024 15:57:34   WARNING  Not Found: /static/admin/js/prepopulate.js  None
+WARNING:django.request:Not Found: /static/admin/js/prepopulate.js
+11/Feb/2024 15:57:34   WARNING  "GET /static/admin/js/prepopulate.js HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/js/prepopulate.js HTTP/1.1" 404 4167
+11/Feb/2024 15:57:34   WARNING  Not Found: /static/admin/js/vendor/xregexp/xregexp.min.js  None
+WARNING:django.request:Not Found: /static/admin/js/vendor/xregexp/xregexp.min.js
+11/Feb/2024 15:57:34   WARNING  "GET /static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 404 4167
+11/Feb/2024 15:57:34   WARNING  Not Found: /static/admin/js/filters.js  None
+WARNING:django.request:Not Found: /static/admin/js/filters.js
+11/Feb/2024 15:57:34   WARNING  Not Found: /static/admin/css/responsive.css  None
+WARNING:django.request:Not Found: /static/admin/css/responsive.css
+11/Feb/2024 15:57:34   WARNING  "GET /static/admin/js/filters.js HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/js/filters.js HTTP/1.1" 404 4167
+11/Feb/2024 15:57:34   WARNING  "GET /static/admin/css/responsive.css HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/css/responsive.css HTTP/1.1" 404 4167
+11/Feb/2024 15:57:51   WARNING  Not Found: /static/admin/css/dark_mode.css  None
+WARNING:django.request:Not Found: /static/admin/css/dark_mode.css
+11/Feb/2024 15:57:51   WARNING  Not Found: /static/admin/css/base.css  None
+WARNING:django.request:Not Found: /static/admin/css/base.css
+11/Feb/2024 15:57:51   WARNING  "GET /static/admin/css/dark_mode.css HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/css/dark_mode.css HTTP/1.1" 404 4167
+11/Feb/2024 15:57:51   WARNING  Not Found: /static/admin/css/nav_sidebar.css  None
+WARNING:django.request:Not Found: /static/admin/css/nav_sidebar.css
+11/Feb/2024 15:57:51   WARNING  "GET /static/admin/css/base.css HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/css/base.css HTTP/1.1" 404 4167
+11/Feb/2024 15:57:51   WARNING  Not Found: /static/admin/js/theme.js  None
+WARNING:django.request:Not Found: /static/admin/js/theme.js
+11/Feb/2024 15:57:51   WARNING  "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 4167
+11/Feb/2024 15:57:51   WARNING  Not Found: /static/admin/css/changelists.css  None
+WARNING:django.request:Not Found: /static/admin/css/changelists.css
+11/Feb/2024 15:57:51   WARNING  "GET /static/admin/js/theme.js HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/js/theme.js HTTP/1.1" 404 4167
+11/Feb/2024 15:57:51   WARNING  Not Found: /static/admin/js/nav_sidebar.js  None
+WARNING:django.request:Not Found: /static/admin/js/nav_sidebar.js
+11/Feb/2024 15:57:51   WARNING  "GET /static/admin/css/changelists.css HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/css/changelists.css HTTP/1.1" 404 4167
+11/Feb/2024 15:57:51   WARNING  "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 4167
+11/Feb/2024 15:57:51   WARNING  Not Found: /static/admin/js/jquery.init.js  None
+WARNING:django.request:Not Found: /static/admin/js/jquery.init.js
+11/Feb/2024 15:57:51   WARNING  Not Found: /static/admin/js/vendor/jquery/jquery.min.js  None
+WARNING:django.request:Not Found: /static/admin/js/vendor/jquery/jquery.min.js
+11/Feb/2024 15:57:51   WARNING  "GET /static/admin/js/jquery.init.js HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/js/jquery.init.js HTTP/1.1" 404 4167
+11/Feb/2024 15:57:51   WARNING  "GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 404 4167
+11/Feb/2024 15:57:51   WARNING  Not Found: /static/admin/js/core.js  None
+WARNING:django.request:Not Found: /static/admin/js/core.js
+11/Feb/2024 15:57:51   WARNING  "GET /static/admin/js/core.js HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/js/core.js HTTP/1.1" 404 4167
+11/Feb/2024 15:57:51   WARNING  Not Found: /static/admin/js/admin/RelatedObjectLookups.js  None
+WARNING:django.request:Not Found: /static/admin/js/admin/RelatedObjectLookups.js
+11/Feb/2024 15:57:51   WARNING  "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 404 4167
+11/Feb/2024 15:57:51   WARNING  Not Found: /static/admin/js/actions.js  None
+WARNING:django.request:Not Found: /static/admin/js/actions.js
+11/Feb/2024 15:57:51   WARNING  "GET /static/admin/js/actions.js HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/js/actions.js HTTP/1.1" 404 4167
+11/Feb/2024 15:57:51   WARNING  Not Found: /static/admin/js/urlify.js  None
+WARNING:django.request:Not Found: /static/admin/js/urlify.js
+11/Feb/2024 15:57:51   WARNING  "GET /static/admin/js/urlify.js HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/js/urlify.js HTTP/1.1" 404 4167
+11/Feb/2024 15:57:51   WARNING  Not Found: /static/admin/js/prepopulate.js  None
+WARNING:django.request:Not Found: /static/admin/js/prepopulate.js
+11/Feb/2024 15:57:51   WARNING  "GET /static/admin/js/prepopulate.js HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/js/prepopulate.js HTTP/1.1" 404 4167
+11/Feb/2024 15:57:51   WARNING  Not Found: /static/admin/js/vendor/xregexp/xregexp.min.js  None
+WARNING:django.request:Not Found: /static/admin/js/vendor/xregexp/xregexp.min.js
+11/Feb/2024 15:57:51   WARNING  "GET /static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 404 4167
+11/Feb/2024 15:57:51   WARNING  Not Found: /static/admin/js/filters.js  None
+WARNING:django.request:Not Found: /static/admin/js/filters.js
+11/Feb/2024 15:57:51   WARNING  "GET /static/admin/js/filters.js HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/js/filters.js HTTP/1.1" 404 4167
+11/Feb/2024 15:57:51   WARNING  Not Found: /static/admin/css/responsive.css  None
+WARNING:django.request:Not Found: /static/admin/css/responsive.css
+11/Feb/2024 15:57:51   WARNING  "GET /static/admin/css/responsive.css HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/css/responsive.css HTTP/1.1" 404 4167
+11/Feb/2024 15:57:58   WARNING  Not Found: /static/admin/js/theme.js  None
+WARNING:django.request:Not Found: /static/admin/js/theme.js
+11/Feb/2024 15:57:58   WARNING  Not Found: /static/admin/css/base.css  None
+WARNING:django.request:Not Found: /static/admin/css/base.css
+11/Feb/2024 15:57:58   WARNING  Not Found: /static/admin/css/dark_mode.css  None
+11/Feb/2024 15:57:58   WARNING  Not Found: /static/admin/css/changelists.css  None
+11/Feb/2024 15:57:58   WARNING  Not Found: /static/admin/css/nav_sidebar.css  None
+WARNING:django.request:Not Found: /static/admin/css/dark_mode.css
+11/Feb/2024 15:57:58   WARNING  "GET /static/admin/js/theme.js HTTP/1.1" 404 4167  None
+WARNING:django.request:Not Found: /static/admin/css/changelists.css
+11/Feb/2024 15:57:58   WARNING  "GET /static/admin/css/changelists.css HTTP/1.1" 404 4167  None
+WARNING:django.request:Not Found: /static/admin/css/nav_sidebar.css
+WARNING:django.server:"GET /static/admin/js/theme.js HTTP/1.1" 404 4167
+WARNING:django.server:"GET /static/admin/css/changelists.css HTTP/1.1" 404 4167
+11/Feb/2024 15:57:58   WARNING  "GET /static/admin/css/dark_mode.css HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/css/dark_mode.css HTTP/1.1" 404 4167
+11/Feb/2024 15:57:58   WARNING  Not Found: /static/admin/js/nav_sidebar.js  None
+WARNING:django.request:Not Found: /static/admin/js/nav_sidebar.js
+11/Feb/2024 15:57:58   WARNING  "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 4167  None
+11/Feb/2024 15:57:58   WARNING  "GET /static/admin/css/base.css HTTP/1.1" 404 4167  None
+11/Feb/2024 15:57:58   WARNING  "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 4167
+WARNING:django.server:"GET /static/admin/css/base.css HTTP/1.1" 404 4167
+WARNING:django.server:"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 4167
+11/Feb/2024 15:57:58   WARNING  Not Found: /static/admin/js/vendor/jquery/jquery.min.js  None
+WARNING:django.request:Not Found: /static/admin/js/vendor/jquery/jquery.min.js
+11/Feb/2024 15:57:58   WARNING  "GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 404 4167
+11/Feb/2024 15:57:58   WARNING  Not Found: /static/admin/js/core.js  None
+WARNING:django.request:Not Found: /static/admin/js/core.js
+11/Feb/2024 15:57:58   WARNING  "GET /static/admin/js/core.js HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/js/core.js HTTP/1.1" 404 4167
+11/Feb/2024 15:57:58   WARNING  Not Found: /static/admin/js/jquery.init.js  None
+WARNING:django.request:Not Found: /static/admin/js/jquery.init.js
+11/Feb/2024 15:57:58   WARNING  "GET /static/admin/js/jquery.init.js HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/js/jquery.init.js HTTP/1.1" 404 4167
+11/Feb/2024 15:57:58   WARNING  Not Found: /static/admin/js/admin/RelatedObjectLookups.js  None
+WARNING:django.request:Not Found: /static/admin/js/admin/RelatedObjectLookups.js
+11/Feb/2024 15:57:58   WARNING  "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 404 4167
+11/Feb/2024 15:57:58   WARNING  Not Found: /static/admin/js/actions.js  None
+WARNING:django.request:Not Found: /static/admin/js/actions.js
+11/Feb/2024 15:57:58   WARNING  "GET /static/admin/js/actions.js HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/js/actions.js HTTP/1.1" 404 4167
+11/Feb/2024 15:57:58   WARNING  Not Found: /static/admin/js/urlify.js  None
+WARNING:django.request:Not Found: /static/admin/js/urlify.js
+11/Feb/2024 15:57:58   WARNING  "GET /static/admin/js/urlify.js HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/js/urlify.js HTTP/1.1" 404 4167
+11/Feb/2024 15:57:58   WARNING  Not Found: /static/admin/js/prepopulate.js  None
+WARNING:django.request:Not Found: /static/admin/js/prepopulate.js
+11/Feb/2024 15:57:58   WARNING  "GET /static/admin/js/prepopulate.js HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/js/prepopulate.js HTTP/1.1" 404 4167
+11/Feb/2024 15:57:58   WARNING  Not Found: /static/admin/js/vendor/xregexp/xregexp.min.js  None
+WARNING:django.request:Not Found: /static/admin/js/vendor/xregexp/xregexp.min.js
+11/Feb/2024 15:57:58   WARNING  "GET /static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 404 4167
+11/Feb/2024 15:57:58   WARNING  Not Found: /static/admin/js/filters.js  None
+WARNING:django.request:Not Found: /static/admin/js/filters.js
+11/Feb/2024 15:57:58   WARNING  Not Found: /static/admin/css/responsive.css  None
+WARNING:django.request:Not Found: /static/admin/css/responsive.css
+11/Feb/2024 15:57:58   WARNING  "GET /static/admin/js/filters.js HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/js/filters.js HTTP/1.1" 404 4167
+11/Feb/2024 15:57:58   WARNING  "GET /static/admin/css/responsive.css HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/css/responsive.css HTTP/1.1" 404 4167
+11/Feb/2024 15:57:58   WARNING  Not Found: /static/admin/js/core.js  None
+WARNING:django.request:Not Found: /static/admin/js/core.js
+11/Feb/2024 15:57:58   WARNING  "GET /static/admin/js/core.js HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/js/core.js HTTP/1.1" 404 4167
+11/Feb/2024 15:57:58   WARNING  Not Found: /static/admin/img/search.svg  None
+WARNING:django.request:Not Found: /static/admin/img/search.svg
+11/Feb/2024 15:57:58   WARNING  "GET /static/admin/img/search.svg HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/img/search.svg HTTP/1.1" 404 4167
+11/Feb/2024 15:57:58   WARNING  Not Found: /static/admin/js/admin/RelatedObjectLookups.js  None
+WARNING:django.request:Not Found: /static/admin/js/admin/RelatedObjectLookups.js
+11/Feb/2024 15:57:58   WARNING  "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 404 4167
+11/Feb/2024 15:57:58   WARNING  Not Found: /static/admin/js/actions.js  None
+WARNING:django.request:Not Found: /static/admin/js/actions.js
+11/Feb/2024 15:57:58   WARNING  "GET /static/admin/js/actions.js HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/js/actions.js HTTP/1.1" 404 4167
+11/Feb/2024 15:57:58   WARNING  Not Found: /static/admin/js/urlify.js  None
+WARNING:django.request:Not Found: /static/admin/js/urlify.js
+11/Feb/2024 15:57:58   WARNING  "GET /static/admin/js/urlify.js HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/js/urlify.js HTTP/1.1" 404 4167
+11/Feb/2024 15:57:58   WARNING  Not Found: /static/admin/js/prepopulate.js  None
+WARNING:django.request:Not Found: /static/admin/js/prepopulate.js
+11/Feb/2024 15:57:58   WARNING  "GET /static/admin/js/prepopulate.js HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/js/prepopulate.js HTTP/1.1" 404 4167
+11/Feb/2024 15:57:58   WARNING  Not Found: /static/admin/js/vendor/xregexp/xregexp.min.js  None
+WARNING:django.request:Not Found: /static/admin/js/vendor/xregexp/xregexp.min.js
+11/Feb/2024 15:57:58   WARNING  "GET /static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 404 4167
+11/Feb/2024 15:57:58   WARNING  Not Found: /static/admin/js/filters.js  None
+WARNING:django.request:Not Found: /static/admin/js/filters.js
+11/Feb/2024 15:57:58   WARNING  "GET /static/admin/js/filters.js HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/js/filters.js HTTP/1.1" 404 4167
+11/Feb/2024 15:57:58   WARNING  Not Found: /static/admin/css/responsive.css  None
+WARNING:django.request:Not Found: /static/admin/css/responsive.css
+11/Feb/2024 15:57:58   WARNING  "GET /static/admin/css/responsive.css HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/css/responsive.css HTTP/1.1" 404 4167
+11/Feb/2024 15:57:58   WARNING  Not Found: /static/admin/img/search.svg  None
+WARNING:django.request:Not Found: /static/admin/img/search.svg
+11/Feb/2024 15:57:58   WARNING  "GET /static/admin/img/search.svg HTTP/1.1" 404 4167  None
+WARNING:django.server:"GET /static/admin/img/search.svg HTTP/1.1" 404 4167
+11/Feb/2024 15:59:50   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+11/Feb/2024 15:59:50   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+11/Feb/2024 15:59:53   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+11/Feb/2024 15:59:53   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+11/Feb/2024 16:40:36   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+11/Feb/2024 16:40:36   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+11/Feb/2024 16:40:42   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+11/Feb/2024 16:40:45   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+11/Feb/2024 16:40:46   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+11/Feb/2024 16:40:47   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-02-11 16:40:56.012194
+WARNING:root:ОШИБКА:        connection to server at "127.0.0.1", port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sessions/backends/base.py", line 187, in _get_session
+    return self._session_cache
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 289, in ensure_connection
+    self.connect()
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 270, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/postgresql/base.py", line 269, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib64/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "127.0.0.1", port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 71, in dispatch
+    if not request.user.is_authenticated:
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/functional.py", line 266, in inner
+    self._setup()
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/functional.py", line 419, in _setup
+    self._wrapped = self._setupfunc()
+                    ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/middleware.py", line 25, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+                                            ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/middleware.py", line 11, in get_user
+    request._cached_user = auth.get_user(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/__init__.py", line 191, in get_user
+    user_id = _get_user_session_key(request)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/__init__.py", line 60, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+                                               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sessions/backends/base.py", line 53, in __getitem__
+    return self._session[key]
+           ^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sessions/backends/base.py", line 192, in _get_session
+    self._session_cache = self.load()
+                          ^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sessions/backends/db.py", line 42, in load
+    s = self._get_session_from_db()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sessions/backends/db.py", line 32, in _get_session_from_db
+    return self.model.objects.get(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 633, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 380, in __len__
+    self._fetch_all()
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1558, in execute_sql
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/debug_toolbar/panels/sql/tracking.py", line 54, in cursor
+    cursor = connection._djdt_cursor(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 330, in cursor
+    return self._cursor()
+           ^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 306, in _cursor
+    self.ensure_connection()
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 288, in ensure_connection
+    with self.wrap_database_errors:
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 289, in ensure_connection
+    self.connect()
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 270, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/postgresql/base.py", line 269, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib64/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: connection to server at "127.0.0.1", port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+WARNING:root:============================================================
+11/Feb/2024 16:40:56   ERROR  Internal Server Error: /list_order  (<class 'django.db.utils.OperationalError'>, OperationalError('connection to server at "127.0.0.1", port 5432 failed: Connection refused\n\tIs the server running on that host and accepting TCP/IP connections?\n'), <traceback object at 0x7fac044a9f40>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sessions/backends/base.py", line 187, in _get_session
+    return self._session_cache
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 289, in ensure_connection
+    self.connect()
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 270, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/postgresql/base.py", line 269, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib64/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "127.0.0.1", port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/debug_toolbar/middleware.py", line 69, in __call__
+    panel.generate_stats(request, response)
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/debug_toolbar/panels/request.py", line 64, in generate_stats
+    (k, request.session.get(k)) for k in sorted(request.session.keys())
+                                                ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sessions/backends/base.py", line 123, in keys
+    return self._session.keys()
+           ^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sessions/backends/base.py", line 192, in _get_session
+    self._session_cache = self.load()
+                          ^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sessions/backends/db.py", line 42, in load
+    s = self._get_session_from_db()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sessions/backends/db.py", line 32, in _get_session_from_db
+    return self.model.objects.get(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 633, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 380, in __len__
+    self._fetch_all()
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1558, in execute_sql
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/debug_toolbar/panels/sql/tracking.py", line 54, in cursor
+    cursor = connection._djdt_cursor(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 330, in cursor
+    return self._cursor()
+           ^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 306, in _cursor
+    self.ensure_connection()
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 288, in ensure_connection
+    with self.wrap_database_errors:
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 289, in ensure_connection
+    self.connect()
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 270, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/postgresql/base.py", line 269, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib64/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: connection to server at "127.0.0.1", port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+ERROR:django.request:Internal Server Error: /list_order
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sessions/backends/base.py", line 187, in _get_session
+    return self._session_cache
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 289, in ensure_connection
+    self.connect()
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 270, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/postgresql/base.py", line 269, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib64/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "127.0.0.1", port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/debug_toolbar/middleware.py", line 69, in __call__
+    panel.generate_stats(request, response)
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/debug_toolbar/panels/request.py", line 64, in generate_stats
+    (k, request.session.get(k)) for k in sorted(request.session.keys())
+                                                ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sessions/backends/base.py", line 123, in keys
+    return self._session.keys()
+           ^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sessions/backends/base.py", line 192, in _get_session
+    self._session_cache = self.load()
+                          ^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sessions/backends/db.py", line 42, in load
+    s = self._get_session_from_db()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sessions/backends/db.py", line 32, in _get_session_from_db
+    return self.model.objects.get(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 633, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 380, in __len__
+    self._fetch_all()
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1558, in execute_sql
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/debug_toolbar/panels/sql/tracking.py", line 54, in cursor
+    cursor = connection._djdt_cursor(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 330, in cursor
+    return self._cursor()
+           ^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 306, in _cursor
+    self.ensure_connection()
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 288, in ensure_connection
+    with self.wrap_database_errors:
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 289, in ensure_connection
+    self.connect()
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 270, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/postgresql/base.py", line 269, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib64/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: connection to server at "127.0.0.1", port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+11/Feb/2024 16:40:56   ERROR  "GET /list_order?work_status=RCV HTTP/1.1" 500 200312  None
+ERROR:django.server:"GET /list_order?work_status=RCV HTTP/1.1" 500 200312
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-02-11 16:40:56.823968
+WARNING:root:ОШИБКА:        connection to server at "127.0.0.1", port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sessions/backends/base.py", line 187, in _get_session
+    return self._session_cache
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 289, in ensure_connection
+    self.connect()
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 270, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/postgresql/base.py", line 269, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib64/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "127.0.0.1", port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 71, in dispatch
+    if not request.user.is_authenticated:
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/functional.py", line 266, in inner
+    self._setup()
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/functional.py", line 419, in _setup
+    self._wrapped = self._setupfunc()
+                    ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/middleware.py", line 25, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+                                            ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/middleware.py", line 11, in get_user
+    request._cached_user = auth.get_user(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/__init__.py", line 191, in get_user
+    user_id = _get_user_session_key(request)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/__init__.py", line 60, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+                                               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sessions/backends/base.py", line 53, in __getitem__
+    return self._session[key]
+           ^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sessions/backends/base.py", line 192, in _get_session
+    self._session_cache = self.load()
+                          ^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sessions/backends/db.py", line 42, in load
+    s = self._get_session_from_db()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sessions/backends/db.py", line 32, in _get_session_from_db
+    return self.model.objects.get(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 633, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 380, in __len__
+    self._fetch_all()
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1558, in execute_sql
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/debug_toolbar/panels/sql/tracking.py", line 54, in cursor
+    cursor = connection._djdt_cursor(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 330, in cursor
+    return self._cursor()
+           ^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 306, in _cursor
+    self.ensure_connection()
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 288, in ensure_connection
+    with self.wrap_database_errors:
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 289, in ensure_connection
+    self.connect()
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 270, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/postgresql/base.py", line 269, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib64/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: connection to server at "127.0.0.1", port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+WARNING:root:============================================================
+11/Feb/2024 16:40:56   ERROR  Internal Server Error: /list_order  (<class 'django.db.utils.OperationalError'>, OperationalError('connection to server at "127.0.0.1", port 5432 failed: Connection refused\n\tIs the server running on that host and accepting TCP/IP connections?\n'), <traceback object at 0x7fac044b89c0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sessions/backends/base.py", line 187, in _get_session
+    return self._session_cache
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 289, in ensure_connection
+    self.connect()
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 270, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/postgresql/base.py", line 269, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib64/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "127.0.0.1", port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/debug_toolbar/middleware.py", line 69, in __call__
+    panel.generate_stats(request, response)
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/debug_toolbar/panels/request.py", line 64, in generate_stats
+    (k, request.session.get(k)) for k in sorted(request.session.keys())
+                                                ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sessions/backends/base.py", line 123, in keys
+    return self._session.keys()
+           ^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sessions/backends/base.py", line 192, in _get_session
+    self._session_cache = self.load()
+                          ^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sessions/backends/db.py", line 42, in load
+    s = self._get_session_from_db()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sessions/backends/db.py", line 32, in _get_session_from_db
+    return self.model.objects.get(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 633, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 380, in __len__
+    self._fetch_all()
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1558, in execute_sql
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/debug_toolbar/panels/sql/tracking.py", line 54, in cursor
+    cursor = connection._djdt_cursor(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 330, in cursor
+    return self._cursor()
+           ^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 306, in _cursor
+    self.ensure_connection()
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 288, in ensure_connection
+    with self.wrap_database_errors:
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 289, in ensure_connection
+    self.connect()
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 270, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/postgresql/base.py", line 269, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib64/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: connection to server at "127.0.0.1", port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+ERROR:django.request:Internal Server Error: /list_order
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sessions/backends/base.py", line 187, in _get_session
+    return self._session_cache
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 289, in ensure_connection
+    self.connect()
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 270, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/postgresql/base.py", line 269, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib64/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "127.0.0.1", port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/debug_toolbar/middleware.py", line 69, in __call__
+    panel.generate_stats(request, response)
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/debug_toolbar/panels/request.py", line 64, in generate_stats
+    (k, request.session.get(k)) for k in sorted(request.session.keys())
+                                                ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sessions/backends/base.py", line 123, in keys
+    return self._session.keys()
+           ^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sessions/backends/base.py", line 192, in _get_session
+    self._session_cache = self.load()
+                          ^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sessions/backends/db.py", line 42, in load
+    s = self._get_session_from_db()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sessions/backends/db.py", line 32, in _get_session_from_db
+    return self.model.objects.get(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 633, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 380, in __len__
+    self._fetch_all()
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1558, in execute_sql
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/debug_toolbar/panels/sql/tracking.py", line 54, in cursor
+    cursor = connection._djdt_cursor(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 330, in cursor
+    return self._cursor()
+           ^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 306, in _cursor
+    self.ensure_connection()
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 288, in ensure_connection
+    with self.wrap_database_errors:
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 289, in ensure_connection
+    self.connect()
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 270, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/postgresql/base.py", line 269, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib64/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: connection to server at "127.0.0.1", port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+11/Feb/2024 16:40:56   ERROR  "GET /list_order?work_status=RCV HTTP/1.1" 500 200315  None
+ERROR:django.server:"GET /list_order?work_status=RCV HTTP/1.1" 500 200315
+11/Feb/2024 16:41:08   WARNING  "GET /static/js/counter.js HTTP/1.1" 404 1798  None
+WARNING:django.server:"GET /static/js/counter.js HTTP/1.1" 404 1798
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-02-11 16:44:11.330518
+WARNING:root:ОШИБКА:        connection to server at "127.0.0.1", port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sessions/backends/base.py", line 187, in _get_session
+    return self._session_cache
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 289, in ensure_connection
+    self.connect()
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 270, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/postgresql/base.py", line 269, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib64/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "127.0.0.1", port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 71, in dispatch
+    if not request.user.is_authenticated:
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/functional.py", line 266, in inner
+    self._setup()
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/functional.py", line 419, in _setup
+    self._wrapped = self._setupfunc()
+                    ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/middleware.py", line 25, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+                                            ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/middleware.py", line 11, in get_user
+    request._cached_user = auth.get_user(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/__init__.py", line 191, in get_user
+    user_id = _get_user_session_key(request)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/auth/__init__.py", line 60, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+                                               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sessions/backends/base.py", line 53, in __getitem__
+    return self._session[key]
+           ^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sessions/backends/base.py", line 192, in _get_session
+    self._session_cache = self.load()
+                          ^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sessions/backends/db.py", line 42, in load
+    s = self._get_session_from_db()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sessions/backends/db.py", line 32, in _get_session_from_db
+    return self.model.objects.get(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 633, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 380, in __len__
+    self._fetch_all()
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1558, in execute_sql
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/debug_toolbar/panels/sql/tracking.py", line 54, in cursor
+    cursor = connection._djdt_cursor(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 330, in cursor
+    return self._cursor()
+           ^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 306, in _cursor
+    self.ensure_connection()
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 288, in ensure_connection
+    with self.wrap_database_errors:
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 289, in ensure_connection
+    self.connect()
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 270, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/postgresql/base.py", line 269, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib64/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: connection to server at "127.0.0.1", port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+WARNING:root:============================================================
+11/Feb/2024 16:44:11   ERROR  Internal Server Error: /list_order  (<class 'django.db.utils.OperationalError'>, OperationalError('connection to server at "127.0.0.1", port 5432 failed: Connection refused\n\tIs the server running on that host and accepting TCP/IP connections?\n'), <traceback object at 0x7fac044fb8c0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sessions/backends/base.py", line 187, in _get_session
+    return self._session_cache
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 289, in ensure_connection
+    self.connect()
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 270, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/postgresql/base.py", line 269, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib64/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "127.0.0.1", port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/debug_toolbar/middleware.py", line 69, in __call__
+    panel.generate_stats(request, response)
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/debug_toolbar/panels/request.py", line 64, in generate_stats
+    (k, request.session.get(k)) for k in sorted(request.session.keys())
+                                                ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sessions/backends/base.py", line 123, in keys
+    return self._session.keys()
+           ^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sessions/backends/base.py", line 192, in _get_session
+    self._session_cache = self.load()
+                          ^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sessions/backends/db.py", line 42, in load
+    s = self._get_session_from_db()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sessions/backends/db.py", line 32, in _get_session_from_db
+    return self.model.objects.get(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 633, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 380, in __len__
+    self._fetch_all()
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1558, in execute_sql
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/debug_toolbar/panels/sql/tracking.py", line 54, in cursor
+    cursor = connection._djdt_cursor(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 330, in cursor
+    return self._cursor()
+           ^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 306, in _cursor
+    self.ensure_connection()
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 288, in ensure_connection
+    with self.wrap_database_errors:
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 289, in ensure_connection
+    self.connect()
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 270, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/postgresql/base.py", line 269, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib64/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: connection to server at "127.0.0.1", port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+ERROR:django.request:Internal Server Error: /list_order
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sessions/backends/base.py", line 187, in _get_session
+    return self._session_cache
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 289, in ensure_connection
+    self.connect()
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 270, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/postgresql/base.py", line 269, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib64/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "127.0.0.1", port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/debug_toolbar/middleware.py", line 69, in __call__
+    panel.generate_stats(request, response)
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/debug_toolbar/panels/request.py", line 64, in generate_stats
+    (k, request.session.get(k)) for k in sorted(request.session.keys())
+                                                ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sessions/backends/base.py", line 123, in keys
+    return self._session.keys()
+           ^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sessions/backends/base.py", line 192, in _get_session
+    self._session_cache = self.load()
+                          ^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sessions/backends/db.py", line 42, in load
+    s = self._get_session_from_db()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/contrib/sessions/backends/db.py", line 32, in _get_session_from_db
+    return self.model.objects.get(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 633, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 380, in __len__
+    self._fetch_all()
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1558, in execute_sql
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/debug_toolbar/panels/sql/tracking.py", line 54, in cursor
+    cursor = connection._djdt_cursor(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 330, in cursor
+    return self._cursor()
+           ^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 306, in _cursor
+    self.ensure_connection()
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 288, in ensure_connection
+    with self.wrap_database_errors:
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 289, in ensure_connection
+    self.connect()
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/base/base.py", line 270, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib/python3.11/site-packages/django/db/backends/postgresql/base.py", line 269, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/venv3/lib64/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: connection to server at "127.0.0.1", port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+11/Feb/2024 16:44:11   ERROR  "GET /list_order?work_status=RCV HTTP/1.1" 500 200315  None
+ERROR:django.server:"GET /list_order?work_status=RCV HTTP/1.1" 500 200315
