@@ -8588,3 +8588,717 @@ WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 15499
 WARNING:django.request:Not Found: /favicon.ico
 18/Feb/2024 19:26:22   WARNING  "GET /favicon.ico HTTP/1.1" 404 15499  None
 WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 15499
+18/Feb/2024 20:07:21   ERROR  Internal Server Error: /login/  (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('login.html'), <traceback object at 0x7fc428621cc0>)
+Traceback (most recent call last):
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: login.html
+ERROR:django.request:Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: login.html
+18/Feb/2024 20:07:21   ERROR  "GET /login/ HTTP/1.1" 500 93226  None
+ERROR:django.server:"GET /login/ HTTP/1.1" 500 93226
+18/Feb/2024 20:09:58   ERROR  Internal Server Error: /login/  (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('login.html'), <traceback object at 0x7f2d5c9284c0>)
+Traceback (most recent call last):
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: login.html
+ERROR:django.request:Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: login.html
+18/Feb/2024 20:09:59   ERROR  "GET /login/?next=/list_order HTTP/1.1" 500 93748  None
+ERROR:django.server:"GET /login/?next=/list_order HTTP/1.1" 500 93748
+18/Feb/2024 20:10:04   ERROR  Internal Server Error: /login/  (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('login.html'), <traceback object at 0x7f2d5c6b2640>)
+Traceback (most recent call last):
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: login.html
+ERROR:django.request:Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: login.html
+18/Feb/2024 20:10:04   ERROR  "GET /login/ HTTP/1.1" 500 93230  None
+ERROR:django.server:"GET /login/ HTTP/1.1" 500 93230
+18/Feb/2024 20:10:09   ERROR  Internal Server Error: /login/  (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('login.html'), <traceback object at 0x7f2d5c71a680>)
+Traceback (most recent call last):
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: login.html
+ERROR:django.request:Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: login.html
+18/Feb/2024 20:10:09   ERROR  "GET /login/ HTTP/1.1" 500 93367  None
+ERROR:django.server:"GET /login/ HTTP/1.1" 500 93367
+18/Feb/2024 20:10:14   ERROR  Internal Server Error: /login/  (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('login.html'), <traceback object at 0x7f2d5c5a4400>)
+Traceback (most recent call last):
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: login.html
+ERROR:django.request:Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: login.html
+18/Feb/2024 20:10:14   ERROR  "GET /login/?next=/list_order HTTP/1.1" 500 93116  None
+ERROR:django.server:"GET /login/?next=/list_order HTTP/1.1" 500 93116
+18/Feb/2024 20:10:20   ERROR  Internal Server Error: /login/  (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('login.html'), <traceback object at 0x7f2d5c442000>)
+Traceback (most recent call last):
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: login.html
+ERROR:django.request:Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: login.html
+18/Feb/2024 20:10:20   ERROR  "GET /login/ HTTP/1.1" 500 93328  None
+ERROR:django.server:"GET /login/ HTTP/1.1" 500 93328
+18/Feb/2024 20:10:41   ERROR  Internal Server Error: /login/  (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('login.html'), <traceback object at 0x7fb041e5b2c0>)
+Traceback (most recent call last):
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: login.html
+ERROR:django.request:Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: login.html
+18/Feb/2024 20:10:41   ERROR  "GET /login/ HTTP/1.1" 500 93463  None
+ERROR:django.server:"GET /login/ HTTP/1.1" 500 93463
+18/Feb/2024 20:10:46   ERROR  Internal Server Error: /login/  (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('login.html'), <traceback object at 0x7fb041fd1980>)
+Traceback (most recent call last):
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: login.html
+ERROR:django.request:Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: login.html
+18/Feb/2024 20:10:46   ERROR  "GET /login/ HTTP/1.1" 500 93328  None
+ERROR:django.server:"GET /login/ HTTP/1.1" 500 93328
+18/Feb/2024 20:15:27   ERROR  Internal Server Error: /register/  (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('account/register.html'), <traceback object at 0x7fafe0e29c40>)
+Traceback (most recent call last):
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: account/register.html
+ERROR:django.request:Internal Server Error: /register/
+Traceback (most recent call last):
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: account/register.html
+18/Feb/2024 20:15:27   ERROR  "GET /register/ HTTP/1.1" 500 93602  None
+ERROR:django.server:"GET /register/ HTTP/1.1" 500 93602
+18/Feb/2024 20:15:57   ERROR  Internal Server Error: /register/  (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('/account/register.html'), <traceback object at 0x7f583d426540>)
+Traceback (most recent call last):
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: /account/register.html
+ERROR:django.request:Internal Server Error: /register/
+Traceback (most recent call last):
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: /account/register.html
+18/Feb/2024 20:15:57   ERROR  "GET /register/ HTTP/1.1" 500 90610  None
+ERROR:django.server:"GET /register/ HTTP/1.1" 500 90610
+18/Feb/2024 20:16:34   ERROR  Internal Server Error: /register/  (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('account/register.html'), <traceback object at 0x7f70bc071b80>)
+Traceback (most recent call last):
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: account/register.html
+ERROR:django.request:Internal Server Error: /register/
+Traceback (most recent call last):
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: account/register.html
+18/Feb/2024 20:16:34   ERROR  "GET /register/ HTTP/1.1" 500 93741  None
+ERROR:django.server:"GET /register/ HTTP/1.1" 500 93741
+18/Feb/2024 20:16:35   ERROR  Internal Server Error: /register/  (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('account/register.html'), <traceback object at 0x7f70b778adc0>)
+Traceback (most recent call last):
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: account/register.html
+ERROR:django.request:Internal Server Error: /register/
+Traceback (most recent call last):
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: account/register.html
+18/Feb/2024 20:16:35   ERROR  "GET /register/ HTTP/1.1" 500 93739  None
+ERROR:django.server:"GET /register/ HTTP/1.1" 500 93739
+18/Feb/2024 20:16:35   ERROR  Internal Server Error: /register/  (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('account/register.html'), <traceback object at 0x7f70bc1d3000>)
+Traceback (most recent call last):
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: account/register.html
+ERROR:django.request:Internal Server Error: /register/
+Traceback (most recent call last):
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: account/register.html
+18/Feb/2024 20:16:35   ERROR  "GET /register/ HTTP/1.1" 500 93739  None
+ERROR:django.server:"GET /register/ HTTP/1.1" 500 93739
+18/Feb/2024 20:16:36   ERROR  Internal Server Error: /register/  (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('account/register.html'), <traceback object at 0x7f70b76c15c0>)
+Traceback (most recent call last):
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: account/register.html
+ERROR:django.request:Internal Server Error: /register/
+Traceback (most recent call last):
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: account/register.html
+18/Feb/2024 20:16:36   ERROR  "GET /register/ HTTP/1.1" 500 93739  None
+ERROR:django.server:"GET /register/ HTTP/1.1" 500 93739
+18/Feb/2024 20:16:36   ERROR  Internal Server Error: /register/  (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('account/register.html'), <traceback object at 0x7f70b75270c0>)
+Traceback (most recent call last):
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: account/register.html
+ERROR:django.request:Internal Server Error: /register/
+Traceback (most recent call last):
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: account/register.html
+18/Feb/2024 20:16:36   ERROR  "GET /register/ HTTP/1.1" 500 93739  None
+ERROR:django.server:"GET /register/ HTTP/1.1" 500 93739
+18/Feb/2024 20:16:36   ERROR  Internal Server Error: /register/  (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('account/register.html'), <traceback object at 0x7f70b75ad280>)
+Traceback (most recent call last):
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: account/register.html
+ERROR:django.request:Internal Server Error: /register/
+Traceback (most recent call last):
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: account/register.html
+18/Feb/2024 20:16:36   ERROR  "GET /register/ HTTP/1.1" 500 93739  None
+ERROR:django.server:"GET /register/ HTTP/1.1" 500 93739
+18/Feb/2024 20:16:36   ERROR  Internal Server Error: /register/  (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('account/register.html'), <traceback object at 0x7f70b7416dc0>)
+Traceback (most recent call last):
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: account/register.html
+ERROR:django.request:Internal Server Error: /register/
+Traceback (most recent call last):
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: account/register.html
+18/Feb/2024 20:16:36   ERROR  "GET /register/ HTTP/1.1" 500 93739  None
+ERROR:django.server:"GET /register/ HTTP/1.1" 500 93739

@@ -25,7 +25,7 @@ class UserRegisterView(BaseClassExeption, CreateView):
     model = User
     form_class = UserRegisterForm
     success_url = reverse_lazy('home')
-    template_name = 'register.html'
+    template_name = 'account/register.html'
 
 
 class UserDetailInformation(BaseClassExeption, LoginRequiredMixin, DetailView):

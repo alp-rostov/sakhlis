@@ -15,8 +15,8 @@ urlpatterns = [
     path('invoice/delete-order/<int:pk>', OrderDelete.as_view(), name='delete-order'),
     path('invoice/delete/<int:invoice_pk>', DeleteIvoiceService, name='delete-item-of-order'),
 
-    path('login/', LoginView.as_view(template_name='login.html'), name='login'),
-    path('logout/', LogoutView.as_view(template_name='logout.html'), name='logout'),
+    path('login/', LoginView.as_view(template_name='account/login.html'), name='login'),
+    path('logout/', LogoutView.as_view(template_name='account/logout.html'), name='logout'),
 
     path('register/', UserRegisterView.as_view(), name='signup'),
     path('error404/', Error404.as_view(), name='error404'),

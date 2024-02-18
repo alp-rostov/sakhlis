@@ -16,7 +16,7 @@ from django.utils.encoding import force_bytes, force_str
 from django.urls import reverse_lazy
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 
 # Quick-start development settings - unsuitable for production
@@ -25,11 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = force_str(os.environ.get('SECRET_KEY'))
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
-ALLOWED_HOSTS = ['*']
-if not DEBUG:
-    ALLOWED_HOSTS += ['*']
+
+
 
 # Application definition
 
@@ -42,13 +40,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'django.contrib.flatpages',
-
     'django_filters',
-    'debug_toolbar',
     'formtools',
-    'app_site.apps.AppSiteConfig',
     'slippers',
-    'crispy_forms',
+
+    'app_site.apps.AppSiteConfig',
+    'api.apps.AppSiteConfig',
 ]
 SITE_ID = 1
 
@@ -85,29 +82,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'web.wsgi.application'
-
-# Database
-# https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
-
-# DATABASES = {
-#     'default': {
-#
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'sakhlis',
-#         'USER': 'postgres',
-#         'PASSWORD': '1rostov1',
-#         'HOST': '127.0.0.1',
-#         'PORT': '5432',
-#     }
-# }
 
 
 
@@ -191,36 +165,3 @@ DEFAULT_CHARSET = 'utf-8'
 
 handler404 = 'app_site.views.Error404.as_view()'
 
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-
-    'handlers': {
-        'file': {
-            'level': 'WARNING',
-            'class': 'logging.FileHandler',
-            'filename': os.path.join(BASE_DIR, 'log.log'),
-            'formatter': 'simple'
-        },
-    },
-
-    'style': '{',
-    'formatters': {
-        'simple': {
-            'format':  '%(asctime)s   %(levelname)s  %(message)s  %(exc_info)s',
-            'datefmt': "%d/%b/%Y %H:%M:%S"
-        },
-
-    },
-
-    'loggers': {
-        'django': {
-            'handlers': ['file'],
-            'level': 'WARNING',
-            'propagate': True,
-        },
-
-    }
-}
-
-CRISPY_TEMPLATE_PACK = 'uni_form'

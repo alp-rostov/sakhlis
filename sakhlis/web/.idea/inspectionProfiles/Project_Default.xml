@@ -1,0 +1,34 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="sakhlis.web.app_site.tests.tests_models.OrderList" />
+          <option value="sakhlis.web.app_site.tests.tests_models.Service" />
+          <option value="sakhlis.web.app_site.tests.tests_models.Invoice" />
+          <option value="sakhlis.web.app_site.tests.tests_models.RepairerList" />
+          <option value="sakhlis.web.app_site.repository.RepairerList" />
+          <option value="sakhlis.web.app_site.repository.OrderList" />
+          <option value="sakhlis.web.app_site.repository.Invoice" />
+          <option value="sakhlis.web.app_site.repository.Repairer" />
+          <option value="sakhlis.web.app_site.tests.tests_models.Repairer" />
+          <option value="sakhlis.web.app_site.models.Invoice.objects" />
+          <option value="sakhlis.web.app_site.models.StreerTbilisi.objects" />
+          <option value="sakhlis.web.app_site.utils.app_site" />
+          <option value="sakhlis.web.app_site.views.app_site" />
+          <option value="sakhlis.web.app_site.views.Invoice" />
+          <option value="sakhlis.web.app_site.views.WORK_CHOICES" />
+          <option value="sakhlis.web.app_site.views.OrderList" />
+          <option value="sakhlis.web.app_site.views.Graph" />
+          <option value="sakhlis.web.app_site.views.Repairer" />
+          <option value="sakhlis.web.app_site.views.StreerTbilisi" />
+          <option value="sakhlis.web.app_site.views.Service" />
+          <option value="sakhlis.web.app_site.views.User" />
+          <option value="sakhlis.web.app_site.views.InvoiceMaker" />
+          <option value="sakhlis.web.app_site.models.OrderList.objects" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
