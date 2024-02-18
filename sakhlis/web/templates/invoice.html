@@ -2,6 +2,8 @@
 {% load custom_filters %}
 {% load custom_tags %}
 {% load slippers %}
+{% load static %}
+
 
 {% block body %}
 
@@ -175,6 +177,8 @@
             {% endfor %}
             </span>
             <br> {{ form.empty_form }}<a href="#" id="delete-empty-form"><i class="fas fa-trash text-secondary"></i></a>
+
+            <button type="button" class="delete-empty-form">Delet</button>
         </div>
         {{ form.management_form }}
     </div>
@@ -186,8 +190,10 @@
 
 </form>
 
-
-<script>
-
-</script>
 {% endblock body %}
+
+
+
+{% block js %}
+    <script src="{% static 'js/invoice.js' %}"></script>
+{% endblock js %}

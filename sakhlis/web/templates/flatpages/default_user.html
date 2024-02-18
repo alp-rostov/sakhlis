@@ -7,14 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Repair service in Tbilisi</title>
 
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{% static 'css/mdb.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
-    <!-- Owl Carusel -->
-    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
     <!-- Custom Stylesheets -->
     <link rel="stylesheet" href="{% static 'css/custom.css' %}">
 
@@ -141,7 +138,6 @@ top: 0;
     <!-- Optional JavaScript -->
 	<script src="{% static 'js/wow.min.js' %}"></script>
     <script src="{% static 'js/owl.carousel.min.js' %}"></script>
-    <script src="{% static 'js/counter.js' %}"></script>
     <script src="{% static 'js/typed.min.js' %}"></script>
     <script src="{% static 'js/jquery.malihu.PageScroll2id.min.js' %}"></script>
     <script src="{% static 'js/maskedinput.min.js' %}"></script>
@@ -151,6 +147,10 @@ top: 0;
       new WOW().init();
     });
     </script>
+
+   {% block js %}
+   {% endblock js %}
+
 
   </body>
 </html>
