@@ -5,13 +5,28 @@ import sys
 import dotenv
 import pathlib
 
+
 def main():
     """Run administrative tasks."""
+
     DOT_INV_PASS = pathlib.Path() / 'web/.env'
     if DOT_INV_PASS.exists():
         dotenv.read_dotenv(str(DOT_INV_PASS))
-    else: print('no .env found')
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'web.settings')
+    else:
+        print('no .env found')
+
+
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'web.settings.development')
+    print("Manage: Django loaded up in setting mode : Development")
+    print(os.environ.get('SECRET_KEY'))
+    print(os.environ.get('DJANGO_SETTINGS_MODULE'))
+    # else:
+    #     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'web.settings.production')
+    #     print("Manage: Django loaded up in setting mode : Production")
+
+
+
+
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:

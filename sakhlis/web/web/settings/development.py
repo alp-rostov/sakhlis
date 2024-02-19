@@ -1,6 +1,7 @@
+import os
+
 from .settings import *
 
-DEBUG = True
 ALLOWED_HOSTS = ['*']
 
 # Database
@@ -14,38 +15,4 @@ DATABASES = {
     }
 }
 
-INSTALLED_APPS += ['debug_toolbar']
 
-
-
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-
-    'handlers': {
-        'file': {
-            'level': 'WARNING',
-            'class': 'logging.FileHandler',
-            'filename': os.path.join(BASE_DIR, 'log.log'),
-            'formatter': 'simple'
-        },
-    },
-
-    'style': '{',
-    'formatters': {
-        'simple': {
-            'format':  '%(asctime)s   %(levelname)s  %(message)s  %(exc_info)s',
-            'datefmt': "%d/%b/%Y %H:%M:%S"
-        },
-
-    },
-
-    'loggers': {
-        'django': {
-            'handlers': ['file'],
-            'level': 'WARNING',
-            'propagate': True,
-        },
-
-    }
-}

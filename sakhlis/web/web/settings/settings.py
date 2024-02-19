@@ -18,6 +18,10 @@ from django.urls import reverse_lazy
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
+ALLOWED_HOSTS = ['*']
+DEBUG = True
+
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -43,9 +47,10 @@ INSTALLED_APPS = [
     'django_filters',
     'formtools',
     'slippers',
+    "debug_toolbar",
 
     'app_site.apps.AppSiteConfig',
-    'api.apps.AppSiteConfig',
+    'api.apps.ApiConfig',
 ]
 SITE_ID = 1
 
