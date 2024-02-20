@@ -291,4 +291,5 @@ def input_street(request, **kwargs):
     b = StreerTbilisi.objects.filter(name_street__istartswith=request.GET.get('street')) \
                              .values('type_street', 'name_street')[0:15]
     json_data = json.dumps(list(b), default=str)
+    print(JsonResponse(json_data, safe=False))
     return JsonResponse(json_data, safe=False)

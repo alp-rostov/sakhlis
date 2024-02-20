@@ -343,16 +343,17 @@
         e.preventDefault();
 
          $.ajax({
-            url: "/street?street="+$(this).val() ,
+            url: "api/street?street="+$(this).val() ,
             type: "GET",
 
             dataType: 'json',
             success: function(b){
-              let type=JSON.parse(b);
+              console.log(b)
+
                 $('#languages option').remove();
 
-                 for (i = 0; i < type.length; i++) {
-                            full_name_street=type[i].type_street+type[i].name_street
+                 for (i = 0; i < b.length; i++) {
+                            full_name_street=b[i].type_street+b[i].name_street
                             $('#languages').append('<option value="'+full_name_street+'">');
 
                         }

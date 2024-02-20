@@ -1,38 +1,19 @@
-from django.shortcuts import render
-from django.shortcuts import render
-from django.http import JsonResponse
 
-def getRoutes(request):
-	routes = [
-		{
-			'Endpoint': '/notes/',
-			'method': 'GET',
-			'body': None,
-			'description': 'Returns an array of notes'
-		},
-		{
-			'Endpoint': '/notes/',
-			'method': 'POST',
-			'body': {'body': ""},
-			'description': 'Creates new note with data sent in post request'
-		},
-		{
-			'Endpoint': '/notes/id/',
-			'method': 'GET',
-			'body': None,
-			'description': 'Returns a single note object'
-		},
-		{
-			'Endpoint': '/notes/id/',
-			'method': 'PUT',
-			'body': {'body': ""},
-			'description': 'Creates an existing note with data sent in post request'
-		},
-		{
-			'Endpoint': '/notes/id/',
-			'method': 'DELETE',
-			'body': None,
-			'description': 'Deletes an existing note'
-		},
-	]
-	return JsonResponse(routes, safe=False)
+from rest_framework import serializers, generics
+
+from app_site.models import OrderList, StreerTbilisi
+
+
+class YourModelSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = StreerTbilisi
+        fields = ['type_street', 'name_street']
+
+class YourView(generics.ListAPIView):
+    serializer_class = YourModelSerializer
+    http_method_names = ['get']
+    def get_queryset(self):
+        queryset = StreerTbilisi.objects.filter(name_street__istartswith=self.request.GET.get('street'))[0:15]
+        return queryset
+
+

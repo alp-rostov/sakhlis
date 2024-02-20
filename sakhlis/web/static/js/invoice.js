@@ -124,13 +124,6 @@ $(document.body).on( "click", ".link-delete", function(e) {
         });
     });
 
-const BtnWorkStatus=document.getElementById('workstatus');
-BtnWorkStatus.addEventListener('click', work_status);
-
-function work_status() {
-
-
-}
 
 
 
