@@ -116,6 +116,7 @@ werkzeug = "==3.0.1"
 wikipedia = "==1.4.0"
 xhtml2pdf = "==0.2.11"
 yarl = "==1.9.2"
+djangorestframework = "*"
 
 [dev-packages]
 

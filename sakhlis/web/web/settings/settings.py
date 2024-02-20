@@ -18,19 +18,17 @@ from django.urls import reverse_lazy
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
-ALLOWED_HOSTS = ['*']
-DEBUG = True
-
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = force_str(os.environ.get('SECRET_KEY'))
+
 # SECURITY WARNING: don't run with debug turned on in production!
-
-
+print('_______________________')
+DEBUG = True
+print(DEBUG)
 
 
 # Application definition
@@ -41,13 +39,16 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'django.contrib.flatpages',
     'django_filters',
     'formtools',
     'slippers',
+    'rest_framework',
     "debug_toolbar",
+
 
     'app_site.apps.AppSiteConfig',
     'api.apps.ApiConfig',
@@ -107,6 +108,16 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.BasicAuthentication',
+    ],
+}
 
 
 # Internationalization
