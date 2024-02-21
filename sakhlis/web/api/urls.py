@@ -1,8 +1,8 @@
 from django.urls import path
 
-from api.views import ApiStreetView, ApiOrderListCreate
+from api.views import YourView
 
 urlpatterns = [
-    path('street/', ApiStreetView.as_view()),
-    path('stree/', ApiOrderListCreate.as_view()),
+    path('street/', YourView.as_view(), name='street'),
+
 ]

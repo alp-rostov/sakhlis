@@ -21,5 +21,5 @@ def create_user_profile(sender, instance, created, **kwargs):
     """"create empty row in Repaierlist and sent a letter about registration."""
     if created:
         Repairer.objects.create(user=instance)
-        send_email_after_registration.apply_async([instance.pk], countdown=5, expires=20)
+        # send_email_after_registration.apply_async([instance.pk], countdown=5, expires=20)
 
