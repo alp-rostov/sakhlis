@@ -433,3 +433,4 @@ Traceback (most recent call last):
   File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/db/models/sql/query.py", line 1276, in build_lookup
     raise ValueError("Cannot use None as a query value")
 ValueError: Cannot use None as a query value
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/tasks.py changed, reloading.
