@@ -1,8 +1,9 @@
 from django.urls import path
 
-from api.views import YourView
+from api.views import StreetView
+
 
 urlpatterns = [
-    path('street/', YourView.as_view(), name='street'),
+    path('street/', StreetView.as_view(), name='street'),
 
 ]

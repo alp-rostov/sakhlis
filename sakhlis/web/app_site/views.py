@@ -55,8 +55,8 @@ class OrderCreate(BaseClassExeption, CreateView):
             form.instance.order_status = 'SND'
         form.save()
         return JsonResponse({'message': f'<h3>Заявка № {form.instance.pk} отправлена успешно!</h3>',
-                             'pk': form.instance.pk,
-                             'auth': self.request.user.is_authenticated
+                                  'pk': form.instance.pk,
+                                'auth': self.request.user.is_authenticated
                              })
 
 
@@ -139,10 +139,10 @@ class InvoiceCreate(BaseClassExeption, LoginRequiredMixin, DetailView):
                instance.order_id = b
                instance.save()
                list_num.append({"pk": instance.pk,
-                                "quantity": instance.quantity,
-                                "price": instance.price,
-                                "service_id": instance.service_id.pk,
-                                "service_id_name": instance.service_id.name
+                          "quantity": instance.quantity,
+                             "price": instance.price,
+                        "service_id": instance.service_id.pk,
+                   "service_id_name": instance.service_id.name
                                 })
 
            return JsonResponse(list_num, safe=False)

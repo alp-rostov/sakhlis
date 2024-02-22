@@ -53,7 +53,7 @@ function show_create_order_form(form) {
     else {
         $('#form').fadeOut("slow", function(){
                        form.style.display = "none";
-                       $('#link_create_order_form').html('Создать заказ');
+                       $('#link_create_order_form').html('Create the order');
                    });
     }
 }

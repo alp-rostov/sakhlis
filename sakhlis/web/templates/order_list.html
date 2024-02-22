@@ -26,7 +26,7 @@
                 type: 'POST',
                 data: $(this).serialize(),
                 dataType: 'text',
-                beforeSend: function () {$("#form").html('<h3>Отправляется...</h3>');},
+                beforeSend: function () {$("#form").html('<h3>Sending...</h3>');},
                 success: function (resp_) {
                                     window.location.href = '/list_order/'+JSON.parse(resp_).pk;
                            },

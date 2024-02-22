@@ -51,40 +51,7 @@
         {{ form_.text_order }}
         <span id="5"></span>
     </div>
-    <button id="delete" type="button" class="btn btn-md btn-orange">delete</button>
-    <button id="add-more__" type="button" class="btn btn-md btn-orange">add-more</button>
     <button type="submit" name="submit" class="btn btn-sm btn-orange cta-btn btn-form mt-3 mb-5 ">Send</button>
 
 </form>
 
-
-
-<script >
-
-
-const addMoreBtnInput=document.getElementById('add-more__');
-addMoreBtnInput.addEventListener('click', add_new_field);
-const formObj=document.getElementById('form');
-
-const DeleteBtnInput=document.getElementById('delete');
-DeleteBtnInput.addEventListener('click', delete_field);
-
-function add_new_field(){
-
-    const addInput=document.getElementById('id_text_order').cloneNode(true);
-    addInput.setAttribute('id','form')
-    formObj.append(addInput);
-
-}
-
-
-function delete_field(){
-    const currentFields = document.getElementsByName('text_order');
-    const currentCountFields = currentFields.length;
-    console.log(currentCountFields);
-        currentFields[currentCountFields-1].remove();
-
-}
-
-
-</script>

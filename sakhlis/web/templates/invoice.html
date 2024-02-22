@@ -63,7 +63,7 @@
 
               <a href="tel:{{ info.customer_phone }}" title="Телефон" class="fas fa-phone text fa-sm mr-1 btn">
             </a>
-             <a href="https://t.me/{{ info.customer_telegram|cut:'@' }}" title="Телеграм" class="fas fa-paper-plane text fa-sm mr-1 btn">
+             <a href="https://t.me/{{ info.customer_telegram|cut:'@' }}" title="Telegram" class="fas fa-paper-plane text fa-sm mr-1 btn">
             </a>
                       <a href= 'https://yandex.ru/maps/?pt={{ info.location_longitude|change_comma_to_dot }},
             {{ info.location_latitude|change_comma_to_dot }}&z=18&l=map' id="map_{{ i.pk }}"
