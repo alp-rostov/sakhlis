@@ -154,41 +154,58 @@ class Error404(TemplateView):
     template_name = '404.html'
 
 
-class Statistica(BaseClassExeption, LoginRequiredMixin, TemplateView):
+
+class Statistica(BaseClassExeption, LoginRequiredMixin, ListView):
     template_name = 'statistica.html'
+    model = OrderList
+    context_object_name = 'order'
+    ordering = ['-time_in']
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        b = self.request.GET.copy()
+        b.__setitem__('repairer_id', self.request.user.pk)
+        self.filterset = OrderFilter(b, queryset)
+        return self.filterset.qs
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
 
-        context['d'] = Graph(DataFromInvoice().get_quantity_of_orders_by_type(repairer=self.request.user),
+
+
+        context['filterset'] = self.filterset
+
+        queryset_from_OrderList=self.filterset.qs
+
+        list_objects_from_OrderList=list(queryset_from_OrderList)
+
+        data_from_invoice = DataFromInvoice(Invoice.objects.filter(order_id__in=list_objects_from_OrderList))
+        data_from_oder = DataFromOrderList(queryset_from_OrderList)
+
+        context['form'] = OrderForm
+
+        context['d'] = Graph(data_from_invoice.get_quantity_of_orders_by_type(repairer=self.request.user),
                              'service_id__type', 'count', WORK_CHOICES_, 'Order structure, quantity.', '') \
                         .make_graf_pie()
 
-        context['d_'] = Graph(DataFromInvoice().get_cost_of_orders_by_type(repairer=self.request.user),
+        context['d_'] = Graph(data_from_invoice.get_cost_of_orders_by_type(repairer=self.request.user),
                             'service_id__type', 'count', WORK_CHOICES_, 'Order structure, lar.', '') \
-                        .make_graf_pie()
+                       .make_graf_pie()
 
-        context['f'] = Graph(DataFromOrderList().get_monthly_order_cost_from_OrderList(repairer=self.request.user),
+        context['f'] = Graph(data_from_oder.get_monthly_order_cost_from_OrderList(repairer=self.request.user),
                             'time_in__month', 'count', MONTH_, 'Earnings', 'lar') \
                         .make_graf_bar()
 
-        context['g'] = Graph(DataFromOrderList().get_monthly_order_quantity_from_OrderList(repairer=self.request.user),
+        context['g'] = Graph(data_from_oder.get_monthly_order_quantity_from_OrderList(repairer=self.request.user),
                             'time_in__month',  'count', MONTH_, 'Order`s quantity', 'quantity') \
                         .make_graf_bar()
 
-        context['hh'] = Graph(DataFromOrderList().get_dayly_cost_of_orders(repairer=self.request.user),
+        context['hh'] = Graph(data_from_oder.get_dayly_cost_of_orders(repairer=self.request.user),
                             'time_in__date', 'count', None, 'Dynamics', '') \
                         .make_graf_plot()
         return context
 
 
-class RepaierUpdate(BaseClassExeption, UpdateView):
-    model = Repairer
-    template_name = 'repaier_create.html'
-    form_class = RepairerForm
-
-    def get_success_url(self):
-        return '/user/' + str(self.request.user.pk)
 
 
 class OrderSearchForm(BaseClassExeption, LoginRequiredMixin, ListView):
@@ -212,6 +229,31 @@ class OrderSearchForm(BaseClassExeption, LoginRequiredMixin, ListView):
         context['summ_orders'] = c.get('Summ')
         context['count_orders'] = self.get_queryset().count()
         return context
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class RepaierUpdate(BaseClassExeption, UpdateView):
+    model = Repairer
+    template_name = 'repaier_create.html'
+    form_class = RepairerForm
+
+    def get_success_url(self):
+        return '/user/' + str(self.request.user.pk)
 
 
 def CreateIvoicePDF(request, **kwargs):

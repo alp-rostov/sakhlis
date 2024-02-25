@@ -11,5 +11,5 @@ ENV  POSTGRES_DB post-db
 
 EXPOSE 5432
 
-COPY ./requirements.txt .db/web/
+COPY ./notes.txt .db/web/
 

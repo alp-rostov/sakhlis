@@ -1,0 +1,37 @@
+POSTGRES
+sudo -u postgres psql   -  start posters terminal
+\list or \l              - to show list of database
+
+\c                          connect db
+	\dt - list of table
+	
+	CREATE TABLE leads (id INTEGER PRIMARY KEY, name VARCHAR);
+	
+	DROP DATABASE IF EXISTS example;   delete databese
+	
+	
+______________________________________________
+DOKER
+
+sudo systemctl start docker   -  start docker
+sudo docker images
+     docker ps -a
+            rm -f    - delete conteiner
+            rmi       - delete image
+
+sudo docker start id_conteiner
+     docke pull {name dockerhub}    -download image from dockerhub
+
+sudo docker build  . -f Dockerfile_db --tag {name_images}
+
+
+
+
+
+_________________________________________________
+OTHER LINUX
+
+
+sudo netstat -tulpn  Active Internet connections (only servers)
+sudo kill {PID}
+

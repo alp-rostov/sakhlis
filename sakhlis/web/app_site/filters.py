@@ -10,7 +10,7 @@ class OrderFilter(FilterSet):
     time_in_sence = DateFilter(
         field_name="time_in__date",
         widget=forms.DateInput(attrs={'type': 'date'}),
-        label='from',
+        label='From',
         lookup_expr='gte'
     )
 
@@ -18,7 +18,7 @@ class OrderFilter(FilterSet):
     time_in_until = DateFilter(
         field_name="time_in__date",
         widget=forms.DateInput(attrs={'type': 'date'}),
-        label='to',
+        label='To',
         lookup_expr='lte'
     )
 

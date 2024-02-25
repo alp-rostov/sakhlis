@@ -10,7 +10,9 @@ class DataFromRepairerList:
         return self.model.get(user=user)
 
 class DataFromOrderList:
-    model = OrderList.objects
+
+    def __init__(self, model=OrderList.objects):
+        self.model = model
 
     def get_number_of_orders_from_OrderList(self, repairer:User) -> int:
         return self.model\
@@ -72,7 +74,9 @@ class DataFromOrderList:
             .select_related('repairer_id')
 
 class DataFromInvoice:
-    model = Invoice.objects
+    def __init__(self, model = Invoice.objects):
+        self.model=model
+
 
     def get_amount_money_of_orders(self, repairer:User) -> float:
         return self.model\
