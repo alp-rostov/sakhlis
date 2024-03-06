@@ -1,0 +1,31 @@
+{% extends 'flatpages/default_user.html' %}
+{% load custom_filters %}
+{% load custom_tags %}
+{% load static %}
+{% load slippers %}
+
+
+{% block body %}
+
+{% #about_me head="" img=profile.foto %}
+
+    <p align="left">
+        {{ user.last_name }} {{ user.first_name }} | <strong class="mycolor"> {{ request.user.username }}</strong>
+        <a href="{% url 'update-user' profile.pk %}" class="mycolor" title="изменить данные"><i class="fas fa-pen text-secondary mt-3"> </i></a><br>
+        {{ user.email }}<br>
+        {{ profile.phone }}<br>
+        {{ profile.telegram }}<br>
+        {{ profile.city|choice_tag:'city' }}<br>
+        <blockquote class="blockquote">
+            <p align="left">{{ profile.profile }}</p>
+            <p class="mb-0" align="left">
+                Completed orders: {{ count }}<br>
+                Revenue: {{ sum }} <br>
+                Rank: {{ profile.raiting }} / {{ profile.rating_sum}} /{{ profile.rating_num}}
+            </p>
+        </blockquote>
+    </p>
+{% /about_me%}
+
+
+{% endblock body %}

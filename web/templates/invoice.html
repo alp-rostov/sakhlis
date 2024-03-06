@@ -1,0 +1,199 @@
+{% extends 'flatpages/default_user.html' %}
+{% load custom_filters %}
+{% load custom_tags %}
+{% load slippers %}
+{% load static %}
+
+
+{% block body %}
+
+<style>
+    .hidden{
+    display:none
+    }
+
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12" align="center">
+        {% if prev.pk %}
+            <a href="{% url 'invoice' prev.pk %}" class="btn"><</a>
+        {% endif %}
+        {% if next.pk %}
+            <a href="{% url 'invoice' next.pk %}" class="btn">></a>
+        {% endif %}
+        </div>
+    </div>
+
+    <div class="row" >
+        <div class="col-md-4 mt-3" >
+            <h4><b>Order № {{ info.id }}</b></h4>
+            {{ info.time_in }} <a href="../list_order/update/{{ info.pk}}" class="fas fa-pen-square text-secondary"></a>
+            {% if info.order_status == 'SND' %}
+                 <a href="../changestatus?order_pk={{ info.pk}}&work_status=RCV"lh-1 id="workstatus"
+                 class="btn btn-sm btn-orange" >ACCEPT ORDER</a>
+            {% elif info.order_status == 'RCV' %}
+                 <a href="../changestatus?order_pk={{ info.pk}}&work_status=END" id="workstatus" class="btn btn-sm btn-orange">Order was completed</a><br>
+            {% elif info.order_status == 'END' %}
+                <a href="pdf/{{ info.id }}" class="btn btn-sm btn-orange">Invoice - PDF</a>
+            {% endif %}
+            <div id="stepstatuswork"></div>
+        </div>
+
+        <div class="col-md-4 text-secondary mt-3" >
+            <h4><b>Order status</b></h4>
+            {% if info.order_status == 'SND' %}
+                {% #work_status check_1="fas fa-check-circle about-text" check_font_1=" black-text" %}
+                {% /work_status %}
+
+            {% elif info.order_status == 'RCV' %}
+                {% #work_status check_1="fas fa-check-circle text-secondary" check_2="fas fa-check-circle about-text" check_font_2="black-text" %}
+                {% /work_status %}
+
+            {% elif info.order_status == 'END' %}
+                {% #work_status check_1="fas fa-check-circle text-secondary" check_2="fas fa-check-circle text-secondary" check_3="fas fa-check-circle about-text" check_font_3=" black-text"   %}
+                {% /work_status %}
+            {% endif %}
+        </div>
+
+        <div class="col-md-4 text-secondary mt-3" >
+            <h4><b>Customer</b></h4>
+            <h5>{{ info.customer_name }}</h5>
+
+              <a href="tel:{{ info.customer_phone }}" title="Телефон" class="fas fa-phone text fa-sm mr-1 btn">
+            </a>
+             <a href="https://t.me/{{ info.customer_telegram|cut:'@' }}" title="Telegram" class="fas fa-paper-plane text fa-sm mr-1 btn">
+            </a>
+                      <a href= 'https://yandex.ru/maps/?pt={{ info.location_longitude|change_comma_to_dot }},
+            {{ info.location_latitude|change_comma_to_dot }}&z=18&l=map' id="map_{{ i.pk }}"
+            title="" class="fas fa-map-marker text fa-sm mr-1 btn">
+            </a>
+        </div>
+
+
+   <div class="col-md-12">
+            <hr>
+   </div>
+
+
+</div>
+
+<div>
+
+    <div class="row">
+        <div class="col-md-4 text-secondary">
+            <i class="fas fa-home prefix text-secondary mb-2"> </i> {{ info.address_city|choice_tag:'city' }}, {{ info.address_street_app }}, {{ info.address_num }}<br>
+            <i class="fas fa-phone prefix text-secondary mb-2"></i> {{ info.customer_phone }}<br>
+            <i class="fas fa-paper-plane prefix text-secondary mb-2"></i> @{{ info.customer_telegram }}
+        </div>
+
+       <div class="col-md-4 ">
+           {{ info.text_order }}
+       </div>
+
+        <div class="col-md-4" >
+
+        </div>
+    </div>
+
+ </div>
+
+{% if info.order_status == 'SND' %}
+    <table id="table_invoice" class="hidden">
+{% else %}
+    <table id="table_invoice" class="table" >
+{% endif %}
+<thead>
+<tr  class="table-warning">
+    <th>Name of service </th>
+    <th>Quantity </th>
+    <th>Price</th>
+    <th >Sum</th>
+    <th > </th>
+</tr>
+</thead>
+
+<tr class="hidden">
+    <td name="service_id"></td>
+    <td name="quantity"></td>
+    <td name="price"></td>
+    <td name="amount">0</td>
+    <td name="delete"><a href="" class="link-delete" ></a></td>
+</tr>
+
+<tbody>
+{% for g in invoice %}
+    <tr class="form_text">
+            <td name="service_id">{{ g.service_id }}</td>
+            <td name="quantity">{{ g.quantity }} </td>
+            <td name="price">{{ g.price }}</td>
+            <td name="amount">{{ g.amount }}</td>
+            <td name="delete"><a href="{% url 'delete-item-of-order' g.pk %}" class="link-delete" ><i class="fas fa-trash text-secondary"></i></a></td>
+    </tr>
+{% endfor %}
+</tbody>
+<tr class="table-warning" id="total_">
+    <th>
+    </th>
+
+    <th class="h5-responsive" >
+    </th>
+
+    <th class="h5-responsive ">
+        Total:
+    </th>
+
+    <th class="h5-responsive" id="total">
+    </th>
+
+    <th>
+    </th>
+</tr>
+<script>
+    function sum_total() {
+        let sum_total=0;
+        $('td[name="amount"]').each(function(){sum_total += parseInt($(this).html());});
+        $('#total').html(sum_total);
+    }
+    sum_total();
+</script>
+
+</table>
+
+{% if info.order_status == 'SND' %}
+<form action="" method="post" id="id_form" class="hidden">
+{% else %}
+<form action="" method="post" id="id_form" >
+{% endif %}
+
+    {% csrf_token %}
+    <div id="form-list">
+        <div id="empty-form" class="hidden">
+            <a href="#" onclick="show_type_work(this)" class="btn btn-sm">open</a>
+            <span class="type_work">
+            {% for u in type_work %}
+                <a href="../serv?type_work={{ u.0 }}" class="type_work btn btn-sm">{{ u.1 }}</a>
+            {% endfor %}
+            </span>
+            <br> {{ form.empty_form }}
+
+            <button type="button" class="delete-empty-form">Delete</button>
+        </div>
+        {{ form.management_form }}
+    </div>
+    <div id="error"></div>
+    <div align="center">
+        <button id="add-more" type="button" class="btn btn-md btn-orange">add-more</button>
+        <button type="submit" class="btn btn-md btn-orange"> Save </button><br>
+    </div>
+
+</form>
+
+{% endblock body %}
+
+
+
+{% block js %}
+    <script src="{% static 'js/invoice.js' %}"></script>
+{% endblock js %}

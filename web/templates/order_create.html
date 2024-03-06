@@ -1,0 +1,393 @@
+{% load static %}
+{% load slippers %}
+
+
+<!DOCTYPE html><html lang="ru" prefix="og: http://ogp.me/ns#"><head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- Fav Icon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Repair service in Tbilisi</title>
+    <meta name="description" content="">
+    <!-- Facebook -->
+	<meta property="og:title" content="Repair service in Tbilisi and Batumi">
+	<meta property="og:description" content="Repair service in Tbilisi and Batumi">
+	<meta property="og:image" content="images/master-na-chas.jpg">
+	<meta property="og:image:width" content>
+	<meta property="og:image:height" content>
+	<meta property="og:site_name" content>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/mdb.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+    <!-- Owl Carusel -->
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <!-- Custom Stylesheets -->
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+</head>
+
+<body id="top">
+
+<!--Header-->
+{% #menu %}
+
+  <li class="nav-item mr-4 active">
+                        <a class="nav-link" href="#section-0">Mail <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mr-4">
+                        <a class="nav-link" href="#section-1">Services</a>
+                    </li>
+                    <li class="nav-item mr-4">
+                        <a class="nav-link" href="#section-3">Photo</a>
+                    </li>
+                    <li class="nav-item mr-4">
+                        <a class="nav-link" href="#section-2">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-sm btn-orange btn-form cta-btn" data-toggle="modal" data-target="#exampleModal">Send request <i class="far fa-paper-plane animated tada delay-5s infinite ml-1"></i></a>
+                    </li>
+ {% if request.user.is_authenticated %}
+        <li class="nav-item mr-4">
+
+        <a class="nav-link" href="{% url 'list_order' %}">{{request.user.username}}</a>
+        </li>
+
+             <li class="nav-item mr-4">
+
+        <a class="nav-link" href="{% url 'logout' %}">Log out</a>
+
+        </li>
+    {% else %}
+    <li class="nav-item mr-4"><a class="nav-link" href="{% url 'login' %}" title='Sign in'>Sign in</a>
+    </li>
+        {% endif %}
+{% /menu %}
+
+        <header id="section-0" class="bg_img jarallax" data-jarallax="{" speed": 0.2}">
+            <div class="space">
+                    <div class="text-center">
+				<!--Telegramm-->
+			      <a class="mx-2" title="Telegram" href="https://t.me/+79604458687"><img src="{% static 'images/telegram.gif' %}" width="40"></a>
+            		<!--WhatsApp-->
+            		<a class="mx-2" title="WhatsApp" href="https://wa.me/+79604458687"><img src="{% static 'images/whatsapp.png' %}" width="45"></a>
+                        <h1 class="h1-responsive display-4 wow fadeIn" data-wow-delay="1s">Repair service in Tbilisi <a href="https://www.instagram.com/repairservicetbilisi/" titile="Инстаграм"><img src="{% static 'images/instagram.png' %}" width="60"></a> </h1>
+                        <hr class="hr-light-h wow fadeIn" data-wow-delay="1s">
+                        <p class="lead py-3 wow fadeIn" data-wow-delay="1s">Do you need working hands? Serviceman quickly will solve the problem of repair at the home or office.</p>
+                        <div class="flex-center">
+                            <button class="btn btn-lg btn-orange cta-btn btn-form mt-3 mb-5 wow fadeIn" data-toggle="modal" data-target="#exampleModal" data-wow-delay="1s">Send request <i class="far fa-paper-plane animated tada delay-5s infinite ml-1"></i></button>
+                        </div>
+                    </div>
+            </div>
+    </header>
+    <!--And Header-->
+
+    <!-- Services -->
+    <section id="section-1" class="row_bg">
+        <div class="container">
+            <div class="position-relative">
+                <h2 class="h1-responsive">Service<strong class="mycolor">"Master for an hour"</strong></h2>
+            </div>
+            <div class="row">
+                <div class="col-12 columns mt-4">
+                    <div class="owl-carousel owl-theme pt-5">
+                            {% #card name_service="Услуги электрика" name_service1="Ремонт выключателя, розетки" name_service2="Монтаж счетчика" name_service3="Прокладка электропроводки" %}
+                            <img src="{% static 'fonts/broken-cable.svg' %}" class="rounded-circle img-fluid">
+                            {% /card %}
+                            {% #card name_service="Услуги сантехника" name_service1="Устранение засора" name_service2="Установка раковины, унитаза, смесителя" name_service3="Устранение протечки крана"  %}
+                            <img src="{% static 'fonts/leak.svg' %}" class="rounded-circle img-fluid">
+                            {% /card %}
+                            {% #card name_service="Cборка мебели" name_service1="Шкафы, диваны, кухни" name_service2="Установка встраиваемой техники" name_service3="Подъем на этаж"  %}
+                            <img src="{% static 'fonts/living-room.svg' %}" class="rounded-circle img-fluid">
+                            {% /card %}
+                            {% #card name_service="Мелкий ремонт в квартире" name_service1="Монтаж карнизов и плинтусов" name_service2="Ремонт межкомнатных дверей" name_service3="Повесить картину, телевизор, люстру"  %}
+                            <img src="{% static 'fonts/living-room.svg' %}" class="rounded-circle img-fluid">
+                            {% /card %}
+                            {% #card name_service="Установка бытовой техники" name_service1="Сплит-системы" name_service2="Холодильники" name_service3="Стиральные машины"  %}
+                            <img src="{% static 'fonts/washing-machine.svg' %}" class="rounded-circle img-fluid">
+                            {% /card %}
+                            {% #card name_service="Мелкий ремонт офиса" name_service1="Офисная мебель" name_service2="Обслуживание куллеров для воды: чистка, ремонт" name_service3="Обслуживание сплит-систем"  %}
+                            <img src="{% static 'fonts/3d-buildings.svg' %}" class="rounded-circle img-fluid">
+                            {% /card %}
+                    </div>
+                    <!--row-->
+                </div>
+                <!--Container-->
+            </div>
+        </div>
+    </section>
+    <!-- And Services -->
+
+    <!-- Foto -->
+    <section id="section-3" class="accordion-bg">
+    <!-- Testimonials -->
+    <section class="text-center cloudy-knoxville-gradient">
+        <div class="container">
+            <!-- Section heading -->
+            <h2 class="h1-responsive">Фото<strong class="mycolor"> наших работ</strong></h2>
+
+            <div class="wrapper-carousel-fix py-4">
+                <!-- Carousel Wrapper -->
+                <div id="carousel-example-1" class="carousel no-flex testimonial-carousel slide carousel-fade" data-ride="carousel" data-interval="false">
+                    <!--Slides-->
+                    <div class="carousel-inner" role="listbox">
+                        {% #carusel active="active" text="Монтаж и установка проектора, экрана на стену и косметический ремонт помещения."  %}
+                        <img src="{% static 'images/1.jpg' %}" class="" width='250' alt="Фотогаллерея работ мастер на час: монтаж проектора">
+                        {% /carusel %}
+                        {% #carusel text="Установка кодового замка двери с открыванием по  отпечатку пальца или цифровому коду."  %}
+                        <img src="{% static 'images/2.jpg' %}" class="" width='250' alt="Фотогаллерея работ мастер на час: монтаж замка">
+                        {% /carusel %}
+                        {% #carusel text=" Установка освещения и бытовой техники"  %}
+                        <img src="{% static 'images/3.jpg' %}" class="" width='250' alt="Фотогаллерея работ мастер на час: монтаж кухни">
+                        {% /carusel %}
+                    </div>
+                    <!--Slides-->
+                    <!--Controls-->
+                    <a class="carousel-control-prev left carousel-control" href="#carousel-example-1" role="button" data-slide="prev">
+                        <span class="icon-prev" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next right carousel-control" href="#carousel-example-1" role="button" data-slide="next">
+                        <span class="icon-next" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                    <!--Controls-->
+                </div>
+                <!-- Carousel Wrapper -->
+            </div>
+        </div>
+        <!-- Container -->
+    </section>
+    <!-- Testimonials -->
+    </section>
+    <!-- And Foto -->
+
+    <!-- How I work -->
+    <section>
+
+        <h2 class="h1-responsive">Мастер на час в Тбилиси: <strong class="mycolor">принципы работы</strong></h2>
+
+        <!--Container-->
+        <div class="container">
+            <!--First row-->
+            <div class="row features-small my-5 pt-5 wow fadeIn" data-wow-delay="0.6s">
+
+                <!--First column-->
+                <div class="col-md-4">
+                    <!--First row-->
+                    {% #container head_name="Профессионализм" text="В нашей команде опытные специалисты с многолетним стажем."  %}
+                    {% /container %}
+                    <!--/First row-->
+                    <!--Second row-->
+                    {% #container head_name="Современный инструмент" text="Мы используем в работе только качественные инструменты и расходные материалы."  %}
+                    {% /container %}
+                    <!--/Second row-->
+
+                    <!--Third row-->
+                    {% #container head_name="Быстрая помощь" text="Срочный выезд в течение часа."  %}
+                    {% /container %}
+                    <!--/Third row-->
+                </div>
+                <!--/First column-->
+
+                <!--Second column-->
+                <div class="col-md-4 flex-center mb-4">
+                    <img src="{% static 'images/o-mastere-na-chas.png' %}" alt="Мастер на час услуга" class="z-depth-0 img-fluid">
+                </div>
+                <!--/Second column-->
+
+                <!--Third column-->
+                <div class="col-md-4">
+                    <!--First row-->
+                    {% #container head_name="Порядочность" text="Гарантируем качественную и ответственную работу."  %}
+                    {% /container %}
+                    <!--/First row-->
+                    <!--Second row-->
+                    {% #container head_name="Бережное обращение с имуществом клиента" text="Мы не испортим пол, мебель, стены. Убираем мусор за собой."  %}
+                    {% /container %}
+                    <!--/Second row-->
+                </div>
+                <!--/Third column-->
+
+            </div>
+            <!--/First row-->
+        </div>
+        <!--/Container-->
+
+    </section>
+    <!-- And How I work -->
+
+    <!--About Me -->
+    <section id="section-2">
+
+        {% #about_me head="«Мастер на час»<strong class='mycolor'> всегда на связи</strong>" img="images/muzg-na-chas.jpg" %}
+
+        <p><i class="fas fa-quote-left pr-2"></i>Мы готовы приехать на вызов в любое время в экстренной ситуации.</p>
+                    <h4><i class="fas fa-wrench fa-sm mr-3"></i>Режим работы: КРУГЛОСУТОЧНО!</h4>
+                    <p>Наша команда имеет многолетний опыт работы по данному направлению. Предлагаем только качественное решение вашей проблемы будь-то поломаный выключатель, скрипящая дверь, протекающая сантехника.</p>
+                    <blockquote class="blockquote">
+                        <p class="mb-0">Контактная информация: +995 598259119</p>
+                        <footer class="blockquote-footer">Ремонт - наша работа.
+                        </footer>
+                    </blockquote>
+        {% /about_me%}
+    </section>
+    <!-- About Me -->
+
+    <!-- Footer -->
+    <footer id="section-5" class="footer_bg">
+        <div class="container">
+            <div class="row">
+                <!-- Grid column -->
+                <div class="col-sm-12 col-md-4 col-lg-4">
+                    <h4>Адрес</h4>
+
+                    <!-- Grid column -->
+                    <div class="mt-5 mb-0 pl-3">
+                        <p>
+                            <i class="fas fa-home fa-sm text-danger mr-3"></i>Тбилиси, ул. Зураба Патаридзе 8</p>
+                        <p>
+                            <i class="fas fa-phone text-danger fa-sm mr-3"></i><a class="text-light" href="tel:+995598259119">+995 598-259-119</a></p>
+                    </div>
+                </div>
+                <!-- Contact window button -->
+                <div class="col-md-4 col-sm-12 mb-md-0 col-lg-4 mb-5">
+                    <h4 class="h-tel my-3">Совершить звонок</h4>
+                    <div class="text-center m-5">
+
+                        <button class="btn btn orange btn-orange-tel text-center"><a href="tel:+995598259119" class="text-white">+995 598-259-119</a></button>
+                    </div>
+                </div>
+                <!-- Grid column -->
+                <div class="col-sm-12 col-md-4 col-lg-4">
+                    <h4>Написать нам</h4>
+                    <div class="col-md-12">
+                        <div class="py-5 text-center">
+				    <!--Facebook-->
+                            <a class="mx-2"><i class="fab fa-facebook-messenger blue-text animated jello slow infinite delay-0.4s fa-2x"></i></a>
+                            <!--Telegramm-->
+                            <a class="mx-2" title="Telegram" href="https://t.me/+79604458687"><i class="fab fa-telegram text-info fa-2x animated tada slow infinite delay-0.7s"></i></a>
+                            <!--WhatsApp-->
+                            <a class="mx-2" title="WhatsApp" href="https://wa.me/+79604458687"><i class="fab fa-whatsapp fa-2x text-success animated swing slow infinite delay-1s"></i></a>
+                        </div>
+                        <!--Grid column-->
+                    </div>
+                </div>
+            </div>
+            <hr>
+
+        </div>
+        <div class="footer-copyright py-3 text-center">
+            <span class="text-muted"> © 2022 |</span> <a href="#!"> Мастер на час</a>
+        </div>
+    </footer>
+    <!-- And Footer -->
+
+    <!-- Modal Window -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                </div>
+                <div class="modal-body  mx-3">
+                    <div id="contact" class="form-container">
+                        <fieldset>
+                            <div id="message">
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                                </button>
+				    </div>
+                            {% #form form_=form %}
+                            {% csrf_token %}
+                            {% /form %}
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- And Modal Window -->
+
+
+    <!-- jQuery first, then Bootstrap JS -->
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/mdb.min.js' %}"></script>
+    <!-- Optional JavaScript -->
+	<script src="{% static 'js/wow.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/typed.min.js' %}"></script>
+    <script src="{% static 'js/jquery.malihu.PageScroll2id.min.js' %}"></script>
+    <script src="{% static 'js/maskedinput.min.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+	<script type="text/javascript">
+    $(document).ready(function() {
+      new WOW().init();
+    });
+    </script>
+
+<script>
+
+ $(document.body).on( "input", "#id_address_street_app", function(e) {
+        e.preventDefault();
+
+         $.ajax({
+            url: "api/street?street="+$(this).val() ,
+            type: "GET",
+
+            dataType: 'json',
+            success: function(b){
+              console.log(b)
+
+                $('#languages option').remove();
+
+                 for (i = 0; i < b.length; i++) {
+                            full_name_street=b[i].type_street+b[i].name_street
+                            $('#languages').append('<option value="'+full_name_street+'">');
+
+                        }
+            }
+        });
+    });
+
+
+
+$(document.body).ready(function() {
+
+    $('#form').submit(function(e) {
+        e.preventDefault();
+
+
+            $.ajax({
+                url: '',
+                type: 'POST',
+                data: $(this).serialize(),
+                dataType: 'text',
+                beforeSend: function () {$("#form").html('<h3>Отправляется...</h3>');},
+                success: function (resp) {
+
+                    if (JSON.parse(resp).auth==true) {
+                        window.location.href = '/list_order/'+JSON.parse(resp).pk;
+                    }
+                    else {
+                        $("#form").html(JSON.parse(resp).message);
+                    }
+                },
+            });
+
+    });
+});
+</script>
+
+</body></html>

@@ -1,0 +1,26 @@
+{% load static %}
+<html>
+<head>
+<title>
+ </title>
+ {% block head %}
+
+{% endblock head %}
+</head>
+
+<body>
+<p><a href="{% url 'home' %}">Домой</a></p>
+
+<p><a href="{% url 'list_order' %}">Управление заказами</a></p>
+
+<p><p><a href="{% url 'stat' %}">Отчетность</a></p>
+
+<p></p>
+{% block body %}
+
+{% endblock body%}
+
+
+
+{{ flatpage.content}}
+</body></html>

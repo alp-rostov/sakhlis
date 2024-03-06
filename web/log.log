@@ -1,0 +1,285 @@
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-02-25 19:28:09.012347
+WARNING:root:ОШИБКА:        'QuerySet' object has no attribute 'objects'
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/views/generic/list.py", line 174, in get
+    context = self.get_context_data()
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 181, in get_context_data
+    c = DataFromInvoice(Invoice.objects.filter(order_id__in=list_b)).get_quantity_of_orders_by_type(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/repository.py", line 76, in __init__
+    self.query=query.objects
+               ^^^^^^^^^^^^^
+AttributeError: 'QuerySet' object has no attribute 'objects'
+
+WARNING:root:============================================================
+WARNING:django.request:Bad Request: /stat/
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-02-25 19:28:30.721813
+WARNING:root:ОШИБКА:        'QuerySet' object has no attribute 'objects'
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/views/generic/list.py", line 174, in get
+    context = self.get_context_data()
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 181, in get_context_data
+    c = DataFromInvoice(Invoice.objects.filter(order_id__in=list_b)).get_quantity_of_orders_by_type(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/repository.py", line 76, in __init__
+    self.query=query
+               ^^^^^^
+AttributeError: 'QuerySet' object has no attribute 'objects'
+
+WARNING:root:============================================================
+WARNING:django.request:Bad Request: /stat/
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/repository.py changed, reloading.
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py changed, reloading.
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py changed, reloading.
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py changed, reloading.
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py changed, reloading.
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-02-25 19:38:10.296619
+WARNING:root:ОШИБКА:        'DataFromInvoice' object has no attribute 'get_cost_of_orders_by_type'
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/views/generic/list.py", line 174, in get
+    context = self.get_context_data()
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 188, in get_context_data
+    context['d_'] = Graph(Object_to_get_data_for_graf.get_cost_of_orders_by_type(repairer=self.request.user),
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DataFromInvoice' object has no attribute 'get_cost_of_orders_by_type'
+
+WARNING:root:============================================================
+WARNING:django.request:Bad Request: /stat/
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/repository.py changed, reloading.
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-02-25 19:38:11.964585
+WARNING:root:ОШИБКА:        'DataFromInvoice' object has no attribute 'get_cost_of_orders_by_type'
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/views/generic/list.py", line 174, in get
+    context = self.get_context_data()
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 188, in get_context_data
+    context['d_'] = Graph(Object_to_get_data_for_graf.get_cost_of_orders_by_type(repairer=self.request.user),
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DataFromInvoice' object has no attribute 'get_cost_of_orders_by_type'
+
+WARNING:root:============================================================
+WARNING:django.request:Bad Request: /stat/
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-02-25 19:39:03.975459
+WARNING:root:ОШИБКА:        'DataFromInvoice' object has no attribute 'get_monthly_order_cost_from_OrderList'
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/views/generic/list.py", line 174, in get
+    context = self.get_context_data()
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 192, in get_context_data
+    # context['f'] = Graph(Object_to_get_data_for_graf.get_monthly_order_cost_from_OrderList(repairer=self.request.user),
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DataFromInvoice' object has no attribute 'get_monthly_order_cost_from_OrderList'
+
+WARNING:root:============================================================
+WARNING:django.request:Bad Request: /stat/
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py changed, reloading.
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py changed, reloading.
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py changed, reloading.
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py changed, reloading.
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-02-25 19:49:19.695350
+WARNING:root:ОШИБКА:        DataFromInvoice.__init__() missing 1 required positional argument: 'query'
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/views/generic/list.py", line 174, in get
+    context = self.get_context_data()
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 225, in get_context_data
+    c = DataFromInvoice().get_total_cost_of_some_orders(list_of_orders=self.get_queryset())
+        ^^^^^^^^^^^^^^^^^
+TypeError: DataFromInvoice.__init__() missing 1 required positional argument: 'query'
+
+WARNING:root:============================================================
+WARNING:django.request:Bad Request: /ordersearch/
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/repository.py changed, reloading.
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/repository.py changed, reloading.
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/repository.py changed, reloading.
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-02-25 19:53:52.076888
+WARNING:root:ОШИБКА:        'DataFromInvoice' object has no attribute 'get_monthly_order_cost_from_OrderList'
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/views/generic/list.py", line 174, in get
+    context = self.get_context_data()
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 192, in get_context_data
+    context['f'] = Graph(Object_to_get_data_for_graf.get_monthly_order_cost_from_OrderList(repairer=self.request.user),
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DataFromInvoice' object has no attribute 'get_monthly_order_cost_from_OrderList'
+
+WARNING:root:============================================================
+WARNING:django.request:Bad Request: /stat/
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-02-25 19:54:11.738488
+WARNING:root:ОШИБКА:        'DataFromInvoice' object has no attribute 'get_monthly_order_cost_from_OrderList'
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/views/generic/list.py", line 174, in get
+    context = self.get_context_data()
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 192, in get_context_data
+    # context['f'] = Graph(Object_to_get_data_for_graf.get_monthly_order_cost_from_OrderList(repairer=self.request.user),
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DataFromInvoice' object has no attribute 'get_monthly_order_cost_from_OrderList'
+
+WARNING:root:============================================================
+WARNING:django.request:Bad Request: /stat/
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py changed, reloading.
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/repository.py changed, reloading.
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py changed, reloading.
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py changed, reloading.
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py changed, reloading.
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py changed, reloading.
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py changed, reloading.
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py changed, reloading.
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py changed, reloading.
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/filters.py changed, reloading.
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py changed, reloading.
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py changed, reloading.
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /changestatus
+Traceback (most recent call last):
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py", line 310, in change_work_status
+    if b.order_status=='END': b.time_out=timezone.now()
+                                         ^^^^^^^^^^^^
+AttributeError: type object 'datetime.timezone' has no attribute 'now'
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py changed, reloading.
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py changed, reloading.
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/views.py changed, reloading.
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/admin.py changed, reloading.
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/admin.py changed, reloading.
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/admin.py changed, reloading.
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/admin.py changed, reloading.
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/admin.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-02-26 19:05:12.699034
+WARNING:root:ОШИБКА:        No Order list found matching the query
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/views/generic/detail.py", line 53, in get_object
+    obj = queryset.get()
+          ^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+app_site.models.OrderList.DoesNotExist: OrderList matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/app_site/exeptions.py", line 35, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/views/generic/detail.py", line 108, in get
+    self.object = self.get_object()
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/.local/share/virtualenvs/web-xbYPzM3q/lib64/python3.11/site-packages/django/views/generic/detail.py", line 55, in get_object
+    raise Http404(
+django.http.response.Http404: No Order list found matching the query
+
+WARNING:root:============================================================
+WARNING:django.request:Bad Request: /list_order/1250
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/web/settings/development.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/sakhlis/web/web/settings/development.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico

@@ -1,0 +1,15 @@
+FROM postgres:latest
+
+RUN mkdir db
+RUN mkdir db/web
+
+WORKDIR db
+
+ENV POSTGRES_USER 12345
+ENV POSTGRES_PASSWORD 12345
+ENV  POSTGRES_DB post-db
+
+EXPOSE 5432
+
+COPY ./notes.txt .db/web/
+

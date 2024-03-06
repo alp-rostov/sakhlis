@@ -1,0 +1,31 @@
+{% extends 'flatpages/default_user.html' %}
+{% load custom_filters %}
+{% load custom_tags %}
+
+
+{% block subbody %}
+
+
+{% endblock subbody %}
+
+{% block body %}
+
+<h2> Sign in </h2>
+<form method="post" action="{% url 'login' %}">
+{% csrf_token %}
+<table>
+<tr>
+    <td>{{ form.username.label_tag }}</td>
+    <td>{{ form.username }}</td>
+</tr>
+<tr>
+    <td>{{ form.password.label_tag }}</td>
+    <td>{{ form.password }}</td>
+</tr>
+</table>
+
+<input type="submit" value="Submit" class="btn btn-sm btn-orange btn-form cta-btn waves-effect">
+</form>
+<button class="btn btn-sm btn-orange btn-form cta-btn waves-effect"> <a href="{% url 'signup' %}" >
+    Registration </a></button>
+{% endblock body %}

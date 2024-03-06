@@ -1,0 +1,12 @@
+{% extends 'flatpages/default_user.html' %}
+{% load custom_filters %}
+{% load custom_tags %}
+
+{% block body %}
+<h2>{{ appointment.username }} Спасибо за регистрацию!</h2>
+    <p> Thanks  {{ appointment.last_name }} {{ appointment.first_name }} ..../</p>
+    <p>Your login: {inst_.username} </p>
+    <p><a href="">Account</a></p>
+
+
+        {% endblock body %}

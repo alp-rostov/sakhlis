@@ -1,0 +1,41 @@
+#!/usr/bin/env python
+"""Django's command-line utility for administrative tasks."""
+import os
+import sys
+import dotenv
+import pathlib
+# from web.settings.settings import DEBUG
+
+
+def main():
+    """Run administrative tasks."""
+    # if settings.DEBUG:
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'web.settings.development')
+    print("Manage: Django loaded up in setting mode : Development")
+    print(os.environ.get('SECRET_KEY'))
+    print(os.environ.get('DJANGO_SETTINGS_MODULE'))
+# else:
+    #     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'web.settings.production')
+    #     print("Manage: Django loaded up in setting mode : Production")
+    #     print(os.environ.get('DJANGO_SETTINGS_MODULE'))
+
+    DOT_INV_PASS = pathlib.Path() / 'web/.env'
+    if DOT_INV_PASS.exists():
+        dotenv.read_dotenv(str(DOT_INV_PASS))
+    else:
+        print('no .env found')
+
+
+    try:
+        from django.core.management import execute_from_command_line
+    except ImportError as exc:
+        raise ImportError(
+            "Couldn't import Django. Are you sure it's installed and "
+            "available on your PYTHONPATH environment variable? Did you "
+            "forget to activate a virtual environment?"
+        ) from exc
+    execute_from_command_line(sys.argv)
+
+
+if __name__ == '__main__':
+    main()
