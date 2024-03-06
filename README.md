@@ -8,10 +8,14 @@ save your to-do list by order:</h2>
 <li>Save information about clients, jobs, prices
 <li>View a comparative analysis of your earnings
 </ul>
-<img src="https://github.com/alp-rostov/sakhlis/blob/master/web/media/images/1.png" width="300">
-<img src="https://github.com/alp-rostov/sakhlis/blob/master/web/media/images/2.png" width="300">
-<img src="https://github.com/alp-rostov/sakhlis/blob/master/web/media/images/3.png" width="300">
-<img src="https://github.com/alp-rostov/sakhlis/blob/master/web/media/images/4.png" width="300">
+
+<h2>PrintScreens</h2>
+<p align=center>
+<img src="https://github.com/alp-rostov/sakhlis/blob/master/web/media/images/2.png" width="400"><br>
+<img src="https://github.com/alp-rostov/sakhlis/blob/master/web/media/images/3.png" width="400"><br>
+<img src="https://github.com/alp-rostov/sakhlis/blob/master/web/media/images/4.png" width="400">
+</p>
+  
 <h2>Technologies</h2>
 <p align="left" dir="auto"> 
 <img src="https://raw.githubusercontent.com/daniilshat/daniilshat/2d7eafe5250314b3d422c86b35de062e0f1f5178/icons/linux.svg" alt="linux" width="40" height="40" style="max-width: 100%;"> 
