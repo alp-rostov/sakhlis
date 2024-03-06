@@ -1,6 +1,4 @@
 
 /.idea/
-
-/web/.Docker.env
-/web/log.log
+log.log
 /env/

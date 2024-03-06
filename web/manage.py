@@ -12,14 +12,13 @@ def main():
     # if settings.DEBUG:
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'web.settings.development')
     print("Manage: Django loaded up in setting mode : Development")
-    print(os.environ.get('SECRET_KEY'))
-    print(os.environ.get('DJANGO_SETTINGS_MODULE'))
+
 # else:
     #     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'web.settings.production')
     #     print("Manage: Django loaded up in setting mode : Production")
     #     print(os.environ.get('DJANGO_SETTINGS_MODULE'))
 
-    DOT_INV_PASS = pathlib.Path() / 'web/.env'
+    DOT_INV_PASS = pathlib.Path() / 'env/.env'
     if DOT_INV_PASS.exists():
         dotenv.read_dotenv(str(DOT_INV_PASS))
     else:

@@ -26,10 +26,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 SECRET_KEY = force_str(os.environ.get('SECRET_KEY'))
 
 # SECURITY WARNING: don't run with debug turned on in production!
-print('_______________________')
-DEBUG = True
-print(DEBUG)
 
+DEBUG = True
 
 # Application definition
 
