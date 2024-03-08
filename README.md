@@ -19,7 +19,7 @@ save your to-do list by order:</p>
   
 <h2>Technologies</h2>
 <p align="left" dir="auto"> 
-
+POSTGRESS DATABASE
 
 </p>
 
