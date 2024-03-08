@@ -15,15 +15,3 @@ DATABASES = {
     }
  }
 
-
-# DATABASES = {
-#     'default': {
-#
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'sakhlis',
-#         'USER': 'postgres',
-#         'PASSWORD': '1rostov1',
-#         'HOST': '127.0.0.1',
-#         'PORT': '5432',
-#     }
-# }
