@@ -1,6 +1,6 @@
 <h1>CRM system for handymans.</h1>
 
-<p>The project allows any repairman to keep records, receive and
+<p>The project allows to keep records of repairing orders, receive it and
 save your to-do list by order:</p>
 
 <ul>
