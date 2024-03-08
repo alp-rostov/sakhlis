@@ -144,3 +144,4 @@ IndexError: list index out of range
 WARNING:root:============================================================
 WARNING:django.request:Bad Request: /user/1
 WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /favicon.ico
