@@ -42,4 +42,4 @@ os.getcwd()   -  determine current directory
 
 
 DATABASE DJANGO
-python manage.py dumpdata > dumped_data.json  - export to json-file
+python manage.py dumpdata --inden 2 > copydata.json  - export to json-file
