@@ -1,3 +1,5 @@
+import uuid
+
 from django.contrib.auth.models import User
 from django.db import models
 from django.core.validators import RegexValidator
@@ -43,6 +45,7 @@ class Invoice(models.Model):
 class OrderList(models.Model):
     """time_in time_out repairer_id price text_order customer_name customer_phone address_city address_street_app
     address_num work_type services order_status"""
+    secret_pk = models.UUIDField(primary_key=False, default=uuid.uuid4, editable=True, unique=True)
     time_in = models.DateTimeField(auto_now_add=True, verbose_name='Date of order')
     time_out = models.DateTimeField(null=True, blank=True, verbose_name='Order completion date')
     repairer_id = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True,
