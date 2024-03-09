@@ -62,6 +62,7 @@ class OrderList(models.Model):
     address_street_app = models.CharField(max_length=150, verbose_name='Street', null=True, blank=True)
     address_num = models.CharField(max_length=10, verbose_name='House number', null=True, blank=True)
     services = models.ManyToManyField('Service', through='Invoice')
+    comment_from_customer = models.CharField(max_length=1500, verbose_name='Description about quality works and services', blank=True, null=True)
 
     location_longitude = models.FloatField(verbose_name='Longitude', null=True, blank=True)
     location_latitude = models.FloatField(verbose_name='Latitude', null=True, blank=True)
