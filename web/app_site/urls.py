@@ -11,6 +11,7 @@ urlpatterns = [
     path('list_order/update/<int:pk>', OrderUpdate.as_view(), name='update'),
     path('list_order/pdf/<int:order_pk>', CreateIvoicePDF, name='invoice_pdf'),
 
+
     path('add', OrderAddRepaier, name='add_repairer'),
     path('invoice/delete-order/<int:pk>', OrderDelete.as_view(), name='delete-order'),
     path('invoice/delete/<int:invoice_pk>', DeleteIvoiceService, name='delete-item-of-order'),
