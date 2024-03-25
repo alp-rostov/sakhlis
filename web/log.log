@@ -104,3 +104,4 @@ Traceback (most recent call last):
   File "/home/alprostov/.local/share/virtualenvs/web-mek5ITq2/lib64/python3.11/site-packages/django/template/backends/django.py", line 84, in reraise
     raise new from exc
 django.template.exceptions.TemplateDoesNotExist:  partials/form_for_order.html
+WARNING:django.request:Not Found: /favicon.ico
