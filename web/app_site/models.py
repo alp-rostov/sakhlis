@@ -47,19 +47,31 @@ class OrderList(models.Model):
     time_out = models.DateTimeField(null=True, blank=True, verbose_name='Order completion date')
     repairer_id = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True,
                                     verbose_name='Мастер', default='', )
+    apartment_id = models.ForeignKey('Apartment', on_delete=models.SET_NULL, null=True, blank=True,
+                                    verbose_name='Appartment', default='', )
+
     text_order = models.CharField(max_length=1500, verbose_name='Description of the problem', blank=True, null=True)
+
+
     customer_name = models.CharField(max_length=50, verbose_name='Name')
     customer_phone = models.CharField(max_length=16, verbose_name='Phone')
     customer_telegram = models.CharField(max_length=26, verbose_name='Telegram', blank=True, null=True)
+
+
+
+    order_status = models.CharField(max_length=3, choices=ORDER_STATUS, default='BEG', null=True, blank=True,
+                                    verbose_name='Order status')
+    services = models.ManyToManyField('Service', through='Invoice')
+
+
+
+
+
     customer_code = models.CharField(max_length=16, verbose_name='Company code ', blank=True, null=True)
     address_city = models.CharField(max_length=2, choices=CITY_CHOICES, default='TB', null=True, blank=True,
                                     verbose_name='City')
-    order_status = models.CharField(max_length=3, choices=ORDER_STATUS, default='BEG', null=True, blank=True,
-                                    verbose_name='Order status')
     address_street_app = models.CharField(max_length=150, verbose_name='Street', null=True, blank=True)
     address_num = models.CharField(max_length=10, verbose_name='House number', null=True, blank=True)
-    services = models.ManyToManyField('Service', through='Invoice')
-
     location_longitude = models.FloatField(verbose_name='Longitude', null=True, blank=True)
     location_latitude = models.FloatField(verbose_name='Latitude', null=True, blank=True)
 
@@ -79,7 +91,7 @@ class Repairer(models.Model):
     city = models.CharField(max_length=2, choices=CITY_CHOICES, default='TB')
     profile = models.CharField(max_length=1500, null=True, blank=True, verbose_name='About me:')
 
-    foto = models.ImageField(upload_to="images/", null=True, blank=True, verbose_name='Photo:')
+    foto = models.ImageField(upload_to="images/repairer/", null=True, blank=True, verbose_name='Photo:')
     rating_sum = models.IntegerField(default=0, blank=True, null=True)
     rating_num = models.IntegerField(default=1, blank=True, null=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE, blank=True, null=True)
@@ -88,6 +100,49 @@ class Repairer(models.Model):
         verbose_name_plural = 'Repairman'
     def get_absolute_url(self):
         return reverse('list_repair')
+
+
+class Owner(models.Model):
+    """"""
+    phone = models.CharField(validators=[phoneNumberRegex], max_length=16, unique=True, verbose_name='Phone',
+                             null=True, blank=True, )
+    telegram = models.CharField(max_length=25, unique=True, verbose_name='Telegram',
+                                null=True, blank=True, )
+    city = models.CharField(max_length=2, choices=CITY_CHOICES, default='TB')
+    foto = models.ImageField(upload_to="images/owner", null=True, blank=True, verbose_name='Photo:')
+    rating_sum = models.IntegerField(default=0, blank=True, null=True)
+    rating_num = models.IntegerField(default=1, blank=True, null=True)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'Owner'
+        verbose_name_plural = 'Owner'
+
+    def get_absolute_url(self):
+        return reverse('list_repair')
+
+
+class Apartment(models.Model):
+    """"""
+    owner = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True,
+                                    verbose_name='Responsible person for apartment', default='', )
+
+    address_city = models.CharField(max_length=2, choices=CITY_CHOICES, default='TB', null=True, blank=True,
+                                    verbose_name='City')
+    address_street_app = models.CharField(max_length=150, verbose_name='Street', null=True, blank=True)
+    address_num = models.CharField(max_length=10, verbose_name='House number', null=True, blank=True)
+    foto = models.ImageField(upload_to="images/appartment/", null=True, blank=True, verbose_name='Photo:')
+
+    location_longitude = models.FloatField(verbose_name='Longitude', null=True, blank=True)
+    location_latitude = models.FloatField(verbose_name='Latitude', null=True, blank=True)
+    notes = models.CharField(max_length=1500, null=True, blank=True, verbose_name='Note:')
+
+    class Meta:
+        verbose_name = 'Appartment list'
+        verbose_name_plural = 'Appartment list'
+
+
+
 
 class StreerTbilisi(models.Model):
     type_street = models.CharField(max_length=50)
