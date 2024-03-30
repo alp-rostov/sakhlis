@@ -7,28 +7,28 @@ from .models import *
 
 class OrderForm(forms.ModelForm):
     text_order = forms.CharField(
-        label='Текст заказа',
+        label='Order`s message',
         widget=forms.TextInput(attrs={"class": "md-textarea form-control",
-                                     'placeholder': "Опишите задачу", 'maxlength':1500}),
+                                     'placeholder': "Describe yor problem", 'maxlength':1500}),
         required=True
         )
 
     customer_name = forms.CharField(
-        label='Ваше имя',
+        label='Your Name',
         widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Имя", 'maxlength':20}),
         required=True
     )
 
     customer_phone = forms.CharField(
-        label='Телефон',
-        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Телефон", 'type': 'tel', 'maxlength':16}),
+        label='Phone',
+        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Phone", 'type': 'tel', 'maxlength':16}),
         required=True,
 
     )
 
     customer_telegram = forms.CharField(
-        label='Телеграм',
-        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Телеграм", 'maxlength':26}),
+        label='Telegram',
+        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Telegram", 'maxlength':26}),
         required=False,
 
     )
@@ -44,14 +44,14 @@ class OrderForm(forms.ModelForm):
     )
 
     address_street_app = forms.CharField(
-        label='Улица',
-        widget=forms.TextInput(attrs={"class": "form-control", 'list': 'languages', 'placeholder': "Улица", 'maxlength':40}),
+        label='Street',
+        widget=forms.TextInput(attrs={"class": "form-control", 'list': 'languages', 'placeholder': "Street", 'maxlength':40}),
         required = False
     )
 
     address_num = forms.CharField(
-        label='Номер дома',
-        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Номер дома", 'maxlength':10}),
+        label='Appartment',
+        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "App", 'maxlength':10}),
         required = False
     )
 
@@ -91,9 +91,9 @@ class UserRegisterForm(UserCreationForm):
                                  attrs={ 'placeholder': "@"}
                                                     ),
                              )
-    first_name = forms.CharField(label="Имя")
-    last_name = forms.CharField(label="Фамилия")
-    username = forms.CharField(label="Логин")
+    first_name = forms.CharField(label="FName")
+    last_name = forms.CharField(label="Sname")
+    username = forms.CharField(label="Login")
     class Meta:
         model = User
         fields = ("username",
@@ -110,18 +110,18 @@ class InvoiceForm(forms.ModelForm):
     service_id = forms.ModelChoiceField(
         label='',
         queryset = Service.objects.all(),
-        widget = forms.Select(attrs={'placeholder': "Вид работ" }),
+        widget = forms.Select(attrs={'placeholder': "Works`s type" }),
 
     )
     quantity = forms.IntegerField(
         label='',
-        widget=forms.NumberInput(attrs={'placeholder': "Количество", "min": 1, "max": 10000, 'value': 1}),
+        widget=forms.NumberInput(attrs={'placeholder': "Quantity", "min": 1, "max": 10000, 'value': 1}),
 
 
     )
     price = forms.DecimalField(
         label='',
-        widget=forms.NumberInput(attrs={'placeholder': "Цена", "min": 1, "max": 10000, }),
+        widget=forms.NumberInput(attrs={'placeholder': "Price", "min": 1, "max": 10000, }),
     )
     class Meta:
         model = Invoice
