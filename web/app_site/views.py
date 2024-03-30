@@ -34,9 +34,12 @@ class UserRegisterView(CreateView):
     def form_valid(self, form):
         try:
             with transaction.atomic():
+                b=form.save(commit=False)
                 self.object = form.save()
+
                 Repairer.objects.create(user=self.object)
-                my_group = Group.objects.get(name='owner')
+                grope = self.request.POST.get('grope')
+                my_group = Group.objects.get(name=grope)
                 my_group.user_set.add(self.object)
             return redirect('home')
 

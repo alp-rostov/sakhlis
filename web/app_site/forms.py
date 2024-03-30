@@ -95,13 +95,13 @@ class UserRegisterForm(UserCreationForm):
     last_name = forms.CharField(label="Sname")
     username = forms.CharField(label="Login")
     grope = forms.ChoiceField(
-        choices=[('1','1'), ('2','2')],
+        choices=[('owner','Owner'), ('repairer','Repairer')],
 
         widget=forms.RadioSelect(
             attrs={"class": ""
             },
         ),
-        initial="1"
+        initial="owner"
     )
 
     class Meta:
