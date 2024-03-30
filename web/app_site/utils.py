@@ -47,7 +47,7 @@ class Location:
 
 def get_telegram_button(repairer: list, order_pk: int) -> types.InlineKeyboardMarkup:
     """
-    creating buttons for telegram message.
+    creating buttons for telegram-bot message.
     repairer -> list of tuples [(id repairer, s_name repairer),....]
     order_pk -> order`s number
     """

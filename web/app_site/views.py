@@ -5,7 +5,7 @@ from django.contrib.auth.models import Group
 
 from django.db import transaction
 
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.contrib.auth.decorators import login_required
 from django.http import FileResponse, HttpResponseRedirect, JsonResponse, HttpResponse
 from django.forms import modelformset_factory
@@ -103,11 +103,11 @@ class OrderManagementSystem(BaseClassExeption, LoginRequiredMixin, ListView):
         return context
 
 
-class OrderUpdate(BaseClassExeption, LoginRequiredMixin, UpdateView):
+class OrderUpdate(BaseClassExeption, PermissionRequiredMixin,  LoginRequiredMixin, UpdateView):
     model = OrderList
     template_name = 'order_update.html'
     form_class = OrderForm
-
+    permission_required = ['app_site.change_orderlist']
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['time_in'] = self.object.time_in
@@ -123,11 +123,12 @@ class OrderDelete(BaseClassExeption, LoginRequiredMixin, DeleteView):
     success_url = '/list_order'
 
 
-class InvoiceCreate(BaseClassExeption, LoginRequiredMixin, DetailView):
+class InvoiceCreate(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, DetailView):
     """ Add name of works, quantity, price to order  """
     model = OrderList
     context_object_name = 'info'
     template_name = 'invoice.html'
+    permission_required = ['app_site.view_orderlist','app_site.add_invoice']
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data()
@@ -176,11 +177,12 @@ class Error404(TemplateView):
 
 
 
-class Statistica(BaseClassExeption, LoginRequiredMixin, ListView):
+class Statistica(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, ListView):
     template_name = 'statistica.html'
     model = OrderList
     context_object_name = 'order'
     ordering = ['-time_in']
+    permission_required = ['app_site.view_orderlist','app_site.view_invoice']
 
     def get_queryset(self):
         queryset = super().get_queryset()
@@ -225,11 +227,12 @@ class Statistica(BaseClassExeption, LoginRequiredMixin, ListView):
         return context
 
 
-class OrderSearchForm(BaseClassExeption, LoginRequiredMixin, ListView):
+class OrderSearchForm(BaseClassExeption, PermissionRequiredMixin,  LoginRequiredMixin, ListView):
     model = OrderList
     context_object_name = 'order'
     template_name = 'ordersearchform.html'
     ordering = ['-time_in']
+    permission_required = 'app_site.view_orderlist'
 
     def get_queryset(self):
         queryset = super().get_queryset()
@@ -248,11 +251,11 @@ class OrderSearchForm(BaseClassExeption, LoginRequiredMixin, ListView):
         return context
 
 
-class RepaierUpdate(BaseClassExeption, UpdateView):
+class RepaierUpdate(BaseClassExeption, PermissionRequiredMixin, UpdateView):
     model = Repairer
     template_name = 'repaier_create.html'
     form_class = RepairerForm
-
+    permission_required = 'app_site.change_repairer'
     def get_success_url(self):
         return '/user/' + str(self.request.user.pk)
 
@@ -274,7 +277,7 @@ def CreateIvoicePDF(request, **kwargs):
 
 @login_required
 def OrderAddRepaier(request):
-    """Add the repairer to order from telegram"""
+    """Add the repairer to order using telegram-bot"""
     order = get_object_or_404(OrderList, pk=request.GET['pk_order'])
     repaier = get_object_or_404(User, pk=request.GET['pk_repairer'])
     if order and repaier:
