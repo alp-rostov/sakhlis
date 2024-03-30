@@ -27,6 +27,12 @@ class StreetAdmin(admin.ModelAdmin):
     list_display = ('type_street', 'name_street')
     list_display_links = ('type_street', 'name_street')
 
+class AppartamentAdmin(admin.ModelAdmin):
+    list_display = ('owner', 'address_city',
+                    'address_street_app','address_num', 'foto',
+                    'location_longitude','location_latitude', 'notes')
+    list_display_links = ('owner',)
+
 
 
 admin.site.register(Repairer)
@@ -34,3 +40,4 @@ admin.site.register(Service, ServiceAdmin)
 admin.site.register(Invoice, InvoiceAdmin)
 admin.site.register(OrderList, OrderListAdmin)
 admin.site.register(StreerTbilisi, StreetAdmin)
+admin.site.register(Apartment, AppartamentAdmin)

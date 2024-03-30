@@ -118,9 +118,6 @@ class Owner(models.Model):
         verbose_name = 'Owner'
         verbose_name_plural = 'Owner'
 
-    def get_absolute_url(self):
-        return reverse('list_repair')
-
 
 class Apartment(models.Model):
     """"""
