@@ -1,10 +1,13 @@
 import json
 import logging
 from datetime import timezone, datetime
+from django.contrib.auth.models import Group
+
+from django.db import transaction
 
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
-from django.http import FileResponse, HttpResponseRedirect, JsonResponse
+from django.http import FileResponse, HttpResponseRedirect, JsonResponse, HttpResponse
 from django.forms import modelformset_factory
 from django.shortcuts import redirect, get_object_or_404
 from django.urls import reverse_lazy
@@ -21,12 +24,25 @@ from .utils import *
 logger = logging.getLogger(__name__)
 
 
-class UserRegisterView(BaseClassExeption, CreateView):
+class UserRegisterView(CreateView):
     """ Registration of repairer """
     model = User
     form_class = UserRegisterForm
     success_url = reverse_lazy('home')
     template_name = 'account/register.html'
+
+    def form_valid(self, form):
+        try:
+            with transaction.atomic():
+                self.object = form.save()
+                Repairer.objects.create(user=self.object)
+                my_group = Group.objects.get(name='owner')
+                my_group.user_set.add(self.object)
+            return redirect('home')
+
+        except Exception as e:
+            return redirect('../404.html')
+
 
 
 class UserDetailInformation(BaseClassExeption, LoginRequiredMixin, DetailView):
@@ -36,6 +52,7 @@ class UserDetailInformation(BaseClassExeption, LoginRequiredMixin, DetailView):
     success_url = reverse_lazy('')
     context_object_name = 'user'
     def get_context_data(self, **kwargs):
+
         context = super().get_context_data(**kwargs)
         context['profile'] = DataFromRepairerList().get_object_from_RepairerList(user=self.object)
         context['count'] = DataFromOrderList().get_number_of_orders_from_OrderList(repairer=self.request.user)

@@ -6,7 +6,7 @@ from django.http import JsonResponse, Http404, HttpResponseRedirect
 from django.views import View
 import logging
 
-logging.basicConfig(filename = "log.log")
+# logging.basicConfig(filename = "log.log")
 
 
 JSON_DUMPS_PARAMS= {"ensure_ascii":False}

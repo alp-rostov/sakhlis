@@ -88,12 +88,22 @@ class OrderForm(forms.ModelForm):
 class UserRegisterForm(UserCreationForm):
     email = forms.EmailField(label="Email",
                              widget=forms.EmailInput(
-                                 attrs={ 'placeholder': "@"}
+                                 attrs={'placeholder': "@"}
                                                     ),
                              )
     first_name = forms.CharField(label="FName")
     last_name = forms.CharField(label="Sname")
     username = forms.CharField(label="Login")
+    grope = forms.ChoiceField(
+        choices=[('1','1'), ('2','2')],
+
+        widget=forms.RadioSelect(
+            attrs={"class": ""
+            },
+        ),
+        initial="1"
+    )
+
     class Meta:
         model = User
         fields = ("username",
@@ -101,7 +111,8 @@ class UserRegisterForm(UserCreationForm):
                   "last_name",
                   "email",
                   "password1",
-                  "password2"
+                  "password2",
+                  'grope'
                   )
 
 
