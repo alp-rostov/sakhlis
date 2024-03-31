@@ -10,14 +10,10 @@
 {% #about_me head="" img=profile.foto %}
 
     <p align="left">
-        {{ user.last_name }} {{ user.first_name }} | <strong class="mycolor"> {{ request.user.username }}</strong>
+<h4>{{ user.last_name }} {{ user.first_name }} </h4>| <strong class="mycolor"> {{ request.user.username }}</strong>
         <a href="{% url 'update-user' profile.pk %}" class="mycolor" title="изменить данные"><i class="fas fa-pen text-secondary mt-3"> </i></a><br>
-        {{ user.email }}<br>
-        {{ profile.phone }}<br>
-        {{ profile.telegram }}<br>
         {{ profile.city|choice_tag:'city' }}<br>
         <blockquote class="blockquote">
-            <p align="left">{{ profile.profile }}</p>
             <p class="mb-0" align="left">
                 Completed jobs: {{ count }}<br>
                 Income: {{ sum }} <br>
@@ -25,7 +21,7 @@
             </p>
 
             <p class="" align="left">
-                <a href="{% url 'list_order' %}?work_status=SND"><b>New offers</b></a> |
+                <a href="{% url 'list_order' %}?work_status=SND" class=""><b>New offers</b></a> |
                             <a href="{% url 'list_order'%}?work_status=RCV"><b>Orders in progress</b></a> |
                                             <a href="{% url 'list_order'%}?work_status=END"><b>Completed orders</b></a> |
             </p>
