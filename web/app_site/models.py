@@ -82,7 +82,7 @@ class OrderList(models.Model):
 
 
 
-class Repairer(models.Model):
+class UserProfile(models.Model):
     """phone city foto rating_sum rating_num user"""
     phone = models.CharField(validators=[phoneNumberRegex], max_length=16, unique=True, verbose_name='Phone',
                              null=True, blank=True,)
@@ -101,22 +101,6 @@ class Repairer(models.Model):
     def get_absolute_url(self):
         return reverse('list_repair')
 
-
-class Owner(models.Model):
-    """"""
-    phone = models.CharField(validators=[phoneNumberRegex], max_length=16, unique=True, verbose_name='Phone',
-                             null=True, blank=True, )
-    telegram = models.CharField(max_length=25, unique=True, verbose_name='Telegram',
-                                null=True, blank=True, )
-    city = models.CharField(max_length=2, choices=CITY_CHOICES, default='TB')
-    foto = models.ImageField(upload_to="images/owner", null=True, blank=True, verbose_name='Photo:')
-    rating_sum = models.IntegerField(default=0, blank=True, null=True)
-    rating_num = models.IntegerField(default=1, blank=True, null=True)
-    user = models.OneToOneField(User, on_delete=models.CASCADE, blank=True, null=True)
-
-    class Meta:
-        verbose_name = 'Owner'
-        verbose_name_plural = 'Owner'
 
 
 class Apartment(models.Model):

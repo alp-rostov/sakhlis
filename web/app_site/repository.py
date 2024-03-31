@@ -4,9 +4,9 @@ from app_site.models import *
 
 
 class DataFromRepairerList:
-    model = Repairer.objects
+    model = UserProfile.objects
 
-    def get_object_from_RepairerList(self, user:User) -> Repairer:
+    def get_object_from_RepairerList(self, user:User) -> UserProfile:
         return self.model.get(user=user)
 
 class DataFromOrderList:

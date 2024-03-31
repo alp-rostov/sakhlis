@@ -37,7 +37,7 @@ class UserRegisterView(CreateView):
                 b=form.save(commit=False)
                 self.object = form.save()
 
-                Repairer.objects.create(user=self.object)
+                UserProfile.objects.create(user=self.object)
                 grope = self.request.POST.get('grope')
                 my_group = Group.objects.get(name=grope)
                 my_group.user_set.add(self.object)
@@ -50,7 +50,7 @@ class UserRegisterView(CreateView):
 
 class UserDetailInformation(BaseClassExeption, LoginRequiredMixin, DetailView):
     model = User
-    template_name = 'repairer/repaier_update.html'
+    template_name = 'repairer/repaier_profile.html'
     form_class = UserRegisterForm
     success_url = reverse_lazy('')
     context_object_name = 'user'
@@ -252,7 +252,7 @@ class OrderSearchForm(BaseClassExeption, PermissionRequiredMixin,  LoginRequired
 
 
 class RepaierUpdate(BaseClassExeption, PermissionRequiredMixin, UpdateView):
-    model = Repairer
+    model = UserProfile
     template_name = 'repairer/repaier_create.html'
     form_class = RepairerForm
     permission_required = PERMISSION_FOR_REPAIER

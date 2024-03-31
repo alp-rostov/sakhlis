@@ -19,11 +19,28 @@
         <blockquote class="blockquote">
             <p align="left">{{ profile.profile }}</p>
             <p class="mb-0" align="left">
-                Completed orders: {{ count }}<br>
-                Revenue: {{ sum }} <br>
-                Rank: {{ profile.raiting }} / {{ profile.rating_sum}} /{{ profile.rating_num}}
+                Completed jobs: {{ count }}<br>
+                Income: {{ sum }} <br>
+                Skils: {{ profile.raiting }} / {{ profile.rating_sum}} /{{ profile.rating_num}}
             </p>
-        </blockquote>
+
+            <p class="" align="left">
+                <a href="{% url 'list_order' %}?work_status=SND"><b>New offers</b></a> |
+                            <a href="{% url 'list_order'%}?work_status=RCV"><b>Orders in progress</b></a> |
+                                            <a href="{% url 'list_order'%}?work_status=END"><b>Completed orders</b></a> |
+            </p>
+
+              <p class="mb-0" align="left">
+                    Clients:
+              </p>
+
+
+
+
+
+
+
+</blockquote>
     </p>
 {% /about_me%}
 
