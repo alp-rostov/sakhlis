@@ -45,7 +45,7 @@ top: 0;
 
 <!--Header-->
 {% #menu %}
-
+{% if request.user.groups.first.name == 'repairer' %}
     <li class="nav-item mr-4">
         <a class="nav-link" href="{% url 'home' %}">Main</a>
     </li>
@@ -79,6 +79,14 @@ top: 0;
             <a class="nav-link" href="{% url 'logout' %}">{{ user.username }} : Log out</a>
         </li>
     {% endif %}
+
+{% elif request.user.groups.first.name == 'owner' %}
+    <li class="nav-item mr-4">
+        <a class="nav-link" href="{% url 'home' %}">Main</a>
+    </li>
+
+
+{% endif%}
 
 {% /menu %}
 

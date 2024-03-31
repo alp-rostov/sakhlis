@@ -50,7 +50,7 @@ class UserRegisterView(CreateView):
 
 class UserDetailInformation(BaseClassExeption, LoginRequiredMixin, DetailView):
     model = User
-    template_name = 'repaier_update.html'
+    template_name = 'repairer/repaier_update.html'
     form_class = UserRegisterForm
     success_url = reverse_lazy('')
     context_object_name = 'user'
@@ -85,7 +85,7 @@ class OrderManagementSystem(BaseClassExeption, LoginRequiredMixin, ListView):
     """ list of all orders """
     model = OrderList
     context_object_name = 'order'
-    template_name = 'order_list.html'
+    template_name = 'repairer/order_list.html'
 
     def get_queryset(self):
         if not self.request.GET.get('work_status'):
@@ -107,7 +107,7 @@ class OrderUpdate(BaseClassExeption, PermissionRequiredMixin,  LoginRequiredMixi
     model = OrderList
     template_name = 'order_update.html'
     form_class = OrderForm
-    permission_required = PERMISSION_FOR_REPAIER
+    permission_required = PERMISSION_FOR_OWNER
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['time_in'] = self.object.time_in
@@ -127,7 +127,7 @@ class InvoiceCreate(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMix
     """ Add name of works, quantity, price to order  """
     model = OrderList
     context_object_name = 'info'
-    template_name = 'invoice.html'
+    template_name = 'repairer/invoice.html'
     permission_required = PERMISSION_FOR_REPAIER
 
     def get_context_data(self, **kwargs):
@@ -178,7 +178,7 @@ class Error404(TemplateView):
 
 
 class Statistica(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, ListView):
-    template_name = 'statistica.html'
+    template_name = 'repairer/statistica.html'
     model = OrderList
     context_object_name = 'order'
     ordering = ['-time_in']
@@ -230,7 +230,7 @@ class Statistica(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin,
 class OrderSearchForm(BaseClassExeption, PermissionRequiredMixin,  LoginRequiredMixin, ListView):
     model = OrderList
     context_object_name = 'order'
-    template_name = 'ordersearchform.html'
+    template_name = 'repairer/ordersearchform.html'
     ordering = ['-time_in']
     permission_required = PERMISSION_FOR_REPAIER
 
@@ -253,7 +253,7 @@ class OrderSearchForm(BaseClassExeption, PermissionRequiredMixin,  LoginRequired
 
 class RepaierUpdate(BaseClassExeption, PermissionRequiredMixin, UpdateView):
     model = Repairer
-    template_name = 'repaier_create.html'
+    template_name = 'repairer/repaier_create.html'
     form_class = RepairerForm
     permission_required = PERMISSION_FOR_REPAIER
     def get_success_url(self):
