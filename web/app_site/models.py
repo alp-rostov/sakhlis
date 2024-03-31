@@ -96,15 +96,20 @@ class UserProfile(models.Model):
     rating_num = models.IntegerField(default=1, blank=True, null=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE, blank=True, null=True)
     class Meta:
-        verbose_name = 'Repairman'
-        verbose_name_plural = 'Repairman'
+        verbose_name = 'UserProfile'
+        verbose_name_plural = 'UserProfile'
     def get_absolute_url(self):
         return reverse('list_repair')
+
+    def __str__(self):
+        return f"{self.user}"
 
 
 
 class Apartment(models.Model):
     """"""
+    name = models.CharField(max_length=150, verbose_name='Name', null=True, blank=True)
+
     owner = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True,
                                     verbose_name='Responsible person for apartment', default='', )
 
@@ -122,7 +127,8 @@ class Apartment(models.Model):
         verbose_name = 'Appartment list'
         verbose_name_plural = 'Appartment list'
 
-
+    def __str__(self):
+        return f"{self.name}"
 
 
 class StreerTbilisi(models.Model):

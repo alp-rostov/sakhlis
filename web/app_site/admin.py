@@ -30,10 +30,10 @@ class StreetAdmin(admin.ModelAdmin):
     list_display_links = ('type_street', 'name_street')
 
 class AppartamentAdmin(admin.ModelAdmin):
-    list_display = ('owner', 'address_city',
+    list_display = ('name', 'owner', 'address_city',
                     'address_street_app','address_num', 'foto',
                     'location_longitude','location_latitude', 'notes')
-    list_display_links = ('owner',)
+    list_display_links = ('name',)
 
 
 
