@@ -107,7 +107,7 @@ class OrderUpdate(BaseClassExeption, PermissionRequiredMixin,  LoginRequiredMixi
     model = OrderList
     template_name = 'order_update.html'
     form_class = OrderForm
-    permission_required = ['app_site.change_orderlist']
+    permission_required = PERMISSION_FOR_REPAIER
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['time_in'] = self.object.time_in
@@ -128,7 +128,7 @@ class InvoiceCreate(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMix
     model = OrderList
     context_object_name = 'info'
     template_name = 'invoice.html'
-    permission_required = ['app_site.view_orderlist','app_site.add_invoice']
+    permission_required = PERMISSION_FOR_REPAIER
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data()
@@ -182,7 +182,7 @@ class Statistica(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin,
     model = OrderList
     context_object_name = 'order'
     ordering = ['-time_in']
-    permission_required = ['app_site.view_orderlist','app_site.view_invoice']
+    permission_required = PERMISSION_FOR_REPAIER
 
     def get_queryset(self):
         queryset = super().get_queryset()
@@ -232,7 +232,7 @@ class OrderSearchForm(BaseClassExeption, PermissionRequiredMixin,  LoginRequired
     context_object_name = 'order'
     template_name = 'ordersearchform.html'
     ordering = ['-time_in']
-    permission_required = 'app_site.view_orderlist'
+    permission_required = PERMISSION_FOR_REPAIER
 
     def get_queryset(self):
         queryset = super().get_queryset()
@@ -255,7 +255,7 @@ class RepaierUpdate(BaseClassExeption, PermissionRequiredMixin, UpdateView):
     model = Repairer
     template_name = 'repaier_create.html'
     form_class = RepairerForm
-    permission_required = 'app_site.change_repairer'
+    permission_required = PERMISSION_FOR_REPAIER
     def get_success_url(self):
         return '/user/' + str(self.request.user.pk)
 

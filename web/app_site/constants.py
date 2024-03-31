@@ -1,4 +1,5 @@
-aaa=11
+PERMISSION_FOR_REPAIER = 'app_site.view_invoice'
+PERMISSION_FOR_OWNER = 'app_site.view_order'
 
 CITY_CHOICES = [
     ('TB', 'Tbilisi'),
