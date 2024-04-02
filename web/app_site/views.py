@@ -60,7 +60,18 @@ class UserDetailInformation(BaseClassExeption, LoginRequiredMixin, DetailView):
         context['profile'] = DataFromRepairerList().get_object_from_RepairerList(user=self.object)
         context['count'] = DataFromOrderList().get_number_of_orders_from_OrderList(repairer=self.request.user)
         context['sum'] = DataFromInvoice().get_amount_money_of_orders(repairer=self.request.user)
+        list_of_apppartment = OrderList.objects.filter(repairer_id=self.request.user).order_by('-time_in').values_list('apartment_id', flat=True)[0:5]
+
+        context['clients'] = Apartment.objects.filter(pk__in=list_of_apppartment).values('owner__username')
         return context
+
+
+
+
+
+
+
+
 
 
 class OrderCreate(BaseClassExeption, CreateView):
