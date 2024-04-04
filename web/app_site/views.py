@@ -36,7 +36,6 @@ class UserRegisterView(CreateView):
             with transaction.atomic():
                 b=form.save(commit=False)
                 self.object = form.save()
-
                 UserProfile.objects.create(user=self.object)
                 grope = self.request.POST.get('grope')
                 my_group = Group.objects.get(name=grope)

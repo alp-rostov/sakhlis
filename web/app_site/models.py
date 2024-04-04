@@ -1,7 +1,10 @@
+import os
+
 from django.contrib.auth.models import User
 from django.db import models
 from django.core.validators import RegexValidator
 from django.urls import reverse
+from django_cleanup import cleanup
 
 from .constants import CITY_CHOICES, ORDER_STATUS, WORK_CHOICES, QUANTITY_CHOICES
 
@@ -81,7 +84,37 @@ class OrderList(models.Model):
 
 
 
+def path_and_rename(instance, filename):
+    upload_to = 'images/'
+    # ext = filename.split('.')[-1]
 
+    # get filename
+
+    if instance.pk:
+        filename = '{}.{}'.format(instance.pk, 'jpg')
+
+    return os.path.join(upload_to, filename)
+
+#
+# class Asset(models.Model):
+#     asset_id = models.AutoField(primary_key=True)
+#     asset_image = models.ImageField(upload_to = 'images/temp', max_length=255, null=True, blank=True)
+#
+#     def save( self, *args, **kwargs ):
+#         # Delete the old image
+#         try:
+#             asset = Asset.objects.get(id=self.id)
+#             if asset.asset_image and self.image and asset.asset_image != self.image:
+#                 # Delete the old file if it doesn't match the newly submitted one
+#                 asset.asset_image.delete(save=False);
+#         except Asset.DoesNotExist:
+#             # Do nothing when a new image is submitted
+#             pass
+#         # Call save first, to create a primary key
+#         super( Asset, self ).save( *args, **kwargs )
+
+#         ...
+@cleanup.select
 class UserProfile(models.Model):
     """phone city foto rating_sum rating_num user"""
     phone = models.CharField(validators=[phoneNumberRegex], max_length=16, unique=True, verbose_name='Phone',
@@ -91,10 +124,10 @@ class UserProfile(models.Model):
     city = models.CharField(max_length=2, choices=CITY_CHOICES, default='TB')
     profile = models.CharField(max_length=1500, null=True, blank=True, verbose_name='About me:')
 
-    foto = models.ImageField(upload_to="images/repairer/", null=True, blank=True, verbose_name='Photo:')
+    foto = models.ImageField(upload_to=path_and_rename, null=True, blank=True, verbose_name='Photo:')
     rating_sum = models.IntegerField(default=0, blank=True, null=True)
     rating_num = models.IntegerField(default=1, blank=True, null=True)
-    user = models.OneToOneField(User, on_delete=models.CASCADE, blank=True, null=True)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, blank=True, null=True )
     class Meta:
         verbose_name = 'UserProfile'
         verbose_name_plural = 'UserProfile'
@@ -103,7 +136,6 @@ class UserProfile(models.Model):
 
     def __str__(self):
         return f"{self.user}"
-
 
 
 class Apartment(models.Model):
