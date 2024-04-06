@@ -103,8 +103,15 @@ class UserProfile(models.Model):
         return reverse('list_repair')
 
     def save(self, *args, **kwargs):
-        self.foto.name = f'{str(self.user.pk)}.jpg'
+        try:
+            os.remove(f'media/images/{self.user.pk}.jpg')
+        except Exception as e:
+            pass
+        if self.foto:
+            self.foto.name = f'{str(self.user.pk)}.jpg'
+
         super(UserProfile, self).save(*args, **kwargs)
+
     def __str__(self):
         return f"{self.user}"
 

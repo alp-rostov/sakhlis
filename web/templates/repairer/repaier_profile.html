@@ -7,16 +7,13 @@
 
 {% block body %}
 
-{% #about_me head="" img=profile.foto %}
-
-    <p align="left">
-        <h4>{{ user.last_name }} {{ user.first_name }} </h4>
-        {{ profile.city|choice_tag:'city' }}<strong class="mycolor"> {{ request.user.username }}</strong>
-        <a href="{% url 'update-user' profile.pk %}" class="mycolor" title="изменить данные"><i class="fas fa-pen text-secondary mt-3"> </i></a>
-
-        <blockquote class="blockquote">
-            <p class="mb-0" align="left">
-                <!-- Counter -->
+       <div class="container">
+            <div class="position-relative">
+            </div>
+            <div class="row py-5 justify-content-md-center">
+                <div class="col-lg-6 col-md-10 col-sm-12">
+                    <img src="../media/{{ profile.foto }} " alt="Муж на час" class="img-fluid z-depth-1 wow fadeInLeft rounded-circle" data-wow-delay="0.7s" width="200">
+            <!-- Counter -->
 
 
                 <!--First row-->
@@ -51,6 +48,17 @@
 
     <!-- And Counter -->
 
+                </div>
+            <div class="col-lg-6 col-md-10 col-sm-12 pt-3 wow fadeInRight" data-wow-delay="0.8s">
+
+    <p align="left">
+        <h4>{{ user.last_name }} {{ user.first_name }} </h4>
+        {{ profile.city|choice_tag:'city' }}<strong class="mycolor"> {{ request.user.username }}</strong>
+        <a href="{% url 'update-user' profile.pk %}" class="mycolor" title="изменить данные"><i class="fas fa-pen text-secondary mt-3"> </i></a>
+
+        <blockquote class="blockquote">
+            <p class="mb-0" align="left">
+
 
             </p>
 
@@ -61,7 +69,14 @@
             </p>
 
               <p class="mb-0" align="left">
-                    Clients: {{ clients }}
+            <h3>My clienrs:</h3>
+                  {% for i in clients %}
+                  <img src="../media/images/{{i.owner__pk}}.jpg " width="60" class="rounded-circle">
+                  {{i.owner__username}} /  {{i.owner__first_name}}   {{i.owner__last_name}}<br>
+                    <hr>
+                  {% endfor %}
+
+
 
               </p>
 
@@ -73,7 +88,21 @@
 
 </blockquote>
     </p>
-{% /about_me%}
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 {% endblock body %}
