@@ -4,6 +4,36 @@ from django.forms import ChoiceField
 
 from .models import *
 
+class ApartmentForm(forms.ModelForm):
+
+    address_city = forms.ChoiceField(
+        choices=CITY_CHOICES,
+
+        widget=forms.RadioSelect(
+            attrs={"class": ""
+            },
+        ),
+        initial="TB"
+    )
+
+    address_street_app = forms.CharField(
+        label='Street',
+        widget=forms.TextInput(attrs={"class": "form-control", 'list': 'languages', 'placeholder': "Street", 'maxlength':40}),
+        required = False
+    )
+
+    address_num = forms.CharField(
+        label='Appartment',
+        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "App1", 'maxlength':10}),
+        required = False
+    )
+
+    class Meta:
+        model = Apartment
+        fields = ('address_city',
+                  'address_street_app',
+                  'address_num',
+                                    )
 
 class OrderForm(forms.ModelForm):
     text_order = forms.CharField(
@@ -32,28 +62,28 @@ class OrderForm(forms.ModelForm):
         required=False,
 
     )
-
-    address_city = forms.ChoiceField(
-        choices=CITY_CHOICES,
-
-        widget=forms.RadioSelect(
-            attrs={"class": ""
-            },
-        ),
-        initial="TB"
-    )
-
-    address_street_app = forms.CharField(
-        label='Street',
-        widget=forms.TextInput(attrs={"class": "form-control", 'list': 'languages', 'placeholder': "Street", 'maxlength':40}),
-        required = False
-    )
-
-    address_num = forms.CharField(
-        label='Appartment',
-        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "App", 'maxlength':10}),
-        required = False
-    )
+    #
+    # address_city = forms.ChoiceField(
+    #     choices=CITY_CHOICES,
+    #
+    #     widget=forms.RadioSelect(
+    #         attrs={"class": ""
+    #         },
+    #     ),
+    #     initial="TB"
+    # )
+    #
+    # address_street_app = forms.CharField(
+    #     label='Street',
+    #     widget=forms.TextInput(attrs={"class": "form-control", 'list': 'languages', 'placeholder': "Street", 'maxlength':40}),
+    #     required = False
+    # )
+    #
+    # address_num = forms.CharField(
+    #     label='Appartment',
+    #     widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "App", 'maxlength':10}),
+    #     required = False
+    # )
 
     class Meta:
         model = OrderList

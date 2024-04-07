@@ -17,7 +17,7 @@ from .constants import *
 from .exeptions import BaseClassExeption
 from .filters import OrderFilter
 from .models import *
-from .forms import OrderForm, InvoiceForm, UserRegisterForm, RepairerForm
+from .forms import OrderForm, InvoiceForm, UserRegisterForm, RepairerForm, ApartmentForm
 from .repository import DataFromRepairerList, DataFromOrderList, DataFromInvoice
 from .utils import *
 
@@ -74,16 +74,25 @@ class OrderCreate(BaseClassExeption, CreateView):
     form_class = OrderForm
     success_url = reverse_lazy('home')
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        # context['form_order']=OrderForm
+        context['form_appart'] = ApartmentForm
+        return context
+
     def form_valid(self, form):
+        if ApartmentForm(self.request.POST).is_valid():
+            app = ApartmentForm(self.request.POST).save()
+
         if self.request.user.is_authenticated:
             form.instance.repairer_id = self.request.user
             form.instance.order_status = 'SND'
+            form.instance.apartment_id=app
         form.save()
         return JsonResponse({'message': f'<h3>Заявка № {form.instance.pk} отправлена успешно!</h3>',
                                   'pk': form.instance.pk,
                                 'auth': self.request.user.is_authenticated
                              })
-
 
 class OrderManagementSystem(BaseClassExeption, LoginRequiredMixin, ListView):
     """ list of all orders """
@@ -103,7 +112,8 @@ class OrderManagementSystem(BaseClassExeption, LoginRequiredMixin, ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['form'] = OrderForm
+        context['form_order'] = OrderForm
+        context['form_appart'] = ApartmentForm
         return context
 
 
@@ -248,7 +258,8 @@ class OrderSearchForm(BaseClassExeption, PermissionRequiredMixin,  LoginRequired
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['filterset'] = self.filterset
-        context['form'] = OrderForm
+        context['form_order'] = OrderForm
+        context['form_appart'] = ApartmentForm
         c = DataFromInvoice().get_total_cost_of_some_orders(list_of_orders=self.get_queryset())
         context['summ_orders'] = c.get('Summ')
         context['count_orders'] = self.get_queryset().count()

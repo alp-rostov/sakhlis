@@ -41,8 +41,8 @@
     class="btn btn-sm btn-orange cta-btn btn-form mt-3 mb-5 " id="link_create_order_form">Create an order</a>
 </div>
 
-{% #form form_=form hidden="none" %}
-    {% csrf_token %}
+{% #form form_order_=form_order form_appart_=form_appart hidden="none" %}
+{% csrf_token %}
 {% /form %}
 
 <script type="text/javascript">
