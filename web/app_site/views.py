@@ -67,12 +67,6 @@ class UserDetailInformation(BaseClassExeption, LoginRequiredMixin, DetailView):
 
 
 
-
-
-
-
-
-
 class OrderCreate(BaseClassExeption, CreateView):
     """" Add order """
     model = OrderList

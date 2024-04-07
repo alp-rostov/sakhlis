@@ -4,6 +4,34 @@
 {% load slippers %}
 
 {% block subbody %}
+
+
+                            {% if request.GET.work_status == 'SND' %}
+                            <a href="{% url 'list_order' %}?work_status=SND"><b>New orders</b></a> |
+                            {% else %}
+                            <a href="{% url 'list_order' %}?work_status=SND">New orders</a> |
+                            {% endif %}
+
+                            {% if request.GET.work_status == 'RCV' %}
+                            <a href="{% url 'list_order'%}?work_status=RCV"><b>Orders in progress</b></a> |
+                            {% else %}
+                            <a href="{% url 'list_order'%}?work_status=RCV">Orders in progress</a> |
+                            {% endif %}
+
+                            {% if request.GET.work_status == 'END' %}
+                            <a href="{% url 'list_order'%}?work_status=END"><b>Completed orders</b></a> |
+                            {% else %}
+                            <a href="{% url 'list_order'%}?work_status=END">Completed orders</a> |
+                            {% endif %}
+
+
+                            {% if the_url4 in request.get_full_path %}
+                            <a href="{% url 'search-order' %}" class="fa fa-search fa-border " aria-hidden="true" title="find"><b></b></a>
+                            {% else %}
+                            <a href="{% url 'search-order' %}" class="fa fa-search fa-border" aria-hidden="true"></a>
+                            {% endif %}
+
+
 {% endblock subbody %}
 
 {% block body %}

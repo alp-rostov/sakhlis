@@ -3,12 +3,11 @@
 {% load custom_tags %}
 {% load slippers %}
 
-{% block body %}
-<div align="center">
+{% block subbody %}
 
 <form action="" method="get" class="">
 
-        <div class="form-group">
+        <div class="">
                 {{ filterset.form.time_in_sence.label }}:
                 {{ filterset.form.time_in_sence }}
 
@@ -16,18 +15,22 @@
                 {{ filterset.form.time_in_until }}
 
                 {{ filterset.form.repairer_id }}
-            </div>
-            <div class="form-group">
+
                 {{ filterset.form.address_city.label }}: {{ filterset.form.address_city }}
-            </div>
 
                 <input type="submit" value=" Submit " class="btn btn-sm btn-orange">
+            </div>
 
 
 </form>
 
 
+{% endblock subbody %}
 
+
+
+{% block body %}
+<div align="center">
 
 
     <img src="data:image/png;base64,{{ d }}" width="400">

@@ -79,7 +79,7 @@ top: 0;
     </li>
 
 
-    <li class="nav-item mr-4" class="nav-item mr-4">
+    <li class="nav-item mr-4">
         {% if the_url2 in request.get_full_path  %}
         <a class="nav-link"  href="{{ the_url2 }}"><b>Statistics</b></a>
         {% else %}
@@ -88,18 +88,24 @@ top: 0;
     </li>
 
 
-
-
-
-
 {% elif request.user.groups.first.name == 'owner' %}
+
     <li class="nav-item mr-4">
-        <a class="nav-link" href="">Main1</a>
-    </li>
-    <li class="nav-item mr-4">
-        <a class="nav-link" href="">Main2</a>
+        <a class="nav-link" href="{% url 'home' %}">Main</a>
     </li>
 
+    <li class="nav-item mr-4">
+        <a class="nav-link" href="">Profile</a>
+    </li>
+
+    <li class="nav-item mr-4">
+        <a class="nav-link" href="">Appartments</a>
+    </li>
+
+
+    <li class="nav-item mr-4">
+        <a class="nav-link" href="">Statistica</a>
+    </li>
 
 {% endif%}
 
@@ -109,7 +115,9 @@ top: 0;
 
     {% if request.user.is_authenticated %}
         <li class="nav-item mr-4">
-            <a class="nav-link" href="{% url 'logout' %}">{{ user.username }} : Log out</a>
+            <a class="nav-link" href="{% url 'logout' %}">
+             <img src="../media/images/{{ user.pk }}.jpg " class="rounded-circle" width="50">
+                {{ user.username }} : Log out</a>
         </li>
     {% endif %}
 
@@ -122,31 +130,6 @@ top: 0;
                             {% block subbody %}
 
                             {% endblock subbody%}
-
-                            {% if request.GET.work_status == 'SND' %}
-                            <a href="{% url 'list_order' %}?work_status=SND"><b>New orders</b></a> |
-                            {% else %}
-                            <a href="{% url 'list_order' %}?work_status=SND">New orders</a> |
-                            {% endif %}
-
-                            {% if request.GET.work_status == 'RCV' %}
-                            <a href="{% url 'list_order'%}?work_status=RCV"><b>Orders in progress</b></a> |
-                            {% else %}
-                            <a href="{% url 'list_order'%}?work_status=RCV">Orders in progress</a> |
-                            {% endif %}
-
-                            {% if request.GET.work_status == 'END' %}
-                            <a href="{% url 'list_order'%}?work_status=END"><b>Completed orders</b></a> |
-                            {% else %}
-                            <a href="{% url 'list_order'%}?work_status=END">Completed orders</a> |
-                            {% endif %}
-
-
-                            {% if the_url4 in request.get_full_path %}
-                            <a href="{% url 'search-order' %}" class="fa fa-search fa-border " aria-hidden="true" title="find"><b></b></a>
-                            {% else %}
-                            <a href="{% url 'search-order' %}" class="fa fa-search fa-border" aria-hidden="true"></a>
-                            {% endif %}
                     </div>
 
     </section>

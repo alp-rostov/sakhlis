@@ -4,105 +4,43 @@
 {% load static %}
 {% load slippers %}
 
+                            {% block subbody %}
+
+                            {% endblock subbody%}
 
 {% block body %}
 
        <div class="container">
-            <div class="position-relative">
-            </div>
-            <div class="row py-5 justify-content-md-center">
-                <div class="col-lg-6 col-md-10 col-sm-12">
-                    <img src="../media/{{ profile.foto }} " alt="Муж на час" class="img-fluid z-depth-1 wow fadeInLeft rounded-circle" data-wow-delay="0.7s" width="200">
-            <!-- Counter -->
+            <div class="row">
+                  <div class="col-lg-6 col-md-10 col-sm-12 pt-3 text-center">
+                      <h4>{{ user.last_name }} {{ user.first_name }} | <strong class="mycolor"> {{ request.user.username }}</strong>
+                      </h4>
+                      City: {{ profile.city|choice_tag:'city' }} <a href="{% url 'update-user' profile.pk %}" class="mycolor" title="изменить данные"><i class="fas fa-pen text-secondary mt-3"> </i></a>
+                      <br>
+                      <img src="../media/{{ profile.foto }} " alt="Муж на час" class="rounded-circle" align="center" width="200">
+                      <br>
+                      Completed jobs: {{ count }}<br>
+                      Income: {{ sum }}<br>
+                      Skills: {{ profile.rating_sum}}({{ profile.rating_num}})
+                  </div>
+
+                <div class="col-lg-6 col-md-10 col-sm-12 pt-3">
 
 
-                <!--First row-->
-                <div class="row text-center" >
+                    <a href="{% url 'list_order' %}?work_status=SND" class="h5 mycolor"><b>New offers</b></a> |
+                    <a href="{% url 'list_order'%}?work_status=RCV" class="h5 mycolor"><b>Orders in progress</b></a> |
+                    <a href="{% url 'list_order'%}?work_status=END" class="h5 mycolor"><b>Completed orders</b></a>
 
-                    <!--First column-->
-                    <div class="col-md-4 counter-item mb-2">
-                        <div class=" h4 mb-4 font-weight-bold " >{{ count }}</div>
-                        Completed jobs
-                    </div>
-                    <!--/First column-->
-
-                    <!--Second column-->
-                    <div class="col-md-4 counter-item mb-2">
-                        <div class=" h4 mb-4 font-weight-bold " >{{ sum }}</div>
-                        Income
-                    </div>
-                    <!--/Second column-->
-
-                    <!--Third column-->
-                    <div class="col-md-4 counter-item mb-2">
-                        <div class="mb-4 h4 font-weight-bold ">{{ profile.raiting }} / {{ profile.rating_sum}} /{{ profile.rating_num}}</div>
-                        Skils
-                    </div>
-                    <!--/Third column-->
-
+                    <h3>My clienrs:</h3>
+                      {% for i in clients %}
+                      <img src="../media/images/{{i.owner__pk}}.jpg " width="60" class="rounded-circle">
+                      {{i.owner__username}} /  {{i.owner__first_name}}   {{i.owner__last_name}}<br>
+                        <hr>
+                      {% endfor %}
 
 
                 </div>
-                <!--/First row-->
-
-
-    <!-- And Counter -->
-
-                </div>
-            <div class="col-lg-6 col-md-10 col-sm-12 pt-3 wow fadeInRight" data-wow-delay="0.8s">
-
-    <p align="left">
-        <h4>{{ user.last_name }} {{ user.first_name }} </h4>
-        {{ profile.city|choice_tag:'city' }}<strong class="mycolor"> {{ request.user.username }}</strong>
-        <a href="{% url 'update-user' profile.pk %}" class="mycolor" title="изменить данные"><i class="fas fa-pen text-secondary mt-3"> </i></a>
-
-        <blockquote class="blockquote">
-            <p class="mb-0" align="left">
-
-
-            </p>
-
-            <p class="" align="left">
-                <a href="{% url 'list_order' %}?work_status=SND" class="h5 mycolor"><b>New offers</b></a> |
-                <a href="{% url 'list_order'%}?work_status=RCV" class="h5 mycolor"><b>Orders in progress</b></a> |
-                <a href="{% url 'list_order'%}?work_status=END" class="h5 mycolor"><b>Completed orders</b></a>
-            </p>
-
-              <p class="mb-0" align="left">
-            <h3>My clienrs:</h3>
-                  {% for i in clients %}
-                  <img src="../media/images/{{i.owner__pk}}.jpg " width="60" class="rounded-circle">
-                  {{i.owner__username}} /  {{i.owner__first_name}}   {{i.owner__last_name}}<br>
-                    <hr>
-                  {% endfor %}
-
-
-
-              </p>
-
-
-
-
-
-
-
-</blockquote>
-    </p>
-                </div>
-            </div>
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
+</div>
+       </div>
 
 {% endblock body %}
