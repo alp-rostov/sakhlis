@@ -39,69 +39,25 @@ top: 0;
 
 
 
-{% url 'list_order' as the_url1 %}
+{% url 'owner' as the_url1 %}
+
 {% url 'stat' as the_url2 %}
 {% url 'user' request.user.id as the_url3 %}
 {% url 'search-order' as the_url4 %}
-
-{% url 'owner' as the_url5 %}
 
 
 <!--Header-->
 {% #menu %}
 
-{% if request.user.groups.first.name == 'repairer' %}
-
     <li class="nav-item mr-4">
         <a class="nav-link" href="{% url 'home' %}">Main</a>
     </li>
 
     <li class="nav-item mr-4">
-        {% if the_url3 in request.get_full_path  %}
-        <a class="nav-link" href="{{ the_url3 }}"><b>Profiles</b></a>
-        {% else %}
-        <a class="nav-link" href="{{ the_url3 }}">Profiles</a>
-        {% endif %}
-    </li>
-
-
-    <li class="nav-item  mr-4">
         {% if the_url1 in request.get_full_path  %}
-        <a class="nav-link " href="{{ the_url1 }}"><b>Orders</b></a>
+        <a class="nav-link"  href="{{ the_url1 }}"><b>Profile</b></a>
         {% else %}
-        <a class="nav-link" href="{{ the_url1 }}">Orders</a>
-        {% endif %}
-    </li>
-
-    <li class="nav-item  mr-4">
-        {% if the_url1 in request.get_full_path  %}
-        <a class="nav-link " href=""><b>Clients</b></a>
-        {% else %}
-        <a class="nav-link" href="">Clients</a>
-        {% endif %}
-    </li>
-
-
-    <li class="nav-item mr-4">
-        {% if the_url2 in request.get_full_path  %}
-        <a class="nav-link"  href="{{ the_url2 }}"><b>Statistics</b></a>
-        {% else %}
-        <a class="nav-link"  href="{{ the_url2 }}">Statistics</a>
-        {% endif %}
-    </li>
-
-
-{% elif request.user.groups.first.name == 'owner' %}
-
-    <li class="nav-item mr-4">
-        <a class="nav-link" href="{% url 'home' %}">Main</a>
-    </li>
-
-    <li class="nav-item mr-4">
-        {% if the_url5 in request.get_full_path  %}
-        <a class="nav-link"  href="{{ the_url5 }}"><b>Profile</b></a>
-        {% else %}
-        <a class="nav-link"  href="{{ the_url5 }}">Profile</a>
+        <a class="nav-link"  href="{{ the_url1 }}">Profile</a>
         {% endif %}
     </li>
 
@@ -115,11 +71,6 @@ top: 0;
         <a class="nav-link" href="">Statistica</a>
     </li>
 
-{% endif%}
-
-
-
-
 
     {% if request.user.is_authenticated %}
         <li class="nav-item mr-4">
@@ -129,14 +80,12 @@ top: 0;
         </li>
     {% endif %}
 
-
-
 {% /menu %}
 
         <section id="section-0" class="bg_img">
                     <div class="text-center h5 mt-5">
                             {% block subbody %}
-
+---------------------------------------------------
                             {% endblock subbody%}
                     </div>
 

@@ -1,4 +1,4 @@
-{% extends 'flatpages/default_user.html' %}
+{% extends 'flatpages/default_owner.html' %}
 {% load custom_filters %}
 {% load custom_tags %}
 {% load static %}
@@ -7,26 +7,30 @@
 
 {% block body %}
 
-{% #about_me head="" img=profile.foto %}
-11111111111111111111111111111111111111111111111111111111111111111111111111111
-    <p align="left">
-        {{ user.last_name }} {{ user.first_name }} | <strong class="mycolor"> {{ request.user.username }}</strong>
-        <a href="{% url 'update-user' profile.pk %}" class="mycolor" title="изменить данные"><i class="fas fa-pen text-secondary mt-3"> </i></a><br>
-        {{ user.email }}<br>
-        {{ profile.phone }}<br>
-        {{ profile.telegram }}<br>
-        {{ profile.city|choice_tag:'city' }}<br>
-        <blockquote class="blockquote">
-            <p align="left">{{ profile.profile }}</p>
-            <p class="mb-0" align="left">
+       <div class="container">
+            <div class="row">
+                  <div class="col-lg-6 col-md-10 col-sm-12 pt-3 text-center">
+                      <h4>{{ owner.last_name }} {{ owner.first_name }} | <strong class="mycolor"> {{ request.user.username }}</strong>
+                      </h4>
+                      City: {{ profile.city|choice_tag:'city' }} <a href="" class="mycolor" title="изменить данные"><i class="fas fa-pen text-secondary mt-3"> </i></a>
+                      <br>
+                      <img src="../media/{{ profile.foto }} " alt="Муж на час" class="rounded-circle" align="center" width="200">
+                      <br>
+
+                  </div>
+
+                <div class="col-lg-6 col-md-10 col-sm-12 pt-3">
+                    <h3>My appartments:</h3>
+                        {% for i in apartments %}
+                      <img src="../media/{{i.foto}}" width="100" >
+                      {{i.name}} /  {{i.address_city}} /  {{i.address_street_app}} / {{i.address_street_app}} / {{i.address_num}}<br>
+                        <hr>
+                      {% endfor %}
 
 
-
-
-        </p>
-        </blockquote>
-    </p>
-{% /about_me%}
+                </div>
+</div>
+       </div>
 
 
 {% endblock body %}

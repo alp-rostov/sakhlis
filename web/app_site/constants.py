@@ -1,5 +1,5 @@
 PERMISSION_FOR_REPAIER = 'app_site.view_invoice'
-PERMISSION_FOR_OWNER = 'app_site.view_order'
+PERMISSION_FOR_OWNER = 'app_site.view_orderlist'
 
 CITY_CHOICES = [
     ('TB', 'Tbilisi'),

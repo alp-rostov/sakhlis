@@ -2,6 +2,7 @@ import json
 import logging
 from datetime import timezone, datetime
 from django.contrib.auth.models import Group
+from django.contrib.auth.views import LoginView
 
 from django.db import transaction
 
@@ -22,6 +23,15 @@ from .repository import DataFromRepairerList, DataFromOrderList, DataFromInvoice
 from .utils import *
 
 logger = logging.getLogger(__name__)
+
+class UserAuthorizationView(LoginView):
+    def get_success_url(self):
+        super().get_success_url()
+        if 'repairer' == str(self.request.user.groups.first()):
+            return reverse_lazy('user', kwargs={'pk': self.request.user.pk})
+        elif 'owner' == str(self.request.user.groups.first()):
+            return reverse_lazy('owner', kwargs={'pk': self.request.user.pk})
+
 
 
 class UserRegisterView(CreateView):
@@ -46,13 +56,13 @@ class UserRegisterView(CreateView):
             return redirect('../404.html')
 
 
-
-class UserDetailInformation(BaseClassExeption, LoginRequiredMixin, DetailView):
+class RepairerDetailInformation(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, DetailView):
     model = User
     template_name = 'repairer/repaier_profile.html'
-    form_class = UserRegisterForm
-    success_url = reverse_lazy('')
+    # form_class = UserRegisterForm
     context_object_name = 'user'
+    permission_required = PERMISSION_FOR_REPAIER
+
     def get_context_data(self, **kwargs):
 
         context = super().get_context_data(**kwargs)
@@ -63,6 +73,27 @@ class UserDetailInformation(BaseClassExeption, LoginRequiredMixin, DetailView):
 
         context['clients'] = Apartment.objects.filter(pk__in=list_of_apppartment).values('owner__pk', 'owner__username', 'owner__first_name','owner__last_name' )
         return context
+
+
+
+
+
+class OwnerDetailInformation(PermissionRequiredMixin, LoginRequiredMixin, DetailView):
+    model = User
+    template_name = 'owner/owner_profile.html'
+    context_object_name = 'owner'
+    permission_required = PERMISSION_FOR_OWNER
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['profile'] = DataFromRepairerList().get_object_from_RepairerList(user=self.object)
+        context['apartments'] = Apartment.objects.filter(owner=self.object)
+        return context
+
+
+
+
+
+
 
 
 
@@ -94,11 +125,12 @@ class OrderCreate(BaseClassExeption, CreateView):
                                 'auth': self.request.user.is_authenticated
                              })
 
-class OrderManagementSystem(BaseClassExeption, LoginRequiredMixin, ListView):
+class OrderManagementSystem(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, ListView):
     """ list of all orders """
     model = OrderList
     context_object_name = 'order'
     template_name = 'repairer/order_list.html'
+    permission_required = PERMISSION_FOR_REPAIER
 
     def get_queryset(self):
         if not self.request.GET.get('work_status'):
