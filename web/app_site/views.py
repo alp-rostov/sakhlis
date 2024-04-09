@@ -60,6 +60,7 @@ class UserDetailInformation(BaseClassExeption, LoginRequiredMixin, DetailView):
         context['count'] = DataFromOrderList().get_number_of_orders_from_OrderList(repairer=self.request.user)
         context['sum'] = DataFromInvoice().get_amount_money_of_orders(repairer=self.request.user)
         list_of_apppartment = OrderList.objects.filter(repairer_id=self.request.user).order_by('-time_in').values_list('apartment_id', flat=True)[0:5]
+
         context['clients'] = Apartment.objects.filter(pk__in=list_of_apppartment).values('owner__pk', 'owner__username', 'owner__first_name','owner__last_name' )
         return context
 
@@ -75,21 +76,19 @@ class OrderCreate(BaseClassExeption, CreateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        # context['form_order']=OrderForm
         context['form_appart'] = ApartmentForm
         return context
 
     def form_valid(self, form):
-        with transaction.atomic():
-            if ApartmentForm(self.request.POST).is_valid():
-                app = ApartmentForm(self.request.POST).save(commit=False)
-                if self.request.user.is_authenticated:
-                    app.owner = self.request.user
-                app.save()
-            if self.request.user.is_authenticated:
-                form.instance.repairer_id = self.request.user
-                form.instance.order_status = 'SND'
-                form.instance.apartment_id = app
-            form.save()
+        if ApartmentForm(self.request.POST).is_valid():
+            app = ApartmentForm(self.request.POST).save()
+
+        if self.request.user.is_authenticated:
+            form.instance.repairer_id = self.request.user
+            form.instance.order_status = 'SND'
+            form.instance.apartment_id=app
+        form.save()
         return JsonResponse({'message': f'<h3>Заявка № {form.instance.pk} отправлена успешно!</h3>',
                                   'pk': form.instance.pk,
                                 'auth': self.request.user.is_authenticated
