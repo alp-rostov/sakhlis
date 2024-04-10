@@ -25,9 +25,9 @@ class DataFromOrderList:
                 .filter(repairer_id=repairer)\
                 .order_by("-pk")
 
-    def get_data_from_OrderList_with_order_status(self, repairer: User, status_of_order:str) -> QuerySet:
+    def get_data_from_OrderList_with_order_status(self, repairer: User, status_of_order:list) -> QuerySet: #TODO convert  status_of_order to list
         return self.model \
-                .filter(repairer_id=repairer, order_status=status_of_order) \
+                .filter(repairer_id=repairer, order_status__in=status_of_order) \
                 .order_by("-pk")
 
     def get_next_number_for_paginator_from_OrderList(self, repairer: User, pk:int) -> OrderList:

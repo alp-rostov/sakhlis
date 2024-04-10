@@ -70,8 +70,9 @@ class RepairerDetailInformation(BaseClassExeption, PermissionRequiredMixin, Logi
         context['count'] = DataFromOrderList().get_number_of_orders_from_OrderList(repairer=self.request.user)
         context['sum'] = DataFromInvoice().get_amount_money_of_orders(repairer=self.request.user)
         list_of_apppartment = OrderList.objects.filter(repairer_id=self.request.user).order_by('-time_in').values_list('apartment_id', flat=True)[0:5]
-
         context['clients'] = Apartment.objects.filter(pk__in=list_of_apppartment).values('owner__pk', 'owner__username', 'owner__first_name','owner__last_name' )
+        context['orders'] = DataFromOrderList().get_data_from_OrderList_with_order_status(repairer = self.request.user, status_of_order=['SND', 'RCV'])
+
         return context
 
 
@@ -139,7 +140,7 @@ class OrderManagementSystem(BaseClassExeption, PermissionRequiredMixin, LoginReq
         else:
             self.queryset = DataFromOrderList() \
                 .get_data_from_OrderList_with_order_status(repairer=self.request.user,
-                                                           status_of_order=self.request.GET.get('work_status'))
+                                                           status_of_order=[self.request.GET.get('work_status'),])
         return self.queryset[0:14]
 
     def get_context_data(self, **kwargs):

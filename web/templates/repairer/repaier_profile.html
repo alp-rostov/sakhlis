@@ -26,10 +26,19 @@
 
                 <div class="col-lg-6 col-md-10 col-sm-12 pt-3">
 
+                    {% regroup orders by order_status as order_list %}
 
-                    <a href="{% url 'list_order' %}?work_status=SND" class="h5 mycolor"><b>New offers</b></a> |
-                    <a href="{% url 'list_order'%}?work_status=RCV" class="h5 mycolor"><b>Orders in progress</b></a> |
-                    <a href="{% url 'list_order'%}?work_status=END" class="h5 mycolor"><b>Completed orders</b></a>
+                        <ul>
+                            {% for i in order_list %}
+                            <li><b class="h5 mycolor">{{ i.grouper|choice_tag:'status_order' }}</b>
+                                    <ul>
+                                    {% for b in i.list %}
+                                        <li><a href="../list_order/{{b.pk}}" id="order_{{ b.pk }}" class ='h5'>{{ b.pk }}: {{ b.text_order }}</a></li>
+                                    {% endfor %}
+                                    </ul>
+                                </li>
+                            {% endfor %}
+                        </ul>
 
                     <h3>My clienrs:</h3>
                       {% for i in clients %}
