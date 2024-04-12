@@ -23,11 +23,13 @@ class DataFromOrderList:
     def get_data_from_OrderList_all(self, repairer: User) -> QuerySet:
         return self.model\
                 .filter(repairer_id=repairer)\
+                .select_related('apartment_id', 'customer_id') \
                 .order_by("-pk")
 
     def get_data_from_OrderList_with_order_status(self, repairer: User, status_of_order:list) -> QuerySet: #TODO convert  status_of_order to list
         return self.model \
                 .filter(repairer_id=repairer, order_status__in=status_of_order) \
+                .select_related('apartment_id', 'customer_id') \
                 .order_by("-pk")
 
     def get_next_number_for_paginator_from_OrderList(self, repairer: User, pk:int) -> OrderList:

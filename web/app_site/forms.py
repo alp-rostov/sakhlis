@@ -43,75 +43,27 @@ class OrderForm(forms.ModelForm):
         required=True
         )
 
-    customer_name = forms.CharField(
-        label='Your Name',
-        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Имя", 'maxlength':20}),
-        required=True
-    )
-
-    customer_phone = forms.CharField(
-        label='Phone',
-        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Phone", 'type': 'tel', 'maxlength':16}),
-        required=True,
-
-    )
-
-    customer_telegram = forms.CharField(
-        label='Telegram',
-        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Telegram", 'maxlength':26}),
-        required=False,
-
-    )
-    #
-    # address_city = forms.ChoiceField(
-    #     choices=CITY_CHOICES,
-    #
-    #     widget=forms.RadioSelect(
-    #         attrs={"class": ""
-    #         },
-    #     ),
-    #     initial="TB"
-    # )
-    #
-    # address_street_app = forms.CharField(
-    #     label='Street',
-    #     widget=forms.TextInput(attrs={"class": "form-control", 'list': 'languages', 'placeholder': "Street", 'maxlength':40}),
-    #     required = False
-    # )
-    #
-    # address_num = forms.CharField(
-    #     label='Appartment',
-    #     widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "App", 'maxlength':10}),
-    #     required = False
-    # )
 
     class Meta:
         model = OrderList
-        fields = ('text_order',
-                  'customer_name',
-                  'customer_phone',
-                  'customer_telegram',
-                  'address_city',
-                  'address_street_app',
-                  'address_num',
-                                    )
-    def save(self, commit=True):
-        order=super().save(commit=False)
-        dict_wrong_char = str.maketrans({'<': '', '[': '',']': '','>': '','{': '','}': '','+': '', '@': '' })
-
-        order.text_order = order.text_order.translate(dict_wrong_char)
-
-        order.customer_phone = order.customer_phone.translate(dict_wrong_char).replace(' ', '')
-
-        name_telegram_customer = order.customer_telegram.translate(dict_wrong_char).replace(' ', '')
-
-        if name_telegram_customer.isdigit():
-            order.customer_telegram = '+' + name_telegram_customer
-        else:
-            order.customer_telegram = name_telegram_customer
-        if commit:
-            order.save()
-        return order
+        fields = ('text_order', )
+    # def save(self, commit=True):
+    #     order=super().save(commit=False)
+    #     dict_wrong_char = str.maketrans({'<': '', '[': '',']': '','>': '','{': '','}': '','+': '', '@': '' })
+    #
+    #     order.text_order = order.text_order.translate(dict_wrong_char)
+    #
+    #     order.customer_phone = order.customer_phone.translate(dict_wrong_char).replace(' ', '')
+    #
+    #     name_telegram_customer = order.customer_telegram.translate(dict_wrong_char).replace(' ', '')
+    #
+    #     if name_telegram_customer.isdigit():
+    #         order.customer_telegram = '+' + name_telegram_customer
+    #     else:
+    #         order.customer_telegram = name_telegram_customer
+    #     if commit:
+    #         order.save()
+    #     return order
 
 
 

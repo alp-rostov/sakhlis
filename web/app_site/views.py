@@ -1,6 +1,6 @@
 import json
 import logging
-from datetime import timezone, datetime
+from datetime import datetime
 from django.contrib.auth.models import Group
 from django.contrib.auth.views import LoginView
 
@@ -8,7 +8,7 @@ from django.db import transaction
 
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.contrib.auth.decorators import login_required
-from django.http import FileResponse, HttpResponseRedirect, JsonResponse, HttpResponse
+from django.http import FileResponse, HttpResponseRedirect, JsonResponse
 from django.forms import modelformset_factory
 from django.shortcuts import redirect, get_object_or_404
 from django.urls import reverse_lazy
@@ -24,6 +24,7 @@ from .utils import *
 
 logger = logging.getLogger(__name__)
 
+
 class UserAuthorizationView(LoginView):
     def get_success_url(self):
         super().get_success_url()
@@ -31,7 +32,6 @@ class UserAuthorizationView(LoginView):
             return reverse_lazy('user', kwargs={'pk': self.request.user.pk})
         elif 'owner' == str(self.request.user.groups.first()):
             return reverse_lazy('owner', kwargs={'pk': self.request.user.pk})
-
 
 
 class UserRegisterView(CreateView):
@@ -44,7 +44,6 @@ class UserRegisterView(CreateView):
     def form_valid(self, form):
         try:
             with transaction.atomic():
-                b=form.save(commit=False)
                 self.object = form.save()
                 UserProfile.objects.create(user=self.object)
                 grope = self.request.POST.get('grope')
@@ -64,19 +63,20 @@ class RepairerDetailInformation(BaseClassExeption, PermissionRequiredMixin, Logi
     permission_required = PERMISSION_FOR_REPAIER
 
     def get_context_data(self, **kwargs):
-
         context = super().get_context_data(**kwargs)
         context['profile'] = DataFromRepairerList().get_object_from_RepairerList(user=self.object)
         context['count'] = DataFromOrderList().get_number_of_orders_from_OrderList(repairer=self.request.user)
         context['sum'] = DataFromInvoice().get_amount_money_of_orders(repairer=self.request.user)
-        list_of_apppartment = OrderList.objects.filter(repairer_id=self.request.user).order_by('-time_in').values_list('apartment_id', flat=True)[0:5]
-        context['clients'] = Apartment.objects.filter(pk__in=list_of_apppartment).values('owner__pk', 'owner__username', 'owner__first_name','owner__last_name' )
-        context['orders'] = DataFromOrderList().get_data_from_OrderList_with_order_status(repairer = self.request.user, status_of_order=['SND', 'RCV'])
+        list_of_apppartment = OrderList.objects.filter(repairer_id=self.request.user).order_by('-time_in').values_list(
+            'apartment_id', flat=True)[0:5]
+        context['clients'] = Apartment.objects.filter(pk__in=list_of_apppartment).values('owner__pk', 'owner__username',
+                                                                                         'owner__first_name',
+                                                                                         'owner__last_name')
+        context['orders'] = DataFromOrderList().get_data_from_OrderList_with_order_status(repairer=self.request.user,
+                                                                                          status_of_order=['SND',
+                                                                                                           'RCV'])
 
         return context
-
-
-
 
 
 class OwnerDetailInformation(PermissionRequiredMixin, LoginRequiredMixin, DetailView):
@@ -84,19 +84,12 @@ class OwnerDetailInformation(PermissionRequiredMixin, LoginRequiredMixin, Detail
     template_name = 'owner/owner_profile.html'
     context_object_name = 'owner'
     permission_required = PERMISSION_FOR_OWNER
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['profile'] = DataFromRepairerList().get_object_from_RepairerList(user=self.object)
         context['apartments'] = Apartment.objects.filter(owner=self.object)
         return context
-
-
-
-
-
-
-
-
 
 
 class OrderCreate(BaseClassExeption, CreateView):
@@ -119,12 +112,13 @@ class OrderCreate(BaseClassExeption, CreateView):
         if self.request.user.is_authenticated:
             form.instance.repairer_id = self.request.user
             form.instance.order_status = 'SND'
-            form.instance.apartment_id=app
+            form.instance.apartment_id = app
         form.save()
         return JsonResponse({'message': f'<h3>Заявка № {form.instance.pk} отправлена успешно!</h3>',
-                                  'pk': form.instance.pk,
-                                'auth': self.request.user.is_authenticated
+                             'pk': form.instance.pk,
+                             'auth': self.request.user.is_authenticated
                              })
+
 
 class OrderManagementSystem(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, ListView):
     """ list of all orders """
@@ -140,7 +134,7 @@ class OrderManagementSystem(BaseClassExeption, PermissionRequiredMixin, LoginReq
         else:
             self.queryset = DataFromOrderList() \
                 .get_data_from_OrderList_with_order_status(repairer=self.request.user,
-                                                           status_of_order=[self.request.GET.get('work_status'),])
+                                                           status_of_order=[self.request.GET.get('work_status'), ])
         return self.queryset[0:14]
 
     def get_context_data(self, **kwargs):
@@ -150,18 +144,20 @@ class OrderManagementSystem(BaseClassExeption, PermissionRequiredMixin, LoginReq
         return context
 
 
-class OrderUpdate(BaseClassExeption, PermissionRequiredMixin,  LoginRequiredMixin, UpdateView):
+class OrderUpdate(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, UpdateView):
     model = OrderList
     template_name = 'order_update.html'
     form_class = OrderForm
     permission_required = PERMISSION_FOR_OWNER
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['time_in'] = self.object.time_in
         context['pk'] = self.object.pk
         return context
+
     def get_success_url(self):
-        return '/list_order/'+str(self.object.pk)
+        return '/list_order/' + str(self.object.pk)
 
 
 class OrderDelete(BaseClassExeption, LoginRequiredMixin, DeleteView):
@@ -181,9 +177,9 @@ class InvoiceCreate(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMix
         context = super().get_context_data()
         context['invoice'] = DataFromInvoice().get_data_from_Invoice_with_amount(order_id_=self.object.pk)
         context['type_work'] = WORK_CHOICES
-        context['next'] = DataFromOrderList()\
+        context['next'] = DataFromOrderList() \
             .get_next_number_for_paginator_from_OrderList(repairer=self.request.user, pk=self.object.pk)
-        context['prev'] = DataFromOrderList()\
+        context['prev'] = DataFromOrderList() \
             .get_previous_number_for_paginator_from_OrderList(repairer=self.request.user, pk=self.object.pk)
         InvoiceFormSet = modelformset_factory(Invoice, form=InvoiceForm, extra=0)
         formset = InvoiceFormSet(queryset=Invoice.objects.none())
@@ -204,24 +200,23 @@ class InvoiceCreate(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMix
 
         list_num = []
         if instances:
-           for instance in instances:
-               instance.order_id = b
-               instance.save()
-               list_num.append({"pk": instance.pk,
-                          "quantity": instance.quantity,
-                             "price": instance.price,
-                        "service_id": instance.service_id.pk,
-                   "service_id_name": instance.service_id.name
-                                })
+            for instance in instances:
+                instance.order_id = b
+                instance.save()
+                list_num.append({"pk": instance.pk,
+                                 "quantity": instance.quantity,
+                                 "price": instance.price,
+                                 "service_id": instance.service_id.pk,
+                                 "service_id_name": instance.service_id.name
+                                 })
 
-           return JsonResponse(list_num, safe=False)
+            return JsonResponse(list_num, safe=False)
         else:
             return JsonResponse({}, safe=False)
 
 
 class Error404(TemplateView):
     template_name = '404.html'
-
 
 
 class Statistica(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, ListView):
@@ -243,9 +238,9 @@ class Statistica(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin,
 
         context['filterset'] = self.filterset
 
-        queryset_from_OrderList=self.filterset.qs
+        queryset_from_OrderList = self.filterset.qs
 
-        list_objects_from_OrderList=list(queryset_from_OrderList)
+        list_objects_from_OrderList = list(queryset_from_OrderList)
 
         data_from_invoice = DataFromInvoice(Invoice.objects.filter(order_id__in=list_objects_from_OrderList))
         data_from_oder = DataFromOrderList(queryset_from_OrderList)
@@ -254,27 +249,27 @@ class Statistica(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin,
 
         context['d'] = Graph(data_from_invoice.get_quantity_of_orders_by_type(repairer=self.request.user),
                              'service_id__type', 'count', WORK_CHOICES_, 'Order structure, quantity.', '') \
-                        .make_graf_pie()
+            .make_graf_pie()
 
         context['d_'] = Graph(data_from_invoice.get_cost_of_orders_by_type(repairer=self.request.user),
-                            'service_id__type', 'count', WORK_CHOICES_, 'Order structure, lar.', '') \
-                       .make_graf_pie()
+                              'service_id__type', 'count', WORK_CHOICES_, 'Order structure, lar.', '') \
+            .make_graf_pie()
 
         context['f'] = Graph(data_from_oder.get_monthly_order_cost_from_OrderList(repairer=self.request.user),
-                            'time_in__month', 'count', MONTH_, 'Earnings', 'lar') \
-                        .make_graf_bar()
+                             'time_in__month', 'count', MONTH_, 'Earnings', 'lar') \
+            .make_graf_bar()
 
         context['g'] = Graph(data_from_oder.get_monthly_order_quantity_from_OrderList(repairer=self.request.user),
-                            'time_in__month',  'count', MONTH_, 'Order`s quantity', 'quantity') \
-                        .make_graf_bar()
+                             'time_in__month', 'count', MONTH_, 'Order`s quantity', 'quantity') \
+            .make_graf_bar()
 
         context['hh'] = Graph(data_from_oder.get_dayly_cost_of_orders(repairer=self.request.user),
-                            'time_in__date', 'count', None, 'Dynamics', '') \
-                        .make_graf_plot()
+                              'time_in__date', 'count', None, 'Dynamics', '') \
+            .make_graf_plot()
         return context
 
 
-class OrderSearchForm(BaseClassExeption, PermissionRequiredMixin,  LoginRequiredMixin, ListView):
+class OrderSearchForm(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, ListView):
     model = OrderList
     context_object_name = 'order'
     template_name = 'repairer/ordersearchform.html'
@@ -304,6 +299,7 @@ class RepaierUpdate(BaseClassExeption, PermissionRequiredMixin, UpdateView):
     template_name = 'repairer/repaier_create.html'
     form_class = RepairerForm
     permission_required = PERMISSION_FOR_REPAIER
+
     def get_success_url(self):
         return '/user/' + str(self.request.user.pk)
 
@@ -349,12 +345,12 @@ def listservices_for_invoice_json(request, **kwargs):
 @login_required
 def listorder_for_order_list_paginator_json(request, **kwargs):
     """for ajax request """
-    data = OrderList.objects.filter(pk__lt=request.GET.get('last_pk'), repairer_id=request.user)\
-                            .order_by('-pk')\
-                            .values('pk', 'time_in', 'text_order', 'customer_name',
-                                    'customer_phone', 'customer_telegram',
-                                    'address_city', 'address_street_app',
-                                    'address_num', 'location_longitude', 'location_latitude')[0:14]
+    data = OrderList.objects.filter(pk__lt=request.GET.get('last_pk'), repairer_id=request.user) \
+               .order_by('-pk') \
+               .values('pk', 'time_in', 'text_order', 'customer_name',
+                       'customer_phone', 'customer_telegram',
+                       'address_city', 'address_street_app',
+                       'address_num', 'location_longitude', 'location_latitude')[0:14]
     json_data = json.dumps(list(data), default=str)
     return JsonResponse(json_data, safe=False)
 
@@ -363,7 +359,7 @@ def listorder_for_order_list_paginator_json(request, **kwargs):
 def DeleteIvoiceService(request, **kwargs):
     """for ajax request """
     invoice_object = get_object_or_404(Invoice.objects.filter(order_id__repairer_id=request.user),
-                                                              pk=kwargs.get("invoice_pk"))
+                                       pk=kwargs.get("invoice_pk"))
     invoice_object.delete()
     return JsonResponse({"message": "success"})
 
@@ -374,7 +370,7 @@ def change_work_status(request, **kwargs):
     b = get_object_or_404(OrderList, pk=request.GET.get("order_pk"))
     if request.GET.get('work_status') in ORDER_STATUS_FOR_CHECK and b.repairer_id == request.user:
         b.order_status = request.GET.get('work_status')
-        if b.order_status=='END': b.time_out=datetime.now()
+        if b.order_status == 'END': b.time_out = datetime.now()
         b.save()
         return JsonResponse({"message": request.GET.get('work_status'), "pk": request.GET.get("order_pk")})
     else:
@@ -384,7 +380,7 @@ def change_work_status(request, **kwargs):
 def input_street(request, **kwargs):
     """for ajax request """
     b = StreerTbilisi.objects.filter(name_street__istartswith=request.GET.get('street')) \
-                             .values('type_street', 'name_street')[0:15]
+            .values('type_street', 'name_street')[0:15]
     json_data = json.dumps(list(b), default=str)
     print(JsonResponse(json_data, safe=False))
     return JsonResponse(json_data, safe=False)
