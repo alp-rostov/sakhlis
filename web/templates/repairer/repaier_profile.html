@@ -33,7 +33,7 @@
                             <li><b class="h5 mycolor">{{ i.grouper|choice_tag:'status_order' }}</b>
                                     <ul>
                                     {% for b in i.list %}
-                                        <li><a href="../list_order/{{b.pk}}" id="order_{{ b.pk }}" class ='h5'>{{ b.pk }}: {{ b.text_order }}</a></li>
+                                        <li><a href="../list_order/{{b.pk}}" id="order_{{ b.pk }}" class ='h5'>{{ b.pk }}: {{ b.text_order }}: {{ b.customer_id.customer_name }}</a></li>
                                     {% endfor %}
                                     </ul>
                                 </li>

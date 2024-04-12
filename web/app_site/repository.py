@@ -30,7 +30,7 @@ class DataFromOrderList:
         return self.model \
                 .filter(repairer_id=repairer, order_status__in=status_of_order) \
                 .select_related('apartment_id', 'customer_id') \
-                .order_by("-pk")
+                .order_by("-order_status", "-pk")
 
     def get_next_number_for_paginator_from_OrderList(self, repairer: User, pk:int) -> OrderList:
         return self.model\
