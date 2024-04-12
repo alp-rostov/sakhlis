@@ -42,8 +42,8 @@
 
                     <h3>My clienrs:</h3>
                       {% for i in clients %}
-                      <img src="../media/images/{{i.owner__pk}}.jpg " width="60" class="rounded-circle">
-                      {{i.owner__username}} /  {{i.owner__first_name}}   {{i.owner__last_name}}<br>
+                      <img src="../media/{{i.customer_id.foto}} " width="60" class="rounded-circle">
+                       {{i.customer_id.customer_name}}<br>
                         <hr>
                       {% endfor %}
 

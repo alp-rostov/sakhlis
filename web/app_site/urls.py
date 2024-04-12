@@ -22,9 +22,12 @@ urlpatterns = [
     path('register/', UserRegisterView.as_view(), name='signup'),
     path('error404/', Error404.as_view(), name='error404'),
 
+    path('clients/', Clients.as_view(), name='clients'),
+
     path('stat/', Statistica.as_view(), name='stat'),
     path('user/<int:pk>', RepairerDetailInformation.as_view(), name='user'),
     path('update-user/<int:pk>', RepaierUpdate.as_view(), name='update-user'),
+
 
     path('owner/<int:pk>', OwnerDetailInformation.as_view(), name='owner'),
 

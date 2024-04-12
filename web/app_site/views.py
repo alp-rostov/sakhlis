@@ -18,7 +18,7 @@ from .constants import *
 from .exeptions import BaseClassExeption
 from .filters import OrderFilter
 from .models import *
-from .forms import OrderForm, InvoiceForm, UserRegisterForm, RepairerForm, ApartmentForm
+from .forms import *
 from .repository import DataFromRepairerList, DataFromOrderList, DataFromInvoice
 from .utils import *
 
@@ -69,15 +69,23 @@ class RepairerDetailInformation(BaseClassExeption, PermissionRequiredMixin, Logi
         context['sum'] = DataFromInvoice().get_amount_money_of_orders(repairer=self.request.user)
         list_of_apppartment = OrderList.objects.filter(repairer_id=self.request.user).order_by('-time_in').values_list(
             'apartment_id', flat=True)[0:5]
-        context['clients'] = Apartment.objects.filter(pk__in=list_of_apppartment).values('owner__pk', 'owner__username',
-                                                                                         'owner__first_name',
-                                                                                         'owner__last_name')
+        context['clients'] = OrderList.objects.filter(repairer_id=self.request.user).select_related('customer_id').order_by('-pk')[0:10]
         context['orders'] = DataFromOrderList().get_data_from_OrderList_with_order_status(repairer=self.request.user,
                                                                                           status_of_order=['SND',
                                                                                                            'RCV'])
 
         return context
 
+
+class Clients(TemplateView):
+    template_name = 'repairer/clients.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['clients'] = (OrderList.objects.filter(repairer_id=self.request.user) \
+                              .select_related('customer_id', 'apartment_id') \
+                              .order_by('-customer_id__customer_name'))
+        return context
 
 class OwnerDetailInformation(PermissionRequiredMixin, LoginRequiredMixin, DetailView):
     model = User
@@ -103,17 +111,21 @@ class OrderCreate(BaseClassExeption, CreateView):
         context = super().get_context_data(**kwargs)
         # context['form_order']=OrderForm
         context['form_appart'] = ApartmentForm
+        context['form_customer'] = CustomerForm
         return context
 
     def form_valid(self, form):
-        if ApartmentForm(self.request.POST).is_valid():
-            app = ApartmentForm(self.request.POST).save()
+        if CustomerForm(self.request.POST).is_valid() and ApartmentForm(self.request.POST).is_valid():
+            with transaction.atomic():
+                customer = CustomerForm(self.request.POST).save()
+                app = ApartmentForm(self.request.POST).save()
+                if self.request.user.is_authenticated: # TODO add checking of belonging to group
+                    form.instance.repairer_id = self.request.user
+                    form.instance.order_status = 'SND'
+                    form.instance.apartment_id = app
+                    form.instance.customer_id = customer
+                form.save()
 
-        if self.request.user.is_authenticated:
-            form.instance.repairer_id = self.request.user
-            form.instance.order_status = 'SND'
-            form.instance.apartment_id = app
-        form.save()
         return JsonResponse({'message': f'<h3>Заявка № {form.instance.pk} отправлена успешно!</h3>',
                              'pk': form.instance.pk,
                              'auth': self.request.user.is_authenticated
@@ -140,6 +152,7 @@ class OrderManagementSystem(BaseClassExeption, PermissionRequiredMixin, LoginReq
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['form_order'] = OrderForm
+        context['form_customer'] = CustomerForm
         context['form_appart'] = ApartmentForm
         return context
 
@@ -286,6 +299,7 @@ class OrderSearchForm(BaseClassExeption, PermissionRequiredMixin, LoginRequiredM
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['filterset'] = self.filterset
+        context['form_customer'] = CustomerForm
         context['form_order'] = OrderForm
         context['form_appart'] = ApartmentForm
         c = DataFromInvoice().get_total_cost_of_some_orders(list_of_orders=self.get_queryset())

@@ -65,6 +65,31 @@ class OrderForm(forms.ModelForm):
     #         order.save()
     #     return order
 
+class CustomerForm(forms.ModelForm):
+
+    customer_name = forms.CharField(
+        label='Your Name',
+        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Имя", 'maxlength':20}),
+        required=True
+    )
+
+    phone = forms.CharField(
+        label='Phone',
+        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Phone", 'type': 'tel', 'maxlength':16}),
+        required=True,
+
+    )
+
+    telegram = forms.CharField(
+        label='Telegram',
+        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Telegram", 'maxlength':26}),
+        required=False,
+
+    )
+
+    class Meta:
+        model = UserProfile
+        fields = ('customer_name', 'phone', 'telegram')
 
 
 class UserRegisterForm(UserCreationForm):

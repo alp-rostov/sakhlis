@@ -90,15 +90,6 @@ class UserProfile(models.Model):
     def get_absolute_url(self):
         return reverse('list_repair')
 
-    def save(self, *args, **kwargs):
-        try:
-            os.remove(f'media/images/{self.user.pk}.jpg')
-        except Exception as e:
-            pass
-        if self.foto:
-            self.foto.name = f'{str(self.user.pk)}.jpg'
-
-        super(UserProfile, self).save(*args, **kwargs)
 
     def __str__(self):
         return f"{self.customer_name}"
