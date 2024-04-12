@@ -26,7 +26,6 @@ class Service(models.Model):
         return f"{self.name}"
 
 
-
 class Invoice(models.Model):
     """service_id order_id quantity_type quantity price"""
     service_id = models.ForeignKey('Service', on_delete=models.CASCADE, null=True, blank=True, )
@@ -42,78 +41,6 @@ class Invoice(models.Model):
 
     def __str__(self):
         return f"{self.service_id}"
-
-class OrderList(models.Model):
-    """time_in time_out repairer_id price text_order customer_name customer_phone address_city address_street_app
-    address_num work_type services order_status"""
-    time_in = models.DateTimeField(auto_now_add=True, verbose_name='Date of order')
-    time_out = models.DateTimeField(null=True, blank=True, verbose_name='Order completion date')
-    repairer_id = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True,
-                                    verbose_name='Мастер', default='', )
-    apartment_id = models.ForeignKey('Apartment', on_delete=models.SET_NULL, null=True, blank=True,
-                                    verbose_name='Appartment', default='', )
-
-    text_order = models.CharField(max_length=1500, verbose_name='Description of the problem', blank=True, null=True)
-
-
-    customer_name = models.CharField(max_length=50, verbose_name='Name')
-    customer_phone = models.CharField(max_length=16, verbose_name='Phone')
-    customer_telegram = models.CharField(max_length=26, verbose_name='Telegram', blank=True, null=True)
-
-
-
-    order_status = models.CharField(max_length=3, choices=ORDER_STATUS, default='BEG', null=True, blank=True,
-                                    verbose_name='Order status')
-    services = models.ManyToManyField('Service', through='Invoice')
-
-
-
-
-
-    customer_code = models.CharField(max_length=16, verbose_name='Company code ', blank=True, null=True)
-    address_city = models.CharField(max_length=2, choices=CITY_CHOICES, default='TB', null=True, blank=True,
-                                    verbose_name='City')
-    address_street_app = models.CharField(max_length=150, verbose_name='Street', null=True, blank=True)
-    address_num = models.CharField(max_length=10, verbose_name='House number', null=True, blank=True)
-    location_longitude = models.FloatField(verbose_name='Longitude', null=True, blank=True)
-    location_latitude = models.FloatField(verbose_name='Latitude', null=True, blank=True)
-
-    class Meta:
-        verbose_name = 'Order list'
-        verbose_name_plural = 'Order list'
-
-
-class UserProfile(models.Model):
-    """phone city foto rating_sum rating_num user"""
-    phone = models.CharField(validators=[phoneNumberRegex], max_length=16, unique=True, verbose_name='Phone',
-                             null=True, blank=True,)
-    telegram = models.CharField(max_length=25, unique=True, verbose_name='Telegram',
-                             null=True, blank=True, )
-    city = models.CharField(max_length=2, choices=CITY_CHOICES, default='TB')
-    profile = models.CharField(max_length=1500, null=True, blank=True, verbose_name='About me:')
-
-    foto = models.ImageField(upload_to='images/', null=True, blank=True, verbose_name='Photo:')
-    rating_sum = models.IntegerField(default=0, blank=True, null=True)
-    rating_num = models.IntegerField(default=1, blank=True, null=True)
-    user = models.OneToOneField(User, on_delete=models.CASCADE, blank=True, null=True )
-    class Meta:
-        verbose_name = 'UserProfile'
-        verbose_name_plural = 'UserProfile'
-    def get_absolute_url(self):
-        return reverse('list_repair')
-
-    def save(self, *args, **kwargs):
-        try:
-            os.remove(f'media/images/{self.user.pk}.jpg')
-        except Exception as e:
-            pass
-        if self.foto:
-            self.foto.name = f'{str(self.user.pk)}.jpg'
-
-        super(UserProfile, self).save(*args, **kwargs)
-
-    def __str__(self):
-        return f"{self.user}"
 
 
 class Apartment(models.Model):
@@ -139,6 +66,71 @@ class Apartment(models.Model):
 
     def __str__(self):
         return f"{self.pk}-{self.name}"
+
+
+
+class UserProfile(models.Model):
+    """phone city foto rating_sum rating_num user"""
+    customer_name = models.CharField(max_length=50, verbose_name='Name', null=True, blank=True,)
+
+    phone = models.CharField(validators=[phoneNumberRegex], max_length=16, unique=True, verbose_name='Phone',
+                             null=True, blank=True,)
+    telegram = models.CharField(max_length=25, unique=True, verbose_name='Telegram',
+                             null=True, blank=True, )
+    city = models.CharField(max_length=2, choices=CITY_CHOICES, default='TB')
+    profile = models.CharField(max_length=1500, null=True, blank=True, verbose_name='About me:')
+
+    foto = models.ImageField(upload_to='images/', null=True, blank=True, verbose_name='Photo:')
+    rating_sum = models.IntegerField(default=0, blank=True, null=True)
+    rating_num = models.IntegerField(default=1, blank=True, null=True)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, blank=True, null=True)
+    class Meta:
+        verbose_name = 'UserProfile'
+        verbose_name_plural = 'UserProfile'
+    def get_absolute_url(self):
+        return reverse('list_repair')
+
+    def save(self, *args, **kwargs):
+        try:
+            os.remove(f'media/images/{self.user.pk}.jpg')
+        except Exception as e:
+            pass
+        if self.foto:
+            self.foto.name = f'{str(self.user.pk)}.jpg'
+
+        super(UserProfile, self).save(*args, **kwargs)
+
+    def __str__(self):
+        return f"{self.user}"
+
+
+
+
+class OrderList(models.Model):
+    """time_in time_out repairer_id price text_order customer_name customer_phone address_city address_street_app
+    address_num work_type services order_status"""
+    time_in = models.DateTimeField(auto_now_add=True, verbose_name='Date of order')
+    time_out = models.DateTimeField(null=True, blank=True, verbose_name='Order completion date')
+
+
+    repairer_id = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True,
+                                    verbose_name='Repairer', default='', )
+    apartment_id = models.ForeignKey(Apartment, on_delete=models.SET_NULL, null=True, blank=True,
+                                    verbose_name='Appartment', default='', )
+    customer_id = models.ForeignKey(UserProfile, on_delete=models.SET_NULL, null=True, blank=True,
+                                    verbose_name='Client', default='', )
+
+    text_order = models.CharField(max_length=1500, verbose_name='Description of the problem', blank=True, null=True)
+
+
+    order_status = models.CharField(max_length=3, choices=ORDER_STATUS, default='BEG', null=True, blank=True,
+                                    verbose_name='Order status')
+    services = models.ManyToManyField('Service', through='Invoice')
+
+
+    class Meta:
+        verbose_name = 'Order list'
+        verbose_name_plural = 'Order list'
 
 
 class StreerTbilisi(models.Model):
