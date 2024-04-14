@@ -359,13 +359,15 @@ def listservices_for_invoice_json(request, **kwargs):
 def client_details_json(request, **kwargs):
     """for ajax request """
     data = UserProfile.objects.get(pk=request.GET.get('pk'))
-    return JsonResponse({'pk': data.pk,
+    if OrderList.objects.filter(repairer_id=request.user, customer_id=data).exists():
+        return JsonResponse({'pk': data.pk,
                          'name':data.customer_name,
                          'phone':data.phone,
                          'telegram':data.telegram,
                          'foto': str(data.foto),
                          'profile': data.profile
                          })
+    else: return JsonResponse({'pk': 'None',})
 
 
 @login_required
