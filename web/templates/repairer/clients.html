@@ -22,7 +22,10 @@
 
                 <div  class="row" id="">
                     <div class="col-md-4">
-                        <a href="" id="" class="h5 mycolor">{{ i.grouper.customer_name }}</a><br>
+                        <a href="#" id="link" class="h5 mycolor" data-toggle="modal" data-target="#exampleModal">{{ i.grouper.pk }}</a><br>
+
+
+
                          <a href="tel:{{ i.grouper.phone }}" title="Phone" id="customer_phone_{{ i.pk }}" class="fas fa-phone prefix text-secondary mt-3" aria-hidden="true">
                             {{ i.grouper.phone }}</a><br>
 
@@ -69,10 +72,71 @@
 
 
 
+    <!-- Modal Window -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body  mx-3">
+                    <div id="contact" class="form-container">
+                        <fieldset>
+                            <div id="message">
+    				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                                <h4 id="name" class="mycolor"></h4>
+                            </div>
+                        </fieldset>
+                            <div class="row">
+                                <div class="col-6">
+                                    <img id="foto1" class="rounded-circle" align="center" width="100">
+                                </div>
+                                <div class="col-6">
+                                    <a href="tel:" title="Phone" id="customer_phone" class="fas fa-phone prefix text-secondary mt-3" aria-hidden="true">
+                                    </a><br>
+                                    <a href="https://t.me/" title="Telegram" id="customer_telegram" class ="fas fa fa-paper-plane text-secondary mt-3" aria-hidden="true">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row" id="profile">
+                            </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- And Modal Window -->
+
+
+<script>
+$(document).on('click', '#link', function (e) {
+    e.preventDefault();
+
+
+         $.ajax({
+            url: "../client?pk="+$(this).html() ,
+            type: "GET",
+            dataType: 'json',
+
+            success: function(resp){
+            document.getElementById("name").innerHTML =resp.name;
+            document.getElementById("customer_phone").innerHTML =' '+resp.phone;
+            document.getElementById("customer_telegram").innerHTML = ' '+resp.telegram;
+            document.getElementById("profile").innerHTML = resp.profile;
+
+            document.getElementById("foto1").src ='../media/'+resp.foto;
+
+
+             }
+        });
 
 
 
 
+
+})
+
+</script>>
 
 
 

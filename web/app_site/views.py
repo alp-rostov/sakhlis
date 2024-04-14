@@ -355,6 +355,18 @@ def listservices_for_invoice_json(request, **kwargs):
     json_data = json.dumps(list(data))
     return JsonResponse(json_data, safe=False)
 
+@login_required
+def client_details_json(request, **kwargs):
+    """for ajax request """
+    data = UserProfile.objects.get(pk=request.GET.get('pk'))
+    return JsonResponse({'pk': data.pk,
+                         'name':data.customer_name,
+                         'phone':data.phone,
+                         'telegram':data.telegram,
+                         'foto': str(data.foto),
+                         'profile': data.profile
+                         })
+
 
 @login_required
 def listorder_for_order_list_paginator_json(request, **kwargs):
@@ -396,5 +408,4 @@ def input_street(request, **kwargs):
     b = StreerTbilisi.objects.filter(name_street__istartswith=request.GET.get('street')) \
             .values('type_street', 'name_street')[0:15]
     json_data = json.dumps(list(b), default=str)
-    print(JsonResponse(json_data, safe=False))
     return JsonResponse(json_data, safe=False)

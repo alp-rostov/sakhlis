@@ -35,7 +35,7 @@ urlpatterns = [
 
     path('serv', listservices_for_invoice_json),
     path('changestatus', change_work_status),
-
+    path('client', client_details_json),
     path('listorderjson', listorder_for_order_list_paginator_json),
     path('set_work_status', change_work_status),
     path('street', input_street),
