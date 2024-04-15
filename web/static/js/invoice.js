@@ -140,16 +140,12 @@ $(document.body).on( "click", "#workstatus", function(e) {
                         if (b=='RCV') {
                             $('#check1').attr('class', 'fas fa-check-circle text-secondary');
                             $('#check2').attr('class', 'fas fa-check-circle about-text');
-
                             $('#check_text_1').attr('class', 'col-md-11');
                             $('#check_text_2').attr('class', 'col-md-11 black-text');
-
                             $('#workstatus').html('Order is completed');
                             $('#workstatus').attr('href', "../changestatus?order_pk="+pk+"&work_status=END");
-
                             $('#id_form').attr('class', '');
                             $('#table_invoice').attr('class', 'table');
-
                         } else
 
 
@@ -157,22 +153,14 @@ $(document.body).on( "click", "#workstatus", function(e) {
                             $('#check1').attr('class', 'fas fa-check-circle text-secondary');
                             $('#check2').attr('class', 'fas fa-check-circle text-secondary');
                             $('#check3').attr('class', 'fas fa-check-circle about-text');
-
                             $('#check_text_1').attr('class', 'col-md-11');
                             $('#check_text_2').attr('class', 'col-md-11');
                             $('#check_text_3').attr('class', 'col-md-11 black-text');
-
-
                             $('#check_text_1').attr('class', 'col-md-11');
                             $('#check_text_2').attr('class', 'col-md-11 black-text');
-
-
-
-
                             $('#workstatus').remove();
                             $('#stepstatuswork').html('<a href="pdf/'+pk+'" class="btn btn-sm btn-orange">Invoice - PDF</a>');
                         }
-
             }
         });
     });

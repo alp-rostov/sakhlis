@@ -99,7 +99,8 @@
                             </div>
                             <div class="row" id="profile">
                             </div>
-
+                            <div class="row" id="orders">
+                            </div>
                     </div>
                 </div>
             </div>
@@ -112,7 +113,6 @@
 $(document).on('click', '#link', function (e) {
     e.preventDefault();
 
-
          $.ajax({
             url: "../client?pk="+$(this).html() ,
             type: "GET",
@@ -123,11 +123,15 @@ $(document).on('click', '#link', function (e) {
             document.getElementById("customer_phone").innerHTML =' '+resp.phone;
             document.getElementById("customer_telegram").innerHTML = ' '+resp.telegram;
             document.getElementById("profile").innerHTML = resp.profile;
-
             document.getElementById("foto1").src ='../media/'+resp.foto;
 
+            let b=JSON.parse(resp.orders);
 
-             }
+            document.getElementById("orders").innerHTML = b;
+
+            b.forEach((index, element) =>  {console.log(index);}
+
+            )}
         });
 
 
@@ -137,7 +141,7 @@ $(document).on('click', '#link', function (e) {
 })
 
 </script>>
-
+profile
 
 
 
