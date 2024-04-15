@@ -95,7 +95,7 @@ $('#id_form').submit(function(e) {
                     tr.find('td[name="price"]').html(b[i].price);
                     tr.find('td[name="amount"]').html(b[i].price*b[i].quantity);
                     tr.find('td[name="delete"]').html('<a href="/invoice/delete/'+b[i].pk+'" class="link-delete" ><i class="fas fa-trash text-secondary"></i></a>');
-                    tr.attr('class','form_text')
+                    tr.attr('class','form_text');
                     $('#total_').before(tr);
                     sum_total();
                 }

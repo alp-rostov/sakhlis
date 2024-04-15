@@ -30,6 +30,7 @@ urlpatterns = [
 
 
     path('owner/<int:pk>', OwnerDetailInformation.as_view(), name='owner'),
+    path('app', AddApartment, name=''),
 
     path('ordersearch/', OrderSearchForm.as_view(), name='search-order'),
 

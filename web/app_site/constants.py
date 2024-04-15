@@ -1,6 +1,17 @@
 PERMISSION_FOR_REPAIER = 'app_site.view_invoice'
 PERMISSION_FOR_OWNER = 'app_site.view_orderlist'
 
+
+APART_CHOICES = [
+    ('FL', 'Flat'),
+    ('HM', 'Home'),
+    ('OF', 'Office'),
+    ('RS', 'Restaurant'),
+    ('SH', 'Store'),
+    ('OT', 'Other'),
+]
+
+
 CITY_CHOICES = [
     ('TB', 'Tbilisi'),
     ('BT', 'Batumi'),

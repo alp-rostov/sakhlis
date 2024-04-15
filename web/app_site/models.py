@@ -6,7 +6,7 @@ from django.core.validators import RegexValidator
 from django.urls import reverse
 from django_cleanup import cleanup
 
-from .constants import CITY_CHOICES, ORDER_STATUS, WORK_CHOICES, QUANTITY_CHOICES
+from .constants import CITY_CHOICES, ORDER_STATUS, WORK_CHOICES, QUANTITY_CHOICES, APART_CHOICES
 
 phoneNumberRegex = RegexValidator(regex=r"^\+?1?\d{8,15}$",
                                   message="Phone number must be entered in the "
@@ -46,6 +46,8 @@ class Invoice(models.Model):
 class Apartment(models.Model):
     """"""
     name = models.CharField(max_length=150, verbose_name='Name', null=True, blank=True)
+    type = models.CharField(max_length=2, choices=APART_CHOICES, default='FL', null=True, blank=True,
+                                    verbose_name='Type')
 
     owner = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True,
                                     verbose_name='Responsible person for apartment', default='', )

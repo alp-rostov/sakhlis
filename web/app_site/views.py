@@ -347,6 +347,22 @@ def OrderAddRepaier(request):
         else:
             return redirect('home')  # TODO настроить сообщение, что ремонтник уже указан
 
+@login_required
+def AddApartment(request):
+    """Add"""
+    if 'owner' == str(request.user.groups.first()):
+        ApartmentForm(request.GET).save()
+        print('---------------')
+
+        #
+        # return reverse_lazy('owner', kwargs={'pk': request.user.pk})
+        #
+        #
+        #     return HttpResponseRedirect(reverse('update', args=(order.pk,)))
+        # else:
+        #     return redirect('home')
+
+
 
 @login_required
 def listservices_for_invoice_json(request, **kwargs):
