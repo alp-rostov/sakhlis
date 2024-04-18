@@ -82,9 +82,9 @@ class Clients(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['clients'] = (OrderList.objects.filter(repairer_id=self.request.user) \
-                              .select_related('customer_id', 'apartment_id') \
-                              .order_by('-customer_id__customer_name'))
+        list_orders = list(OrderList.objects.filter(repairer_id=self.request.user, customer_id__gt=0).values('customer_id'))  #TODO replace queryset in repository and remove "None"
+        list_orders_ = list(set(map(lambda x : x['customer_id'] , list_orders)))
+        context['clients'] = UserProfile.objects.filter(pk__in=list_orders_).values('pk', 'customer_name', 'profile').order_by('customer_name')
         return context
 
 class OwnerDetailInformation(PermissionRequiredMixin, LoginRequiredMixin, DetailView):
@@ -97,6 +97,8 @@ class OwnerDetailInformation(PermissionRequiredMixin, LoginRequiredMixin, Detail
         context = super().get_context_data(**kwargs)
         context['profile'] = DataFromRepairerList().get_object_from_RepairerList(user=self.object)
         context['apartments'] = Apartment.objects.filter(owner=self.object)
+        context['form_appart'] = ApartmentForm
+
         return context
 
 

@@ -14,55 +14,20 @@
 
 {% block body %}
 
+{% for i in clients %}
 
-                    {% regroup clients by customer_id as customer %}
+<div  class="row" id="">
+    <div class="col-md-6">
+        <a href="{{ i.pk  }}" id="link" class="h5 mycolor" data-toggle="modal" data-target="#exampleModal">{{ i.customer_name }}</a>
 
-                            {% for i in customer %}
+    </div>
+    <div class="col-md-6">
+        {{i.profile}}
+    </div>
 
+</div>
 
-                <div  class="row" id="">
-                    <div class="col-md-4">
-                        <a href="{{ i.grouper.pk  }}" id="link" class="h5 mycolor" data-toggle="modal" data-target="#exampleModal">{{ i.grouper.customer_name }}</a><br>
-
-
-
-                         <a href="tel:{{ i.grouper.phone }}" title="Phone" id="customer_phone_{{ i.pk }}" class="fas fa-phone prefix text-secondary mt-3" aria-hidden="true">
-                            {{ i.grouper.phone }}</a><br>
-
-
-                        <a href="https://t.me/{{ i.grouper.telegram|cut:'@' }}" title="Telegram" id="customer_id.telegram_{{ i.pk }}"
-                           class ="fas fa fa-paper-plane text-secondary mt-3" aria-hidden="true">
-                             @{{i.grouper.telegram}}</a><br>
-
-                    </div>
-
-                    <div class="col-md-4 ">
-                         {% for b in i.list %}
-                                          {% if b.apartment_id.location_longitude  %}
-                    <a href= 'https://yandex.ru/maps/?pt={{ b.apartment_id.location_longitude|change_comma_to_dot }},
-                    {{ b.apartment_id.location_latitude|change_comma_to_dot }}&z=18&l=map' id="map_{{ b.apartment_id.pk }}" class=" text-secondary mt-3"
-                    title="Open map" aria-hidden="true" >
-                    <i  class="fas fa-map-marker prefix text-secondary mt-3" aria-hidden="true"></i>
-                    {% elif b.apartment_id.location_longitude is None %}
-                        <a href="#" title="Copy address" class=" prefix text-secondary mt-3" aria-hidden="true" id="map_{{ b.pk }}" onclick="copyToClipboard($(this))">
-                        <i class="fas fa-copy text-secondary mt-3"></i>
-
-                    {% endif %}
-                        <span id="city_{{ b.pk }}" >{{ b.apartment_id.address_city|choice_tag:'city'}}</span>,
-                        <span id="street_app_{{ b.pk }}">{{ b.apartment_id.address_street_app|capfirst }}</span>,
-                        <span id="num_{{ b.pk }}">{{ b.apartment_id.address_num }}</span>.
-                    </a>
-                    <hr>
-                        {% endfor %}
-                    </div>
-
-            </div>
-
-            <div class="row">
-                <div class="col-md-12"><hr></div>
-            </div>
-
-                {% endfor %}
+{% endfor %}
 
 
 
@@ -134,7 +99,7 @@ $(document).on('click', '#link', function (e) {
                 order_.attr('id', 'order_'+element.pk);
                 order_.attr('new', 'new');
                 let date_order=element.time_in.substr(0, 10).split("-").reverse().join(".");
-                order_.html('<a href=../list_order/' + element.pk + ' class="prefix text-secondary mb-2"> №'+element.pk+ ' | ' + date_order + ' | ' + element.text_order + '</a>');
+                order_.html('<a href=../list_order/' + element.pk + ' class="prefix text-secondary mb-2">' + date_order + ' | ' + element.text_order + '</a>');
                 $('#order1').after(order_);
 
             }
@@ -148,8 +113,7 @@ $(document).on('click', '#link', function (e) {
 
 })
 
-</script>>
-profile
+</script>
 
 
 
