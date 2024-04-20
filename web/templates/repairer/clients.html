@@ -59,6 +59,8 @@
                             </div>
                             <div class="row h6 text-center" id="profile">
                             </div>
+                            <div class="row" id="apart">Apartments:
+                            </div>
 
                             <div class="row" id="order1">Orders:
                             </div>
@@ -87,6 +89,7 @@ $(document).on('click', '#link', function (e) {
             document.getElementById("foto1").src ='../media/'+resp.foto;
 
             b=JSON.parse(resp.orders);
+            c=JSON.parse(resp.apartment);
 
 
             let f=$('div[new="new"]');
@@ -94,18 +97,34 @@ $(document).on('click', '#link', function (e) {
                         f[i].remove();
                     }
 
+            let a=$('div[ap="ap"]');
+                    for (i = 0; i < a.length; i++) {
+                        a[i].remove();
+                    }
+
             b.forEach((element, index ) =>  {
             let order_ = $("#order1").clone();
                 order_.attr('id', 'order_'+element.pk);
                 order_.attr('new', 'new');
+                order_.attr('class', 'prefix text-secondary mb-2');
                 let date_order=element.time_in.substr(0, 10).split("-").reverse().join(".");
                 order_.html('<a href=../list_order/' + element.pk + ' class="prefix text-secondary mb-2">' + date_order + ' | ' + element.text_order + '</a>');
                 $('#order1').after(order_);
+            })
 
-            }
+            c.forEach((element, index ) =>  {
+            let ap_ = $("#apart").clone();
+                ap_.attr('id', 'ap_');
+                ap_.attr('ap', 'ap');
+                ap_.attr('class', 'prefix text-secondary mb-2');
+                console.log(element);
+                ap_.html(element.address_city+', '+element.address_street_app + ' '+element.address_num );
+                $('#apart').after(ap_);
+            })
 
-            )}
-        });
+
+         }
+    });
 
 
 

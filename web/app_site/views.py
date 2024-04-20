@@ -379,7 +379,8 @@ def client_details_json(request, **kwargs):
     data = UserProfile.objects.get(pk=request.GET.get('pk'))
     orders = OrderList.objects.filter(repairer_id=request.user, customer_id=data).values('pk','text_order', 'time_in')
     json_orders = json.dumps(list(orders), default=str)
-
+    apartment=Apartment.objects.filter(owner=data).values('pk','name','address_city', 'address_street_app', 'address_num')
+    json_apartment = json.dumps(list(apartment), default=str)
     if orders.exists():
         return JsonResponse({'pk': data.pk,
                          'name':data.customer_name,
@@ -388,6 +389,7 @@ def client_details_json(request, **kwargs):
                          'foto': str(data.foto),
                          'profile': data.profile,
                          'orders': json_orders,
+                         'apartment': json_apartment,
                          })
     else: return JsonResponse({'pk': 'None',})
 

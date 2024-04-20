@@ -43,34 +43,6 @@ class Invoice(models.Model):
         return f"{self.service_id}"
 
 
-class Apartment(models.Model):
-    """"""
-    name = models.CharField(max_length=150, verbose_name='Name', null=True, blank=True)
-    type = models.CharField(max_length=2, choices=APART_CHOICES, default='FL', null=True, blank=True,
-                                    verbose_name='Type')
-
-    owner = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True,
-                                    verbose_name='Responsible person for apartment', default='', )
-
-    address_city = models.CharField(max_length=2, choices=CITY_CHOICES, default='TB', null=True, blank=True,
-                                    verbose_name='City')
-    address_street_app = models.CharField(max_length=150, verbose_name='Street', null=True, blank=True)
-    address_num = models.CharField(max_length=10, verbose_name='House number', null=True, blank=True)
-    foto = models.ImageField(upload_to="images/appartment/", null=True, blank=True, verbose_name='Photo:')
-
-    location_longitude = models.FloatField(verbose_name='Longitude', null=True, blank=True)
-    location_latitude = models.FloatField(verbose_name='Latitude', null=True, blank=True)
-    notes = models.CharField(max_length=1500, null=True, blank=True, verbose_name='Note:')
-
-    class Meta:
-        verbose_name = 'Appartment list'
-        verbose_name_plural = 'Appartment list'
-
-    def __str__(self):
-        return f"{self.pk}-{self.name}"
-
-
-
 class UserProfile(models.Model):
     """phone city foto rating_sum rating_num user"""
     customer_name = models.CharField(max_length=50, verbose_name='Name', null=True, blank=True,)
@@ -95,6 +67,35 @@ class UserProfile(models.Model):
 
     def __str__(self):
         return f"{self.customer_name}"
+
+
+
+class Apartment(models.Model):
+    """"""
+    name = models.CharField(max_length=150, verbose_name='Name', null=True, blank=True)
+    type = models.CharField(max_length=2, choices=APART_CHOICES, default='FL', null=True, blank=True,
+                                    verbose_name='Type')
+
+    owner = models.ForeignKey(UserProfile, on_delete=models.SET_NULL, null=True, blank=True,
+                                    verbose_name='Responsible person for apartment', default='', )
+
+    address_city = models.CharField(max_length=2, choices=CITY_CHOICES, default='TB', null=True, blank=True,
+                                    verbose_name='City')
+    address_street_app = models.CharField(max_length=150, verbose_name='Street', null=True, blank=True)
+    address_num = models.CharField(max_length=10, verbose_name='House number', null=True, blank=True)
+    foto = models.ImageField(upload_to="images/appartment/", null=True, blank=True, verbose_name='Photo:')
+
+    location_longitude = models.FloatField(verbose_name='Longitude', null=True, blank=True)
+    location_latitude = models.FloatField(verbose_name='Latitude', null=True, blank=True)
+    notes = models.CharField(max_length=1500, null=True, blank=True, verbose_name='Note:')
+
+    class Meta:
+        verbose_name = 'Appartment list'
+        verbose_name_plural = 'Appartment list'
+
+    # def __str__(self):
+    #     return f"{self.pk}-{self.name}"
+
 
 
 
