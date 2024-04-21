@@ -27,7 +27,7 @@
     {% for b in i.list %}
     <div  class="row" id="">
         <div class="col-md-6">
-            <a href="{{ b.pk  }}" id="link" class="h5 " data-toggle="modal" data-target="#exampleModal"> {{ b.customer_name }} </a>
+            <a href="{{ b.pk  }}" id="link" class="h5 " data-toggle="modal" data-target="#exampleModal"> {{ b.customer_name }}</a>
         </div>
         <div class="col-md-6">
             {{ b.profile|default_if_none:"" }}

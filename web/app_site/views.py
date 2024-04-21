@@ -19,7 +19,7 @@ from .exeptions import BaseClassExeption
 from .filters import OrderFilter
 from .models import *
 from .forms import *
-from .repository import DataFromRepairerList, DataFromOrderList, DataFromInvoice
+from .repository import DataFromRepairerList, DataFromOrderList, DataFromInvoice, DataFromUserProfile
 from .utils import *
 
 logger = logging.getLogger(__name__)
@@ -67,13 +67,11 @@ class RepairerDetailInformation(BaseClassExeption, PermissionRequiredMixin, Logi
         context['profile'] = DataFromRepairerList().get_object_from_RepairerList(user=self.object)
         context['count'] = DataFromOrderList().get_number_of_orders_from_OrderList(repairer=self.request.user)
         context['sum'] = DataFromInvoice().get_amount_money_of_orders(repairer=self.request.user)
-        list_of_apppartment = OrderList.objects.filter(repairer_id=self.request.user).order_by('-time_in').values_list(
-            'apartment_id', flat=True)[0:5]
-        context['clients'] = OrderList.objects.filter(repairer_id=self.request.user).select_related('customer_id').order_by('-pk')[0:10]
+
+        context['clients'] = DataFromUserProfile().get_clients_of_orders_from_UserProfile(self.request.user)[0:10]
         context['orders'] = DataFromOrderList().get_data_from_OrderList_with_order_status(repairer=self.request.user,
                                                                                           status_of_order=['SND',
                                                                                                            'RCV'])
-
         return context
 
 
@@ -82,9 +80,7 @@ class Clients(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        list_orders = list(OrderList.objects.filter(repairer_id=self.request.user, customer_id__gt=0).values('customer_id'))  #TODO replace queryset in repository and remove "None"
-        list_orders_ = list(set(map(lambda x : x['customer_id'] , list_orders)))
-        context['clients'] = UserProfile.objects.filter(pk__in=list_orders_).values('pk', 'customer_name', 'profile').order_by('customer_name')
+        context['clients'] = DataFromUserProfile().get_clients_of_orders_from_UserProfile(self.request.user)
         return context
 
 class OwnerDetailInformation(PermissionRequiredMixin, LoginRequiredMixin, DetailView):
@@ -96,8 +92,7 @@ class OwnerDetailInformation(PermissionRequiredMixin, LoginRequiredMixin, Detail
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['profile'] = DataFromRepairerList().get_object_from_RepairerList(user=self.object)
-        context['apartments'] = Apartment.objects.filter(owner=self.object)
-        context['form_appart'] = ApartmentForm
+        context['apartments'] = Apartment.objects.filter(owner=context['profile'])
 
         return context
 

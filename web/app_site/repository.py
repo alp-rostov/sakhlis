@@ -9,6 +9,25 @@ class DataFromRepairerList:
     def get_object_from_RepairerList(self, user:User) -> UserProfile:
         return self.model.get(user=user)
 
+class DataFromUserProfile:
+
+    def __init__(self, model=UserProfile.objects):
+        self.model = model
+
+    def get_clients_of_orders_from_UserProfile(self, user:User) -> QuerySet:
+        list_orders = OrderList.objects \
+                        .values('customer_id')\
+                        .filter(repairer_id=user, customer_id__gt=0) \
+                        # .annotate(count=Count(F('pk')))
+
+        print(list_orders)
+        list_orders_unique = list(set(map(lambda x: x['customer_id'], list_orders)))
+        return (self.model \
+                .filter(pk__in=list_orders_unique)
+                .values('pk', 'customer_name', 'profile', 'foto')
+                .order_by('customer_name'))
+
+
 class DataFromOrderList:
 
     def __init__(self, model=OrderList.objects):
@@ -26,7 +45,7 @@ class DataFromOrderList:
                 .select_related('apartment_id', 'customer_id') \
                 .order_by("-pk")
 
-    def get_data_from_OrderList_with_order_status(self, repairer: User, status_of_order:list) -> QuerySet: #TODO convert  status_of_order to list
+    def get_data_from_OrderList_with_order_status(self, repairer: User, status_of_order:list) -> QuerySet:
         return self.model \
                 .filter(repairer_id=repairer, order_status__in=status_of_order) \
                 .select_related('apartment_id', 'customer_id') \
