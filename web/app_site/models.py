@@ -51,6 +51,7 @@ class UserProfile(models.Model):
                              null=True, blank=True,)
     telegram = models.CharField(max_length=25, unique=True, verbose_name='Telegram',
                              null=True, blank=True, )
+
     city = models.CharField(max_length=2, choices=CITY_CHOICES, default='TB')
     profile = models.CharField(max_length=1500, null=True, blank=True, verbose_name='About me:')
 
