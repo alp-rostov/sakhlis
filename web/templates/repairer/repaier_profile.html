@@ -17,7 +17,7 @@
                       </h4>
                       City: {{ profile.city|choice_tag:'city' }} <a href="{% url 'update-user' profile.pk %}" class="mycolor" title="изменить данные"><i class="fas fa-pen text-secondary mt-3"> </i></a>
                       <br>
-                      <img src="../media/{{ profile.foto }} " alt="Муж на час" class="rounded-circle" align="center" width="200">
+                      <img src="../media/{{ profile.foto|default_if_none:'images/none.jpg' }} " alt="Муж на час" class="rounded-circle" align="center" width="200">
                       <br>
                       Completed jobs: {{ count }}<br>
                       Income: {{ sum }}<br>
@@ -42,8 +42,8 @@
 
                     <h3>My clienrs:</h3>
                       {% for i in clients %}
-                      <img src="../media/{{i.customer_id.foto}} " width="60" class="rounded-circle">
-                       {{i.customer_id.customer_name}}<br>
+                      <img src="../media/{{i.customer_id.foto|default:'images/none.jpg'}}" width="60" class="rounded-circle">
+                       {{i.customer_id.customer_name}}
                         <hr>
                       {% endfor %}
 
