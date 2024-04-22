@@ -13,6 +13,11 @@ class OrderListAdmin(admin.ModelAdmin):
     list_filter = ('order_status', 'repairer_id', 'time_in')
     inlines = [PersonalInvoice]
 
+class FeedbackListAdmin(admin.ModelAdmin):
+    list_display = ('id', 'text_feedback', 'mark')
+    list_display_links = ('id', )
+
+
 
 class InvoiceAdmin(admin.ModelAdmin):
     list_display = ('service_id', 'order_id', 'quantity', 'price')
@@ -41,5 +46,6 @@ admin.site.register(UserProfile)
 admin.site.register(Service, ServiceAdmin)
 admin.site.register(Invoice, InvoiceAdmin)
 admin.site.register(OrderList, OrderListAdmin)
-admin.site.register(StreerTbilisi, StreetAdmin)
+admin.site.register(StreetTbilisi, StreetAdmin)
 admin.site.register(Apartment, AppartamentAdmin)
+admin.site.register(ClientFeedback, FeedbackListAdmin)

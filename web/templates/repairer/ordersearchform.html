@@ -8,21 +8,21 @@
 
 
                             {% if request.GET.work_status == 'SND' %}
-                            <a href="{% url 'list_order' %}?work_status=SND"><b>New orders</b></a> |
+                            <a href="{% url 'list_order' %}?work_status=SND"><b>New jobs</b></a> |
                             {% else %}
-                            <a href="{% url 'list_order' %}?work_status=SND">New orders</a> |
+                            <a href="{% url 'list_order' %}?work_status=SND">New jobs</a> |
                             {% endif %}
 
                             {% if request.GET.work_status == 'RCV' %}
-                            <a href="{% url 'list_order'%}?work_status=RCV"><b>Orders in progress</b></a> |
+                            <a href="{% url 'list_order'%}?work_status=RCV"><b>Jobs in progress</b></a> |
                             {% else %}
-                            <a href="{% url 'list_order'%}?work_status=RCV">Orders in progress</a> |
+                            <a href="{% url 'list_order'%}?work_status=RCV">Jobs in progress</a> |
                             {% endif %}
 
                             {% if request.GET.work_status == 'END' %}
-                            <a href="{% url 'list_order'%}?work_status=END"><b>Completed orders</b></a> |
+                            <a href="{% url 'list_order'%}?work_status=END"><b>Completed jobs</b></a> |
                             {% else %}
-                            <a href="{% url 'list_order'%}?work_status=END">Completed orders</a> |
+                            <a href="{% url 'list_order'%}?work_status=END">Completed jobs</a> |
                             {% endif %}
 
 
@@ -83,7 +83,7 @@
 <hr>
 <div align="center">
     <a href="#"  onclick="show_create_order_form(document.getElementById('form'))"
-    class="btn btn-sm btn-orange cta-btn btn-form mt-3 mb-5 " id="link_create_order_form">CREATE AN ORDER</a>
+    class="btn btn-sm btn-orange cta-btn btn-form mt-3 mb-5 " id="link_create_order_form">CREATE A JOB</a>
 </div>
 
 <script>

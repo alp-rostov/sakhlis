@@ -97,16 +97,11 @@ class Apartment(models.Model):
     # def __str__(self):
     #     return f"{self.pk}-{self.name}"
 
-
-
-
-
 class OrderList(models.Model):
     """time_in time_out repairer_id price text_order customer_name customer_phone address_city address_street_app
     address_num work_type services order_status"""
     time_in = models.DateTimeField(auto_now_add=True, verbose_name='Date of order')
     time_out = models.DateTimeField(null=True, blank=True, verbose_name='Order completion date')
-
 
     repairer_id = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True,
                                     verbose_name='Repairer', default='', )
@@ -127,8 +122,16 @@ class OrderList(models.Model):
         verbose_name = 'Order list'
         verbose_name_plural = 'Order list'
 
+class ClientFeedback(models.Model):
+    text_feedback = models.CharField(max_length=1500, verbose_name='Feedback', blank=True, null=True)
+    mark = models.IntegerField(default=0, blank=True, null=True, verbose_name='Raiting')
+    order_id = models.ForeignKey(OrderList, on_delete=models.SET_NULL, null=True, blank=True,
+                                    verbose_name='Order', default='', )
+    def __str__(self):
+        return f'From: {self.order_id.customer_id.customer_name}, Messege: {self.text_feedback}'
 
-class StreerTbilisi(models.Model):
+
+class StreetTbilisi(models.Model):
     type_street = models.CharField(max_length=50)
     name_street = models.CharField(max_length=50)
     class Meta:

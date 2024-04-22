@@ -32,9 +32,9 @@
             {{ info.time_in }} <a href="../list_order/update/{{ info.pk}}" class="fas fa-pen-square text-secondary"></a>
             {% if info.order_status == 'SND' %}
                  <a href="../changestatus?order_pk={{ info.pk}}&work_status=RCV"lh-1 id="workstatus"
-                 class="btn btn-sm btn-orange" >ACCEPT ORDER</a>
+                 class="btn btn-sm btn-orange" >ACCEPT JOB</a>
             {% elif info.order_status == 'RCV' %}
-                 <a href="../changestatus?order_pk={{ info.pk}}&work_status=END" id="workstatus" class="btn btn-sm btn-orange">Order was completed</a><br>
+                 <a href="../changestatus?order_pk={{ info.pk}}&work_status=END" id="workstatus" class="btn btn-sm btn-orange">Job was completed</a><br>
             {% elif info.order_status == 'END' %}
                 <a href="pdf/{{ info.id }}" class="btn btn-sm btn-orange">Invoice - PDF</a>
             {% endif %}
@@ -42,7 +42,7 @@
         </div>
 
         <div class="col-md-4 text-secondary mt-3" >
-            <h4><b>Order status</b></h4>
+            <h4><b>Job`s status</b></h4>
             {% if info.order_status == 'SND' %}
                 {% #work_status check_1="fas fa-check-circle about-text" check_font_1=" black-text" %}
                 {% /work_status %}

@@ -68,7 +68,7 @@ class RepairerDetailInformation(BaseClassExeption, PermissionRequiredMixin, Logi
         context['count'] = DataFromOrderList().get_number_of_orders_from_OrderList(repairer=self.request.user)
         context['sum'] = DataFromInvoice().get_amount_money_of_orders(repairer=self.request.user)
 
-        context['clients'] = DataFromUserProfile().get_clients_of_orders_from_UserProfile(self.request.user)[0:10]
+        context['feedbacks'] = ClientFeedback.objects.all()
         context['orders'] = DataFromOrderList().get_data_from_OrderList_with_order_status(repairer=self.request.user,
                                                                                           status_of_order=['SND',
                                                                                                            'RCV'])

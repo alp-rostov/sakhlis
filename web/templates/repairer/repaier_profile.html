@@ -40,10 +40,10 @@
                             {% endfor %}
                         </ul>
 
-                    <h3>My clienrs:</h3>
-                      {% for i in clients %}
-                      <img src="../media/{{i.foto|default:'images/none.jpg'}}" width="60" class="rounded-circle">
-                       {{i.customer_name}}
+                    <h3>Clients feedbacks:</h3>
+                      {% for i in feedbacks %}
+<!--                      <img src="../media/{{i.foto|default:'images/none.jpg'}}" width="60" class="rounded-circle">-->
+                       {{i}}
                         <hr>
                       {% endfor %}
 
