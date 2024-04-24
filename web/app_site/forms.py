@@ -69,39 +69,57 @@ class CustomerForm(forms.ModelForm):
 
     customer_name = forms.CharField(
         label='Your Name',
-        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Имя", 'maxlength':20}),
+        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Username", 'maxlength':20}),
         required=True
+    )
+
+    profile = forms.CharField(
+        label='About you',
+        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "About you: company, job title, etm", 'maxlength':1500}),
+        required=True
+    )
+
+    city = forms.ChoiceField(
+        choices=CITY_CHOICES,
+
+        widget=forms.RadioSelect(
+            attrs={"class": ""
+            },
+        ),
+        initial="TB"
     )
 
     phone = forms.CharField(
         label='Phone',
         widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Phone", 'type': 'tel', 'maxlength':16}),
-        required=True,
 
     )
 
     telegram = forms.CharField(
         label='Telegram',
         widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Telegram", 'maxlength':26}),
-        required=False,
 
     )
 
     class Meta:
         model = UserProfile
-        fields = ('customer_name', 'phone', 'telegram')
+        fields = ('customer_name', 'phone', 'telegram', 'profile', 'foto')
 
 
 class UserRegisterForm(UserCreationForm):
-    email = forms.EmailField(label="Email",
-                             widget=forms.EmailInput(
-                                 attrs={'placeholder': "@"}
-                                                    ),
+
+    username = forms.CharField(
+        label='Login',
+        widget=forms.TextInput(attrs={"class": "form-control",
+                                      'placeholder': "Login"}),
+                              )
+    email = forms.EmailField(
+        label="Email",
+        widget=forms.EmailInput(attrs={"class": "form-control",
+                                       'placeholder': "Email"}),
                              )
-    first_name = forms.CharField(label="FName")
-    last_name = forms.CharField(label="Sname")
-    username = forms.CharField(label="Login")
-    grope = forms.ChoiceField(
+
+    group = forms.ChoiceField(
         choices=[('owner','Owner'), ('repairer','Repairer')],
 
         widget=forms.RadioSelect(
@@ -110,16 +128,23 @@ class UserRegisterForm(UserCreationForm):
         ),
         initial="owner"
     )
+    password1 = forms.CharField(
+        label='Password',
+        widget=forms.PasswordInput(
+            attrs={ "class": "form-control", 'placeholder': "Password"      }, ),
+    )
+    password2 = forms.CharField(
 
+        widget=forms.PasswordInput(
+            attrs={"class": "form-control", 'placeholder': "Password"       }, ),
+    )
     class Meta:
         model = User
         fields = ("username",
-                  "first_name",
-                  "last_name",
                   "email",
                   "password1",
                   "password2",
-                  'grope'
+                  'group'
                   )
 
 

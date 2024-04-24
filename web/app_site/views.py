@@ -41,16 +41,21 @@ class UserRegisterView(CreateView):
     success_url = reverse_lazy('home')
     template_name = 'account/register.html'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['profile_form'] = CustomerForm
+        return context
     def form_valid(self, form):
         try:
             with transaction.atomic():
                 self.object = form.save()
-                UserProfile.objects.create(user=self.object)
                 grope = self.request.POST.get('grope')
                 my_group = Group.objects.get(name=grope)
                 my_group.user_set.add(self.object)
+                profile=CustomerForm(self.request.POST, self.request.FILES).save(commit=False)
+                profile.user=self.object
+                profile.save()
             return redirect('home')
-
         except Exception as e:
             return redirect('../404.html')
 
