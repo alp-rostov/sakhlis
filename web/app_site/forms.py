@@ -39,7 +39,7 @@ class OrderForm(forms.ModelForm):
     text_order = forms.CharField(
         label='Order`s message',
         widget=forms.TextInput(attrs={"class": "md-textarea form-control",
-                                     'placeholder': "Describe yor problem", 'maxlength':1500}),
+                                     'placeholder': "Describe your problem", 'maxlength':1500}),
         required=True
         )
 
@@ -124,20 +124,16 @@ class CustomerForm(forms.ModelForm):
 
 class OrderCustomerForm(forms.ModelForm):
 
-
     class Meta:
         model = UserProfile
         fields = ('customer_name', 'phone', 'telegram')
 
 
+class OrderForm1(forms.ModelForm):
 
-
-
-
-
-
-
-
+    class Meta:
+        model = OrderList
+        fields = '__all__'
 
 class UserRegisterForm(UserCreationForm):
 

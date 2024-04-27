@@ -119,9 +119,13 @@ class OrderCreate(BaseClassExeption, CreateView):
         if OrderCustomerForm(self.request.POST).is_valid() and ApartmentForm(self.request.POST).is_valid():
             with transaction.atomic():
 
-                if self.request.user.is_authenticated and self.request.user.groups.first().name == 'owner':  # TODO add logic
+                if self.request.user.is_authenticated and self.request.user.groups.first().name == 'owner':  # TODO add logic for owner
                     pass
                 elif self.request.user.is_authenticated and self.request.user.groups.first().name == 'repairer':
+                    customer = OrderCustomerForm(self.request.POST).save()
+                    app = ApartmentForm(self.request.POST).save()
+                    form.instance.apartment_id = app
+                    form.instance.customer_id = customer
                     form.instance.repairer_id = self.request.user
                     form.instance.order_status = 'SND'
                 else:
@@ -136,6 +140,26 @@ class OrderCreate(BaseClassExeption, CreateView):
                                      'pk': form.instance.pk,
                                      'auth': self.request.user.is_authenticated
                                      })
+
+
+
+class OrderCreatebyRepaier(BaseClassExeption, CreateView):
+    """" Add order """
+    model = OrderList
+    template_name = 'repairer/order_create_repairer.html'
+    form_class = OrderForm
+    success_url = reverse_lazy('home')
+    #
+    # def get_context_data(self, **kwargs):
+    #     context = super().get_context_data(**kwargs)
+    #     return context
+
+
+
+
+
+
+
 
 
 class OrderManagementSystem(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, ListView):
@@ -409,6 +433,14 @@ def listorder_for_order_list_paginator_json(request, **kwargs):
                        'address_num', 'location_longitude', 'location_latitude')[0:14]
     json_data = json.dumps(list(data), default=str)
     return JsonResponse(json_data, safe=False)
+
+
+@login_required
+def save_list_jobs(request, **kwargs):
+    """for ajax request """
+    print(request.POST)
+    # json_data = json.dumps(list(data), default=str)
+    return JsonResponse(request.GET, safe=False)
 
 
 @login_required

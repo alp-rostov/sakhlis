@@ -80,8 +80,16 @@
                             </div>
                             <div class="row h6 text-center" id="profile">
                             </div>
+
+
+<form method="post" action="" name="form" id="form">{% csrf_token %}
                             <div class="row" id="apart">Apartments:
                             </div>
+    <button type="submit" name="submit" class="btn btn-sm btn-orange cta-btn btn-form mt-3 mb-5 ">Send</button>
+
+      </form>
+
+
 
                             <div class="row" id="order1">Client requests:
                             </div>
@@ -138,8 +146,7 @@ $(document).on('click', '#link', function (e) {
                 ap_.attr('id', 'ap_');
                 ap_.attr('ap', 'ap');
                 ap_.attr('class', 'prefix text-secondary mb-2');
-                console.log(element);
-                ap_.html(element.address_city+', '+element.address_street_app + ' '+element.address_num );
+                ap_.html('<input type="text" name="adress" value='+ element.pk +' class="md-textarea form-control" maxlength="4">  <input type="text" name="text_order" class="md-textarea form-control" placeholder="Describe problems" maxlength="1500" required="" >  ' +element.address_city+', '+element.address_street_app + ' '+element.address_num + ' | <a href="" class="h5 mycolor">add job</a>' );
                 $('#apart').after(ap_);
             })
 
@@ -153,6 +160,32 @@ $(document).on('click', '#link', function (e) {
 
 })
 
+
+
+
+
+
+
+
+
+$(document.body).ready(function() {
+
+    $('#form').submit(function(e) {
+        e.preventDefault();
+
+
+            $.ajax({
+                url: '../save_list',
+                type: 'POST',
+                data: $(this).serialize(),
+                dataType: 'text',
+                beforeSend: function () {$("#form").html('<h3>Sending...</h3>');},
+                success: function (resp) {},
+            });
+
+    });
+});
+</script>
 </script>
 
 
