@@ -46,19 +46,18 @@ class UserRegisterView(CreateView):
         context['profile_form'] = CustomerForm
         return context
     def form_valid(self, form):
-        try:
-            with transaction.atomic():
-                self.object = form.save()
-                grope = self.request.POST.get('grope')
-                my_group = Group.objects.get(name=grope)
-                my_group.user_set.add(self.object)
-                profile=CustomerForm(self.request.POST, self.request.FILES).save(commit=False)
-                profile.user=self.object
-                profile.save()
-            return redirect('home')
-        except Exception as e:
-            return redirect('../404.html')
-
+        # try:
+        #     with transaction.atomic():
+        self.object = form.save()
+        group_ = self.request.POST.get('group')
+        my_group = Group.objects.get(name=group_)
+        my_group.user_set.add(self.object)
+        profile=CustomerForm(self.request.POST, self.request.FILES).save(commit=False)
+        profile.user=self.object
+        profile.save()
+        return redirect('home')
+        # except Exception as e:
+        #     return redirect('../404.html')
 
 class RepairerDetailInformation(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, DetailView):
     model = User

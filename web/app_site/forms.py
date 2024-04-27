@@ -103,7 +103,7 @@ class CustomerForm(forms.ModelForm):
 
     class Meta:
         model = UserProfile
-        fields = ('customer_name', 'phone', 'telegram', 'profile', 'foto')
+        fields = ('customer_name', 'phone', 'telegram', 'profile', 'foto', 'city')
 
 
 class UserRegisterForm(UserCreationForm):
