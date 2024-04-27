@@ -46,18 +46,18 @@ class UserRegisterView(CreateView):
         context['profile_form'] = CustomerForm
         return context
     def form_valid(self, form):
-        # try:
-        #     with transaction.atomic():
-        self.object = form.save()
-        group_ = self.request.POST.get('group')
-        my_group = Group.objects.get(name=group_)
-        my_group.user_set.add(self.object)
-        profile=CustomerForm(self.request.POST, self.request.FILES).save(commit=False)
-        profile.user=self.object
-        profile.save()
-        return redirect('home')
-        # except Exception as e:
-        #     return redirect('../404.html')
+        try:
+            with transaction.atomic():
+                self.object = form.save()
+                group_ = self.request.POST.get('group')
+                my_group = Group.objects.get(name=group_)
+                my_group.user_set.add(self.object)
+                profile=CustomerForm(self.request.POST, self.request.FILES).save(commit=False)
+                profile.user=self.object
+                profile.save()
+                return redirect('home')
+        except Exception as e:
+            return redirect('../404.html')
 
 class RepairerDetailInformation(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, DetailView):
     model = User
@@ -116,21 +116,26 @@ class OrderCreate(BaseClassExeption, CreateView):
         return context
 
     def form_valid(self, form):
-        if CustomerForm(self.request.POST).is_valid() and ApartmentForm(self.request.POST).is_valid():
+        if OrderCustomerForm(self.request.POST).is_valid() and ApartmentForm(self.request.POST).is_valid():
             with transaction.atomic():
-                customer = CustomerForm(self.request.POST).save()
-                app = ApartmentForm(self.request.POST).save()
-                if self.request.user.is_authenticated: # TODO add checking of belonging to group
+
+                if self.request.user.is_authenticated and self.request.user.groups.first().name == 'owner':  # TODO add logic
+                    pass
+                elif self.request.user.is_authenticated and self.request.user.groups.first().name == 'repairer':
                     form.instance.repairer_id = self.request.user
                     form.instance.order_status = 'SND'
+                else:
+                    customer = OrderCustomerForm(self.request.POST).save()
+                    app = ApartmentForm(self.request.POST).save()
                     form.instance.apartment_id = app
                     form.instance.customer_id = customer
-                form.save()
+                    form.instance.order_status = 'BEG'
 
-        return JsonResponse({'message': f'<h3>Заявка № {form.instance.pk} отправлена успешно!</h3>',
-                             'pk': form.instance.pk,
-                             'auth': self.request.user.is_authenticated
-                             })
+                form.save()
+                return JsonResponse({'message': f'<h3>Заявка № {form.instance.pk} отправлена успешно!</h3>',
+                                     'pk': form.instance.pk,
+                                     'auth': self.request.user.is_authenticated
+                                     })
 
 
 class OrderManagementSystem(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, ListView):
@@ -312,7 +317,7 @@ class OrderSearchForm(BaseClassExeption, PermissionRequiredMixin, LoginRequiredM
 class RepaierUpdate(BaseClassExeption, PermissionRequiredMixin, UpdateView):
     model = UserProfile
     template_name = 'repairer/repaier_create.html'
-    form_class = RepairerForm
+    form_class = CustomerForm
     permission_required = PERMISSION_FOR_REPAIER
 
     def get_success_url(self):

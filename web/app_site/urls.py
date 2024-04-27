@@ -10,7 +10,7 @@ urlpatterns = [
     path('list_order/<int:pk>', InvoiceCreate.as_view(), name='invoice'),
     path('list_order/update/<int:pk>', OrderUpdate.as_view(), name='update'),
     path('list_order/pdf/<int:order_pk>', CreateIvoicePDF, name='invoice_pdf'),
-
+    path('update-user/<int:pk>', RepaierUpdate.as_view(), name='update-user'),
 
     path('add', OrderAddRepaier, name='add_repairer'),
     path('invoice/delete-order/<int:pk>', OrderDelete.as_view(), name='delete-order'),
@@ -26,7 +26,7 @@ urlpatterns = [
 
     path('stat/', Statistica.as_view(), name='stat'),
     path('user/<int:pk>', RepairerDetailInformation.as_view(), name='user'),
-    path('update-user/<int:pk>', RepaierUpdate.as_view(), name='update-user'),
+
 
 
     path('owner/<int:pk>', OwnerDetailInformation.as_view(), name='owner'),

@@ -106,6 +106,39 @@ class CustomerForm(forms.ModelForm):
         fields = ('customer_name', 'phone', 'telegram', 'profile', 'foto', 'city')
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class OrderCustomerForm(forms.ModelForm):
+
+
+    class Meta:
+        model = UserProfile
+        fields = ('customer_name', 'phone', 'telegram')
+
+
+
+
+
+
+
+
+
+
+
 class UserRegisterForm(UserCreationForm):
 
     username = forms.CharField(
@@ -169,11 +202,3 @@ class InvoiceForm(forms.ModelForm):
     class Meta:
         model = Invoice
         fields = ('service_id',   'quantity', 'price')
-
-
-class RepairerForm(forms.ModelForm):
-
-    class Meta:
-        model = UserProfile
-        fields = ('phone', 'telegram', 'profile', 'city', 'foto')
-
