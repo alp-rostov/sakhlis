@@ -88,7 +88,7 @@
       <input type="hidden" name="form-INITIAL_FORMS" id="id_form-INITIAL_FORMS" value="0">
       <input type="hidden" name="form-MIN_NUM_FORMS" id="id_form-MIN_NUM_FORMS">
       <input type="hidden" name="form-MAX_NUM_FORMS" id="id_form-MAX_NUM_FORMS"></div>
-
+      <input type="input" name="customer_id" id="customer_id" value="">
 
 
                             <div class="row" id="apart">Apartments:
@@ -124,6 +124,7 @@ $(document).on('click', '#link', function (e) {
             document.getElementById("customer_telegram").innerHTML = ' '+resp.telegram;
             document.getElementById("profile").innerHTML = resp.profile;
             document.getElementById("foto1").src ='../media/'+resp.foto;
+            document.getElementById("customer_id").value =resp.pk;
 
             b=JSON.parse(resp.orders);
             c=JSON.parse(resp.apartment);
@@ -154,7 +155,7 @@ $(document).on('click', '#link', function (e) {
                 ap_.attr('id', 'ap_');
                 ap_.attr('ap', 'ap');
                 ap_.attr('class', 'prefix text-secondary mb-2');
-                ap_.html('<input type="text" name="form-'+index+'-apartment_id" id="id_form-'+index+'-apartment_id" value='+ element.pk +' class="md-textarea form-control" maxlength="4">  <input type="text" id="id_form-'+index+'-text_order" name="form-'+index+'-text_order" class="md-textarea form-control" placeholder="Describe problems" maxlength="1500">  ' +element.address_city+', '+element.address_street_app + ' '+element.address_num + ' | <a href="" class="h5 mycolor">add job</a>' );
+                ap_.html('<input type="text" name="form-'+index+'-apartment_id" id="id_form-'+index+'-apartment_id" value='+ element.pk +'> <input type="text" id="id_form-'+index+'-text_order" name="form-'+index+'-text_order" >  ' +element.address_city+', '+element.address_street_app + ' '+element.address_num + ' | <a href="" class="h5 mycolor">add job</a>' );
                 $('#apart').after(ap_);
             })
 
@@ -187,7 +188,7 @@ $(document.body).ready(function() {
                 data: $(this).serialize(),
                 dataType: 'text',
                 beforeSend: function () {$("#form").html('<h3>Sending...</h3>');},
-                success: function (resp) {},
+                success: function (resp) {window.location.href = '/list_order?work_status=SND'},
             });
 
     });
