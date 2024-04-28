@@ -444,8 +444,13 @@ def save_list_jobs(request, **kwargs):
     formset = FormSet_(request.POST).save(commit=False)
     if formset:
         for instance in formset:
-            instance.repairer_id = request.user
-            instance.save()
+            print(instance.text_order)
+            if instance.text_order:
+                instance.repairer_id = request.user
+                # print(request.POST['client_pk'])
+                # # instance.customer_id = UserProfile.objects.get(pk=request.POST.get('client_pk'))
+
+                instance.save()
 
     print(formset)
     return JsonResponse(request.GET, safe=False)
