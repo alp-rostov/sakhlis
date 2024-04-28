@@ -439,7 +439,15 @@ def listorder_for_order_list_paginator_json(request, **kwargs):
 def save_list_jobs(request, **kwargs):
     """for ajax request """
     print(request.POST)
-    # json_data = json.dumps(list(data), default=str)
+    FormSet_ = modelformset_factory(OrderList, fields=('text_order','apartment_id'))
+
+    formset = FormSet_(request.POST).save(commit=False)
+    if formset:
+        for instance in formset:
+            instance.repairer_id = request.user
+            instance.save()
+
+    print(formset)
     return JsonResponse(request.GET, safe=False)
 
 
