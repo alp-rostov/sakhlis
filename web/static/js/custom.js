@@ -58,6 +58,9 @@ function show_create_order_form(form) {
     }
 }
 
+
+
+
 /* ================ using in templates orderlist for paginator ================ */
 
 function add_order_in_html_object(r) {

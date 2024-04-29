@@ -88,7 +88,7 @@
       <input type="hidden" name="form-INITIAL_FORMS" id="id_form-INITIAL_FORMS" value="0">
       <input type="hidden" name="form-MIN_NUM_FORMS" id="id_form-MIN_NUM_FORMS">
       <input type="hidden" name="form-MAX_NUM_FORMS" id="id_form-MAX_NUM_FORMS"></div>
-      <input type="input" name="customer_id" id="customer_id" value="">
+      <input type="hidden" name="customer_id" id="customer_id" value="">
 
 
                             <div class="row" id="apart">Apartments:
@@ -155,7 +155,7 @@ $(document).on('click', '#link', function (e) {
                 ap_.attr('id', 'ap_');
                 ap_.attr('ap', 'ap');
                 ap_.attr('class', 'prefix text-secondary mb-2');
-                ap_.html('<input type="text" name="form-'+index+'-apartment_id" id="id_form-'+index+'-apartment_id" value='+ element.pk +'> <input type="text" id="id_form-'+index+'-text_order" name="form-'+index+'-text_order" >  ' +element.address_city+', '+element.address_street_app + ' '+element.address_num + ' | <a href="" class="h5 mycolor">add job</a>' );
+                ap_.html(element.address_city+', '+element.address_street_app + ' '+element.address_num + '<input type="hidden" name="form-'+index+'-apartment_id" id="id_form-'+index+'-apartment_id" value='+ element.pk +'> | <a class="mycolor" href="#" onclick=show_input_form(document.getElementById("id_form-'+index+'-text_order"))>add job</a><br><input hidden type="text" id="id_form-'+index+'-text_order" name="form-'+index+'-text_order" placeholder="Input your job">');
                 $('#apart').after(ap_);
             })
 
@@ -167,13 +167,6 @@ $(document).on('click', '#link', function (e) {
 
 
 })
-
-
-
-
-
-
-
 
 
 $(document.body).ready(function() {
@@ -194,6 +187,15 @@ $(document.body).ready(function() {
     });
 });
 </script>
+
+<script>
+
+function show_input_form(input) {
+if (input.hidden == false)  {input.hidden = true;}
+
+else {input.hidden = false;}
+
+}
 </script>
 
 
