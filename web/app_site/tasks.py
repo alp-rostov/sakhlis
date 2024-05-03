@@ -5,7 +5,7 @@ from celery import shared_task
 from django.contrib.auth.models import User
 from django.shortcuts import get_object_or_404
 
-from .models import OrderList, UserProfile
+from .models import OrderList, Repairer
 from .utils import get_telegram_button, Location
 
 TOKEN = os.environ.get('TOKEN')

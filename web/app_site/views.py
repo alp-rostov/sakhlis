@@ -252,7 +252,7 @@ class OrderSearchForm(BaseClassExeption, PermissionRequiredMixin,  LoginRequired
 
 
 class RepaierUpdate(BaseClassExeption, PermissionRequiredMixin, UpdateView):
-    model = UserProfile
+    model = Repairer
     template_name = 'repairer/repaier_create.html'
     form_class = RepairerForm
     permission_required = PERMISSION_FOR_REPAIER
