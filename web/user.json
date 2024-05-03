@@ -1,0 +1,4173 @@
+Manage: Django loaded up in setting mode : Development
+[
+{
+  "model": "app_site.userprofile",
+  "pk": 881,
+  "fields": {
+    "customer_name": "Бухарибар -Фокусник",
+    "phone": "79680777996",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 882,
+  "fields": {
+    "customer_name": "Лия",
+    "phone": "995598313311",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 883,
+  "fields": {
+    "customer_name": "Белорус",
+    "phone": "@takeiteasyguy",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 884,
+  "fields": {
+    "customer_name": "Елена_Америка",
+    "phone": "995591050817",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 885,
+  "fields": {
+    "customer_name": "Елена",
+    "phone": "995568693480",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 886,
+  "fields": {
+    "customer_name": "Левон",
+    "phone": "995511205077",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 887,
+  "fields": {
+    "customer_name": "Ирина програмист",
+    "phone": "995511112059",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 888,
+  "fields": {
+    "customer_name": "Максим",
+    "phone": "995500501710",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 889,
+  "fields": {
+    "customer_name": "Айтишники волосатый Никита",
+    "phone": "-",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 890,
+  "fields": {
+    "customer_name": "Катя",
+    "phone": "79655949428",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 891,
+  "fields": {
+    "customer_name": "Павел - бухари клуб",
+    "phone": "79811005555",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 892,
+  "fields": {
+    "customer_name": "Левон",
+    "phone": "995511205077",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 893,
+  "fields": {
+    "customer_name": "Елена_Америка",
+    "phone": "995591050817",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 894,
+  "fields": {
+    "customer_name": "От Леси",
+    "phone": "79647650290",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 895,
+  "fields": {
+    "customer_name": "Станислав",
+    "phone": "-",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 896,
+  "fields": {
+    "customer_name": "Антон",
+    "phone": "955585890772",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 897,
+  "fields": {
+    "customer_name": "Игорь массаж",
+    "phone": "-",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 898,
+  "fields": {
+    "customer_name": "Денис",
+    "phone": "---",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 899,
+  "fields": {
+    "customer_name": "Антон",
+    "phone": "995592567997",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 900,
+  "fields": {
+    "customer_name": "Данил",
+    "phone": "-",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 901,
+  "fields": {
+    "customer_name": "-",
+    "phone": "-",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 902,
+  "fields": {
+    "customer_name": "Игорь массаж",
+    "phone": "995522220598",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 903,
+  "fields": {
+    "customer_name": "-",
+    "phone": "79144263582",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 904,
+  "fields": {
+    "customer_name": "Caucasus Translations",
+    "phone": "995593128545",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 905,
+  "fields": {
+    "customer_name": "-",
+    "phone": "995599004152",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 906,
+  "fields": {
+    "customer_name": "-",
+    "phone": "995511188451",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 907,
+  "fields": {
+    "customer_name": "Григорий",
+    "phone": "-",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 908,
+  "fields": {
+    "customer_name": "Нана  Дзава",
+    "phone": "568821413",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 909,
+  "fields": {
+    "customer_name": "-",
+    "phone": "79284724464",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 910,
+  "fields": {
+    "customer_name": "Зураб Сванидзе",
+    "phone": "-",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 911,
+  "fields": {
+    "customer_name": "Светлана",
+    "phone": "558102592",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 912,
+  "fields": {
+    "customer_name": "Отарк Кабисов",
+    "phone": "-",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 913,
+  "fields": {
+    "customer_name": "Андрей Тешков",
+    "phone": "-",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 914,
+  "fields": {
+    "customer_name": "Oksana",
+    "phone": "222222222",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 915,
+  "fields": {
+    "customer_name": "Екатерина",
+    "phone": "79647650290",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 916,
+  "fields": {
+    "customer_name": "-",
+    "phone": "99551118539",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 917,
+  "fields": {
+    "customer_name": "Влад",
+    "phone": "-",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 918,
+  "fields": {
+    "customer_name": "денис",
+    "phone": "995591705261",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 919,
+  "fields": {
+    "customer_name": "-",
+    "phone": "995574781449",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 920,
+  "fields": {
+    "customer_name": "Евгений Попов",
+    "phone": "-",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 921,
+  "fields": {
+    "customer_name": "Антон кудинов",
+    "phone": "972559635870",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 922,
+  "fields": {
+    "customer_name": "-",
+    "phone": "375447996453",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 923,
+  "fields": {
+    "customer_name": "-",
+    "phone": "995558720042",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 924,
+  "fields": {
+    "customer_name": "-",
+    "phone": "995551002593",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 925,
+  "fields": {
+    "customer_name": "Даня Алексеев",
+    "phone": "-",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 926,
+  "fields": {
+    "customer_name": "Сергей",
+    "phone": "995599891823",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 927,
+  "fields": {
+    "customer_name": "Сергей Черкасский",
+    "phone": "-",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 928,
+  "fields": {
+    "customer_name": "Нина",
+    "phone": "-",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 929,
+  "fields": {
+    "customer_name": "Тигран",
+    "phone": "-",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 930,
+  "fields": {
+    "customer_name": "-",
+    "phone": "995511274211",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 931,
+  "fields": {
+    "customer_name": "Тимур",
+    "phone": "@Tkiss13",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 932,
+  "fields": {
+    "customer_name": "-",
+    "phone": "-",
+    "telegram": "@vasoberulava",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 933,
+  "fields": {
+    "customer_name": "-",
+    "phone": "@mindov3rmatter",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 934,
+  "fields": {
+    "customer_name": "Александр",
+    "phone": "995598112899",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 935,
+  "fields": {
+    "customer_name": "Максим",
+    "phone": "@mx3457",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 936,
+  "fields": {
+    "customer_name": "Людмила Гаевая",
+    "phone": "-",
+    "telegram": "@Ludmila_Gaevaya",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 937,
+  "fields": {
+    "customer_name": "Vekiliks",
+    "phone": "@Vekiliks",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 938,
+  "fields": {
+    "customer_name": "Максим",
+    "phone": "995 511 146 208",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 939,
+  "fields": {
+    "customer_name": "Юля",
+    "phone": "@BolonikovaJulia",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 940,
+  "fields": {
+    "customer_name": "Melike Bozkurt",
+    "phone": "@Melikebozkurt",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 941,
+  "fields": {
+    "customer_name": "Ария",
+    "phone": "@arikzolala",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 942,
+  "fields": {
+    "customer_name": "Ваня и Gia",
+    "phone": "995557392495",
+    "telegram": "Gia_GG",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 943,
+  "fields": {
+    "customer_name": "Катя",
+    "phone": "7 965 594 9428",
+    "telegram": "@edukate_eng",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 944,
+  "fields": {
+    "customer_name": "-",
+    "phone": "995558248605",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 945,
+  "fields": {
+    "customer_name": "-",
+    "phone": "77071015684",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 946,
+  "fields": {
+    "customer_name": "@Egrka",
+    "phone": "@Egrka",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 947,
+  "fields": {
+    "customer_name": "Даниил Карпенко",
+    "phone": "@techno_boggart",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 948,
+  "fields": {
+    "customer_name": "Hanna",
+    "phone": "@anrcn",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 949,
+  "fields": {
+    "customer_name": "-",
+    "phone": "995551125832",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 950,
+  "fields": {
+    "customer_name": "-",
+    "phone": "79817257726",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 951,
+  "fields": {
+    "customer_name": "Анна",
+    "phone": "@annafawn",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 952,
+  "fields": {
+    "customer_name": "Звукозапись",
+    "phone": "@Qwerty132333",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 953,
+  "fields": {
+    "customer_name": "-",
+    "phone": "995591065534",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 954,
+  "fields": {
+    "customer_name": "-",
+    "phone": "995599480104",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 955,
+  "fields": {
+    "customer_name": "-",
+    "phone": "79046058860",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 956,
+  "fields": {
+    "customer_name": "-",
+    "phone": "998917917688",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 957,
+  "fields": {
+    "customer_name": "Regina DushaRishy",
+    "phone": "995551176558",
+    "telegram": "dusharishy",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 958,
+  "fields": {
+    "customer_name": "Артем",
+    "phone": "@ArtTarot",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 959,
+  "fields": {
+    "customer_name": "Александр",
+    "phone": "995574237129",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 960,
+  "fields": {
+    "customer_name": "-",
+    "phone": "568557722",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 961,
+  "fields": {
+    "customer_name": "Елена",
+    "phone": "@Elena_ESS",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 962,
+  "fields": {
+    "customer_name": "Slav Израиль",
+    "phone": "568557722",
+    "telegram": "staseeker",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 963,
+  "fields": {
+    "customer_name": "Ангелина-",
+    "phone": "995 593 234 641",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 964,
+  "fields": {
+    "customer_name": "MTD",
+    "phone": "-",
+    "telegram": "@Destinyga",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 965,
+  "fields": {
+    "customer_name": "Jemmiha",
+    "phone": "551580522",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 966,
+  "fields": {
+    "customer_name": "-",
+    "phone": "995598581607",
+    "telegram": "-",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 967,
+  "fields": {
+    "customer_name": "Vitaly Pavlenko",
+    "phone": "-",
+    "telegram": "vitalypavlenko",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 968,
+  "fields": {
+    "customer_name": "Д",
+    "phone": "-",
+    "telegram": "aaaaaaaaaaaaki",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 969,
+  "fields": {
+    "customer_name": "-",
+    "phone": "995555724983",
+    "telegram": "-",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 970,
+  "fields": {
+    "customer_name": "Gridcat QA",
+    "phone": "995591017186",
+    "telegram": "Gridcat_QA",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 971,
+  "fields": {
+    "customer_name": "Yulia",
+    "phone": "995 599 994 357",
+    "telegram": "yuliamanko",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 972,
+  "fields": {
+    "customer_name": "Vadim Marin",
+    "phone": "995598581607",
+    "telegram": "Imandra_calls",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 973,
+  "fields": {
+    "customer_name": "Денис",
+    "phone": "79654090478",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 974,
+  "fields": {
+    "customer_name": "Mariam Baimuradova",
+    "phone": "7 951 385 0552",
+    "telegram": "MariZelenskaya",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 975,
+  "fields": {
+    "customer_name": "-",
+    "phone": "-",
+    "telegram": "jamila_023",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 976,
+  "fields": {
+    "customer_name": "-",
+    "phone": "995599988493",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 977,
+  "fields": {
+    "customer_name": "-",
+    "phone": "79001334098",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 978,
+  "fields": {
+    "customer_name": "Катя",
+    "phone": "7 965 594 9428",
+    "telegram": "edukate_eng",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 979,
+  "fields": {
+    "customer_name": "Максим",
+    "phone": "995565655415",
+    "telegram": "-",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 980,
+  "fields": {
+    "customer_name": "Никита",
+    "phone": "-",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 981,
+  "fields": {
+    "customer_name": "-",
+    "phone": "995555377514",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 982,
+  "fields": {
+    "customer_name": "-",
+    "phone": "995555724983",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 983,
+  "fields": {
+    "customer_name": "Карина",
+    "phone": "-",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 984,
+  "fields": {
+    "customer_name": "Behrouz Golestane",
+    "phone": "995593187786",
+    "telegram": "vvnbvb",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 985,
+  "fields": {
+    "customer_name": "Ира",
+    "phone": "598279548",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 986,
+  "fields": {
+    "customer_name": "Maklad",
+    "phone": "599456882",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 987,
+  "fields": {
+    "customer_name": "Роман",
+    "phone": "995 555 10 29 8",
+    "telegram": "7 903 611 8379",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 988,
+  "fields": {
+    "customer_name": "Massage Studio in Tb",
+    "phone": "995599231833",
+    "telegram": "+995599231833",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 989,
+  "fields": {
+    "customer_name": "Сад давида",
+    "phone": "995591023291",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 990,
+  "fields": {
+    "customer_name": "Валерия",
+    "phone": "-",
+    "telegram": "lerainlaw",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 991,
+  "fields": {
+    "customer_name": "-",
+    "phone": "995568104888",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 992,
+  "fields": {
+    "customer_name": "Анна",
+    "phone": "375447996463",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 993,
+  "fields": {
+    "customer_name": "-",
+    "phone": "-",
+    "telegram": "HedgehogInTheFogg",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 994,
+  "fields": {
+    "customer_name": "Slav Израиль",
+    "phone": "-",
+    "telegram": "staseeker",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 995,
+  "fields": {
+    "customer_name": "Иван",
+    "phone": "79197668991",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 996,
+  "fields": {
+    "customer_name": "Матвей",
+    "phone": "995591024854",
+    "telegram": "makfruit",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 997,
+  "fields": {
+    "customer_name": "Джемико",
+    "phone": "-",
+    "telegram": "Jemiko17",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 998,
+  "fields": {
+    "customer_name": "диана",
+    "phone": "995595505485",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 999,
+  "fields": {
+    "customer_name": "Natalia Kazarina",
+    "phone": "995591075639",
+    "telegram": "+972559170517",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1000,
+  "fields": {
+    "customer_name": "Александр",
+    "phone": "995599221069",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1001,
+  "fields": {
+    "customer_name": "Николай",
+    "phone": "-",
+    "telegram": "Araperi",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1002,
+  "fields": {
+    "customer_name": "Алеся",
+    "phone": "995511103694",
+    "telegram": "alesyamasloo",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1003,
+  "fields": {
+    "customer_name": "Alena",
+    "phone": "-",
+    "telegram": "plexuss",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1004,
+  "fields": {
+    "customer_name": "Ahmed Jabar",
+    "phone": "46703567861",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1005,
+  "fields": {
+    "customer_name": "Sergey Vavilov",
+    "phone": "-",
+    "telegram": "sergey_vavilov",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1006,
+  "fields": {
+    "customer_name": "Вангоги",
+    "phone": "99556880033",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1007,
+  "fields": {
+    "customer_name": "-",
+    "phone": "995568880033",
+    "telegram": "+995568880033",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1008,
+  "fields": {
+    "customer_name": "Artem",
+    "phone": "-",
+    "telegram": "ArtTarot",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1009,
+  "fields": {
+    "customer_name": "Olga Perezhigina",
+    "phone": "-",
+    "telegram": "+971506965219",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1010,
+  "fields": {
+    "customer_name": "Olga Perezhigina",
+    "phone": "",
+    "telegram": "+971506965219",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1011,
+  "fields": {
+    "customer_name": "-",
+    "phone": "79214271882",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1012,
+  "fields": {
+    "customer_name": "Вероника",
+    "phone": "995511137709",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1013,
+  "fields": {
+    "customer_name": "Slav Израиль",
+    "phone": "568557722",
+    "telegram": "staseeke",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1014,
+  "fields": {
+    "customer_name": "-",
+    "phone": "79654090478",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1015,
+  "fields": {
+    "customer_name": "-",
+    "phone": "-",
+    "telegram": "gigu4i",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1016,
+  "fields": {
+    "customer_name": "Zyrab",
+    "phone": "-",
+    "telegram": "zirrrav",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1017,
+  "fields": {
+    "customer_name": "Петр",
+    "phone": "955960445887",
+    "telegram": "+955960445887",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1018,
+  "fields": {
+    "customer_name": "Vasia",
+    "phone": "995455899964",
+    "telegram": "lerainlaw",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1019,
+  "fields": {
+    "customer_name": "Тимур",
+    "phone": "995 551 588 210",
+    "telegram": "+995551588210",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1020,
+  "fields": {
+    "customer_name": "Артем",
+    "phone": "-",
+    "telegram": "Almaz5200",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1021,
+  "fields": {
+    "customer_name": "ДОДО",
+    "phone": "593762764",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1022,
+  "fields": {
+    "customer_name": "-",
+    "phone": "995591751894",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1023,
+  "fields": {
+    "customer_name": "-",
+    "phone": "79060144411",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1024,
+  "fields": {
+    "customer_name": "Golden Hands",
+    "phone": "995551125832",
+    "telegram": "+995599231833",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1025,
+  "fields": {
+    "customer_name": "Olha Bespalova",
+    "phone": "-",
+    "telegram": "+380988224026",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1026,
+  "fields": {
+    "customer_name": "Vazha",
+    "phone": "595012840",
+    "telegram": "mayz888",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1027,
+  "fields": {
+    "customer_name": "Алекс",
+    "phone": "995467655415",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1028,
+  "fields": {
+    "customer_name": "-",
+    "phone": "995598701803",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1029,
+  "fields": {
+    "customer_name": "-",
+    "phone": "995514297722",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1030,
+  "fields": {
+    "customer_name": "Александр",
+    "phone": "995551588191",
+    "telegram": "freshcot",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1031,
+  "fields": {
+    "customer_name": "Aleksandr K",
+    "phone": "-",
+    "telegram": "kenobidark",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1032,
+  "fields": {
+    "customer_name": "-",
+    "phone": "995571128392",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1033,
+  "fields": {
+    "customer_name": "Диана",
+    "phone": "-",
+    "telegram": "di_mam",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1034,
+  "fields": {
+    "customer_name": "-",
+    "phone": "995599930910",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1035,
+  "fields": {
+    "customer_name": "-",
+    "phone": "79253439512",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1036,
+  "fields": {
+    "customer_name": "-",
+    "phone": "79266181117",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1037,
+  "fields": {
+    "customer_name": "Катя",
+    "phone": "79655949428",
+    "telegram": "edukate_eng",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1038,
+  "fields": {
+    "customer_name": "Евгений Попов",
+    "phone": "-",
+    "telegram": "eepopov",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1039,
+  "fields": {
+    "customer_name": "Ирина Кириченко",
+    "phone": "",
+    "telegram": "+380954484583",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1040,
+  "fields": {
+    "customer_name": "Елена",
+    "phone": "995568693480",
+    "telegram": "+77765080202",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1041,
+  "fields": {
+    "customer_name": "Максим",
+    "phone": "",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1042,
+  "fields": {
+    "customer_name": "-",
+    "phone": "",
+    "telegram": "jamila_023",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1043,
+  "fields": {
+    "customer_name": "Niko Tatarashvili",
+    "phone": "",
+    "telegram": "Niitsmee",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1044,
+  "fields": {
+    "customer_name": "Илья",
+    "phone": "",
+    "telegram": "livinginthemoment1",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1045,
+  "fields": {
+    "customer_name": "Зураб Сванидзе",
+    "phone": "",
+    "telegram": "ZURABSVANIDZE",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1046,
+  "fields": {
+    "customer_name": "-",
+    "phone": "995599719971",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1047,
+  "fields": {
+    "customer_name": "Артур",
+    "phone": "",
+    "telegram": "Artur_iam",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1048,
+  "fields": {
+    "customer_name": "Valeriy Demin",
+    "phone": "995571230344",
+    "telegram": "Demin_Valerii",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1049,
+  "fields": {
+    "customer_name": "Valeriy Kolganov KLM",
+    "phone": "",
+    "telegram": "vakolganov",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1050,
+  "fields": {
+    "customer_name": "Денис",
+    "phone": "375447297490",
+    "telegram": "redmate20",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1051,
+  "fields": {
+    "customer_name": "-",
+    "phone": "",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1052,
+  "fields": {
+    "customer_name": "Дарья Серегина",
+    "phone": "",
+    "telegram": "dashaseregina",
+    "city": "BT",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1053,
+  "fields": {
+    "customer_name": "А",
+    "phone": "79298414777",
+    "telegram": "fullferrum",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1054,
+  "fields": {
+    "customer_name": "Ппвел зураб",
+    "phone": "79151949951",
+    "telegram": "vinogradovpi",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1055,
+  "fields": {
+    "customer_name": "Eu Dm",
+    "phone": "79617932211",
+    "telegram": "tiagma",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1056,
+  "fields": {
+    "customer_name": "Галина Николаевна",
+    "phone": "995599719971",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1057,
+  "fields": {
+    "customer_name": "-",
+    "phone": "995557523211",
+    "telegram": "AAn78red",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1058,
+  "fields": {
+    "customer_name": "ilya.kuznetsov",
+    "phone": "-",
+    "telegram": "kuznetsov_fromwonderland",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1059,
+  "fields": {
+    "customer_name": "Melike Bozkurt",
+    "phone": "905301235636",
+    "telegram": "Melikebozkurt",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1060,
+  "fields": {
+    "customer_name": "Дарья Колганова",
+    "phone": "79852217967",
+    "telegram": "darya_kolganova",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1061,
+  "fields": {
+    "customer_name": "Елена",
+    "phone": "Elena_ESS",
+    "telegram": "Elena_ESS",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1062,
+  "fields": {
+    "customer_name": "-",
+    "phone": "99555478962",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1063,
+  "fields": {
+    "customer_name": "-",
+    "phone": "77714887198",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1064,
+  "fields": {
+    "customer_name": "Катя",
+    "phone": "796655949428",
+    "telegram": "edukate_eng",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1065,
+  "fields": {
+    "customer_name": "кинотеатр",
+    "phone": "79298414777",
+    "telegram": "fullferrum",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1066,
+  "fields": {
+    "customer_name": "Aleksandr Fokin",
+    "phone": "",
+    "telegram": "AlFokin",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1067,
+  "fields": {
+    "customer_name": "Aliaksei Pauliushcha",
+    "phone": "",
+    "telegram": "zoom7122",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1068,
+  "fields": {
+    "customer_name": "Елена",
+    "phone": "",
+    "telegram": "all_day_all_ni9ht",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1069,
+  "fields": {
+    "customer_name": "gnomi rouge",
+    "phone": "",
+    "telegram": "gnomi_rouge",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1070,
+  "fields": {
+    "customer_name": "-",
+    "phone": "995591419133",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1071,
+  "fields": {
+    "customer_name": "Кинотеатр",
+    "phone": "79298414777",
+    "telegram": "fullferrum",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1072,
+  "fields": {
+    "customer_name": "Анастасия",
+    "phone": "598442373",
+    "telegram": "staymiz",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1073,
+  "fields": {
+    "customer_name": "-",
+    "phone": "436601213265",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1074,
+  "fields": {
+    "customer_name": "Дарья",
+    "phone": "",
+    "telegram": "norm_teacher",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1075,
+  "fields": {
+    "customer_name": "Andrew Zakharov",
+    "phone": "375293704070",
+    "telegram": "vilbak1",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1076,
+  "fields": {
+    "customer_name": "Mary",
+    "phone": "",
+    "telegram": "dmtrvmariia",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1077,
+  "fields": {
+    "customer_name": "Саша",
+    "phone": "995599506199",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1078,
+  "fields": {
+    "customer_name": "-",
+    "phone": "995579292005",
+    "telegram": "-",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1079,
+  "fields": {
+    "customer_name": "Сергей",
+    "phone": "995597715976",
+    "telegram": "s_Kudria",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1080,
+  "fields": {
+    "customer_name": "-",
+    "phone": "-",
+    "telegram": "NA4283",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1081,
+  "fields": {
+    "customer_name": "Zurab Svanidze",
+    "phone": "-",
+    "telegram": "ZURABSVANIDZE",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1082,
+  "fields": {
+    "customer_name": "Artyom Mirolyubov",
+    "phone": "-",
+    "telegram": "fak3user",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1083,
+  "fields": {
+    "customer_name": "Анастасия",
+    "phone": "-",
+    "telegram": "NastikAgafonova",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1084,
+  "fields": {
+    "customer_name": "Анна",
+    "phone": "-",
+    "telegram": "Anna2124",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1085,
+  "fields": {
+    "customer_name": "George",
+    "phone": "995599037916",
+    "telegram": "Tu6epuyM",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1086,
+  "fields": {
+    "customer_name": "Nabil Moubarak",
+    "phone": "995551600716",
+    "telegram": "+995551600716",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1087,
+  "fields": {
+    "customer_name": "Кирилл Макаревич",
+    "phone": "-",
+    "telegram": "kirylMa",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1088,
+  "fields": {
+    "customer_name": "ეvgeny",
+    "phone": "-",
+    "telegram": "eeevvvggg13",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1089,
+  "fields": {
+    "customer_name": "Александр",
+    "phone": "995574237129",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1090,
+  "fields": {
+    "customer_name": "Nona",
+    "phone": "599062940",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1091,
+  "fields": {
+    "customer_name": "Ivan Solovyan",
+    "phone": "-",
+    "telegram": "ivansolovyan",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1092,
+  "fields": {
+    "customer_name": "Egor Sidorenko",
+    "phone": "-",
+    "telegram": "Ega_go",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1093,
+  "fields": {
+    "customer_name": "Евгений",
+    "phone": "-",
+    "telegram": "e_drozdov",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1094,
+  "fields": {
+    "customer_name": "Олег Гоча",
+    "phone": "995591687350",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1095,
+  "fields": {
+    "customer_name": "Дарья",
+    "phone": "-",
+    "telegram": "norm_teacher",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1096,
+  "fields": {
+    "customer_name": "Ilya.kuznetsov",
+    "phone": "-",
+    "telegram": "kuznetsov_fromwonderland",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1097,
+  "fields": {
+    "customer_name": "Tim Kiselev",
+    "phone": "79259010013",
+    "telegram": "Tkiss13",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1098,
+  "fields": {
+    "customer_name": "BLANCA NERA",
+    "phone": "-",
+    "telegram": "BLANCA_NERA",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1099,
+  "fields": {
+    "customer_name": "-",
+    "phone": "995555357808",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1100,
+  "fields": {
+    "customer_name": "Yury GERASIMOV",
+    "phone": "-",
+    "telegram": "ug2004",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1101,
+  "fields": {
+    "customer_name": "Дарья Серегина",
+    "phone": "-",
+    "telegram": "dashaseregina",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1102,
+  "fields": {
+    "customer_name": "Alyona Valiullina",
+    "phone": "995591758260",
+    "telegram": "vallalyona",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1103,
+  "fields": {
+    "customer_name": "Nikolai",
+    "phone": "-",
+    "telegram": "NikSNikSNikS",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1104,
+  "fields": {
+    "customer_name": "-",
+    "phone": "995579359712",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1105,
+  "fields": {
+    "customer_name": "Marat",
+    "phone": "995555436645",
+    "telegram": "AzGeo11",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1106,
+  "fields": {
+    "customer_name": "Daniil Izotov",
+    "phone": "995591321019",
+    "telegram": "daniil_izotov",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1107,
+  "fields": {
+    "customer_name": "Viktoria K",
+    "phone": "-",
+    "telegram": "DisRM",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1108,
+  "fields": {
+    "customer_name": "Vardan Manucharyan",
+    "phone": "995599431604",
+    "telegram": "vmanucharyan",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1109,
+  "fields": {
+    "customer_name": "Tamuna",
+    "phone": "-",
+    "telegram": "Tamunatam",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1110,
+  "fields": {
+    "customer_name": "Gia",
+    "phone": "995574902750",
+    "telegram": "+380505916301",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1111,
+  "fields": {
+    "customer_name": "Anastasiya Safarova",
+    "phone": "995591249364",
+    "telegram": "aasafarova",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1112,
+  "fields": {
+    "customer_name": "الحررريف",
+    "phone": "-",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1113,
+  "fields": {
+    "customer_name": "Андрей Тешков",
+    "phone": "-",
+    "telegram": "None",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1114,
+  "fields": {
+    "customer_name": "-",
+    "phone": "7902847-51-88",
+    "telegram": "-",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1115,
+  "fields": {
+    "customer_name": "Natalia",
+    "phone": "79263303109",
+    "telegram": "-",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1116,
+  "fields": {
+    "customer_name": "Ahmed gheith",
+    "phone": "971569396310",
+    "telegram": "+971569396310",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1117,
+  "fields": {
+    "customer_name": "-",
+    "phone": "995579156722",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1118,
+  "fields": {
+    "customer_name": "-",
+    "phone": "995591076406",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1119,
+  "fields": {
+    "customer_name": "-",
+    "phone": "995599165330",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1120,
+  "fields": {
+    "customer_name": "-",
+    "phone": "-",
+    "telegram": "-",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1121,
+  "fields": {
+    "customer_name": "Anton Mikhalchuk",
+    "phone": "-",
+    "telegram": "Anton_Mikhalchuk",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1122,
+  "fields": {
+    "customer_name": "-",
+    "phone": "995592611445",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1123,
+  "fields": {
+    "customer_name": "Denis Stepanov",
+    "phone": "-",
+    "telegram": "damien7785",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1124,
+  "fields": {
+    "customer_name": "-",
+    "phone": "995511187027",
+    "telegram": "-",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1125,
+  "fields": {
+    "customer_name": "-",
+    "phone": "995571229861",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1126,
+  "fields": {
+    "customer_name": "Oleg Chekalin",
+    "phone": "995555162258",
+    "telegram": "chainsself",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1127,
+  "fields": {
+    "customer_name": "Alex",
+    "phone": "511106814",
+    "telegram": "-",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1128,
+  "fields": {
+    "customer_name": "Anna Kharitonovich",
+    "phone": "-",
+    "telegram": "+79254488776",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1129,
+  "fields": {
+    "customer_name": "Ирина програмист",
+    "phone": "995511112059",
+    "telegram": "None",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1130,
+  "fields": {
+    "customer_name": "-",
+    "phone": "79270160488",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1131,
+  "fields": {
+    "customer_name": "Ann",
+    "phone": "-",
+    "telegram": "-",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1132,
+  "fields": {
+    "customer_name": "Andrey Tereshkov",
+    "phone": "-",
+    "telegram": "tereshkov",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1133,
+  "fields": {
+    "customer_name": "Melike Bozkurt",
+    "phone": "Melikebozkurt",
+    "telegram": "None",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1134,
+  "fields": {
+    "customer_name": "Ruslan",
+    "phone": "995568983434",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1135,
+  "fields": {
+    "customer_name": "Николай Ходасевич",
+    "phone": "-",
+    "telegram": "Khadassevitch",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1136,
+  "fields": {
+    "customer_name": "Вадим Любименко",
+    "phone": "-",
+    "telegram": "MartyMcAir",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1137,
+  "fields": {
+    "customer_name": "Eugene M.",
+    "phone": "-",
+    "telegram": "eugmv",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1138,
+  "fields": {
+    "customer_name": "Andriy Parkhomenko",
+    "phone": "-",
+    "telegram": "AndriyParkhom",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1139,
+  "fields": {
+    "customer_name": "-",
+    "phone": "995557644292",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1140,
+  "fields": {
+    "customer_name": "Ivan Beliaev",
+    "phone": "995593470526",
+    "telegram": "ivbeliaev",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1141,
+  "fields": {
+    "customer_name": "Spain",
+    "phone": "34620920263",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1142,
+  "fields": {
+    "customer_name": "Spain",
+    "phone": "34620920263",
+    "telegram": null,
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1143,
+  "fields": {
+    "customer_name": "-",
+    "phone": "79264707757",
+    "telegram": "-",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1144,
+  "fields": {
+    "customer_name": "Alexandr Art",
+    "phone": "-",
+    "telegram": "aaart_one",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1145,
+  "fields": {
+    "customer_name": "-",
+    "phone": "380674626670",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1146,
+  "fields": {
+    "customer_name": "-",
+    "phone": "995598283344",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1147,
+  "fields": {
+    "customer_name": "Mike Morrison",
+    "phone": "995511291256",
+    "telegram": "mike_morrison",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1148,
+  "fields": {
+    "customer_name": "-",
+    "phone": "79194911774",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1149,
+  "fields": {
+    "customer_name": "-",
+    "phone": "79192182215",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1150,
+  "fields": {
+    "customer_name": "Andy",
+    "phone": "995599689410",
+    "telegram": "avishch",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1151,
+  "fields": {
+    "customer_name": "Nastassja Shengelya",
+    "phone": "995599930910",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1152,
+  "fields": {
+    "customer_name": "---",
+    "phone": "--",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1153,
+  "fields": {
+    "customer_name": "Spain",
+    "phone": "34620920263",
+    "telegram": "None",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1154,
+  "fields": {
+    "customer_name": "Dasha Khoreva",
+    "phone": "-",
+    "telegram": "dasha_olovo",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1155,
+  "fields": {
+    "customer_name": "Japan Restauran",
+    "phone": "-",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1156,
+  "fields": {
+    "customer_name": "-",
+    "phone": "7910453-82-97",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1157,
+  "fields": {
+    "customer_name": "Ira",
+    "phone": "995598005760",
+    "telegram": "pnkzlng",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+},
+{
+  "model": "app_site.userprofile",
+  "pk": 1158,
+  "fields": {
+    "customer_name": "Nikita Oshuev",
+    "phone": "995585889527",
+    "telegram": "",
+    "city": "TB",
+    "profile": "",
+    "foto": "",
+    "rating_sum": 0,
+    "rating_num": 1,
+    "user": null
+  }
+}
+]

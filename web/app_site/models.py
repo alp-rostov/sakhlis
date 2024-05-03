@@ -76,6 +76,33 @@ class OrderList(models.Model):
         verbose_name_plural = 'Order list'
 
 
+class UserProfile(models.Model):
+    """phone city foto rating_sum rating_num user"""
+    customer_name = models.CharField(max_length=50, verbose_name='Name', null=True, blank=True,)
+
+    phone = models.CharField(validators=[phoneNumberRegex], max_length=16, verbose_name='Phone',
+                             null=True, blank=True,)
+    telegram = models.CharField(max_length=25, verbose_name='Telegram',
+                             null=True, blank=True, )
+
+    city = models.CharField(max_length=2, choices=CITY_CHOICES, default='TB')
+    profile = models.CharField(max_length=1500, null=True, blank=True, verbose_name='About me:', default='')
+
+    foto = models.ImageField(upload_to='images/', null=True, blank=True, verbose_name='Photo:')
+    rating_sum = models.IntegerField(default=0, blank=True, null=True)
+    rating_num = models.IntegerField(default=1, blank=True, null=True)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, blank=True, null=True)
+    # class Meta:
+    #     verbose_name = 'UserProfile'
+    #     verbose_name_plural = 'UserProfile'
+    def get_absolute_url(self):
+        return reverse('list_repair')
+
+
+    def __str__(self):
+        return f"{self.customer_name}"
+
+
 
 
 class Repairer(models.Model):
@@ -92,8 +119,8 @@ class Repairer(models.Model):
     rating_num = models.IntegerField(default=1, blank=True, null=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE, blank=True, null=True)
     class Meta:
-        verbose_name = 'UserProfile'
-        verbose_name_plural = 'UserProfile'
+        verbose_name = 'Repairer'
+        verbose_name_plural = 'Repairer'
     def get_absolute_url(self):
         return reverse('list_repair')
 

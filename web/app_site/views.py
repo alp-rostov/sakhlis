@@ -334,9 +334,19 @@ def change_work_status(request, **kwargs):
 
 
 def input_street(request, **kwargs):
-    """for ajax request """
-    b = StreerTbilisi.objects.filter(name_street__istartswith=request.GET.get('street')) \
-                             .values('type_street', 'name_street')[0:15]
-    json_data = json.dumps(list(b), default=str)
-    print(JsonResponse(json_data, safe=False))
-    return JsonResponse(json_data, safe=False)
+    # """for ajax request """
+    # b = StreerTbilisi.objects.filter(name_street__istartswith=request.GET.get('street')) \
+    #                          .values('type_street', 'name_street')[0:15]
+    # json_data = json.dumps(list(b), default=str)
+    # print(JsonResponse(json_data, safe=False))
+
+    all=OrderList.objects.all()
+    for i in all:
+        # i.customer_phone=i.customer_phone.replace('+','')
+        # i.save()
+        if UserProfile.objects.filter(phone=i.customer_phone, customer_name=i.customer_name, telegram=i.customer_telegram).exists()==False:
+            UserProfile(customer_name=i.customer_name, phone=i.customer_phone, telegram=i.customer_telegram, city=i.address_city).save()
+    return JsonResponse('', safe=False)
+
+
+
