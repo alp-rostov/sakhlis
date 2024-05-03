@@ -94,8 +94,8 @@ class Apartment(models.Model):
         verbose_name = 'Appartment list'
         verbose_name_plural = 'Appartment list'
 
-    # def __str__(self):
-    #     return f"{self.pk}-{self.name}"
+    def __str__(self):
+        return f"{self.address_street_app} {self.address_num}"
 
 class OrderList(models.Model):
     """time_in time_out repairer_id price text_order customer_name customer_phone address_city address_street_app

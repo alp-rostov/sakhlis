@@ -6,11 +6,14 @@ from .models import *
 class PersonalInvoice(admin.TabularInline):
     model = Invoice
 
+class PersonalApartment(admin.TabularInline):
+    model = Apartment
+
 class OrderListAdmin(admin.ModelAdmin):
-    list_display = ('id', 'time_in', 'time_out', 'text_order')
+    list_display = ('id', 'time_in', 'time_out', 'text_order', 'customer_id', 'apartment_id')
     list_display_links = ('text_order', )
     search_fields = ('text_order', )
-    list_filter = ('order_status', 'repairer_id', 'time_in')
+    list_filter = ('order_status', 'repairer_id', 'time_in', 'customer_id')
     inlines = [PersonalInvoice]
 
 class FeedbackListAdmin(admin.ModelAdmin):
@@ -39,12 +42,13 @@ class AppartamentAdmin(admin.ModelAdmin):
                     'address_street_app','address_num', 'foto',
                     'location_longitude','location_latitude', 'notes')
     list_display_links = ('name',)
+    list_filter = ('owner',)
 
 class UserAdmin(admin.ModelAdmin):
     list_display = ('customer_name', 'phone', 'telegram',
                     'profile', 'user')
     list_display_links = ('customer_name',)
-
+    inlines = [PersonalApartment]
 
 
 
