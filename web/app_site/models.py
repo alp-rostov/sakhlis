@@ -63,10 +63,6 @@ class OrderList(models.Model):
                                     verbose_name='Order status')
     services = models.ManyToManyField('Service', through='Invoice')
 
-
-
-
-
     customer_code = models.CharField(max_length=16, verbose_name='Company code ', blank=True, null=True)
     address_city = models.CharField(max_length=2, choices=CITY_CHOICES, default='TB', null=True, blank=True,
                                     verbose_name='City')
@@ -82,7 +78,7 @@ class OrderList(models.Model):
 
 
 
-class Repairer(models.Model):
+class UserProfile(models.Model):
     """phone city foto rating_sum rating_num user"""
     phone = models.CharField(validators=[phoneNumberRegex], max_length=16, unique=True, verbose_name='Phone',
                              null=True, blank=True,)
@@ -96,8 +92,8 @@ class Repairer(models.Model):
     rating_num = models.IntegerField(default=1, blank=True, null=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE, blank=True, null=True)
     class Meta:
-        verbose_name = 'Repairman'
-        verbose_name_plural = 'Repairman'
+        verbose_name = 'UserProfile'
+        verbose_name_plural = 'UserProfile'
     def get_absolute_url(self):
         return reverse('list_repair')
 
