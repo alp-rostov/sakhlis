@@ -144,7 +144,7 @@ class Owner(models.Model):
 
 class Apartment(models.Model):
     """"""
-    owner = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True,
+    owner = models.ForeignKey(UserProfile, on_delete=models.SET_NULL, null=True, blank=True,
                                     verbose_name='Responsible person for apartment', default='', )
 
     address_city = models.CharField(max_length=2, choices=CITY_CHOICES, default='TB', null=True, blank=True,

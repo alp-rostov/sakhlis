@@ -4,35 +4,7 @@ Manage: Django loaded up in setting mode : Development
   "model": "app_site.apartment",
   "pk": 1,
   "fields": {
-    "owner": 120,
-    "address_city": "TB",
-    "address_street_app": "Rustaveli",
-    "address_num": "5",
-    "foto": "images/appartment/iphone-hero.png",
-    "location_longitude": 77.0,
-    "location_latitude": 85.0,
-    "notes": "Use code to open the door"
-  }
-},
-{
-  "model": "app_site.apartment",
-  "pk": 2,
-  "fields": {
-    "owner": 95,
-    "address_city": "TB",
-    "address_street_app": "ftcfgc",
-    "address_num": "76",
-    "foto": "",
-    "location_longitude": null,
-    "location_latitude": null,
-    "notes": null
-  }
-},
-{
-  "model": "app_site.apartment",
-  "pk": 3,
-  "fields": {
-    "owner": 51,
+    "owner": 881,
     "address_city": "TB",
     "address_street_app": "улица Ш. Надирашвили",
     "address_num": "34",
@@ -44,9 +16,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 4,
+  "pk": 2,
   "fields": {
-    "owner": 51,
+    "owner": 882,
     "address_city": "TB",
     "address_street_app": "проспект Давида Гурамишвили",
     "address_num": "8 а",
@@ -58,9 +30,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 5,
+  "pk": 3,
   "fields": {
-    "owner": 51,
+    "owner": 883,
     "address_city": "TB",
     "address_street_app": "Гурамишвили",
     "address_num": "8а",
@@ -72,9 +44,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 6,
+  "pk": 4,
   "fields": {
-    "owner": 51,
+    "owner": 884,
     "address_city": "TB",
     "address_street_app": "улица Одесса",
     "address_num": "39",
@@ -86,9 +58,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 7,
+  "pk": 5,
   "fields": {
-    "owner": 51,
+    "owner": 885,
     "address_city": "TB",
     "address_street_app": "Делиси рядом",
     "address_num": "-",
@@ -100,9 +72,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 8,
+  "pk": 6,
   "fields": {
-    "owner": 51,
+    "owner": 886,
     "address_city": "TB",
     "address_street_app": "Акакия Церители",
     "address_num": "61",
@@ -114,9 +86,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 9,
+  "pk": 7,
   "fields": {
-    "owner": 51,
+    "owner": 887,
     "address_city": "TB",
     "address_street_app": "Гиви Картозия",
     "address_num": "8",
@@ -128,9 +100,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 10,
+  "pk": 8,
   "fields": {
-    "owner": 51,
+    "owner": 888,
     "address_city": "TB",
     "address_street_app": "Дадиани",
     "address_num": "7 б",
@@ -142,9 +114,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 11,
+  "pk": 9,
   "fields": {
-    "owner": 51,
+    "owner": 889,
     "address_city": "TB",
     "address_street_app": "Пекина",
     "address_num": "30",
@@ -156,9 +128,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 12,
+  "pk": 10,
   "fields": {
-    "owner": 51,
+    "owner": 890,
     "address_city": "TB",
     "address_street_app": "Marukhis Gmirebi",
     "address_num": "15",
@@ -170,9 +142,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 13,
+  "pk": 11,
   "fields": {
-    "owner": 51,
+    "owner": 891,
     "address_city": "TB",
     "address_street_app": "Акакия Хорава",
     "address_num": "14",
@@ -184,9 +156,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 14,
+  "pk": 12,
   "fields": {
-    "owner": 51,
+    "owner": 885,
     "address_city": "TB",
     "address_street_app": "рядом с Делиси",
     "address_num": "-",
@@ -198,9 +170,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 15,
+  "pk": 13,
   "fields": {
-    "owner": 51,
+    "owner": 892,
     "address_city": "TB",
     "address_street_app": "проспект Акакия Церетели",
     "address_num": "61",
@@ -212,9 +184,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 16,
+  "pk": 14,
   "fields": {
-    "owner": 51,
+    "owner": 893,
     "address_city": "TB",
     "address_street_app": "Одесская",
     "address_num": "39",
@@ -226,9 +198,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 17,
+  "pk": 15,
   "fields": {
-    "owner": 51,
+    "owner": 894,
     "address_city": "TB",
     "address_street_app": "Гурамишвили",
     "address_num": "12а/5",
@@ -240,9 +212,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 18,
+  "pk": 16,
   "fields": {
-    "owner": 51,
+    "owner": 889,
     "address_city": "TB",
     "address_street_app": "Чкондидели",
     "address_num": "29/4",
@@ -254,9 +226,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 19,
+  "pk": 17,
   "fields": {
-    "owner": 51,
+    "owner": 896,
     "address_city": "TB",
     "address_street_app": "Сванети",
     "address_num": "14",
@@ -268,9 +240,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 20,
+  "pk": 18,
   "fields": {
-    "owner": 51,
+    "owner": 889,
     "address_city": "TB",
     "address_street_app": "Иракли Абашидзе",
     "address_num": "61",
@@ -282,9 +254,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 21,
+  "pk": 19,
   "fields": {
-    "owner": 51,
+    "owner": 898,
     "address_city": "TB",
     "address_street_app": "Университетский",
     "address_num": "24",
@@ -296,9 +268,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 22,
+  "pk": 20,
   "fields": {
-    "owner": 51,
+    "owner": 899,
     "address_city": "TB",
     "address_street_app": "Жули шартава",
     "address_num": "75",
@@ -310,9 +282,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 23,
+  "pk": 21,
   "fields": {
-    "owner": 51,
+    "owner": 889,
     "address_city": "TB",
     "address_street_app": "Parnavaz Mepe Ave",
     "address_num": "26a",
@@ -324,9 +296,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 24,
+  "pk": 22,
   "fields": {
-    "owner": 51,
+    "owner": 889,
     "address_city": "TB",
     "address_street_app": "Сарбутало",
     "address_num": "-",
@@ -338,9 +310,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 25,
+  "pk": 23,
   "fields": {
-    "owner": 51,
+    "owner": 889,
     "address_city": "TB",
     "address_street_app": "Варкетили",
     "address_num": null,
@@ -352,9 +324,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 26,
+  "pk": 24,
   "fields": {
-    "owner": 51,
+    "owner": 902,
     "address_city": "TB",
     "address_street_app": "проспект Пекина",
     "address_num": "41",
@@ -366,9 +338,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 27,
+  "pk": 25,
   "fields": {
-    "owner": 51,
+    "owner": 903,
     "address_city": "TB",
     "address_street_app": "Артура Лейсиа",
     "address_num": "4",
@@ -380,9 +352,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 28,
+  "pk": 26,
   "fields": {
-    "owner": 51,
+    "owner": 904,
     "address_city": "TB",
     "address_street_app": "Чавчавдзе",
     "address_num": "39",
@@ -394,9 +366,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 29,
+  "pk": 27,
   "fields": {
-    "owner": 51,
+    "owner": 905,
     "address_city": "TB",
     "address_street_app": "Худадова",
     "address_num": "3",
@@ -408,9 +380,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 30,
+  "pk": 28,
   "fields": {
-    "owner": 51,
+    "owner": 906,
     "address_city": "TB",
     "address_street_app": "картозия",
     "address_num": "10",
@@ -422,9 +394,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 31,
+  "pk": 29,
   "fields": {
-    "owner": 51,
+    "owner": 889,
     "address_city": "TB",
     "address_street_app": "Агмашенебели",
     "address_num": "146",
@@ -436,9 +408,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 32,
+  "pk": 30,
   "fields": {
-    "owner": 51,
+    "owner": 908,
     "address_city": "TB",
     "address_street_app": "Джавская",
     "address_num": "4",
@@ -450,9 +422,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 33,
+  "pk": 31,
   "fields": {
-    "owner": 51,
+    "owner": 909,
     "address_city": "TB",
     "address_street_app": "Ниагвари",
     "address_num": "2",
@@ -464,9 +436,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 34,
+  "pk": 32,
   "fields": {
-    "owner": 51,
+    "owner": 889,
     "address_city": "TB",
     "address_street_app": "4 тупик Месхи",
     "address_num": "3",
@@ -478,9 +450,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 35,
+  "pk": 33,
   "fields": {
-    "owner": 51,
+    "owner": 911,
     "address_city": "TB",
     "address_street_app": "Лех Качинский",
     "address_num": "1/4",
@@ -492,9 +464,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 36,
+  "pk": 34,
   "fields": {
-    "owner": 51,
+    "owner": 912,
     "address_city": "TB",
     "address_street_app": "улица Давида Квачантирадзе",
     "address_num": "22",
@@ -506,9 +478,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 37,
+  "pk": 35,
   "fields": {
-    "owner": 51,
+    "owner": 889,
     "address_city": "TB",
     "address_street_app": "Джанашия",
     "address_num": "11",
@@ -520,9 +492,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 38,
+  "pk": 36,
   "fields": {
-    "owner": 51,
+    "owner": 914,
     "address_city": "TB",
     "address_street_app": "",
     "address_num": "",
@@ -534,9 +506,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 39,
+  "pk": 37,
   "fields": {
-    "owner": 51,
+    "owner": 889,
     "address_city": "TB",
     "address_street_app": null,
     "address_num": null,
@@ -548,9 +520,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 40,
+  "pk": 38,
   "fields": {
-    "owner": 51,
+    "owner": 889,
     "address_city": "TB",
     "address_street_app": "Гаспара 4",
     "address_num": null,
@@ -562,9 +534,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 41,
+  "pk": 39,
   "fields": {
-    "owner": 51,
+    "owner": 916,
     "address_city": "TB",
     "address_street_app": "джава 4",
     "address_num": "",
@@ -576,9 +548,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 42,
+  "pk": 40,
   "fields": {
-    "owner": 51,
+    "owner": 889,
     "address_city": "TB",
     "address_street_app": "Анна Политковская",
     "address_num": "4g",
@@ -590,9 +562,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 43,
+  "pk": 41,
   "fields": {
-    "owner": 51,
+    "owner": 889,
     "address_city": "TB",
     "address_street_app": "Купрадзе",
     "address_num": "72/6",
@@ -604,9 +576,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 44,
+  "pk": 42,
   "fields": {
-    "owner": 51,
+    "owner": 918,
     "address_city": "TB",
     "address_street_app": "Цеми",
     "address_num": "3",
@@ -618,9 +590,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 45,
+  "pk": 43,
   "fields": {
-    "owner": 51,
+    "owner": 889,
     "address_city": "TB",
     "address_street_app": "Исани",
     "address_num": null,
@@ -632,9 +604,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 46,
+  "pk": 44,
   "fields": {
-    "owner": 51,
+    "owner": 919,
     "address_city": "TB",
     "address_street_app": "Надирашвили",
     "address_num": "21в",
@@ -646,9 +618,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 47,
+  "pk": 45,
   "fields": {
-    "owner": 51,
+    "owner": 889,
     "address_city": "TB",
     "address_street_app": "Анны Политковской",
     "address_num": "3/20",
@@ -660,9 +632,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 48,
+  "pk": 46,
   "fields": {
-    "owner": 51,
+    "owner": 922,
     "address_city": "TB",
     "address_street_app": "2й переулок Соломона Курдиани",
     "address_num": "10",
@@ -674,9 +646,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 49,
+  "pk": 47,
   "fields": {
-    "owner": 51,
+    "owner": 923,
     "address_city": "TB",
     "address_street_app": "Кавтарадзе",
     "address_num": "1",
@@ -688,9 +660,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 50,
+  "pk": 48,
   "fields": {
-    "owner": 51,
+    "owner": 889,
     "address_city": "TB",
     "address_street_app": "Ташкентский",
     "address_num": "14",
@@ -702,9 +674,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 51,
+  "pk": 49,
   "fields": {
-    "owner": 51,
+    "owner": 924,
     "address_city": "TB",
     "address_street_app": "Руставели",
     "address_num": "1",
@@ -716,9 +688,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 52,
+  "pk": 50,
   "fields": {
-    "owner": 51,
+    "owner": 889,
     "address_city": "TB",
     "address_street_app": "Миндели",
     "address_num": "11",
@@ -730,9 +702,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 53,
+  "pk": 51,
   "fields": {
-    "owner": 51,
+    "owner": 926,
     "address_city": "TB",
     "address_street_app": "Гурамишвили",
     "address_num": "62б",
@@ -744,9 +716,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 54,
+  "pk": 52,
   "fields": {
-    "owner": 51,
+    "owner": 889,
     "address_city": "TB",
     "address_street_app": "Мескхи",
     "address_num": "4",
@@ -758,9 +730,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 55,
+  "pk": 53,
   "fields": {
-    "owner": 51,
+    "owner": 889,
     "address_city": "TB",
     "address_street_app": "-",
     "address_num": "-",
@@ -772,9 +744,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 56,
+  "pk": 54,
   "fields": {
-    "owner": 51,
+    "owner": 889,
     "address_city": "TB",
     "address_street_app": "площадт вокзала крысные ворота",
     "address_num": null,
@@ -786,9 +758,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 57,
+  "pk": 55,
   "fields": {
-    "owner": 51,
+    "owner": 889,
     "address_city": "TB",
     "address_street_app": "Раждена Гветадзе",
     "address_num": "10",
@@ -800,9 +772,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 58,
+  "pk": 56,
   "fields": {
-    "owner": 51,
+    "owner": 885,
     "address_city": "TB",
     "address_street_app": "Тамарашвили",
     "address_num": "12",
@@ -814,9 +786,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 59,
+  "pk": 57,
   "fields": {
-    "owner": 51,
+    "owner": 930,
     "address_city": "TB",
     "address_street_app": "Бочорошвили",
     "address_num": "37Б",
@@ -828,9 +800,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 60,
+  "pk": 58,
   "fields": {
-    "owner": 51,
+    "owner": 885,
     "address_city": "TB",
     "address_street_app": "Тамарашвили",
     "address_num": "13",
@@ -842,9 +814,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 61,
+  "pk": 59,
   "fields": {
-    "owner": 51,
+    "owner": 931,
     "address_city": "TB",
     "address_street_app": "Костава",
     "address_num": "7",
@@ -856,9 +828,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 62,
+  "pk": 60,
   "fields": {
-    "owner": 51,
+    "owner": 932,
     "address_city": "TB",
     "address_street_app": "giorgi akhvlediani",
     "address_num": "19",
@@ -870,9 +842,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 63,
+  "pk": 61,
   "fields": {
-    "owner": 51,
+    "owner": 933,
     "address_city": "TB",
     "address_street_app": "проспект Кетеван Дедофали",
     "address_num": "24",
@@ -884,9 +856,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 64,
+  "pk": 62,
   "fields": {
-    "owner": 51,
+    "owner": 934,
     "address_city": "TB",
     "address_street_app": "Zakaria Mkhargrdzeli",
     "address_num": "7",
@@ -898,9 +870,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 65,
+  "pk": 63,
   "fields": {
-    "owner": 51,
+    "owner": 935,
     "address_city": "TB",
     "address_street_app": "Бежана Каландадзе",
     "address_num": "15",
@@ -912,9 +884,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 66,
+  "pk": 64,
   "fields": {
-    "owner": 51,
+    "owner": 936,
     "address_city": "TB",
     "address_street_app": "Кетеван Дцамебули",
     "address_num": "41",
@@ -926,9 +898,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 67,
+  "pk": 65,
   "fields": {
-    "owner": 51,
+    "owner": 937,
     "address_city": "TB",
     "address_street_app": "Nikoloz Karlo Chxeidze",
     "address_num": "13",
@@ -940,9 +912,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 68,
+  "pk": 66,
   "fields": {
-    "owner": 51,
+    "owner": 938,
     "address_city": "TB",
     "address_street_app": "Павла Ингороквы",
     "address_num": "19",
@@ -954,9 +926,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 69,
+  "pk": 67,
   "fields": {
-    "owner": 51,
+    "owner": 939,
     "address_city": "TB",
     "address_street_app": "Нуцубидзе",
     "address_num": "26а",
@@ -968,9 +940,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 70,
+  "pk": 68,
   "fields": {
-    "owner": 51,
+    "owner": 941,
     "address_city": "TB",
     "address_street_app": "Георгия Миротадзе",
     "address_num": "8",
@@ -982,9 +954,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 71,
+  "pk": 69,
   "fields": {
-    "owner": 51,
+    "owner": 942,
     "address_city": "TB",
     "address_street_app": "Икалто",
     "address_num": "4",
@@ -996,9 +968,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 72,
+  "pk": 70,
   "fields": {
-    "owner": 51,
+    "owner": 943,
     "address_city": "TB",
     "address_street_app": "Marukhis Gmirebi Street",
     "address_num": "15",
@@ -1010,9 +982,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 73,
+  "pk": 71,
   "fields": {
-    "owner": 51,
+    "owner": 944,
     "address_city": "TB",
     "address_street_app": "Чавчавадзе",
     "address_num": "80/4",
@@ -1024,9 +996,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 74,
+  "pk": 72,
   "fields": {
-    "owner": 51,
+    "owner": 945,
     "address_city": "TB",
     "address_street_app": "Варази",
     "address_num": "105",
@@ -1038,9 +1010,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 75,
+  "pk": 73,
   "fields": {
-    "owner": 51,
+    "owner": 946,
     "address_city": "TB",
     "address_street_app": "Шалва Нуцубидзе",
     "address_num": "129",
@@ -1052,9 +1024,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 76,
+  "pk": 74,
   "fields": {
-    "owner": 51,
+    "owner": 889,
     "address_city": "TB",
     "address_street_app": "Назалабыби",
     "address_num": "-",
@@ -1066,9 +1038,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 77,
+  "pk": 75,
   "fields": {
-    "owner": 51,
+    "owner": 947,
     "address_city": "TB",
     "address_street_app": "Paata Datuashvili",
     "address_num": "7",
@@ -1080,9 +1052,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 78,
+  "pk": 76,
   "fields": {
-    "owner": 51,
+    "owner": 948,
     "address_city": "TB",
     "address_street_app": "Карели",
     "address_num": "25",
@@ -1094,9 +1066,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 79,
+  "pk": 77,
   "fields": {
-    "owner": 51,
+    "owner": 949,
     "address_city": "TB",
     "address_street_app": "Кипшидзе",
     "address_num": "7 б",
@@ -1108,9 +1080,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 80,
+  "pk": 78,
   "fields": {
-    "owner": 51,
+    "owner": 950,
     "address_city": "TB",
     "address_street_app": "Амашук",
     "address_num": "23",
@@ -1122,9 +1094,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 81,
+  "pk": 79,
   "fields": {
-    "owner": 51,
+    "owner": 951,
     "address_city": "TB",
     "address_street_app": "Baku",
     "address_num": "20b",
@@ -1136,9 +1108,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 82,
+  "pk": 80,
   "fields": {
-    "owner": 51,
+    "owner": 953,
     "address_city": "TB",
     "address_street_app": "Абашидзе",
     "address_num": "24",
@@ -1150,9 +1122,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 83,
+  "pk": 81,
   "fields": {
-    "owner": 51,
+    "owner": 954,
     "address_city": "TB",
     "address_street_app": "Шатберашвили",
     "address_num": "12",
@@ -1164,9 +1136,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 84,
+  "pk": 82,
   "fields": {
-    "owner": 51,
+    "owner": 955,
     "address_city": "TB",
     "address_street_app": "Костава",
     "address_num": "11",
@@ -1178,9 +1150,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 85,
+  "pk": 83,
   "fields": {
-    "owner": 51,
+    "owner": 956,
     "address_city": "TB",
     "address_street_app": "Зазы Панаскертел-Цицишвили",
     "address_num": "18 б, кв 2",
@@ -1192,9 +1164,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 86,
+  "pk": 84,
   "fields": {
-    "owner": 51,
+    "owner": 957,
     "address_city": "TB",
     "address_street_app": "Shalva Nutsubidze St, Tbilisi",
     "address_num": "10",
@@ -1206,9 +1178,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 87,
+  "pk": 85,
   "fields": {
-    "owner": 51,
+    "owner": 958,
     "address_city": "TB",
     "address_street_app": "шоссе Цкнети",
     "address_num": "77",
@@ -1220,9 +1192,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 88,
+  "pk": 86,
   "fields": {
-    "owner": 51,
+    "owner": 959,
     "address_city": "TB",
     "address_street_app": "Дидубе",
     "address_num": "5",
@@ -1234,9 +1206,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 89,
+  "pk": 87,
   "fields": {
-    "owner": 51,
+    "owner": 960,
     "address_city": "TB",
     "address_street_app": "Рустави",
     "address_num": "14",
@@ -1248,9 +1220,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 90,
+  "pk": 88,
   "fields": {
-    "owner": 51,
+    "owner": 961,
     "address_city": "TB",
     "address_street_app": "Политковской",
     "address_num": "3/32",
@@ -1262,9 +1234,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 91,
+  "pk": 89,
   "fields": {
-    "owner": 51,
+    "owner": 962,
     "address_city": "TB",
     "address_street_app": "улица Закария Палиашвили",
     "address_num": "118",
@@ -1276,9 +1248,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 92,
+  "pk": 90,
   "fields": {
-    "owner": 51,
+    "owner": 963,
     "address_city": "TB",
     "address_street_app": "Пушкина",
     "address_num": "11",
@@ -1290,9 +1262,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 93,
+  "pk": 91,
   "fields": {
-    "owner": 51,
+    "owner": 965,
     "address_city": "TB",
     "address_street_app": "Delish street",
     "address_num": "3/2",
@@ -1304,9 +1276,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 94,
+  "pk": 92,
   "fields": {
-    "owner": 51,
+    "owner": 966,
     "address_city": "TB",
     "address_street_app": "Важа Пшавела",
     "address_num": "25",
@@ -1318,9 +1290,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 95,
+  "pk": 93,
   "fields": {
-    "owner": 51,
+    "owner": 967,
     "address_city": "TB",
     "address_street_app": "костава",
     "address_num": "44",
@@ -1332,9 +1304,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 96,
+  "pk": 94,
   "fields": {
-    "owner": 51,
+    "owner": 968,
     "address_city": "TB",
     "address_street_app": "Габашвили",
     "address_num": "11",
@@ -1346,9 +1318,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 97,
+  "pk": 95,
   "fields": {
-    "owner": 51,
+    "owner": 969,
     "address_city": "TB",
     "address_street_app": "Тбилиси Хилс, Гольф Клуб",
     "address_num": "-",
@@ -1360,9 +1332,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 98,
+  "pk": 96,
   "fields": {
-    "owner": 51,
+    "owner": 970,
     "address_city": "TB",
     "address_street_app": "Titsian Tabidze St",
     "address_num": "7",
@@ -1374,9 +1346,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 99,
+  "pk": 97,
   "fields": {
-    "owner": 51,
+    "owner": 971,
     "address_city": "TB",
     "address_street_app": "1-ый проход Крцаниси",
     "address_num": "5",
@@ -1388,9 +1360,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 100,
+  "pk": 98,
   "fields": {
-    "owner": 51,
+    "owner": 972,
     "address_city": "TB",
     "address_street_app": "Серго Закариадзе",
     "address_num": "8",
@@ -1402,9 +1374,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 101,
+  "pk": 99,
   "fields": {
-    "owner": 51,
+    "owner": 973,
     "address_city": "TB",
     "address_street_app": "Чкондидели",
     "address_num": "36",
@@ -1416,9 +1388,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 102,
+  "pk": 100,
   "fields": {
-    "owner": 51,
+    "owner": 974,
     "address_city": "TB",
     "address_street_app": "улица Котэ Махарадзе",
     "address_num": "1",
@@ -1430,9 +1402,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 103,
+  "pk": 101,
   "fields": {
-    "owner": 51,
+    "owner": 975,
     "address_city": "TB",
     "address_street_app": "Пекина",
     "address_num": "22",
@@ -1444,9 +1416,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 104,
+  "pk": 102,
   "fields": {
-    "owner": 51,
+    "owner": 976,
     "address_city": "TB",
     "address_street_app": "Арчи Тсагарели",
     "address_num": "31",
@@ -1458,9 +1430,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 105,
+  "pk": 103,
   "fields": {
-    "owner": 51,
+    "owner": 977,
     "address_city": "TB",
     "address_street_app": "Вепхисткаосани",
     "address_num": "28",
@@ -1472,9 +1444,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 106,
+  "pk": 104,
   "fields": {
-    "owner": 51,
+    "owner": 979,
     "address_city": "TB",
     "address_street_app": "Руставели",
     "address_num": "14",
@@ -1486,9 +1458,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 107,
+  "pk": 105,
   "fields": {
-    "owner": 51,
+    "owner": 982,
     "address_city": "TB",
     "address_street_app": "гольф клуб",
     "address_num": "-",
@@ -1500,9 +1472,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 108,
+  "pk": 106,
   "fields": {
-    "owner": 51,
+    "owner": 984,
     "address_city": "TB",
     "address_street_app": "проспект Ильи Чавчавадзе",
     "address_num": "83",
@@ -1514,9 +1486,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 109,
+  "pk": 107,
   "fields": {
-    "owner": 51,
+    "owner": 985,
     "address_city": "TB",
     "address_street_app": "Руставели",
     "address_num": "23",
@@ -1528,9 +1500,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 110,
+  "pk": 108,
   "fields": {
-    "owner": 51,
+    "owner": 986,
     "address_city": "TB",
     "address_street_app": "kavtaradze",
     "address_num": "6",
@@ -1542,9 +1514,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 111,
+  "pk": 109,
   "fields": {
-    "owner": 51,
+    "owner": 987,
     "address_city": "TB",
     "address_street_app": "4й переулок Кавтарадзе",
     "address_num": "5",
@@ -1556,9 +1528,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 112,
+  "pk": 110,
   "fields": {
-    "owner": 51,
+    "owner": 988,
     "address_city": "TB",
     "address_street_app": "nik'oloz q'ipshidzis kucha",
     "address_num": "7 G",
@@ -1570,9 +1542,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 113,
+  "pk": 111,
   "fields": {
-    "owner": 51,
+    "owner": 989,
     "address_city": "TB",
     "address_street_app": "Руставели",
     "address_num": "-",
@@ -1584,9 +1556,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 114,
+  "pk": 112,
   "fields": {
-    "owner": 51,
+    "owner": 990,
     "address_city": "TB",
     "address_street_app": "Шатберашвили",
     "address_num": "12 квартир",
@@ -1598,9 +1570,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 115,
+  "pk": 113,
   "fields": {
-    "owner": 51,
+    "owner": 991,
     "address_city": "TB",
     "address_street_app": "Московский проспект",
     "address_num": "33",
@@ -1612,9 +1584,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 116,
+  "pk": 114,
   "fields": {
-    "owner": 51,
+    "owner": 992,
     "address_city": "TB",
     "address_street_app": "2-й Переулок Саломона Курдиани",
     "address_num": "10",
@@ -1626,9 +1598,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 117,
+  "pk": 115,
   "fields": {
-    "owner": 51,
+    "owner": 993,
     "address_city": "TB",
     "address_street_app": "Demetre Tavdadebuli St, T'bilisi 013",
     "address_num": "10b",
@@ -1640,9 +1612,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 118,
+  "pk": 116,
   "fields": {
-    "owner": 51,
+    "owner": 994,
     "address_city": "TB",
     "address_street_app": "Улица Закария Палиашвили",
     "address_num": "118",
@@ -1654,9 +1626,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 119,
+  "pk": 117,
   "fields": {
-    "owner": 51,
+    "owner": 995,
     "address_city": "TB",
     "address_street_app": "Шартава",
     "address_num": "37",
@@ -1668,9 +1640,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 120,
+  "pk": 118,
   "fields": {
-    "owner": 51,
+    "owner": 996,
     "address_city": "TB",
     "address_street_app": "улица Ираклия Абашидзе",
     "address_num": "46",
@@ -1682,9 +1654,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 121,
+  "pk": 119,
   "fields": {
-    "owner": 51,
+    "owner": 997,
     "address_city": "TB",
     "address_street_app": "Вахушти Багратиони",
     "address_num": "34",
@@ -1696,9 +1668,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 122,
+  "pk": 120,
   "fields": {
-    "owner": 51,
+    "owner": 998,
     "address_city": "TB",
     "address_street_app": "Т.Цавкисели",
     "address_num": "63 а",
@@ -1710,9 +1682,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 123,
+  "pk": 121,
   "fields": {
-    "owner": 51,
+    "owner": 999,
     "address_city": "TB",
     "address_street_app": "улица Корнелия Кекелидзе",
     "address_num": "25",
@@ -1724,9 +1696,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 124,
+  "pk": 122,
   "fields": {
-    "owner": 51,
+    "owner": 1000,
     "address_city": "TB",
     "address_street_app": "улица Ал. Цагарели",
     "address_num": "31",
@@ -1738,9 +1710,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 125,
+  "pk": 123,
   "fields": {
-    "owner": 51,
+    "owner": 1001,
     "address_city": "TB",
     "address_street_app": "проспект Московский",
     "address_num": "3",
@@ -1752,9 +1724,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 126,
+  "pk": 124,
   "fields": {
-    "owner": 51,
+    "owner": 1002,
     "address_city": "TB",
     "address_street_app": "улица Глдани",
     "address_num": "96 б",
@@ -1766,9 +1738,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 127,
+  "pk": 125,
   "fields": {
-    "owner": 51,
+    "owner": 1003,
     "address_city": "TB",
     "address_street_app": "улица Александра Чавчавадзе",
     "address_num": "72, кв 24",
@@ -1780,9 +1752,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 128,
+  "pk": 126,
   "fields": {
-    "owner": 51,
+    "owner": 1004,
     "address_city": "TB",
     "address_street_app": "улица Виктора Долидзе",
     "address_num": "26",
@@ -1794,9 +1766,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 129,
+  "pk": 127,
   "fields": {
-    "owner": 51,
+    "owner": 1005,
     "address_city": "TB",
     "address_street_app": "проспект Царя Парнаваза",
     "address_num": "15",
@@ -1808,9 +1780,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 130,
+  "pk": 128,
   "fields": {
-    "owner": 51,
+    "owner": 1006,
     "address_city": "TB",
     "address_street_app": "улица Михаила Зандукели",
     "address_num": "-",
@@ -1822,9 +1794,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 131,
+  "pk": 129,
   "fields": {
-    "owner": 51,
+    "owner": 1007,
     "address_city": "TB",
     "address_street_app": "Леон и Лосеб Орбелеби",
     "address_num": "51",
@@ -1836,9 +1808,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 132,
+  "pk": 130,
   "fields": {
-    "owner": 51,
+    "owner": 1009,
     "address_city": "TB",
     "address_street_app": "проспект Александра Казбеги",
     "address_num": "15",
@@ -1850,9 +1822,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 133,
+  "pk": 131,
   "fields": {
-    "owner": 51,
+    "owner": 1011,
     "address_city": "TB",
     "address_street_app": "улица Гогиберидзе",
     "address_num": "9",
@@ -1864,9 +1836,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 134,
+  "pk": 132,
   "fields": {
-    "owner": 51,
+    "owner": 1012,
     "address_city": "TB",
     "address_street_app": "улица Отара Тактакишвили",
     "address_num": "12a",
@@ -1878,9 +1850,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 135,
+  "pk": 133,
   "fields": {
-    "owner": 51,
+    "owner": 973,
     "address_city": "TB",
     "address_street_app": "улица Георгия Чкондидели",
     "address_num": "-",
@@ -1892,9 +1864,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 136,
+  "pk": 134,
   "fields": {
-    "owner": 51,
+    "owner": 1015,
     "address_city": "TB",
     "address_street_app": "улица Г. Картозиа",
     "address_num": "10",
@@ -1906,9 +1878,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 137,
+  "pk": 135,
   "fields": {
-    "owner": 51,
+    "owner": 1016,
     "address_city": "TB",
     "address_street_app": "улица Зураба Патаридзе",
     "address_num": "8",
@@ -1920,9 +1892,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 138,
+  "pk": 136,
   "fields": {
-    "owner": 51,
+    "owner": 1017,
     "address_city": "TB",
     "address_street_app": "улица Андрея Размадзе",
     "address_num": "55",
@@ -1934,9 +1906,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 139,
+  "pk": 137,
   "fields": {
-    "owner": 51,
+    "owner": 1018,
     "address_city": "TB",
     "address_street_app": "3-й массив Варкетили",
     "address_num": "55",
@@ -1948,9 +1920,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 140,
+  "pk": 138,
   "fields": {
-    "owner": 51,
+    "owner": 1020,
     "address_city": "TB",
     "address_street_app": "улица Александра Чавчавадзе",
     "address_num": "49 д",
@@ -1962,9 +1934,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 141,
+  "pk": 139,
   "fields": {
-    "owner": 51,
+    "owner": 1021,
     "address_city": "TB",
     "address_street_app": "улица Шалва Дадиани",
     "address_num": "21/23",
@@ -1976,9 +1948,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 142,
+  "pk": 140,
   "fields": {
-    "owner": 51,
+    "owner": 1022,
     "address_city": "TB",
     "address_street_app": "улица Николая Кипшидзе",
     "address_num": "3Б",
@@ -1990,9 +1962,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 143,
+  "pk": 141,
   "fields": {
-    "owner": 51,
+    "owner": 1023,
     "address_city": "TB",
     "address_street_app": "проспект Чабуа Амирэджиби",
     "address_num": "6",
@@ -2004,9 +1976,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 144,
+  "pk": 142,
   "fields": {
-    "owner": 51,
+    "owner": 962,
     "address_city": "TB",
     "address_street_app": "улица Закария Палиашвили",
     "address_num": "118, 3 под",
@@ -2018,9 +1990,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 145,
+  "pk": 143,
   "fields": {
-    "owner": 51,
+    "owner": 1024,
     "address_city": "TB",
     "address_street_app": "улица Николая Кипшидзе",
     "address_num": "7",
@@ -2032,9 +2004,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 146,
+  "pk": 144,
   "fields": {
-    "owner": 51,
+    "owner": 1025,
     "address_city": "TB",
     "address_street_app": "улица Алеко Гобронидзе",
     "address_num": "11 б",
@@ -2046,9 +2018,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 147,
+  "pk": 145,
   "fields": {
-    "owner": 51,
+    "owner": 1026,
     "address_city": "TB",
     "address_street_app": "улица Квишхети",
     "address_num": "2",
@@ -2060,9 +2032,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 148,
+  "pk": 146,
   "fields": {
-    "owner": 51,
+    "owner": 986,
     "address_city": "TB",
     "address_street_app": "Kavtaradze",
     "address_num": "6",
@@ -2074,9 +2046,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 149,
+  "pk": 147,
   "fields": {
-    "owner": 51,
+    "owner": 1027,
     "address_city": "TB",
     "address_street_app": "2й переулок Соломона Курдиани",
     "address_num": "14",
@@ -2088,9 +2060,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 150,
+  "pk": 148,
   "fields": {
-    "owner": 51,
+    "owner": 1028,
     "address_city": "TB",
     "address_street_app": "проспект Ильи Чавчавадзе",
     "address_num": "30",
@@ -2102,9 +2074,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 151,
+  "pk": 149,
   "fields": {
-    "owner": 51,
+    "owner": 996,
     "address_city": "TB",
     "address_street_app": "Улица Ираклия Абашидзе",
     "address_num": "46",
@@ -2116,9 +2088,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 152,
+  "pk": 150,
   "fields": {
-    "owner": 51,
+    "owner": 1029,
     "address_city": "TB",
     "address_street_app": "улица Георгия Мазниашвили",
     "address_num": "4",
@@ -2130,9 +2102,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 153,
+  "pk": 151,
   "fields": {
-    "owner": 51,
+    "owner": 1031,
     "address_city": "TB",
     "address_street_app": "улица С. Залдастанишвили",
     "address_num": "3",
@@ -2144,9 +2116,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 154,
+  "pk": 152,
   "fields": {
-    "owner": 51,
+    "owner": 1032,
     "address_city": "TB",
     "address_street_app": "Вазисубани",
     "address_num": "4 а",
@@ -2158,9 +2130,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 155,
+  "pk": 153,
   "fields": {
-    "owner": 51,
+    "owner": 1028,
     "address_city": "TB",
     "address_street_app": "Проспект Ильи Чавчавадзе",
     "address_num": "30",
@@ -2172,9 +2144,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 156,
+  "pk": 154,
   "fields": {
-    "owner": 51,
+    "owner": 1033,
     "address_city": "TB",
     "address_street_app": "улица Давари",
     "address_num": "39",
@@ -2186,9 +2158,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 157,
+  "pk": 155,
   "fields": {
-    "owner": 51,
+    "owner": 1034,
     "address_city": "TB",
     "address_street_app": "улица Александра Грибоедова",
     "address_num": "15",
@@ -2200,9 +2172,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 158,
+  "pk": 156,
   "fields": {
-    "owner": 51,
+    "owner": 1035,
     "address_city": "TB",
     "address_street_app": "проспект Ильи Чавчавадзе",
     "address_num": "39",
@@ -2214,9 +2186,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 159,
+  "pk": 157,
   "fields": {
-    "owner": 51,
+    "owner": 1036,
     "address_city": "TB",
     "address_street_app": "улица Николая Кипшидзе",
     "address_num": "16",
@@ -2228,9 +2200,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 160,
+  "pk": 158,
   "fields": {
-    "owner": 51,
+    "owner": 1037,
     "address_city": "TB",
     "address_street_app": "улица Марухских героев",
     "address_num": "15",
@@ -2242,9 +2214,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 161,
+  "pk": 159,
   "fields": {
-    "owner": 51,
+    "owner": 1038,
     "address_city": "TB",
     "address_street_app": "улица Элизбара Миндели",
     "address_num": "12",
@@ -2256,9 +2228,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 162,
+  "pk": 160,
   "fields": {
-    "owner": 51,
+    "owner": 1039,
     "address_city": "TB",
     "address_street_app": "улица Георгия Абашвили",
     "address_num": "3",
@@ -2270,9 +2242,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 163,
+  "pk": 161,
   "fields": {
-    "owner": 51,
+    "owner": 1041,
     "address_city": "TB",
     "address_street_app": "аллея Агмашенебели",
     "address_num": "117",
@@ -2284,9 +2256,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 164,
+  "pk": 162,
   "fields": {
-    "owner": 51,
+    "owner": 1043,
     "address_city": "TB",
     "address_street_app": "Улица Важа Пшавела",
     "address_num": "12",
@@ -2298,9 +2270,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 165,
+  "pk": 163,
   "fields": {
-    "owner": 51,
+    "owner": 1044,
     "address_city": "TB",
     "address_street_app": "улица Дмитрия Узнадзе",
     "address_num": "2",
@@ -2312,9 +2284,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 166,
+  "pk": 164,
   "fields": {
-    "owner": 51,
+    "owner": 1045,
     "address_city": "TB",
     "address_street_app": "4000 Месхи",
     "address_num": "3",
@@ -2326,9 +2298,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 167,
+  "pk": 165,
   "fields": {
-    "owner": 51,
+    "owner": 1046,
     "address_city": "TB",
     "address_street_app": "улица Саирме",
     "address_num": "9, кв. 13",
@@ -2340,9 +2312,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 168,
+  "pk": 166,
   "fields": {
-    "owner": 51,
+    "owner": 1047,
     "address_city": "TB",
     "address_street_app": "-",
     "address_num": "",
@@ -2354,9 +2326,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 169,
+  "pk": 167,
   "fields": {
-    "owner": 51,
+    "owner": 1048,
     "address_city": "TB",
     "address_street_app": "2 квартал Важа-Пшавела",
     "address_num": "25",
@@ -2368,9 +2340,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 170,
+  "pk": 168,
   "fields": {
-    "owner": 51,
+    "owner": 1049,
     "address_city": "TB",
     "address_street_app": "Проспект Ильи Чавчавадзе",
     "address_num": "83",
@@ -2382,9 +2354,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 171,
+  "pk": 169,
   "fields": {
-    "owner": 51,
+    "owner": 1050,
     "address_city": "TB",
     "address_street_app": "улица Университетская",
     "address_num": "24",
@@ -2396,9 +2368,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 172,
+  "pk": 170,
   "fields": {
-    "owner": 51,
+    "owner": 1041,
     "address_city": "TB",
     "address_street_app": "Аршбы",
     "address_num": "7",
@@ -2410,9 +2382,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 173,
+  "pk": 171,
   "fields": {
-    "owner": 51,
+    "owner": 1052,
     "address_city": "BT",
     "address_street_app": "",
     "address_num": "-",
@@ -2424,9 +2396,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 174,
+  "pk": 172,
   "fields": {
-    "owner": 51,
+    "owner": 1053,
     "address_city": "TB",
     "address_street_app": "Чикобавы",
     "address_num": "43",
@@ -2438,9 +2410,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 175,
+  "pk": 173,
   "fields": {
-    "owner": 51,
+    "owner": 1054,
     "address_city": "TB",
     "address_street_app": "улица Казбеги",
     "address_num": "34 а",
@@ -2452,9 +2424,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 176,
+  "pk": 174,
   "fields": {
-    "owner": 51,
+    "owner": 1055,
     "address_city": "TB",
     "address_street_app": "улица Вепхисткаосани",
     "address_num": "34",
@@ -2466,9 +2438,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 177,
+  "pk": 175,
   "fields": {
-    "owner": 51,
+    "owner": 1056,
     "address_city": "TB",
     "address_street_app": "улица Саирме",
     "address_num": "9",
@@ -2480,9 +2452,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 178,
+  "pk": 176,
   "fields": {
-    "owner": 51,
+    "owner": 1057,
     "address_city": "TB",
     "address_street_app": "2-ой тупик Курашвили",
     "address_num": "2",
@@ -2494,9 +2466,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 179,
+  "pk": 177,
   "fields": {
-    "owner": 51,
+    "owner": 1058,
     "address_city": "TB",
     "address_street_app": "Политковской",
     "address_num": "2 б",
@@ -2508,9 +2480,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 180,
+  "pk": 178,
   "fields": {
-    "owner": 51,
+    "owner": 1059,
     "address_city": "TB",
     "address_street_app": "-",
     "address_num": null,
@@ -2522,9 +2494,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 181,
+  "pk": 179,
   "fields": {
-    "owner": 51,
+    "owner": 1060,
     "address_city": "TB",
     "address_street_app": "проспект Ильи Чавчавадзе",
     "address_num": "37 б",
@@ -2536,9 +2508,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 182,
+  "pk": 180,
   "fields": {
-    "owner": 51,
+    "owner": 1062,
     "address_city": "TB",
     "address_street_app": "улица Николая Кипшидзе",
     "address_num": "4",
@@ -2550,9 +2522,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 183,
+  "pk": 181,
   "fields": {
-    "owner": 51,
+    "owner": 1063,
     "address_city": "TB",
     "address_street_app": "улица Мтацминдская",
     "address_num": "27",
@@ -2564,9 +2536,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 184,
+  "pk": 182,
   "fields": {
-    "owner": 51,
+    "owner": 1064,
     "address_city": "TB",
     "address_street_app": "Улица Марухских героев",
     "address_num": "15",
@@ -2578,9 +2550,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 185,
+  "pk": 183,
   "fields": {
-    "owner": 51,
+    "owner": 1066,
     "address_city": "TB",
     "address_street_app": "Stefane Chrelashvili St",
     "address_num": "1",
@@ -2592,9 +2564,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 186,
+  "pk": 184,
   "fields": {
-    "owner": 51,
+    "owner": 1067,
     "address_city": "TB",
     "address_street_app": "улица Анны Политковской",
     "address_num": "3/31,кв.20",
@@ -2606,9 +2578,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 187,
+  "pk": 185,
   "fields": {
-    "owner": 51,
+    "owner": 1068,
     "address_city": "TB",
     "address_street_app": "Ketevan Tsamebuli Ave",
     "address_num": "2",
@@ -2620,9 +2592,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 188,
+  "pk": 186,
   "fields": {
-    "owner": 51,
+    "owner": 1069,
     "address_city": "TB",
     "address_street_app": "улица Шалва Нуцубидзе",
     "address_num": "82",
@@ -2634,9 +2606,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 189,
+  "pk": 187,
   "fields": {
-    "owner": 51,
+    "owner": 1070,
     "address_city": "TB",
     "address_street_app": "улица Коста Хетагурова",
     "address_num": "1/3",
@@ -2648,9 +2620,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 190,
+  "pk": 188,
   "fields": {
-    "owner": 51,
+    "owner": 1072,
     "address_city": "TB",
     "address_street_app": "улица К. Цинцадзе",
     "address_num": "38",
@@ -2662,9 +2634,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 191,
+  "pk": 189,
   "fields": {
-    "owner": 51,
+    "owner": 1073,
     "address_city": "TB",
     "address_street_app": "улица Навтлуги",
     "address_num": "10 а",
@@ -2676,9 +2648,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 192,
+  "pk": 190,
   "fields": {
-    "owner": 51,
+    "owner": 1074,
     "address_city": "TB",
     "address_street_app": "Лежава",
     "address_num": "20",
@@ -2690,9 +2662,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 193,
+  "pk": 191,
   "fields": {
-    "owner": 51,
+    "owner": 1075,
     "address_city": "TB",
     "address_street_app": "Казбеги",
     "address_num": "25 а",
@@ -2704,9 +2676,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 194,
+  "pk": 192,
   "fields": {
-    "owner": 51,
+    "owner": 1076,
     "address_city": "TB",
     "address_street_app": "Demetre Tavdadebuli",
     "address_num": "10 б",
@@ -2718,9 +2690,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 195,
+  "pk": 193,
   "fields": {
-    "owner": 51,
+    "owner": 1077,
     "address_city": "TB",
     "address_street_app": "улица Александра Грибоедова",
     "address_num": "",
@@ -2732,9 +2704,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 196,
+  "pk": 194,
   "fields": {
-    "owner": 51,
+    "owner": 902,
     "address_city": "TB",
     "address_street_app": "Проспект Пекина",
     "address_num": "41",
@@ -2746,9 +2718,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 197,
+  "pk": 195,
   "fields": {
-    "owner": 51,
+    "owner": 1003,
     "address_city": "TB",
     "address_street_app": "Улица Александра Чавчавадзе",
     "address_num": "72, кв 24",
@@ -2760,9 +2732,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 198,
+  "pk": 196,
   "fields": {
-    "owner": 51,
+    "owner": 1078,
     "address_city": "TB",
     "address_street_app": "улица Анны Политковской",
     "address_num": "4 г",
@@ -2774,9 +2746,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 199,
+  "pk": 197,
   "fields": {
-    "owner": 51,
+    "owner": 1079,
     "address_city": "TB",
     "address_street_app": "улица Ивана Мачабели",
     "address_num": "4",
@@ -2788,9 +2760,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 200,
+  "pk": 198,
   "fields": {
-    "owner": 51,
+    "owner": 1024,
     "address_city": "TB",
     "address_street_app": "Улица Николая Кипшидзе",
     "address_num": "7",
@@ -2802,9 +2774,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 201,
+  "pk": 199,
   "fields": {
-    "owner": 51,
+    "owner": 1070,
     "address_city": "TB",
     "address_street_app": "Улица Коста Хетагурова",
     "address_num": "1/3",
@@ -2816,9 +2788,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 202,
+  "pk": 200,
   "fields": {
-    "owner": 51,
+    "owner": 1081,
     "address_city": "TB",
     "address_street_app": "Улица Казбеги",
     "address_num": "34 а",
@@ -2830,9 +2802,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 203,
+  "pk": 201,
   "fields": {
-    "owner": 51,
+    "owner": 1083,
     "address_city": "TB",
     "address_street_app": "Чугурети",
     "address_num": "",
@@ -2844,9 +2816,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 204,
+  "pk": 202,
   "fields": {
-    "owner": 51,
+    "owner": 1086,
     "address_city": "TB",
     "address_street_app": "улица Амаглеба",
     "address_num": "25",
@@ -2858,9 +2830,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 205,
+  "pk": 203,
   "fields": {
-    "owner": 51,
+    "owner": 1087,
     "address_city": "TB",
     "address_street_app": "улица Грмагеле",
     "address_num": "24",
@@ -2872,9 +2844,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 206,
+  "pk": 204,
   "fields": {
-    "owner": 51,
+    "owner": 1034,
     "address_city": "TB",
     "address_street_app": "Улица Александра Грибоедова",
     "address_num": "15",
@@ -2886,9 +2858,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 207,
+  "pk": 205,
   "fields": {
-    "owner": 51,
+    "owner": 1088,
     "address_city": "TB",
     "address_street_app": "улица Анны Каландадзе",
     "address_num": "15",
@@ -2900,9 +2872,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 208,
+  "pk": 206,
   "fields": {
-    "owner": 51,
+    "owner": 1090,
     "address_city": "TB",
     "address_street_app": "проспект Ильи Чавчавадзе",
     "address_num": "22",
@@ -2914,9 +2886,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 209,
+  "pk": 207,
   "fields": {
-    "owner": 51,
+    "owner": 1091,
     "address_city": "TB",
     "address_street_app": "улица Отара Чиладзе",
     "address_num": "166/2",
@@ -2928,9 +2900,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 210,
+  "pk": 208,
   "fields": {
-    "owner": 51,
+    "owner": 1092,
     "address_city": "TB",
     "address_street_app": "улица Ш. Надирашвили",
     "address_num": "32, 18 а",
@@ -2942,9 +2914,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 211,
+  "pk": 209,
   "fields": {
-    "owner": 51,
+    "owner": 1093,
     "address_city": "TB",
     "address_street_app": "улица Анны Политковской",
     "address_num": "59",
@@ -2956,9 +2928,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 212,
+  "pk": 210,
   "fields": {
-    "owner": 51,
+    "owner": 1093,
     "address_city": "TB",
     "address_street_app": "Улица Анны Политковской",
     "address_num": "59",
@@ -2970,9 +2942,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 213,
+  "pk": 211,
   "fields": {
-    "owner": 51,
+    "owner": 991,
     "address_city": "TB",
     "address_street_app": "Дедопали",
     "address_num": "65 а",
@@ -2984,9 +2956,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 214,
+  "pk": 212,
   "fields": {
-    "owner": 51,
+    "owner": 1097,
     "address_city": "TB",
     "address_street_app": "улица Шота Руставели",
     "address_num": "",
@@ -2998,9 +2970,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 215,
+  "pk": 213,
   "fields": {
-    "owner": 51,
+    "owner": 1098,
     "address_city": "TB",
     "address_street_app": "улица Давида Квачантирадзе",
     "address_num": "5",
@@ -3012,9 +2984,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 216,
+  "pk": 214,
   "fields": {
-    "owner": 51,
+    "owner": 1099,
     "address_city": "TB",
     "address_street_app": "улица Юрия Гагарина",
     "address_num": "2",
@@ -3026,9 +2998,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 217,
+  "pk": 215,
   "fields": {
-    "owner": 51,
+    "owner": 1100,
     "address_city": "TB",
     "address_street_app": "Улица Мухрана Мачавариани",
     "address_num": "20 G",
@@ -3040,9 +3012,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 218,
+  "pk": 216,
   "fields": {
-    "owner": 51,
+    "owner": 1101,
     "address_city": "TB",
     "address_street_app": "QQVC+W9Q, ს1",
     "address_num": "-",
@@ -3054,9 +3026,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 219,
+  "pk": 217,
   "fields": {
-    "owner": 51,
+    "owner": 1102,
     "address_city": "TB",
     "address_street_app": "Напарнули",
     "address_num": "16",
@@ -3068,9 +3040,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 220,
+  "pk": 218,
   "fields": {
-    "owner": 51,
+    "owner": 1103,
     "address_city": "TB",
     "address_street_app": "улица Анны Политковской",
     "address_num": "36",
@@ -3082,9 +3054,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 221,
+  "pk": 219,
   "fields": {
-    "owner": 51,
+    "owner": 1104,
     "address_city": "TB",
     "address_street_app": "улица Павла Ингороквы",
     "address_num": "19",
@@ -3096,9 +3068,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 222,
+  "pk": 220,
   "fields": {
-    "owner": 51,
+    "owner": 1105,
     "address_city": "TB",
     "address_street_app": "улица царя Мириана",
     "address_num": "85",
@@ -3110,9 +3082,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 223,
+  "pk": 221,
   "fields": {
-    "owner": 51,
+    "owner": 1106,
     "address_city": "TB",
     "address_street_app": "улица Георгия Шатберашвили",
     "address_num": "13",
@@ -3124,9 +3096,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 224,
+  "pk": 222,
   "fields": {
-    "owner": 51,
+    "owner": 1107,
     "address_city": "TB",
     "address_street_app": "Didi Dighomi III",
     "address_num": "29d",
@@ -3138,9 +3110,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 225,
+  "pk": 223,
   "fields": {
-    "owner": 51,
+    "owner": 1108,
     "address_city": "TB",
     "address_street_app": "Vasil Petriashvili",
     "address_num": "46",
@@ -3152,9 +3124,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 226,
+  "pk": 224,
   "fields": {
-    "owner": 51,
+    "owner": 1109,
     "address_city": "TB",
     "address_street_app": "проспект Акакия Церетели",
     "address_num": "84",
@@ -3166,9 +3138,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 227,
+  "pk": 225,
   "fields": {
-    "owner": 51,
+    "owner": 1110,
     "address_city": "TB",
     "address_street_app": "улица Д. Гурамишвили",
     "address_num": "192",
@@ -3180,9 +3152,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 228,
+  "pk": 226,
   "fields": {
-    "owner": 51,
+    "owner": 1114,
     "address_city": "TB",
     "address_street_app": "Saint Petersburg/Dimitri Uznadze Street,",
     "address_num": "13/63",
@@ -3194,9 +3166,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 229,
+  "pk": 227,
   "fields": {
-    "owner": 51,
+    "owner": 1115,
     "address_city": "TB",
     "address_street_app": "улица Симона Чиковани",
     "address_num": "4",
@@ -3208,9 +3180,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 230,
+  "pk": 228,
   "fields": {
-    "owner": 51,
+    "owner": 1116,
     "address_city": "TB",
     "address_street_app": "Tina Iosebidze St",
     "address_num": "51b",
@@ -3222,9 +3194,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 231,
+  "pk": 229,
   "fields": {
-    "owner": 51,
+    "owner": 1117,
     "address_city": "TB",
     "address_street_app": "Kachinski",
     "address_num": "7",
@@ -3236,9 +3208,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 232,
+  "pk": 230,
   "fields": {
-    "owner": 51,
+    "owner": 1093,
     "address_city": "TB",
     "address_street_app": "Vashi Pshaveli",
     "address_num": "85",
@@ -3250,9 +3222,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 233,
+  "pk": 231,
   "fields": {
-    "owner": 51,
+    "owner": 1118,
     "address_city": "TB",
     "address_street_app": "Omar Khizanishvili",
     "address_num": "108",
@@ -3264,9 +3236,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 234,
+  "pk": 232,
   "fields": {
-    "owner": 51,
+    "owner": 1097,
     "address_city": "TB",
     "address_street_app": "Улица Шота Руставели",
     "address_num": "",
@@ -3278,9 +3250,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 235,
+  "pk": 233,
   "fields": {
-    "owner": 51,
+    "owner": 1120,
     "address_city": "TB",
     "address_street_app": "Berbuki",
     "address_num": "6",
@@ -3292,9 +3264,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 236,
+  "pk": 234,
   "fields": {
-    "owner": 51,
+    "owner": 1121,
     "address_city": "TB",
     "address_street_app": "Simon Chikovani",
     "address_num": "20",
@@ -3306,9 +3278,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 237,
+  "pk": 235,
   "fields": {
-    "owner": 51,
+    "owner": 1122,
     "address_city": "TB",
     "address_street_app": "Gili Shartava",
     "address_num": "31",
@@ -3320,9 +3292,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 238,
+  "pk": 236,
   "fields": {
-    "owner": 51,
+    "owner": 1123,
     "address_city": "TB",
     "address_street_app": "Эроси Манджгаладзе",
     "address_num": "64",
@@ -3334,9 +3306,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 239,
+  "pk": 237,
   "fields": {
-    "owner": 51,
+    "owner": 1124,
     "address_city": "TB",
     "address_street_app": "Nutsa Ghoghoberidze",
     "address_num": "9",
@@ -3348,9 +3320,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 240,
+  "pk": 238,
   "fields": {
-    "owner": 51,
+    "owner": 1125,
     "address_city": "TB",
     "address_street_app": "Petre Kavtaradze",
     "address_num": "14 a",
@@ -3362,9 +3334,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 241,
+  "pk": 239,
   "fields": {
-    "owner": 51,
+    "owner": 1126,
     "address_city": "TB",
     "address_street_app": "Ierusalimi St, T'bilisi",
     "address_num": "2",
@@ -3376,9 +3348,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 242,
+  "pk": 240,
   "fields": {
-    "owner": 51,
+    "owner": 1127,
     "address_city": "TB",
     "address_street_app": "улица Адама Мицкевича",
     "address_num": "27 g",
@@ -3390,9 +3362,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 243,
+  "pk": 241,
   "fields": {
-    "owner": 51,
+    "owner": 1128,
     "address_city": "TB",
     "address_street_app": "Abashidze",
     "address_num": "70",
@@ -3404,9 +3376,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 244,
+  "pk": 242,
   "fields": {
-    "owner": 51,
+    "owner": 1127,
     "address_city": "TB",
     "address_street_app": "Улица Адама Мицкевича",
     "address_num": "27 g",
@@ -3418,9 +3390,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 245,
+  "pk": 243,
   "fields": {
-    "owner": 51,
+    "owner": 1130,
     "address_city": "TB",
     "address_street_app": "Habeishvili",
     "address_num": "49 b",
@@ -3432,9 +3404,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 246,
+  "pk": 244,
   "fields": {
-    "owner": 51,
+    "owner": 1120,
     "address_city": "TB",
     "address_street_app": "Giuli Shartava",
     "address_num": "31",
@@ -3446,9 +3418,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 247,
+  "pk": 245,
   "fields": {
-    "owner": 51,
+    "owner": 1134,
     "address_city": "TB",
     "address_street_app": "-Gorgosali",
     "address_num": "",
@@ -3460,9 +3432,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 248,
+  "pk": 246,
   "fields": {
-    "owner": 51,
+    "owner": 1135,
     "address_city": "TB",
     "address_street_app": "Авто Варази",
     "address_num": "28a",
@@ -3474,9 +3446,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 249,
+  "pk": 247,
   "fields": {
-    "owner": 51,
+    "owner": 1136,
     "address_city": "TB",
     "address_street_app": "Надирашвили",
     "address_num": "38",
@@ -3488,9 +3460,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 250,
+  "pk": 248,
   "fields": {
-    "owner": 51,
+    "owner": 1137,
     "address_city": "TB",
     "address_street_app": "Сократа Аршба",
     "address_num": "7",
@@ -3502,9 +3474,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 251,
+  "pk": 249,
   "fields": {
-    "owner": 51,
+    "owner": 1139,
     "address_city": "TB",
     "address_street_app": "varketili",
     "address_num": "3",
@@ -3516,9 +3488,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 252,
+  "pk": 250,
   "fields": {
-    "owner": 51,
+    "owner": 1141,
     "address_city": "TB",
     "address_street_app": "Levana Mikeladze, Vake",
     "address_num": "3, app.5",
@@ -3530,9 +3502,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 253,
+  "pk": 251,
   "fields": {
-    "owner": 51,
+    "owner": 1143,
     "address_city": "TB",
     "address_street_app": "Georgia Brtskinvale",
     "address_num": "40",
@@ -3544,9 +3516,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 254,
+  "pk": 252,
   "fields": {
-    "owner": 51,
+    "owner": 1079,
     "address_city": "TB",
     "address_street_app": "Улица Ивана Мачабели",
     "address_num": "4",
@@ -3558,9 +3530,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 255,
+  "pk": 253,
   "fields": {
-    "owner": 51,
+    "owner": 1084,
     "address_city": "TB",
     "address_street_app": "Kavtaradze",
     "address_num": "47",
@@ -3572,9 +3544,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 256,
+  "pk": 254,
   "fields": {
-    "owner": 51,
+    "owner": 1144,
     "address_city": "TB",
     "address_street_app": "Chitadze",
     "address_num": "1",
@@ -3586,9 +3558,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 257,
+  "pk": 255,
   "fields": {
-    "owner": 51,
+    "owner": 1145,
     "address_city": "TB",
     "address_street_app": "Sulhan-Saba",
     "address_num": "3",
@@ -3600,9 +3572,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 258,
+  "pk": 256,
   "fields": {
-    "owner": 51,
+    "owner": 1147,
     "address_city": "TB",
     "address_street_app": "Petre Kavtaradzis Street",
     "address_num": "14 B",
@@ -3614,9 +3586,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 259,
+  "pk": 257,
   "fields": {
-    "owner": 51,
+    "owner": 1148,
     "address_city": "TB",
     "address_street_app": "Griboedova",
     "address_num": "1/3",
@@ -3628,9 +3600,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 260,
+  "pk": 258,
   "fields": {
-    "owner": 51,
+    "owner": 1149,
     "address_city": "TB",
     "address_street_app": "Varketili",
     "address_num": "",
@@ -3642,9 +3614,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 261,
+  "pk": 259,
   "fields": {
-    "owner": 51,
+    "owner": 1150,
     "address_city": "TB",
     "address_street_app": "Mcheta",
     "address_num": "50",
@@ -3656,9 +3628,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 262,
+  "pk": 260,
   "fields": {
-    "owner": 51,
+    "owner": 1152,
     "address_city": "TB",
     "address_street_app": "--",
     "address_num": "--",
@@ -3670,9 +3642,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 263,
+  "pk": 261,
   "fields": {
-    "owner": 51,
+    "owner": 1154,
     "address_city": "TB",
     "address_street_app": "Vasil Barnov",
     "address_num": "8",
@@ -3684,9 +3656,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 264,
+  "pk": 262,
   "fields": {
-    "owner": 51,
+    "owner": 1081,
     "address_city": "TB",
     "address_street_app": "4000 Месхи",
     "address_num": "5",
@@ -3698,9 +3670,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 265,
+  "pk": 263,
   "fields": {
-    "owner": 51,
+    "owner": 912,
     "address_city": "TB",
     "address_street_app": "Аллея Агмашенебели",
     "address_num": "12",
@@ -3712,9 +3684,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 266,
+  "pk": 264,
   "fields": {
-    "owner": 51,
+    "owner": 973,
     "address_city": "TB",
     "address_street_app": "Улица Георгия Чкондидели",
     "address_num": "36",
@@ -3726,9 +3698,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 267,
+  "pk": 265,
   "fields": {
-    "owner": 51,
+    "owner": 1157,
     "address_city": "TB",
     "address_street_app": "Dimitri Uznadze St",
     "address_num": "4",
@@ -3740,9 +3712,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 268,
+  "pk": 266,
   "fields": {
-    "owner": 51,
+    "owner": 1101,
     "address_city": "TB",
     "address_street_app": "Amagleba",
     "address_num": "37",
@@ -3754,9 +3726,9 @@ Manage: Django loaded up in setting mode : Development
 },
 {
   "model": "app_site.apartment",
-  "pk": 269,
+  "pk": 267,
   "fields": {
-    "owner": 51,
+    "owner": 1158,
     "address_city": "TB",
     "address_street_app": "Николая Бараташвили",
     "address_num": "8",

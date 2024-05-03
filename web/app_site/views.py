@@ -348,8 +348,8 @@ def input_street(request, **kwargs):
         #     UserProfile(customer_name=i.customer_name, phone=i.customer_phone, telegram=i.customer_telegram, city=i.address_city).save()
 
         if Apartment.objects.filter(address_city=i.address_city, address_street_app=i.address_street_app, address_num=i.address_num,).exists()==False:
-
-            Apartment(owner=request.user,
+            owner=UserProfile.objects.filter(phone=i.customer_phone, telegram=i.customer_telegram).first()
+            Apartment(owner=owner,
                   address_city=i.address_city,
                   address_street_app=i.address_street_app,
                   address_num=i.address_num,
