@@ -1,0 +1,3769 @@
+Manage: Django loaded up in setting mode : Development
+[
+{
+  "model": "app_site.apartment",
+  "pk": 1,
+  "fields": {
+    "owner": 120,
+    "address_city": "TB",
+    "address_street_app": "Rustaveli",
+    "address_num": "5",
+    "foto": "images/appartment/iphone-hero.png",
+    "location_longitude": 77.0,
+    "location_latitude": 85.0,
+    "notes": "Use code to open the door"
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 2,
+  "fields": {
+    "owner": 95,
+    "address_city": "TB",
+    "address_street_app": "ftcfgc",
+    "address_num": "76",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 3,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Ш. Надирашвили",
+    "address_num": "34",
+    "foto": "",
+    "location_longitude": 44.85483221628344,
+    "location_latitude": 41.6730125,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 4,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "проспект Давида Гурамишвили",
+    "address_num": "8 а",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 5,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Гурамишвили",
+    "address_num": "8а",
+    "foto": "",
+    "location_longitude": 44.791448333723665,
+    "location_latitude": 41.77040135,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 6,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Одесса",
+    "address_num": "39",
+    "foto": "",
+    "location_longitude": 44.762707,
+    "location_latitude": 41.7333172,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 7,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Делиси рядом",
+    "address_num": "-",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 8,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Акакия Церители",
+    "address_num": "61",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 9,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Гиви Картозия",
+    "address_num": "8",
+    "foto": "",
+    "location_longitude": 44.7505975,
+    "location_latitude": 41.7227831,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 10,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Дадиани",
+    "address_num": "7 б",
+    "foto": "",
+    "location_longitude": 44.80424926850205,
+    "location_latitude": 41.7192657,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 11,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Пекина",
+    "address_num": "30",
+    "foto": "",
+    "location_longitude": 44.7754904,
+    "location_latitude": 41.7184241,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 12,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Marukhis Gmirebi",
+    "address_num": "15",
+    "foto": "",
+    "location_longitude": 44.76895119899508,
+    "location_latitude": 41.70466675,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 13,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Акакия Хорава",
+    "address_num": "14",
+    "foto": "",
+    "location_longitude": 44.7824697,
+    "location_latitude": 41.7065248,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 14,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "рядом с Делиси",
+    "address_num": "-",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 15,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "проспект Акакия Церетели",
+    "address_num": "61",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 16,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Одесская",
+    "address_num": "39",
+    "foto": "",
+    "location_longitude": 44.762707,
+    "location_latitude": 41.7333172,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 17,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Гурамишвили",
+    "address_num": "12а/5",
+    "foto": "",
+    "location_longitude": 44.78712811361308,
+    "location_latitude": 41.75649315,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 18,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Чкондидели",
+    "address_num": "29/4",
+    "foto": "",
+    "location_longitude": 44.7947961,
+    "location_latitude": 41.7365163,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 19,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Сванети",
+    "address_num": "14",
+    "foto": "",
+    "location_longitude": 44.8563466,
+    "location_latitude": 41.775445,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 20,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Иракли Абашидзе",
+    "address_num": "61",
+    "foto": "",
+    "location_longitude": 44.7559261,
+    "location_latitude": 41.708622,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 21,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Университетский",
+    "address_num": "24",
+    "foto": "",
+    "location_longitude": 44.746993010239734,
+    "location_latitude": 41.796456750000004,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 22,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Жули шартава",
+    "address_num": "75",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 23,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Parnavaz Mepe Ave",
+    "address_num": "26a",
+    "foto": "",
+    "location_longitude": 44.7646272,
+    "location_latitude": 41.7903632,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 24,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Сарбутало",
+    "address_num": "-",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 25,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Варкетили",
+    "address_num": null,
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 26,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "проспект Пекина",
+    "address_num": "41",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 27,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Артура Лейсиа",
+    "address_num": "4",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 28,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Чавчавдзе",
+    "address_num": "39",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 29,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Худадова",
+    "address_num": "3",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 30,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "картозия",
+    "address_num": "10",
+    "foto": "",
+    "location_longitude": 44.7492907,
+    "location_latitude": 41.7235203,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 31,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Агмашенебели",
+    "address_num": "146",
+    "foto": "",
+    "location_longitude": 44.79202805962897,
+    "location_latitude": 41.71539225,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 32,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Джавская",
+    "address_num": "4",
+    "foto": "",
+    "location_longitude": 44.79515614298225,
+    "location_latitude": 41.743082349999995,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 33,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Ниагвари",
+    "address_num": "2",
+    "foto": "",
+    "location_longitude": 44.795235180211776,
+    "location_latitude": 41.69561685,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 34,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "4 тупик Месхи",
+    "address_num": "3",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 35,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Лех Качинский",
+    "address_num": "1/4",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 36,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Давида Квачантирадзе",
+    "address_num": "22",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 37,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Джанашия",
+    "address_num": "11",
+    "foto": "",
+    "location_longitude": 44.78172302869103,
+    "location_latitude": 41.7070585,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 38,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "",
+    "address_num": "",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 39,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": null,
+    "address_num": null,
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 40,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Гаспара 4",
+    "address_num": null,
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 41,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "джава 4",
+    "address_num": "",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 42,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Анна Политковская",
+    "address_num": "4g",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 43,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Купрадзе",
+    "address_num": "72/6",
+    "foto": "",
+    "location_longitude": 44.8724262,
+    "location_latitude": 41.7040703,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 44,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Цеми",
+    "address_num": "3",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 45,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Исани",
+    "address_num": null,
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 46,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Надирашвили",
+    "address_num": "21в",
+    "foto": "",
+    "location_longitude": 44.8515721,
+    "location_latitude": 41.673611,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 47,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Анны Политковской",
+    "address_num": "3/20",
+    "foto": "",
+    "location_longitude": 44.71544990522246,
+    "location_latitude": 41.721644850000004,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 48,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "2й переулок Соломона Курдиани",
+    "address_num": "10",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 49,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Кавтарадзе",
+    "address_num": "1",
+    "foto": "",
+    "location_longitude": 44.7383884,
+    "location_latitude": 41.7245498,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 50,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Ташкентский",
+    "address_num": "14",
+    "foto": "",
+    "location_longitude": 44.7653954,
+    "location_latitude": 41.7284933,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 51,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Руставели",
+    "address_num": "1",
+    "foto": "",
+    "location_longitude": 44.8010327,
+    "location_latitude": 41.6945312,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 52,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Миндели",
+    "address_num": "11",
+    "foto": "",
+    "location_longitude": 44.707369233640875,
+    "location_latitude": 41.722347,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 53,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Гурамишвили",
+    "address_num": "62б",
+    "foto": "",
+    "location_longitude": 44.79125215698278,
+    "location_latitude": 41.7685575,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 54,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Мескхи",
+    "address_num": "4",
+    "foto": "",
+    "location_longitude": 44.75013929102273,
+    "location_latitude": 41.76655795,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 55,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "-",
+    "address_num": "-",
+    "foto": "",
+    "location_longitude": 37.6791842,
+    "location_latitude": 55.784945,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 56,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "площадт вокзала крысные ворота",
+    "address_num": null,
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 57,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Раждена Гветадзе",
+    "address_num": "10",
+    "foto": "",
+    "location_longitude": 44.7847342,
+    "location_latitude": 41.72932095,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 58,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Тамарашвили",
+    "address_num": "12",
+    "foto": "",
+    "location_longitude": 44.74520054149775,
+    "location_latitude": 41.723485,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 59,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Бочорошвили",
+    "address_num": "37Б",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 60,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Тамарашвили",
+    "address_num": "13",
+    "foto": "",
+    "location_longitude": 44.74660617736161,
+    "location_latitude": 41.71819355,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 61,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Костава",
+    "address_num": "7",
+    "foto": "",
+    "location_longitude": 44.7897082,
+    "location_latitude": 41.7049972,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 62,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "giorgi akhvlediani",
+    "address_num": "19",
+    "foto": "",
+    "location_longitude": 44.7893202,
+    "location_latitude": 41.7065324,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 63,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "проспект Кетеван Дедофали",
+    "address_num": "24",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 64,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Zakaria Mkhargrdzeli",
+    "address_num": "7",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 65,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Бежана Каландадзе",
+    "address_num": "15",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 66,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Кетеван Дцамебули",
+    "address_num": "41",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 67,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Nikoloz Karlo Chxeidze",
+    "address_num": "13",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 68,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Павла Ингороквы",
+    "address_num": "19",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 69,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Нуцубидзе",
+    "address_num": "26а",
+    "foto": "",
+    "location_longitude": 44.751807531043106,
+    "location_latitude": 41.7286974,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 70,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Георгия Миротадзе",
+    "address_num": "8",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 71,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Икалто",
+    "address_num": "4",
+    "foto": "",
+    "location_longitude": 44.76503200854272,
+    "location_latitude": 41.718641149999996,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 72,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Marukhis Gmirebi Street",
+    "address_num": "15",
+    "foto": "",
+    "location_longitude": 44.76895119899508,
+    "location_latitude": 41.70466675,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 73,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Чавчавадзе",
+    "address_num": "80/4",
+    "foto": "",
+    "location_longitude": 44.7759383,
+    "location_latitude": 41.6876477,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 74,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Варази",
+    "address_num": "105",
+    "foto": "",
+    "location_longitude": 44.7243719,
+    "location_latitude": 41.7313249,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 75,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Шалва Нуцубидзе",
+    "address_num": "129",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 76,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Назалабыби",
+    "address_num": "-",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 77,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Paata Datuashvili",
+    "address_num": "7",
+    "foto": "",
+    "location_longitude": 44.7245914,
+    "location_latitude": 41.7312055,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 78,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Карели",
+    "address_num": "25",
+    "foto": "",
+    "location_longitude": 44.772246807301826,
+    "location_latitude": 41.718857650000004,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 79,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Кипшидзе",
+    "address_num": "7 б",
+    "foto": "",
+    "location_longitude": 44.7596077,
+    "location_latitude": 41.7141725,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 80,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Амашук",
+    "address_num": "23",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 81,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Baku",
+    "address_num": "20b",
+    "foto": "",
+    "location_longitude": 44.7939826,
+    "location_latitude": 41.7188243,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 82,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Абашидзе",
+    "address_num": "24",
+    "foto": "",
+    "location_longitude": 44.7681754,
+    "location_latitude": 41.7073801,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 83,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Шатберашвили",
+    "address_num": "12",
+    "foto": "",
+    "location_longitude": 44.774269655225126,
+    "location_latitude": 41.7044613,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 84,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Костава",
+    "address_num": "11",
+    "foto": "",
+    "location_longitude": 44.78922956009175,
+    "location_latitude": 41.7053515,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 85,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Зазы Панаскертел-Цицишвили",
+    "address_num": "18 б, кв 2",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 86,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Shalva Nutsubidze St, Tbilisi",
+    "address_num": "10",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 87,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "шоссе Цкнети",
+    "address_num": "77",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 88,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Дидубе",
+    "address_num": "5",
+    "foto": "",
+    "location_longitude": 44.7880765,
+    "location_latitude": 41.7271321,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 89,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Рустави",
+    "address_num": "14",
+    "foto": "",
+    "location_longitude": 44.862751,
+    "location_latitude": 41.6681764,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 90,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Политковской",
+    "address_num": "3/32",
+    "foto": "",
+    "location_longitude": 44.71479326397812,
+    "location_latitude": 41.72288625,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 91,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Закария Палиашвили",
+    "address_num": "118",
+    "foto": "",
+    "location_longitude": 44.7586185,
+    "location_latitude": 41.709489,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 92,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Пушкина",
+    "address_num": "11",
+    "foto": "",
+    "location_longitude": 44.80246468650384,
+    "location_latitude": 41.6941111,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 93,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Delish street",
+    "address_num": "3/2",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 94,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Важа Пшавела",
+    "address_num": "25",
+    "foto": "",
+    "location_longitude": 44.7597033,
+    "location_latitude": 41.7271114,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 95,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "костава",
+    "address_num": "44",
+    "foto": "",
+    "location_longitude": 44.784753942975065,
+    "location_latitude": 41.7091763,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 96,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Габашвили",
+    "address_num": "11",
+    "foto": "",
+    "location_longitude": 44.7574165,
+    "location_latitude": 41.7152447,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 97,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Тбилиси Хилс, Гольф Клуб",
+    "address_num": "-",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 98,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Titsian Tabidze St",
+    "address_num": "7",
+    "foto": "",
+    "location_longitude": 44.7597922,
+    "location_latitude": 41.7070944,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 99,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "1-ый проход Крцаниси",
+    "address_num": "5",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 100,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Серго Закариадзе",
+    "address_num": "8",
+    "foto": "",
+    "location_longitude": 44.7476642193543,
+    "location_latitude": 41.7275442,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 101,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Чкондидели",
+    "address_num": "36",
+    "foto": "",
+    "location_longitude": 44.7915338,
+    "location_latitude": 41.7405682,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 102,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Котэ Махарадзе",
+    "address_num": "1",
+    "foto": "",
+    "location_longitude": 44.78340995883997,
+    "location_latitude": 41.7112992,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 103,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Пекина",
+    "address_num": "22",
+    "foto": "",
+    "location_longitude": 44.7754904,
+    "location_latitude": 41.7184241,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 104,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Арчи Тсагарели",
+    "address_num": "31",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 105,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Вепхисткаосани",
+    "address_num": "28",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 106,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Руставели",
+    "address_num": "14",
+    "foto": "",
+    "location_longitude": 44.7974762,
+    "location_latitude": 41.6989805,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 107,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "гольф клуб",
+    "address_num": "-",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 108,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "проспект Ильи Чавчавадзе",
+    "address_num": "83",
+    "foto": "",
+    "location_longitude": 44.73845407977723,
+    "location_latitude": 41.704742499999995,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 109,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Руставели",
+    "address_num": "23",
+    "foto": "",
+    "location_longitude": 44.796558604732354,
+    "location_latitude": 41.700383,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 110,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "kavtaradze",
+    "address_num": "6",
+    "foto": "",
+    "location_longitude": 44.724869600000005,
+    "location_latitude": 41.72258775,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 111,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "4й переулок Кавтарадзе",
+    "address_num": "5",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 112,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "nik'oloz q'ipshidzis kucha",
+    "address_num": "7 G",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 113,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Руставели",
+    "address_num": "-",
+    "foto": "",
+    "location_longitude": 44.7896467,
+    "location_latitude": 41.703497,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 114,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Шатберашвили",
+    "address_num": "12 квартир",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 115,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Московский проспект",
+    "address_num": "33",
+    "foto": "",
+    "location_longitude": 44.879342938189616,
+    "location_latitude": 41.674265,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 116,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "2-й Переулок Саломона Курдиани",
+    "address_num": "10",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 117,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Demetre Tavdadebuli St, T'bilisi 013",
+    "address_num": "10b",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 118,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Улица Закария Палиашвили",
+    "address_num": "118",
+    "foto": "",
+    "location_longitude": 44.7586185,
+    "location_latitude": 41.709489,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 119,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Шартава",
+    "address_num": "37",
+    "foto": "",
+    "location_longitude": 44.7721517,
+    "location_latitude": 41.7288928,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 120,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Ираклия Абашидзе",
+    "address_num": "46",
+    "foto": "",
+    "location_longitude": 44.7613249,
+    "location_latitude": 41.7078831,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 121,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Вахушти Багратиони",
+    "address_num": "34",
+    "foto": "",
+    "location_longitude": 44.783069,
+    "location_latitude": 41.7259501,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 122,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Т.Цавкисели",
+    "address_num": "63 а",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 123,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Корнелия Кекелидзе",
+    "address_num": "25",
+    "foto": "",
+    "location_longitude": 44.775647135020904,
+    "location_latitude": 41.70419,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 124,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Ал. Цагарели",
+    "address_num": "31",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 125,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "проспект Московский",
+    "address_num": "3",
+    "foto": "",
+    "location_longitude": 44.8551222,
+    "location_latitude": 41.6848189,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 126,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Глдани",
+    "address_num": "96 б",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 127,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Александра Чавчавадзе",
+    "address_num": "72, кв 24",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 128,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Виктора Долидзе",
+    "address_num": "26",
+    "foto": "",
+    "location_longitude": 44.7759699,
+    "location_latitude": 41.7174839,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 129,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "проспект Царя Парнаваза",
+    "address_num": "15",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 130,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Михаила Зандукели",
+    "address_num": "-",
+    "foto": "",
+    "location_longitude": 44.7855688,
+    "location_latitude": 41.7041899,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 131,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Леон и Лосеб Орбелеби",
+    "address_num": "51",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 132,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "проспект Александра Казбеги",
+    "address_num": "15",
+    "foto": "",
+    "location_longitude": 44.76321015650914,
+    "location_latitude": 41.726318649999996,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 133,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Гогиберидзе",
+    "address_num": "9",
+    "foto": "",
+    "location_longitude": 44.777771125,
+    "location_latitude": 41.7634219,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 134,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Отара Тактакишвили",
+    "address_num": "12a",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 135,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Георгия Чкондидели",
+    "address_num": "-",
+    "foto": "",
+    "location_longitude": 44.7947961,
+    "location_latitude": 41.7365163,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 136,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Г. Картозиа",
+    "address_num": "10",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 137,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Зураба Патаридзе",
+    "address_num": "8",
+    "foto": "",
+    "location_longitude": 44.8488315,
+    "location_latitude": 41.7041074,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 138,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Андрея Размадзе",
+    "address_num": "55",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 139,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "3-й массив Варкетили",
+    "address_num": "55",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 140,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Александра Чавчавадзе",
+    "address_num": "49 д",
+    "foto": "",
+    "location_longitude": 44.7920775,
+    "location_latitude": 41.699082,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 141,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Шалва Дадиани",
+    "address_num": "21/23",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 142,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Николая Кипшидзе",
+    "address_num": "3Б",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 143,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "проспект Чабуа Амирэджиби",
+    "address_num": "6",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 144,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Закария Палиашвили",
+    "address_num": "118, 3 под",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 145,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Николая Кипшидзе",
+    "address_num": "7",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 146,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Алеко Гобронидзе",
+    "address_num": "11 б",
+    "foto": "",
+    "location_longitude": 44.81864076041255,
+    "location_latitude": 41.7870352,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 147,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Квишхети",
+    "address_num": "2",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 148,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Kavtaradze",
+    "address_num": "6",
+    "foto": "",
+    "location_longitude": 44.724869600000005,
+    "location_latitude": 41.72258775,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 149,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "2й переулок Соломона Курдиани",
+    "address_num": "14",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 150,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "проспект Ильи Чавчавадзе",
+    "address_num": "30",
+    "foto": "",
+    "location_longitude": 44.7501159,
+    "location_latitude": 41.7117389,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 151,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Улица Ираклия Абашидзе",
+    "address_num": "46",
+    "foto": "",
+    "location_longitude": 44.7613249,
+    "location_latitude": 41.7078831,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 152,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Георгия Мазниашвили",
+    "address_num": "4",
+    "foto": "",
+    "location_longitude": 44.8034032,
+    "location_latitude": 41.7089357,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 153,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица С. Залдастанишвили",
+    "address_num": "3",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 154,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Вазисубани",
+    "address_num": "4 а",
+    "foto": "",
+    "location_longitude": 44.8498781,
+    "location_latitude": 41.7034618,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 155,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Проспект Ильи Чавчавадзе",
+    "address_num": "30",
+    "foto": "",
+    "location_longitude": 44.7501159,
+    "location_latitude": 41.7117389,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 156,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Давари",
+    "address_num": "39",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 157,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Александра Грибоедова",
+    "address_num": "15",
+    "foto": "",
+    "location_longitude": 44.79491300751762,
+    "location_latitude": 41.700221400000004,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 158,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "проспект Ильи Чавчавадзе",
+    "address_num": "39",
+    "foto": "",
+    "location_longitude": 44.7501159,
+    "location_latitude": 41.7117389,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 159,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Николая Кипшидзе",
+    "address_num": "16",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 160,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Марухских героев",
+    "address_num": "15",
+    "foto": "",
+    "location_longitude": 44.76895119899508,
+    "location_latitude": 41.70466675,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 161,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Элизбара Миндели",
+    "address_num": "12",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 162,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Георгия Абашвили",
+    "address_num": "3",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 163,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "аллея Агмашенебели",
+    "address_num": "117",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 164,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Улица Важа Пшавела",
+    "address_num": "12",
+    "foto": "",
+    "location_longitude": 44.748771958474286,
+    "location_latitude": 41.77555835,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 165,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Дмитрия Узнадзе",
+    "address_num": "2",
+    "foto": "",
+    "location_longitude": 44.8041237,
+    "location_latitude": 41.7028763,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 166,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "4000 Месхи",
+    "address_num": "3",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 167,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Саирме",
+    "address_num": "9, кв. 13",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 168,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "-",
+    "address_num": "",
+    "foto": "",
+    "location_longitude": 37.6791842,
+    "location_latitude": 55.784945,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 169,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "2 квартал Важа-Пшавела",
+    "address_num": "25",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 170,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Проспект Ильи Чавчавадзе",
+    "address_num": "83",
+    "foto": "",
+    "location_longitude": 44.73845407977723,
+    "location_latitude": 41.704742499999995,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 171,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Университетская",
+    "address_num": "24",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 172,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Аршбы",
+    "address_num": "7",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 173,
+  "fields": {
+    "owner": 51,
+    "address_city": "BT",
+    "address_street_app": "",
+    "address_num": "-",
+    "foto": "",
+    "location_longitude": 44.7905859,
+    "location_latitude": 41.7270314,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 174,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Чикобавы",
+    "address_num": "43",
+    "foto": "",
+    "location_longitude": 44.8055895,
+    "location_latitude": 41.7082874,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 175,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Казбеги",
+    "address_num": "34 а",
+    "foto": "",
+    "location_longitude": 37.6791842,
+    "location_latitude": 55.784945,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 176,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Вепхисткаосани",
+    "address_num": "34",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 177,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Саирме",
+    "address_num": "9",
+    "foto": "",
+    "location_longitude": 44.762099089205904,
+    "location_latitude": 41.7220921,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 178,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "2-ой тупик Курашвили",
+    "address_num": "2",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 179,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Политковской",
+    "address_num": "2 б",
+    "foto": "",
+    "location_longitude": 37.6791842,
+    "location_latitude": 55.784945,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 180,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "-",
+    "address_num": null,
+    "foto": "",
+    "location_longitude": 37.6791842,
+    "location_latitude": 55.784945,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 181,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "проспект Ильи Чавчавадзе",
+    "address_num": "37 б",
+    "foto": "",
+    "location_longitude": 44.76068998159984,
+    "location_latitude": 41.71186315,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 182,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Николая Кипшидзе",
+    "address_num": "4",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 183,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Мтацминдская",
+    "address_num": "27",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 184,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Улица Марухских героев",
+    "address_num": "15",
+    "foto": "",
+    "location_longitude": 44.76895119899508,
+    "location_latitude": 41.70466675,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 185,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Stefane Chrelashvili St",
+    "address_num": "1",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 186,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Анны Политковской",
+    "address_num": "3/31,кв.20",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 187,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Ketevan Tsamebuli Ave",
+    "address_num": "2",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 188,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Шалва Нуцубидзе",
+    "address_num": "82",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 189,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Коста Хетагурова",
+    "address_num": "1/3",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 190,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица К. Цинцадзе",
+    "address_num": "38",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 191,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Навтлуги",
+    "address_num": "10 а",
+    "foto": "",
+    "location_longitude": 44.840715800504995,
+    "location_latitude": 41.677979,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 192,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Лежава",
+    "address_num": "20",
+    "foto": "",
+    "location_longitude": 44.7409007,
+    "location_latitude": 41.7101721,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 193,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Казбеги",
+    "address_num": "25 а",
+    "foto": "",
+    "location_longitude": 44.75711296632757,
+    "location_latitude": 41.72575845,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 194,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Demetre Tavdadebuli",
+    "address_num": "10 б",
+    "foto": "",
+    "location_longitude": 44.759968573843054,
+    "location_latitude": 41.79626775,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 195,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Александра Грибоедова",
+    "address_num": "",
+    "foto": "",
+    "location_longitude": 44.7919706,
+    "location_latitude": 41.7024848,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 196,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Проспект Пекина",
+    "address_num": "41",
+    "foto": "",
+    "location_longitude": 44.7678772,
+    "location_latitude": 41.7307385,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 197,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Улица Александра Чавчавадзе",
+    "address_num": "72, кв 24",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 198,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Анны Политковской",
+    "address_num": "4 г",
+    "foto": "",
+    "location_longitude": 44.715618294665276,
+    "location_latitude": 41.719274,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 199,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Ивана Мачабели",
+    "address_num": "4",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 200,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Улица Николая Кипшидзе",
+    "address_num": "7",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 201,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Улица Коста Хетагурова",
+    "address_num": "1/3",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 202,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Улица Казбеги",
+    "address_num": "34 а",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 203,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Чугурети",
+    "address_num": "",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 204,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Амаглеба",
+    "address_num": "25",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 205,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Грмагеле",
+    "address_num": "24",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 206,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Улица Александра Грибоедова",
+    "address_num": "15",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 207,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Анны Каландадзе",
+    "address_num": "15",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 208,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "проспект Ильи Чавчавадзе",
+    "address_num": "22",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 209,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Отара Чиладзе",
+    "address_num": "166/2",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 210,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Ш. Надирашвили",
+    "address_num": "32, 18 а",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 211,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Анны Политковской",
+    "address_num": "59",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 212,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Улица Анны Политковской",
+    "address_num": "59",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 213,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Дедопали",
+    "address_num": "65 а",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 214,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Шота Руставели",
+    "address_num": "",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 215,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Давида Квачантирадзе",
+    "address_num": "5",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 216,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Юрия Гагарина",
+    "address_num": "2",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 217,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Улица Мухрана Мачавариани",
+    "address_num": "20 G",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 218,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "QQVC+W9Q, ს1",
+    "address_num": "-",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 219,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Напарнули",
+    "address_num": "16",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 220,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Анны Политковской",
+    "address_num": "36",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 221,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Павла Ингороквы",
+    "address_num": "19",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 222,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица царя Мириана",
+    "address_num": "85",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 223,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Георгия Шатберашвили",
+    "address_num": "13",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 224,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Didi Dighomi III",
+    "address_num": "29d",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 225,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Vasil Petriashvili",
+    "address_num": "46",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 226,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "проспект Акакия Церетели",
+    "address_num": "84",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 227,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Д. Гурамишвили",
+    "address_num": "192",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 228,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Saint Petersburg/Dimitri Uznadze Street,",
+    "address_num": "13/63",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 229,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Симона Чиковани",
+    "address_num": "4",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 230,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Tina Iosebidze St",
+    "address_num": "51b",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 231,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Kachinski",
+    "address_num": "7",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 232,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Vashi Pshaveli",
+    "address_num": "85",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 233,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Omar Khizanishvili",
+    "address_num": "108",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 234,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Улица Шота Руставели",
+    "address_num": "",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 235,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Berbuki",
+    "address_num": "6",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 236,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Simon Chikovani",
+    "address_num": "20",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 237,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Gili Shartava",
+    "address_num": "31",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 238,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Эроси Манджгаладзе",
+    "address_num": "64",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 239,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Nutsa Ghoghoberidze",
+    "address_num": "9",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 240,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Petre Kavtaradze",
+    "address_num": "14 a",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 241,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Ierusalimi St, T'bilisi",
+    "address_num": "2",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 242,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "улица Адама Мицкевича",
+    "address_num": "27 g",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 243,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Abashidze",
+    "address_num": "70",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 244,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Улица Адама Мицкевича",
+    "address_num": "27 g",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 245,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Habeishvili",
+    "address_num": "49 b",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 246,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Giuli Shartava",
+    "address_num": "31",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 247,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "-Gorgosali",
+    "address_num": "",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 248,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Авто Варази",
+    "address_num": "28a",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 249,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Надирашвили",
+    "address_num": "38",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 250,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Сократа Аршба",
+    "address_num": "7",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 251,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "varketili",
+    "address_num": "3",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 252,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Levana Mikeladze, Vake",
+    "address_num": "3, app.5",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 253,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Georgia Brtskinvale",
+    "address_num": "40",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 254,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Улица Ивана Мачабели",
+    "address_num": "4",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 255,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Kavtaradze",
+    "address_num": "47",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 256,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Chitadze",
+    "address_num": "1",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 257,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Sulhan-Saba",
+    "address_num": "3",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 258,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Petre Kavtaradzis Street",
+    "address_num": "14 B",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 259,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Griboedova",
+    "address_num": "1/3",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 260,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Varketili",
+    "address_num": "",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 261,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Mcheta",
+    "address_num": "50",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 262,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "--",
+    "address_num": "--",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 263,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Vasil Barnov",
+    "address_num": "8",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 264,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "4000 Месхи",
+    "address_num": "5",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 265,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Аллея Агмашенебели",
+    "address_num": "12",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 266,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Улица Георгия Чкондидели",
+    "address_num": "36",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 267,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Dimitri Uznadze St",
+    "address_num": "4",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 268,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Amagleba",
+    "address_num": "37",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+},
+{
+  "model": "app_site.apartment",
+  "pk": 269,
+  "fields": {
+    "owner": 51,
+    "address_city": "TB",
+    "address_street_app": "Николая Бараташвили",
+    "address_num": "8",
+    "foto": "",
+    "location_longitude": null,
+    "location_latitude": null,
+    "notes": null
+  }
+}
+]

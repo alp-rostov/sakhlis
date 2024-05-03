@@ -344,8 +344,18 @@ def input_street(request, **kwargs):
     for i in all:
         # i.customer_phone=i.customer_phone.replace('+','')
         # i.save()
-        if UserProfile.objects.filter(phone=i.customer_phone, customer_name=i.customer_name, telegram=i.customer_telegram).exists()==False:
-            UserProfile(customer_name=i.customer_name, phone=i.customer_phone, telegram=i.customer_telegram, city=i.address_city).save()
+        # if UserProfile.objects.filter(phone=i.customer_phone, customer_name=i.customer_name, telegram=i.customer_telegram).exists()==False:
+        #     UserProfile(customer_name=i.customer_name, phone=i.customer_phone, telegram=i.customer_telegram, city=i.address_city).save()
+
+        if Apartment.objects.filter(address_city=i.address_city, address_street_app=i.address_street_app, address_num=i.address_num,).exists()==False:
+
+            Apartment(owner=request.user,
+                  address_city=i.address_city,
+                  address_street_app=i.address_street_app,
+                  address_num=i.address_num,
+                  location_longitude=i.location_longitude,
+                  location_latitude=i.location_latitude).save()
+
     return JsonResponse('', safe=False)
 
 
