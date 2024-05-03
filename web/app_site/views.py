@@ -347,14 +347,13 @@ def input_street(request, **kwargs):
         # if UserProfile.objects.filter(phone=i.customer_phone, customer_name=i.customer_name, telegram=i.customer_telegram).exists()==False:
         #     UserProfile(customer_name=i.customer_name, phone=i.customer_phone, telegram=i.customer_telegram, city=i.address_city).save()
 
-        if Apartment.objects.filter(address_city=i.address_city, address_street_app=i.address_street_app, address_num=i.address_num,).exists()==False:
-            owner=UserProfile.objects.filter(phone=i.customer_phone, telegram=i.customer_telegram).first()
-            Apartment(owner=owner,
-                  address_city=i.address_city,
-                  address_street_app=i.address_street_app,
-                  address_num=i.address_num,
-                  location_longitude=i.location_longitude,
-                  location_latitude=i.location_latitude).save()
+
+        apartment= Apartment.objects.filter(address_city=i.address_city, address_street_app=i.address_street_app, address_num=i.address_num).first()
+        owner=UserProfile.objects.filter(phone=i.customer_phone, telegram=i.customer_telegram).first()
+        i.apartment_id=apartment
+        i.customer_id=owner
+        i.save()
+
 
     return JsonResponse('', safe=False)
 

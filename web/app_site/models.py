@@ -50,6 +50,9 @@ class OrderList(models.Model):
     apartment_id = models.ForeignKey('Apartment', on_delete=models.SET_NULL, null=True, blank=True,
                                     verbose_name='Appartment', default='', )
 
+    customer_id = models.ForeignKey('UserProfile', on_delete=models.SET_NULL, null=True, blank=True,
+                                    verbose_name='Client', default='', )
+
     text_order = models.CharField(max_length=1500, verbose_name='Description of the problem', blank=True, null=True)
 
 
