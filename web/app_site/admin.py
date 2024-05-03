@@ -40,9 +40,15 @@ class AppartamentAdmin(admin.ModelAdmin):
                     'location_longitude','location_latitude', 'notes')
     list_display_links = ('name',)
 
+class UserAdmin(admin.ModelAdmin):
+    list_display = ('customer_name', 'phone', 'telegram',
+                    'profile', 'user')
+    list_display_links = ('customer_name',)
 
 
-admin.site.register(UserProfile)
+
+
+admin.site.register(UserProfile, UserAdmin)
 admin.site.register(Service, ServiceAdmin)
 admin.site.register(Invoice, InvoiceAdmin)
 admin.site.register(OrderList, OrderListAdmin)
