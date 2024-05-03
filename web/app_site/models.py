@@ -67,7 +67,7 @@ class UserProfile(models.Model):
 
 
     def __str__(self):
-        return f"{self.customer_name}"
+        return f"{self.pk} {self.customer_name}"
 
 
 
@@ -95,7 +95,7 @@ class Apartment(models.Model):
         verbose_name_plural = 'Appartment list'
 
     def __str__(self):
-        return f"{self.address_street_app} {self.address_num}"
+        return f"{self.pk} {self.address_street_app} {self.address_num}"
 
 class OrderList(models.Model):
     """time_in time_out repairer_id price text_order customer_name customer_phone address_city address_street_app

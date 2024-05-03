@@ -38,14 +38,14 @@ class StreetAdmin(admin.ModelAdmin):
     list_display_links = ('type_street', 'name_street')
 
 class AppartamentAdmin(admin.ModelAdmin):
-    list_display = ('name', 'owner', 'address_city',
+    list_display = ('pk', 'name', 'owner', 'address_city',
                     'address_street_app','address_num', 'foto',
                     'location_longitude','location_latitude', 'notes')
     list_display_links = ('name',)
     list_filter = ('owner',)
 
 class UserAdmin(admin.ModelAdmin):
-    list_display = ('customer_name', 'phone', 'telegram',
+    list_display = ('pk', 'customer_name', 'phone', 'telegram',
                     'profile', 'user')
     list_display_links = ('customer_name',)
     inlines = [PersonalApartment]
