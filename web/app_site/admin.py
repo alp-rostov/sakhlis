@@ -7,9 +7,9 @@ class PersonalInvoice(admin.TabularInline):
     model = Invoice
 
 class OrderListAdmin(admin.ModelAdmin):
-    list_display = ('id', 'time_in', 'text_order', 'customer_name', 'customer_phone', 'location_longitude', 'location_latitude')
-    list_display_links = ('text_order', 'customer_name', 'customer_phone')
-    search_fields = ('text_order', 'customer_phone')
+    list_display = ('id', 'time_in', 'text_order')
+    list_display_links = ('text_order',)
+    search_fields = ('text_order', )
     list_filter = ('order_status', 'repairer_id', 'time_in')
     inlines = [PersonalInvoice]
 

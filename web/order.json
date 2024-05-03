@@ -1,4 +1,4 @@
-Manage: Django loaded up in setting mode : Development
+
 [
 {
   "model": "app_site.orderlist",
@@ -10,16 +10,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 1,
     "customer_id": 881,
     "text_order": "Сверление отверстий под петли",
-    "customer_name": "Бухарибар -Фокусник",
-    "customer_phone": "79680777996",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Ш. Надирашвили",
-    "address_num": "34",
-    "location_longitude": 44.85483221628344,
-    "location_latitude": 41.6730125
+    "order_status": "END"
   }
 },
 {
@@ -32,16 +23,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 2,
     "customer_id": 882,
     "text_order": "монтаж кронштейнов под цветы, ремонт балконной двери",
-    "customer_name": "Лия",
-    "customer_phone": "995598313311",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "проспект Давида Гурамишвили",
-    "address_num": "8 а",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -54,16 +36,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 3,
     "customer_id": 883,
     "text_order": "Монтаж карниза 2 шт, ремонт проводки",
-    "customer_name": "Белорус",
-    "customer_phone": "@takeiteasyguy",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Гурамишвили",
-    "address_num": "8а",
-    "location_longitude": 44.791448333723665,
-    "location_latitude": 41.77040135
+    "order_status": "END"
   }
 },
 {
@@ -76,16 +49,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 4,
     "customer_id": 884,
     "text_order": "Ремонт межкомнатных дверей",
-    "customer_name": "Елена_Америка",
-    "customer_phone": "995591050817",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Одесса",
-    "address_num": "39",
-    "location_longitude": 44.762707,
-    "location_latitude": 41.7333172
+    "order_status": "END"
   }
 },
 {
@@ -98,16 +62,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 5,
     "customer_id": 885,
     "text_order": "Установка душ-кабинки, монтаж крана, раковины.",
-    "customer_name": "Елена",
-    "customer_phone": "995568693480",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Делиси рядом",
-    "address_num": "-",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -120,16 +75,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 6,
     "customer_id": 886,
     "text_order": "Ремонт канализации",
-    "customer_name": "Левон",
-    "customer_phone": "995511205077",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Акакия Церители",
-    "address_num": "61",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -142,16 +88,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 7,
     "customer_id": 887,
     "text_order": "Ремонт душа, карниза",
-    "customer_name": "Ирина програмист",
-    "customer_phone": "995511112059",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Гиви Картозия",
-    "address_num": "8",
-    "location_longitude": 44.7505975,
-    "location_latitude": 41.7227831
+    "order_status": "END"
   }
 },
 {
@@ -164,16 +101,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 8,
     "customer_id": 888,
     "text_order": "Прочистка канализации",
-    "customer_name": "Максим",
-    "customer_phone": "995500501710",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Дадиани",
-    "address_num": "7 б",
-    "location_longitude": 44.80424926850205,
-    "location_latitude": 41.7192657
+    "order_status": "END"
   }
 },
 {
@@ -186,16 +114,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 9,
     "customer_id": 889,
     "text_order": "Ремонт двери",
-    "customer_name": "Айтишники волосатый Никита",
-    "customer_phone": "-",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Пекина",
-    "address_num": "30",
-    "location_longitude": 44.7754904,
-    "location_latitude": 41.7184241
+    "order_status": "END"
   }
 },
 {
@@ -208,16 +127,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 10,
     "customer_id": 890,
     "text_order": "изготовление полок в ванную",
-    "customer_name": "Катя",
-    "customer_phone": "79655949428",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Marukhis Gmirebi",
-    "address_num": "15",
-    "location_longitude": 44.76895119899508,
-    "location_latitude": 41.70466675
+    "order_status": "END"
   }
 },
 {
@@ -230,16 +140,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 11,
     "customer_id": 891,
     "text_order": "Монтаж полок",
-    "customer_name": "Павел - бухари клуб",
-    "customer_phone": "79811005555",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Акакия Хорава",
-    "address_num": "14",
-    "location_longitude": 44.7824697,
-    "location_latitude": 41.7065248
+    "order_status": "END"
   }
 },
 {
@@ -252,16 +153,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 12,
     "customer_id": 885,
     "text_order": "Монтаж телевизора и светильников",
-    "customer_name": "Елена",
-    "customer_phone": "995568693480",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "рядом с Делиси",
-    "address_num": "-",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -274,16 +166,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 13,
     "customer_id": 892,
     "text_order": "Устройство канализации, замена трубы",
-    "customer_name": "Левон",
-    "customer_phone": "995511205077",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "проспект Акакия Церетели",
-    "address_num": "61",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -296,16 +179,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 14,
     "customer_id": 893,
     "text_order": "Ремонт дверей",
-    "customer_name": "Елена_Америка",
-    "customer_phone": "995591050817",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Одесская",
-    "address_num": "39",
-    "location_longitude": 44.762707,
-    "location_latitude": 41.7333172
+    "order_status": "END"
   }
 },
 {
@@ -318,16 +192,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 15,
     "customer_id": 894,
     "text_order": "Читска сплитсистем",
-    "customer_name": "От Леси",
-    "customer_phone": "79647650290",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Гурамишвили",
-    "address_num": "12а/5",
-    "location_longitude": 44.78712811361308,
-    "location_latitude": 41.75649315
+    "order_status": "END"
   }
 },
 {
@@ -340,16 +205,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 7,
     "customer_id": 887,
     "text_order": "Замена кранов на радиаторе",
-    "customer_name": "Ирина програмист",
-    "customer_phone": "995511112059",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Гиви Картозия",
-    "address_num": "8",
-    "location_longitude": 44.7505975,
-    "location_latitude": 41.7227831
+    "order_status": "END"
   }
 },
 {
@@ -362,16 +218,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 3,
     "customer_id": 883,
     "text_order": "Монтаж сплит системы",
-    "customer_name": "Белорус",
-    "customer_phone": "@takeiteasyguy",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Гурамишвили",
-    "address_num": "8а",
-    "location_longitude": 44.791448333723665,
-    "location_latitude": 41.77040135
+    "order_status": "END"
   }
 },
 {
@@ -384,16 +231,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 16,
     "customer_id": 889,
     "text_order": "Замена лампочки",
-    "customer_name": "Станислав",
-    "customer_phone": "-",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Чкондидели",
-    "address_num": "29/4",
-    "location_longitude": 44.7947961,
-    "location_latitude": 41.7365163
+    "order_status": "END"
   }
 },
 {
@@ -406,16 +244,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 17,
     "customer_id": 896,
     "text_order": "монтаж вентиляционной решетки на кухню",
-    "customer_name": "Антон",
-    "customer_phone": "955585890772",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Сванети",
-    "address_num": "14",
-    "location_longitude": 44.8563466,
-    "location_latitude": 41.775445
+    "order_status": "END"
   }
 },
 {
@@ -428,16 +257,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 18,
     "customer_id": 889,
     "text_order": "ремонт слива раковины и крышки унитаза",
-    "customer_name": "Игорь массаж",
-    "customer_phone": "-",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Иракли Абашидзе",
-    "address_num": "61",
-    "location_longitude": 44.7559261,
-    "location_latitude": 41.708622
+    "order_status": "END"
   }
 },
 {
@@ -450,16 +270,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 19,
     "customer_id": 898,
     "text_order": "Монтаж посудомойки и телевизора и зеркала",
-    "customer_name": "Денис",
-    "customer_phone": "---",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Университетский",
-    "address_num": "24",
-    "location_longitude": 44.746993010239734,
-    "location_latitude": 41.796456750000004
+    "order_status": "END"
   }
 },
 {
@@ -472,16 +283,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 20,
     "customer_id": 899,
     "text_order": "Установка кондиционера, монтаж стиралки",
-    "customer_name": "Антон",
-    "customer_phone": "995592567997",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Жули шартава",
-    "address_num": "75",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -494,16 +296,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 21,
     "customer_id": 889,
     "text_order": "выключатель в ванной",
-    "customer_name": "Данил",
-    "customer_phone": "-",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Parnavaz Mepe Ave",
-    "address_num": "26a",
-    "location_longitude": 44.7646272,
-    "location_latitude": 41.7903632
+    "order_status": "END"
   }
 },
 {
@@ -516,16 +309,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 22,
     "customer_id": 889,
     "text_order": "Подпилить дверь",
-    "customer_name": "-",
-    "customer_phone": "-",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Сарбутало",
-    "address_num": "-",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -538,16 +322,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 23,
     "customer_id": 889,
     "text_order": "Замена сифона у Грузина",
-    "customer_name": "-",
-    "customer_phone": "-",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Варкетили",
-    "address_num": null,
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -560,16 +335,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 24,
     "customer_id": 902,
     "text_order": "ремонт канализации, установка вентилятора",
-    "customer_name": "Игорь массаж",
-    "customer_phone": "995522220598",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "проспект Пекина",
-    "address_num": "41",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -582,16 +348,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 25,
     "customer_id": 903,
     "text_order": "установка качели, замена сифона",
-    "customer_name": "-",
-    "customer_phone": "79144263582",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Артура Лейсиа",
-    "address_num": "4",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -604,16 +361,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 26,
     "customer_id": 904,
     "text_order": "замена шлангов на кране",
-    "customer_name": "Caucasus Translations",
-    "customer_phone": "995593128545",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": "404411597",
-    "address_city": "TB",
-    "address_street_app": "Чавчавдзе",
-    "address_num": "39",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -626,16 +374,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 27,
     "customer_id": 905,
     "text_order": "Ремонт двери",
-    "customer_name": "-",
-    "customer_phone": "995599004152",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Худадова",
-    "address_num": "3",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -648,16 +387,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 28,
     "customer_id": 906,
     "text_order": "Ремонт карниза, запенить отверстие кондиционера",
-    "customer_name": "-",
-    "customer_phone": "995511188451",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "картозия",
-    "address_num": "10",
-    "location_longitude": 44.7492907,
-    "location_latitude": 41.7235203
+    "order_status": "END"
   }
 },
 {
@@ -670,16 +400,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 29,
     "customer_id": 889,
     "text_order": "Ремонт слива кондиционера, монтаж зеркала",
-    "customer_name": "Григорий",
-    "customer_phone": "-",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Агмашенебели",
-    "address_num": "146",
-    "location_longitude": 44.79202805962897,
-    "location_latitude": 41.71539225
+    "order_status": "END"
   }
 },
 {
@@ -692,16 +413,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 30,
     "customer_id": 908,
     "text_order": "Ремонт трубы полипропиленовой",
-    "customer_name": "Нана  Дзава",
-    "customer_phone": "568821413",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Джавская",
-    "address_num": "4",
-    "location_longitude": 44.79515614298225,
-    "location_latitude": 41.743082349999995
+    "order_status": "END"
   }
 },
 {
@@ -714,16 +426,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 31,
     "customer_id": 909,
     "text_order": "Мелкий ремонт мебели",
-    "customer_name": "-",
-    "customer_phone": "79284724464",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Ниагвари",
-    "address_num": "2",
-    "location_longitude": 44.795235180211776,
-    "location_latitude": 41.69561685
+    "order_status": "END"
   }
 },
 {
@@ -736,16 +439,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 32,
     "customer_id": 889,
     "text_order": "Установка сплит-систем",
-    "customer_name": "Зураб Сванидзе",
-    "customer_phone": "-",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "4 тупик Месхи",
-    "address_num": "3",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -758,16 +452,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 33,
     "customer_id": 911,
     "text_order": "Ремонт дверей отвалился косяк двери",
-    "customer_name": "Светлана",
-    "customer_phone": "558102592",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Лех Качинский",
-    "address_num": "1/4",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -780,16 +465,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 34,
     "customer_id": 912,
     "text_order": "чистка сплит системы. @lobstag",
-    "customer_name": "Отарк Кабисов",
-    "customer_phone": "-",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Давида Квачантирадзе",
-    "address_num": "22",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -802,16 +478,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 35,
     "customer_id": 889,
     "text_order": "Установка сплит систем в кофейне",
-    "customer_name": "Андрей Тешков",
-    "customer_phone": "-",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Джанашия",
-    "address_num": "11",
-    "location_longitude": 44.78172302869103,
-    "location_latitude": 41.7070585
+    "order_status": "END"
   }
 },
 {
@@ -824,16 +491,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 36,
     "customer_id": 914,
     "text_order": "ремонт дверного косяка вторник",
-    "customer_name": "Oksana",
-    "customer_phone": "222222222",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": "12235",
-    "address_city": "TB",
-    "address_street_app": "",
-    "address_num": "",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -846,16 +504,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 37,
     "customer_id": 889,
     "text_order": "МОйка окон",
-    "customer_name": "Зураб Сванидзе",
-    "customer_phone": "-",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": null,
-    "address_num": null,
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -868,16 +517,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 15,
     "customer_id": 915,
     "text_order": "Ремонт труб, установка фильтра",
-    "customer_name": "Екатерина",
-    "customer_phone": "79647650290",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Гурамишвили",
-    "address_num": "12а/5",
-    "location_longitude": 44.78712811361308,
-    "location_latitude": 41.75649315
+    "order_status": "END"
   }
 },
 {
@@ -890,16 +530,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 38,
     "customer_id": 889,
     "text_order": "Замена картриджа крана",
-    "customer_name": "-",
-    "customer_phone": "-",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Гаспара 4",
-    "address_num": null,
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -912,16 +543,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 39,
     "customer_id": 916,
     "text_order": "замена шланга",
-    "customer_name": "-",
-    "customer_phone": "99551118539",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "джава 4",
-    "address_num": "",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -934,16 +556,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 40,
     "customer_id": 889,
     "text_order": "Монтаж сплит-системы 24",
-    "customer_name": "Влад",
-    "customer_phone": "-",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Анна Политковская",
-    "address_num": "4g",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -956,16 +569,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 41,
     "customer_id": 889,
     "text_order": "монтаж трасс кондиционеров",
-    "customer_name": "-",
-    "customer_phone": "-",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Купрадзе",
-    "address_num": "72/6",
-    "location_longitude": 44.8724262,
-    "location_latitude": 41.7040703
+    "order_status": "END"
   }
 },
 {
@@ -978,16 +582,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 42,
     "customer_id": 918,
     "text_order": "Ремонт окна, розетки, карниза",
-    "customer_name": "денис",
-    "customer_phone": "995591705261",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Цеми",
-    "address_num": "3",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -1000,16 +595,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 43,
     "customer_id": 889,
     "text_order": "ремонт крутилки котла",
-    "customer_name": "-",
-    "customer_phone": "-",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Исани",
-    "address_num": null,
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -1022,16 +608,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 44,
     "customer_id": 919,
     "text_order": "установка гигиентического душа",
-    "customer_name": "-",
-    "customer_phone": "995574781449",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Надирашвили",
-    "address_num": "21в",
-    "location_longitude": 44.8515721,
-    "location_latitude": 41.673611
+    "order_status": "END"
   }
 },
 {
@@ -1044,16 +621,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 45,
     "customer_id": 889,
     "text_order": "Монтаж карниза штор",
-    "customer_name": "Евгений Попов",
-    "customer_phone": "-",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Анны Политковской",
-    "address_num": "3/20",
-    "location_longitude": 44.71544990522246,
-    "location_latitude": 41.721644850000004
+    "order_status": "END"
   }
 },
 {
@@ -1066,16 +634,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 37,
     "customer_id": 889,
     "text_order": "чистка сплитсистемы",
-    "customer_name": "-",
-    "customer_phone": "-",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": null,
-    "address_num": null,
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -1088,16 +647,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 17,
     "customer_id": 921,
     "text_order": "замена сифона монтаж шторки",
-    "customer_name": "Антон кудинов",
-    "customer_phone": "972559635870",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Сванети",
-    "address_num": "14",
-    "location_longitude": 44.8563466,
-    "location_latitude": 41.775445
+    "order_status": "END"
   }
 },
 {
@@ -1110,16 +660,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 46,
     "customer_id": 922,
     "text_order": "ремонт кровати",
-    "customer_name": "-",
-    "customer_phone": "375447996453",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "2й переулок Соломона Курдиани",
-    "address_num": "10",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -1132,16 +673,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 47,
     "customer_id": 923,
     "text_order": "Ремонт кровати",
-    "customer_name": "-",
-    "customer_phone": "995558720042",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Кавтарадзе",
-    "address_num": "1",
-    "location_longitude": 44.7383884,
-    "location_latitude": 41.7245498
+    "order_status": "END"
   }
 },
 {
@@ -1154,16 +686,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 48,
     "customer_id": 889,
     "text_order": "чистка сплита, ремонт вилки",
-    "customer_name": "-",
-    "customer_phone": "-",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Ташкентский",
-    "address_num": "14",
-    "location_longitude": 44.7653954,
-    "location_latitude": 41.7284933
+    "order_status": "END"
   }
 },
 {
@@ -1176,16 +699,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 49,
     "customer_id": 924,
     "text_order": "мелкий ремонт",
-    "customer_name": "-",
-    "customer_phone": "995551002593",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Руставели",
-    "address_num": "1",
-    "location_longitude": 44.8010327,
-    "location_latitude": 41.6945312
+    "order_status": "END"
   }
 },
 {
@@ -1198,16 +712,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 50,
     "customer_id": 889,
     "text_order": "Ремонт дверцы шкафа",
-    "customer_name": "Даня Алексеев",
-    "customer_phone": "-",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Миндели",
-    "address_num": "11",
-    "location_longitude": 44.707369233640875,
-    "location_latitude": 41.722347
+    "order_status": "END"
   }
 },
 {
@@ -1220,16 +725,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 51,
     "customer_id": 926,
     "text_order": "Прокладка трассы кондиционеров 9 м. Баллу 18",
-    "customer_name": "Сергей",
-    "customer_phone": "995599891823",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Гурамишвили",
-    "address_num": "62б",
-    "location_longitude": 44.79125215698278,
-    "location_latitude": 41.7685575
+    "order_status": "END"
   }
 },
 {
@@ -1242,16 +738,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 52,
     "customer_id": 889,
     "text_order": "дозаправка фреоном 410",
-    "customer_name": "Сергей Черкасский",
-    "customer_phone": "-",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Мескхи",
-    "address_num": "4",
-    "location_longitude": 44.75013929102273,
-    "location_latitude": 41.76655795
+    "order_status": "END"
   }
 },
 {
@@ -1264,16 +751,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 53,
     "customer_id": 889,
     "text_order": "Ремонт бачка унитаза",
-    "customer_name": "-",
-    "customer_phone": "-",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "-",
-    "address_num": "-",
-    "location_longitude": 37.6791842,
-    "location_latitude": 55.784945
+    "order_status": "END"
   }
 },
 {
@@ -1286,16 +764,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 54,
     "customer_id": 889,
     "text_order": "дозаправка сплита",
-    "customer_name": "Сергей Черкасский",
-    "customer_phone": "-",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "площадт вокзала крысные ворота",
-    "address_num": null,
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -1308,16 +777,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 55,
     "customer_id": 889,
     "text_order": "Чистка сплита",
-    "customer_name": "Нина",
-    "customer_phone": "-",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Раждена Гветадзе",
-    "address_num": "10",
-    "location_longitude": 44.7847342,
-    "location_latitude": 41.72932095
+    "order_status": "END"
   }
 },
 {
@@ -1330,16 +790,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 37,
     "customer_id": 889,
     "text_order": "Установка двери",
-    "customer_name": "Тигран",
-    "customer_phone": "-",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": null,
-    "address_num": null,
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -1352,16 +803,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 56,
     "customer_id": 885,
     "text_order": "Монтаж освещения",
-    "customer_name": "Елена",
-    "customer_phone": "995568693480",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Тамарашвили",
-    "address_num": "12",
-    "location_longitude": 44.74520054149775,
-    "location_latitude": 41.723485
+    "order_status": "END"
   }
 },
 {
@@ -1374,16 +816,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 57,
     "customer_id": 930,
     "text_order": "Чистка канализации",
-    "customer_name": "-",
-    "customer_phone": "995511274211",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Бочорошвили",
-    "address_num": "37Б",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -1396,16 +829,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 58,
     "customer_id": 885,
     "text_order": "установка карнизов штор",
-    "customer_name": "Елена",
-    "customer_phone": "995568693480",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Тамарашвили",
-    "address_num": "13",
-    "location_longitude": 44.74660617736161,
-    "location_latitude": 41.71819355
+    "order_status": "END"
   }
 },
 {
@@ -1418,16 +842,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 59,
     "customer_id": 931,
     "text_order": "Установка подоконника",
-    "customer_name": "Тимур",
-    "customer_phone": "@Tkiss13",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Костава",
-    "address_num": "7",
-    "location_longitude": 44.7897082,
-    "location_latitude": 41.7049972
+    "order_status": "END"
   }
 },
 {
@@ -1440,16 +855,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 60,
     "customer_id": 932,
     "text_order": "Демонтаж старых труб для звкозаписи студии",
-    "customer_name": "-",
-    "customer_phone": "-",
-    "customer_telegram": "@vasoberulava",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "giorgi akhvlediani",
-    "address_num": "19",
-    "location_longitude": 44.7893202,
-    "location_latitude": 41.7065324
+    "order_status": "END"
   }
 },
 {
@@ -1462,16 +868,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 61,
     "customer_id": 933,
     "text_order": "Ремонт двери",
-    "customer_name": "-",
-    "customer_phone": "@mindov3rmatter",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "проспект Кетеван Дедофали",
-    "address_num": "24",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -1484,16 +881,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 62,
     "customer_id": 934,
     "text_order": "ремонт крана",
-    "customer_name": "Александр",
-    "customer_phone": "995598112899",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Zakaria Mkhargrdzeli",
-    "address_num": "7",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -1506,16 +894,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 63,
     "customer_id": 935,
     "text_order": "Замена крана ремонт ящиков",
-    "customer_name": "Максим",
-    "customer_phone": "@mx3457",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Бежана Каландадзе",
-    "address_num": "15",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -1528,16 +907,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 64,
     "customer_id": 936,
     "text_order": "Ремонт балконной двери",
-    "customer_name": "Людмила Гаевая",
-    "customer_phone": "-",
-    "customer_telegram": "@Ludmila_Gaevaya",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Кетеван Дцамебули",
-    "address_num": "41",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -1550,16 +920,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 65,
     "customer_id": 937,
     "text_order": "Электромонтажные работы",
-    "customer_name": "Vekiliks",
-    "customer_phone": "@Vekiliks",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Nikoloz Karlo Chxeidze",
-    "address_num": "13",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -1572,16 +933,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 66,
     "customer_id": 938,
     "text_order": "Чистка канализации",
-    "customer_name": "Максим",
-    "customer_phone": "995 511 146 208",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Павла Ингороквы",
-    "address_num": "19",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -1594,16 +946,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 67,
     "customer_id": 939,
     "text_order": "Чистка кондиционера",
-    "customer_name": "Юля",
-    "customer_phone": "@BolonikovaJulia",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Нуцубидзе",
-    "address_num": "26а",
-    "location_longitude": 44.751807531043106,
-    "location_latitude": 41.7286974
+    "order_status": "END"
   }
 },
 {
@@ -1616,16 +959,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 53,
     "customer_id": 940,
     "text_order": "ремонт электропроводки",
-    "customer_name": "Melike Bozkurt",
-    "customer_phone": "@Melikebozkurt",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "-",
-    "address_num": "-",
-    "location_longitude": 37.6791842,
-    "location_latitude": 55.784945
+    "order_status": "END"
   }
 },
 {
@@ -1638,16 +972,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 68,
     "customer_id": 941,
     "text_order": "замена шланга",
-    "customer_name": "Ария",
-    "customer_phone": "@arikzolala",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Георгия Миротадзе",
-    "address_num": "8",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -1660,16 +985,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 69,
     "customer_id": 942,
     "text_order": "Ремонт электропроводки в ресторане",
-    "customer_name": "Ваня и Gia",
-    "customer_phone": "995557392495",
-    "customer_telegram": "Gia_GG",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Икалто",
-    "address_num": "4",
-    "location_longitude": 44.76503200854272,
-    "location_latitude": 41.718641149999996
+    "order_status": "END"
   }
 },
 {
@@ -1682,16 +998,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 70,
     "customer_id": 943,
     "text_order": "замена люстры",
-    "customer_name": "Катя",
-    "customer_phone": "7 965 594 9428",
-    "customer_telegram": "@edukate_eng",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Marukhis Gmirebi Street",
-    "address_num": "15",
-    "location_longitude": 44.76895119899508,
-    "location_latitude": 41.70466675
+    "order_status": "END"
   }
 },
 {
@@ -1704,16 +1011,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 71,
     "customer_id": 944,
     "text_order": "Сброка Тумбочки",
-    "customer_name": "-",
-    "customer_phone": "995558248605",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Чавчавадзе",
-    "address_num": "80/4",
-    "location_longitude": 44.7759383,
-    "location_latitude": 41.6876477
+    "order_status": "END"
   }
 },
 {
@@ -1726,16 +1024,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 72,
     "customer_id": 945,
     "text_order": "ремон дивана",
-    "customer_name": "-",
-    "customer_phone": "77071015684",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Варази",
-    "address_num": "105",
-    "location_longitude": 44.7243719,
-    "location_latitude": 41.7313249
+    "order_status": "END"
   }
 },
 {
@@ -1748,16 +1037,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 73,
     "customer_id": 946,
     "text_order": "ремонт окна",
-    "customer_name": "@Egrka",
-    "customer_phone": "@Egrka",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Шалва Нуцубидзе",
-    "address_num": "129",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -1770,16 +1050,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 58,
     "customer_id": 885,
     "text_order": "монтаж освещения кухни",
-    "customer_name": "Елена",
-    "customer_phone": "995568693480",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Тамарашвили",
-    "address_num": "13",
-    "location_longitude": 44.74660617736161,
-    "location_latitude": 41.71819355
+    "order_status": "END"
   }
 },
 {
@@ -1792,16 +1063,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 74,
     "customer_id": 889,
     "text_order": "замена шланга",
-    "customer_name": "-",
-    "customer_phone": "-",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Назалабыби",
-    "address_num": "-",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -1814,16 +1076,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 75,
     "customer_id": 947,
     "text_order": "проектирование и монтаж сплитсистем",
-    "customer_name": "Даниил Карпенко",
-    "customer_phone": "@techno_boggart",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Paata Datuashvili",
-    "address_num": "7",
-    "location_longitude": 44.7245914,
-    "location_latitude": 41.7312055
+    "order_status": "END"
   }
 },
 {
@@ -1836,16 +1089,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 76,
     "customer_id": 948,
     "text_order": "замена лампы",
-    "customer_name": "Hanna",
-    "customer_phone": "@anrcn",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Карели",
-    "address_num": "25",
-    "location_longitude": 44.772246807301826,
-    "location_latitude": 41.718857650000004
+    "order_status": "END"
   }
 },
 {
@@ -1858,16 +1102,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 77,
     "customer_id": 949,
     "text_order": "чистка канализации",
-    "customer_name": "-",
-    "customer_phone": "995551125832",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Кипшидзе",
-    "address_num": "7 б",
-    "location_longitude": 44.7596077,
-    "location_latitude": 41.7141725
+    "order_status": "END"
   }
 },
 {
@@ -1880,16 +1115,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 78,
     "customer_id": 950,
     "text_order": "ремонт карниза",
-    "customer_name": "-",
-    "customer_phone": "79817257726",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Амашук",
-    "address_num": "23",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -1902,16 +1128,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 79,
     "customer_id": 951,
     "text_order": "посмотреть окна реставрация",
-    "customer_name": "Анна",
-    "customer_phone": "@annafawn",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Baku",
-    "address_num": "20b",
-    "location_longitude": 44.7939826,
-    "location_latitude": 41.7188243
+    "order_status": "END"
   }
 },
 {
@@ -1924,16 +1141,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 60,
     "customer_id": 952,
     "text_order": "Ремонт труб",
-    "customer_name": "Звукозапись",
-    "customer_phone": "@Qwerty132333",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "giorgi akhvlediani",
-    "address_num": "19",
-    "location_longitude": 44.7893202,
-    "location_latitude": 41.7065324
+    "order_status": "END"
   }
 },
 {
@@ -1946,16 +1154,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 80,
     "customer_id": 953,
     "text_order": "ремонт электропроводки",
-    "customer_name": "-",
-    "customer_phone": "995591065534",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Абашидзе",
-    "address_num": "24",
-    "location_longitude": 44.7681754,
-    "location_latitude": 41.7073801
+    "order_status": "END"
   }
 },
 {
@@ -1968,16 +1167,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 81,
     "customer_id": 954,
     "text_order": "Чистка канализации",
-    "customer_name": "-",
-    "customer_phone": "995599480104",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Шатберашвили",
-    "address_num": "12",
-    "location_longitude": 44.774269655225126,
-    "location_latitude": 41.7044613
+    "order_status": "END"
   }
 },
 {
@@ -1990,16 +1180,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 82,
     "customer_id": 955,
     "text_order": "ремонт крана",
-    "customer_name": "-",
-    "customer_phone": "79046058860",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Костава",
-    "address_num": "11",
-    "location_longitude": 44.78922956009175,
-    "location_latitude": 41.7053515
+    "order_status": "END"
   }
 },
 {
@@ -2012,16 +1193,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 83,
     "customer_id": 956,
     "text_order": "сантехника",
-    "customer_name": "-",
-    "customer_phone": "998917917688",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Зазы Панаскертел-Цицишвили",
-    "address_num": "18 б, кв 2",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -2034,16 +1206,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 84,
     "customer_id": 957,
     "text_order": "Ремонт балконной двери, кондицицонера",
-    "customer_name": "Regina DushaRishy",
-    "customer_phone": "995551176558",
-    "customer_telegram": "dusharishy",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Shalva Nutsubidze St, Tbilisi",
-    "address_num": "10",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -2056,16 +1219,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 85,
     "customer_id": 958,
     "text_order": "монтаж полки",
-    "customer_name": "Артем",
-    "customer_phone": "@ArtTarot",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "шоссе Цкнети",
-    "address_num": "77",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -2078,16 +1232,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 86,
     "customer_id": 959,
     "text_order": "Чистка канализации",
-    "customer_name": "Александр",
-    "customer_phone": "995574237129",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Дидубе",
-    "address_num": "5",
-    "location_longitude": 44.7880765,
-    "location_latitude": 41.7271321
+    "order_status": "END"
   }
 },
 {
@@ -2100,16 +1245,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 87,
     "customer_id": 960,
     "text_order": "Замена шланга",
-    "customer_name": "-",
-    "customer_phone": "568557722",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Рустави",
-    "address_num": "14",
-    "location_longitude": 44.862751,
-    "location_latitude": 41.6681764
+    "order_status": "END"
   }
 },
 {
@@ -2122,16 +1258,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 88,
     "customer_id": 961,
     "text_order": "ремонт мебели",
-    "customer_name": "Елена",
-    "customer_phone": "@Elena_ESS",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Политковской",
-    "address_num": "3/32",
-    "location_longitude": 44.71479326397812,
-    "location_latitude": 41.72288625
+    "order_status": "END"
   }
 },
 {
@@ -2144,16 +1271,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 89,
     "customer_id": 962,
     "text_order": "Здравствуйте, мне надо повесить и подключить люстру, повесить картину, зеркало и поменять розетку и шнур от стиралки.",
-    "customer_name": "Slav Израиль",
-    "customer_phone": "568557722",
-    "customer_telegram": "staseeker",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Закария Палиашвили",
-    "address_num": "118",
-    "location_longitude": 44.7586185,
-    "location_latitude": 41.709489
+    "order_status": "END"
   }
 },
 {
@@ -2166,16 +1284,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 90,
     "customer_id": 963,
     "text_order": "ремонт сифона",
-    "customer_name": "Ангелина-",
-    "customer_phone": "995 593 234 641",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Пушкина",
-    "address_num": "11",
-    "location_longitude": 44.80246468650384,
-    "location_latitude": 41.6941111
+    "order_status": "END"
   }
 },
 {
@@ -2188,16 +1297,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 53,
     "customer_id": 964,
     "text_order": "Мне на двух квартирах нужно установить камеры на входную дверь(по факту просто нужно просверлить 4 отверстия в косяке/стене)",
-    "customer_name": "MTD",
-    "customer_phone": "-",
-    "customer_telegram": "@Destinyga",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "-",
-    "address_num": "-",
-    "location_longitude": 37.6791842,
-    "location_latitude": 55.784945
+    "order_status": "END"
   }
 },
 {
@@ -2210,16 +1310,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 91,
     "customer_id": 965,
     "text_order": "Broken door frame",
-    "customer_name": "Jemmiha",
-    "customer_phone": "551580522",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Delish street",
-    "address_num": "3/2",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -2232,16 +1323,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 92,
     "customer_id": 966,
     "text_order": "ремон мебедт",
-    "customer_name": "-",
-    "customer_phone": "995598581607",
-    "customer_telegram": "-",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Важа Пшавела",
-    "address_num": "25",
-    "location_longitude": 44.7597033,
-    "location_latitude": 41.7271114
+    "order_status": "END"
   }
 },
 {
@@ -2254,16 +1336,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 93,
     "customer_id": 967,
     "text_order": "чистка канализации",
-    "customer_name": "Vitaly Pavlenko",
-    "customer_phone": "-",
-    "customer_telegram": "vitalypavlenko",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "костава",
-    "address_num": "44",
-    "location_longitude": 44.784753942975065,
-    "location_latitude": 41.7091763
+    "order_status": "END"
   }
 },
 {
@@ -2276,16 +1349,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 94,
     "customer_id": 968,
     "text_order": "ремонт бочка унитаза",
-    "customer_name": "Д",
-    "customer_phone": "-",
-    "customer_telegram": "aaaaaaaaaaaaki",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Габашвили",
-    "address_num": "11",
-    "location_longitude": 44.7574165,
-    "location_latitude": 41.7152447
+    "order_status": "END"
   }
 },
 {
@@ -2298,16 +1362,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 95,
     "customer_id": 969,
     "text_order": "Установка душа гигиенического",
-    "customer_name": "-",
-    "customer_phone": "995555724983",
-    "customer_telegram": "-",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Тбилиси Хилс, Гольф Клуб",
-    "address_num": "-",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -2320,16 +1375,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 96,
     "customer_id": 970,
     "text_order": "замена шланга",
-    "customer_name": "Gridcat QA",
-    "customer_phone": "995591017186",
-    "customer_telegram": "Gridcat_QA",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Titsian Tabidze St",
-    "address_num": "7",
-    "location_longitude": 44.7597922,
-    "location_latitude": 41.7070944
+    "order_status": "END"
   }
 },
 {
@@ -2342,16 +1388,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 97,
     "customer_id": 971,
     "text_order": "чистка канализации",
-    "customer_name": "Yulia",
-    "customer_phone": "995 599 994 357",
-    "customer_telegram": "yuliamanko",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "1-ый проход Крцаниси",
-    "address_num": "5",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -2364,16 +1401,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 98,
     "customer_id": 972,
     "text_order": "перестановка унитаза, монтаж двери",
-    "customer_name": "Vadim Marin",
-    "customer_phone": "995598581607",
-    "customer_telegram": "Imandra_calls",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Серго Закариадзе",
-    "address_num": "8",
-    "location_longitude": 44.7476642193543,
-    "location_latitude": 41.7275442
+    "order_status": "END"
   }
 },
 {
@@ -2386,16 +1414,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 99,
     "customer_id": 973,
     "text_order": "Разный мелкий ремонт",
-    "customer_name": "Денис",
-    "customer_phone": "79654090478",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Чкондидели",
-    "address_num": "36",
-    "location_longitude": 44.7915338,
-    "location_latitude": 41.7405682
+    "order_status": "END"
   }
 },
 {
@@ -2408,16 +1427,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 100,
     "customer_id": 974,
     "text_order": "Ремонт электрики, задымление",
-    "customer_name": "Mariam Baimuradova",
-    "customer_phone": "7 951 385 0552",
-    "customer_telegram": "MariZelenskaya",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Котэ Махарадзе",
-    "address_num": "1",
-    "location_longitude": 44.78340995883997,
-    "location_latitude": 41.7112992
+    "order_status": "END"
   }
 },
 {
@@ -2430,16 +1440,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 101,
     "customer_id": 975,
     "text_order": "замена кранов",
-    "customer_name": "-",
-    "customer_phone": "-",
-    "customer_telegram": "jamila_023",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Пекина",
-    "address_num": "22",
-    "location_longitude": 44.7754904,
-    "location_latitude": 41.7184241
+    "order_status": "END"
   }
 },
 {
@@ -2452,16 +1453,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 102,
     "customer_id": 976,
     "text_order": "ремонт ручки",
-    "customer_name": "-",
-    "customer_phone": "995599988493",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Арчи Тсагарели",
-    "address_num": "31",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -2474,16 +1466,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 103,
     "customer_id": 977,
     "text_order": "Ремонт канализации",
-    "customer_name": "-",
-    "customer_phone": "79001334098",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Вепхисткаосани",
-    "address_num": "28",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -2496,16 +1479,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 70,
     "customer_id": 978,
     "text_order": "ремонт сантехники",
-    "customer_name": "Катя",
-    "customer_phone": "7 965 594 9428",
-    "customer_telegram": "edukate_eng",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Marukhis Gmirebi Street",
-    "address_num": "15",
-    "location_longitude": 44.76895119899508,
-    "location_latitude": 41.70466675
+    "order_status": "END"
   }
 },
 {
@@ -2518,16 +1492,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 104,
     "customer_id": 979,
     "text_order": "Ремонт стиралки",
-    "customer_name": "Максим",
-    "customer_phone": "995565655415",
-    "customer_telegram": "-",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Руставели",
-    "address_num": "14",
-    "location_longitude": 44.7974762,
-    "location_latitude": 41.6989805
+    "order_status": "END"
   }
 },
 {
@@ -2540,16 +1505,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 53,
     "customer_id": 912,
     "text_order": "ремонт бочка",
-    "customer_name": "Никита",
-    "customer_phone": "-",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "-",
-    "address_num": "-",
-    "location_longitude": 37.6791842,
-    "location_latitude": 55.784945
+    "order_status": "END"
   }
 },
 {
@@ -2562,16 +1518,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 103,
     "customer_id": 981,
     "text_order": "ремонт крана",
-    "customer_name": "-",
-    "customer_phone": "995555377514",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Вепхисткаосани",
-    "address_num": "28",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -2584,16 +1531,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 105,
     "customer_id": 982,
     "text_order": "Замена замка",
-    "customer_name": "-",
-    "customer_phone": "995555724983",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "гольф клуб",
-    "address_num": "-",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -2606,16 +1544,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 53,
     "customer_id": 912,
     "text_order": "Ремонт бочка",
-    "customer_name": "Карина",
-    "customer_phone": "-",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "-",
-    "address_num": "-",
-    "location_longitude": 37.6791842,
-    "location_latitude": 55.784945
+    "order_status": "END"
   }
 },
 {
@@ -2628,16 +1557,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 106,
     "customer_id": 984,
     "text_order": "ремонт двери",
-    "customer_name": "Behrouz Golestane",
-    "customer_phone": "995593187786",
-    "customer_telegram": "vvnbvb",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "проспект Ильи Чавчавадзе",
-    "address_num": "83",
-    "location_longitude": 44.73845407977723,
-    "location_latitude": 41.704742499999995
+    "order_status": "END"
   }
 },
 {
@@ -2650,16 +1570,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 107,
     "customer_id": 985,
     "text_order": "Течет кран",
-    "customer_name": "Ира",
-    "customer_phone": "598279548",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Руставели",
-    "address_num": "23",
-    "location_longitude": 44.796558604732354,
-    "location_latitude": 41.700383
+    "order_status": "END"
   }
 },
 {
@@ -2672,16 +1583,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 108,
     "customer_id": 986,
     "text_order": "remont usluga",
-    "customer_name": "Maklad",
-    "customer_phone": "599456882",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "kavtaradze",
-    "address_num": "6",
-    "location_longitude": 44.724869600000005,
-    "location_latitude": 41.72258775
+    "order_status": "END"
   }
 },
 {
@@ -2694,16 +1596,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 109,
     "customer_id": 987,
     "text_order": "ремонт газа",
-    "customer_name": "Роман",
-    "customer_phone": "995 555 10 29 8",
-    "customer_telegram": "7 903 611 8379",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "4й переулок Кавтарадзе",
-    "address_num": "5",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -2716,16 +1609,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 110,
     "customer_id": 988,
     "text_order": "ремонт бочка",
-    "customer_name": "Massage Studio in Tb",
-    "customer_phone": "995599231833",
-    "customer_telegram": "+995599231833",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "nik'oloz q'ipshidzis kucha",
-    "address_num": "7 G",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -2738,16 +1622,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 111,
     "customer_id": 989,
     "text_order": "электрика не работает",
-    "customer_name": "Сад давида",
-    "customer_phone": "995591023291",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Руставели",
-    "address_num": "-",
-    "location_longitude": 44.7896467,
-    "location_latitude": 41.703497
+    "order_status": "END"
   }
 },
 {
@@ -2760,16 +1635,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 112,
     "customer_id": 990,
     "text_order": "ремонт бочка",
-    "customer_name": "Валерия",
-    "customer_phone": "-",
-    "customer_telegram": "lerainlaw",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Шатберашвили",
-    "address_num": "12 квартир",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -2782,16 +1648,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 113,
     "customer_id": 991,
     "text_order": "ремонт канализации",
-    "customer_name": "-",
-    "customer_phone": "995568104888",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Московский проспект",
-    "address_num": "33",
-    "location_longitude": 44.879342938189616,
-    "location_latitude": 41.674265
+    "order_status": "END"
   }
 },
 {
@@ -2804,16 +1661,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 114,
     "customer_id": 992,
     "text_order": "Ремонт кровати",
-    "customer_name": "Анна",
-    "customer_phone": "375447996463",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "2-й Переулок Саломона Курдиани",
-    "address_num": "10",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -2826,16 +1674,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 115,
     "customer_id": 993,
     "text_order": "ремонт вентилятора",
-    "customer_name": "-",
-    "customer_phone": "-",
-    "customer_telegram": "HedgehogInTheFogg",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Demetre Tavdadebuli St, T'bilisi 013",
-    "address_num": "10b",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -2848,16 +1687,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 116,
     "customer_id": 994,
     "text_order": "Прибить держатель душа",
-    "customer_name": "Slav Израиль",
-    "customer_phone": "-",
-    "customer_telegram": "staseeker",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Улица Закария Палиашвили",
-    "address_num": "118",
-    "location_longitude": 44.7586185,
-    "location_latitude": 41.709489
+    "order_status": "END"
   }
 },
 {
@@ -2870,16 +1700,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 117,
     "customer_id": 995,
     "text_order": "ремонт кровати",
-    "customer_name": "Иван",
-    "customer_phone": "79197668991",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Шартава",
-    "address_num": "37",
-    "location_longitude": 44.7721517,
-    "location_latitude": 41.7288928
+    "order_status": "END"
   }
 },
 {
@@ -2892,16 +1713,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 118,
     "customer_id": 996,
     "text_order": "Установка гипсокартонных перегородок",
-    "customer_name": "Матвей",
-    "customer_phone": "995591024854",
-    "customer_telegram": "makfruit",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Ираклия Абашидзе",
-    "address_num": "46",
-    "location_longitude": 44.7613249,
-    "location_latitude": 41.7078831
+    "order_status": "END"
   }
 },
 {
@@ -2914,16 +1726,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 119,
     "customer_id": 997,
     "text_order": "Ремонт бочка унитаза",
-    "customer_name": "Джемико",
-    "customer_phone": "-",
-    "customer_telegram": "Jemiko17",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Вахушти Багратиони",
-    "address_num": "34",
-    "location_longitude": 44.783069,
-    "location_latitude": 41.7259501
+    "order_status": "END"
   }
 },
 {
@@ -2936,16 +1739,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 120,
     "customer_id": 998,
     "text_order": "покраска, занос катушки",
-    "customer_name": "диана",
-    "customer_phone": "995595505485",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Т.Цавкисели",
-    "address_num": "63 а",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -2958,16 +1752,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 121,
     "customer_id": 999,
     "text_order": "РЕМОНТ КРАНА",
-    "customer_name": "Natalia Kazarina",
-    "customer_phone": "995591075639",
-    "customer_telegram": "+972559170517",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Корнелия Кекелидзе",
-    "address_num": "25",
-    "location_longitude": 44.775647135020904,
-    "location_latitude": 41.70419
+    "order_status": "END"
   }
 },
 {
@@ -2980,16 +1765,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 122,
     "customer_id": 1000,
     "text_order": "Мелкие работы",
-    "customer_name": "Александр",
-    "customer_phone": "995599221069",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Ал. Цагарели",
-    "address_num": "31",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -3002,16 +1778,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 123,
     "customer_id": 1001,
     "text_order": "ремонт канализации",
-    "customer_name": "Николай",
-    "customer_phone": "-",
-    "customer_telegram": "Araperi",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "проспект Московский",
-    "address_num": "3",
-    "location_longitude": 44.8551222,
-    "location_latitude": 41.6848189
+    "order_status": "END"
   }
 },
 {
@@ -3024,16 +1791,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 124,
     "customer_id": 1002,
     "text_order": "замена шланга",
-    "customer_name": "Алеся",
-    "customer_phone": "995511103694",
-    "customer_telegram": "alesyamasloo",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Глдани",
-    "address_num": "96 б",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -3046,16 +1804,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 125,
     "customer_id": 1003,
     "text_order": "РЕМОНТ КРАНА",
-    "customer_name": "Alena",
-    "customer_phone": "-",
-    "customer_telegram": "plexuss",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Александра Чавчавадзе",
-    "address_num": "72, кв 24",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -3068,16 +1817,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 126,
     "customer_id": 1004,
     "text_order": "ремонт двери",
-    "customer_name": "Ahmed Jabar",
-    "customer_phone": "46703567861",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Виктора Долидзе",
-    "address_num": "26",
-    "location_longitude": 44.7759699,
-    "location_latitude": 41.7174839
+    "order_status": "END"
   }
 },
 {
@@ -3090,16 +1830,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 127,
     "customer_id": 1005,
     "text_order": "ремонт крана",
-    "customer_name": "Sergey Vavilov",
-    "customer_phone": "-",
-    "customer_telegram": "sergey_vavilov",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "проспект Царя Парнаваза",
-    "address_num": "15",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -3112,16 +1843,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 128,
     "customer_id": 1006,
     "text_order": "диагностика электрики",
-    "customer_name": "Вангоги",
-    "customer_phone": "99556880033",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Михаила Зандукели",
-    "address_num": "-",
-    "location_longitude": 44.7855688,
-    "location_latitude": 41.7041899
+    "order_status": "END"
   }
 },
 {
@@ -3134,16 +1856,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 129,
     "customer_id": 1007,
     "text_order": "установка сушки белья",
-    "customer_name": "-",
-    "customer_phone": "995568880033",
-    "customer_telegram": "+995568880033",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Леон и Лосеб Орбелеби",
-    "address_num": "51",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -3156,16 +1869,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 85,
     "customer_id": 1008,
     "text_order": "замена шланга",
-    "customer_name": "Artem",
-    "customer_phone": "-",
-    "customer_telegram": "ArtTarot",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "шоссе Цкнети",
-    "address_num": "77",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -3178,16 +1882,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 130,
     "customer_id": 1009,
     "text_order": "перенос мебели",
-    "customer_name": "Olga Perezhigina",
-    "customer_phone": "-",
-    "customer_telegram": "+971506965219",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "проспект Александра Казбеги",
-    "address_num": "15",
-    "location_longitude": 44.76321015650914,
-    "location_latitude": 41.726318649999996
+    "order_status": "END"
   }
 },
 {
@@ -3200,16 +1895,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 130,
     "customer_id": 1010,
     "text_order": "Ремонт кровати",
-    "customer_name": "Olga Perezhigina",
-    "customer_phone": "",
-    "customer_telegram": "+971506965219",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "проспект Александра Казбеги",
-    "address_num": "15",
-    "location_longitude": 44.76321015650914,
-    "location_latitude": 41.726318649999996
+    "order_status": "END"
   }
 },
 {
@@ -3222,16 +1908,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 131,
     "customer_id": 1011,
     "text_order": "ремонт ручки и карниза",
-    "customer_name": "-",
-    "customer_phone": "79214271882",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Гогиберидзе",
-    "address_num": "9",
-    "location_longitude": 44.777771125,
-    "location_latitude": 41.7634219
+    "order_status": "END"
   }
 },
 {
@@ -3244,16 +1921,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 132,
     "customer_id": 1012,
     "text_order": "замена личинок",
-    "customer_name": "Вероника",
-    "customer_phone": "995511137709",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Отара Тактакишвили",
-    "address_num": "12a",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -3266,16 +1934,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 116,
     "customer_id": 1013,
     "text_order": "чистка слива",
-    "customer_name": "Slav Израиль",
-    "customer_phone": "568557722",
-    "customer_telegram": "staseeke",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Улица Закария Палиашвили",
-    "address_num": "118",
-    "location_longitude": 44.7586185,
-    "location_latitude": 41.709489
+    "order_status": "END"
   }
 },
 {
@@ -3288,16 +1947,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 133,
     "customer_id": 973,
     "text_order": "ремонт окна трубки полотенца",
-    "customer_name": "-",
-    "customer_phone": "79654090478",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Георгия Чкондидели",
-    "address_num": "-",
-    "location_longitude": 44.7947961,
-    "location_latitude": 41.7365163
+    "order_status": "END"
   }
 },
 {
@@ -3310,16 +1960,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 134,
     "customer_id": 1015,
     "text_order": "ремонт двери балкона",
-    "customer_name": "-",
-    "customer_phone": "-",
-    "customer_telegram": "gigu4i",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Г. Картозиа",
-    "address_num": "10",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -3332,16 +1973,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 135,
     "customer_id": 1016,
     "text_order": "Ремотн крана слива полок квартиры",
-    "customer_name": "Zyrab",
-    "customer_phone": "-",
-    "customer_telegram": "zirrrav",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Зураба Патаридзе",
-    "address_num": "8",
-    "location_longitude": 44.8488315,
-    "location_latitude": 41.7041074
+    "order_status": "END"
   }
 },
 {
@@ -3354,16 +1986,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 136,
     "customer_id": 1017,
     "text_order": "Замена двери",
-    "customer_name": "Петр",
-    "customer_phone": "955960445887",
-    "customer_telegram": "+955960445887",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Андрея Размадзе",
-    "address_num": "55",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -3376,16 +1999,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 137,
     "customer_id": 1018,
     "text_order": "Ремонт электропроводки",
-    "customer_name": "Vasia",
-    "customer_phone": "995455899964",
-    "customer_telegram": "lerainlaw",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "3-й массив Варкетили",
-    "address_num": "55",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -3398,16 +2012,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 134,
     "customer_id": 1019,
     "text_order": "ремонт слива",
-    "customer_name": "Тимур",
-    "customer_phone": "995 551 588 210",
-    "customer_telegram": "+995551588210",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Г. Картозиа",
-    "address_num": "10",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -3420,16 +2025,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 138,
     "customer_id": 1020,
     "text_order": "Ремонт кровати",
-    "customer_name": "Артем",
-    "customer_phone": "-",
-    "customer_telegram": "Almaz5200",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Александра Чавчавадзе",
-    "address_num": "49 д",
-    "location_longitude": 44.7920775,
-    "location_latitude": 41.699082
+    "order_status": "END"
   }
 },
 {
@@ -3442,16 +2038,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 118,
     "customer_id": 996,
     "text_order": "монтаж турника",
-    "customer_name": "Матвей",
-    "customer_phone": "995591024854",
-    "customer_telegram": "makfruit",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Ираклия Абашидзе",
-    "address_num": "46",
-    "location_longitude": 44.7613249,
-    "location_latitude": 41.7078831
+    "order_status": "END"
   }
 },
 {
@@ -3464,16 +2051,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 139,
     "customer_id": 1021,
     "text_order": "Корректирровка петлей мебели",
-    "customer_name": "ДОДО",
-    "customer_phone": "593762764",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Шалва Дадиани",
-    "address_num": "21/23",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -3486,16 +2064,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 140,
     "customer_id": 1022,
     "text_order": "Регулировка дверей на балконе чтобы плотно закрывалось",
-    "customer_name": "-",
-    "customer_phone": "995591751894",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Николая Кипшидзе",
-    "address_num": "3Б",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -3508,16 +2077,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 141,
     "customer_id": 1023,
     "text_order": "ремонт канализации",
-    "customer_name": "-",
-    "customer_phone": "79060144411",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "проспект Чабуа Амирэджиби",
-    "address_num": "6",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -3530,16 +2090,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 142,
     "customer_id": 962,
     "text_order": "установка душевой кабины",
-    "customer_name": "Slav Израиль",
-    "customer_phone": "568557722",
-    "customer_telegram": "staseeker",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Закария Палиашвили",
-    "address_num": "118, 3 под",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -3552,16 +2103,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 143,
     "customer_id": 1024,
     "text_order": "замена гофры унитаза",
-    "customer_name": "Golden Hands",
-    "customer_phone": "995551125832",
-    "customer_telegram": "+995599231833",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Николая Кипшидзе",
-    "address_num": "7",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -3574,16 +2116,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 89,
     "customer_id": 962,
     "text_order": "герметизация",
-    "customer_name": "Slav Израиль",
-    "customer_phone": "568557722",
-    "customer_telegram": "staseeker",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Закария Палиашвили",
-    "address_num": "118",
-    "location_longitude": 44.7586185,
-    "location_latitude": 41.709489
+    "order_status": "END"
   }
 },
 {
@@ -3596,16 +2129,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 144,
     "customer_id": 1025,
     "text_order": "ремонт слива",
-    "customer_name": "Olha Bespalova",
-    "customer_phone": "-",
-    "customer_telegram": "+380988224026",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Алеко Гобронидзе",
-    "address_num": "11 б",
-    "location_longitude": 44.81864076041255,
-    "location_latitude": 41.7870352
+    "order_status": "END"
   }
 },
 {
@@ -3618,16 +2142,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 145,
     "customer_id": 1026,
     "text_order": "Требуется заменить вводный кран в квартире. Нужен мастер с опытом для оперативной замены, т.к. необходимо перекрывать воду во всем подъезде. Кран на фото над бочком.",
-    "customer_name": "Vazha",
-    "customer_phone": "595012840",
-    "customer_telegram": "mayz888",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Квишхети",
-    "address_num": "2",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -3640,16 +2155,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 146,
     "customer_id": 986,
     "text_order": "Ремонт стены",
-    "customer_name": "Maklad",
-    "customer_phone": "599456882",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Kavtaradze",
-    "address_num": "6",
-    "location_longitude": 44.724869600000005,
-    "location_latitude": 41.72258775
+    "order_status": "END"
   }
 },
 {
@@ -3662,16 +2168,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 107,
     "customer_id": 985,
     "text_order": "Замена крана",
-    "customer_name": "Ира",
-    "customer_phone": "598279548",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Руставели",
-    "address_num": "23",
-    "location_longitude": 44.796558604732354,
-    "location_latitude": 41.700383
+    "order_status": "END"
   }
 },
 {
@@ -3684,16 +2181,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 147,
     "customer_id": 1027,
     "text_order": "Замена ламп",
-    "customer_name": "Алекс",
-    "customer_phone": "995467655415",
-    "customer_telegram": "",
-    "order_status": "RCV",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "2й переулок Соломона Курдиани",
-    "address_num": "14",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "RCV"
   }
 },
 {
@@ -3706,16 +2194,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 148,
     "customer_id": 1028,
     "text_order": "Ремонт двери, ремонт ящиков, ремонт стены, замена замков",
-    "customer_name": "-",
-    "customer_phone": "995598701803",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "проспект Ильи Чавчавадзе",
-    "address_num": "30",
-    "location_longitude": 44.7501159,
-    "location_latitude": 41.7117389
+    "order_status": "END"
   }
 },
 {
@@ -3728,16 +2207,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 149,
     "customer_id": 996,
     "text_order": "Изготовление шкафов",
-    "customer_name": "Матвей",
-    "customer_phone": "995591024854",
-    "customer_telegram": "makfruit",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Улица Ираклия Абашидзе",
-    "address_num": "46",
-    "location_longitude": 44.7613249,
-    "location_latitude": 41.7078831
+    "order_status": "END"
   }
 },
 {
@@ -3750,16 +2220,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 150,
     "customer_id": 1029,
     "text_order": "Ремонт бочка унитаза",
-    "customer_name": "-",
-    "customer_phone": "995514297722",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Георгия Мазниашвили",
-    "address_num": "4",
-    "location_longitude": 44.8034032,
-    "location_latitude": 41.7089357
+    "order_status": "END"
   }
 },
 {
@@ -3772,16 +2233,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 148,
     "customer_id": 1030,
     "text_order": "Ремонт окна",
-    "customer_name": "Александр",
-    "customer_phone": "995551588191",
-    "customer_telegram": "freshcot",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "проспект Ильи Чавчавадзе",
-    "address_num": "30",
-    "location_longitude": 44.7501159,
-    "location_latitude": 41.7117389
+    "order_status": "END"
   }
 },
 {
@@ -3794,16 +2246,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 151,
     "customer_id": 1031,
     "text_order": "Чистка канализации",
-    "customer_name": "Aleksandr K",
-    "customer_phone": "-",
-    "customer_telegram": "kenobidark",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица С. Залдастанишвили",
-    "address_num": "3",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -3816,16 +2259,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 152,
     "customer_id": 1032,
     "text_order": "ремонт карниза",
-    "customer_name": "-",
-    "customer_phone": "995571128392",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Вазисубани",
-    "address_num": "4 а",
-    "location_longitude": 44.8498781,
-    "location_latitude": 41.7034618
+    "order_status": "END"
   }
 },
 {
@@ -3838,16 +2272,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 153,
     "customer_id": 1028,
     "text_order": "Трубка кондиционера, антиплесень",
-    "customer_name": "-",
-    "customer_phone": "995598701803",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Проспект Ильи Чавчавадзе",
-    "address_num": "30",
-    "location_longitude": 44.7501159,
-    "location_latitude": 41.7117389
+    "order_status": "END"
   }
 },
 {
@@ -3860,16 +2285,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 154,
     "customer_id": 1033,
     "text_order": "Монтаж кронштейна для телевизора",
-    "customer_name": "Диана",
-    "customer_phone": "-",
-    "customer_telegram": "di_mam",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Давари",
-    "address_num": "39",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -3882,16 +2298,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 155,
     "customer_id": 1034,
     "text_order": "Ремонт бочка унитаза",
-    "customer_name": "-",
-    "customer_phone": "995599930910",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Александра Грибоедова",
-    "address_num": "15",
-    "location_longitude": 44.79491300751762,
-    "location_latitude": 41.700221400000004
+    "order_status": "END"
   }
 },
 {
@@ -3904,16 +2311,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 156,
     "customer_id": 1035,
     "text_order": "ремон замка",
-    "customer_name": "-",
-    "customer_phone": "79253439512",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "проспект Ильи Чавчавадзе",
-    "address_num": "39",
-    "location_longitude": 44.7501159,
-    "location_latitude": 41.7117389
+    "order_status": "END"
   }
 },
 {
@@ -3926,16 +2324,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 69,
     "customer_id": 942,
     "text_order": "монтаж электропроводки в ресторане",
-    "customer_name": "Ваня и Gia",
-    "customer_phone": "995557392495",
-    "customer_telegram": "Gia_GG",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Икалто",
-    "address_num": "4",
-    "location_longitude": 44.7675705,
-    "location_latitude": 41.718503
+    "order_status": "END"
   }
 },
 {
@@ -3948,16 +2337,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 157,
     "customer_id": 1036,
     "text_order": "ремонтдвери",
-    "customer_name": "-",
-    "customer_phone": "79266181117",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Николая Кипшидзе",
-    "address_num": "16",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -3970,16 +2350,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 158,
     "customer_id": 1037,
     "text_order": "ремонт сантехники",
-    "customer_name": "Катя",
-    "customer_phone": "79655949428",
-    "customer_telegram": "edukate_eng",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Марухских героев",
-    "address_num": "15",
-    "location_longitude": 44.76895119899508,
-    "location_latitude": 41.70466675
+    "order_status": "END"
   }
 },
 {
@@ -3992,16 +2363,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 159,
     "customer_id": 1038,
     "text_order": "ремон замка",
-    "customer_name": "Евгений Попов",
-    "customer_phone": "-",
-    "customer_telegram": "eepopov",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Элизбара Миндели",
-    "address_num": "12",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -4014,16 +2376,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 160,
     "customer_id": 1039,
     "text_order": "ремонтсифона",
-    "customer_name": "Ирина Кириченко",
-    "customer_phone": "",
-    "customer_telegram": "+380954484583",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Георгия Абашвили",
-    "address_num": "3",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -4036,16 +2389,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 58,
     "customer_id": 1040,
     "text_order": "герметизация душ кабины",
-    "customer_name": "Елена",
-    "customer_phone": "995568693480",
-    "customer_telegram": "+77765080202",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Тамарашвили",
-    "address_num": "13",
-    "location_longitude": 44.74660617736161,
-    "location_latitude": 41.71819355
+    "order_status": "END"
   }
 },
 {
@@ -4058,16 +2402,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 161,
     "customer_id": 1041,
     "text_order": "Ремонт вытяжки, ремонт зеркала, ремонт стола, ремонт тумбы тв",
-    "customer_name": "Максим",
-    "customer_phone": "",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "аллея Агмашенебели",
-    "address_num": "117",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -4080,16 +2415,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 101,
     "customer_id": 1042,
     "text_order": "Ремонт розетки",
-    "customer_name": "-",
-    "customer_phone": "",
-    "customer_telegram": "jamila_023",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Пекина",
-    "address_num": "22",
-    "location_longitude": 44.7719936,
-    "location_latitude": 41.7235574
+    "order_status": "END"
   }
 },
 {
@@ -4102,16 +2428,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 162,
     "customer_id": 1043,
     "text_order": "Сделать отверстие в крыше и повесить вытяжку",
-    "customer_name": "Niko Tatarashvili",
-    "customer_phone": "",
-    "customer_telegram": "Niitsmee",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Улица Важа Пшавела",
-    "address_num": "12",
-    "location_longitude": 44.748771958474286,
-    "location_latitude": 41.77555835
+    "order_status": "END"
   }
 },
 {
@@ -4124,16 +2441,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 163,
     "customer_id": 1044,
     "text_order": "Запенить отверстие",
-    "customer_name": "Илья",
-    "customer_phone": "",
-    "customer_telegram": "livinginthemoment1",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Дмитрия Узнадзе",
-    "address_num": "2",
-    "location_longitude": 44.8041237,
-    "location_latitude": 41.7028763
+    "order_status": "END"
   }
 },
 {
@@ -4146,16 +2454,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 158,
     "customer_id": 1037,
     "text_order": "ремонт замка",
-    "customer_name": "Катя",
-    "customer_phone": "79655949428",
-    "customer_telegram": "edukate_eng",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Марухских героев",
-    "address_num": "15",
-    "location_longitude": 44.76895119899508,
-    "location_latitude": 41.70466675
+    "order_status": "END"
   }
 },
 {
@@ -4168,16 +2467,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 164,
     "customer_id": 1045,
     "text_order": "Установка двери",
-    "customer_name": "Зураб Сванидзе",
-    "customer_phone": "",
-    "customer_telegram": "ZURABSVANIDZE",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "4000 Месхи",
-    "address_num": "3",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -4190,16 +2480,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 165,
     "customer_id": 1046,
     "text_order": "Сантехнические работы",
-    "customer_name": "-",
-    "customer_phone": "995599719971",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Саирме",
-    "address_num": "9, кв. 13",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -4212,16 +2493,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 166,
     "customer_id": 1047,
     "text_order": "мелкий ремонт",
-    "customer_name": "Артур",
-    "customer_phone": "",
-    "customer_telegram": "Artur_iam",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "-",
-    "address_num": "",
-    "location_longitude": 37.6791842,
-    "location_latitude": 55.784945
+    "order_status": "END"
   }
 },
 {
@@ -4234,16 +2506,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 167,
     "customer_id": 1048,
     "text_order": "Ремонт кровати",
-    "customer_name": "Valeriy Demin",
-    "customer_phone": "995571230344",
-    "customer_telegram": "Demin_Valerii",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "2 квартал Важа-Пшавела",
-    "address_num": "25",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -4256,16 +2519,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 168,
     "customer_id": 1049,
     "text_order": "Монтаж люстры",
-    "customer_name": "Valeriy Kolganov KLM",
-    "customer_phone": "",
-    "customer_telegram": "vakolganov",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Проспект Ильи Чавчавадзе",
-    "address_num": "83",
-    "location_longitude": 44.73845407977723,
-    "location_latitude": 41.704742499999995
+    "order_status": "END"
   }
 },
 {
@@ -4278,16 +2532,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 149,
     "customer_id": 996,
     "text_order": "Ремонт двери",
-    "customer_name": "Матвей",
-    "customer_phone": "995591024854",
-    "customer_telegram": "makfruit",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Улица Ираклия Абашидзе",
-    "address_num": "46",
-    "location_longitude": 44.7613249,
-    "location_latitude": 41.7078831
+    "order_status": "END"
   }
 },
 {
@@ -4300,16 +2545,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 169,
     "customer_id": 1050,
     "text_order": "Чистка канализации",
-    "customer_name": "Денис",
-    "customer_phone": "375447297490",
-    "customer_telegram": "redmate20",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Университетская",
-    "address_num": "24",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -4322,16 +2558,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 170,
     "customer_id": 1041,
     "text_order": "ремонт сифона",
-    "customer_name": "-",
-    "customer_phone": "",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Аршбы",
-    "address_num": "7",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -4344,16 +2571,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 171,
     "customer_id": 1052,
     "text_order": "ремонт паркоматов по приему пластиковых бутылок",
-    "customer_name": "Дарья Серегина",
-    "customer_phone": "",
-    "customer_telegram": "dashaseregina",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "BT",
-    "address_street_app": "",
-    "address_num": "-",
-    "location_longitude": 44.7905859,
-    "location_latitude": 41.7270314
+    "order_status": "END"
   }
 },
 {
@@ -4366,16 +2584,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 172,
     "customer_id": 1053,
     "text_order": "ремонт сантехники",
-    "customer_name": "А",
-    "customer_phone": "79298414777",
-    "customer_telegram": "fullferrum",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Чикобавы",
-    "address_num": "43",
-    "location_longitude": 44.8055895,
-    "location_latitude": 41.7082874
+    "order_status": "END"
   }
 },
 {
@@ -4388,16 +2597,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 173,
     "customer_id": 1054,
     "text_order": "Ремонт сантехники",
-    "customer_name": "Ппвел зураб",
-    "customer_phone": "79151949951",
-    "customer_telegram": "vinogradovpi",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Казбеги",
-    "address_num": "34 а",
-    "location_longitude": 37.6791842,
-    "location_latitude": 55.784945
+    "order_status": "END"
   }
 },
 {
@@ -4410,16 +2610,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 174,
     "customer_id": 1055,
     "text_order": "ремонт шланга",
-    "customer_name": "Eu Dm",
-    "customer_phone": "79617932211",
-    "customer_telegram": "tiagma",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Вепхисткаосани",
-    "address_num": "34",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -4432,16 +2623,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 175,
     "customer_id": 1056,
     "text_order": "сантехника",
-    "customer_name": "Галина Николаевна",
-    "customer_phone": "995599719971",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Саирме",
-    "address_num": "9",
-    "location_longitude": 44.762099089205904,
-    "location_latitude": 41.7220921
+    "order_status": "END"
   }
 },
 {
@@ -4454,16 +2636,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 176,
     "customer_id": 1057,
     "text_order": "Установка фильтра обратного осмоса",
-    "customer_name": "-",
-    "customer_phone": "995557523211",
-    "customer_telegram": "AAn78red",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "2-ой тупик Курашвили",
-    "address_num": "2",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -4476,16 +2649,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 177,
     "customer_id": 1058,
     "text_order": "Просверлиить отверстия для паркинга",
-    "customer_name": "ilya.kuznetsov",
-    "customer_phone": "-",
-    "customer_telegram": "kuznetsov_fromwonderland",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Политковской",
-    "address_num": "2 б",
-    "location_longitude": 37.6791842,
-    "location_latitude": 55.784945
+    "order_status": "END"
   }
 },
 {
@@ -4498,16 +2662,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 178,
     "customer_id": 1059,
     "text_order": "Установка наружной проводки",
-    "customer_name": "Melike Bozkurt",
-    "customer_phone": "905301235636",
-    "customer_telegram": "Melikebozkurt",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "-",
-    "address_num": null,
-    "location_longitude": 37.6791842,
-    "location_latitude": 55.784945
+    "order_status": "END"
   }
 },
 {
@@ -4520,16 +2675,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 179,
     "customer_id": 1060,
     "text_order": "ремонт газа",
-    "customer_name": "Дарья Колганова",
-    "customer_phone": "79852217967",
-    "customer_telegram": "darya_kolganova",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "проспект Ильи Чавчавадзе",
-    "address_num": "37 б",
-    "location_longitude": 44.76068998159984,
-    "location_latitude": 41.71186315
+    "order_status": "END"
   }
 },
 {
@@ -4542,16 +2688,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 88,
     "customer_id": 1061,
     "text_order": "повесить картину",
-    "customer_name": "Елена",
-    "customer_phone": "Elena_ESS",
-    "customer_telegram": "Elena_ESS",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Политковской",
-    "address_num": "3/32",
-    "location_longitude": 44.71479326397812,
-    "location_latitude": 41.72288625
+    "order_status": "END"
   }
 },
 {
@@ -4564,16 +2701,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 180,
     "customer_id": 1062,
     "text_order": "ремонт шкафа",
-    "customer_name": "-",
-    "customer_phone": "99555478962",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Николая Кипшидзе",
-    "address_num": "4",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -4586,16 +2714,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 166,
     "customer_id": 1059,
     "text_order": "ремонт проводки",
-    "customer_name": "Melike Bozkurt",
-    "customer_phone": "905301235636",
-    "customer_telegram": "Melikebozkurt",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "-",
-    "address_num": "",
-    "location_longitude": 37.6791842,
-    "location_latitude": 55.784945
+    "order_status": "END"
   }
 },
 {
@@ -4608,16 +2727,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 181,
     "customer_id": 1063,
     "text_order": "Прикрутить петлю двери",
-    "customer_name": "-",
-    "customer_phone": "77714887198",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Мтацминдская",
-    "address_num": "27",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -4630,16 +2740,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 182,
     "customer_id": 1064,
     "text_order": "Монтаж крана",
-    "customer_name": "Катя",
-    "customer_phone": "796655949428",
-    "customer_telegram": "edukate_eng",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Улица Марухских героев",
-    "address_num": "15",
-    "location_longitude": 44.76895119899508,
-    "location_latitude": 41.70466675
+    "order_status": "END"
   }
 },
 {
@@ -4652,16 +2753,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 172,
     "customer_id": 1053,
     "text_order": "Замена крана",
-    "customer_name": "кинотеатр",
-    "customer_phone": "79298414777",
-    "customer_telegram": "fullferrum",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Чикобавы",
-    "address_num": "43",
-    "location_longitude": 44.8055895,
-    "location_latitude": 41.7082874
+    "order_status": "END"
   }
 },
 {
@@ -4674,16 +2766,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 183,
     "customer_id": 1066,
     "text_order": "ремонт карниза",
-    "customer_name": "Aleksandr Fokin",
-    "customer_phone": "",
-    "customer_telegram": "AlFokin",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Stefane Chrelashvili St",
-    "address_num": "1",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -4696,16 +2779,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 184,
     "customer_id": 1067,
     "text_order": "Открыл кровать и она застряла вот в таком положении, левый механизм то ли был сломан, то ли я его сломал когда открывал может быть его можно починить, а может надо его совсем заменить Сделаете такое?",
-    "customer_name": "Aliaksei Pauliushcha",
-    "customer_phone": "",
-    "customer_telegram": "zoom7122",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Анны Политковской",
-    "address_num": "3/31,кв.20",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -4718,16 +2792,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 185,
     "customer_id": 1068,
     "text_order": "Ремонт полки",
-    "customer_name": "Елена",
-    "customer_phone": "",
-    "customer_telegram": "all_day_all_ni9ht",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Ketevan Tsamebuli Ave",
-    "address_num": "2",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -4740,16 +2805,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 186,
     "customer_id": 1069,
     "text_order": "Ремонт окна балкона",
-    "customer_name": "gnomi rouge",
-    "customer_phone": "",
-    "customer_telegram": "gnomi_rouge",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Шалва Нуцубидзе",
-    "address_num": "82",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -4762,16 +2818,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 99,
     "customer_id": 973,
     "text_order": "диагностика замка",
-    "customer_name": "Денис",
-    "customer_phone": "79654090478",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Чкондидели",
-    "address_num": "36",
-    "location_longitude": 44.791542419044376,
-    "location_latitude": 41.7403961
+    "order_status": "END"
   }
 },
 {
@@ -4784,16 +2831,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 187,
     "customer_id": 1070,
     "text_order": "герметизация душа",
-    "customer_name": "-",
-    "customer_phone": "995591419133",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Коста Хетагурова",
-    "address_num": "1/3",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -4806,16 +2844,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 172,
     "customer_id": 1053,
     "text_order": "ремонт розетки",
-    "customer_name": "Кинотеатр",
-    "customer_phone": "79298414777",
-    "customer_telegram": "fullferrum",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Чикобавы",
-    "address_num": "43",
-    "location_longitude": 44.8052833,
-    "location_latitude": 41.7071887
+    "order_status": "END"
   }
 },
 {
@@ -4828,16 +2857,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 188,
     "customer_id": 1072,
     "text_order": "установка посудомойки",
-    "customer_name": "Анастасия",
-    "customer_phone": "598442373",
-    "customer_telegram": "staymiz",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица К. Цинцадзе",
-    "address_num": "38",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -4850,16 +2870,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 168,
     "customer_id": 984,
     "text_order": "Ремонт двери",
-    "customer_name": "Behrouz Golestane",
-    "customer_phone": "995593187786",
-    "customer_telegram": "vvnbvb",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Проспект Ильи Чавчавадзе",
-    "address_num": "83",
-    "location_longitude": 44.73845407977723,
-    "location_latitude": 41.704742499999995
+    "order_status": "END"
   }
 },
 {
@@ -4872,16 +2883,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 99,
     "customer_id": 973,
     "text_order": "Ремонт личинки замка",
-    "customer_name": "Денис",
-    "customer_phone": "79654090478",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Чкондидели",
-    "address_num": "36",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -4894,16 +2896,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 189,
     "customer_id": 1073,
     "text_order": "повесить зеркало",
-    "customer_name": "-",
-    "customer_phone": "436601213265",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Навтлуги",
-    "address_num": "10 а",
-    "location_longitude": 44.840715800504995,
-    "location_latitude": 41.677979
+    "order_status": "END"
   }
 },
 {
@@ -4916,16 +2909,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 190,
     "customer_id": 1074,
     "text_order": "ремонт сифона",
-    "customer_name": "Дарья",
-    "customer_phone": "",
-    "customer_telegram": "norm_teacher",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Лежава",
-    "address_num": "20",
-    "location_longitude": 44.7409007,
-    "location_latitude": 41.7101721
+    "order_status": "END"
   }
 },
 {
@@ -4938,16 +2922,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 191,
     "customer_id": 1075,
     "text_order": "ремонт кровати",
-    "customer_name": "Andrew Zakharov",
-    "customer_phone": "375293704070",
-    "customer_telegram": "vilbak1",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Казбеги",
-    "address_num": "25 а",
-    "location_longitude": 44.75711296632757,
-    "location_latitude": 41.72575845
+    "order_status": "END"
   }
 },
 {
@@ -4960,16 +2935,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 192,
     "customer_id": 1076,
     "text_order": "ремонт стола",
-    "customer_name": "Mary",
-    "customer_phone": "",
-    "customer_telegram": "dmtrvmariia",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Demetre Tavdadebuli",
-    "address_num": "10 б",
-    "location_longitude": 44.759968573843054,
-    "location_latitude": 41.79626775
+    "order_status": "END"
   }
 },
 {
@@ -4982,16 +2948,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 193,
     "customer_id": 1077,
     "text_order": "Установка замка",
-    "customer_name": "Саша",
-    "customer_phone": "995599506199",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Александра Грибоедова",
-    "address_num": "",
-    "location_longitude": 44.7919706,
-    "location_latitude": 41.7024848
+    "order_status": "END"
   }
 },
 {
@@ -5004,16 +2961,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 194,
     "customer_id": 902,
     "text_order": "перенос стиралки",
-    "customer_name": "Игорь массаж",
-    "customer_phone": "995522220598",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Проспект Пекина",
-    "address_num": "41",
-    "location_longitude": 44.7678772,
-    "location_latitude": 41.7307385
+    "order_status": "END"
   }
 },
 {
@@ -5026,16 +2974,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 195,
     "customer_id": 1003,
     "text_order": "ремонт сифона",
-    "customer_name": "Alena",
-    "customer_phone": "-",
-    "customer_telegram": "plexuss",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Улица Александра Чавчавадзе",
-    "address_num": "72, кв 24",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -5048,16 +2987,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 196,
     "customer_id": 1078,
     "text_order": "ремонт каркаса кровати",
-    "customer_name": "-",
-    "customer_phone": "995579292005",
-    "customer_telegram": "-",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Анны Политковской",
-    "address_num": "4 г",
-    "location_longitude": 44.715618294665276,
-    "location_latitude": 41.719274
+    "order_status": "END"
   }
 },
 {
@@ -5070,16 +3000,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 197,
     "customer_id": 1079,
     "text_order": "установка унитаза, прокладка труб",
-    "customer_name": "Сергей",
-    "customer_phone": "995597715976",
-    "customer_telegram": "s_Kudria",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Ивана Мачабели",
-    "address_num": "4",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -5092,16 +3013,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 172,
     "customer_id": 1053,
     "text_order": "ремонт бочка унитаза",
-    "customer_name": "Кинотеатр",
-    "customer_phone": "79298414777",
-    "customer_telegram": "fullferrum",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Чикобавы",
-    "address_num": "43",
-    "location_longitude": 44.8052833,
-    "location_latitude": 41.7071887
+    "order_status": "END"
   }
 },
 {
@@ -5114,16 +3026,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 198,
     "customer_id": 1024,
     "text_order": "ремонт унитаза",
-    "customer_name": "Golden Hands",
-    "customer_phone": "995551125832",
-    "customer_telegram": "+995599231833",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Улица Николая Кипшидзе",
-    "address_num": "7",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -5136,16 +3039,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 159,
     "customer_id": 1080,
     "text_order": "замена окна",
-    "customer_name": "-",
-    "customer_phone": "-",
-    "customer_telegram": "NA4283",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Элизбара Миндели",
-    "address_num": "12",
-    "location_longitude": 44.70814835205151,
-    "location_latitude": 41.72235635
+    "order_status": "END"
   }
 },
 {
@@ -5158,16 +3052,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 199,
     "customer_id": 1070,
     "text_order": "покраска потолка",
-    "customer_name": "-",
-    "customer_phone": "995591419133",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Улица Коста Хетагурова",
-    "address_num": "1/3",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -5180,16 +3065,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 200,
     "customer_id": 1081,
     "text_order": "ремонт по дому",
-    "customer_name": "Zurab Svanidze",
-    "customer_phone": "-",
-    "customer_telegram": "ZURABSVANIDZE",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Улица Казбеги",
-    "address_num": "34 а",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -5202,16 +3078,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 200,
     "customer_id": 1054,
     "text_order": "ремонт канализации",
-    "customer_name": "Ппвел зураб",
-    "customer_phone": "79151949951",
-    "customer_telegram": "vinogradovpi",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Улица Казбеги",
-    "address_num": "34 а",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -5224,16 +3091,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 36,
     "customer_id": 1082,
     "text_order": "change of the lock",
-    "customer_name": "Artyom Mirolyubov",
-    "customer_phone": "-",
-    "customer_telegram": "fak3user",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "",
-    "address_num": "",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -5246,16 +3104,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 201,
     "customer_id": 1083,
     "text_order": "Install of the curtain",
-    "customer_name": "Анастасия",
-    "customer_phone": "-",
-    "customer_telegram": "NastikAgafonova",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Чугурети",
-    "address_num": "",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -5268,16 +3117,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 36,
     "customer_id": 1084,
     "text_order": "Install of the shelfs and repaier of the lock",
-    "customer_name": "Анна",
-    "customer_phone": "-",
-    "customer_telegram": "Anna2124",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "",
-    "address_num": "",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -5290,16 +3130,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 198,
     "customer_id": 1024,
     "text_order": "diagnostics",
-    "customer_name": "Golden Hands",
-    "customer_phone": "995551125832",
-    "customer_telegram": "+995599231833",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Улица Николая Кипшидзе",
-    "address_num": "7",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -5312,16 +3143,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 172,
     "customer_id": 1053,
     "text_order": "Change of the hose",
-    "customer_name": "Кинотеатр",
-    "customer_phone": "79298414777",
-    "customer_telegram": "fullferrum",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Чикобавы",
-    "address_num": "43",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -5334,16 +3156,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 36,
     "customer_id": 1085,
     "text_order": "Repaier works",
-    "customer_name": "George",
-    "customer_phone": "995599037916",
-    "customer_telegram": "Tu6epuyM",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "",
-    "address_num": "",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -5356,16 +3169,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 202,
     "customer_id": 1086,
     "text_order": "transfer of heating batteries",
-    "customer_name": "Nabil Moubarak",
-    "customer_phone": "995551600716",
-    "customer_telegram": "+995551600716",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Амаглеба",
-    "address_num": "25",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -5378,16 +3182,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 203,
     "customer_id": 1087,
     "text_order": "repaier of the window",
-    "customer_name": "Кирилл Макаревич",
-    "customer_phone": "-",
-    "customer_telegram": "kirylMa",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Грмагеле",
-    "address_num": "24",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -5400,16 +3195,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 204,
     "customer_id": 1034,
     "text_order": "Repairer of the toilet",
-    "customer_name": "-",
-    "customer_phone": "995599930910",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Улица Александра Грибоедова",
-    "address_num": "15",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -5422,16 +3208,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 205,
     "customer_id": 1088,
     "text_order": "Change of the lock",
-    "customer_name": "ეvgeny",
-    "customer_phone": "-",
-    "customer_telegram": "eeevvvggg13",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Анны Каландадзе",
-    "address_num": "15",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -5444,16 +3221,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 86,
     "customer_id": 1089,
     "text_order": "Sewer cleaning",
-    "customer_name": "Александр",
-    "customer_phone": "995574237129",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Дидубе",
-    "address_num": "5",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -5466,16 +3234,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 206,
     "customer_id": 1090,
     "text_order": "Change the shower hosepipe. Tighten shelves, lubricate locks, fix door handles, hang hooks.",
-    "customer_name": "Nona",
-    "customer_phone": "599062940",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "проспект Ильи Чавчавадзе",
-    "address_num": "22",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -5488,16 +3247,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 207,
     "customer_id": 1091,
     "text_order": "change of the lock",
-    "customer_name": "Ivan Solovyan",
-    "customer_phone": "-",
-    "customer_telegram": "ivansolovyan",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Отара Чиладзе",
-    "address_num": "166/2",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -5510,16 +3260,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 208,
     "customer_id": 1092,
     "text_order": "sealing shower",
-    "customer_name": "Egor Sidorenko",
-    "customer_phone": "-",
-    "customer_telegram": "Ega_go",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Ш. Надирашвили",
-    "address_num": "32, 18 а",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -5532,16 +3273,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 209,
     "customer_id": 1093,
     "text_order": "Repair of cupboard",
-    "customer_name": "Евгений",
-    "customer_phone": "-",
-    "customer_telegram": "e_drozdov",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Анны Политковской",
-    "address_num": "59",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -5554,16 +3286,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 182,
     "customer_id": 1064,
     "text_order": "Repair of  drywall ceiling",
-    "customer_name": "Катя",
-    "customer_phone": "796655949428",
-    "customer_telegram": "edukate_eng",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Улица Марухских героев",
-    "address_num": "15",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -5576,16 +3299,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 36,
     "customer_id": 1094,
     "text_order": "Plumbing in the bathroom",
-    "customer_name": "Олег Гоча",
-    "customer_phone": "995591687350",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "",
-    "address_num": "",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -5598,16 +3312,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 190,
     "customer_id": 1095,
     "text_order": "electrical wiring repair",
-    "customer_name": "Дарья",
-    "customer_phone": "-",
-    "customer_telegram": "norm_teacher",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Лежава",
-    "address_num": "20",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -5620,16 +3325,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 177,
     "customer_id": 1058,
     "text_order": "Installation of hanger",
-    "customer_name": "Ilya.kuznetsov",
-    "customer_phone": "-",
-    "customer_telegram": "kuznetsov_fromwonderland",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Политковской",
-    "address_num": "2 б",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -5642,16 +3338,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 210,
     "customer_id": 1093,
     "text_order": "Repair of drywall",
-    "customer_name": "Евгений",
-    "customer_phone": "-",
-    "customer_telegram": "e_drozdov",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Улица Анны Политковской",
-    "address_num": "59",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -5664,16 +3351,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 153,
     "customer_id": 1028,
     "text_order": "repair of power socket",
-    "customer_name": "-",
-    "customer_phone": "995598701803",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Проспект Ильи Чавчавадзе",
-    "address_num": "30",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -5686,16 +3364,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 211,
     "customer_id": 991,
     "text_order": "Repair of pipe",
-    "customer_name": "-",
-    "customer_phone": "995568104888",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Дедопали",
-    "address_num": "65 а",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -5708,16 +3377,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 212,
     "customer_id": 1097,
     "text_order": "монтаж котла",
-    "customer_name": "Tim Kiselev",
-    "customer_phone": "79259010013",
-    "customer_telegram": "Tkiss13",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Шота Руставели",
-    "address_num": "",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -5730,16 +3390,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 213,
     "customer_id": 1098,
     "text_order": "sewer cleaning",
-    "customer_name": "BLANCA NERA",
-    "customer_phone": "-",
-    "customer_telegram": "BLANCA_NERA",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Давида Квачантирадзе",
-    "address_num": "5",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -5752,16 +3403,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 214,
     "customer_id": 1099,
     "text_order": "fix a water tap",
-    "customer_name": "-",
-    "customer_phone": "995555357808",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Юрия Гагарина",
-    "address_num": "2",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -5774,16 +3416,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 215,
     "customer_id": 1100,
     "text_order": "wall insulation",
-    "customer_name": "Yury GERASIMOV",
-    "customer_phone": "-",
-    "customer_telegram": "ug2004",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Улица Мухрана Мачавариани",
-    "address_num": "20 G",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -5796,16 +3429,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 216,
     "customer_id": 1101,
     "text_order": "Rrepair a bottle receiving machine",
-    "customer_name": "Дарья Серегина",
-    "customer_phone": "-",
-    "customer_telegram": "dashaseregina",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "QQVC+W9Q, ს1",
-    "address_num": "-",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -5818,16 +3442,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 217,
     "customer_id": 1102,
     "text_order": "plumbing repair",
-    "customer_name": "Alyona Valiullina",
-    "customer_phone": "995591758260",
-    "customer_telegram": "vallalyona",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Напарнули",
-    "address_num": "16",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -5840,16 +3455,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 218,
     "customer_id": 1103,
     "text_order": "sewer cleaning in the bathroom",
-    "customer_name": "Nikolai",
-    "customer_phone": "-",
-    "customer_telegram": "NikSNikSNikS",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Анны Политковской",
-    "address_num": "36",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -5862,16 +3468,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 219,
     "customer_id": 1104,
     "text_order": "replacing water hose",
-    "customer_name": "-",
-    "customer_phone": "995579359712",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Павла Ингороквы",
-    "address_num": "19",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -5884,16 +3481,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 220,
     "customer_id": 1105,
     "text_order": "water tap repair",
-    "customer_name": "Marat",
-    "customer_phone": "995555436645",
-    "customer_telegram": "AzGeo11",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица царя Мириана",
-    "address_num": "85",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -5906,16 +3494,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 221,
     "customer_id": 1106,
     "text_order": "fix the windows",
-    "customer_name": "Daniil Izotov",
-    "customer_phone": "995591321019",
-    "customer_telegram": "daniil_izotov",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Георгия Шатберашвили",
-    "address_num": "13",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -5928,16 +3507,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 222,
     "customer_id": 1107,
     "text_order": "fix a floor and cupboard",
-    "customer_name": "Viktoria K",
-    "customer_phone": "-",
-    "customer_telegram": "DisRM",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Didi Dighomi III",
-    "address_num": "29d",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -5950,16 +3520,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 223,
     "customer_id": 1108,
     "text_order": "plumbing",
-    "customer_name": "Vardan Manucharyan",
-    "customer_phone": "995599431604",
-    "customer_telegram": "vmanucharyan",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Vasil Petriashvili",
-    "address_num": "46",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -5972,16 +3533,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 224,
     "customer_id": 1109,
     "text_order": "install TV bracket",
-    "customer_name": "Tamuna",
-    "customer_phone": "-",
-    "customer_telegram": "Tamunatam",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "проспект Акакия Церетели",
-    "address_num": "84",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -5994,16 +3546,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 210,
     "customer_id": 1093,
     "text_order": "fix a shower`s hosepipe",
-    "customer_name": "Евгений",
-    "customer_phone": "-",
-    "customer_telegram": "e_drozdov",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Улица Анны Политковской",
-    "address_num": "59",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -6016,16 +3559,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 225,
     "customer_id": 1110,
     "text_order": "fix window, lamps",
-    "customer_name": "Gia",
-    "customer_phone": "995574902750",
-    "customer_telegram": "+380505916301",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Д. Гурамишвили",
-    "address_num": "192",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -6038,16 +3572,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 166,
     "customer_id": 1111,
     "text_order": "plumbing repair",
-    "customer_name": "Anastasiya Safarova",
-    "customer_phone": "995591249364",
-    "customer_telegram": "aasafarova",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "-",
-    "address_num": "",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -6060,16 +3585,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 217,
     "customer_id": 1102,
     "text_order": "plumbing work",
-    "customer_name": "Alyona Valiullina",
-    "customer_phone": "995591758260",
-    "customer_telegram": "vallalyona",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Напарнули",
-    "address_num": "16",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -6082,16 +3598,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 36,
     "customer_id": 912,
     "text_order": "repair the broken bed",
-    "customer_name": "الحررريف",
-    "customer_phone": "-",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "",
-    "address_num": "",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -6104,16 +3611,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 35,
     "customer_id": 1113,
     "text_order": "fix of the door",
-    "customer_name": "Андрей Тешков",
-    "customer_phone": "-",
-    "customer_telegram": "None",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Джанашия",
-    "address_num": "11",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -6126,16 +3624,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 226,
     "customer_id": 1114,
     "text_order": "install a lamp and shells",
-    "customer_name": "-",
-    "customer_phone": "7902847-51-88",
-    "customer_telegram": "-",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Saint Petersburg/Dimitri Uznadze Street,",
-    "address_num": "13/63",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -6148,16 +3637,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 227,
     "customer_id": 1115,
     "text_order": "Make a box for a water heater",
-    "customer_name": "Natalia",
-    "customer_phone": "79263303109",
-    "customer_telegram": "-",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Симона Чиковани",
-    "address_num": "4",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -6170,16 +3650,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 228,
     "customer_id": 1116,
     "text_order": "repair water tap",
-    "customer_name": "Ahmed gheith",
-    "customer_phone": "971569396310",
-    "customer_telegram": "+971569396310",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Tina Iosebidze St",
-    "address_num": "51b",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -6192,16 +3663,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 229,
     "customer_id": 1117,
     "text_order": "fix a water tap of a heatwater",
-    "customer_name": "-",
-    "customer_phone": "995579156722",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Kachinski",
-    "address_num": "7",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -6214,16 +3676,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 230,
     "customer_id": 1093,
     "text_order": "diagnostics of heaterwater",
-    "customer_name": "Евгений",
-    "customer_phone": "-",
-    "customer_telegram": "e_drozdov",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Vashi Pshaveli",
-    "address_num": "85",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -6236,16 +3689,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 53,
     "customer_id": 1101,
     "text_order": "Repair of the fundom machine",
-    "customer_name": "Дарья Серегина",
-    "customer_phone": "-",
-    "customer_telegram": "dashaseregina",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "-",
-    "address_num": "-",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -6258,16 +3702,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 53,
     "customer_id": 1081,
     "text_order": "Repair of a window and changeing of hosepipe",
-    "customer_name": "Zurab Svanidze",
-    "customer_phone": "-",
-    "customer_telegram": "ZURABSVANIDZE",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "-",
-    "address_num": "-",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -6280,16 +3715,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 231,
     "customer_id": 1118,
     "text_order": "repaier equipment",
-    "customer_name": "-",
-    "customer_phone": "995591076406",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Omar Khizanishvili",
-    "address_num": "108",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -6302,16 +3728,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 166,
     "customer_id": 1119,
     "text_order": "electricity work",
-    "customer_name": "-",
-    "customer_phone": "995599165330",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "-",
-    "address_num": "",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -6324,16 +3741,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 232,
     "customer_id": 1097,
     "text_order": "install pipeline",
-    "customer_name": "Tim Kiselev",
-    "customer_phone": "79259010013",
-    "customer_telegram": "Tkiss13",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Улица Шота Руставели",
-    "address_num": "",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -6346,16 +3754,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 233,
     "customer_id": 1120,
     "text_order": "Repair of wallpaper",
-    "customer_name": "-",
-    "customer_phone": "-",
-    "customer_telegram": "-",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Berbuki",
-    "address_num": "6",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -6368,16 +3767,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 234,
     "customer_id": 1121,
     "text_order": "repair a window",
-    "customer_name": "Anton Mikhalchuk",
-    "customer_phone": "-",
-    "customer_telegram": "Anton_Mikhalchuk",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Simon Chikovani",
-    "address_num": "20",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -6390,16 +3780,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 235,
     "customer_id": 1122,
     "text_order": "repair of a window",
-    "customer_name": "-",
-    "customer_phone": "995592611445",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Gili Shartava",
-    "address_num": "31",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -6412,16 +3793,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 53,
     "customer_id": 1101,
     "text_order": "Maintenance of the pet machine",
-    "customer_name": "Дарья Серегина",
-    "customer_phone": "-",
-    "customer_telegram": "dashaseregina",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "-",
-    "address_num": "-",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -6434,16 +3806,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 236,
     "customer_id": 1123,
     "text_order": "repair and install lamps",
-    "customer_name": "Denis Stepanov",
-    "customer_phone": "-",
-    "customer_telegram": "damien7785",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Эроси Манджгаладзе",
-    "address_num": "64",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -6456,16 +3819,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 237,
     "customer_id": 1124,
     "text_order": "repair works",
-    "customer_name": "-",
-    "customer_phone": "995511187027",
-    "customer_telegram": "-",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Nutsa Ghoghoberidze",
-    "address_num": "9",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -6478,16 +3832,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 238,
     "customer_id": 1125,
     "text_order": "unlock the door",
-    "customer_name": "-",
-    "customer_phone": "995571229861",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Petre Kavtaradze",
-    "address_num": "14 a",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -6500,16 +3845,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 239,
     "customer_id": 1126,
     "text_order": "repair sewier pipe",
-    "customer_name": "Oleg Chekalin",
-    "customer_phone": "995555162258",
-    "customer_telegram": "chainsself",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Ierusalimi St, T'bilisi",
-    "address_num": "2",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -6522,16 +3858,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 240,
     "customer_id": 1127,
     "text_order": "wall insulation works.",
-    "customer_name": "Alex",
-    "customer_phone": "511106814",
-    "customer_telegram": "-",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "улица Адама Мицкевича",
-    "address_num": "27 g",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -6544,16 +3871,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 241,
     "customer_id": 1128,
     "text_order": "lamp replacement, furniture repair",
-    "customer_name": "Anna Kharitonovich",
-    "customer_phone": "-",
-    "customer_telegram": "+79254488776",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Abashidze",
-    "address_num": "70",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -6566,16 +3884,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 7,
     "customer_id": 1129,
     "text_order": "wall repair",
-    "customer_name": "Ирина програмист",
-    "customer_phone": "995511112059",
-    "customer_telegram": "None",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Гиви Картозия",
-    "address_num": "8",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -6588,16 +3897,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 53,
     "customer_id": 1101,
     "text_order": "plug the pet auto machine",
-    "customer_name": "Дарья Серегина",
-    "customer_phone": "-",
-    "customer_telegram": "dashaseregina",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "-",
-    "address_num": "-",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -6610,16 +3910,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 241,
     "customer_id": 1128,
     "text_order": "repair the furniture",
-    "customer_name": "Anna Kharitonovich",
-    "customer_phone": "-",
-    "customer_telegram": "+79254488776",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Abashidze",
-    "address_num": "70",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -6632,16 +3923,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 242,
     "customer_id": 1127,
     "text_order": "remove wallpaper, painting the wall and other works",
-    "customer_name": "Alex",
-    "customer_phone": "511106814",
-    "customer_telegram": "-",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Улица Адама Мицкевича",
-    "address_num": "27 g",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -6654,16 +3936,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 243,
     "customer_id": 1130,
     "text_order": "many works: fix a sink, sockets, window, dorr shower",
-    "customer_name": "-",
-    "customer_phone": "79270160488",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Habeishvili",
-    "address_num": "49 b",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -6676,16 +3949,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 244,
     "customer_id": 1120,
     "text_order": "repair a sink",
-    "customer_name": "Ann",
-    "customer_phone": "-",
-    "customer_telegram": "-",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Giuli Shartava",
-    "address_num": "31",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -6698,16 +3962,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 35,
     "customer_id": 1132,
     "text_order": "plumbing works",
-    "customer_name": "Andrey Tereshkov",
-    "customer_phone": "-",
-    "customer_telegram": "tereshkov",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Джанашия",
-    "address_num": "11",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -6720,16 +3975,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 53,
     "customer_id": 1133,
     "text_order": "repair a cable",
-    "customer_name": "Melike Bozkurt",
-    "customer_phone": "Melikebozkurt",
-    "customer_telegram": "None",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "-",
-    "address_num": "-",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -6742,16 +3988,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 245,
     "customer_id": 1134,
     "text_order": "Hang a painting",
-    "customer_name": "Ruslan",
-    "customer_phone": "995568983434",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "-Gorgosali",
-    "address_num": "",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -6764,16 +4001,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 246,
     "customer_id": 1135,
     "text_order": "Hang a paintings",
-    "customer_name": "Николай Ходасевич",
-    "customer_phone": "-",
-    "customer_telegram": "Khadassevitch",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Авто Варази",
-    "address_num": "28a",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -6786,16 +4014,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 245,
     "customer_id": 1134,
     "text_order": "repair tap water",
-    "customer_name": "Ruslan",
-    "customer_phone": "995568983434",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "-Gorgosali",
-    "address_num": "",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -6808,16 +4027,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 53,
     "customer_id": 1101,
     "text_order": "plug the pet auto machine",
-    "customer_name": "Дарья Серегина",
-    "customer_phone": "-",
-    "customer_telegram": "dashaseregina",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "-",
-    "address_num": "-",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -6830,16 +4040,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 247,
     "customer_id": 1136,
     "text_order": "replace water tap and install lock for a door",
-    "customer_name": "Вадим Любименко",
-    "customer_phone": "-",
-    "customer_telegram": "MartyMcAir",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Надирашвили",
-    "address_num": "38",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -6852,16 +4053,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 53,
     "customer_id": 1101,
     "text_order": "cleaning pet machine",
-    "customer_name": "Дарья Серегина",
-    "customer_phone": "-",
-    "customer_telegram": "dashaseregina",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "-",
-    "address_num": "-",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -6874,16 +4066,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 248,
     "customer_id": 1137,
     "text_order": "Repaier of water tap",
-    "customer_name": "Eugene M.",
-    "customer_phone": "-",
-    "customer_telegram": "eugmv",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Сократа Аршба",
-    "address_num": "7",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -6896,16 +4079,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 36,
     "customer_id": 1138,
     "text_order": "repair sewer",
-    "customer_name": "Andriy Parkhomenko",
-    "customer_phone": "-",
-    "customer_telegram": "AndriyParkhom",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "",
-    "address_num": "",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -6918,16 +4092,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 249,
     "customer_id": 1139,
     "text_order": "replace a water tap",
-    "customer_name": "-",
-    "customer_phone": "995557644292",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "varketili",
-    "address_num": "3",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -6940,16 +4105,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 166,
     "customer_id": 1140,
     "text_order": "repair sink trap",
-    "customer_name": "Ivan Beliaev",
-    "customer_phone": "995593470526",
-    "customer_telegram": "ivbeliaev",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "-",
-    "address_num": "",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -6962,16 +4118,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 53,
     "customer_id": 1101,
     "text_order": "Repaier of pet machine",
-    "customer_name": "Дарья Серегина",
-    "customer_phone": "-",
-    "customer_telegram": "dashaseregina",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "-",
-    "address_num": "-",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -6984,16 +4131,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 250,
     "customer_id": 1141,
     "text_order": "Painting the wall",
-    "customer_name": "Spain",
-    "customer_phone": "34620920263",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Levana Mikeladze, Vake",
-    "address_num": "3, app.5",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -7006,16 +4144,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 250,
     "customer_id": 1142,
     "text_order": "paint the wall outside",
-    "customer_name": "Spain",
-    "customer_phone": "34620920263",
-    "customer_telegram": null,
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Levana Mikeladze, Vake",
-    "address_num": "3, app.5",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -7028,16 +4157,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 53,
     "customer_id": 1101,
     "text_order": "Repair of petmachine",
-    "customer_name": "Дарья Серегина",
-    "customer_phone": "-",
-    "customer_telegram": "dashaseregina",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "-",
-    "address_num": "-",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -7050,16 +4170,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 172,
     "customer_id": 1053,
     "text_order": "repair the lamp and cable",
-    "customer_name": "Кинотеатр",
-    "customer_phone": "79298414777",
-    "customer_telegram": "fullferrum",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Чикобавы",
-    "address_num": "43",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -7072,16 +4183,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 251,
     "customer_id": 1143,
     "text_order": "sealing a bathroom",
-    "customer_name": "-",
-    "customer_phone": "79264707757",
-    "customer_telegram": "-",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Georgia Brtskinvale",
-    "address_num": "40",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -7094,16 +4196,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 252,
     "customer_id": 1079,
     "text_order": "plumbing work",
-    "customer_name": "Сергей",
-    "customer_phone": "995597715976",
-    "customer_telegram": "s_Kudria",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Улица Ивана Мачабели",
-    "address_num": "4",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -7116,16 +4209,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 53,
     "customer_id": 1101,
     "text_order": "Repair of petmachine",
-    "customer_name": "Дарья Серегина",
-    "customer_phone": "-",
-    "customer_telegram": "dashaseregina",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "-",
-    "address_num": "-",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -7138,16 +4222,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 253,
     "customer_id": 1084,
     "text_order": "repair the capboard",
-    "customer_name": "Анна",
-    "customer_phone": "-",
-    "customer_telegram": "Anna2124",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Kavtaradze",
-    "address_num": "47",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -7160,16 +4235,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 254,
     "customer_id": 1144,
     "text_order": "unlock the door",
-    "customer_name": "Alexandr Art",
-    "customer_phone": "-",
-    "customer_telegram": "aaart_one",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Chitadze",
-    "address_num": "1",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -7182,16 +4248,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 255,
     "customer_id": 1145,
     "text_order": "repaier",
-    "customer_name": "-",
-    "customer_phone": "380674626670",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Sulhan-Saba",
-    "address_num": "3",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -7204,16 +4261,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 166,
     "customer_id": 1146,
     "text_order": "intall the lamp",
-    "customer_name": "-",
-    "customer_phone": "995598283344",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "-",
-    "address_num": "",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -7226,16 +4274,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 53,
     "customer_id": 1101,
     "text_order": "-",
-    "customer_name": "Дарья Серегина",
-    "customer_phone": "-",
-    "customer_telegram": "dashaseregina",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "-",
-    "address_num": "-",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -7248,16 +4287,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 256,
     "customer_id": 1147,
     "text_order": "plumbing repair",
-    "customer_name": "Mike Morrison",
-    "customer_phone": "995511291256",
-    "customer_telegram": "mike_morrison",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Petre Kavtaradzis Street",
-    "address_num": "14 B",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -7270,16 +4300,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 257,
     "customer_id": 1148,
     "text_order": "installation of a water tap",
-    "customer_name": "-",
-    "customer_phone": "79194911774",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Griboedova",
-    "address_num": "1/3",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -7292,16 +4313,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 258,
     "customer_id": 1149,
     "text_order": "repair a sifon",
-    "customer_name": "-",
-    "customer_phone": "79192182215",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Varketili",
-    "address_num": "",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -7314,16 +4326,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 245,
     "customer_id": 1134,
     "text_order": "change a lamp",
-    "customer_name": "Ruslan",
-    "customer_phone": "995568983434",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "-Gorgosali",
-    "address_num": "",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -7336,16 +4339,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 166,
     "customer_id": 1111,
     "text_order": "vacuum cleaner tube repair",
-    "customer_name": "Anastasiya Safarova",
-    "customer_phone": "995591249364",
-    "customer_telegram": "aasafarova",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "-",
-    "address_num": "",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -7358,16 +4352,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 259,
     "customer_id": 1150,
     "text_order": "Repair work",
-    "customer_name": "Andy",
-    "customer_phone": "995599689410",
-    "customer_telegram": "avishch",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Mcheta",
-    "address_num": "50",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -7380,16 +4365,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 241,
     "customer_id": 1128,
     "text_order": "repair a bed",
-    "customer_name": "Anna Kharitonovich",
-    "customer_phone": "-",
-    "customer_telegram": "+79254488776",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Abashidze",
-    "address_num": "70",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -7402,16 +4378,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 35,
     "customer_id": 1132,
     "text_order": "Plumbing works",
-    "customer_name": "Andrey Tereshkov",
-    "customer_phone": "-",
-    "customer_telegram": "tereshkov",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Джанашия",
-    "address_num": "11",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -7424,16 +4391,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 204,
     "customer_id": 1034,
     "text_order": "electrical wiring repair",
-    "customer_name": "Nastassja Shengelya",
-    "customer_phone": "995599930910",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Улица Александра Грибоедова",
-    "address_num": "15",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -7446,16 +4404,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 260,
     "customer_id": 1152,
     "text_order": "repair a sink",
-    "customer_name": "---",
-    "customer_phone": "--",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "--",
-    "address_num": "--",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -7468,16 +4417,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 210,
     "customer_id": 1093,
     "text_order": "install a starlink",
-    "customer_name": "Евгений",
-    "customer_phone": "-",
-    "customer_telegram": "e_drozdov",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Улица Анны Политковской",
-    "address_num": "59",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -7490,16 +4430,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 230,
     "customer_id": 1093,
     "text_order": "repair a wall",
-    "customer_name": "Евгений",
-    "customer_phone": "-",
-    "customer_telegram": "e_drozdov",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Vashi Pshaveli",
-    "address_num": "85",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -7512,16 +4443,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 250,
     "customer_id": 1153,
     "text_order": "paint the wall outside",
-    "customer_name": "Spain",
-    "customer_phone": "34620920263",
-    "customer_telegram": "None",
-    "order_status": "SND",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Levana Mikeladze, Vake",
-    "address_num": "3, app.5",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "SND"
   }
 },
 {
@@ -7534,16 +4456,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 261,
     "customer_id": 1154,
     "text_order": "plumbing repair",
-    "customer_name": "Dasha Khoreva",
-    "customer_phone": "-",
-    "customer_telegram": "dasha_olovo",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Vasil Barnov",
-    "address_num": "8",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -7556,16 +4469,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 262,
     "customer_id": 1081,
     "text_order": "install air condition",
-    "customer_name": "Zurab Svanidze",
-    "customer_phone": "-",
-    "customer_telegram": "ZURABSVANIDZE",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "4000 Месхи",
-    "address_num": "5",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -7578,16 +4482,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 53,
     "customer_id": 1101,
     "text_order": "-",
-    "customer_name": "Дарья Серегина",
-    "customer_phone": "-",
-    "customer_telegram": "dashaseregina",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "-",
-    "address_num": "-",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -7600,16 +4495,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 84,
     "customer_id": 957,
     "text_order": "plumbing repair, doror reapir",
-    "customer_name": "Regina DushaRishy",
-    "customer_phone": "995551176558",
-    "customer_telegram": "dusharishy",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Shalva Nutsubidze St, Tbilisi",
-    "address_num": "10",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -7622,16 +4508,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 53,
     "customer_id": 1101,
     "text_order": "-",
-    "customer_name": "Дарья Серегина",
-    "customer_phone": "-",
-    "customer_telegram": "dashaseregina",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "-",
-    "address_num": "-",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -7644,16 +4521,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 263,
     "customer_id": 912,
     "text_order": "plumbing repair",
-    "customer_name": "Japan Restauran",
-    "customer_phone": "-",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Аллея Агмашенебели",
-    "address_num": "12",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -7666,16 +4534,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 36,
     "customer_id": 1094,
     "text_order": "electricity work",
-    "customer_name": "Олег Гоча",
-    "customer_phone": "995591687350",
-    "customer_telegram": "",
-    "order_status": "RCV",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "",
-    "address_num": "",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "RCV"
   }
 },
 {
@@ -7688,16 +4547,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 264,
     "customer_id": 973,
     "text_order": "laundry drying installation",
-    "customer_name": "-",
-    "customer_phone": "79654090478",
-    "customer_telegram": "",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Улица Георгия Чкондидели",
-    "address_num": "36",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -7710,16 +4560,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 264,
     "customer_id": 973,
     "text_order": "install the lamp",
-    "customer_name": "-",
-    "customer_phone": "79654090478",
-    "customer_telegram": "",
-    "order_status": "SND",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Улица Георгия Чкондидели",
-    "address_num": "36",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "SND"
   }
 },
 {
@@ -7732,16 +4573,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 36,
     "customer_id": 1156,
     "text_order": "fix a window for air conditioner and washing machine tube, and socets,",
-    "customer_name": "-",
-    "customer_phone": "7910453-82-97",
-    "customer_telegram": "",
-    "order_status": "SND",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "",
-    "address_num": "",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "SND"
   }
 },
 {
@@ -7754,16 +4586,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 265,
     "customer_id": 1157,
     "text_order": "fix a pipe",
-    "customer_name": "Ira",
-    "customer_phone": "995598005760",
-    "customer_telegram": "pnkzlng",
-    "order_status": "END",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Dimitri Uznadze St",
-    "address_num": "4",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "END"
   }
 },
 {
@@ -7776,16 +4599,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 266,
     "customer_id": 1101,
     "text_order": "fix a safety",
-    "customer_name": "Дарья Серегина",
-    "customer_phone": "-",
-    "customer_telegram": "dashaseregina",
-    "order_status": "SND",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Amagleba",
-    "address_num": "37",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "SND"
   }
 },
 {
@@ -7798,16 +4612,7 @@ Manage: Django loaded up in setting mode : Development
     "apartment_id": 267,
     "customer_id": 1158,
     "text_order": "repair a glass",
-    "customer_name": "Nikita Oshuev",
-    "customer_phone": "995585889527",
-    "customer_telegram": "",
-    "order_status": "SND",
-    "customer_code": null,
-    "address_city": "TB",
-    "address_street_app": "Николая Бараташвили",
-    "address_num": "8",
-    "location_longitude": null,
-    "location_latitude": null
+    "order_status": "SND"
   }
 }
 ]

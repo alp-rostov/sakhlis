@@ -56,23 +56,9 @@ class OrderList(models.Model):
     text_order = models.CharField(max_length=1500, verbose_name='Description of the problem', blank=True, null=True)
 
 
-    customer_name = models.CharField(max_length=50, verbose_name='Name')
-    customer_phone = models.CharField(max_length=16, verbose_name='Phone')
-    customer_telegram = models.CharField(max_length=26, verbose_name='Telegram', blank=True, null=True)
-
-
-
     order_status = models.CharField(max_length=3, choices=ORDER_STATUS, default='BEG', null=True, blank=True,
                                     verbose_name='Order status')
     services = models.ManyToManyField('Service', through='Invoice')
-
-    customer_code = models.CharField(max_length=16, verbose_name='Company code ', blank=True, null=True)
-    address_city = models.CharField(max_length=2, choices=CITY_CHOICES, default='TB', null=True, blank=True,
-                                    verbose_name='City')
-    address_street_app = models.CharField(max_length=150, verbose_name='Street', null=True, blank=True)
-    address_num = models.CharField(max_length=10, verbose_name='House number', null=True, blank=True)
-    location_longitude = models.FloatField(verbose_name='Longitude', null=True, blank=True)
-    location_latitude = models.FloatField(verbose_name='Latitude', null=True, blank=True)
 
     class Meta:
         verbose_name = 'Order list'
