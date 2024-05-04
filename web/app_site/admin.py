@@ -48,6 +48,8 @@ class UserAdmin(admin.ModelAdmin):
     list_display = ('pk', 'customer_name', 'phone', 'telegram',
                     'profile', 'user')
     list_display_links = ('customer_name',)
+    list_filter = ('telegram',)
+    search_fields = ('telegram',)
     inlines = [PersonalApartment]
 
 
