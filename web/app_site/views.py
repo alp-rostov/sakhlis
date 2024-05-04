@@ -187,10 +187,10 @@ class OrderManagementSystem(BaseClassExeption, PermissionRequiredMixin, LoginReq
         return context
 
 
-class OrderUpdate(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, UpdateView):
+class OrderUpdate(PermissionRequiredMixin, LoginRequiredMixin, UpdateView):
     model = OrderList
     template_name = 'order_update.html'
-    form_class = OrderForm
+    form_class = OrderUpdateForm
     permission_required = PERMISSION_FOR_OWNER
 
     def get_context_data(self, **kwargs):
@@ -198,6 +198,7 @@ class OrderUpdate(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin
         context['time_in'] = self.object.time_in
         context['pk'] = self.object.pk
         return context
+
 
     def get_success_url(self):
         return '/list_order/' + str(self.object.pk)
@@ -407,7 +408,7 @@ def client_details_json(request, **kwargs):
     data = UserProfile.objects.get(pk=request.GET.get('pk'))
     orders = OrderList.objects.filter(repairer_id=request.user, customer_id=data).values('pk','text_order', 'time_in')
     json_orders = json.dumps(list(orders), default=str)
-    apartment=Apartment.objects.filter(owner=data).values('pk','name','address_city', 'address_street_app', 'address_num')
+    apartment=Apartment.objects.filter(owner=data).values('pk','name','address_city', 'address_street_app', 'address_num').order_by('-address_street_app')
     json_apartment = json.dumps(list(apartment), default=str)
     if orders.exists():
         return JsonResponse({'pk': data.pk,

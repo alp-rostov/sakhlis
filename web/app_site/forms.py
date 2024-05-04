@@ -43,27 +43,27 @@ class OrderForm(forms.ModelForm):
         required=True
         )
 
-
     class Meta:
         model = OrderList
         fields = ('text_order', )
-    # def save(self, commit=True):
-    #     order=super().save(commit=False)
-    #     dict_wrong_char = str.maketrans({'<': '', '[': '',']': '','>': '','{': '','}': '','+': '', '@': '' })
-    #
-    #     order.text_order = order.text_order.translate(dict_wrong_char)
-    #
-    #     order.customer_phone = order.customer_phone.translate(dict_wrong_char).replace(' ', '')
-    #
-    #     name_telegram_customer = order.customer_telegram.translate(dict_wrong_char).replace(' ', '')
-    #
-    #     if name_telegram_customer.isdigit():
-    #         order.customer_telegram = '+' + name_telegram_customer
-    #     else:
-    #         order.customer_telegram = name_telegram_customer
-    #     if commit:
-    #         order.save()
-    #     return order
+
+class OrderUpdateForm(forms.ModelForm):
+    text_order = forms.CharField(
+        label='Order`s message',
+        widget=forms.TextInput(attrs={"class": "md-textarea form-control",
+                                     'placeholder': "Describe your problem", 'maxlength':1500}),
+        required=True
+        )
+
+    apartment_id = forms.ModelChoiceField(label='Apartment`s customer', queryset=Apartment.objects.all())
+    class Meta:
+        model = OrderList
+        fields = ('text_order', 'apartment_id', 'customer_id')
+
+
+
+
+
 
 class CustomerForm(forms.ModelForm):
 
@@ -104,21 +104,6 @@ class CustomerForm(forms.ModelForm):
     class Meta:
         model = UserProfile
         fields = ('customer_name', 'phone', 'telegram', 'profile', 'foto', 'city')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
