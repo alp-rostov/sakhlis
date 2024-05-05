@@ -12,7 +12,11 @@
 
 
 {% block body %}
+<form action="" method="get">
 
+{{ filterset.form }}
+    <input type="submit" value=" Submit " class="btn btn-sm btn-orange">
+</form>
 
 {% regroup clients by customer_name|first as name %}
 
@@ -20,7 +24,7 @@
 
 <div  class="row" id="">
     <div class="col-md-12 mycolor">
-        <h4 >{{ i.grouper }}</h4>
+        <br><br><h4>{{ i.grouper }}</h4><hr>
     </div>
 </div>
 
@@ -28,6 +32,8 @@
     <div  class="row" id="">
         <div class="col-md-6">
             <a href="{{ b.pk  }}" id="link" class="h5 " data-toggle="modal" data-target="#exampleModal"> {{ b.customer_name }}</a>
+            <br><i>{{ b.profile|default_if_none:"" }}</i>
+
         </div>
         <div class="col-md-6">
             {{ b.profile|default_if_none:"" }}
@@ -66,19 +72,19 @@
                             </div>
                         </fieldset>
                             <div class="row">
-                                <div class="col-6 text-center">
-                                <h4 id="name" class="mycolor font-weight-bold"></h4>
-
+                                <div class="col-12 text-center">
+                                    <h4 id="name" class="mycolor font-weight-bold"></h4>
                                     <img id="foto1" class="rounded-circle" align="" width="100">
+                            <div class="h5" id="profile">
+
+                            </div>
+
                                 </div>
-                                <div class="col-6">
-                                    <a href="tel:" title="Phone" id="customer_phone" class="fas fa-phone prefix text-secondary mt-3" aria-hidden="true">
+
+                                    <a href="tel:" title="Phone"  id="customer_phone" class="fas fa-phone prefix text-secondary mt-3" aria-hidden="true">
                                     </a><br>
                                     <a href="https://t.me/" title="Telegram" id="customer_telegram" class ="fas fa fa-paper-plane text-secondary mt-3" aria-hidden="true">
                                     </a>
-                                </div>
-                            </div>
-                            <div class="row h6 text-center" id="profile">
                             </div>
 
 

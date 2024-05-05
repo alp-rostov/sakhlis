@@ -16,7 +16,7 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 
 from .constants import *
 from .exeptions import BaseClassExeption
-from .filters import OrderFilter
+from .filters import OrderFilter, ClientFilter
 from .models import *
 from .forms import *
 from .repository import DataFromRepairerList, DataFromOrderList, DataFromInvoice, DataFromUserProfile
@@ -79,13 +79,35 @@ class RepairerDetailInformation(BaseClassExeption, PermissionRequiredMixin, Logi
         return context
 
 
-class Clients(TemplateView):
+class Clients(ListView):
+    model = UserProfile
+    context_object_name = 'clients'
     template_name = 'repairer/clients.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['clients'] = DataFromUserProfile().get_clients_of_orders_from_UserProfile(self.request.user)
+        context['filterset'] = self.filterset
         return context
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        # b = self.request.GET.copy()
+        # b.__setitem__('repairer_id', self.request.user.pk)
+        queryset = DataFromUserProfile().get_clients_of_orders_from_UserProfile(self.request.user)
+        self.filterset = ClientFilter(self.request.GET, queryset)
+
+        return self.filterset.qs
+
+
+
+
+
+
+
+
+
+
+
 
 class OwnerDetailInformation(PermissionRequiredMixin, LoginRequiredMixin, DetailView):
     model = User

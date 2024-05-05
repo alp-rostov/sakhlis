@@ -86,3 +86,60 @@ class OrderFilter(FilterSet):
         fields = ['order_status', 'repairer_id']
 
 
+
+class ClientFilter(FilterSet):
+
+
+    customer_name = CharFilter(
+        field_name='customer_name',
+        widget=forms.TextInput(attrs={"class": ""}),
+        label='Name',
+        lookup_expr='icontains',
+
+    )
+
+    phone = CharFilter(
+        field_name='phone',
+        label='Phone',
+        lookup_expr='icontains',
+
+    )
+
+    telegram = CharFilter(
+        field_name='telegram',
+        label='Telegram',
+        lookup_expr='icontains',
+
+    )
+
+    profile = CharFilter(
+        field_name='profile',
+        label='profile',
+        lookup_expr='icontains',
+
+    )
+
+    #
+    # address_city = ChoiceFilter(
+    #     field_name='address_city',
+    #     label='City',
+    #     lookup_expr='icontains',
+    #     choices=CITY_CHOICES,
+    #
+    # )
+    #
+    # address_city = ChoiceFilter(
+    #     field_name='address_city',
+    #     label='City',
+    #     lookup_expr='icontains',
+    #     choices=CITY_CHOICES,
+    #
+    # )
+
+    class Meta:
+        model = OrderList
+        fields = ['customer_name', 'phone', 'telegram', 'profile']
+
+
+
+
