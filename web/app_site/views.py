@@ -297,9 +297,12 @@ class Statistica(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin,
 
     def get_queryset(self):
         queryset = super().get_queryset()
-        b = self.request.GET.copy()
-        b.__setitem__('repairer_id', self.request.user.pk)
-        self.filterset = OrderFilter(b, queryset)
+        # b = self.request.GET.copy()
+        # b.__setitem__('repairer_id', self.request.user.pk)
+        # self.filterset = OrderFilter(b, queryset)
+        queryset = super().get_queryset().filter(repairer_id=self.request.user).select_related('customer_id',
+                                                                                               'apartment_id').all()
+        self.filterset = OrderFilter(self.request.GET, queryset)
         return self.filterset.qs
 
     def get_context_data(self, **kwargs):

@@ -4,25 +4,18 @@
 {% load slippers %}
 
 {% block subbody %}
-
+<div class="container text-white">
 <form action="" method="get" class="">
 
-        <div class="">
                 {{ filterset.form.time_in_sence.label }}:
                 {{ filterset.form.time_in_sence }}
 
                 {{ filterset.form.time_in_until.label }}:
                 {{ filterset.form.time_in_until }}
 
-                {{ filterset.form.repairer_id }}
-
-                {{ filterset.form.address_city.label }}: {{ filterset.form.address_city }}
-
                 <input type="submit" value=" Submit " class="btn btn-sm btn-orange">
-            </div>
-
-
 </form>
+</div>
 
 
 {% endblock subbody %}

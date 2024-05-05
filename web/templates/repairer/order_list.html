@@ -4,6 +4,7 @@
 {% load slippers %}
 
 {% block subbody %}
+<div class="container text-white">
 <form action="" method="get" class="">
                 {{ filterset.form.time_in_sence.label }}:
                 {{ filterset.form.time_in_sence }}
@@ -14,10 +15,10 @@
 
                 {{ filterset.form.order_status.label }}:
                 {{ filterset.form.order_status }}
-                <input type="submit" value=" Submit " class="btn btn-sm btn-orange">
+                <input type="submit" value=" Submit " class="btn btn-sm btn-orange"><br><br>
         <h5>Amount of money : {{ summ_orders }} / Order`s quantity : {{ count_orders }}</h5>
 </form>
-
+</div>
 {% endblock subbody %}
 
 {% block body %}

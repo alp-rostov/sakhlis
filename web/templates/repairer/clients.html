@@ -5,12 +5,13 @@
 {% load slippers %}
 
 {% block subbody %}
+<div class="container text-white">
 <form action="" method="get">
 
 {{ filterset.form }}
     <input type="submit" value=" Submit " class="btn btn-sm btn-orange">
 </form>
-
+</div>
 
 {% endblock subbody %}
 
@@ -32,7 +33,6 @@
     <div  class="row" id="">
         <div class="col-md-6">
             <a href="{{ b.pk  }}" id="link" class="h5 " data-toggle="modal" data-target="#exampleModal"> {{ b.customer_name }}</a>
-            <br><i>{{ b.profile|default_if_none:"" }}</i>
 
         </div>
         <div class="col-md-6">
