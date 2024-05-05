@@ -38,45 +38,18 @@
 {% block body %}
 
 <form action="" method="get">
-    <div class="container">
-        <div class="row p-1 ">
-            <div class="col-md-3 text-muted">
-                {{ filterset.form.time_in_sence.label }}:<br>
-                {{ filterset.form.time_in_sence }}<br>
+                {{ filterset.form.time_in_sence.label }}:
+                {{ filterset.form.time_in_sence }}
 
-                {{ filterset.form.time_in_until.label }}:<br>
-                {{ filterset.form.time_in_until }}<br>
+                {{ filterset.form.time_in_until.label }}:
+                {{ filterset.form.time_in_until }}
 
 
-                {{ filterset.form.order_status.label }}:<br>
-                {{ filterset.form.order_status }}<br>
-            {{ filterset.form.repairer_id }}
-            </div>
-            <div class="col-md-3 text-muted">
-                {{ filterset.form.customer_name.label }}:<br>
-                {{ filterset.form.customer_name }}<br>
-                {{ filterset.form.customer_phone.label }}:<br>
-                {{ filterset.form.customer_phone }}<br>
-                {{ filterset.form.customer_telegram.label }}:<br>
-                {{ filterset.form.customer_telegram }}
-            </div>
-            <div class="col-md-3 text-muted">
-                {{ filterset.form.address_city.label }}:<br>
-                {{ filterset.form.address_city }}:<br>
-
-                {{ filterset.form.adress_street_app.label }}:<br>
-                {{ filterset.form.adress_street_app }}<br>
-                {{ filterset.form.address_num.label }}:<br>
-                {{ filterset.form.address_num }}
-            </div>
-            <div class="col-md-2" >
+                {{ filterset.form.order_status.label }}:
+                {{ filterset.form.order_status }}
                 <input type="submit" value=" Submit " class="btn btn-sm btn-orange">
-                <input type="reset" value=" Reset " class="btn btn-sm btn-orange">
-            </div>
-        </div>
         <h5>Amount of money : {{ summ_orders }} / Order`s quantity : {{ count_orders }}</h5>
 </form>
-    </div>
 
 
 

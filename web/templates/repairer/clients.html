@@ -5,6 +5,11 @@
 {% load slippers %}
 
 {% block subbody %}
+<form action="" method="get">
+
+{{ filterset.form }}
+    <input type="submit" value=" Submit " class="btn btn-sm btn-orange">
+</form>
 
 
 {% endblock subbody %}
@@ -12,11 +17,6 @@
 
 
 {% block body %}
-<form action="" method="get">
-
-{{ filterset.form }}
-    <input type="submit" value=" Submit " class="btn btn-sm btn-orange">
-</form>
 
 {% regroup clients by customer_name|first as name %}
 

@@ -4,64 +4,23 @@
 {% load slippers %}
 
 {% block subbody %}
+<form action="" method="get" class="">
+                {{ filterset.form.time_in_sence.label }}:
+                {{ filterset.form.time_in_sence }}
+
+                {{ filterset.form.time_in_until.label }}:
+                {{ filterset.form.time_in_until }}
 
 
-                            {% if request.GET.work_status == 'SND' %}
-                            <a href="{% url 'list_order' %}?work_status=SND"><b>New jobs</b></a> |
-                            {% else %}
-                            <a href="{% url 'list_order' %}?work_status=SND">New jobs</a> |
-                            {% endif %}
-
-                            {% if request.GET.work_status == 'RCV' %}
-                            <a href="{% url 'list_order'%}?work_status=RCV"><b>Jobs in progress</b></a> |
-                            {% else %}
-                            <a href="{% url 'list_order'%}?work_status=RCV">Jobs in progress</a> |
-                            {% endif %}
-
-                            {% if request.GET.work_status == 'END' %}
-                            <a href="{% url 'list_order'%}?work_status=END"><b>Completed jobs</b></a> |
-                            {% else %}
-                            <a href="{% url 'list_order'%}?work_status=END">Completed orders</a> |
-                            {% endif %}
-
-
-                            {% if the_url4 in request.get_full_path %}
-                            <a href="{% url 'search-order' %}" class="fa fa-search fa-border " aria-hidden="true" title="find"><b></b></a>
-                            {% else %}
-                            <a href="{% url 'search-order' %}" class="fa fa-search fa-border" aria-hidden="true"></a>
-                            {% endif %}
-
+                {{ filterset.form.order_status.label }}:
+                {{ filterset.form.order_status }}
+                <input type="submit" value=" Submit " class="btn btn-sm btn-orange">
+        <h5>Amount of money : {{ summ_orders }} / Order`s quantity : {{ count_orders }}</h5>
+</form>
 
 {% endblock subbody %}
 
 {% block body %}
-
-<div align="center">
-    <a href="#"  onclick="show_create_order_form(document.getElementById('form'))"
-    class="btn btn-sm btn-orange cta-btn btn-form mt-3 mb-5 " id="link_create_order_form">Create a job</a>
-</div>
-
-{% #form form_order_=form_order form_appart_=form_appart form_customer_=form_customer hidden="none" %}
-{% csrf_token %}
-{% /form %}
-
-<script type="text/javascript">
-    $(document).ready(function() {
-        $('#form').submit(function(e) {
-            e.preventDefault();
-            $.ajax({
-                url: '../',
-                type: 'POST',
-                data: $(this).serialize(),
-                dataType: 'text',
-                beforeSend: function () {$("#form").html('<h3>Sending...</h3>');},
-                success: function (resp_) {
-                                    window.location.href = '/list_order/'+JSON.parse(resp_).pk;
-                           },
-            });
-        });
-    });
-</script>
 
 <div id="head" class="container">
     {% for i in order %}
@@ -85,24 +44,4 @@
     {% endif %}
 </h2>
 
-<script>
-    $(document.body).on( "input", "#id_address_street_app", function(e) {
-        e.preventDefault();
-        $.ajax({
-            url: "/street?street="+$(this).val() ,
-            type: "GET",
-
-            dataType: 'json',
-            success: function(b){
-                let type=JSON.parse(b);
-                $('#languages option').remove();
-                for (i = 0; i < type.length; i++) {
-                    full_name_street=type[i].type_street+type[i].name_street
-                    $('#languages').append('<option value="'+full_name_street+'">');
-
-                }
-            }
-        });
-    });
-</script>
 {% endblock body %}

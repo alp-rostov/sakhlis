@@ -83,6 +83,7 @@ class Clients(ListView):
     model = UserProfile
     context_object_name = 'clients'
     template_name = 'repairer/clients.html'
+    queryset = UserProfile.objects.none()
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -91,9 +92,9 @@ class Clients(ListView):
 
     def get_queryset(self):
         queryset = super().get_queryset()
-        # b = self.request.GET.copy()
-        # b.__setitem__('repairer_id', self.request.user.pk)
-        queryset = DataFromUserProfile().get_clients_of_orders_from_UserProfile(self.request.user)
+        if self.request.GET.get('customer_name')!=None:
+            queryset = DataFromUserProfile().get_clients_of_orders_from_UserProfile(self.request.user)
+
         self.filterset = ClientFilter(self.request.GET, queryset)
 
         return self.filterset.qs
@@ -190,22 +191,24 @@ class OrderManagementSystem(BaseClassExeption, PermissionRequiredMixin, LoginReq
     context_object_name = 'order'
     template_name = 'repairer/order_list.html'
     permission_required = PERMISSION_FOR_REPAIER
+    ordering = ['-time_in']
 
     def get_queryset(self):
-        if not self.request.GET.get('work_status'):
-            self.queryset = DataFromOrderList() \
-                .get_data_from_OrderList_all(repairer=self.request.user)
-        else:
-            self.queryset = DataFromOrderList() \
-                .get_data_from_OrderList_with_order_status(repairer=self.request.user,
-                                                           status_of_order=[self.request.GET.get('work_status'), ])
-        return self.queryset[0:14]
+            # self.queryset = DataFromOrderList() \
+            #     .get_data_from_OrderList_all(repairer=self.request.user)
+        queryset = super().get_queryset().filter(repairer_id=self.request.user).select_related('customer_id', 'apartment_id').all()
+        self.filterset = OrderFilter(self.request.GET, queryset)
+        return self.filterset.qs[0:1000] #TODO need paginator
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['form_order'] = OrderForm
         context['form_customer'] = CustomerForm
         context['form_appart'] = ApartmentForm
+        context['filterset'] = self.filterset
+        c = DataFromInvoice().get_total_cost_of_some_orders(list_of_orders=self.get_queryset())
+        context['summ_orders'] = c.get('Summ')
+        context['count_orders'] = self.get_queryset().count()
         return context
 
 
@@ -343,21 +346,19 @@ class OrderSearchForm(BaseClassExeption, PermissionRequiredMixin, LoginRequiredM
     permission_required = PERMISSION_FOR_REPAIER
 
     def get_queryset(self):
-        queryset = super().get_queryset()
-        b = self.request.GET.copy()
-        b.__setitem__('repairer_id', self.request.user.pk)
-        self.filterset = OrderFilter(b, queryset)
+        queryset = super().get_queryset().filter(repairer_id=self.request.user).select_related('customer_id', 'apartment_id').all()
+        self.filterset = OrderFilter(self.request.GET, queryset)
         return self.filterset.qs
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['filterset'] = self.filterset
-        context['form_customer'] = CustomerForm
-        context['form_order'] = OrderForm
-        context['form_appart'] = ApartmentForm
-        c = DataFromInvoice().get_total_cost_of_some_orders(list_of_orders=self.get_queryset())
-        context['summ_orders'] = c.get('Summ')
-        context['count_orders'] = self.get_queryset().count()
+        # context['form_customer'] = CustomerForm
+        # context['form_order'] = OrderForm
+        # context['form_appart'] = ApartmentForm
+        # c = DataFromInvoice().get_total_cost_of_some_orders(list_of_orders=self.get_queryset())
+        # context['summ_orders'] = c.get('Summ')
+        # context['count_orders'] = self.get_queryset().count()
         return context
 
 
