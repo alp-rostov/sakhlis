@@ -28,17 +28,21 @@
 
                     {% regroup orders by order_status as order_list %}
 
-                        <ul>
+
                             {% for i in order_list %}
-                            <li><b class="h5 mycolor">{{ i.grouper|choice_tag:'status_order' }}</b>
-                                    <ul>
+                            <h5 class="mycolor">{{ i.grouper|choice_tag:'status_order' }}</h5>
+
                                     {% for b in i.list %}
-                                        <li><a href="../list_order/{{b.pk}}" id="order_{{ b.pk }}" class ='h5'>{{ b.pk }}: {{ b.text_order }}: {{ b.customer_id.customer_name }}</a></li>
-                                    {% endfor %}
-                                    </ul>
-                                </li>
+                                        <div class="mb-2 border-bottom">
+                                        <a href="../list_order/{{b.pk}}" id="order_{{ b.pk }}" class ='text-secondary'>
+                                            Order № {{ b.pk }} | {{ b.time_in }} | {{ b.customer_id.customer_name }}</a><br>
+                                            <div class="ml-2">{{ b.text_order }} </div>
+
+                                        </div>
+                                        {% endfor %}
+
                             {% endfor %}
-                        </ul>
+
 
                     <h3>Clients feedbacks:</h3>
                       {% for i in feedbacks %}

@@ -75,16 +75,12 @@
                                 <div class="col-12 text-center">
                                     <h4 id="name" class="mycolor font-weight-bold"></h4>
                                     <img id="foto1" class="rounded-circle" align="" width="100">
-                            <div class="h5" id="profile">
-
-                            </div>
-
+                                    <div class="row center" hidden id="profile"></div>
                                 </div>
-
-                                    <a href="tel:" title="Phone"  id="customer_phone" class="fas fa-phone prefix text-secondary mt-3" aria-hidden="true">
-                                    </a><br>
-                                    <a href="https://t.me/" title="Telegram" id="customer_telegram" class ="fas fa fa-paper-plane text-secondary mt-3" aria-hidden="true">
-                                    </a>
+                            </div>
+                            <div class="row mb-3 border-bottom">
+                                <div class="col-6 text-center"><a href="tel:" title="Phone"  id="customer_phone" class="fas fa-phone prefix text-secondary mt-3" aria-hidden="true"></a></div>
+                                <div class="col-6 text-center"><a href="https://t.me/" title="Telegram" id="customer_telegram" class ="fas fa fa-paper-plane text-secondary mt-3" aria-hidden="true"></a></div>
                             </div>
 
 
@@ -97,7 +93,7 @@
       <input type="hidden" name="customer_id" id="customer_id" value="">
 
 
-                            <div class="row" id="apart">Apartments:
+                            <div class="row mb-2 mt-2" id="apart">Apartments:
                             </div>
     <button type="submit" name="submit" class="btn btn-sm btn-orange cta-btn btn-form mt-3 mb-5 ">Send</button>
 
@@ -105,7 +101,7 @@
 
 
 
-                            <div class="row" id="order1">Client requests:
+                            <div class="row mb-2 mt-2" id="order1">Client requests:
                             </div>
                     </div>
                 </div>
@@ -152,7 +148,7 @@ $(document).on('click', '#link', function (e) {
                 order_.attr('new', 'new');
                 order_.attr('class', 'prefix text-secondary mb-2');
                 let date_order=element.time_in.substr(0, 10).split("-").reverse().join(".");
-                order_.html('<a href=../list_order/' + element.pk + ' class="prefix text-secondary mb-2">' + date_order + ' | ' + element.text_order + '</a>');
+                order_.html('<div class="mb-2 mb-3 border-bottom"><a href=../list_order/' + element.pk + ' class="prefix text-secondary ">' + date_order + ' | ' + element.text_order + '</a></div>');
                 $('#order1').after(order_);
             })
 
@@ -161,7 +157,7 @@ $(document).on('click', '#link', function (e) {
                 ap_.attr('id', 'ap_');
                 ap_.attr('ap', 'ap');
                 ap_.attr('class', 'prefix text-secondary mb-2');
-                ap_.html(element.address_street_app + ' '+element.address_num +', '+ element.address_city + '<input type="hidden" name="form-'+index+'-apartment_id" id="id_form-'+index+'-apartment_id" value='+ element.pk +'> | <a class="mycolor" href="#" onclick=show_input_form(document.getElementById("id_form-'+index+'-text_order"))>add job</a><br><input hidden type="text" id="id_form-'+index+'-text_order" name="form-'+index+'-text_order" placeholder="Input your job">');
+                ap_.html('<div class="row mb-3 border-bottom"><div class="col-9">'+element.address_street_app + ' '+element.address_num +', '+ element.address_city + '<input type="hidden" name="form-'+index+'-apartment_id" id="id_form-'+index+'-apartment_id" value='+ element.pk +'> <br><input hidden type="text" id="id_form-'+index+'-text_order" name="form-'+index+'-text_order" placeholder="Input your job"> </div> <div class="col-3"><a class="mycolor" href="#" onclick=show_input_form(document.getElementById("id_form-'+index+'-text_order"))>add job</a></div></div>');
                 $('#apart').after(ap_);
             })
 
