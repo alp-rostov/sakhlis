@@ -181,10 +181,6 @@ class OrderCreatebyRepaier(BaseClassExeption, CreateView):
 
 
 
-
-
-
-
 class OrderManagementSystem(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, ListView):
     """ list of all orders """
     model = OrderList
@@ -194,11 +190,9 @@ class OrderManagementSystem(BaseClassExeption, PermissionRequiredMixin, LoginReq
     ordering = ['-time_in']
 
     def get_queryset(self):
-            # self.queryset = DataFromOrderList() \
-            #     .get_data_from_OrderList_all(repairer=self.request.user)
         queryset = super().get_queryset().filter(repairer_id=self.request.user).select_related('customer_id', 'apartment_id').all()
         self.filterset = OrderFilter(self.request.GET, queryset)
-        return self.filterset.qs[0:1000] #TODO need paginator
+        return self.filterset.qs[0:14] #TODO need paginator
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -453,12 +447,16 @@ def client_details_json(request, **kwargs):
 def listorder_for_order_list_paginator_json(request, **kwargs):
     """for ajax request """
     data = OrderList.objects.filter(pk__lt=request.GET.get('last_pk'), repairer_id=request.user) \
+               .select_related('apartment_id', 'customer_id') \
                .order_by('-pk') \
-               .values('pk', 'time_in', 'text_order', 'customer_name',
-                       'customer_phone', 'customer_telegram',
-                       'address_city', 'address_street_app',
-                       'address_num', 'location_longitude', 'location_latitude')[0:14]
+               .values('pk', 'time_in', 'text_order', 'customer_id__customer_name',
+                       'customer_id__phone', 'customer_id__telegram',
+                       'apartment_id__address_city', 'apartment_id__address_street_app',
+                       'apartment_id__address_num', 'apartment_id__location_longitude',
+                       'apartment_id__location_latitude')[0:14]
+
     json_data = json.dumps(list(data), default=str)
+    print(json_data)
     return JsonResponse(json_data, safe=False)
 
 

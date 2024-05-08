@@ -84,28 +84,28 @@ function add_order_in_html_object(r) {
     g.find("#text_order_").html(r.text_order);
     g.find("#text_order_").attr("id", "text_order_"+r.pk);
 
-    g.find("#customer_name_").html(" "+r.customer_name);
+    g.find("#customer_name_").html(" "+r.customer_id__customer_name);
     g.find("#customer_name_").attr("id", "customer_name_"+r.pk);
 
-    g.find("#customer_phone_").attr("href", "tel:"+r.customer_phone);
-    g.find("#customer_phone_").html(" "+ r.customer_phone);
+    g.find("#customer_phone_").attr("href", "tel:"+r.customer_id__phone);
+    g.find("#customer_phone_").html(" "+ r.customer_id__phone);
     g.find("#customer_phone_").attr("id", "customer_phone_"+r.pk);
 
-    g.find("#customer_telegram_").attr("href", "https://t.me/"+r.customer_telegram);
-    g.find("#customer_telegram_").html(" @"+r.customer_telegram);
+    g.find("#customer_telegram_").attr("href", "https://t.me/"+r.customer_id__telegram);
+    g.find("#customer_telegram_").html(" @"+r.customer_id__telegram);
     g.find("#customer_telegram_").attr("id", "customer_telegram_"+r.pk);
 
     g.find("#city_").html('Тбилиси');
     g.find("#city_").attr("id", "city_"+r.pk);
 
-    g.find("#street_app_").html(r.address_street_app);
+    g.find("#street_app_").html(r.apartment_id__address_street_app);
     g.find("#street_app_").attr("id", "street_app_"+r.pk);
 
-    g.find("#num_").html(r.address_num);
+    g.find("#num_").html(r.apartment_id__address_num);
     g.find("#num_").attr("id", "num_"+r.pk);
 
     if (r.location_longitude) {
-        g.find("#map_").attr("href", 'https://yandex.ru/maps/?pt='+r.location_longitude+','+r.location_latitude+'&z=18&l=map');
+        g.find("#map_").attr("href", 'https://yandex.ru/maps/?pt='+r.apartment_id__location_longitude+','+r.apartment_id__location_latitude+'&z=18&l=map');
         g.find("#map_").attr("id", "map_"+r.pk);
         g.find("#map_icon").attr("class", "fas fa-map-marker prefix text-secondary mt-3");
     }

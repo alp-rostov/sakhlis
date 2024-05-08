@@ -33,7 +33,7 @@
                             <h5 class="mycolor">{{ i.grouper|choice_tag:'status_order' }}</h5>
 
                                     {% for b in i.list %}
-                                        <div class="mb-2 border-bottom">
+                                        <div class="mb-3 border-bottom">
                                         <a href="../list_order/{{b.pk}}" id="order_{{ b.pk }}" class ='text-secondary'>
                                             Order № {{ b.pk }} | {{ b.time_in }} | {{ b.customer_id.customer_name }}</a><br>
                                             <div class="ml-2">{{ b.text_order }} </div>
@@ -44,12 +44,12 @@
                             {% endfor %}
 
 
-                    <h3>Clients feedbacks:</h3>
-                      {% for i in feedbacks %}
-                      <img src="../media/{{i.foto|default:'images/none.jpg'}}" width="60" class="rounded-circle">
-                    
-                        <hr>
-                      {% endfor %}
+<!--                    <h3>Clients feedbacks:</h3>-->
+<!--                      {% for i in feedbacks %}-->
+<!--                      <img src="../media/{{i.foto|default:'images/none.jpg'}}" width="60" class="rounded-circle">-->
+<!--                    -->
+<!--                        <hr>-->
+<!--                      {% endfor %}-->
 
 
                 </div>
