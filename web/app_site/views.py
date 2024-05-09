@@ -192,7 +192,7 @@ class OrderManagementSystem(BaseClassExeption, PermissionRequiredMixin, LoginReq
     def get_queryset(self):
         queryset = super().get_queryset().filter(repairer_id=self.request.user).select_related('customer_id', 'apartment_id').all()
         self.filterset = OrderFilter(self.request.GET, queryset)
-        return self.filterset.qs[0:14] #TODO need paginator
+        return self.filterset.qs
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -200,9 +200,9 @@ class OrderManagementSystem(BaseClassExeption, PermissionRequiredMixin, LoginReq
         # context['form_customer'] = CustomerForm
         # context['form_appart'] = ApartmentForm
         context['filterset'] = self.filterset
-        # c = DataFromInvoice().get_total_cost_of_some_orders(list_of_orders=self.get_queryset())
-        # context['summ_orders'] = c.get('Summ')
-        # context['count_orders'] = self.get_queryset().count()
+        c = DataFromInvoice().get_total_cost_of_some_orders(list_of_orders=self.get_queryset())
+        context['summ_orders'] = c.get('Summ')
+        context['count_orders'] = self.get_queryset().count()
         return context
 
 
