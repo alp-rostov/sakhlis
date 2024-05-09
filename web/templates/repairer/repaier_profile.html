@@ -33,10 +33,10 @@
                             <h5 class="mycolor">{{ i.grouper|choice_tag:'status_order' }}</h5>
 
                                     {% for b in i.list %}
-                                        <div class="mb-3 border-bottom">
+                                        <div class="mb-3 p-2 border border-5 rounded">
                                         <a href="../list_order/{{b.pk}}" id="order_{{ b.pk }}" class ='text-secondary'>
-                                            Order № {{ b.pk }} | {{ b.time_in }} | {{ b.customer_id.customer_name }}</a><br>
-                                            <div class="ml-2">{{ b.text_order }} </div>
+                                            Order № {{ b.pk }}</a> | {{ b.time_in }} |<a href="{{ b.customer_id.pk }}" id="link" class="text-secondary" data-toggle="modal" data-target="#exampleModal">  {{ b.customer_id.customer_name }}</a><br>
+                                            <div class="mt-2">{{ b.text_order }} </div>
 
                                         </div>
                                         {% endfor %}
@@ -55,5 +55,157 @@
                 </div>
 </div>
        </div>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Modal Window -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body  mx-3">
+                    <div id="contact" class="form-container">
+                        <fieldset>
+                            <div id="message">
+    				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                            </div>
+                        </fieldset>
+                            <div class="row">
+                                <div class="col-12 text-center">
+                                    <h4 id="name" class="mycolor font-weight-bold"></h4>
+                                    <img id="foto1" class="rounded-circle" align="" width="100">
+                                    <div class="row center" hidden id="profile"></div>
+                                </div>
+                            </div>
+                            <div class="row mb-3 border-bottom">
+                                <div class="col-6 text-center"><a href="tel:" title="Phone"  id="customer_phone" class="fas fa-phone prefix text-secondary mt-3" aria-hidden="true"></a></div>
+                                <div class="col-6 text-center"><a href="https://t.me/" title="Telegram" id="customer_telegram" class ="fas fa fa-paper-plane text-secondary mt-3" aria-hidden="true"></a></div>
+                            </div>
+
+
+<form method="post" action="" name="form" id="form">{% csrf_token %}
+
+  <div><input type="hidden" name="form-TOTAL_FORMS" id="id_form-TOTAL_FORMS" value="20">
+      <input type="hidden" name="form-INITIAL_FORMS" id="id_form-INITIAL_FORMS" value="0">
+      <input type="hidden" name="form-MIN_NUM_FORMS" id="id_form-MIN_NUM_FORMS">
+      <input type="hidden" name="form-MAX_NUM_FORMS" id="id_form-MAX_NUM_FORMS"></div>
+      <input type="hidden" name="customer_id" id="customer_id" value="">
+
+
+                            <div class="row mb-2 mt-2" id="apart">Apartments:
+                            </div>
+    <button type="submit" name="submit" class="btn btn-sm btn-orange cta-btn btn-form mt-3 mb-5 ">Send</button>
+
+      </form>
+
+
+
+                            <div class="row mb-2 mt-2" id="order1">Client requests:
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- And Modal Window -->
+
+
+<script>
+$(document).on('click', '#link', function (e) {
+    e.preventDefault();
+
+         $.ajax({
+            url: "../client?pk="+$(this).attr("href") ,
+            type: "GET",
+            dataType: 'json',
+
+            success: function(resp){
+            document.getElementById("name").innerHTML =resp.name;
+            document.getElementById("customer_phone").innerHTML =' '+resp.phone;
+            document.getElementById("customer_telegram").innerHTML = ' '+resp.telegram;
+            document.getElementById("profile").innerHTML = resp.profile;
+            document.getElementById("foto1").src ='../media/'+resp.foto;
+            document.getElementById("customer_id").value =resp.pk;
+
+            b=JSON.parse(resp.orders);
+            c=JSON.parse(resp.apartment);
+
+
+            let f=$('div[new="new"]');
+                    for (i = 0; i < f.length; i++) {
+                        f[i].remove();
+                    }
+
+            let a=$('div[ap="ap"]');
+                    for (i = 0; i < a.length; i++) {
+                        a[i].remove();
+                    }
+
+            b.forEach((element, index ) =>  {
+            let order_ = $("#order1").clone();
+                order_.attr('id', 'order_'+element.pk);
+                order_.attr('new', 'new');
+                order_.attr('class', 'prefix text-secondary mb-2');
+                let date_order=element.time_in.substr(0, 10).split("-").reverse().join(".");
+                order_.html('<div class="mb-2 mb-3 border-bottom"><a href=../list_order/' + element.pk + ' class="prefix text-secondary ">' + date_order + ' | ' + element.text_order + '</a></div>');
+                $('#order1').after(order_);
+            })
+
+            c.forEach((element, index ) =>  {
+            let ap_ = $("#apart").clone();
+                ap_.attr('id', 'ap_');
+                ap_.attr('ap', 'ap');
+                ap_.attr('class', 'prefix text-secondary mb-2');
+                ap_.html('<div class="row mb-3 border-bottom"><div class="col-9">'+element.address_street_app + ' '+element.address_num +', '+ element.address_city + '<input type="hidden" name="form-'+index+'-apartment_id" id="id_form-'+index+'-apartment_id" value='+ element.pk +'> <br><input hidden type="text" id="id_form-'+index+'-text_order" name="form-'+index+'-text_order" placeholder="Input your job"> </div> <div class="col-3"><a class="mycolor" href="#" onclick=show_input_form(document.getElementById("id_form-'+index+'-text_order"))>add job</a></div></div>');
+                $('#apart').after(ap_);
+            })
+
+         }
+    });
+
+
+
+
+
+})
+
+
+$(document.body).ready(function() {
+
+    $('#form').submit(function(e) {
+        e.preventDefault();
+
+
+            $.ajax({
+                url: '../save_list',
+                type: 'POST',
+                data: $(this).serialize(),
+                dataType: 'text',
+                beforeSend: function () {$("#form").html('<h3>Sending...</h3>');},
+                success: function (resp) {window.location.href = '/list_order?work_status=SND'},
+            });
+
+    });
+});
+</script>
+
+<script>
+
+function show_input_form(input) {
+if (input.hidden == false)  {input.hidden = true;}
+
+else {input.hidden = false;}
+
+}
+</script>
 
 {% endblock body %}

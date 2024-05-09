@@ -175,7 +175,7 @@ $(document.body).on( "click", "#paginator_next", function(e) {
                 $('#head').append('<div class="row"><div class="col-md-12"><hr></div></div>');
             }
             if (type.length==14) {
-                $('#paginator_next').attr('href', '../listorderjson?last_pk='+type[13].pk+'&work_status=end');
+                $('#paginator_next').attr('href', '../listorderjson?last_pk='+type[13].pk+'&time_in_sence=___&time_in_until=____&order_status='+);
                 }
             else {
                 $('#paginator_next').remove();

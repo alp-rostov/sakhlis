@@ -454,7 +454,7 @@ def listorder_for_order_list_paginator_json(request, **kwargs):
     #                    'apartment_id__address_city', 'apartment_id__address_street_app',
     #                    'apartment_id__address_num', 'apartment_id__location_longitude',
     #                    'apartment_id__location_latitude')[0:14]
-
+    print(request.GET)
     data = OrderList.objects.filter(pk__lt=request.GET.get('last_pk'), repairer_id=request.user) \
                .select_related('apartment_id', 'customer_id') \
                .order_by('-pk')
