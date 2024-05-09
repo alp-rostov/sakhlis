@@ -196,13 +196,13 @@ class OrderManagementSystem(BaseClassExeption, PermissionRequiredMixin, LoginReq
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['form_order'] = OrderForm
-        context['form_customer'] = CustomerForm
-        context['form_appart'] = ApartmentForm
+        # context['form_order'] = OrderForm
+        # context['form_customer'] = CustomerForm
+        # context['form_appart'] = ApartmentForm
         context['filterset'] = self.filterset
-        c = DataFromInvoice().get_total_cost_of_some_orders(list_of_orders=self.get_queryset())
-        context['summ_orders'] = c.get('Summ')
-        context['count_orders'] = self.get_queryset().count()
+        # c = DataFromInvoice().get_total_cost_of_some_orders(list_of_orders=self.get_queryset())
+        # context['summ_orders'] = c.get('Summ')
+        # context['count_orders'] = self.get_queryset().count()
         return context
 
 
@@ -446,17 +446,26 @@ def client_details_json(request, **kwargs):
 @login_required
 def listorder_for_order_list_paginator_json(request, **kwargs):
     """for ajax request """
+    # data = OrderList.objects.filter(pk__lt=request.GET.get('last_pk'), repairer_id=request.user) \
+    #            .select_related('apartment_id', 'customer_id') \
+    #            .order_by('-pk') \
+    #            .values('pk', 'time_in', 'text_order', 'customer_id__customer_name',
+    #                    'customer_id__phone', 'customer_id__telegram',
+    #                    'apartment_id__address_city', 'apartment_id__address_street_app',
+    #                    'apartment_id__address_num', 'apartment_id__location_longitude',
+    #                    'apartment_id__location_latitude')[0:14]
+
     data = OrderList.objects.filter(pk__lt=request.GET.get('last_pk'), repairer_id=request.user) \
                .select_related('apartment_id', 'customer_id') \
-               .order_by('-pk') \
-               .values('pk', 'time_in', 'text_order', 'customer_id__customer_name',
+               .order_by('-pk')
+
+    filterset = OrderFilter(request.GET, data).qs.values('pk', 'time_in', 'text_order', 'customer_id__customer_name',
                        'customer_id__phone', 'customer_id__telegram',
                        'apartment_id__address_city', 'apartment_id__address_street_app',
                        'apartment_id__address_num', 'apartment_id__location_longitude',
                        'apartment_id__location_latitude')[0:14]
 
-    json_data = json.dumps(list(data), default=str)
-    print(json_data)
+    json_data = json.dumps(list(filterset), default=str)
     return JsonResponse(json_data, safe=False)
 
 
