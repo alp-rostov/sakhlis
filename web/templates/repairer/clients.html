@@ -183,14 +183,11 @@ $(document.body).ready(function() {
                 data: $(this).serialize(),
                 dataType: 'text',
                 beforeSend: function () {$("#form").html('<h3>Sending...</h3>');},
-                success: function (resp) {window.location.href = '/list_order?work_status=SND'},
+                success: function (resp) {window.location.href = '/list_order?order_status=SND'},
             });
 
     });
 });
-</script>
-
-<script>
 
 function show_input_form(input) {
 if (input.hidden == false)  {input.hidden = true;}

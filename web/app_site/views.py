@@ -79,10 +79,11 @@ class RepairerDetailInformation(BaseClassExeption, PermissionRequiredMixin, Logi
         return context
 
 
-class Clients(ListView):
+class Clients(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, ListView):
     model = UserProfile
     context_object_name = 'clients'
     template_name = 'repairer/clients.html'
+    permission_required = PERMISSION_FOR_REPAIER
     queryset = UserProfile.objects.none()
 
     def get_context_data(self, **kwargs):
@@ -98,16 +99,6 @@ class Clients(ListView):
         self.filterset = ClientFilter(self.request.GET, queryset)
 
         return self.filterset.qs
-
-
-
-
-
-
-
-
-
-
 
 
 class OwnerDetailInformation(PermissionRequiredMixin, LoginRequiredMixin, DetailView):
@@ -472,7 +463,6 @@ def listorder_for_order_list_paginator_json(request, **kwargs):
 @login_required
 def save_list_jobs(request, **kwargs):
     """for ajax request """
-    print(request.POST)
     FormSet_ = modelformset_factory(OrderList, fields=('text_order','apartment_id', 'customer_id'))
 
     formset = FormSet_(request.POST).save(commit=False)

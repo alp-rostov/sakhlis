@@ -15,7 +15,7 @@
 
                 </div>
                 <div class="col-md-4 ">
-                    <span id="customer_name_{{ i.pk }}" class="fas fa-user prefix text-secondary" aria-hidden="true"> {{ i.customer_id.customer_name|capfirst }}</span><br>
+                    <span id="customer_name_{{ i.pk }}" class="" aria-hidden="true">  <a href="{{  i.customer_id.pk  }}" id="link" class="text-secondary h5" data-toggle="modal" data-target="#exampleModal"> {{ i.customer_id.customer_name|capfirst }}</a></span><br>
 
                     <a href="tel:{{ i.customer_id.phone }}" title="Phone" id="customer_phone_{{ i.pk }}" class="fas fa-phone prefix text-secondary mt-2" aria-hidden="true">
                         {{ i.customer_id.phone }}</a><br>
