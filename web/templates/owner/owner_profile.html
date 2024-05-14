@@ -79,14 +79,10 @@
 
 <!--                </div>-->
 
-
-                <div class="col-12">
+<div class="col-12">
 
 <div class="container">
   <div class="tab">
-<!--        <input checked id="tab-btn-1" name="tab-btn" type="radio" value="">-->
-<!--    <label for="tab-btn-1">Вкладка 1</label>-->
-<!--      -->
 {% for b in apartments %}
     {% if apartments.0 == b %}
         <input checked id="tab-btn-{{ b.pk }}" name="tab-btn" type="radio" value="">
@@ -108,17 +104,28 @@
 <!--    <label for="tab-btn-3">Вкладка 3</label>-->
 
 
-        {% for b in apartments1 %}
+{% for b in apartments1 %}
 
     <div class="tab-content" id="content-{{ b.0.pk }}">
-        {{ b.0.pk }}
-        <br>_______________________________<br>
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <h4>{{ b.0.name|default_if_none:'' }}</h4>
+                <h5 class="mt-0 p-0">{{ b.0.address_street_app }} {{ b.0.address_num }}, {{ b.0.address_city|choice_tag:'city' }}</h5>
+                <p class="text-secondary ">{{ b.0.notes|default_if_none:'' }} / {{  b.0.pk }}</p>
+                <img src="../media/{{ b.0.foto|default_if_none:'images/none.jpg' }} " alt="" class="" width="200"><br>
+            </div>
 
-        {% for i in b.1 %}
-            {{ i.pk }} / {{ i.text_order }}<br>
-        {% endfor %}
-            <hr>
+            <div class="col-lg-8 col-md-8 col-sm-12">
+                {% for b in b.1 %}
+                    <div class="mt-1 mb-2 p-2 border border-5 rounded">
+                        <a href="../list_order/{{b.pk}}" id="order_{{ b.pk }}" class ='text-secondary'>
+                        Order № {{ b.pk }}</a> | {{ b.time_in }} |<a href="{{ b.customer_id.pk }}" id="link" class="text-secondary" data-toggle="modal" data-target="#exampleModal">  {{ b.repairer_id }}</a><br>
+                        <div class="mt-2">{{ b.text_order }} </div>
+                    </div>
 
+                {% endfor %}
+            </div>
+        </div>
     </div>
       {% endfor %}
 
@@ -132,7 +139,6 @@
 <!--    </div>-->
 <!--  </div>-->
 </div>
-
                 </div>
 
 
