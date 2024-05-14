@@ -108,15 +108,19 @@
 <!--    <label for="tab-btn-3">Вкладка 3</label>-->
 
 
-        {% for b in apartments %}
+        {% for b in apartments1 %}
 
-    <div class="tab-content" id="content-{{ b.pk }}">
-        {{ b.pk }}
-        {% if order.6.apartment_id == b %}
-        {{ order }}
-        {% endif %}
+    <div class="tab-content" id="content-{{ b.0.pk }}">
+        {{ b.0.pk }}
+        <br>_______________________________<br>
+
+        {% for i in b.1 %}
+            {{ i.pk }} / {{ i.text_order }}<br>
+        {% endfor %}
+            <hr>
+
     </div>
-                    {% endfor %}
+      {% endfor %}
 
 
 <!--      -->
