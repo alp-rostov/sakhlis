@@ -84,12 +84,18 @@
 
 <div class="container">
   <div class="tab">
-                        {% for b in apartments %}
-   <input id="tab-btn-{{ b.pk }}" name="tab-btn" type="radio" value="">
-    <label for="tab-btn-{{ b.pk }}">{{b.address_street_app}} {{b.address_num}}</label>
-
-
-                    {% endfor %}
+<!--        <input checked id="tab-btn-1" name="tab-btn" type="radio" value="">-->
+<!--    <label for="tab-btn-1">Вкладка 1</label>-->
+<!--      -->
+{% for b in apartments %}
+    {% if apartments.0 == b %}
+        <input checked id="tab-btn-{{ b.pk }}" name="tab-btn" type="radio" value="">
+        <label for="tab-btn-{{ b.pk }}">{{b.address_street_app}} {{b.address_num}}</label>
+    {% else %}
+        <input id="tab-btn-{{ b.pk }}" name="tab-btn" type="radio" value="">
+        <label for="tab-btn-{{ b.pk }}">{{b.address_street_app}} {{b.address_num}}</label>
+    {% endif %}
+{% endfor %}
 
 
 
@@ -102,10 +108,14 @@
 <!--    <label for="tab-btn-3">Вкладка 3</label>-->
 
 
-                        {% for b in apartments %}
+        {% for b in apartments %}
 
     <div class="tab-content" id="content-{{ b.pk }}">
-        {{b}}    </div>
+        {{ b.pk }}
+        {% if order.6.apartment_id == b %}
+        {{ order }}
+        {% endif %}
+    </div>
                     {% endfor %}
 
 

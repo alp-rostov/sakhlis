@@ -111,7 +111,8 @@ class OwnerDetailInformation(PermissionRequiredMixin, LoginRequiredMixin, Detail
         context = super().get_context_data(**kwargs)
         context['profile'] = DataFromRepairerList().get_object_from_RepairerList(user=self.object)
         context['apartments'] = Apartment.objects.filter(owner=context['profile'])
-        print(context['apartments'][1].orderlist_set.all())
+        context['order']=context['profile'].orderlist_set.all()
+
         return context
 
 
