@@ -68,7 +68,7 @@ class RepairerDetailInformation(BaseClassExeption, PermissionRequiredMixin, Logi
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['profile'] = DataFromRepairerList().get_object_from_RepairerList(user=self.object)
+        context['profile'] = DataFromRepairerList().get_object_from_UserProfile(user=self.object)
         context['count'] = DataFromOrderList().get_number_of_orders_from_OrderList(repairer=self.request.user)
         context['sum'] = DataFromInvoice().get_amount_money_of_orders(repairer=self.request.user)
 
@@ -109,14 +109,17 @@ class OwnerDetailInformation(PermissionRequiredMixin, LoginRequiredMixin, Detail
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['profile'] = DataFromRepairerList().get_object_from_RepairerList(user=self.object)
-        context['apartments'] = context['profile'].apartment_set.all()
+        context['profile'] = DataFromRepairerList().get_object_from_UserProfile(user=self.object)
+        context['apartments'] = context['profile'].apartment_set.select_related('owner').all()
         context['apartments1'] =[]
 
 
         for i in context['apartments']:
 
-            context['apartments1'].append((i, i.orderlist_set.all()))
+            context['apartments1'].append((i, OrderList.objects
+                                           .filter(apartment_id=i) \
+                                           .select_related( 'repairer_id') \
+                                           .values('pk', 'time_in', 'text_order', 'repairer_id__username')))
         return context
 
 
@@ -138,18 +141,22 @@ class OrderCreate(BaseClassExeption, CreateView):
         if OrderCustomerForm(self.request.POST).is_valid() and ApartmentForm(self.request.POST).is_valid():
             with transaction.atomic():
 
-                if self.request.user.is_authenticated and self.request.user.groups.first().name == 'owner':  # TODO add logic for owner
+                if self.request.user.is_authenticated and self.request.user.groups.first().name == 'owner':  # TODO add logic for owner and set a responseble person
                     pass
                 elif self.request.user.is_authenticated and self.request.user.groups.first().name == 'repairer':
                     customer = OrderCustomerForm(self.request.POST).save()
-                    app = ApartmentForm(self.request.POST).save()
+                    app = ApartmentForm(self.request.POST).save(commit=False)
+                    app.owner = customer
+                    app.save()
                     form.instance.apartment_id = app
                     form.instance.customer_id = customer
                     form.instance.repairer_id = self.request.user
                     form.instance.order_status = 'SND'
                 else:
                     customer = OrderCustomerForm(self.request.POST).save()
-                    app = ApartmentForm(self.request.POST).save()
+                    app = ApartmentForm(self.request.POST).save(commit=False)
+                    app.owner = customer
+                    app.save()
                     form.instance.apartment_id = app
                     form.instance.customer_id = customer
                     form.instance.order_status = 'BEG'
@@ -159,7 +166,11 @@ class OrderCreate(BaseClassExeption, CreateView):
                                      'pk': form.instance.pk,
                                      'auth': self.request.user.is_authenticated
                                      })
-
+        else:
+            return JsonResponse({'message': f'<h3>Ошибка, форма не валидна</h3>',
+                                 'pk': form.instance.pk,
+                                 'auth': self.request.user.is_authenticated
+                                 })
 
 
 class OrderCreatebyRepaier(BaseClassExeption, CreateView):
@@ -175,6 +186,17 @@ class OrderCreatebyRepaier(BaseClassExeption, CreateView):
 
 
 
+
+class OwnerInvoice(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, DetailView):
+    """ list of all orders """
+    model = OrderList
+    context_object_name = 'info'
+    template_name = 'owner/owner_invoice.html'
+    permission_required = PERMISSION_FOR_OWNER
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data()
+        context['invoice'] = DataFromInvoice().get_data_from_Invoice_with_amount(order_id_=self.object.pk)
+        return context
 
 
 class OrderManagementSystem(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, ListView):
@@ -439,8 +461,8 @@ def client_details_json(request, **kwargs):
     else: return JsonResponse({'pk': 'None',})
 
 
-@login_required
-def listorder_for_order_list_paginator_json(request, **kwargs):
+# @login_required
+# def listorder_for_order_list_paginator_json(request, **kwargs):
     """for ajax request """
     # data = OrderList.objects.filter(pk__lt=request.GET.get('last_pk'), repairer_id=request.user) \
     #            .select_related('apartment_id', 'customer_id') \
@@ -450,19 +472,19 @@ def listorder_for_order_list_paginator_json(request, **kwargs):
     #                    'apartment_id__address_city', 'apartment_id__address_street_app',
     #                    'apartment_id__address_num', 'apartment_id__location_longitude',
     #                    'apartment_id__location_latitude')[0:14]
-    print(request.GET)
-    data = OrderList.objects.filter(pk__lt=request.GET.get('last_pk'), repairer_id=request.user) \
-               .select_related('apartment_id', 'customer_id') \
-               .order_by('-pk')
-
-    filterset = OrderFilter(request.GET, data).qs.values('pk', 'time_in', 'text_order', 'customer_id__customer_name',
-                       'customer_id__phone', 'customer_id__telegram',
-                       'apartment_id__address_city', 'apartment_id__address_street_app',
-                       'apartment_id__address_num', 'apartment_id__location_longitude',
-                       'apartment_id__location_latitude')[0:14]
-
-    json_data = json.dumps(list(filterset), default=str)
-    return JsonResponse(json_data, safe=False)
+    # print(request.GET)
+    # data = OrderList.objects.filter(pk__lt=request.GET.get('last_pk'), repairer_id=request.user) \
+    #            .select_related('apartment_id', 'customer_id') \
+    #            .order_by('-pk')
+    #
+    # filterset = OrderFilter(request.GET, data).qs.values('pk', 'time_in', 'text_order', 'customer_id__customer_name',
+    #                    'customer_id__phone', 'customer_id__telegram',
+    #                    'apartment_id__address_city', 'apartment_id__address_street_app',
+    #                    'apartment_id__address_num', 'apartment_id__location_longitude',
+    #                    'apartment_id__location_latitude')[0:14]
+    #
+    # json_data = json.dumps(list(filterset), default=str)
+    # return JsonResponse(json_data, safe=False)
 
 
 @login_required

@@ -47,10 +47,12 @@ class UserProfile(models.Model):
     """phone city foto rating_sum rating_num user"""
     customer_name = models.CharField(max_length=50, verbose_name='Name', null=True, blank=True,)
 
-    phone = models.CharField(validators=[phoneNumberRegex], max_length=16, verbose_name='Phone',
+    phone = models.CharField(max_length=16, verbose_name='Phone',
                              null=True, blank=True,)
     telegram = models.CharField(max_length=25, verbose_name='Telegram',
                              null=True, blank=True, )
+    # whatsapp = models.CharField(max_length=16, verbose_name='Whatsapp',
+    #                          null=True, blank=True, )
 
     city = models.CharField(max_length=2, choices=CITY_CHOICES, default='TB')
     profile = models.CharField(max_length=1500, null=True, blank=True, verbose_name='About me:', default='')

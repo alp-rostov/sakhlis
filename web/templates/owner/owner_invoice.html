@@ -1,0 +1,166 @@
+{% extends 'flatpages/default_user.html' %}
+{% load custom_filters %}
+{% load custom_tags %}
+{% load slippers %}
+{% load static %}
+
+
+{% block body %}
+
+<style>
+    .hidden{
+    display:none
+    }
+
+</style>
+
+<div class="container">
+
+    <div class="row" >
+        <div class="col-md-4 mt-3" >
+            <h4 class="mycolor"><b>Order № {{ info.id }}</b></h4>
+            {{ info.time_in }}<br>
+                <a href="pdf/{{ info.id }}" class="btn btn-sm btn-orange">Invoice - PDF</a>
+        </div>
+
+        <div class="col-md-4 text-secondary mt-3" >
+            <h4><b>Job`s status</b></h4>
+            {% if info.order_status == 'SND' %}
+                {% #work_status check_1="fas fa-check-circle about-text" check_font_1=" black-text" %}
+                {% /work_status %}
+
+            {% elif info.order_status == 'RCV' %}
+                {% #work_status check_1="fas fa-check-circle text-secondary" check_2="fas fa-check-circle about-text" check_font_2="black-text" %}
+                {% /work_status %}
+
+            {% elif info.order_status == 'END' %}
+                {% #work_status check_1="fas fa-check-circle text-secondary" check_2="fas fa-check-circle text-secondary" check_3="fas fa-check-circle about-text" check_font_3=" black-text"   %}
+                {% /work_status %}
+            {% endif %}
+        </div>
+
+        <div class="col-md-4 text-secondary mt-3" >
+            <h4><b>Repairer</b></h4>
+            <h5>{{ info.repairer_id }}</h5>
+                <a href="pdf/{{ info.id }}" class="btn btn-sm btn-orange">Send feedback</a>
+
+        </div>
+
+
+   <div class="col-md-12">
+            <hr>
+   </div>
+
+
+</div>
+
+<div>
+
+    <div class="row">
+        <div class="col-md-4 text-secondary">
+            <i class="fas fa-home prefix text-secondary mb-2"> </i> {{ info.apartment_id.address_city|choice_tag:'city' }}, {{ info.apartment_id.address_street_app }}, {{ info.apartment_id.address_num }}<br>
+            <i class="fas fa-phone prefix text-secondary mb-2"></i> {{ info.customer_id.phone }}<br>
+            <i class="fas fa-paper-plane prefix text-secondary mb-2"></i> @{{ info.customer_id.telegram }}
+        </div>
+
+       <div class="col-md-4 ">
+           {{ info.text_order }}
+       </div>
+
+        <div class="col-md-4" >
+
+        </div>
+    </div>
+
+ </div>
+
+{% if info.order_status == 'SND' %}
+    <table id="table_invoice" class="hidden">
+{% else %}
+    <table id="table_invoice" class="table" >
+{% endif %}
+<thead>
+<tr  class="table-warning">
+    <th>Name of service </th>
+    <th>Quantity </th>
+    <th>Price</th>
+    <th >Sum</th>
+    <th > </th>
+</tr>
+</thead>
+
+<tbody>
+{% for g in invoice %}
+    <tr class="form_text">
+            <td name="service_id">{{ g.service_id }}</td>
+            <td name="quantity">{{ g.quantity }} </td>
+            <td name="price">{{ g.price }}</td>
+            <td name="amount">{{ g.amount }}</td>
+            <td name="delete"><a href="{% url 'delete-item-of-order' g.pk %}" class="link-delete" ><i class="fas fa-trash text-secondary"></i></a></td>
+    </tr>
+{% endfor %}
+</tbody>
+<tr class="table-warning" id="total_">
+    <th>
+    </th>
+
+    <th class="h5-responsive" >
+    </th>
+
+    <th class="h5-responsive ">
+        Total:
+    </th>
+
+    <th class="h5-responsive" id="total">
+    </th>
+
+    <th>
+    </th>
+</tr>
+<script>
+    function sum_total() {
+        let sum_total=0;
+        $('td[name="amount"]').each(function(){sum_total += parseInt($(this).html());});
+        $('#total').html(sum_total);
+    }
+    sum_total();
+</script>
+
+</table>
+
+<!--{% if info.order_status == 'SND' %}-->
+<!--<form action="" method="post" id="id_form" class="hidden">-->
+<!--{% else %}-->
+<!--<form action="" method="post" id="id_form" >-->
+<!--{% endif %}-->
+
+<!--    {% csrf_token %}-->
+<!--    <div id="form-list">-->
+<!--        <div id="empty-form" class="hidden">-->
+<!--            <a href="#" onclick="show_type_work(this)" class="btn btn-sm">open</a>-->
+<!--            <span class="type_work">-->
+<!--            {% for u in type_work %}-->
+<!--                <a href="../serv?type_work={{ u.0 }}" class="type_work btn btn-sm">{{ u.1 }}</a>-->
+<!--            {% endfor %}-->
+<!--            </span>-->
+<!--            <br> {{ form.empty_form }}-->
+
+<!--            <button type="button" class="delete-empty-form">Delete</button>-->
+<!--        </div>-->
+<!--        {{ form.management_form }}-->
+<!--    </div>-->
+<!--    <div id="error"></div>-->
+<!--    <div align="center">-->
+<!--        <button id="add-more" type="button" class="btn btn-md btn-orange">add-more</button>-->
+<!--        <button type="submit" class="btn btn-md btn-orange"> Save </button><br>-->
+<!--    </div>-->
+
+<!--</form>-->
+
+{% endblock body %}
+
+
+
+{% block js %}
+    <script src="{% static 'js/invoice.js' %}"></script>
+{% endblock js %}

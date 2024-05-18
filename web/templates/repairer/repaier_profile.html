@@ -34,9 +34,36 @@
 
                                     {% for b in i.list %}
                                         <div class="mb-3 p-2 border border-5 rounded">
+
+                                        <a id="toggleLinkmydiv{{ b.pk }}" href="javascript:void(0)" onclick="viewdiv('mydiv{{ b.pk }}')" data-text-hide="+" data-text-show="-" class="text-secondary">+</a> |
                                         <a href="../list_order/{{b.pk}}" id="order_{{ b.pk }}" class ='text-secondary'>
+                                            
                                             Order № {{ b.pk }}</a> | {{ b.time_in }} |<a href="{{ b.customer_id.pk }}" id="link" class="text-secondary" data-toggle="modal" data-target="#exampleModal">  {{ b.customer_id.customer_name }}</a><br>
-                                            <div class="mt-2">{{ b.text_order }} </div>
+
+
+
+                        <div id="mydiv{{ b.pk }}" style="display:none;">
+
+                          <a href="tel:{{ i.customer_id.phone }}" title="Phone" id="customer_phone_{{ i.pk }}" class="fas fa-phone btn prefix text-secondary mt-2" aria-hidden="true">
+                        </a>
+
+                    <a href="https://t.me/{{ i.customer_id.telegram|cut:'@' }}" title="Telegram" id="customer_id.telegram_{{ i.pk }}"
+                       class ="fas fa fa-paper-plane btn text-secondary mt-2" aria-hidden="true">
+                         </a>
+
+                     <a href= 'fa-whatsapp' id="map_{{ i.pk }}" class="fa fab fa-whatsapp-square btn prefix text-secondary mt-2"
+                      title="Open map" aria-hidden="true" ></a>
+
+
+                   <a href= 'https://yandex.ru/maps/?pt={{ i.apartment_id.location_longitude|change_comma_to_dot }},
+                    {{ i.apartment_id.location_latitude|change_comma_to_dot }}&z=18&l=map' id="map_{{ i.pk }}" class="fas fa-map-marker btn prefix text-secondary mt-2"
+                      title="Open map" aria-hidden="true" ></a>
+                    </div>
+
+
+
+
+                          <div class="mt-2">{{ b.text_order }} </div>
 
                                         </div>
                                         {% endfor %}
@@ -208,4 +235,22 @@ else {input.hidden = false;}
 }
 </script>
 
+
+
+
+
+<script>
+    function viewdiv(id) {
+        var el = document.getElementById(id);
+        var link = document.getElementById('toggleLink'+id);
+        if (el.style.display == "block") {
+            el.style.display = "none";
+            link.innerText = link.getAttribute('data-text-hide');
+        } else {
+            el.style.display = "block";
+            link.innerText = link.getAttribute('data-text-show');
+        }
+    }
+
+</script>
 {% endblock body %}

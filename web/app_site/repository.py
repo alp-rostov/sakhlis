@@ -6,7 +6,7 @@ from app_site.models import *
 class DataFromRepairerList:
     model = UserProfile.objects
 
-    def get_object_from_RepairerList(self, user:User) -> UserProfile:
+    def get_object_from_UserProfile(self, user:User) -> UserProfile:
         return self.model.get(user=user)
 
 class DataFromUserProfile:

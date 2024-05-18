@@ -126,7 +126,7 @@ top: 0;
     {% if request.user.is_authenticated %}
         <li class="nav-item mr-4">
             <a class="nav-link" href="{% url 'logout' %}">
-             <img src="../media/images/{{ user.pk }}.jpg " class="rounded-circle" width="50">
+
                 {{ user.username }} : Log out</a>
         </li>
     {% endif %}

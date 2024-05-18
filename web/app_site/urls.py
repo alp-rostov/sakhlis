@@ -38,6 +38,8 @@ urlpatterns = [
 
 
     path('owner/<int:pk>', OwnerDetailInformation.as_view(), name='owner'),
+    path('owner-invoice/<int:pk>', OwnerInvoice.as_view(), name='ownerinvoice'),
+
     path('app', AddApartment, name=''),
 
     path('ordersearch/', OrderSearchForm.as_view(), name='search-order'),
@@ -46,7 +48,7 @@ urlpatterns = [
     path('save_list', save_list_jobs),
     path('changestatus', change_work_status),
     path('client', client_details_json),
-    path('listorderjson', listorder_for_order_list_paginator_json),
+    # path('listorderjson', listorder_for_order_list_paginator_json),
     path('set_work_status', change_work_status),
     path('street', input_street),
     # path('geo', geo_map),
