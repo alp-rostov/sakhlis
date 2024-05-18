@@ -10,140 +10,114 @@
 
 {% block body %}
 
-       <div class="container">
-            <div class="row">
-                  <div class="col-lg-6 col-md-10 col-sm-12 pt-3 text-center">
-                      <h4>{{ user.last_name }} {{ user.first_name }} | <strong class="mycolor"> {{ request.user.username }}</strong>
-                      </h4>
-                      City: {{ profile.city|choice_tag:'city' }} <a href="{% url 'update-user' profile.pk %}" class="mycolor" title="изменить данные"><i class="fas fa-pen text-secondary mt-3"> </i></a>
-                      <br>
-                      <img src="../media/{{ profile.foto|default_if_none:'images/none.jpg' }} " alt="Муж на час" class="rounded-circle" align="center" width="200">
-                      <br>
-                      Completed jobs: {{ count }}<br>
-                      Income: {{ sum }}<br>
-                      Skills: {{ profile.rating_sum}}({{ profile.rating_num}})
-                  </div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-md-10 col-sm-12 pt-3 text-center">
+            <h4>
+              {{ user.last_name }} {{ user.first_name }} | <strong class="mycolor"> {{ request.user.username }}</strong>
+            </h4>
+            City: {{ profile.city|choice_tag:'city' }}
+            <a href="{% url 'update-user' profile.pk %}" class="mycolor" title="изменить данные"><i class="fas fa-pen text-secondary mt-3"> </i></a>
+            <br>
+            <img src="../media/{{ profile.foto|default_if_none:'images/none.jpg' }} " alt="Муж на час" class="rounded-circle" align="center" width="200">
+            <br>
+            Completed jobs: {{ count }}<br>
+            Income: {{ sum }}<br>
+            Skills: {{ profile.rating_sum}}({{ profile.rating_num}})
+        </div>
 
-                <div class="col-lg-6 col-md-10 col-sm-12 pt-3">
+        <div class="col-lg-6 col-md-10 col-sm-12 pt-3">
+        {% regroup orders by order_status as order_list %}
+            {% for i in order_list %}
+            <h5 class="mycolor">
+                {{ i.grouper|choice_tag:'status_order' }}
+            </h5>
+                {% for b in i.list %}
+                <div class="mb-3 p-2 border border-5 rounded">
+                    <a id="toggleLinkmydiv{{ b.pk }}" href="javascript:void(0)" onclick="viewdiv('mydiv{{ b.pk }}')"
+                       data-text-hide="+" data-text-show="-" class="text-secondary">+</a> |
+                    <a href="../list_order/{{b.pk}}" id="order_{{ b.pk }}" class ='text-secondary'>
+                    Order № {{ b.pk }}</a> | {{ b.time_in }} |
+                    <a href="{{ b.customer_id.pk }}" id="link" class="text-secondary" data-toggle="modal" data-target="#exampleModal">  {{ b.customer_id.customer_name }}</a>
 
-                    {% regroup orders by order_status as order_list %}
-
-
-                            {% for i in order_list %}
-                            <h5 class="mycolor">{{ i.grouper|choice_tag:'status_order' }}</h5>
-
-                                    {% for b in i.list %}
-                                        <div class="mb-3 p-2 border border-5 rounded">
-
-                                        <a id="toggleLinkmydiv{{ b.pk }}" href="javascript:void(0)" onclick="viewdiv('mydiv{{ b.pk }}')" data-text-hide="+" data-text-show="-" class="text-secondary">+</a> |
-                                        <a href="../list_order/{{b.pk}}" id="order_{{ b.pk }}" class ='text-secondary'>
-                                            
-                                            Order № {{ b.pk }}</a> | {{ b.time_in }} |<a href="{{ b.customer_id.pk }}" id="link" class="text-secondary" data-toggle="modal" data-target="#exampleModal">  {{ b.customer_id.customer_name }}</a><br>
-
-
-
-                        <div id="mydiv{{ b.pk }}" style="display:none;">
-
-                          <a href="tel:{{ i.customer_id.phone }}" title="Phone" id="customer_phone_{{ i.pk }}" class="fas fa-phone btn prefix text-secondary mt-2" aria-hidden="true">
+                    <div id="mydiv{{ b.pk }}" style="display:none;">
+                        <a href="tel:+{{ b.customer_id.phone }}" title="Phone" id="customer_phone_{{ b.pk }}"
+                           class="fas fa-phone btn prefix text-secondary mt-2" aria-hidden="true">
                         </a>
-
-                    <a href="https://t.me/{{ i.customer_id.telegram|cut:'@' }}" title="Telegram" id="customer_id.telegram_{{ i.pk }}"
-                       class ="fas fa fa-paper-plane btn text-secondary mt-2" aria-hidden="true">
-                         </a>
-
-                     <a href= 'fa-whatsapp' id="map_{{ i.pk }}" class="fa fab fa-whatsapp-square btn prefix text-secondary mt-2"
-                      title="Open map" aria-hidden="true" ></a>
-
-
-                   <a href= 'https://yandex.ru/maps/?pt={{ i.apartment_id.location_longitude|change_comma_to_dot }},
-                    {{ i.apartment_id.location_latitude|change_comma_to_dot }}&z=18&l=map' id="map_{{ i.pk }}" class="fas fa-map-marker btn prefix text-secondary mt-2"
-                      title="Open map" aria-hidden="true" ></a>
+                        <a href="https://t.me/{{ b.customer_id.telegram|cut:'@' }}" title="Telegram" id="customer_id.telegram_{{ b.pk }}"
+                            class ="fas fa fa-paper-plane btn text-secondary mt-2" aria-hidden="true">
+                        </a>
+                        <a href= 'fa-whatsapp' id="watsapp_{{ i.pk }}" class="fa fab fa-whatsapp-square btn prefix text-secondary mt-2"
+                            title="Open map" aria-hidden="true" >
+                        </a>
+                        <a href= 'https://yandex.ru/maps/?pt={{ i.apartment_id.location_longitude|change_comma_to_dot }},
+                            {{ i.apartment_id.location_latitude|change_comma_to_dot }}&z=18&l=map' id="map_{{ i.pk }}"
+                           class="fas fa-map-marker btn prefix text-secondary mt-2" title="Open map" aria-hidden="true" >
+                        </a>
                     </div>
 
-
-
-
-                          <div class="mt-2">{{ b.text_order }} </div>
-
-                                        </div>
-                                        {% endfor %}
-
-                            {% endfor %}
-
-
-<!--                    <h3>Clients feedbacks:</h3>-->
-<!--                      {% for i in feedbacks %}-->
-<!--                      <img src="../media/{{i.foto|default:'images/none.jpg'}}" width="60" class="rounded-circle">-->
-<!--                    -->
-<!--                        <hr>-->
-<!--                      {% endfor %}-->
-
-
+                    <div class="mt-2">
+                        {{ b.text_order }}
+                    </div>
                 </div>
+                {% endfor %}
+            {% endfor %}
+        </div>
+    </div>
 </div>
-       </div>
 
 
-
-
-
-
-
-
-
-
-
-    <!-- Modal Window -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body  mx-3">
-                    <div id="contact" class="form-container">
-                        <fieldset>
-                            <div id="message">
-    				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">×</span>
-                            </button>
+<!-- Modal Window -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body  mx-3">
+                <div id="contact" class="form-container">
+                    <fieldset>
+                        <div id="message">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                        </div>
+                    </fieldset>
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <h4 id="name" class="mycolor font-weight-bold"></h4>
+                                <img id="foto1" class="rounded-circle" align="" width="100">
+                                <div class="row center" hidden id="profile"></div>
                             </div>
-                        </fieldset>
-                            <div class="row">
-                                <div class="col-12 text-center">
-                                    <h4 id="name" class="mycolor font-weight-bold"></h4>
-                                    <img id="foto1" class="rounded-circle" align="" width="100">
-                                    <div class="row center" hidden id="profile"></div>
-                                </div>
-                            </div>
-                            <div class="row mb-3 border-bottom">
-                                <div class="col-6 text-center"><a href="tel:" title="Phone"  id="customer_phone" class="fas fa-phone prefix text-secondary mt-3" aria-hidden="true"></a></div>
-                                <div class="col-6 text-center"><a href="https://t.me/" title="Telegram" id="customer_telegram" class ="fas fa fa-paper-plane text-secondary mt-3" aria-hidden="true"></a></div>
-                            </div>
+                        </div>
+                        <div class="row mb-3 border-bottom">
+                            <div class="col-6 text-center"><a href="tel:" title="Phone"  id="customer_phone" class="fas fa-phone prefix text-secondary mt-3" aria-hidden="true"></a></div>
+                            <div class="col-6 text-center"><a href="https://t.me/" title="Telegram" id="customer_telegram" class ="fas fa fa-paper-plane text-secondary mt-3" aria-hidden="true"></a></div>
+                        </div>
 
 
-<form method="post" action="" name="form" id="form">{% csrf_token %}
+                        <form method="post" action="" name="form" id="form">{% csrf_token %}
 
-  <div><input type="hidden" name="form-TOTAL_FORMS" id="id_form-TOTAL_FORMS" value="20">
-      <input type="hidden" name="form-INITIAL_FORMS" id="id_form-INITIAL_FORMS" value="0">
-      <input type="hidden" name="form-MIN_NUM_FORMS" id="id_form-MIN_NUM_FORMS">
-      <input type="hidden" name="form-MAX_NUM_FORMS" id="id_form-MAX_NUM_FORMS"></div>
-      <input type="hidden" name="customer_id" id="customer_id" value="">
+                        <div>
+                            <input type="hidden" name="form-TOTAL_FORMS" id="id_form-TOTAL_FORMS" value="20">
+                            <input type="hidden" name="form-INITIAL_FORMS" id="id_form-INITIAL_FORMS" value="0">
+                            <input type="hidden" name="form-MIN_NUM_FORMS" id="id_form-MIN_NUM_FORMS">
+                            <input type="hidden" name="form-MAX_NUM_FORMS" id="id_form-MAX_NUM_FORMS"></div>
+                            <input type="hidden" name="customer_id" id="customer_id" value="">
 
+                        <div class="row mb-2 mt-2" id="apart">
+                            Apartments:
+                        </div>
+                        <button type="submit" name="submit" class="btn btn-sm btn-orange cta-btn btn-form mt-3 mb-5 ">
+                            Send
+                        </button>
 
-                            <div class="row mb-2 mt-2" id="apart">Apartments:
-                            </div>
-    <button type="submit" name="submit" class="btn btn-sm btn-orange cta-btn btn-form mt-3 mb-5 ">Send</button>
-
-      </form>
-
-
-
-                            <div class="row mb-2 mt-2" id="order1">Client requests:
-                            </div>
-                    </div>
+                        </form>
+                        <div class="row mb-2 mt-2" id="order1">Client requests:
+                        </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- And Modal Window -->
+</div>
+<!-- And Modal Window -->
 
 
 <script>
@@ -165,7 +139,6 @@ $(document).on('click', '#link', function (e) {
 
             b=JSON.parse(resp.orders);
             c=JSON.parse(resp.apartment);
-
 
             let f=$('div[new="new"]');
                     for (i = 0; i < f.length; i++) {
@@ -195,23 +168,14 @@ $(document).on('click', '#link', function (e) {
                 ap_.html('<div class="row mb-3 border-bottom"><div class="col-9">'+element.address_street_app + ' '+element.address_num +', '+ element.address_city + '<input type="hidden" name="form-'+index+'-apartment_id" id="id_form-'+index+'-apartment_id" value='+ element.pk +'> <br><input hidden type="text" id="id_form-'+index+'-text_order" name="form-'+index+'-text_order" placeholder="Input your job"> </div> <div class="col-3"><a class="mycolor" href="#" onclick=show_input_form(document.getElementById("id_form-'+index+'-text_order"))>add job</a></div></div>');
                 $('#apart').after(ap_);
             })
-
          }
     });
-
-
-
-
-
 })
-
 
 $(document.body).ready(function() {
 
     $('#form').submit(function(e) {
         e.preventDefault();
-
-
             $.ajax({
                 url: '../save_list',
                 type: 'POST',
@@ -220,27 +184,15 @@ $(document.body).ready(function() {
                 beforeSend: function () {$("#form").html('<h3>Sending...</h3>');},
                 success: function (resp) {window.location.href = '/list_order?work_status=SND'},
             });
-
     });
 });
-</script>
-
-<script>
 
 function show_input_form(input) {
-if (input.hidden == false)  {input.hidden = true;}
-
-else {input.hidden = false;}
-
+    if (input.hidden == false)  {input.hidden = true;}
+    else {input.hidden = false;}
 }
-</script>
 
-
-
-
-
-<script>
-    function viewdiv(id) {
+function viewdiv(id) {
         var el = document.getElementById(id);
         var link = document.getElementById('toggleLink'+id);
         if (el.style.display == "block") {
