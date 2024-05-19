@@ -18,6 +18,9 @@
 
 
 {% block body %}
+{% if not clients %}
+<h3 class="mycolor">Enter customer details</h3>
+{% endif %}
 
 {% regroup clients by customer_name|first as name %}
 

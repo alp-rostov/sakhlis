@@ -33,13 +33,22 @@
                 {{ i.grouper|choice_tag:'status_order' }}
             {% if i.0 == 'SND' %}
             <a id="toggleLinkqq" href="#" class="btn btn-sm btn-orange" href="javascript:void(0)" onclick="viewdiv('qq')"
+             data-text-hide="create new request" data-text-show="close" >create new request</a>
+                            <a id="toggleLinkqqq" href="#" class="btn btn-sm btn-orange" href="javascript:void(0)" onclick="viewdiv('qqq')"
              data-text-hide="add new request" data-text-show="close" >add new request</a>
+
             {% endif %}
             </h5>
-            <div id="qq" style="display:none;">
+            <div id="qq" style="display:none;" class="mb-5">
                 {% #form form_order_=form_order form_appart_=form_appart form_customer_=form_customer %}
                 {% csrf_token %}
                 {% /form %}
+            </div>
+
+            <div id="qqq" style="display:none;" class="mb-5">
+                <input type="text" id="hh" name="client" value="" placeholder="Enter customer details" >
+                <input type="submit" value=" Search " class="btn btn-sm btn-orange">
+
             </div>
 
                 {% for b in i.list %}
@@ -48,7 +57,7 @@
                        data-text-hide="+" data-text-show="-" class="text-secondary">+</a> |
                     <a href="../list_order/{{b.pk}}" id="order_{{ b.pk }}" class ='text-secondary'>
                     Order № {{ b.pk }}</a> | {{ b.time_in }} |
-                    <a href="{{ b.customer_id.pk }}" id="link" class="text-secondary" data-toggle="modal" data-target="#exampleModal">  {{ b.customer_id.customer_name }}</a>
+                    <a href="{{ b.customer_id.pk }}" id="link_customer" class="text-secondary" data-toggle="modal" data-target="#exampleModal">  {{ b.customer_id.customer_name }}</a>
 
                     <div id="mydiv{{ b.pk }}" style="display:none;">
                         {% if b.customer_id.phone %}
@@ -110,7 +119,7 @@
                         </div>
 
 
-                        <form method="post" action="" name="form" id="form">{% csrf_token %}
+                        <form method="post" action="" name="form" id="form_customer">{% csrf_token %}
 
                         <div>
                             <input type="hidden" name="form-TOTAL_FORMS" id="id_form-TOTAL_FORMS" value="20">
@@ -138,7 +147,8 @@
 
 
 <script>
-$(document).on('click', '#link', function (e) {
+<!--  SHOW CLIENT INFO WINDOW WHEN YOU PUT A CLIENT NAME  -->
+$(document).on('click', '#link_customer', function (e) {
     e.preventDefault();
 
          $.ajax({
@@ -146,16 +156,16 @@ $(document).on('click', '#link', function (e) {
             type: "GET",
             dataType: 'json',
 
-            success: function(resp){
-            document.getElementById("name").innerHTML =resp.name;
-            document.getElementById("customer_phone").innerHTML =' '+resp.phone;
-            document.getElementById("customer_telegram").innerHTML = ' '+resp.telegram;
-            document.getElementById("profile").innerHTML = resp.profile;
-            document.getElementById("foto1").src ='../media/'+resp.foto;
-            document.getElementById("customer_id").value =resp.pk;
+            success: function(response){
+            document.getElementById("name").innerHTML =response.name;
+            document.getElementById("customer_phone").innerHTML =' '+response.phone;
+            document.getElementById("customer_telegram").innerHTML = ' '+response.telegram;
+            document.getElementById("profile").innerHTML = response.profile;
+            document.getElementById("foto1").src ='../media/'+response.foto;
+            document.getElementById("customer_id").value =response.pk;
 
-            b=JSON.parse(resp.orders);
-            c=JSON.parse(resp.apartment);
+            b=JSON.parse(response.orders);
+            c=JSON.parse(response.apartment);
 
             let f=$('div[new="new"]');
                     for (i = 0; i < f.length; i++) {
@@ -189,9 +199,9 @@ $(document).on('click', '#link', function (e) {
     });
 })
 
+<!-- SENT AJAX - CREATE NEW REQUEST FROM CLIENT WINDOW -->
 $(document.body).ready(function() {
-
-    $('#form').submit(function(e) {
+    $('#form_customer').submit(function(e) {
         e.preventDefault();
             $.ajax({
                 url: '../save_list',
@@ -204,22 +214,76 @@ $(document.body).ready(function() {
     });
 });
 
+<!--SHOW INPUT IN CLIENT WINDOW-->
 function show_input_form(input) {
     if (input.hidden == false)  {input.hidden = true;}
     else {input.hidden = false;}
 }
 
+<!--SHOW ELEMENTS -->
 function viewdiv(id) {
-        var el = document.getElementById(id);
-        var link = document.getElementById('toggleLink'+id);
-        if (el.style.display == "block") {
-            el.style.display = "none";
-            link.innerText = link.getAttribute('data-text-hide');
-        } else {
-            el.style.display = "block";
-            link.innerText = link.getAttribute('data-text-show');
-        }
+    var el = document.getElementById(id);
+    var link = document.getElementById('toggleLink'+id);
+    if (el.style.display == "block") {
+        el.style.display = "none";
+        link.innerText = link.getAttribute('data-text-hide');
+    } else {
+        el.style.display = "block";
+        link.innerText = link.getAttribute('data-text-show');
     }
+}
+
+
+<!--CREATE NEW REQUEST -->
+
+$(document.body).ready(function() {
+
+    $('#form').submit(function(e) {
+        e.preventDefault();
+            $.ajax({
+                url: '../',
+                type: 'POST',
+                data: $(this).serialize(),
+                dataType: 'text',
+                beforeSend: function () {$("#form").html('<h3>Отправляется...</h3>');},
+                success: function (resp) {
+
+                    if (JSON.parse(resp).auth==true) {
+                        window.location.href = '/list_order/'+JSON.parse(resp).pk;
+                    }
+                    else {
+                        $("#form").html(JSON.parse(resp).message);
+                    }
+                },
+            });
+
+    });
+});
+
+
+
+ $(document.body).on( "input", "#hh", function(e) {
+        e.preventDefault();
+
+         $.ajax({
+            url: "../api/getclient?client="+$(this).val() ,
+            type: "GET",
+
+            dataType: 'json',
+            success: function(b){
+              console.log(b)
+
+                $('#languages option').remove();
+
+                 for (i = 0; i < b.length; i++) {
+                            full_name_street=b[i].type_street+b[i].name_street
+                            $('#languages').append('<option value="'+full_name_street+'">');
+
+                        }
+            }
+        });
+    });
+
 
 </script>
 {% endblock body %}

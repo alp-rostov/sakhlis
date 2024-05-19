@@ -1,9 +1,9 @@
 from django.urls import path
 
-from api.views import StreetView
+from api.views import *
 
 
 urlpatterns = [
     path('street/', StreetView.as_view(), name='street'),
-
+    path('getclient/', ClientsView.as_view(), name='getclient'),
 ]
