@@ -72,6 +72,12 @@ class RepairerDetailInformation(BaseClassExeption, PermissionRequiredMixin, Logi
         context['count'] = DataFromOrderList().get_number_of_orders_from_OrderList(repairer=self.request.user)
         context['sum'] = DataFromInvoice().get_amount_money_of_orders(repairer=self.request.user)
 
+        context['form_order']=OrderForm
+        context['form_appart'] = ApartmentForm
+        context['form_customer'] = CustomerForm
+
+
+
         context['feedbacks'] = ClientFeedback.objects.all()
         context['orders'] = DataFromOrderList().get_data_from_OrderList_with_order_status(repairer=self.request.user,
                                                                                           status_of_order=['SND',
@@ -114,12 +120,14 @@ class OwnerDetailInformation(PermissionRequiredMixin, LoginRequiredMixin, Detail
         context['apartments1'] =[]
 
 
+
         for i in context['apartments']:
 
             context['apartments1'].append((i, OrderList.objects
                                            .filter(apartment_id=i) \
                                            .select_related( 'repairer_id') \
-                                           .values('pk', 'time_in', 'text_order', 'repairer_id__username')))
+                                           .values('pk', 'time_in', 'text_order', 'repairer_id__username') \
+                                           .order_by('-time_in')))
         return context
 
 
@@ -132,7 +140,6 @@ class OrderCreate(BaseClassExeption, CreateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        # context['form_order']=OrderForm
         context['form_appart'] = ApartmentForm
         context['form_customer'] = CustomerForm
         return context
@@ -214,13 +221,11 @@ class OrderManagementSystem(BaseClassExeption, PermissionRequiredMixin, LoginReq
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        # context['form_order'] = OrderForm
-        # context['form_customer'] = CustomerForm
-        # context['form_appart'] = ApartmentForm
         context['filterset'] = self.filterset
         c = DataFromInvoice().get_total_cost_of_some_orders(list_of_orders=self.get_queryset())
         context['summ_orders'] = c.get('Summ')
         context['count_orders'] = self.get_queryset().count()
+
         return context
 
 

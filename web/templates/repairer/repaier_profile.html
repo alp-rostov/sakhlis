@@ -31,7 +31,17 @@
             {% for i in order_list %}
             <h5 class="mycolor">
                 {{ i.grouper|choice_tag:'status_order' }}
+            {% if i.0 == 'SND' %}
+            <a id="toggleLinkqq" href="#" class="btn btn-sm btn-orange" href="javascript:void(0)" onclick="viewdiv('qq')"
+             data-text-hide="add new request" data-text-show="close" >add new request</a>
+            {% endif %}
             </h5>
+            <div id="qq" style="display:none;">
+                {% #form form_order_=form_order form_appart_=form_appart form_customer_=form_customer %}
+                {% csrf_token %}
+                {% /form %}
+            </div>
+
                 {% for b in i.list %}
                 <div class="mb-3 p-2 border border-5 rounded">
                     <a id="toggleLinkmydiv{{ b.pk }}" href="javascript:void(0)" onclick="viewdiv('mydiv{{ b.pk }}')"
@@ -41,19 +51,26 @@
                     <a href="{{ b.customer_id.pk }}" id="link" class="text-secondary" data-toggle="modal" data-target="#exampleModal">  {{ b.customer_id.customer_name }}</a>
 
                     <div id="mydiv{{ b.pk }}" style="display:none;">
+                        {% if b.customer_id.phone %}
                         <a href="tel:+{{ b.customer_id.phone }}" title="Phone" id="customer_phone_{{ b.pk }}"
                            class="fas fa-phone btn prefix text-secondary mt-2" aria-hidden="true">
                         </a>
+                        {% endif %}
+                        {% if b.customer_id.telegram %}
                         <a href="https://t.me/{{ b.customer_id.telegram|cut:'@' }}" title="Telegram" id="customer_id.telegram_{{ b.pk }}"
                             class ="fas fa fa-paper-plane btn text-secondary mt-2" aria-hidden="true">
                         </a>
+                        {% endif %}
+
                         <a href= 'fa-whatsapp' id="watsapp_{{ i.pk }}" class="fa fab fa-whatsapp-square btn prefix text-secondary mt-2"
                             title="Open map" aria-hidden="true" >
                         </a>
+                        {% if i.apartment_id.location_longitude %}
                         <a href= 'https://yandex.ru/maps/?pt={{ i.apartment_id.location_longitude|change_comma_to_dot }},
                             {{ i.apartment_id.location_latitude|change_comma_to_dot }}&z=18&l=map' id="map_{{ i.pk }}"
                            class="fas fa-map-marker btn prefix text-secondary mt-2" title="Open map" aria-hidden="true" >
                         </a>
+                        {% endif %}
                     </div>
 
                     <div class="mt-2">

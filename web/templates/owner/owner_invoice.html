@@ -56,20 +56,16 @@
 
 <div>
 
-    <div class="row">
+    <div class="row mb-3">
         <div class="col-md-4 text-secondary">
             <i class="fas fa-home prefix text-secondary mb-2"> </i> {{ info.apartment_id.address_city|choice_tag:'city' }}, {{ info.apartment_id.address_street_app }}, {{ info.apartment_id.address_num }}<br>
-            <i class="fas fa-phone prefix text-secondary mb-2"></i> {{ info.customer_id.phone }}<br>
-            <i class="fas fa-paper-plane prefix text-secondary mb-2"></i> @{{ info.customer_id.telegram }}
         </div>
 
-       <div class="col-md-4 ">
+       <div class="col-md-8 ">
            {{ info.text_order }}
        </div>
 
-        <div class="col-md-4" >
 
-        </div>
     </div>
 
  </div>
