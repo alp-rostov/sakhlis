@@ -32,7 +32,7 @@
             <h5 class="mycolor">
                 {{ i.grouper|choice_tag:'status_order' }}
             {% if i.0 == 'SND' %}
-            <a id="toggleLinkqq" href="#" class="btn btn-sm btn-orange" href="javascript:void(0)" onclick="viewdiv('qq')"
+            <a id="toggleLinkqq" class="btn btn-sm btn-orange" href="javascript:void(0)" onclick="viewdiv('qq')"
              data-text-hide="create new request" data-text-show="close" >create new request</a>
                             <a id="toggleLinkqqq" href="#" class="btn btn-sm btn-orange" href="javascript:void(0)" onclick="viewdiv('qqq')"
              data-text-hide="add new request" data-text-show="close" >add new request</a>
@@ -47,8 +47,7 @@
 
             <div id="qqq" style="display:none;" class="mb-5">
                 <input type="text" id="hh" name="client" value="" placeholder="Enter customer details" >
-                <input type="submit" value=" Search " class="btn btn-sm btn-orange">
-
+                <div id="aaa"></div>
             </div>
 
                 {% for b in i.list %}
@@ -192,7 +191,7 @@ $(document).on('click', '#link_customer', function (e) {
                 ap_.attr('id', 'ap_');
                 ap_.attr('ap', 'ap');
                 ap_.attr('class', 'prefix text-secondary mb-2');
-                ap_.html('<div class="row mb-3 border-bottom"><div class="col-9">'+element.address_street_app + ' '+element.address_num +', '+ element.address_city + '<input type="hidden" name="form-'+index+'-apartment_id" id="id_form-'+index+'-apartment_id" value='+ element.pk +'> <br><input hidden type="text" id="id_form-'+index+'-text_order" name="form-'+index+'-text_order" placeholder="Input your job"> </div> <div class="col-3"><a class="mycolor" href="#" onclick=show_input_form(document.getElementById("id_form-'+index+'-text_order"))>add job</a></div></div>');
+                ap_.html('<div class="row mb-3 border-bottom"><div class="col-7">'+element.address_street_app + ' '+element.address_num +', '+ element.address_city + '<input type="hidden" name="form-'+index+'-apartment_id" id="id_form-'+index+'-apartment_id" value='+ element.pk +'> <br><input hidden type="text" id="id_form-'+index+'-text_order" name="form-'+index+'-text_order" placeholder="Input your job"> </div> <div class="col-5"><a class="mycolor " href="#" onclick=show_input_form(document.getElementById("id_form-'+index+'-text_order"))>add new request</a></div></div>');
                 $('#apart').after(ap_);
             })
          }
@@ -270,20 +269,19 @@ $(document.body).ready(function() {
             type: "GET",
 
             dataType: 'json',
-            success: function(b){
-              console.log(b)
+            success: function(response){
+                $('#aaa').html(" ")
+                 for (i = 0; i < response.length; i++) {
 
-                $('#languages option').remove();
+                            $('#aaa').append('<div class="row border-bottom mb-2"><div class="col-4"><a href="../user/'+response[i].pk+'" id="link_customer" class="text-secondary" data-toggle="modal" data-target="#exampleModal">'+response[i].customer_name+'</div><div class="col-4">  '+response[i].phone+'</div><div class="col-4"> '+response[i].telegram+'</a></div></div>');
 
-                 for (i = 0; i < b.length; i++) {
-                            full_name_street=b[i].type_street+b[i].name_street
-                            $('#languages').append('<option value="'+full_name_street+'">');
+
 
                         }
+                 $('#aaa').append('<a href="/clients" class="text-secondary">See more...</a>');
             }
         });
     });
-
 
 </script>
 {% endblock body %}

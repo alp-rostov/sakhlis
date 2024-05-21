@@ -40,7 +40,7 @@ urlpatterns = [
     path('owner/<int:pk>', OwnerDetailInformation.as_view(), name='owner'),
     path('owner-invoice/<int:pk>', OwnerInvoice.as_view(), name='ownerinvoice'),
 
-    path('app', AddApartment, name=''),
+    # path('app', AddApartment, name=''),
 
     path('ordersearch/', OrderSearchForm.as_view(), name='search-order'),
 
