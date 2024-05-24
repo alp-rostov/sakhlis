@@ -40,7 +40,7 @@ class StreetAdmin(admin.ModelAdmin):
 class AppartamentAdmin(admin.ModelAdmin):
     list_display = ('pk', 'name', 'owner', 'address_city',
                     'address_street_app','address_num', 'foto',
-                    'location_longitude','location_latitude', 'notes')
+                    'notes')
     list_display_links = ('name',)
     list_filter = ('owner',)
 

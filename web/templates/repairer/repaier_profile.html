@@ -69,14 +69,13 @@
                             class ="fas fa fa-paper-plane btn text-secondary mt-2" aria-hidden="true">
                         </a>
                         {% endif %}
-
-                        <a href= 'fa-whatsapp' id="watsapp_{{ i.pk }}" class="fa fab fa-whatsapp-square btn prefix text-secondary mt-2"
-                            title="Open map" aria-hidden="true" >
+                        {% if b.customer_id.whatsapp %}
+                        <a href="https://wa.me/+{{ b.customer_id.whatsapp }}" id="watsapp_{{ i.pk }}" class="fa fab fa-whatsapp-square btn prefix text-secondary mt-2"
+                            title="Whatsapp" aria-hidden="true" >
                         </a>
-                        {% if i.apartment_id.location_longitude %}
-                        <a href= 'https://yandex.ru/maps/?pt={{ i.apartment_id.location_longitude|change_comma_to_dot }},
-                            {{ i.apartment_id.location_latitude|change_comma_to_dot }}&z=18&l=map' id="map_{{ i.pk }}"
-                           class="fas fa-map-marker btn prefix text-secondary mt-2" title="Open map" aria-hidden="true" >
+                        {% endif %}
+                        {% if b.apartment_id.link_location %}
+                        <a href="{{b.apartment_id.link_location}}"  class="fas fa-map-marker btn prefix text-secondary mt-2" title="Open map" aria-hidden="true" >
                         </a>
                         {% endif %}
                     </div>
@@ -273,7 +272,7 @@ $(document.body).ready(function() {
                 $('#aaa').html(" ")
                  for (i = 0; i < response.length; i++) {
 
-                            $('#aaa').append('<div class="row border-bottom mb-2"><div class="col-4"><a href="../user/'+response[i].pk+'" id="link_customer" class="text-secondary" data-toggle="modal" data-target="#exampleModal">'+response[i].customer_name+'</div><div class="col-4">  '+response[i].phone+'</div><div class="col-4"> '+response[i].telegram+'</a></div></div>');
+                            $('#aaa').append('<div class="row border-bottom mb-2"><div class="col-4"><a href="'+response[i].pk+'" id="link_customer" class="text-secondary" data-toggle="modal" data-target="#exampleModal">'+response[i].customer_name+'</div><div class="col-4">  '+response[i].phone+'</div><div class="col-4"> '+response[i].telegram+'</a></div></div>');
 
 
 

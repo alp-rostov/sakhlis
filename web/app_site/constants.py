@@ -15,6 +15,8 @@ APART_CHOICES = [
 CITY_CHOICES = [
     ('TB', 'Tbilisi'),
     ('BT', 'Batumi'),
+    ('GD', 'Gudaury'),
+
 ]
 
 WORK_CHOICES = [

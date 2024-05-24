@@ -7,10 +7,10 @@ from django.urls import reverse
 from django_cleanup import cleanup
 
 from .constants import CITY_CHOICES, ORDER_STATUS, WORK_CHOICES, QUANTITY_CHOICES, APART_CHOICES
-
-phoneNumberRegex = RegexValidator(regex=r"^\+?1?\d{8,15}$",
-                                  message="Phone number must be entered in the "
-                                          "format: '+999999999'. Up to 15 digits allowed.")
+#
+# phoneNumberRegex = RegexValidator(regex=r"^\+?1?\d{8,15}$",
+#                                   message="Phone number must be entered in the "
+#                                           "format: '+999999999'. Up to 15 digits allowed.")
 
 class Service(models.Model):
     """name type """
@@ -45,17 +45,17 @@ class Invoice(models.Model):
 
 class UserProfile(models.Model):
     """phone city foto rating_sum rating_num user"""
-    customer_name = models.CharField(max_length=50, verbose_name='Name', null=True, blank=True,)
+    customer_name = models.CharField(max_length=50, verbose_name='Name', null=True, blank=True)
 
     phone = models.CharField(max_length=16, verbose_name='Phone',
-                             null=True, blank=True,)
+                             null=True, blank=True)
     telegram = models.CharField(max_length=25, verbose_name='Telegram',
-                             null=True, blank=True, )
-    # whatsapp = models.CharField(max_length=16, verbose_name='Whatsapp',
-    #                          null=True, blank=True, )
+                             null=True, blank=True)
+    whatsapp = models.CharField(max_length=16, verbose_name='Whatsapp',
+                             null=True, blank=True)
 
     city = models.CharField(max_length=2, choices=CITY_CHOICES, default='TB')
-    profile = models.CharField(max_length=1500, null=True, blank=True, verbose_name='About me:', default='')
+    profile = models.CharField(max_length=1500, null=True, blank=True, verbose_name='About me:')
 
     foto = models.ImageField(upload_to='images/', null=True, blank=True, verbose_name='Photo:')
     rating_sum = models.IntegerField(default=0, blank=True, null=True)
@@ -64,33 +64,26 @@ class UserProfile(models.Model):
     class Meta:
         verbose_name = 'UserProfile'
         verbose_name_plural = 'UserProfile'
-    def get_absolute_url(self):
-        return reverse('list_repair')
-
-
     def __str__(self):
         return f"{self.pk} {self.customer_name}"
 
 
-
 class Apartment(models.Model):
     """"""
-    name = models.CharField(max_length=150, verbose_name='Name', null=True, blank=True)
+    name = models.CharField(max_length=150, verbose_name='Name', null=True, blank=True, default='')
     type = models.CharField(max_length=2, choices=APART_CHOICES, default='FL', null=True, blank=True,
                                     verbose_name='Type')
 
     owner = models.ForeignKey(UserProfile, on_delete=models.SET_NULL, null=True, blank=True,
-                                    verbose_name='Responsible person for apartment', default='', )
+                                    verbose_name='Responsible person for apartment')
 
     address_city = models.CharField(max_length=2, choices=CITY_CHOICES, default='TB', null=True, blank=True,
                                     verbose_name='City')
-    address_street_app = models.CharField(max_length=150, verbose_name='Street', null=True, blank=True)
-    address_num = models.CharField(max_length=10, verbose_name='House number', null=True, blank=True)
+    address_street_app = models.CharField(max_length=150, verbose_name='Street', null=True, blank=True, default='')
+    address_num = models.CharField(max_length=10, verbose_name='House number', null=True, blank=True, default='')
     foto = models.ImageField(upload_to="images/appartment/", null=True, blank=True, verbose_name='Photo:')
-
-    location_longitude = models.FloatField(verbose_name='Longitude', null=True, blank=True)
-    location_latitude = models.FloatField(verbose_name='Latitude', null=True, blank=True)
-    notes = models.CharField(max_length=1500, null=True, blank=True, verbose_name='Note:')
+    link_location = models.CharField(max_length=300, verbose_name='GeoPoint', blank=True, null=True)
+    notes = models.CharField(max_length=1500, null=True, blank=True, verbose_name='Note:', default='')
 
     class Meta:
         verbose_name = 'Appartment list'
@@ -100,8 +93,7 @@ class Apartment(models.Model):
         return f"{self.pk} {self.address_street_app} {self.address_num}"
 
 class OrderList(models.Model):
-    """time_in time_out repairer_id price text_order customer_name customer_phone address_city address_street_app
-    address_num work_type services order_status"""
+    """________________________"""
     time_in = models.DateTimeField(auto_now_add=True, verbose_name='Date of order')
     time_out = models.DateTimeField(null=True, blank=True, verbose_name='Order completion date')
 
@@ -119,7 +111,6 @@ class OrderList(models.Model):
                                     verbose_name='Order status')
     services = models.ManyToManyField('Service', through='Invoice')
 
-
     class Meta:
         verbose_name = 'Order list'
         verbose_name_plural = 'Order list'
@@ -128,7 +119,7 @@ class ClientFeedback(models.Model):
     text_feedback = models.CharField(max_length=1500, verbose_name='Feedback', blank=True, null=True)
     mark = models.IntegerField(default=0, blank=True, null=True, verbose_name='Raiting')
     order_id = models.ForeignKey(OrderList, on_delete=models.SET_NULL, null=True, blank=True,
-                                    verbose_name='Order', default='', )
+                                    verbose_name='Order')
     def __str__(self):
         return f'From: {self.order_id.customer_id.customer_name}, Messege: {self.text_feedback}'
 

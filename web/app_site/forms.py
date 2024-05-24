@@ -28,12 +28,92 @@ class ApartmentForm(forms.ModelForm):
         required = False
     )
 
+    link_location = forms.CharField(
+        label='Geo location',
+        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "GoogleMap or other location link", 'maxlength': 300}),
+        required=False
+    )
+
     class Meta:
         model = Apartment
         fields = ('address_city',
                   'address_street_app',
-                  'address_num',
-                                    )
+                  'address_num', 'link_location')
+
+class CustomerForm(forms.ModelForm):
+
+    customer_name = forms.CharField(
+        label='Your Name',
+        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Username", 'maxlength':20}),
+        required=True
+    )
+
+    profile = forms.CharField(
+        label='About you',
+        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "About you: company, job title, etm", 'maxlength':1500}),
+        required=True
+    )
+
+    city = forms.ChoiceField(
+        choices=CITY_CHOICES,
+
+        widget=forms.RadioSelect(
+            attrs={"class": ""
+            },
+        ),
+        initial="TB"
+    )
+
+    phone = forms.CharField(
+        label='Phone',
+        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Phone", 'type': 'tel', 'maxlength':16}),
+        required=False
+    )
+
+    telegram = forms.CharField(
+        label='Telegram',
+        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Telegram", 'maxlength':26}),
+        required=False
+    )
+    whatsapp = forms.CharField(
+        label='Whatsapp',
+        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Whatsapp", 'maxlength': 26}),
+        required=False
+    )
+
+    class Meta:
+        model = UserProfile
+        fields = ('customer_name', 'phone', 'telegram', 'profile', 'foto', 'city', 'whatsapp')
+
+
+class InvoiceForm(forms.ModelForm):
+
+    service_id = forms.ModelChoiceField(
+        label='',
+        queryset = Service.objects.all(),
+        widget = forms.Select(attrs={'placeholder': "Works`s type" }),
+
+    )
+    quantity = forms.IntegerField(
+        label='',
+        widget=forms.NumberInput(attrs={'placeholder': "Quantity", "min": 1, "max": 10000, 'value': 1}),
+
+
+    )
+    price = forms.DecimalField(
+        label='',
+        widget=forms.NumberInput(attrs={'placeholder': "Price", "min": 1, "max": 10000, }),
+    )
+    class Meta:
+        model = Invoice
+        fields = ('service_id',   'quantity', 'price')
+
+
+class OrderCustomerForm(forms.ModelForm):
+    class Meta:
+        model = UserProfile
+        fields = ('customer_name', 'phone', 'telegram')
+
 
 class OrderForm(forms.ModelForm):
     text_order = forms.CharField(
@@ -63,62 +143,32 @@ class OrderUpdateForm(forms.ModelForm):
 
 
 
+class OwnerFormOrder(forms.ModelForm):
+    def __init__(self, user):
+        super().__init__()
+        self.user=UserProfile.objects.get(user=user)
 
+        self.fields['apartment_id'] = forms.ModelChoiceField(label='Apartment`s customer', queryset=Apartment.objects.filter(
+            owner=self.user))
 
-class CustomerForm(forms.ModelForm):
-
-    customer_name = forms.CharField(
-        label='Your Name',
-        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Username", 'maxlength':20}),
+    text_order = forms.CharField(
+        label='Order`s message',
+        widget=forms.TextInput(attrs={"class": "md-textarea form-control",
+                                     'placeholder': "Describe problems", 'maxlength':1500}),
         required=True
-    )
+        )
 
-    profile = forms.CharField(
-        label='About you',
-        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "About you: company, job title, etm", 'maxlength':1500}),
-        required=True
-    )
-
-    city = forms.ChoiceField(
-        choices=CITY_CHOICES,
-
-        widget=forms.RadioSelect(
-            attrs={"class": ""
-            },
-        ),
-        initial="TB"
-    )
-
-    phone = forms.CharField(
-        label='Phone',
-        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Phone", 'type': 'tel', 'maxlength':16}),
-
-    )
-
-    telegram = forms.CharField(
-        label='Telegram',
-        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Telegram", 'maxlength':26}),
-
-    )
-
-    class Meta:
-        model = UserProfile
-        fields = ('customer_name', 'phone', 'telegram', 'profile', 'foto', 'city')
-
-
-
-class OrderCustomerForm(forms.ModelForm):
-
-    class Meta:
-        model = UserProfile
-        fields = ('customer_name', 'phone', 'telegram')
-
-
-class OrderForm1(forms.ModelForm):
 
     class Meta:
         model = OrderList
-        fields = '__all__'
+        fields =('text_order', 'apartment_id')
+
+
+
+
+
+
+
 
 class UserRegisterForm(UserCreationForm):
 
@@ -161,25 +211,3 @@ class UserRegisterForm(UserCreationForm):
                   'group'
                   )
 
-
-class InvoiceForm(forms.ModelForm):
-
-    service_id = forms.ModelChoiceField(
-        label='',
-        queryset = Service.objects.all(),
-        widget = forms.Select(attrs={'placeholder': "Works`s type" }),
-
-    )
-    quantity = forms.IntegerField(
-        label='',
-        widget=forms.NumberInput(attrs={'placeholder': "Quantity", "min": 1, "max": 10000, 'value': 1}),
-
-
-    )
-    price = forms.DecimalField(
-        label='',
-        widget=forms.NumberInput(attrs={'placeholder': "Price", "min": 1, "max": 10000, }),
-    )
-    class Meta:
-        model = Invoice
-        fields = ('service_id',   'quantity', 'price')

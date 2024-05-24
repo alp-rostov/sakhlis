@@ -71,13 +71,9 @@ class RepairerDetailInformation(BaseClassExeption, PermissionRequiredMixin, Logi
         context['profile'] = DataFromRepairerList().get_object_from_UserProfile(user=self.object)
         context['count'] = DataFromOrderList().get_number_of_orders_from_OrderList(repairer=self.request.user)
         context['sum'] = DataFromInvoice().get_amount_money_of_orders(repairer=self.request.user)
-
-        context['form_order']=OrderForm
+        context['form_order'] = OrderForm
         context['form_appart'] = ApartmentForm
         context['form_customer'] = CustomerForm
-
-
-
         context['feedbacks'] = ClientFeedback.objects.all()
         context['orders'] = DataFromOrderList().get_data_from_OrderList_with_order_status(repairer=self.request.user,
                                                                                           status_of_order=['SND',
@@ -115,6 +111,7 @@ class OwnerDetailInformation(PermissionRequiredMixin, LoginRequiredMixin, Detail
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        context['formorder'] = OwnerFormOrder(self.request.user)
         context['profile'] = DataFromRepairerList().get_object_from_UserProfile(user=self.object)
         context['apartments'] = context['profile'].apartment_set.select_related('owner').all()
         context['apartments1'] =[]

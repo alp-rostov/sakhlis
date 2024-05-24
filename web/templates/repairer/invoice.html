@@ -65,11 +65,11 @@
             </a>
              <a href="https://t.me/{{ info.customer_id.telegram|cut:'@' }}" title="Telegram" class="fas fa-paper-plane text fa-sm mr-1 btn">
             </a>
-                      <a href= 'https://yandex.ru/maps/?pt={{ info.apartment_id.location_longitude|change_comma_to_dot }},
-            {{ info.apartment_id.location_latitude|change_comma_to_dot }}&z=18&l=map' id="map_{{ i.pk }}"
-            title="" class="fas fa-map-marker text fa-sm mr-1 btn">
-            </a>
-        </div>
+             <a href="https://wa.me/{{ info.customer_id.whatsapp }}" class="fa fab fa-whatsapp-square btn prefix text-secondary mt-2"
+                            title="Whatsapp" aria-hidden="true" >
+                        </a>
+
+       </div>
 
 
    <div class="col-md-12">
@@ -85,16 +85,14 @@
         <div class="col-md-4 text-secondary">
             <i class="fas fa-home prefix text-secondary mb-2"> </i> {{ info.apartment_id.address_city|choice_tag:'city' }}, {{ info.apartment_id.address_street_app }}, {{ info.apartment_id.address_num }}<br>
             <i class="fas fa-phone prefix text-secondary mb-2"></i> {{ info.customer_id.phone }}<br>
-            <i class="fas fa-paper-plane prefix text-secondary mb-2"></i> @{{ info.customer_id.telegram }}
+            <i class="fas fa-paper-plane prefix text-secondary mb-2"></i> @{{ info.customer_id.telegram }}<br>
+            <i class="fas fa-paper prefix text-secondary mb-2"></i> Whatsapp{{ info.customer_id.whatsapp }}
         </div>
 
-       <div class="col-md-4 ">
+       <div class="col-md-8 ">
            {{ info.text_order }}
        </div>
 
-        <div class="col-md-4" >
-
-        </div>
     </div>
 
  </div>
