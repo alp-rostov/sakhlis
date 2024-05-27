@@ -59,26 +59,6 @@
 
        <div class="container">
             <div class="row">
-<!--                  <div class="col-4 text-center">-->
-
-<!--                      <h4>{{ owner.last_name }} {{ owner.first_name }} | <strong class="mycolor"> {{ request.user.username }}</strong>-->
-<!--                      </h4>-->
-<!--                      City: {{ profile.city|choice_tag:'city' }} <a href="" class="mycolor" title="изменить данные"><i class="fas fa-pen text-secondary mt-3"> </i></a>-->
-<!--                      <br>-->
-<!--                      <img src="../media/{{ profile.foto }} " alt="Муж на час" class="rounded-circle" align="center" width="200">-->
-<!--                      <br>-->
-
-<!--                  </div>-->
-
-<!--                <div class="col-4">-->
-<!--                    <h3>Apartments</h3>-->
-<!--                        {% for b in apartments %}<hr>-->
-<!--                    {{b.address_street_app}} {{b.address_num}}, {{b.address_city|choice_tag:'city' }}-->
-<!--                    {% endfor %}-->
-
-
-<!--                </div>-->
-
 <div class="col-12">
 
 <div class="container">
@@ -86,22 +66,12 @@
 {% for b in apartments %}
     {% if apartments.0 == b %}
         <input checked id="tab-btn-{{ b.pk }}" name="tab-btn" type="radio" value="">
-        <label for="tab-btn-{{ b.pk }}">{{b.address_street_app}} {{b.address_num}}</label>
+        <label for="tab-btn-{{ b.pk }}">{{b.address_street_app}} {{b.address_num|default_if_none:''}}</label>
     {% else %}
         <input id="tab-btn-{{ b.pk }}" name="tab-btn" type="radio" value="">
-        <label for="tab-btn-{{ b.pk }}">{{b.address_street_app}} {{b.address_num}}</label>
+        <label for="tab-btn-{{ b.pk }}">{{b.address_street_app}} {{b.address_num|default_if_none:''}}</label>
     {% endif %}
 {% endfor %}
-
-
-
-
-<!--    <input checked id="tab-btn-1" name="tab-btn" type="radio" value="">-->
-<!--    <label for="tab-btn-1">Вкладка 1</label>-->
-<!--    <input id="tab-btn-2" name="tab-btn" type="radio" value="">-->
-<!--    <label for="tab-btn-2">Вкладка 2</label>-->
-<!--    <input id="tab-btn-3" name="tab-btn" type="radio" value="">-->
-<!--    <label for="tab-btn-3">Вкладка 3</label>-->
 
 
 {% for b in apartments1 %}
@@ -111,15 +81,16 @@
             <div class="col-lg-4 col-md-4 col-sm-12">
                 <h4>{{ b.0.name|default_if_none:'' }}</h4>
                 <h5 class="mt-0 p-0">{{ b.0.address_street_app }} {{ b.0.address_num }}, {{ b.0.address_city|choice_tag:'city' }}</h5>
-                <p class="text-secondary ">{{ b.0.notes|default_if_none:'' }} / {{  b.0.pk }}</p>
+                <p class="text-secondary ">{{ b.0.notes|default_if_none:'' }}</p>
                 <img src="../media/{{ b.0.foto|default_if_none:'images/none.jpg' }} " alt="" class="" width="200"><br>
             </div>
 
             <div class="col-lg-8 col-md-8 col-sm-12">
                 {% for b in b.1 %}
                     <div class="mt-1 mb-2 p-2 border border-5 rounded">
-
-                        <a href="../owner-invoice/{{ b.pk }}" class="mycolor">Order № {{ b.pk }}</a> | {{ b.time_in }} |<a href="{{ b.customer_id.pk }}" id="link" class="text-secondary" data-toggle="modal" data-target="#exampleModal">  {{ b.repairer_id__username }}</a><br>
+                        <a href="{% url 'delete-order' b.pk %}" id="delete_{{ b.pk }}" class="mycolor" title="Delete">
+                        <i class="fas fa-trash text-secondary"></i></a>
+                        <a href="{% url 'ownerinvoice' b.pk %}" class="mycolor"><b>Order № {{ b.pk }}</b></a> | {{ b.time_in }} |<a href="{{ b.customer_id.pk }}" id="link" class="text-secondary" data-toggle="modal" data-target="#exampleModal">  {{ b.repairer_id__username|default_if_none:"" }}</a><br>
                         <div class="mt-2">{{ b.text_order }} </div>
                     </div>
 
@@ -130,14 +101,6 @@
       {% endfor %}
 
 
-<!--      -->
-<!--    <div class="tab-content" id="content-2">-->
-<!--      Содержимое 2... Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique eaque iure debitis nostrum, vero ad totam ratione sequi! Suscipit, labore repellat cum soluta ullam dignissimos perspiciatis sequi rerum sapiente ex.-->
-<!--    </div>-->
-<!--    <div class="tab-content" id="content-3">-->
-<!--      Содержимое 3... Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique eaque iure debitis nostrum, vero ad totam ratione sequi! Suscipit, labore repellat cum soluta ullam dignissimos perspiciatis sequi rerum sapiente ex.-->
-<!--    </div>-->
-<!--  </div>-->
 </div>
                 </div>
 
@@ -160,7 +123,14 @@
                                 <span aria-hidden="true">×</span>
                                 </button>
 				    </div>
-                        {{ formorder }}
+                            <form method="post" action="" class="" id="form">
+                                {% csrf_token %}
+                                {{ formorder}}
+                                <br>
+                                <button type="submit" name="submit" class="btn btn-sm btn-orange cta-btn btn-form mt-3 mb-5 ">
+                                    Send</button>
+
+                                </form>
                         </fieldset>
                     </div>
                 </div>
@@ -169,6 +139,26 @@
     </div>
     <!-- And Modal Window -->
 
+<script>
+$(document.body).ready(function() {
+
+    $('#form').submit(function(e) {
+        e.preventDefault();
+            $.ajax({
+                url: '../',
+                type: 'POST',
+                data: $(this).serialize(),
+                dataType: 'text',
+                beforeSend: function () {$("#form").html('<h3>Отправляется...</h3>');},
+                success: function (resp) {
 
 
+                        $("#form").html(JSON.parse(resp).message);
+
+                },
+            });
+
+    });
+});
+</script>
 {% endblock body %}

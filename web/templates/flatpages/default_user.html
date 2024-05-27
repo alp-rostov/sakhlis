@@ -42,9 +42,6 @@ top: 0;
 
 {% url 'list_order' as the_url2 %}
 {% url 'clients' as the_url3 %}
-
-
-
 {% url 'stat' as the_url4 %}
 {% url 'owner' as the_url5 %}
 
@@ -60,9 +57,9 @@ top: 0;
 
     <li class="nav-item mr-4">
         {% if the_url1 in request.get_full_path  %}
-        <a class="nav-link" href="{{ the_url1 }}"><b>Profiles</b></a>
+        <a class="nav-link" href="{{ the_url1 }}"><b>Profile</b></a>
         {% else %}
-        <a class="nav-link" href="{{ the_url1 }}">Profiles</a>
+        <a class="nav-link" href="{{ the_url1 }}">Profile</a>
         {% endif %}
     </li>
 

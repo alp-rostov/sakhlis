@@ -16,7 +16,6 @@
     <!-- Custom Stylesheets -->
     <link rel="stylesheet" href="{% static 'css/custom.css' %}">
 
-
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
  {% block head %}
@@ -39,16 +38,15 @@ top: 0;
 
 
 
-{% url 'owner' as the_url1 %}
+{% url 'owner' request.user.id as the_url1 %}
 
-{% url 'stat' as the_url2 %}
-{% url 'user' request.user.id as the_url3 %}
-{% url 'search-order' as the_url4 %}
+{% url 'apartment' as the_url2 %}
+
 
 
 <!--Header-->
 {% #menu %}
-
+{% if request.user.groups.first.name == 'owner' %}
     <li class="nav-item mr-4">
         <a class="nav-link" href="{% url 'home' %}">Main</a>
     </li>
@@ -63,20 +61,24 @@ top: 0;
 
 
     <li class="nav-item mr-4">
-        <a class="nav-link" href="">Appartments</a>
+        {% if the_url2 in request.get_full_path  %}
+        <a class="nav-link"  href="{{ the_url2 }}"><b>Appartments</b></a>
+        {% else %}
+        <a class="nav-link"  href="{{ the_url2 }}">Appartments</a>
+        {% endif %}
+
     </li>
 
 
     <li class="nav-item mr-4">
         <a class="nav-link" href="">Statistica</a>
     </li>
-
+{% endif %}
 
     {% if request.user.is_authenticated %}
         <li class="nav-item mr-4">
             <a class="nav-link" href="{% url 'logout' %}">
-             <img src="../media/images/{{ user.pk }}.jpg " class="rounded-circle" width="50">
-                {{ user.username }} : Log out</a>
+                             {{ user.username }} : Log out</a>
         </li>
     {% endif %}
 

@@ -33,6 +33,14 @@ class UserAuthorizationView(LoginView):
         elif 'owner' == str(self.request.user.groups.first()):
             return reverse_lazy('owner', kwargs={'pk': self.request.user.pk})
 
+class ApartmentList(ListView):
+    model = Apartment
+    context_object_name = 'appartment'
+    template_name = 'owner/apartment.html'
+
+    def get_queryset(self):
+        userptofile=UserProfile.objects.get(user=self.request.user)
+        return Apartment.objects.filter(owner=userptofile)
 
 class UserRegisterView(CreateView):
     """ Registration of repairer """
@@ -58,6 +66,7 @@ class UserRegisterView(CreateView):
                 return redirect('home')
         except Exception as e:
             return redirect('../404.html')
+
 
 class RepairerDetailInformation(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, DetailView):
     model = User
@@ -142,11 +151,15 @@ class OrderCreate(BaseClassExeption, CreateView):
         return context
 
     def form_valid(self, form):
-        if OrderCustomerForm(self.request.POST).is_valid() and ApartmentForm(self.request.POST).is_valid():
+        # if OrderCustomerForm(self.request.POST).is_valid() and ApartmentForm(self.request.POST).is_valid():
             with transaction.atomic():
 
                 if self.request.user.is_authenticated and self.request.user.groups.first().name == 'owner':  # TODO add logic for owner and set a responseble person
-                    pass
+                    print(self.request.POST)
+                    form.instance.customer_id = UserProfile.objects.get(pk=self.request.POST.get('customer_id'))
+                    form.instance.apartment_id = Apartment.objects.get(pk=self.request.POST.get('apartment_id'))
+                    form.instance.order_status = 'SND'
+
                 elif self.request.user.is_authenticated and self.request.user.groups.first().name == 'repairer':
                     customer = OrderCustomerForm(self.request.POST).save()
                     app = ApartmentForm(self.request.POST).save(commit=False)
@@ -170,11 +183,11 @@ class OrderCreate(BaseClassExeption, CreateView):
                                      'pk': form.instance.pk,
                                      'auth': self.request.user.is_authenticated
                                      })
-        else:
-            return JsonResponse({'message': f'<h3>Ошибка, форма не валидна</h3>',
-                                 'pk': form.instance.pk,
-                                 'auth': self.request.user.is_authenticated
-                                 })
+        # else:
+        #     return JsonResponse({'message': f'<h3>Ошибка, форма не валидна</h3>',
+        #                          'pk': form.instance.pk,
+        #                          'auth': self.request.user.is_authenticated
+        #                          })
 
 
 class OrderCreatebyRepaier(BaseClassExeption, CreateView):
@@ -187,8 +200,6 @@ class OrderCreatebyRepaier(BaseClassExeption, CreateView):
     # def get_context_data(self, **kwargs):
     #     context = super().get_context_data(**kwargs)
     #     return context
-
-
 
 
 class OwnerInvoice(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, DetailView):
@@ -226,11 +237,15 @@ class OrderManagementSystem(BaseClassExeption, PermissionRequiredMixin, LoginReq
         return context
 
 
-class OrderUpdate(PermissionRequiredMixin, LoginRequiredMixin, UpdateView):
+class OrderUpdate(LoginRequiredMixin, UpdateView):
     model = OrderList
     template_name = 'order_update.html'
     form_class = OrderUpdateForm
-    permission_required = PERMISSION_FOR_OWNER
+
+    def get_form(self, **kwargs):
+        form =OrderUpdateForm(self.request.user, **kwargs)
+        return form
+        # return self.form_class(**self.get_form_kwargs())
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -246,8 +261,12 @@ class OrderUpdate(PermissionRequiredMixin, LoginRequiredMixin, UpdateView):
 class OrderDelete(BaseClassExeption, LoginRequiredMixin, DeleteView):
     model = OrderList
     template_name = 'order_delete.html'
-    success_url = '/list_order'
 
+    def get_success_url(self):
+        if self.request.user.groups.first().name == 'owner':
+            return f'/owner/{self.request.user.pk}'
+        elif self.request.user.groups.first().name == 'repairer':
+            return '/list_order'
 
 class InvoiceCreate(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, DetailView):
     """ Add name of works, quantity, price to order  """
@@ -434,7 +453,6 @@ def AddApartment(request):
         #     return redirect('home')
 
 
-
 @login_required
 def listservices_for_invoice_json(request, **kwargs):
     """for ajax request """
@@ -508,6 +526,7 @@ def save_list_jobs(request, **kwargs):
 @login_required
 def DeleteIvoiceService(request, **kwargs):
     """for ajax request """
+
     invoice_object = get_object_or_404(Invoice.objects.filter(order_id__repairer_id=request.user),
                                        pk=kwargs.get("invoice_pk"))
     invoice_object.delete()

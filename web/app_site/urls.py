@@ -11,13 +11,6 @@ urlpatterns = [
     path('list_order/update/<int:pk>', OrderUpdate.as_view(), name='update'),
     path('list_order/pdf/<int:order_pk>', CreateIvoicePDF, name='invoice_pdf'),
 
-
-    # path('new1', OrderCreatebyRepaier.as_view(), name='aaa'),
-
-
-
-
-
     path('update-user/<int:pk>', RepaierUpdate.as_view(), name='update-user'),
 
     path('add', OrderAddRepaier, name='add_repairer'),
@@ -38,9 +31,8 @@ urlpatterns = [
 
 
     path('owner/<int:pk>', OwnerDetailInformation.as_view(), name='owner'),
+    path('apartment', ApartmentList.as_view(), name='apartment'),
     path('owner-invoice/<int:pk>', OwnerInvoice.as_view(), name='ownerinvoice'),
-
-    # path('app', AddApartment, name=''),
 
     path('ordersearch/', OrderSearchForm.as_view(), name='search-order'),
 

@@ -118,8 +118,8 @@ class OrderCustomerForm(forms.ModelForm):
 class OrderForm(forms.ModelForm):
     text_order = forms.CharField(
         label='Order`s message',
-        widget=forms.TextInput(attrs={"class": "md-textarea form-control",
-                                     'placeholder': "Describe your problem", 'maxlength':1500}),
+        widget=forms.Textarea(attrs={"class": "md-textarea form-control",
+                                     'placeholder': "Describe problems", 'maxlength':1500, 'rows':3, 'cols':10}),
         required=True
         )
 
@@ -128,17 +128,21 @@ class OrderForm(forms.ModelForm):
         fields = ('text_order', )
 
 class OrderUpdateForm(forms.ModelForm):
-    text_order = forms.CharField(
-        label='Order`s message',
-        widget=forms.TextInput(attrs={"class": "md-textarea form-control",
-                                     'placeholder': "Describe your problem", 'maxlength':1500}),
-        required=True
-        )
+    def __init__(self, user):
+        super().__init__()
+        self.user = UserProfile.objects.get(user=user)
+        self.fields['apartment_id'] = forms.ModelChoiceField(label='Apartment`s customer', queryset=Apartment.objects.filter(
+            owner=self.user), empty_label="Choose address...")
 
-    apartment_id = forms.ModelChoiceField(label='Apartment`s customer', queryset=Apartment.objects.all())
+    # text_order = forms.CharField(
+    #     label='Order`s message',
+    #     widget=forms.TextInput(attrs={"class": "md-textarea form-control",
+    #                                  'placeholder': "Describe your problem", 'maxlength':1500}),
+    #     required=True
+    #     )
     class Meta:
         model = OrderList
-        fields = ('text_order', 'apartment_id', 'customer_id')
+        fields = ('text_order', 'apartment_id')
 
 
 
@@ -149,23 +153,21 @@ class OwnerFormOrder(forms.ModelForm):
         self.user=UserProfile.objects.get(user=user)
 
         self.fields['apartment_id'] = forms.ModelChoiceField(label='Apartment`s customer', queryset=Apartment.objects.filter(
-            owner=self.user))
+            owner=self.user), empty_label="Choose address...")
+        self.fields['customer_id']= forms.ModelChoiceField(queryset=UserProfile.objects.filter(user=user), empty_label=None)
+
 
     text_order = forms.CharField(
         label='Order`s message',
-        widget=forms.TextInput(attrs={"class": "md-textarea form-control",
-                                     'placeholder': "Describe problems", 'maxlength':1500}),
+        widget=forms.Textarea(attrs={"class": "md-textarea form-control",
+                                     'placeholder': "Describe problems", 'maxlength':1500, 'rows':5, 'cols':10}),
         required=True
         )
 
 
     class Meta:
         model = OrderList
-        fields =('text_order', 'apartment_id')
-
-
-
-
+        fields =('text_order', 'apartment_id', 'customer_id')
 
 
 

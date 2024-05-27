@@ -9,7 +9,9 @@
    <div  class="{{ class_ }}" id="{{ id_ }}">
                 <div class="col-md-4">
 
-                    <a href="{{ the_url_invoice }}" id="order_{{ i.pk }}" class="h5 mycolor">Order № {{ i.pk }}</a><a href="{{ the_url_delete }}" id="delete_{{ i.pk }}" class="mycolor" title="Delete"><i class="fas fa-trash text-secondary ml-3"></i></a><br>
+                    <a href="{{ the_url_invoice }}" id="order_{{ i.pk }}" class="h5 mycolor">Order № {{ i.pk }}</a>
+                    <a href="{{ the_url_delete }}" id="delete_{{ i.pk }}" class="mycolor" title="Delete">
+                        <i class="fas fa-trash text-secondary ml-3"></i></a><br>
                     <div id="time_in" class="mt-2">{{ i.time_in }}</div>
 
 

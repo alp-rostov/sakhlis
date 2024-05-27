@@ -29,9 +29,9 @@
     <div class="row" >
         <div class="col-md-4 mt-3" >
             <h4 class="mycolor"><b>Order № {{ info.id }}</b></h4>
-            {{ info.time_in }} <a href="../list_order/update/{{ info.pk}}" class="fas fa-pen-square text-secondary"></a><br>
+            {{ info.time_in }}<br>
             {% if info.order_status == 'SND' %}
-                 <a href="../changestatus?order_pk={{ info.pk}}&work_status=RCV"lh-1 id="workstatus"
+                 <a href="../changestatus?order_pk={{ info.pk}}&work_status=RCV" id="workstatus"
                  class="btn btn-sm btn-orange" >ACCEPT JOB</a>
             {% elif info.order_status == 'RCV' %}
                  <a href="../changestatus?order_pk={{ info.pk}}&work_status=END" id="workstatus" class="btn btn-sm btn-orange">Job was completed</a><br>

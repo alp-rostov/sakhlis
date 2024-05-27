@@ -7,10 +7,6 @@ from django.urls import reverse
 from django_cleanup import cleanup
 
 from .constants import CITY_CHOICES, ORDER_STATUS, WORK_CHOICES, QUANTITY_CHOICES, APART_CHOICES
-#
-# phoneNumberRegex = RegexValidator(regex=r"^\+?1?\d{8,15}$",
-#                                   message="Phone number must be entered in the "
-#                                           "format: '+999999999'. Up to 15 digits allowed.")
 
 class Service(models.Model):
     """name type """
@@ -90,7 +86,7 @@ class Apartment(models.Model):
         verbose_name_plural = 'Appartment list'
 
     def __str__(self):
-        return f"{self.pk} {self.address_street_app} {self.address_num}"
+        return f"{self.address_street_app} {self.address_num} | {self.name}"
 
 class OrderList(models.Model):
     """________________________"""
