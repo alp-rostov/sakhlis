@@ -122,18 +122,10 @@ class OwnerDetailInformation(PermissionRequiredMixin, LoginRequiredMixin, Detail
         context = super().get_context_data(**kwargs)
         context['formorder'] = OwnerFormOrder(self.request.user)
         context['profile'] = DataFromRepairerList().get_object_from_UserProfile(user=self.object)
-        context['apartments'] = context['profile'].apartment_set.select_related('owner').all()
-        context['apartments1'] =[]
+        context['apartments2']=OrderList.objects.filter(customer_id=context['profile']).order_by('apartment_id__address_street_app').select_related('apartment_id','repairer_id', 'customer_id')
+        # TODO add apartment wich don`t have orders
 
 
-
-        for i in context['apartments']:
-
-            context['apartments1'].append((i, OrderList.objects
-                                           .filter(apartment_id=i) \
-                                           .select_related( 'repairer_id') \
-                                           .values('pk', 'time_in', 'text_order', 'repairer_id__username') \
-                                           .order_by('-time_in')))
         return context
 
 
@@ -263,8 +255,8 @@ class OwnerOrderManagementSystem(BaseClassExeption, LoginRequiredMixin, ListView
         context = super().get_context_data(**kwargs)
         context['filterset'] = self.filterset
         # c = DataFromInvoice().get_total_cost_of_some_orders(list_of_orders=self.get_queryset())
-        # context['summ_orders'] = c.get('Summ')
-        # context['count_orders'] = self.get_queryset().count()
+        # # context['summ_orders'] = c.get('Summ')
+        context['count_orders'] = self.get_queryset().count()
         return context
 
 
