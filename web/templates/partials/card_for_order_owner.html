@@ -2,7 +2,7 @@
    {% load custom_filters %}
 {% load custom_tags %}
 
-{% url 'invoice' i.pk as the_url_invoice %}
+{% url 'ownerinvoice' i.pk as the_url_invoice %}
 {% url 'delete-order' i.pk as the_url_delete %}
 {% url 'update' i.pk as the_url_update %}
 
@@ -17,25 +17,7 @@
 
                 </div>
                 <div class="col-md-4 ">
-                    <span id="customer_name_{{ i.pk }}" class="" aria-hidden="true">  <a href="{{  i.customer_id.pk  }}" id="link" class="text-secondary h5" data-toggle="modal" data-target="#exampleModal"> {{ i.customer_id|capfirst }}</a></span><br>
-
-                    {% if i.customer_id.phone %}
-                    <a href="tel:{{ i.customer_id.phone }}" title="Phone" id="customer_phone_{{ i.pk }}" class="fas fa-phone prefix text-secondary mt-2" aria-hidden="true">
-                        {{ i.customer_id.phone }}</a><br>
-                    {% endif %}
-
-                    {% if i.customer_id.telegram %}
-                    <a href="https://t.me/{{ i.customer_id.telegram|cut:'@' }}" title="Telegram" id="customer_id.telegram_{{ i.pk }}"
-                       class ="fas fa fa-paper-plane text-secondary mt-2" aria-hidden="true">
-                         @{{i.customer_id.telegram}}</a><br>
-                    {% endif %}
-
-                    {% if i.customer_id.whatsapp %}
-                    <a href="https://wa.me/{{ i.customer_id.whatsapp }}" title="whatsapp" id="customer_id.whatsapp_{{ i.pk }}"
-                       class ="fas fa text-secondary mt-2" aria-hidden="true">
-                         Whatsapp: {{i.customer_id.whatsapp}}</a><br>
-                    {% endif %}
-
+                    <span id="customer_name_{{ i.pk }}" class="text-secondary" aria-hidden="true">Repaier:  <a href="{{  i.customer_id.pk  }}" id="link" class="text-secondary h5" data-toggle="modal" data-target="#exampleModal"> {{ i.repairer_id__username|capfirst }}</a></span><br>
 
                     {% if i.apartment_id.link_location  %}
                     <a href="{{i.apartment_id.link_location}}" class="fas fa-map-marker prefix text-secondary mt-2" title="Open map" aria-hidden="true" >

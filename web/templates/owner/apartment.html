@@ -15,7 +15,7 @@
           <div class="col-3 border m-2 p-2">
                 <h4>{{ b.name|default_if_none:'' }}</h4>
                 <h5 class="mt-0 p-0">{{ b.address_street_app }} {{ b.address_num }}, {{ b.address_city|choice_tag:'city' }}</h5>
-                <p class="text-secondary ">{{ b.notes|default_if_none:'' }}</p>
+              <p class="text-secondary ">{{ b.notes|default_if_none:'' }}<a href="{{b.link_location }}">MAP</a></p>
                 <img src="../media/{{ b.foto|default_if_none:'images/none.jpg' }} " alt="" class="" width="200"><br>
             </div>
 

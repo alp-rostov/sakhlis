@@ -214,7 +214,7 @@ class OwnerInvoice(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixi
         return context
 
 
-class OrderManagementSystem(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, ListView):
+class OrderManagementSystem(BaseClassExeption, LoginRequiredMixin, ListView):
     """ list of all orders """
     model = OrderList
     context_object_name = 'order'
@@ -233,8 +233,55 @@ class OrderManagementSystem(BaseClassExeption, PermissionRequiredMixin, LoginReq
         c = DataFromInvoice().get_total_cost_of_some_orders(list_of_orders=self.get_queryset())
         context['summ_orders'] = c.get('Summ')
         context['count_orders'] = self.get_queryset().count()
-
         return context
+
+
+
+class OwnerOrderManagementSystem(BaseClassExeption, LoginRequiredMixin, ListView):
+    """ list of all orders """
+    model = OrderList
+    context_object_name = 'order'
+    template_name = 'owner/order_list.html'
+    permission_required = PERMISSION_FOR_OWNER
+    ordering = ['-time_in']
+
+
+    def get_queryset(self):
+        userprof=UserProfile.objects.get(user=self.request.user)
+        queryset = super().get_queryset() \
+                    .filter(customer_id=userprof) \
+                    .select_related('apartment_id', 'repairer_id') \
+                    .values('pk', 'time_in',
+                            'text_order', 'apartment_id',
+                            'repairer_id__username', 'apartment_id__address_street_app',
+                            'apartment_id__address_city', 'apartment_id__address_num'
+                            )
+
+        self.filterset = OrderFilter(self.request.GET, queryset)
+        return self.filterset.qs
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['filterset'] = self.filterset
+        # c = DataFromInvoice().get_total_cost_of_some_orders(list_of_orders=self.get_queryset())
+        # context['summ_orders'] = c.get('Summ')
+        # context['count_orders'] = self.get_queryset().count()
+        return context
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 class OrderUpdate(LoginRequiredMixin, UpdateView):

@@ -40,7 +40,7 @@ top: 0;
 
 {% url 'owner' request.user.id as the_url1 %}
 
-{% url 'apartment' as the_url2 %}
+{% url 'owner_list_order' as the_url2 %}
 
 
 
@@ -62,9 +62,9 @@ top: 0;
 
     <li class="nav-item mr-4">
         {% if the_url2 in request.get_full_path  %}
-        <a class="nav-link"  href="{{ the_url2 }}"><b>Appartments</b></a>
+        <a class="nav-link"  href="{{ the_url2 }}"><b>Orders</b></a>
         {% else %}
-        <a class="nav-link"  href="{{ the_url2 }}">Appartments</a>
+        <a class="nav-link"  href="{{ the_url2 }}">Orders</a>
         {% endif %}
 
     </li>

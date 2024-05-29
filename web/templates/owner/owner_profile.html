@@ -71,8 +71,9 @@
         <input id="tab-btn-{{ b.pk }}" name="tab-btn" type="radio" value="">
         <label for="tab-btn-{{ b.pk }}">{{b.address_street_app}} {{b.address_num|default_if_none:''}}</label>
     {% endif %}
-{% endfor %}
 
+{% endfor %}
+      <label for="tab-btn-{{ b.pk }}" class="text-secondary border ml-3" ><b>add new</b></label>
 
 {% for b in apartments1 %}
 
