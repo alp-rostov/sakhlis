@@ -66,7 +66,7 @@
 <!--{{v}}-->
 <!--{% endfor %}-->
 <!--{% endfor %}-->
-{{apartm}}
+{{ list_app }}
        <div class="container">
             <div class="row">
 <div class="col-12">
@@ -74,13 +74,13 @@
 <div class="container">
   <div class="tab">
 {% for b in apartments %}
-<!--    {% if ap_list.0 == b %}-->
-<!--        <input checked id="tab-btn-{{ b.pk }}" name="tab-btn" type="radio" value="">-->
-<!--        <label for="tab-btn-{{ b.pk }}">{{b.address_street_app}} {{b.address_num|default_if_none:''}}</label>-->
-<!--    {% else %}-->
+    {% if apartments.0 == b %}
+        <input checked id="tab-btn-{{ b.pk }}" name="tab-btn" type="radio" value="">
+        <label for="tab-btn-{{ b.pk }}">{{b.address_street_app}} {{b.address_num|default_if_none:''}}</label>
+    {% else %}
         <input id="tab-btn-{{ b.pk }}" name="tab-btn" type="radio" value="">
         <label for="tab-btn-{{ b.pk }}">{{b.address_street_app}} {{b.address_num|default_if_none:''}}</label>
-<!--    {% endif %}-->
+    {% endif %}
 
 {% endfor %}
       <label for="tab-btn-{{ b.pk }}" class="text-secondary border ml-3" ><b>add new</b></label>
@@ -113,6 +113,51 @@
         </div>
     </div>
       {% endfor %}
+
+
+{% for q in list_app %}
+
+
+
+          <div class="tab-content" id="content-{{ q.pk }}">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <h4>{{ q.name|default_if_none:'' }}</h4>
+                <h5 class="mt-0 p-0">{{ q.address_street_app }} {{ q.address_num }}, {{ q.address_city|choice_tag:'city' }}</h5>
+                <p class="text-secondary ">{{ q.notes|default_if_none:'' }}</p>
+                <img src="../media/{{ q.foto|default_if_none:'images/none.jpg' }} " alt="" class="" width="200"><br>
+            </div>
+
+            <div class="col-lg-8 col-md-8 col-sm-12">
+                    <div class="mt-1 mb-2 p-2  border-5 rounded">
+                        <h5>NO ORDERS</h5>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+{% endfor %}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </div>

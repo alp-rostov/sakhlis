@@ -199,14 +199,20 @@ class OwnerDetailInformation(PermissionRequiredMixin, LoginRequiredMixin, Detail
         context['profile'] = DataFromRepairerList().get_object_from_UserProfile(user=self.object)
         context['apartments2']=(OrderList.objects.defer('time_out', 'order_status')
                                 .filter(customer_id=context['profile'])
-                                .order_by('apartment_id__address_street_app')
+                                .order_by('apartment_id__address_street_app', '-time_in')
                                 .select_related('apartment_id','repairer_id', 'customer_id')
                                 )
 
         context['apartments']=(Apartment.objects
                                .filter(owner=context['profile'])
-                               .values('pk', 'address_city', 'address_street_app', 'address_num')
+                               .only('pk', 'address_city', 'address_street_app', 'address_num', 'foto', 'notes', 'name')
                                .order_by('address_street_app'))
+
+        list_app_=set([i.get('apartment_id') for i in context['apartments2'].values('apartment_id')])
+        list_app=context['apartments'].exclude(pk__in=list_app_)
+
+        context['list_app']=list_app
+
         return context
 
 
@@ -268,7 +274,7 @@ class OwnerOrderManagementSystem(OrderManagementSystem, BaseClassExeption, Login
                             'text_order', 'apartment_id',
                             'repairer_id__username', 'apartment_id__address_street_app',
                             'apartment_id__address_city', 'apartment_id__address_num'
-                            )
+                            ).order_by('-time_in')
         self.filterset = OrderFilter(self.request.GET, queryset)
         return self.filterset.qs
 
@@ -496,7 +502,7 @@ def listservices_for_invoice_json(request, **kwargs):
 def client_details_json(request, **kwargs):
     """for ajax request """
     data = UserProfile.objects.get(pk=request.GET.get('pk'))
-    orders = OrderList.objects.filter(repairer_id=request.user, customer_id=data).values('pk','text_order', 'time_in')[0:5]
+    orders = OrderList.objects.filter(repairer_id=request.user, customer_id=data).values('pk','text_order', 'time_in').order_by('-time_in')[0:5]
     json_orders = json.dumps(list(orders), default=str)
     apartment=Apartment.objects.filter(owner=data).values('pk','name','address_city', 'address_street_app', 'address_num').order_by('-address_street_app')
     json_apartment = json.dumps(list(apartment), default=str)

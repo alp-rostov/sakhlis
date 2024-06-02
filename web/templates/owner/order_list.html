@@ -52,9 +52,9 @@
                     {% else %}
                     <a href="" title="" class="fas fa-home prefix text-secondary mt-2" aria-hidden="true" >
                     {% endif %}
-                        <span id="city_{{ i.pk }}" >{{ i.apartment_id.address_city|choice_tag:'city'}}</span>,
-                        <span id="street_app_{{ i.pk }}">{{ i.apartment_id__address_street_app }}</span>,
-                        <span id="num_{{ i.pk }}">{{ i.apartment_id__city }}</span>.
+                        <span id="street_app_{{ i.pk }}">{{ i.apartment_id__address_street_app }}</span>
+                        <span id="num_{{ i.pk }}">{{ i.apartment_id__address_num }}</span>,
+                        <span id="city_{{ i.pk }}" >{{ i.apartment_id__address_city|choice_tag:'city'}}</span>.
                     </a>
 
                 </div>
