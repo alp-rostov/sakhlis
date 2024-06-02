@@ -29,11 +29,9 @@
 {% regroup apartments2 by apartment_id as ap_list %}
 
 
-{% for z in ap_list %}
-  #tab-btn-{{z.grouper.pk}}:checked~#content-{{z.grouper.pk}},
+{% for z in apartments %}
+  #tab-btn-{{z.pk}}:checked~#content-{{z.pk}},
 {% endfor %}
-
-
 
 #tab-btn-0:checked~#content-0
   {
@@ -68,21 +66,21 @@
 <!--{{v}}-->
 <!--{% endfor %}-->
 <!--{% endfor %}-->
-
+{{apartm}}
        <div class="container">
             <div class="row">
 <div class="col-12">
 
 <div class="container">
   <div class="tab">
-{% for b in ap_list %}
-    {% if ap_list.0 == b %}
-        <input checked id="tab-btn-{{ b.grouper.pk }}" name="tab-btn" type="radio" value="">
-        <label for="tab-btn-{{ b.grouper.pk }}">{{b.grouper.address_street_app}} {{b.grouper.address_num|default_if_none:''}}</label>
-    {% else %}
-        <input id="tab-btn-{{ b.grouper.pk }}" name="tab-btn" type="radio" value="">
-        <label for="tab-btn-{{ b.grouper.pk }}">{{b.grouper.address_street_app}} {{b.grouper.address_num|default_if_none:''}}</label>
-    {% endif %}
+{% for b in apartments %}
+<!--    {% if ap_list.0 == b %}-->
+<!--        <input checked id="tab-btn-{{ b.pk }}" name="tab-btn" type="radio" value="">-->
+<!--        <label for="tab-btn-{{ b.pk }}">{{b.address_street_app}} {{b.address_num|default_if_none:''}}</label>-->
+<!--    {% else %}-->
+        <input id="tab-btn-{{ b.pk }}" name="tab-btn" type="radio" value="">
+        <label for="tab-btn-{{ b.pk }}">{{b.address_street_app}} {{b.address_num|default_if_none:''}}</label>
+<!--    {% endif %}-->
 
 {% endfor %}
       <label for="tab-btn-{{ b.pk }}" class="text-secondary border ml-3" ><b>add new</b></label>
@@ -98,7 +96,7 @@
                 <h4>{{ c.grouper.name|default_if_none:'' }}</h4>
                 <h5 class="mt-0 p-0">{{ c.grouper.address_street_app }} {{ c.grouper.address_num }}, {{ c.grouper.address_city|choice_tag:'city' }}</h5>
                 <p class="text-secondary ">{{ c.grouper.notes|default_if_none:'' }}</p>
-                <img src="../media/{{ b.0.foto|default_if_none:'images/none.jpg' }} " alt="" class="" width="200"><br>
+                <img src="../media/{{ c.grouper.foto|default_if_none:'images/none.jpg' }} " alt="" class="" width="200"><br>
             </div>
 
             <div class="col-lg-8 col-md-8 col-sm-12">
@@ -106,7 +104,7 @@
                     <div class="mt-1 mb-2 p-2 border border-5 rounded">
                         <a href="{% url 'delete-order' b.pk %}" id="delete_{{ b.pk }}" class="mycolor" title="Delete">
                         <i class="fas fa-trash text-secondary"></i></a>
-                        <a href="{% url 'ownerinvoice' b.pk %}" class="mycolor"><b>Order № {{ b.pk }}</b></a> | {{ b.time_in }} |<a href="{{ b.customer_id.pk }}" id="link" class="text-secondary" data-toggle="modal" data-target="#exampleModal">  {{ b.repairer_id__username|default_if_none:"" }}</a><br>
+                        <a href="{% url 'ownerinvoice' b.pk %}" class="mycolor"><b>Order № {{ b.pk }}</b></a> | {{ b.time_in }} |<a href="{{ b.customer_id.pk }}" id="link" class="text-secondary" data-toggle="modal" data-target="#exampleModal">  {{ b.repairer_id|default_if_none:"" }}</a><br>
                         <div class="mt-2">{{ b.text_order }} </div>
                     </div>
 

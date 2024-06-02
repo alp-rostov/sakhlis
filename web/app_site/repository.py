@@ -95,7 +95,6 @@ class DataFromInvoice:
     def __init__(self, model = Invoice.objects):
         self.model=model
 
-
     def get_amount_money_of_orders(self, repairer:User) -> float:
         return self.model\
             .values('order_id__repairer_id')\
@@ -126,6 +125,5 @@ class DataFromInvoice:
     def get_total_cost_of_some_orders(self, list_of_orders: QuerySet) -> QuerySet:
         return self.model\
             .filter(order_id__in=list_of_orders)\
-            .aggregate(Summ=Sum(F('price') * F('quantity')))
-
+            .aggregate(Summ=Sum(F('price') * F('quantity'))).get('Summ')
 

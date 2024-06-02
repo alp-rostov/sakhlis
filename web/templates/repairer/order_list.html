@@ -24,10 +24,70 @@
 
 {% block body %}
 
+
 <div id="head" class="container">
     {% for i in order %}
-        {% #card_order class_="row border  rounded p-2 m-3" i=i %}
-        {% /card_order %}
+
+   <div  class="row border  rounded p-2 m-3" id="{{ id_ }}">
+                <div class="col-md-4">
+
+                    <a href="{% url 'invoice' i.pk %}" id="order_{{ i.pk }}" class="h5 mycolor">Order № {{ i.pk }}</a>
+                    <a href="{% url 'delete-order' i.pk %}" id="delete_{{ i.pk }}" class="mycolor" title="Delete">
+                        <i class="fas fa-trash text-secondary ml-3"></i></a><br>
+                    <div id="time_in" class="mt-2">{{ i.time_in }}</div>
+
+
+                </div>
+                <div class="col-md-4 ">
+                    <span id="customer_name_{{ i.pk }}" class="" aria-hidden="true">  <a href="{{  i.customer_id__pk  }}" id="link" class="text-secondary h5" data-toggle="modal" data-target="#exampleModal"> {{ i.customer_id__customer_name|capfirst }}</a></span><br>
+
+                    {% if i.customer_id__phone %}
+                    <a href="tel:{{ i.customer_id__phone }}" title="Phone" id="customer_phone_{{ i.pk }}" class="fas fa-phone prefix text-secondary mt-2" aria-hidden="true">
+                        {{ i.customer_id__phone }}</a><br>
+                    {% endif %}
+
+                    {% if i.customer_id__telegram %}
+                    <a href="https://t.me/{{ i.customer_id__telegram|cut:'@' }}" title="Telegram" id="customer_id__telegram_{{ i.pk }}"
+                       class ="fas fa fa-paper-plane text-secondary mt-2" aria-hidden="true">
+                         @{{i.customer_id__telegram}}</a><br>
+                    {% endif %}
+
+                    {% if i.customer_id__whatsapp %}
+                    <a href="https://wa.me/{{ i.customer_id__whatsapp }}" title="whatsapp" id="customer_id__whatsapp_{{ i.pk }}"
+                       class ="fas fa text-secondary mt-2" aria-hidden="true">
+                         Whatsapp: {{i.customer_id__whatsapp}}</a><br>
+                    {% endif %}
+
+
+                    {% if i.apartment_id__link_location  %}
+                    <a href="{{i.apartment_id__link_location}}" class="fas fa-map-marker prefix text-secondary mt-2" title="Open map" aria-hidden="true" >
+                    {% else %}
+                    <a href="" title="" class="fas fa-home prefix text-secondary mt-2" aria-hidden="true" >
+                    {% endif %}
+                        <span id="city_{{ i.pk }}" >{{ i.apartment_id__address_city|choice_tag:'city'}}</span>,
+                        <span id="street_app_{{ i.pk }}">{{ i.apartment_id__address_street_app|capfirst }}</span>,
+                        <span id="num_{{ i.pk }}">{{ i.apartment_id__address_num }}</span>.
+                    </a>
+
+                </div>
+
+                <div class="col-md-4">
+                    <p id="text_order_{{ i.pk }}" class="fas text-secondary">{{ i.text_order|truncatechars:200|capfirst }}</p>
+
+
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
     {% endfor %}
 </div>
 
@@ -91,7 +151,7 @@
 
 
 
-                            <div class="row mb-2 mt-2" id="order1">Client requests:
+                            <div class="row mb-2 mt-2" id="order1">5 latest client requests::
                             </div>
                     </div>
                 </div>
