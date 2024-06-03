@@ -31,7 +31,9 @@ urlpatterns = [
 
 
     path('owner/<int:pk>', OwnerDetailInformation.as_view(), name='owner'),
-    # path('apartment', ApartmentList.as_view(), name='apartment'),
+    path('owner/apartment/<int:pk>', OwnerApartmentUpdate.as_view(), name='apartment_update'),
+    path('owner/apartment/create', OwnerApartmentCreate.as_view(), name='apartment_create'),
+
     path('owner/list_order', OwnerOrderManagementSystem.as_view(), name='owner_list_order'),
     path('owner-invoice/<int:pk>', OwnerInvoice.as_view(), name='ownerinvoice'),
 

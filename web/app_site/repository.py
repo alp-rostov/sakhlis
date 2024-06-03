@@ -66,7 +66,7 @@ class DataFromOrderList:
             .values('time_in__month', 'time_in__year') \
             .annotate(count=Sum(F('invoice__price') * F('invoice__quantity'))) \
             .filter(repairer_id=repairer) \
-            .order_by('time_in__year')
+            .order_by('time_in__year', 'time_in__month')
 
     def get_monthly_order_quantity_from_OrderList(self, repairer: User) -> QuerySet:
         return self.model\

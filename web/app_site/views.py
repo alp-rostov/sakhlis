@@ -195,21 +195,22 @@ class OwnerDetailInformation(PermissionRequiredMixin, LoginRequiredMixin, Detail
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['formorder'] = OwnerFormOrder(self.object.pk)
-        profile = DataFromRepairerList().get_object_from_UserProfile(user=self.object.pk).pk
-        context['apartments2']=(OrderList.objects.only('time_in', 'text_order', 'apartment_id', 'apartment_id__address_street_app',
+        profile = DataFromRepairerList().get_object_from_UserProfile(user=context['owner'])
+        context['apartments2']=(OrderList.objects.only('time_in', 'text_order', 'apartment_id__address_street_app',
                                                        'apartment_id__address_num', 'apartment_id__name', 'apartment_id__notes',
                                                        'apartment_id__address_city', 'apartment_id__foto',
-                                                       'customer_id__customer_name', 'repairer_id__username' )
+                                                       'repairer_id__username')
                                 .filter(customer_id=profile)
                                 .order_by('apartment_id__address_street_app', '-time_in')
-                                .select_related('apartment_id', 'customer_id', 'repairer_id')
+                                .select_related('apartment_id', 'repairer_id')
                                 )
 
         context['apartments']=(Apartment.objects
                                .filter(owner=profile)
                                .only('pk', 'address_city', 'address_street_app', 'address_num', 'foto', 'notes', 'name')
                                .order_by('address_street_app'))
+        #
+        context['formorder'] = OwnerFormOrder(user=self.object, app=context['apartments'])
 
         list_app_=set([i.get('apartment_id') for i in context['apartments2'].values('apartment_id')])
         list_app=context['apartments'].exclude(pk__in=list_app_)
@@ -280,6 +281,26 @@ class OwnerOrderManagementSystem(OrderManagementSystem, BaseClassExeption, Login
                             ).order_by('-time_in')
         self.filterset = OrderFilter(self.request.GET, queryset)
         return self.filterset.qs
+
+
+class OwnerApartmentUpdate(LoginRequiredMixin, UpdateView):
+    model = Apartment
+    template_name = 'owner/apartment_update.html'
+    form_class = ApartentUpdateForm
+
+    def get_success_url(self):
+        return '/owner/' + str(self.request.user.pk)
+
+
+class OwnerApartmentCreate(LoginRequiredMixin, CreateView):
+
+    model = Apartment
+    form_class = ApartentUpdateForm
+    template_name = 'owner/apartment_update.html'
+
+    def get_success_url(self):
+        return '/owner/' + str(self.request.user.pk)
+
 
 
 class OrderSearchForm(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, ListView):

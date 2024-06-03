@@ -82,7 +82,8 @@
     {% endif %}
 
 {% endfor %}
-      <label for="tab-btn-{{ b.pk }}" class="text-secondary border ml-3" ><b>add new</b></label>
+      <label for="tab-btn-{{ b.pk }}" class="text-secondary border ml-3" >
+          <a href="{% url 'apartment_create' %}" class="mycolor" >add new</a></label>
 
 
 
@@ -94,16 +95,19 @@
             <div class="col-lg-4 col-md-4 col-sm-12">
                 <h4>{{ c.grouper.name|default_if_none:'' }}</h4>
                 <h5 class="mt-0 p-0">{{ c.grouper.address_street_app }} {{ c.grouper.address_num }}, {{ c.grouper.address_city|choice_tag:'city' }}</h5>
-                <p class="text-secondary ">{{ c.grouper.notes|default_if_none:'' }}</p>
+                <p class="text-secondary ">{{ c.grouper.notes|default_if_none:'' }}
+                    <a href="{% url 'apartment_update' c.grouper.pk %}" class="mycolor" title="изменить данные"><i class="fas fa-pen text-secondary"> </i></a></p>
                 <img src="../media/{{ c.grouper.foto|default_if_none:'images/none.jpg' }} " alt="" class="" width="200"><br>
             </div>
 
             <div class="col-lg-8 col-md-8 col-sm-12">
+                      <label for="tab-btn-{{ b.pk }}" class="text-secondary border ml-3" ><b>SENT REQUEST</b></label>
+
                 {% for b in c.list %}
                     <div class="mt-1 mb-2 p-2 border border-5 rounded">
                         <a href="{% url 'delete-order' b.pk %}" id="delete_{{ b.pk }}" class="mycolor" title="Delete">
                         <i class="fas fa-trash text-secondary"></i></a>
-                        <a href="{% url 'ownerinvoice' b.pk %}" class="mycolor"><b>Order № {{ b.pk }}</b></a> | {{ b.time_in }} |<a href="{{ b.customer_id.pk }}" id="link" class="text-secondary" data-toggle="modal" data-target="#exampleModal">  {{ b.repairer_id|default_if_none:"" }}</a><br>
+                        <a href="{% url 'ownerinvoice' b.pk %}" class="mycolor"><b>Order № {{ b.pk }}</b></a> | {{ b.time_in }} |<a href="{{ b.repairer_id.pk }}" id="link" class="text-secondary" data-toggle="modal" data-target="#exampleModal">  {{ b.repairer_id|default_if_none:"" }}</a><br>
                         <div class="mt-2">{{ b.text_order }} </div>
                     </div>
 
@@ -123,12 +127,16 @@
             <div class="col-lg-4 col-md-4 col-sm-12">
                 <h4>{{ q.name|default_if_none:'' }}</h4>
                 <h5 class="mt-0 p-0">{{ q.address_street_app }} {{ q.address_num }}, {{ q.address_city|choice_tag:'city' }}</h5>
-                <p class="text-secondary ">{{ q.notes|default_if_none:'' }}</p>
+                <p class="text-secondary ">{{ q.notes|default_if_none:'' }}
+                    <a href="{% url 'apartment_update' q.pk %}" class="mycolor" title="изменить данные"><i class="fas fa-pen text-secondary"> </i></a>
+                </p>
                 <img src="../media/{{ q.foto|default_if_none:'images/none.jpg' }} " alt="" class="" width="200"><br>
             </div>
 
             <div class="col-lg-8 col-md-8 col-sm-12">
                     <div class="mt-1 mb-2 p-2  border-5 rounded">
+      <label for="tab-btn-{{ b.pk }}" class="text-secondary border ml-3" ><b>SENT REQUEST</b></label>
+
                         <h5>NO ORDERS</h5>
                     </div>
             </div>
@@ -144,19 +152,6 @@
 
 
 {% endfor %}
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 </div>

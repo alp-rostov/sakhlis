@@ -40,6 +40,11 @@ class ApartmentForm(forms.ModelForm):
                   'address_street_app',
                   'address_num', 'link_location')
 
+class ApartentUpdateForm(forms.ModelForm):
+    class Meta:
+        model = Apartment
+        exclude = ["owner"]
+
 class CustomerForm(forms.ModelForm):
 
     customer_name = forms.CharField(
@@ -148,13 +153,12 @@ class OrderUpdateForm(forms.ModelForm):
 
 
 class OwnerFormOrder(forms.ModelForm):
-    def __init__(self, user):
+    def __init__(self, user, app):
         super().__init__()
         self.user=UserProfile.objects.get(user=user)
-
-        self.fields['apartment_id'] = forms.ModelChoiceField(label='Apartment`s customer', queryset=Apartment.objects.filter(
-            owner=self.user), empty_label="Choose address...")
-        self.fields['customer_id']= forms.ModelChoiceField(queryset=UserProfile.objects.filter(user=user), empty_label=None)
+        self.app=app
+        self.fields['apartment_id'] = forms.ModelChoiceField(label='Apartment`s customer', queryset=app, empty_label="Choose address...")
+        self.fields['customer_id']= forms.ModelChoiceField(queryset=UserProfile.objects.filter(user=user).only('customer_name'), empty_label=None)
 
 
     text_order = forms.CharField(
@@ -167,7 +171,7 @@ class OwnerFormOrder(forms.ModelForm):
 
     class Meta:
         model = OrderList
-        fields =('text_order', 'apartment_id', 'customer_id')
+        fields =('text_order',)
 
 
 

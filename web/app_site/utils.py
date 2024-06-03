@@ -175,14 +175,17 @@ class Graph:
             if help_dict:
                 c = ''
                 for _ in queryset:
-                    b = str(_.get('time_in__year')) if _.get('time_in__year') != c and _.get('time_in__year') else ' '
-                    labels.append(b + ' ' + help_dict[_[self.name_X]])
+                    b = str(_.get('time_in__month'))+'.'+str(_.get('time_in__year'))[2:4]
+                    labels.append(b)
                     data.append(_[self.data_Y])
                     c = _.get('time_in__year')
             else:
                 for _ in queryset:
                     labels.append(_[self.name_X])
                     data.append(_[self.data_Y])
+            print(data)
+            print(labels)
+
             return labels, data
 
         self.labels, self.data = get_data_for_graph(queryset)
