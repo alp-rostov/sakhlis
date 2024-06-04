@@ -183,8 +183,7 @@ class Graph:
                 for _ in queryset:
                     labels.append(_[self.name_X])
                     data.append(_[self.data_Y])
-            print(data)
-            print(labels)
+
 
             return labels, data
 

@@ -57,6 +57,14 @@ class Clients(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, Li
 
         return self.filterset.qs
 
+class ClientsUpdate(LoginRequiredMixin, UpdateView):
+    model = UserProfile
+    template_name = 'repairer/clients_update.html'
+    form_class = CustomerForm
+
+    def get_success_url(self):
+        return '/list_order'
+
 
 class Error404(TemplateView):
     template_name = '404.html'
@@ -292,14 +300,17 @@ class OwnerApartmentUpdate(LoginRequiredMixin, UpdateView):
         return '/owner/' + str(self.request.user.pk)
 
 
-class OwnerApartmentCreate(LoginRequiredMixin, CreateView):
-
+class OwnerApartmentCreate(BaseClassExeption, LoginRequiredMixin, CreateView):
     model = Apartment
-    form_class = ApartentUpdateForm
     template_name = 'owner/apartment_update.html'
+    form_class = ApartentUpdateForm
 
     def get_success_url(self):
         return '/owner/' + str(self.request.user.pk)
+
+    def get_form(self, form_class=None):
+        return ApartentCreateForm(self.request.user)
+
 
 
 

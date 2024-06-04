@@ -45,6 +45,18 @@ class ApartentUpdateForm(forms.ModelForm):
         model = Apartment
         exclude = ["owner"]
 
+
+class ApartentCreateForm(forms.ModelForm):
+    def __init__(self, user):
+        super().__init__()
+        self.user=UserProfile.objects.get(user=user)
+        self.fields['owner']= forms.ModelChoiceField(queryset=UserProfile.objects.filter(user=user).only('customer_name'), empty_label=None)
+
+    class Meta:
+        model = Apartment
+        fields='__all__'
+
+
 class CustomerForm(forms.ModelForm):
 
     customer_name = forms.CharField(
@@ -56,7 +68,7 @@ class CustomerForm(forms.ModelForm):
     profile = forms.CharField(
         label='About you',
         widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "About you: company, job title, etm", 'maxlength':1500}),
-        required=True
+        required=False
     )
 
     city = forms.ChoiceField(
@@ -88,7 +100,7 @@ class CustomerForm(forms.ModelForm):
 
     class Meta:
         model = UserProfile
-        fields = ('customer_name', 'phone', 'telegram', 'profile', 'foto', 'city', 'whatsapp')
+        fields = ('customer_name', 'phone', 'telegram', 'whatsapp', 'profile', 'foto', 'city')
 
 
 class InvoiceForm(forms.ModelForm):

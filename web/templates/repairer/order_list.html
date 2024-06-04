@@ -39,7 +39,12 @@
 
                 </div>
                 <div class="col-md-4 ">
-                    <span id="customer_name_{{ i.pk }}" class="" aria-hidden="true">  <a href="{{  i.customer_id__pk  }}" id="link" class="text-secondary h5" data-toggle="modal" data-target="#exampleModal"> {{ i.customer_id__customer_name|capfirst }}</a></span><br>
+                    <span id="customer_name_{{ i.pk }}" class="" aria-hidden="true">
+                        <a href="{{  i.customer_id__pk  }}" id="link" class="text-secondary h5" data-toggle="modal"
+                           data-target="#exampleModal"> {{ i.customer_id__customer_name|capfirst }}</a></span>
+                        <a href="{% url 'clients_update' i.customer_id__pk %}" class="text-secondary ml-3" >
+                            <i class="fas fa-pen text-secondary mt-3"> </i>
+                        </a><br>
 
                     {% if i.customer_id__phone %}
                     <a href="tel:{{ i.customer_id__phone }}" title="Phone" id="customer_phone_{{ i.pk }}" class="fas fa-phone prefix text-secondary mt-2" aria-hidden="true">

@@ -61,7 +61,7 @@ class UserProfile(models.Model):
         verbose_name = 'UserProfile'
         verbose_name_plural = 'UserProfile'
     def __str__(self):
-        return f"{self.pk} {self.customer_name}"
+        return f"{self.customer_name}"
 
 
 class Apartment(models.Model):

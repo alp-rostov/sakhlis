@@ -24,6 +24,8 @@ urlpatterns = [
     path('error404/', Error404.as_view(), name='error404'),
 
     path('clients/', Clients.as_view(), name='clients'),
+    path('clients/update/<int:pk>', ClientsUpdate.as_view(), name='clients_update'),
+
 
     path('stat/', Statistica.as_view(), name='stat'),
     path('user/<int:pk>', RepairerDetailInformation.as_view(), name='user'),
@@ -33,11 +35,11 @@ urlpatterns = [
     path('owner/<int:pk>', OwnerDetailInformation.as_view(), name='owner'),
     path('owner/apartment/<int:pk>', OwnerApartmentUpdate.as_view(), name='apartment_update'),
     path('owner/apartment/create', OwnerApartmentCreate.as_view(), name='apartment_create'),
-
     path('owner/list_order', OwnerOrderManagementSystem.as_view(), name='owner_list_order'),
     path('owner-invoice/<int:pk>', OwnerInvoice.as_view(), name='ownerinvoice'),
 
-    path('ordersearch/', OrderSearchForm.as_view(), name='search-order'),
+
+    # path('ordersearch/', OrderSearchForm.as_view(), name='search-order'),
 
     path('serv', listservices_for_invoice_json),
     path('save_list', save_list_jobs),
