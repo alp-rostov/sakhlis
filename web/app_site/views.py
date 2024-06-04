@@ -57,14 +57,19 @@ class Clients(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, Li
 
         return self.filterset.qs
 
-class ClientsUpdate(LoginRequiredMixin, UpdateView):
+
+class ClientsUpdate(PermissionRequiredMixin, LoginRequiredMixin, UpdateView):
     model = UserProfile
     template_name = 'repairer/clients_update.html'
     form_class = CustomerForm
-
-    def get_success_url(self):
-        return '/list_order'
-
+    permission_required = PERMISSION_FOR_REPAIER
+    def form_valid(self, form):
+        if OrderList.objects.filter(customer_id=self.object, repairer_id=self.request.user).exists() and not self.object.user:
+            form.save()
+            url = reverse('user', args=(self.request.user.pk, ))
+            return redirect(url)
+        else:
+            return redirect('error404')
 
 class Error404(TemplateView):
     template_name = '404.html'
@@ -124,7 +129,7 @@ class OrderCreate(BaseClassExeption, CreateView):
     model = OrderList
     template_name = 'order_create.html'
     form_class = OrderForm
-    success_url = reverse_lazy('home')
+    success_url = 'home'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -306,7 +311,8 @@ class OwnerApartmentCreate(BaseClassExeption, LoginRequiredMixin, CreateView):
     form_class = ApartentUpdateForm
 
     def get_success_url(self):
-        return '/owner/' + str(self.request.user.pk)
+        url=reverse('owner', args=(self.request.user.pk,))
+        return url
 
     def get_form(self, form_class=None):
         return ApartentCreateForm(self.request.user)

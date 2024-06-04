@@ -58,6 +58,10 @@
                     Order № {{ b.pk }}</a> | {{ b.time_in }} |
                     <a href="{{ b.customer_id.pk }}" id="link_customer" class="text-secondary" data-toggle="modal" data-target="#exampleModal">  {{ b.customer_id.customer_name }}</a>
 
+                     <a href="{% url 'clients_update' b.customer_id.pk %}" class="text-secondary ml-3" title="upgrade data" >
+                            <i class="fas fa-pen text-secondary" style='font-size:14px'> </i>
+                        </a>
+
                     <div id="mydiv{{ b.pk }}" style="display:none;">
                         {% if b.customer_id.phone %}
                         <a href="tel:+{{ b.customer_id.phone }}" title="Phone" id="customer_phone_{{ b.pk }}"
