@@ -45,18 +45,6 @@ class ApartentUpdateForm(forms.ModelForm):
         model = Apartment
         exclude = ["owner"]
 
-
-class ApartentCreateForm(forms.ModelForm):
-    def __init__(self, user):
-        super().__init__()
-        self.user=UserProfile.objects.get(user=user)
-        self.fields['owner']= forms.ModelChoiceField(queryset=UserProfile.objects.filter(user=user).only('customer_name'), empty_label=None)
-
-    class Meta:
-        model = Apartment
-        fields='__all__'
-
-
 class CustomerForm(forms.ModelForm):
 
     customer_name = forms.CharField(

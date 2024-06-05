@@ -138,7 +138,7 @@ class OrderCreate(BaseClassExeption, CreateView):
         return context
 
     def form_valid(self, form):
-        # if OrderCustomerForm(self.request.POST).is_valid() and ApartmentForm(self.request.POST).is_valid():
+        if OrderCustomerForm(self.request.POST).is_valid() and ApartmentForm(self.request.POST).is_valid():
             with transaction.atomic():
 
                 if self.request.user.is_authenticated and self.request.user.groups.first().name == 'owner':  # TODO add logic for owner and set a responseble person
@@ -170,11 +170,11 @@ class OrderCreate(BaseClassExeption, CreateView):
                                      'pk': form.instance.pk,
                                      'auth': self.request.user.is_authenticated
                                      })
-        # else:
-        #     return JsonResponse({'message': f'<h3>Ошибка, форма не валидна</h3>',
-        #                          'pk': form.instance.pk,
-        #                          'auth': self.request.user.is_authenticated
-        #                          })
+        else:
+            return JsonResponse({'message': f'<h3>Ошибка, форма не валидна</h3>',
+                                 'pk': form.instance.pk,
+                                 'auth': self.request.user.is_authenticated
+                                 })
 
 
 class OrderCreatebyRepaier(BaseClassExeption, CreateView):
@@ -296,52 +296,25 @@ class OwnerOrderManagementSystem(OrderManagementSystem, BaseClassExeption, Login
         return self.filterset.qs
 
 
+class OwnerApartmentCreate(BaseClassExeption, LoginRequiredMixin, CreateView):
+    model = Apartment
+    template_name = 'owner/apartment_update.html'
+    form_class = ApartentUpdateForm
+
+    def form_valid(self, form):
+        form.instance.owner=UserProfile.objects.get(user=self.request.user)
+        form.save()
+        url = reverse('owner', args=(self.request.user.pk,))
+        return redirect(url)
+
 class OwnerApartmentUpdate(LoginRequiredMixin, UpdateView):
     model = Apartment
     template_name = 'owner/apartment_update.html'
     form_class = ApartentUpdateForm
 
     def get_success_url(self):
-        return '/owner/' + str(self.request.user.pk)
-
-
-class OwnerApartmentCreate(BaseClassExeption, LoginRequiredMixin, CreateView):
-    model = Apartment
-    template_name = 'owner/apartment_update.html'
-    form_class = ApartentUpdateForm
-
-    def get_success_url(self):
-        url=reverse('owner', args=(self.request.user.pk,))
-        return url
-
-    def get_form(self, form_class=None):
-        return ApartentCreateForm(self.request.user)
-
-
-
-
-class OrderSearchForm(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, ListView):
-    model = OrderList
-    context_object_name = 'order'
-    template_name = 'repairer/ordersearchform.html'
-    ordering = ['-time_in']
-    permission_required = PERMISSION_FOR_REPAIER
-
-    def get_queryset(self):
-        queryset = super().get_queryset().filter(repairer_id=self.request.user).select_related('customer_id', 'apartment_id').all()
-        self.filterset = OrderFilter(self.request.GET, queryset)
-        return self.filterset.qs
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['filterset'] = self.filterset
-        # context['form_customer'] = CustomerForm
-        # context['form_order'] = OrderForm
-        # context['form_appart'] = ApartmentForm
-        # c = DataFromInvoice().get_total_cost_of_some_orders(list_of_orders=self.get_queryset())
-        # context['summ_orders'] = c.get('Summ')
-        # context['count_orders'] = self.get_queryset().count()
-        return context
+        url = reverse('owner', args=(self.request.user.pk,))
+        return redirect(url)
 
 
 class OrderUpdate(LoginRequiredMixin, UpdateView):
