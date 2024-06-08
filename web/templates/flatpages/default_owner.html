@@ -38,15 +38,14 @@ top: 0;
 
 
 
-{% url 'owner' request.user.id as the_url1 %}
+{% url 'owner' as the_url1 %}
 
-{% url 'owner_list_order' as the_url2 %}
+{% url 'o_list_order' as the_url2 %}
 
 
 
 <!--Header-->
 {% #menu %}
-{% if request.user.groups.first.name == 'owner' %}
     <li class="nav-item mr-4">
         <a class="nav-link" href="{% url 'home' %}">Main</a>
     </li>
@@ -70,10 +69,6 @@ top: 0;
     </li>
 
 
-    <li class="nav-item mr-4">
-        <a class="nav-link" href="">Statistica</a>
-    </li>
-{% endif %}
 
     {% if request.user.is_authenticated %}
         <li class="nav-item mr-4">
@@ -87,7 +82,6 @@ top: 0;
         <section id="section-0" class="bg_img">
                     <div class="text-center h5 mt-5">
                             {% block subbody %}
-                <a class="nav-link btn btn-sm btn-orange btn-form cta-btn" data-toggle="modal" data-target="#exampleModal">Send request <i class="far fa-paper-plane animated tada delay-5s infinite ml-1"></i></a>
 
                             {% endblock subbody%}
                     </div>

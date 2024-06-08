@@ -5,6 +5,22 @@
 {% load slippers %}
 
 
+                            {% block subbody %}
+  <div class="row">
+    <div class="col-md-6" align="right">
+      <img src="../media/{{ prof.foto|default_if_none:'images/none.jpg' }} " class="rounded-circle border border-5 border-white" align="center" width="60">
+      <br>
+    </div>
+    <div class="col-md-6" align="left" >
+     <a href="" ><b>{{ user.last_name }} {{ user.first_name }}</b></a><br>
+        <a href=""><u><h6>{{prof.profile}}<h6></u></a>
+    </div>
+
+</div>
+
+                                       {% endblock subbody%}
+
+
 {% block body %}
 
 <style>
@@ -24,10 +40,6 @@
     width: 100%;
     margin-top: 1rem;
   }
-
-
-{% regroup apartments2 by apartment_id as ap_list %}
-
 
 {% for z in apartments %}
   #tab-btn-{{z.pk}}:checked~#content-{{z.pk}},
@@ -59,20 +71,17 @@
 
 
 
-<!--{% for i in ap_list %}-->
-<!--<br> {{ i.grouper }}, {{ i.grouper.pk }}<br>-->
-
-<!--{% for v in i.list %}-->
-<!--{{v}}-->
-<!--{% endfor %}-->
-<!--{% endfor %}-->
        <div class="container">
             <div class="row">
 <div class="col-12">
 
 <div class="container">
   <div class="tab">
-{% for b in apartments %}
+
+          <a href="{% url 'apartment_create' %}" class="fa fa-plus-square fa-2x ml-3 mr-3 mycolor" >
+</a>
+
+      {% for b in apartments %}
     {% if apartments.0 == b %}
         <input checked id="tab-btn-{{ b.pk }}" name="tab-btn" type="radio" value="">
         <label for="tab-btn-{{ b.pk }}">{{b.address_street_app}} {{b.address_num|default_if_none:''}}</label>
@@ -82,17 +91,16 @@
     {% endif %}
 
 {% endfor %}
-      <label for="tab-btn-{{ b.pk }}" class="text-secondary border ml-3" >
-          <a href="{% url 'apartment_create' %}" class="mycolor" >add new</a></label>
 
 
 
+{% regroup apartments2 by apartment_id as ap_list %}
 
 {% for c in ap_list %}
 
     <div class="tab-content" id="content-{{ c.grouper.pk }}">
-        <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-12">
+        <div class="row" >
+            <div class="col-lg-4 col-md-4 col-sm-12 border-right" align="right">
                 <h4>{{ c.grouper.name|default_if_none:'' }}</h4>
                 <h5 class="mt-0 p-0">{{ c.grouper.address_street_app }} {{ c.grouper.address_num }}, {{ c.grouper.address_city|choice_tag:'city' }}</h5>
                 <p class="text-secondary ">{{ c.grouper.notes|default_if_none:'' }}
@@ -100,11 +108,42 @@
                 <img src="../media/{{ c.grouper.foto|default_if_none:'images/none.jpg' }} " alt="" class="" width="200"><br>
             </div>
 
-            <div class="col-lg-8 col-md-8 col-sm-12">
-                      <label for="tab-btn-{{ b.pk }}" class="text-secondary border ml-3" ><b>SENT REQUEST</b></label>
+            <div class="col-lg-8 col-md-8 col-sm-12" align="left">
+                <form method="POST" action="" name="form_order{{ c.grouper.pk }}" id="form_order{{ c.grouper.pk }}" class="form_order">
+                     {% csrf_token %}
+                    <input type="text" id="customer" name="name" value="{{ request.user }}"/>
+                    <input type="text" id="apart" name="name" value="{{ c.grouper.pk }}"/>
+                    <textarea id="w3review" name="w3review" rows="4" cols="50">
+                    </textarea>
+
+                    <button type="submit" name="submit" class="btn btn-sm btn-orange cta-btn btn-form mt-3 mb-5 ">Send</button>
+                </form>
+<script>
+
+$(document.body).ready(function() {
+
+    $('#form_order278').submit(function(e) {
+        e.preventDefault();
+            $.ajax({
+                url: '../create_order',
+                type: 'POST',
+                data: $(this).serialize(),
+                dataType: 'text',
+                beforeSend: function () {$("#form").html('<h3>Отправляется...</h3>');},
+                success: function (resp) {
+
+                    console.log(e);
+                    alert('------------------------------------');
+                },
+            });
+
+    });
+});
+
+</script>
 
                 {% for b in c.list %}
-                    <div class="mt-1 mb-2 p-2 border border-5 rounded">
+                    <div class="mt-0 mb-3 pb-2 border-bottom">
                         <a href="{% url 'delete-order' b.pk %}" id="delete_{{ b.pk }}" class="mycolor" title="Delete">
                         <i class="fas fa-trash text-secondary"></i></a>
                         <a href="{% url 'ownerinvoice' b.pk %}" class="mycolor"><b>Order № {{ b.pk }}</b></a> | {{ b.time_in }} |<a href="{{ b.repairer_id.pk }}" id="link" class="text-secondary" data-toggle="modal" data-target="#exampleModal">  {{ b.repairer_id|default_if_none:"" }}</a><br>

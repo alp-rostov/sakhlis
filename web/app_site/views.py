@@ -138,7 +138,7 @@ class OrderCreate(BaseClassExeption, CreateView):
         return context
 
     def form_valid(self, form):
-        if OrderCustomerForm(self.request.POST).is_valid() and ApartmentForm(self.request.POST).is_valid():
+        # if OrderCustomerForm(self.request.POST).is_valid() and ApartmentForm(self.request.POST).is_valid():
             with transaction.atomic():
 
                 if self.request.user.is_authenticated and self.request.user.groups.first().name == 'owner':  # TODO add logic for owner and set a responseble person
@@ -170,11 +170,11 @@ class OrderCreate(BaseClassExeption, CreateView):
                                      'pk': form.instance.pk,
                                      'auth': self.request.user.is_authenticated
                                      })
-        else:
-            return JsonResponse({'message': f'<h3>Ошибка, форма не валидна</h3>',
-                                 'pk': form.instance.pk,
-                                 'auth': self.request.user.is_authenticated
-                                 })
+        # else:
+        #     return JsonResponse({'message': f'<h3>Ошибка, форма не валидна</h3>',
+        #                          'pk': form.instance.pk,
+        #                          'auth': self.request.user.is_authenticated
+        #                          })
 
 
 class OrderCreatebyRepaier(BaseClassExeption, CreateView):
@@ -200,15 +200,15 @@ class OrderDelete(BaseClassExeption, LoginRequiredMixin, DeleteView):
             return '/list_order'
 
 
-class OwnerDetailInformation(PermissionRequiredMixin, LoginRequiredMixin, DetailView):
-    model = User
+class OwnerDetailInformation(PermissionRequiredMixin, LoginRequiredMixin, TemplateView):
     template_name = 'owner/owner_profile.html'
-    context_object_name = 'owner'
     permission_required = PERMISSION_FOR_OWNER
+
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        profile = DataFromRepairerList().get_object_from_UserProfile(user=context['owner'])
+        profile = DataFromRepairerList().get_object_from_UserProfile(user=self.request.user)
+        context['prof']=profile
         context['apartments2']=(OrderList.objects.only('time_in', 'text_order', 'apartment_id__address_street_app',
                                                        'apartment_id__address_num', 'apartment_id__name', 'apartment_id__notes',
                                                        'apartment_id__address_city', 'apartment_id__foto',
@@ -222,8 +222,8 @@ class OwnerDetailInformation(PermissionRequiredMixin, LoginRequiredMixin, Detail
                                .filter(owner=profile)
                                .only('pk', 'address_city', 'address_street_app', 'address_num', 'foto', 'notes', 'name')
                                .order_by('address_street_app'))
-        #
-        context['formorder'] = OwnerFormOrder(user=self.object, app=context['apartments'])
+
+        # context['formorder'] = OwnerFormOrder(user=self.request.user, app=context['apartments'])
 
         list_app_=set([i.get('apartment_id') for i in context['apartments2'].values('apartment_id')])
         list_app=context['apartments'].exclude(pk__in=list_app_)
@@ -300,21 +300,19 @@ class OwnerApartmentCreate(BaseClassExeption, LoginRequiredMixin, CreateView):
     model = Apartment
     template_name = 'owner/apartment_update.html'
     form_class = ApartentUpdateForm
+    success_url = '../'
 
     def form_valid(self, form):
         form.instance.owner=UserProfile.objects.get(user=self.request.user)
         form.save()
-        url = reverse('owner', args=(self.request.user.pk,))
+        url = reverse('owner')
         return redirect(url)
 
 class OwnerApartmentUpdate(LoginRequiredMixin, UpdateView):
     model = Apartment
     template_name = 'owner/apartment_update.html'
     form_class = ApartentUpdateForm
-
-    def get_success_url(self):
-        url = reverse('owner', args=(self.request.user.pk,))
-        return redirect(url)
+    success_url = '../'
 
 
 class OrderUpdate(LoginRequiredMixin, UpdateView):
@@ -429,7 +427,7 @@ class UserAuthorizationView(LoginView):
         if 'repairer' == str(self.request.user.groups.first()):
             return reverse_lazy('user', kwargs={'pk': self.request.user.pk})
         elif 'owner' == str(self.request.user.groups.first()):
-            return reverse_lazy('owner', kwargs={'pk': self.request.user.pk})
+            return reverse_lazy('owner')
 
 
 class UserRegisterView(CreateView):
@@ -604,3 +602,8 @@ def input_street(request, **kwargs):
             .values('type_street', 'name_street')[0:15]
     json_data = json.dumps(list(b), default=str)
     return JsonResponse(json_data, safe=False)
+
+
+def creat_order_from_owner_profile(request, **kwargs):
+    print(request.GET)
+    return JsonResponse({"message": "error"})

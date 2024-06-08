@@ -4,6 +4,7 @@ from django.forms import ChoiceField
 
 from .models import *
 
+
 class ApartmentForm(forms.ModelForm):
 
     address_city = forms.ChoiceField(
@@ -40,10 +41,12 @@ class ApartmentForm(forms.ModelForm):
                   'address_street_app',
                   'address_num', 'link_location')
 
+
 class ApartentUpdateForm(forms.ModelForm):
     class Meta:
         model = Apartment
         exclude = ["owner"]
+
 
 class CustomerForm(forms.ModelForm):
 
@@ -132,6 +135,7 @@ class OrderForm(forms.ModelForm):
         model = OrderList
         fields = ('text_order', )
 
+
 class OrderUpdateForm(forms.ModelForm):
     def __init__(self, user):
         super().__init__()
@@ -148,8 +152,6 @@ class OrderUpdateForm(forms.ModelForm):
     class Meta:
         model = OrderList
         fields = ('text_order', 'apartment_id')
-
-
 
 
 class OwnerFormOrder(forms.ModelForm):
@@ -172,8 +174,6 @@ class OwnerFormOrder(forms.ModelForm):
     class Meta:
         model = OrderList
         fields =('text_order',)
-
-
 
 
 class UserRegisterForm(UserCreationForm):

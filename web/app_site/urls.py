@@ -32,10 +32,10 @@ urlpatterns = [
 
 
 
-    path('owner/<int:pk>', OwnerDetailInformation.as_view(), name='owner'),
+    path('owner/', OwnerDetailInformation.as_view(), name='owner'),
     path('owner/apartment/<int:pk>', OwnerApartmentUpdate.as_view(), name='apartment_update'),
     path('owner/apartment/create', OwnerApartmentCreate.as_view(), name='apartment_create'),
-    path('owner/list_order', OwnerOrderManagementSystem.as_view(), name='owner_list_order'),
+    path('owner/list_order', OwnerOrderManagementSystem.as_view(), name='o_list_order'),
     path('owner-invoice/<int:pk>', OwnerInvoice.as_view(), name='ownerinvoice'),
 
 
@@ -48,6 +48,7 @@ urlpatterns = [
     # path('listorderjson', listorder_for_order_list_paginator_json),
     path('set_work_status', change_work_status),
     path('street', input_street),
+    path('create_order', creat_order_from_owner_profile),
     # path('geo', geo_map),
 ]
 

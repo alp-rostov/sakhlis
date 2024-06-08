@@ -6,5 +6,7 @@ components:
   container: "partials/container.html"
   menu: "partials/menu.html"
   form: "partials/form_for_order.html"
+  form1: "partials/form_for_order_owner.html"
+
   about_me: "partials/about_me.html"
   work_status: "partials/work_status.html"

@@ -1,0 +1,17 @@
+{% load custom_filters %}
+{% load custom_tags %}
+
+
+<form method="get" action="" name="form_order" id="form_order" class="">
+    {{ children }}
+
+    <div class="md-form mb-4">
+        <i class="fa fa-comment prefix grey-text" aria-hidden="true"></i>
+        {{ form_order_.text_order.errors }}
+        {{ form_order_.text_order }}
+        <span id="6"></span>
+    </div>
+    <button type="submit" name="submit" class="btn btn-sm btn-orange cta-btn btn-form mt-3 mb-5 ">Send</button>
+
+</form>
+
