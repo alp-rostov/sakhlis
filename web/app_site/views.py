@@ -142,11 +142,10 @@ class OrderCreate(BaseClassExeption, CreateView):
             with transaction.atomic():
 
                 if self.request.user.is_authenticated and self.request.user.groups.first().name == 'owner':  # TODO add logic for owner and set a responseble person
-                    print(self.request.POST)
                     form.instance.customer_id = UserProfile.objects.get(pk=self.request.POST.get('customer_id'))
                     form.instance.apartment_id = Apartment.objects.get(pk=self.request.POST.get('apartment_id'))
                     form.instance.order_status = 'SND'
-
+                    form.instance.repairer_id = User.objects.get(pk=51)
                 elif self.request.user.is_authenticated and self.request.user.groups.first().name == 'repairer':
                     customer = OrderCustomerForm(self.request.POST).save()
                     app = ApartmentForm(self.request.POST).save(commit=False)
@@ -211,7 +210,7 @@ class OwnerDetailInformation(PermissionRequiredMixin, LoginRequiredMixin, Templa
         context['prof']=profile
         context['apartments2']=(OrderList.objects.only('time_in', 'text_order', 'apartment_id__address_street_app',
                                                        'apartment_id__address_num', 'apartment_id__name', 'apartment_id__notes',
-                                                       'apartment_id__address_city', 'apartment_id__foto',
+                                                       'apartment_id__address_city', 'apartment_id__foto', 'order_status',
                                                        'repairer_id__username')
                                 .filter(customer_id=profile)
                                 .order_by('apartment_id__address_street_app', '-time_in')
@@ -605,5 +604,12 @@ def input_street(request, **kwargs):
 
 
 def creat_order_from_owner_profile(request, **kwargs):
-    print(request.GET)
-    return JsonResponse({"message": "error"})
+    b=OrderForm().save(commit=False)
+    print(b)
+    b.repairer_id=User.objects.get(pk=51)  #TODO add logic to set master
+    b.customer_id=UserProfile.objects.get(pk=request.POST.get('customer_id'))
+    b.apartment_id=Apartment.objects.get(pk=request.POST.get('apartment_id'))
+    b.text_order = request.POST.get('text_order')
+    b.save()
+
+    return JsonResponse({"message": request.POST.get('name')})

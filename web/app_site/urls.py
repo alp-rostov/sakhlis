@@ -48,7 +48,7 @@ urlpatterns = [
     # path('listorderjson', listorder_for_order_list_paginator_json),
     path('set_work_status', change_work_status),
     path('street', input_street),
-    path('create_order', creat_order_from_owner_profile),
+    # path('create_order_by_owner', creat_order_from_owner_profile),
     # path('geo', geo_map),
 ]
 

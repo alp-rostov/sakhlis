@@ -111,42 +111,21 @@
             <div class="col-lg-8 col-md-8 col-sm-12" align="left">
                 <form method="POST" action="" name="form_order{{ c.grouper.pk }}" id="form_order{{ c.grouper.pk }}" class="form_order">
                      {% csrf_token %}
-                    <input type="text" id="customer" name="name" value="{{ request.user }}"/>
-                    <input type="text" id="apart" name="name" value="{{ c.grouper.pk }}"/>
-                    <textarea id="w3review" name="w3review" rows="4" cols="50">
-                    </textarea>
+                    <input type="text" id="customer" name="customer_id" value="{{ prof.pk }}"/>
+                    <input type="text" id="apart" name="apartment_id" value="{{ c.grouper.pk }}"/>
+                    <textarea id="w3review" name="text_order" rows="4" cols="50"></textarea>
 
                     <button type="submit" name="submit" class="btn btn-sm btn-orange cta-btn btn-form mt-3 mb-5 ">Send</button>
                 </form>
-<script>
-
-$(document.body).ready(function() {
-
-    $('#form_order278').submit(function(e) {
-        e.preventDefault();
-            $.ajax({
-                url: '../create_order',
-                type: 'POST',
-                data: $(this).serialize(),
-                dataType: 'text',
-                beforeSend: function () {$("#form").html('<h3>Отправляется...</h3>');},
-                success: function (resp) {
-
-                    console.log(e);
-                    alert('------------------------------------');
-                },
-            });
-
-    });
-});
-
-</script>
 
                 {% for b in c.list %}
                     <div class="mt-0 mb-3 pb-2 border-bottom">
                         <a href="{% url 'delete-order' b.pk %}" id="delete_{{ b.pk }}" class="mycolor" title="Delete">
                         <i class="fas fa-trash text-secondary"></i></a>
-                        <a href="{% url 'ownerinvoice' b.pk %}" class="mycolor"><b>Order № {{ b.pk }}</b></a> | {{ b.time_in }} |<a href="{{ b.repairer_id.pk }}" id="link" class="text-secondary" data-toggle="modal" data-target="#exampleModal">  {{ b.repairer_id|default_if_none:"" }}</a><br>
+                        <a href="{% url 'ownerinvoice' b.pk %}" class="mycolor"><b>Order № {{ b.pk }}</b> {% if b.order_status != "END" %}
+                            <U>in progress</U>
+                        {% endif %}
+                       </a> | {{ b.time_in }} |<a href="{{ b.repairer_id.pk }}" id="link" class="text-secondary" data-toggle="modal" data-target="#exampleModal">  {{ b.repairer_id|default_if_none:"" }}</a><br>
                         <div class="mt-2">{{ b.text_order }} </div>
                     </div>
 
@@ -234,7 +213,7 @@ $(document.body).ready(function() {
 <script>
 $(document.body).ready(function() {
 
-    $('#form').submit(function(e) {
+    $('.form_order').submit(function(e) {
         e.preventDefault();
             $.ajax({
                 url: '../',
@@ -253,4 +232,18 @@ $(document.body).ready(function() {
     });
 });
 </script>
-{% endblock body %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+           {% endblock body %}
