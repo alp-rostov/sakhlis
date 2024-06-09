@@ -194,7 +194,7 @@ class OrderDelete(BaseClassExeption, LoginRequiredMixin, DeleteView):
 
     def get_success_url(self):
         if self.request.user.groups.first().name == 'owner':
-            return f'/owner/{self.request.user.pk}'
+            return f'/owner'
         elif self.request.user.groups.first().name == 'repairer':
             return '/list_order'
 
@@ -208,7 +208,7 @@ class OwnerDetailInformation(PermissionRequiredMixin, LoginRequiredMixin, Templa
         context = super().get_context_data(**kwargs)
         profile = DataFromRepairerList().get_object_from_UserProfile(user=self.request.user)
         context['prof']=profile
-        context['apartments2']=(OrderList.objects.only('time_in', 'text_order', 'apartment_id__address_street_app',
+        context['order_list_by_apartments']=(OrderList.objects.only('time_in', 'text_order', 'apartment_id__address_street_app',
                                                        'apartment_id__address_num', 'apartment_id__name', 'apartment_id__notes',
                                                        'apartment_id__address_city', 'apartment_id__foto', 'order_status',
                                                        'repairer_id__username')
@@ -224,7 +224,7 @@ class OwnerDetailInformation(PermissionRequiredMixin, LoginRequiredMixin, Templa
 
         # context['formorder'] = OwnerFormOrder(user=self.request.user, app=context['apartments'])
 
-        list_app_=set([i.get('apartment_id') for i in context['apartments2'].values('apartment_id')])
+        list_app_=set([i.get('apartment_id') for i in context['order_list_by_apartments'].values('apartment_id')])
         list_app=context['apartments'].exclude(pk__in=list_app_)
 
         context['list_app']=list_app

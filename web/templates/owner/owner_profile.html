@@ -5,27 +5,23 @@
 {% load slippers %}
 
 
-                            {% block subbody %}
-  <div class="row">
-    <div class="col-md-6" align="right">
-      <img src="../media/{{ prof.foto|default_if_none:'images/none.jpg' }} " class="rounded-circle border border-5 border-white" align="center" width="60">
-      <br>
+{% block subbody %}
+<div class="row">
+    <div class="col-lg-4 col-md-4 col-sm-12" align="right">
+      <img src="../media/{{ prof.foto|default_if_none:'images/none.jpg' }}"
+           class="rounded-circle border border-5 border-white" align="center" width="60">
     </div>
-    <div class="col-md-6" align="left" >
+    <div class="col-lg-8 col-md-8 col-sm-12" align="left" >
      <a href="" ><b>{{ user.last_name }} {{ user.first_name }}</b></a><br>
-        <a href=""><u><h6>{{prof.profile}}<h6></u></a>
+        <a href=""><u><h6>{{prof.profile}}</u></a>
     </div>
-
 </div>
-
-                                       {% endblock subbody%}
+{% endblock subbody%}
 
 
 {% block body %}
 
 <style>
-
-
   .tab {
     display: flex;
     flex-wrap: wrap;
@@ -70,115 +66,140 @@
 </style>
 
 
-
-       <div class="container">
-            <div class="row">
-<div class="col-12">
-
 <div class="container">
-  <div class="tab">
+    <div class="row">
+        <div class="col-12">
+            <div class="container">
+                <div class="tab">
+                    <!--menu apartments-->
+                    <a href="{% url 'apartment_create' %}" class="fa fa-plus-square fa-2x ml-3 mr-3 mycolor" >
+                    </a>
+                    <input checked id="tab-btn-{{ apartments.0.pk }}" name="tab-btn" type="radio" value="">
+                    <label for="tab-btn-{{ apartments.0.pk }}">{{apartments.0.address_street_app}} {{apartments.0.address_num|default_if_none:''}}</label>
+                    {% for b in apartments|slice:"1:" %}
+                    <input id="tab-btn-{{ b.pk }}" name="tab-btn" type="radio" value="">
+                    <label for="tab-btn-{{ b.pk }}">{{b.address_street_app}} {{b.address_num|default_if_none:''}}</label>
+                    {% endfor %}
+                    <!--end menu apartments-->
+                    {% regroup order_list_by_apartments by apartment_id as ap_list %}
+                    {% for c in ap_list %}
+                    <div class="tab-content" id="content-{{ c.grouper.pk }}">
+                        <div class="row" >
+                            <!--details about apartment-->
+                            <div class="col-lg-4 col-md-4 col-sm-12 border-right" align="right">
+                                <h4>
+                                    {{ c.grouper.name|default_if_none:'' }}
+                                </h4>
+                                <h5 class="mt-0 p-0">
+                                    {{ c.grouper.address_street_app }} {{ c.grouper.address_num }},
+                                    {{ c.grouper.address_city|choice_tag:'city' }}
+                                </h5>
+                                <p class="text-secondary ">
+                                    {{ c.grouper.notes|default_if_none:'' }}
+                                    <a href="{% url 'apartment_update' c.grouper.pk %}" class="mycolor"
+                                       title="изменить данные"><i class="fas fa-pen text-secondary"> </i>
+                                    </a>
+                                </p>
+                                <img src="../media/{{ c.grouper.foto|default_if_none:'images/none.jpg' }} "
+                                     alt="" class="" width="200">
+                            </div>
+                            <!-- end details about apartments-->
+                            <!-- list of orders for a specific apartment -->
+                            <div class="col-lg-8 col-md-8 col-sm-12" align="left">
+                                <a id="toggleLink" class="btn btn-sm btn-orange m-0 p-1"
+                                   href="javascript:void(0)" onclick="viewdiv('{{ c.grouper.pk }}')"
+                                data-text-hide="create new request" data-text-show="close" >
+                                    add new request
+                                </a>
+                                <!-- form for order -->
+                                <div id="{{ c.grouper.pk }}" style="display:none;" class="mb-5">
+                                    <form method="POST" action="" name="form_order{{ c.grouper.pk }}"
+                                          id="form_order{{ c.grouper.pk }}" class="form_order">
+                                        {% csrf_token %}
+                                        <input type="hidden" name="customer_id" value="{{ prof.pk }}"/>
+                                        <input type="hidden"  name="apartment_id" value="{{ c.grouper.pk }}"/>
+                                        <textarea name="text_order" rows="4" cols="50"></textarea>
+                                        <br>
+                                        <button type="submit" name="submit" class="btn btn-sm btn-orange cta-btn btn-form ">Send</button>
+                                    </form>
+                                </div>
+                                <!-- end form for order -->
+                                {% for b in c.list %}
 
-          <a href="{% url 'apartment_create' %}" class="fa fa-plus-square fa-2x ml-3 mr-3 mycolor" >
-</a>
-
-      {% for b in apartments %}
-    {% if apartments.0 == b %}
-        <input checked id="tab-btn-{{ b.pk }}" name="tab-btn" type="radio" value="">
-        <label for="tab-btn-{{ b.pk }}">{{b.address_street_app}} {{b.address_num|default_if_none:''}}</label>
-    {% else %}
-        <input id="tab-btn-{{ b.pk }}" name="tab-btn" type="radio" value="">
-        <label for="tab-btn-{{ b.pk }}">{{b.address_street_app}} {{b.address_num|default_if_none:''}}</label>
-    {% endif %}
-
-{% endfor %}
-
-
-
-{% regroup apartments2 by apartment_id as ap_list %}
-
-{% for c in ap_list %}
-
-    <div class="tab-content" id="content-{{ c.grouper.pk }}">
-        <div class="row" >
-            <div class="col-lg-4 col-md-4 col-sm-12 border-right" align="right">
-                <h4>{{ c.grouper.name|default_if_none:'' }}</h4>
-                <h5 class="mt-0 p-0">{{ c.grouper.address_street_app }} {{ c.grouper.address_num }}, {{ c.grouper.address_city|choice_tag:'city' }}</h5>
-                <p class="text-secondary ">{{ c.grouper.notes|default_if_none:'' }}
-                    <a href="{% url 'apartment_update' c.grouper.pk %}" class="mycolor" title="изменить данные"><i class="fas fa-pen text-secondary"> </i></a></p>
-                <img src="../media/{{ c.grouper.foto|default_if_none:'images/none.jpg' }} " alt="" class="" width="200"><br>
-            </div>
-
-            <div class="col-lg-8 col-md-8 col-sm-12" align="left">
-                <form method="POST" action="" name="form_order{{ c.grouper.pk }}" id="form_order{{ c.grouper.pk }}" class="form_order">
-                     {% csrf_token %}
-                    <input type="text" id="customer" name="customer_id" value="{{ prof.pk }}"/>
-                    <input type="text" id="apart" name="apartment_id" value="{{ c.grouper.pk }}"/>
-                    <textarea id="w3review" name="text_order" rows="4" cols="50"></textarea>
-
-                    <button type="submit" name="submit" class="btn btn-sm btn-orange cta-btn btn-form mt-3 mb-5 ">Send</button>
-                </form>
-
-                {% for b in c.list %}
-                    <div class="mt-0 mb-3 pb-2 border-bottom">
-                        <a href="{% url 'delete-order' b.pk %}" id="delete_{{ b.pk }}" class="mycolor" title="Delete">
-                        <i class="fas fa-trash text-secondary"></i></a>
-                        <a href="{% url 'ownerinvoice' b.pk %}" class="mycolor"><b>Order № {{ b.pk }}</b> {% if b.order_status != "END" %}
-                            <U>in progress</U>
-                        {% endif %}
-                       </a> | {{ b.time_in }} |<a href="{{ b.repairer_id.pk }}" id="link" class="text-secondary" data-toggle="modal" data-target="#exampleModal">  {{ b.repairer_id|default_if_none:"" }}</a><br>
-                        <div class="mt-2">{{ b.text_order }} </div>
+                                <div class="mt-1 mb-3 pb-2 border-bottom">
+                                    <a href="{% url 'delete-order' b.pk %}" id="delete_{{ b.pk }}" class="mycolor" title="Delete">
+                                        <i class="fas fa-trash text-secondary"></i>
+                                    </a>
+                                    <a href="{% url 'ownerinvoice' b.pk %}" class="mycolor">
+                                        <b>Order № {{ b.pk }}</b>
+                                        {% if b.order_status != "END" %}
+                                        <U>in progress</U>
+                                        {% endif %}
+                                   </a>
+                                    | {{ b.time_in }} |
+                                    <a href="{{ b.repairer_id.pk }}" id="link" class="text-secondary" data-toggle="modal" data-target="#exampleModal">  {{ b.repairer_id|default_if_none:"" }}</a><br>
+                                    <div class="mt-2">{{ b.text_order }} </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                            <!-- end list of orders for a specific apartment -->
+                        </div>
                     </div>
+                    {% endfor %}
 
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-      {% endfor %}
+                    {% for q in list_app %}
+                    <!--details apartments without orders-->
+                    <div class="tab-content" id="content-{{ q.pk }}">
+                        <div class="row">
+                            <!--details about apartment-->
+                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                <h4>
+                                    {{ q.name|default_if_none:'' }}
+                                </h4>
+                                <h5 class="mt-0 p-0">
+                                    {{ q.address_street_app }}
+                                    {{ q.address_num }},
+                                    {{ q.address_city|choice_tag:'city' }}
+                                </h5>
+                                <p class="text-secondary ">{{ q.notes|default_if_none:'' }}
+                                    <a href="{% url 'apartment_update' q.pk %}" class="mycolor" title="изменить данные">
+                                        <i class="fas fa-pen text-secondary"> </i>
+                                    </a>
+                                </p>
+                                <img src="../media/{{ q.foto|default_if_none:'images/none.jpg' }} "
+                                     alt="" class="" width="200">
+                            </div>
+                            <!-- end details about apartment-->
 
-
-{% for q in list_app %}
-
-
-
-          <div class="tab-content" id="content-{{ q.pk }}">
-        <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                <h4>{{ q.name|default_if_none:'' }}</h4>
-                <h5 class="mt-0 p-0">{{ q.address_street_app }} {{ q.address_num }}, {{ q.address_city|choice_tag:'city' }}</h5>
-                <p class="text-secondary ">{{ q.notes|default_if_none:'' }}
-                    <a href="{% url 'apartment_update' q.pk %}" class="mycolor" title="изменить данные"><i class="fas fa-pen text-secondary"> </i></a>
-                </p>
-                <img src="../media/{{ q.foto|default_if_none:'images/none.jpg' }} " alt="" class="" width="200"><br>
-            </div>
-
-            <div class="col-lg-8 col-md-8 col-sm-12">
-                    <div class="mt-1 mb-2 p-2  border-5 rounded">
-      <label for="tab-btn-{{ b.pk }}" class="text-secondary border ml-3" ><b>SENT REQUEST</b></label>
-
-                        <h5>NO ORDERS</h5>
+                            <div class="col-lg-8 col-md-8 col-sm-12">
+                                <div class="mt-1 mb-2 p-2  border-5 rounded">
+                                    <a id="toggleLinkq" class="btn btn-sm btn-orange m-0 p-1"
+                                       href="javascript:void(0)" onclick="viewdiv('{{ q.pk }}')"
+                                        data-text-hide="create new request" data-text-show="close" >
+                                        add new request
+                                    </a>
+                                    <!-- form for order -->
+                                    <div id="{{ q.pk }}" style="display:none;" class="mb-5">
+                                    <form method="POST" action="" name="form_order{{ q.pk }}" id="form_order{{ q.pk }}" class="form_order">
+                                         {% csrf_token %}
+                                        <input type="hidden"  name="customer_id" value="{{ prof.pk }}"/>
+                                        <input type="hidden" name="apartment_id" value="{{ q.pk }}"/>
+                                        <textarea name="text_order" rows="4" cols="50"></textarea>
+                                        <br>
+                                        <button type="submit" name="submit" class="btn btn-sm btn-orange cta-btn btn-form ">Send</button>
+                                    </form>
+                                    </div>
+                                    <!-- form for order -->
+                                </div>
+                            </div>
+                        </div>
                     </div>
-            </div>
-        </div>
-    </div>
+                    {% endfor %}
 
-
-
-
-
-
-
-
-
-{% endfor %}
-
-
-</div>
                 </div>
-
-
-
             </div>
-       </div>
+        </div>
+    </div>
 
     <!-- Modal Window -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -231,6 +252,22 @@ $(document.body).ready(function() {
 
     });
 });
+
+
+
+<!--SHOW ELEMENTS -->
+function viewdiv(id) {
+    var el = document.getElementById(id);
+    var link = document.getElementById('toggleLink'+id);
+    if (el.style.display == "block") {
+        el.style.display = "none";
+        link.innerText = link.getAttribute('data-text-hide');
+    } else {
+        el.style.display = "block";
+        link.innerText = link.getAttribute('data-text-show');
+    }
+}
+
 </script>
 
 
