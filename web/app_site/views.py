@@ -146,6 +146,15 @@ class OrderCreate(BaseClassExeption, CreateView):
                     form.instance.apartment_id = Apartment.objects.get(pk=self.request.POST.get('apartment_id'))
                     form.instance.order_status = 'SND'
                     form.instance.repairer_id = User.objects.get(pk=51)
+                    form.save()
+                    return JsonResponse({'message': f'<h3>Заявка № {form.instance.pk} отправлена успешно!</h3>',
+                                         'pk': form.instance.pk,
+                                         'text': form.instance.text_order,
+                                         'date': form.instance.time_in,
+                                         'repaier': form.instance.repairer_id.username,
+                                         'apartment':form.instance.apartment_id.pk
+                                         })
+
                 elif self.request.user.is_authenticated and self.request.user.groups.first().name == 'repairer':
                     customer = OrderCustomerForm(self.request.POST).save()
                     app = ApartmentForm(self.request.POST).save(commit=False)
@@ -203,32 +212,26 @@ class OwnerDetailInformation(PermissionRequiredMixin, LoginRequiredMixin, Templa
     template_name = 'owner/owner_profile.html'
     permission_required = PERMISSION_FOR_OWNER
 
-
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        profile = DataFromRepairerList().get_object_from_UserProfile(user=self.request.user)
-        context['prof']=profile
+        context['prof'] = DataFromRepairerList().get_object_from_UserProfile(user=self.request.user)
         context['order_list_by_apartments']=(OrderList.objects.only('time_in', 'text_order', 'apartment_id__address_street_app',
                                                        'apartment_id__address_num', 'apartment_id__name', 'apartment_id__notes',
                                                        'apartment_id__address_city', 'apartment_id__foto', 'order_status',
                                                        'repairer_id__username')
-                                .filter(customer_id=profile)
+                                .filter(customer_id=context['prof'])
                                 .order_by('apartment_id__address_street_app', '-time_in')
                                 .select_related('apartment_id', 'repairer_id')
                                 )
 
         context['apartments']=(Apartment.objects
-                               .filter(owner=profile)
+                               .filter(owner=context['prof'])
                                .only('pk', 'address_city', 'address_street_app', 'address_num', 'foto', 'notes', 'name')
                                .order_by('address_street_app'))
 
-        # context['formorder'] = OwnerFormOrder(user=self.request.user, app=context['apartments'])
-
         list_app_=set([i.get('apartment_id') for i in context['order_list_by_apartments'].values('apartment_id')])
         list_app=context['apartments'].exclude(pk__in=list_app_)
-
         context['list_app']=list_app
-
         return context
 
 

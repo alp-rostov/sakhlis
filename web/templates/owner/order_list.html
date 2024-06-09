@@ -4,77 +4,54 @@
 {% load slippers %}
 
 {% block subbody %}
+<!-- from filterset -->
 <div class="container text-white">
-<form action="" method="get" class="">
-                {{ filterset.form.time_in_sence.label }}:
-                {{ filterset.form.time_in_sence }}
-
-                {{ filterset.form.time_in_until.label }}:
-                {{ filterset.form.time_in_until }}
-
-
-                {{ filterset.form.order_status.label }}:
-                {{ filterset.form.order_status }}
-                <input type="submit" value=" Submit " class="btn btn-sm btn-orange">
-    <br><br>
-        <h5>Amount of money : {{ summ_orders }} / Order`s quantity : {{ count_orders }}</h5>
-</form>
+    <form action="" method="get" class="">
+        {{ filterset.form.time_in_sence.label }}:
+        {{ filterset.form.time_in_sence }}
+        {{ filterset.form.time_in_until.label }}:
+        {{ filterset.form.time_in_until }}
+        {{ filterset.form.order_status.label }}:
+        {{ filterset.form.order_status }}
+        <input type="submit" value=" Submit " class="btn btn-sm btn-orange">
+            <h5>Amount of money : {{ summ_orders }} / Order`s quantity : {{ count_orders }}</h5>
+    </form>
 </div>
+<!-- end from filterset -->
 {% endblock subbody %}
 
 {% block body %}
 
 <div id="head" class="container">
-    {% for i in order %}
-
-
-
 {% url 'ownerinvoice' i.pk as the_url_invoice %}
 {% url 'delete-order' i.pk as the_url_delete %}
 {% url 'update' i.pk as the_url_update %}
 
-
-   <div  class="row border  rounded p-2 m-3" id="{{ id_ }}">
-                <div class="col-md-4">
-
-                    <a href="{{ the_url_invoice }}" id="order_{{ i.pk }}" class="h5 mycolor">Order № {{ i.pk }}</a>
-                    <a href="{{ the_url_delete }}" id="delete_{{ i.pk }}" class="mycolor" title="Delete">
-                        <i class="fas fa-trash text-secondary ml-3"></i></a><br>
-                    <div id="time_in" class="mt-2">{{ i.time_in }}</div>
-
-
-                </div>
-                <div class="col-md-4 ">
-                    <span id="customer_name_{{ i.pk }}" class="text-secondary" aria-hidden="true">Repaier:  <a href="" id="link" class="text-secondary h5" data-toggle="modal" data-target="#exampleModal"> {{ i.repairer_id__username|capfirst }}</a></span><br>
-
-                    {% if i.apartment_id.link_location  %}
-                    <a href="{{i.apartment_id.link_location}}" class="fas fa-map-marker prefix text-secondary mt-2" title="Open map" aria-hidden="true" >
-                    {% else %}
-                    <a href="" title="" class="fas fa-home prefix text-secondary mt-2" aria-hidden="true" >
-                    {% endif %}
-                        <span id="street_app_{{ i.pk }}">{{ i.apartment_id__address_street_app }}</span>
-                        <span id="num_{{ i.pk }}">{{ i.apartment_id__address_num }}</span>,
-                        <span id="city_{{ i.pk }}" >{{ i.apartment_id__address_city|choice_tag:'city'}}</span>.
-                    </a>
-
-                </div>
-
-                <div class="col-md-4">
-                    <p id="text_order_{{ i.pk }}" class="fas text-secondary">{{ i.text_order|truncatechars:200|capfirst }}</p>
-
-
-                </div>
-            </div>
-
-
-
-
-
-
-
-
-    {% endfor %}
+{% for i in order %}
+<div  class="row border-bottom p-1 mb-3 mt-1" id="{{ id_ }}">
+    <div class="col-md-4">
+        <a href="{% url 'ownerinvoice' i.pk %}" id="order_{{ i.pk }}" class="h5 mycolor">Order № {{ i.pk }}</a>
+        <a href="{% url 'delete-order' i.pk %}" id="delete_{{ i.pk }}" class="mycolor" title="Delete">
+            <i class="fas fa-trash text-secondary ml-3"></i></a><br>
+        <div id="time_in" class="mt-2">{{ i.time_in }}</div>
+    </div>
+    <div class="col-md-4 ">
+        <span id="customer_name_{{ i.pk }}" class="text-secondary" aria-hidden="true">Repaier:
+            <a href="" id="link" class="text-secondary h5" data-toggle="modal" data-target="#exampleModal">
+                {{ i.repairer_id__username|capfirst }}
+            </a>
+        </span><br>
+        <span class="fas fa-home prefix text-secondary mt-2" aria-hidden="true" >
+            <span id="street_app_{{ i.pk }}">{{ i.apartment_id__address_street_app }}</span>
+            <span id="num_{{ i.pk }}">{{ i.apartment_id__address_num }}</span>,
+            <span id="city_{{ i.pk }}" >{{ i.apartment_id__address_city|choice_tag:'city'}}</span>.
+        </span>
+    </div>
+    <div class="col-md-4">
+        <p id="text_order_{{ i.pk }}" class="fas text-secondary">{{ i.text_order|truncatechars:200|capfirst }}</p>
+    </div>
 </div>
+{% endfor %}
 
 
 
