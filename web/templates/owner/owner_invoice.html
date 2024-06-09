@@ -41,8 +41,9 @@
 
         <div class="col-md-4 text-secondary mt-3" >
             <h4><b>Repairer</b></h4>
-            <h5>{{ info.repairer_id }}</h5>
-                <a href="pdf/{{ info.id }}" class="btn btn-sm btn-orange">Send feedback</a>
+            <h5><img src="../media/{{ repair.foto|default_if_none:'images/none.jpg' }} " alt="Муж на час" class="rounded-circle" align="center" width="70">
+                {{ info.repairer_id|capfirst }}</h5>
+
 
         </div>
 

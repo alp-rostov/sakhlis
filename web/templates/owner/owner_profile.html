@@ -155,7 +155,9 @@
                                 {% endif %}
                            </a>
                             | {{ b.time_in }} |
-                            <a href="{{ b.repairer_id.pk }}" id="link" class="text-secondary" data-toggle="modal" data-target="#exampleModal">  {{ b.repairer_id|default_if_none:"" }}</a><br>
+                            <a href="{{ b.repairer_id.pk }}" id="link" class="text-secondary" data-toggle="modal" data-target="#exampleModal">
+                                repaier: {{ b.repairer_id|default_if_none:"" }}
+                            </a><br>
                             <div class="mt-2">{{ b.text_order }} </div>
                         </div>
                         {% endfor %}
@@ -192,24 +194,26 @@
 
                 <div class="col-lg-8 col-md-8 col-sm-12">
                     <div class="mt-1 mb-2 p-2  border-5 rounded">
+                        <div id="button-form-{{ q.pk }}">
                         <a id="toggleLinkq" class="btn btn-sm btn-orange m-0 p-1"
-                           href="javascript:void(0)" onclick="viewdiv('{{ q.pk }}')"
+                           href="javascript:void(0)" onclick="viewdiv('form-{{ q.pk }}')"
                             data-text-hide="create new request" data-text-show="close" >
                             add new request
                         </a>
+                        </div>
                         <!-- form for order -->
-                        <div id="{{ q.pk }}" style="display:none;" class="mb-5">
-                        <form method="POST" action="" name="form_order{{ q.pk }}" id="form_order{{ q.pk }}" class="form_order">
-                             {% csrf_token %}
-                            <input type="hidden"  name="customer_id" value="{{ prof.pk }}"/>
-                            <input type="hidden" name="apartment_id" value="{{ q.pk }}"/>
-                            <textarea name="text_order" rows="4" cols="50"></textarea>
-                            <br>
-                            <button type="submit" name="submit" class="btn btn-sm btn-orange cta-btn btn-form ">Send</button>
-                        </form>
+                        <div id="form-{{ q.pk }}" style="display:none;" class="mb-5">
+                            <form method="POST" action="" name="form_order{{ q.pk }}" id="form_order{{ q.pk }}" class="form_order">
+                                 {% csrf_token %}
+                                <input type="hidden"  name="customer_id" value="{{ prof.pk }}"/>
+                                <input type="hidden" name="apartment_id" value="{{ q.pk }}"/>
+                                <textarea name="text_order" rows="4" cols="50"></textarea>
+                                <br>
+                                <button type="submit" name="submit" class="btn btn-sm btn-orange cta-btn btn-form ">Send</button>
+                            </form>
                         </div>
                         <!-- end form for order -->
-                        <div id="list_orders-{{ c.grouper.pk }}" >
+                        <div id="list_orders-{{ q.pk }}" >
                         </div>
                     </div>
                 </div>

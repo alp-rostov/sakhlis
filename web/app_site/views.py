@@ -244,6 +244,7 @@ class OwnerInvoice(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixi
     def get_context_data(self, **kwargs):
         context = super().get_context_data()
         context['invoice'] = DataFromInvoice().get_data_from_Invoice_with_amount(order_id_=self.object.pk)
+        context['repair'] = UserProfile.objects.get(user=self.object.repairer_id)
         return context
 
 
