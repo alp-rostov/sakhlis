@@ -12,7 +12,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-lg-6 col-md-10 col-sm-12 pt-3 text-center">
+        <div class="col-lg-6 col-md-10 col-sm-12 pt-3 text-center border-right">
             <h4>
               {{ user.last_name }} {{ user.first_name }} | <strong class="mycolor"> {{ request.user.username }}</strong>
             </h4>
@@ -29,14 +29,13 @@
         <div class="col-lg-6 col-md-10 col-sm-12 pt-3">
         {% regroup orders by order_status as order_list %}
             {% for i in order_list %}
-            <h5 class="mycolor">
+            <h5 class="mycolor border-bottom">
                 {{ i.grouper|choice_tag:'status_order' }}
             {% if i.0 == 'SND' %}
             <a id="toggleLinkqq" class="btn btn-sm btn-orange" href="javascript:void(0)" onclick="viewdiv('qq')"
              data-text-hide="create new request" data-text-show="close" >create new request</a>
             <a id="toggleLinkqqq" href="#" class="btn btn-sm btn-orange" href="javascript:void(0)" onclick="viewdiv('qqq')"
              data-text-hide="add new request" data-text-show="close" >add new request</a>
-
             {% endif %}
             </h5>
             <div id="qq" style="display:none;" class="mb-5">
@@ -51,7 +50,7 @@
             </div>
 
                 {% for b in i.list %}
-                <div class="mb-3 p-2 border border-5 rounded">
+                <div class="mb-3 p-1 border-bottom rounded">
                     <a id="toggleLinkmydiv{{ b.pk }}" href="javascript:void(0)" onclick="viewdiv('mydiv{{ b.pk }}')"
                        data-text-hide="+" data-text-show="-" class="text-secondary">+</a> |
                     <a href="../list_order/{{b.pk}}" id="order_{{ b.pk }}" class ='text-secondary'>
@@ -88,7 +87,12 @@
                         {{ b.text_order }}
                     </div>
                 </div>
+
                 {% endfor %}
+
+               {% empty %}
+                <div class="mb-3 p-2 border border-5 rounded"><h3>No orders in progress</h3>
+            <a href="{% url 'list_order' %}" class="mycolor">All orders</a></div>
             {% endfor %}
         </div>
     </div>
@@ -116,6 +120,7 @@
                             </div>
                         </div>
                         <div class="row mb-3 border-bottom">
+
                             <div class="col-6 text-center"><a href="tel:" title="Phone"  id="customer_phone" class="fas fa-phone prefix text-secondary mt-3" aria-hidden="true"></a></div>
                             <div class="col-6 text-center"><a href="https://t.me/" title="Telegram" id="customer_telegram" class ="fas fa fa-paper-plane text-secondary mt-3" aria-hidden="true"></a></div>
                         </div>

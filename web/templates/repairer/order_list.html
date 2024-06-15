@@ -6,20 +6,22 @@
 {% block subbody %}
 <div class="container text-white">
 <form action="" method="get" class="">
-                {{ filterset.form.time_in_sence.label }}:
-                {{ filterset.form.time_in_sence }}
+    {{ filterset.form.time_in_sence.label }}:
+    {{ filterset.form.time_in_sence }}
 
-                {{ filterset.form.time_in_until.label }}:
-                {{ filterset.form.time_in_until }}
+    {{ filterset.form.time_in_until.label }}:
+    {{ filterset.form.time_in_until }}
 
 
-                {{ filterset.form.order_status.label }}:
-                {{ filterset.form.order_status }}
-                <input type="submit" value=" Submit " class="btn btn-sm btn-orange">
+    {{ filterset.form.order_status.label }}:
+    {{ filterset.form.order_status }}
+    <input type="submit" value=" Submit " class="btn btn-sm btn-orange">
     <br><br>
-        <h5>Amount of money : {{ summ_orders }} / Order`s quantity : {{ count_orders }}</h5>
 </form>
+    <h5>Amount of money : {{ summ_orders }} / Order`s quantity : {{ count_orders }}</h5>
+
 </div>
+
 {% endblock subbody %}
 
 {% block body %}
@@ -28,7 +30,7 @@
 <div id="head" class="container">
     {% for i in order %}
 
-   <div  class="row border  rounded p-2 m-3" id="{{ id_ }}">
+    <div  class="row border-bottom  rounded p-2 m-3" id="{{ id_ }}">
                 <div class="col-md-4">
 
                     <a href="{% url 'invoice' i.pk %}" id="order_{{ i.pk }}" class="h5 mycolor">Order № {{ i.pk }}</a>
@@ -77,22 +79,16 @@
                 </div>
 
                 <div class="col-md-4">
+
                     <p id="text_order_{{ i.pk }}" class="fas text-secondary">{{ i.text_order|truncatechars:200|capfirst }}</p>
 
 
                 </div>
             </div>
-
-
-
-
-
-
-
-
-
-
-
+    {% empty %}
+                <div  class="row border  rounded p-2 m-3" >
+                    <h3>No orders</h3>
+                </div>
     {% endfor %}
 </div>
 

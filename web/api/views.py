@@ -1,4 +1,4 @@
-
+from django.db.models import Q
 from rest_framework import serializers, generics
 
 from app_site.models import UserProfile, StreetTbilisi, Apartment
@@ -38,7 +38,9 @@ class ClientsView(generics.ListAPIView):
     serializer_class = ClientsModelSerializer
     http_method_names = ['get']
     def get_queryset(self):
-        queryset = UserProfile.objects.filter(customer_name__icontains=self.request.GET.get('client'))[0:10]
+        queryset = UserProfile.objects.filter(Q(customer_name__icontains=self.request.GET.get('client'))
+                                              |Q(phone__icontains=self.request.GET.get('client'))
+                                              |Q(telegram__icontains=self.request.GET.get('client')))[0:10]
         return queryset
 
 class AppartView(generics.ListAPIView):

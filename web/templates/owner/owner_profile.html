@@ -4,7 +4,6 @@
 {% load static %}
 {% load slippers %}
 
-
 {% block subbody %}
 <div class="row">
     <div class="col-lg-4 col-md-4 col-sm-12" align="right">
@@ -12,9 +11,10 @@
            class="rounded-circle border border-5 border-white" align="center" width="60">
     </div>
     <div class="col-lg-8 col-md-8 col-sm-12" align="left" >
-     <a href="" ><b>{{ user.last_name }} {{ user.first_name }}</b></a><br>
+     <a href="" ><b>{{ user.username }} </b></a><br>
         <a href=""><u><h6>{{prof.profile}}</u></a>
     </div>
+
 </div>
 {% endblock subbody%}
 
@@ -71,24 +71,39 @@
     }
 
 </style>
+<!--empty div for add order -->
+<div class="hidden" id="empty-form" >
+    <a href="" id="link-delete" class="mycolor" title="Delete">
+    <i class="fas fa-trash text-secondary"></i>
+    </a>
+    <a href="" class="mycolor" id="order_number">
+    <b>Order № </b>
+    <U>in progress</U>
+    </a>
+    | <span id="time_in"></span> |
+    <a href="" id="repaier" class="text-secondary" data-toggle="modal" data-target="#exampleModal"></a><br>
+    <div class="mt-2" id="text"></div>
+</div>
+<!-- end empty div for add order -->
 
 
 <div class="container">
+    <a href="{% url 'apartment_create' %}" class="btn btn-sm btn-orange ml-0 mb-2 p-2" >
+            new apartment
+        </a>
     <div class="tab">
         <!--menu apartments-->
-        <a href="{% url 'apartment_create' %}" class="fa fa-plus-square fa-2x ml-3 mr-3 mycolor" >
-        </a>
         <input checked id="tab-btn-{{ apartments.0.pk }}" name="tab-btn" type="radio" value="">
         <label for="tab-btn-{{ apartments.0.pk }}">{{apartments.0.address_street_app}} {{apartments.0.address_num|default_if_none:''}}</label>
         {% for b in apartments|slice:"1:" %}
         <input id="tab-btn-{{ b.pk }}" name="tab-btn" type="radio" value="">
-        <label for="tab-btn-{{ b.pk }}">{{ b.pk }} {{b.address_street_app}} {{b.address_num|default_if_none:''}}</label>
+        <label for="tab-btn-{{ b.pk }}">{{b.address_street_app}} {{b.address_num|default_if_none:''}}</label>
         {% endfor %}
         <!--end menu apartments-->
         {% regroup order_list_by_apartments by apartment_id as ap_list %}
         {% for c in ap_list %}
         <div class="tab-content" id="content-{{ c.grouper.pk }}">
-            <div class="row" >
+            <div class="row">
                 <!--details about apartment-->
                 <div class="col-lg-4 col-md-4 col-sm-12 border-right" align="right">
                     <h4>
@@ -131,18 +146,6 @@
                     </div>
                     <!-- end form for order -->
                     <div id="list_orders-{{ c.grouper.pk }}" >
-                        <div class="hidden" id="empty-form" >
-                            <a href="" id="link-delete" class="mycolor" title="Delete">
-                            <i class="fas fa-trash text-secondary"></i>
-                            </a>
-                            <a href="" class="mycolor" id="order_number">
-                            <b>Order № </b>
-                            <U>in progress</U>
-                            </a>
-                            | <span id="time_in"></span> |
-                            <a href="" id="repaier" class="text-secondary" data-toggle="modal" data-target="#exampleModal"></a><br>
-                            <div class="mt-2" id="text"></div>
-                        </div>
                         {% for b in c.list %}
                         <div class="mt-1 mb-3 pb-2 border-bottom">
                             <a href="{% url 'delete-order' b.pk %}" id="delete_{{ b.pk }}" class="mycolor" title="Delete">
@@ -156,9 +159,9 @@
                            </a>
                             | {{ b.time_in }} |
                             <a href="{{ b.repairer_id.pk }}" id="link" class="text-secondary" data-toggle="modal" data-target="#exampleModal">
-                                repaier: {{ b.repairer_id|default_if_none:"" }}
+                                Repaier: {{ b.repairer_id|default_if_none:""|capfirst }}
                             </a><br>
-                            <div class="mt-2">{{ b.text_order }} </div>
+                            <div class="mt-2"> {{ b.text_order }} </div>
                         </div>
                         {% endfor %}
                     </div>
@@ -214,6 +217,7 @@
                         </div>
                         <!-- end form for order -->
                         <div id="list_orders-{{ q.pk }}" >
+                            <h4>No orders</h4>
                         </div>
                     </div>
                 </div>

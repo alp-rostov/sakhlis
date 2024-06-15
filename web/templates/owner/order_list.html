@@ -51,6 +51,11 @@
         <p id="text_order_{{ i.pk }}" class="fas text-secondary">{{ i.text_order|truncatechars:200|capfirst }}</p>
     </div>
 </div>
+{% empty %}
+<div  class="row border-bottom p-1 mb-3 mt-1">
+    <h3>No orders</h3>
+</div>
+
 {% endfor %}
 
 

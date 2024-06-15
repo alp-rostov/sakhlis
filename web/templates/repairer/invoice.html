@@ -32,7 +32,7 @@
             {{ info.time_in }}<br>
             {% if info.order_status == 'SND' %}
                  <a href="../changestatus?order_pk={{ info.pk}}&work_status=RCV" id="workstatus"
-                 class="btn btn-sm btn-orange" >ACCEPT JOB</a>
+                 class="btn btn-sm btn-orange" >ACCEPT ORDER</a>
             {% elif info.order_status == 'RCV' %}
                  <a href="../changestatus?order_pk={{ info.pk}}&work_status=END" id="workstatus" class="btn btn-sm btn-orange">Job was completed</a><br>
             {% elif info.order_status == 'END' %}
