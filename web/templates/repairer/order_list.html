@@ -34,7 +34,7 @@
                 <div class="col-md-4">
 
                     <a href="{% url 'invoice' i.pk %}" id="order_{{ i.pk }}" class="h5 mycolor">Order № {{ i.pk }}</a>
-                    <a href="{% url 'delete-order' i.pk %}" id="delete_{{ i.pk }}" class="mycolor" title="Delete">
+                    <a href="{% url 'delete-order' i.pk %}" id="delete_{{ i.pk }}" class="mycolor" title="Delete order">
                         <i class="fas fa-trash text-secondary ml-3"></i></a><br>
                     <div id="time_in" class="mt-2">{{ i.time_in }}</div>
 

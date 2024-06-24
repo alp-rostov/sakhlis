@@ -89,8 +89,11 @@
 
 <div class="container">
     <a href="{% url 'apartment_create' %}" class="btn btn-sm btn-orange ml-0 mb-2 p-2" >
-            new apartment
-        </a>
+        new apartment
+    </a>
+    <a href="" class="btn btn-sm btn-orange ml-0 mb-2 p-2" >
+        delete apartment
+    </a>
     <div class="tab">
         <!--menu apartments-->
         <input checked id="tab-btn-{{ apartments.0.pk }}" name="tab-btn" type="radio" value="">
@@ -105,7 +108,7 @@
         <div class="tab-content" id="content-{{ c.grouper.pk }}">
             <div class="row">
                 <!--details about apartment-->
-                <div class="col-lg-4 col-md-4 col-sm-12 border-right" align="right">
+                <div class="col-lg-4 col-md-4 col-sm-12 border-right" align="center">
                     <h4>
                         {{ c.grouper.name|default_if_none:'' }}
                     </h4>
@@ -116,7 +119,7 @@
                     <p class="text-secondary ">
                         {{ c.grouper.notes|default_if_none:'' }}
                         <a href="{% url 'apartment_update' c.grouper.pk %}" class="mycolor"
-                           title="изменить данные"><i class="fas fa-pen text-secondary"> </i>
+                           title="update apartment"><i class="fas fa-pen text-secondary"> </i>
                         </a>
                     </p>
                     <img src="../media/{{ c.grouper.foto|default_if_none:'images/none.jpg' }} "

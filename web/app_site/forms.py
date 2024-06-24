@@ -42,7 +42,29 @@ class ApartmentForm(forms.ModelForm):
                   'address_num', 'link_location')
 
 
-class ApartentUpdateForm(forms.ModelForm):
+class ApartentUpdateForm(ApartmentForm, forms.ModelForm):
+    name = forms.CharField(
+        label='Name',
+        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "", 'maxlength':40}),
+        required = False
+    )
+    notes = forms.CharField(
+        label='Note',
+        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Additional information", 'maxlength':40}),
+        required = False
+    )
+    type = forms.ChoiceField(
+        choices=APART_CHOICES,
+        label='Type of apartment',
+
+        widget=forms.Select(
+            attrs={"class": "form-control"
+                   },
+        ),
+        initial="FL"
+
+    )
+
     class Meta:
         model = Apartment
         exclude = ["owner"]
@@ -51,14 +73,14 @@ class ApartentUpdateForm(forms.ModelForm):
 class CustomerForm(forms.ModelForm):
 
     customer_name = forms.CharField(
-        label='Your Name',
+        label='Name',
         widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Username", 'maxlength':20}),
         required=True
     )
 
     profile = forms.CharField(
-        label='About you',
-        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "About you: company, job title, etm", 'maxlength':1500}),
+        label='Additional information:',
+        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "About company, job title, etm", 'maxlength':1500}),
         required=False
     )
 
