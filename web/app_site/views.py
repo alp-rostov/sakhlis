@@ -95,9 +95,6 @@ class InvoiceCreate(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMix
         context['form'] = formset
         return context
 
-    def get_queryset(self):
-        return DataFromOrderList().get_data_from_OrderList_all(repairer=self.request.user)
-
     def post(self, formset, **kwargs):
         b = get_object_or_404(OrderList, pk=self.kwargs.get('pk'))
         AuthorFormSet = modelformset_factory(Invoice, form=InvoiceForm)
@@ -339,18 +336,18 @@ class OrderUpdate(LoginRequiredMixin, UpdateView):
         return '/list_order/' + str(self.object.pk)
 
 
-class RepairerDetailInformation(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, DetailView):
-    model = User
+class RepairerDetailInformation(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, TemplateView):
+    # model = User
     template_name = 'repairer/repaier_profile.html'
     # form_class = UserRegisterForm
-    context_object_name = 'user'
+    # context_object_name = 'user'
     permission_required = PERMISSION_FOR_REPAIER
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['profile'] = DataFromRepairerList().get_object_from_UserProfile(user=self.object)
-        context['count'] = DataFromOrderList().get_number_of_orders_from_OrderList(repairer=self.request.user)
-        context['sum'] = DataFromInvoice().get_amount_money_of_orders(repairer=self.request.user)
+        # context['profile'] = DataFromRepairerList().get_object_from_UserProfile(user=self.object)
+        # context['count'] = DataFromOrderList().get_number_of_orders_from_OrderList(repairer=self.request.user)
+        # context['sum'] = DataFromInvoice().get_amount_money_of_orders(repairer=self.request.user)
         context['form_order'] = OrderForm
         context['form_appart'] = ApartmentForm
         context['form_customer'] = CustomerForm

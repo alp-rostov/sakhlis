@@ -42,10 +42,16 @@ class DataFromOrderList:
                 .select_related('apartment_id', 'customer_id') \
                 .order_by("-pk")
 
-    def get_data_from_OrderList_with_order_status(self, repairer: User, status_of_order:list) -> QuerySet:
-        return self.model \
+    def get_data_from_OrderList_with_order_status(self, status_of_order:list,  repairer: User='None') -> QuerySet:
+        if repairer:
+            return self.model \
+                    .filter(order_status__in=status_of_order) \
+                    .select_related('apartment_id', 'customer_id', 'repairer_id') \
+                    .order_by("-order_status", "-pk")
+        else:
+            return self.model \
                 .filter(repairer_id=repairer, order_status__in=status_of_order) \
-                .select_related('apartment_id', 'customer_id') \
+                .select_related('apartment_id', 'customer_id', 'repairer_id') \
                 .order_by("-order_status", "-pk")
 
     def get_next_number_for_paginator_from_OrderList(self, repairer: User, pk:int) -> OrderList:

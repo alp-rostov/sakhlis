@@ -4,43 +4,25 @@
 {% load static %}
 {% load slippers %}
 
-                            {% block subbody %}
+{% block subbody %}
+<div class="row">
+    <div class="col-lg-4 col-md-4 col-sm-12" align="right">
+      <img src="../media/masters/{{ request.user.pk|default_if_none:'images/none' }}.jpg"
+           class="rounded-circle border border-5 border-white" align="center" width="100">
+    </div>
+    <div class="col-lg-8 col-md-8 col-sm-12" align="left" >
+     <a href="" ><b>{{ request.user }} </b></a>
+    </div>
 
-                            {% endblock subbody%}
+</div>
+{% endblock subbody%}
 
 {% block body %}
 
 <div class="container">
     <div class="row">
-        <div class="col-lg-4 col-md-10 col-sm-12 pt-3 text-center border-right">
-            <h4>
-              {{ user.last_name }} {{ user.first_name }} | <strong class="mycolor"> {{ request.user.username }}</strong>
-            </h4>
-            City: {{ profile.city|choice_tag:'city' }}
-            <a href="{% url 'update-user' profile.pk %}" class="mycolor" title="изменить данные"><i class="fas fa-pen text-secondary mt-3"> </i></a>
-            <br>
-            <img src="../media/{{ profile.foto|default_if_none:'images/none.jpg' }} " alt="Муж на час" class="rounded-circle" align="center" width="200">
-            <br>
-            Completed jobs: {{ count }}<br>
-            Income: {{ sum }}<br>
-        </div>
-
-        <div class="col-lg-8 col-md-10 col-sm-12 pt-3">
+        <div class="col-lg-6 col-md-8 col-sm-12 ">
         {% regroup orders by order_status as order_list %}
-            <a id="toggleLinkqq" class="btn btn-sm btn-orange ml-0 mb-3" href="javascript:void(0)" onclick="viewdiv('qq')"
-             data-text-hide="create new request" data-text-show="close" >create new request</a>
-            <a id="toggleLinkqqq" href="#" class="btn btn-sm btn-orange ml-0 mb-3" href="javascript:void(0)" onclick="viewdiv('qqq')"
-             data-text-hide="add new request" data-text-show="close" >add new request</a>
-            <div id="qq" style="display:none;" class="mb-5">
-                {% #form form_order_=form_order form_appart_=form_appart form_customer_=form_customer %}
-                {% csrf_token %}
-                {% /form %}
-            </div>
-
-            <div id="qqq" style="display:none;" class="mb-5">
-                <input type="text" id="hh" name="client" value="" placeholder="Enter customer details" >
-                <div id="aaa"></div>
-            </div>
 
             {% for i in order_list %}
             <h5 class="mycolor border-bottom">
@@ -48,42 +30,32 @@
             </h5>
 
                 {% for b in i.list %}
-                <div class="mb-3 p-1 border-bottom">
-                    <a id="toggleLinkmydiv{{ b.pk }}" href="javascript:void(0)" onclick="viewdiv('mydiv{{ b.pk }}')"
-                       data-text-hide="+" data-text-show="-" class="text-secondary "><b>+</b></a> |
-                    <a href="../list_order/{{b.pk}}" id="order_{{ b.pk }}" class ='text-secondary'>
-                    Order № {{ b.pk }}</a><a href="{% url 'delete-order' b.pk %}" id="delete_{{ b.pk }}" class="mycolor mr-1 text-secondary" title="Delete order">
-                        <i class="fas fa-trash text-secondary ml-1"></i></a>  | {{ b.time_in }} |
-                    <a href="{{ b.customer_id.pk }}" id="link_customer" class="text-secondary" data-toggle="modal" data-target="#exampleModal">  {{ b.customer_id.customer_name }}</a>
+                <div class="row border-bottom mb-3 p-1">
+                    <div class="col-9 border-right" >
+                        <a href="../list_order/{{b.pk}}" id="order_{{ b.pk }}" class ='text-secondary h5'>
+                        Order № {{ b.pk }}</a>, {{ b.time_in|date:"d b Y" }}
+                        <a href="{% url 'delete-order' b.pk %}" id="delete_{{ b.pk }}" class="mycolor mr-1 text-secondary" title="Delete order">
+                            <i class="fas fa-trash text-secondary ml-5"></i>
+                        </a><br>
 
-                     <a href="{% url 'clients_update' b.customer_id.pk %}" class="text-secondary ml-3" title="updade data" >
+                        <a href="{{ b.customer_id.pk }}" id="link_customer" class="fas fa-user prefix grey-text" data-toggle="modal" data-target="#exampleModal" title="client">
+                            {{ b.customer_id.customer_name }}
+                        </a>
+                        <a href="{% url 'clients_update' b.customer_id.pk %}" class="text-secondary ml-1" title="updade data" >
                             <i class="fas fa-pen text-secondary" style='font-size:14px'> </i>
                         </a>
 
-                    <div id="mydiv{{ b.pk }}" style="display:none;">
-                        {% if b.customer_id.phone %}
-                        <a href="tel:+{{ b.customer_id.phone }}" title="Phone" id="customer_phone_{{ b.pk }}"
-                           class="fas fa-phone btn prefix text-secondary mt-2" aria-hidden="true">
-                        </a>
-                        {% endif %}
-                        {% if b.customer_id.telegram %}
-                        <a href="https://t.me/{{ b.customer_id.telegram|cut:'@' }}" title="Telegram" id="customer_id.telegram_{{ b.pk }}"
-                            class ="fas fa fa-paper-plane btn text-secondary mt-2" aria-hidden="true">
-                        </a>
-                        {% endif %}
-                        {% if b.customer_id.whatsapp %}
-                        <a href="https://wa.me/+{{ b.customer_id.whatsapp }}" id="watsapp_{{ i.pk }}" class="fa fab fa-whatsapp-square btn prefix text-secondary mt-2"
-                            title="Whatsapp" aria-hidden="true" >
-                        </a>
-                        {% endif %}
-                        {% if b.apartment_id.link_location %}
-                        <a href="{{b.apartment_id.link_location}}"  class="fas fa-map-marker btn prefix text-secondary mt-2" title="Open map" aria-hidden="true" >
-                        </a>
-                        {% endif %}
+                        <div class="mt-2 ">
+                            <span class="fa fa-comment prefix grey-text"> {{ b.text_order }}</span>
+                        </div>
                     </div>
 
-                    <div class="mt-2">
-                        {{ b.text_order }}
+                    <div class="col-3 mb-2 pl-3 ">
+                          <img src="../media/masters/{{ b.repairer_id.pk }}.jpg"
+                               class="rounded-circle" align="center" width="60"><br>
+                         <a href="" class="text-secondary">
+                             <b>{{ b.repairer_id.username }}</b>
+                         </a>
                     </div>
                 </div>
 
@@ -93,8 +65,26 @@
                 <div class="mb-3 p-2 border border-5 rounded"><h3>No orders in progress</h3>
             <a href="{% url 'list_order' %}" class="mycolor">All orders</a></div>
             {% endfor %}
-        </div>
+
     </div>
+        <div class="col-lg-6 col-md-10 col-sm-12 pt-3 ">
+            <a id="toggleLinkqq" class="btn btn-sm btn-orange ml-0 mb-3" href="javascript:void(0)" onclick="viewdiv('qq')"
+             data-text-hide="create new request" data-text-show="close" >create new request</a>
+            <a id="toggleLinkqqq" href="#" class="btn btn-sm btn-orange ml-0 mb-3" href="javascript:void(0)" onclick="viewdiv('qqq')"
+             data-text-hide="add new request" data-text-show="close" >add new request</a>
+
+            <div id="qqq" style="display:none;" class="mb-5">
+                <input type="text" id="hh" name="client" value="" placeholder="Enter customer details" >
+                <div id="aaa"></div>
+            </div>
+
+            <div id="qq" style="display:none;" class="mb-5">
+                {% #form form_order_=form_order form_appart_=form_appart form_customer_=form_customer %}
+                {% csrf_token %}
+                {% /form %}
+            </div>
+        </div>
+
 </div>
 
 
