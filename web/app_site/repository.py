@@ -14,10 +14,10 @@ class DataFromUserProfile:
     def __init__(self, model=UserProfile.objects):
         self.model = model
 
-    def get_clients_of_orders_from_UserProfile(self, user:User) -> QuerySet: #TODO refactor queryset
+    def get_clients_of_orders_from_UserProfile(self, user:User) -> QuerySet: #TODO refactor queryset 'customer_id__gt=0'
         list_orders = OrderList.objects \
                         .values('customer_id')\
-                        .filter(repairer_id=user, customer_id__gt=0) \
+                        .filter(customer_id__gt=0) \
                         # .annotate(count=Count(F('pk')))
         return (self.model \
                 .filter(pk__in=list_orders)
@@ -71,22 +71,19 @@ class DataFromOrderList:
         return self.model \
             .values('time_in__month', 'time_in__year') \
             .annotate(count=Sum(F('invoice__price') * F('invoice__quantity'))) \
-            .filter(repairer_id=repairer) \
-            .order_by('time_in__year', 'time_in__month')
+            .order_by('time_in__year', 'time_in__month').all()
 
     def get_monthly_order_quantity_from_OrderList(self, repairer: User) -> QuerySet:
         return self.model\
             .values('time_in__month', 'time_in__year')\
             .annotate(count=Count(F('pk')))\
-            .filter(repairer_id=repairer)\
-            .order_by('time_in__year')
+            .order_by('time_in__year').all()
 
     def get_dayly_cost_of_orders(self, repairer: User) -> QuerySet:
         return self.model \
                    .values('time_in__date') \
                    .annotate(count=Sum(F('invoice__price') * F('invoice__quantity'))) \
-                   .order_by('-time_in__date') \
-                   .filter(repairer_id=repairer)[0:30:-1]
+                   .order_by('-time_in__date').all()[0:30:-1]
 
     def get_all_data_of_order_with_from_invoice(self):
         return self.model \
@@ -118,15 +115,15 @@ class DataFromInvoice:
         return self.model \
             .values('service_id__type') \
             .annotate(count=Count(F('service_id__type'))) \
-            .order_by('-count') \
-            .filter(order_id__repairer_id=repairer)
+            .order_by('-count').all() \
+
 
     def get_cost_of_orders_by_type(self, repairer: User):
         return self.model \
             .values('service_id__type') \
             .annotate(count=Sum(F('price') * F('quantity'))) \
-            .order_by('-count') \
-            .filter(order_id__repairer_id=repairer)
+            .order_by('-count').all() \
+
 
     def get_total_cost_of_some_orders(self, list_of_orders: QuerySet) -> QuerySet:
         return self.model\

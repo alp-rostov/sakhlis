@@ -255,9 +255,8 @@ class OrderManagementSystem(BaseClassExeption, LoginRequiredMixin, ListView):
 
     def get_queryset(self):
         queryset = (super().get_queryset()
-                    .filter(repairer_id=self.request.user)
-                    .select_related('customer_id', 'apartment_id')
-                    .values('pk', 'time_in',
+                    .select_related('customer_id', 'apartment_id', 'repairer_id')
+                    .values('pk', 'time_in', 'repairer_id__pk', 'repairer_id__username',
                             'text_order', 'customer_id__pk',
                             'customer_id__customer_name','customer_id__phone',
                             'customer_id__telegram', 'customer_id__whatsapp',
@@ -320,18 +319,6 @@ class OrderUpdate(LoginRequiredMixin, UpdateView):
     template_name = 'order_update.html'
     form_class = OrderUpdateForm
 
-    def get_form(self, **kwargs):
-        form =OrderUpdateForm(self.request.user, **kwargs)
-        return form
-        # return self.form_class(**self.get_form_kwargs())
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['time_in'] = self.object.time_in
-        context['pk'] = self.object.pk
-        return context
-
-
     def get_success_url(self):
         return '/list_order/' + str(self.object.pk)
 
@@ -380,8 +367,7 @@ class Statistica(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin,
         # b = self.request.GET.copy()
         # b.__setitem__('repairer_id', self.request.user.pk)
         # self.filterset = OrderFilter(b, queryset)
-        queryset = super().get_queryset().filter(repairer_id=self.request.user).select_related('customer_id',
-                                                                                               'apartment_id').all()
+        queryset = super().get_queryset().select_related('customer_id', 'apartment_id', 'repairer_id').all()
         self.filterset = OrderFilter(self.request.GET, queryset)
         return self.filterset.qs
 
@@ -514,7 +500,7 @@ def listservices_for_invoice_json(request, **kwargs):
 def client_details_json(request, **kwargs):
     """for ajax request """
     data = UserProfile.objects.get(pk=request.GET.get('pk'))
-    orders = OrderList.objects.filter(repairer_id=request.user, customer_id=data).values('pk','text_order', 'time_in').order_by('-time_in')[0:5]
+    orders = OrderList.objects.filter(customer_id=data).values('pk','text_order', 'time_in').order_by('-time_in')[0:5]
     json_orders = json.dumps(list(orders), default=str)
     apartment=Apartment.objects.filter(owner=data).values('pk','name','address_city', 'address_street_app', 'address_num').order_by('-address_street_app')
     json_apartment = json.dumps(list(apartment), default=str)
@@ -587,13 +573,13 @@ def DeleteIvoiceService(request, **kwargs):
 def change_work_status(request, **kwargs):
     """for ajax request """
     b = get_object_or_404(OrderList, pk=request.GET.get("order_pk"))
-    if request.GET.get('work_status') in ORDER_STATUS_FOR_CHECK and b.repairer_id == request.user:
-        b.order_status = request.GET.get('work_status')
-        if b.order_status == 'END': b.time_out = datetime.now()
-        b.save()
-        return JsonResponse({"message": request.GET.get('work_status'), "pk": request.GET.get("order_pk")})
-    else:
-        return JsonResponse({"message": "error"})
+    # if request.GET.get('work_status') in ORDER_STATUS_FOR_CHECK and b.repairer_id == request.user:
+    b.order_status = request.GET.get('work_status')
+    if b.order_status == 'END': b.time_out = datetime.now()
+    b.save()
+    return JsonResponse({"message": request.GET.get('work_status'), "pk": request.GET.get("order_pk")})
+    # else:
+    #     return JsonResponse({"message": "error"})
 
 
 def input_street(request, **kwargs):

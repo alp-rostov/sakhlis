@@ -4,11 +4,15 @@
 
 {% block body %}
 
-<h1>Order № {{ pk }} от {{ time_in|date:"d.m.Y" }}</h1>
+<h1>Order № {{ object.pk }}, {{ object.time_in }}</h1>
 <hr>
-  <datalist id="languages"></datalist>
-
+<h4>Update information:</h4>
+<form action="" method="post">
+    {% csrf_token %}
 {{ form }}
 
+   <input type="submit" value="Submit"  class="btn btn-orange" />
+
+</form>
 
 {% endblock body %}

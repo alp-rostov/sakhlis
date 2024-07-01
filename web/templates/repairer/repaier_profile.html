@@ -41,9 +41,6 @@
                         <a href="{{ b.customer_id.pk }}" id="link_customer" class="fas fa-user prefix grey-text" data-toggle="modal" data-target="#exampleModal" title="client">
                             {{ b.customer_id.customer_name }}
                         </a>
-                        <a href="{% url 'clients_update' b.customer_id.pk %}" class="text-secondary ml-1" title="updade data" >
-                            <i class="fas fa-pen text-secondary" style='font-size:14px'> </i>
-                        </a>
 
                         <div class="mt-2 ">
                             <span class="fa fa-comment prefix grey-text"> {{ b.text_order }}</span>
@@ -78,7 +75,7 @@
                 <div id="aaa"></div>
             </div>
 
-            <div id="qq" style="display:none;" class="mb-5">
+            <div id="qq" style="display:block;" class="mb-5">
                 {% #form form_order_=form_order form_appart_=form_appart form_customer_=form_customer %}
                 {% csrf_token %}
                 {% /form %}

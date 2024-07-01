@@ -8,7 +8,7 @@ urlpatterns = [
     path('', OrderCreate.as_view(), name='home'),
     path('list_order', OrderManagementSystem.as_view(), name='list_order'),
     path('list_order/<int:pk>', InvoiceCreate.as_view(), name='invoice'),
-    path('list_order/update/<int:pk>', OrderUpdate.as_view(), name='update'),
+    path('list_order/update/<int:pk>', OrderUpdate.as_view(), name='update-order'),
     path('list_order/pdf/<int:order_pk>', CreateIvoicePDF, name='invoice_pdf'),
 
     path('update-user/<int:pk>', RepaierUpdate.as_view(), name='update-user'),

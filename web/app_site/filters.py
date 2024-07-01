@@ -1,6 +1,6 @@
 
 from django_filters import FilterSet, CharFilter, DateFilter, ChoiceFilter, MultipleChoiceFilter, \
-    TypedMultipleChoiceFilter
+    TypedMultipleChoiceFilter, ModelChoiceFilter
 from .models import *
 from django import forms
 #
@@ -28,9 +28,16 @@ class OrderFilter(FilterSet):
         choices=ORDER_STATUS,
     )
 
+    repairer_id = ModelChoiceFilter(
+        queryset=User.objects.all(),
+        field_name='repairer_id',
+        label='Master'
+
+    )
+
     class Meta:
         model = OrderList
-        fields = ['order_status']
+        fields = ['order_status', 'repairer_id']
 
 
 
