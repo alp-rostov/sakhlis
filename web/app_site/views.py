@@ -87,9 +87,9 @@ class InvoiceCreate(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMix
         context['invoice'] = DataFromInvoice().get_data_from_Invoice_with_amount(order_id_=self.object.pk)
         context['type_work'] = WORK_CHOICES
         context['next'] = DataFromOrderList() \
-            .get_next_number_for_paginator_from_OrderList(repairer=self.request.user, pk=self.object.pk)
+            .get_next_number_for_paginator_from_OrderList(pk=self.object.pk)
         context['prev'] = DataFromOrderList() \
-            .get_previous_number_for_paginator_from_OrderList(repairer=self.request.user, pk=self.object.pk)
+            .get_previous_number_for_paginator_from_OrderList(pk=self.object.pk)
         InvoiceFormSet = modelformset_factory(Invoice, form=InvoiceForm, extra=0)
         formset = InvoiceFormSet(queryset=Invoice.objects.none())
         context['form'] = formset

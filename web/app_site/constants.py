@@ -59,8 +59,8 @@ ORDER_STATUS = [
 ]
 
 ORDER_STATUS_ = [
-    ('BEG', 'Request received'),
-    ('SND', 'New requests'),
+    ('BEG', 'New requests'),
+    ('SND', 'Request sent to the master'),
     ('RCV', 'Jobs in progress'),
     ('END', 'Job completed '),
 ]
