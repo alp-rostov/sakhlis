@@ -17,7 +17,7 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 
 from .constants import *
 from .exeptions import BaseClassExeption
-from .filters import OrderFilter, ClientFilter
+from .filters import OrderFilter, ClientFilter, ApartmentFilter
 from .models import *
 from .forms import *
 from .repository import DataFromRepairerList, DataFromOrderList, DataFromInvoice, DataFromUserProfile
@@ -26,14 +26,27 @@ from .utils import *
 logger = logging.getLogger(__name__)
 
 
-class ApartmentList(ListView):
+class ApartmentList(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, ListView):
     model = Apartment
-    context_object_name = 'appartment'
-    template_name = 'owner/apartment.html'
+    context_object_name = 'apart'
+    template_name = 'repairer/apartments.html'
+    permission_required = PERMISSION_FOR_REPAIER
+    queryset = Apartment.objects.none()
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['filterset'] = self.filterset
+        return context
 
     def get_queryset(self):
-        userptofile=UserProfile.objects.get(user=self.request.user)
-        return Apartment.objects.filter(owner=userptofile)
+        queryset = super().get_queryset()
+        if self.request.GET.get('address_city') != None:
+            queryset = Apartment.objects.order_by('address_street_app').all()
+            # queryset = DataFromUserProfile().get_clients_of_orders_from_UserProfile(self.request.user)
+
+        self.filterset = ApartmentFilter(self.request.GET, queryset)
+
+        return self.filterset.qs
 
 
 class Clients(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, ListView):
@@ -51,7 +64,8 @@ class Clients(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, Li
     def get_queryset(self):
         queryset = super().get_queryset()
         if self.request.GET.get('customer_name')!=None:
-            queryset = DataFromUserProfile().get_clients_of_orders_from_UserProfile(self.request.user)
+            queryset=UserProfile.objects.order_by('customer_name').all()
+            # queryset = DataFromUserProfile().get_clients_of_orders_from_UserProfile(self.request.user)
 
         self.filterset = ClientFilter(self.request.GET, queryset)
 
@@ -182,27 +196,16 @@ class OrderCreate(BaseClassExeption, CreateView):
         #                          })
 
 
-class OrderCreatebyRepaier(BaseClassExeption, CreateView):
-    """" Add order """
-    model = OrderList
-    template_name = 'repairer/order_create_repairer.html'
-    form_class = OrderForm
-    success_url = reverse_lazy('home')
-    #
-    # def get_context_data(self, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-    #     return context
 
-
-class OrderDelete(BaseClassExeption, LoginRequiredMixin, DeleteView):
+class OrderDelete(BaseClassExeption, LoginRequiredMixin, DeleteView):  #TODO refactor redirect
     model = OrderList
     template_name = 'order_delete.html'
 
     def get_success_url(self):
         if self.request.user.groups.first().name == 'owner':
-            return f'/owner'
+            return redirect('apartment')
         elif self.request.user.groups.first().name == 'repairer':
-            return '/list_order'
+            return redirect('list_order')
 
 
 class OwnerDetailInformation(PermissionRequiredMixin, LoginRequiredMixin, TemplateView):
@@ -229,6 +232,7 @@ class OwnerDetailInformation(PermissionRequiredMixin, LoginRequiredMixin, Templa
         list_app_=set([i.get('apartment_id') for i in context['order_list_by_apartments'].values('apartment_id')])
         list_app=context['apartments'].exclude(pk__in=list_app_)
         context['list_app']=list_app
+        context['form']=ApartentUpdateForm
         return context
 
 
@@ -299,19 +303,18 @@ class OwnerApartmentCreate(BaseClassExeption, LoginRequiredMixin, CreateView):
     model = Apartment
     template_name = 'owner/apartment_update.html'
     form_class = ApartentUpdateForm
-    success_url = '../'
-
+    success_url = '../apartment'
     def form_valid(self, form):
+        super().form_valid(form)
         form.instance.owner=UserProfile.objects.get(user=self.request.user)
         form.save()
-        url = reverse('owner')
-        return redirect(url)
+        return redirect('apartment')
 
 class OwnerApartmentUpdate(LoginRequiredMixin, UpdateView):
     model = Apartment
     template_name = 'owner/apartment_update.html'
     form_class = ApartentUpdateForm
-    success_url = '../'
+    success_url = '../apartment'
 
 
 class OrderUpdate(LoginRequiredMixin, UpdateView):
@@ -324,17 +327,11 @@ class OrderUpdate(LoginRequiredMixin, UpdateView):
 
 
 class RepairerDetailInformation(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, TemplateView):
-    # model = User
     template_name = 'repairer/repaier_profile.html'
-    # form_class = UserRegisterForm
-    # context_object_name = 'user'
     permission_required = PERMISSION_FOR_REPAIER
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        # context['profile'] = DataFromRepairerList().get_object_from_UserProfile(user=self.object)
-        # context['count'] = DataFromOrderList().get_number_of_orders_from_OrderList(repairer=self.request.user)
-        # context['sum'] = DataFromInvoice().get_amount_money_of_orders(repairer=self.request.user)
         context['form_order'] = OrderForm
         context['form_appart'] = ApartmentForm
         context['form_customer'] = CustomerForm
@@ -363,10 +360,6 @@ class Statistica(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin,
     permission_required = PERMISSION_FOR_REPAIER
 
     def get_queryset(self):
-        queryset = super().get_queryset()
-        # b = self.request.GET.copy()
-        # b.__setitem__('repairer_id', self.request.user.pk)
-        # self.filterset = OrderFilter(b, queryset)
         queryset = super().get_queryset().select_related('customer_id', 'apartment_id', 'repairer_id').all()
         self.filterset = OrderFilter(self.request.GET, queryset)
         return self.filterset.qs
@@ -410,10 +403,10 @@ class Statistica(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin,
 class UserAuthorizationView(LoginView):
     def get_success_url(self):
         super().get_success_url()
-        if 'repairer' == str(self.request.user.groups.first()):
+        if 'repairer' == self.request.user.groups.first().name:
             return reverse_lazy('user', kwargs={'pk': self.request.user.pk})
-        elif 'owner' == str(self.request.user.groups.first()):
-            return reverse_lazy('owner')
+        elif 'owner' == self.request.user.groups.first().name:
+            return reverse_lazy('apartment')
 
 
 class UserRegisterView(CreateView):
@@ -472,21 +465,6 @@ def OrderAddRepaier(request):
             return HttpResponseRedirect(reverse('update', args=(order.pk,)))
         else:
             return redirect('home')  # TODO настроить сообщение, что ремонтник уже указан
-
-@login_required
-def AddApartment(request):
-    """Add"""
-    if 'owner' == str(request.user.groups.first()):
-        ApartmentForm(request.GET).save()
-        print('---------------')
-
-        #
-        # return reverse_lazy('owner', kwargs={'pk': request.user.pk})
-        #
-        #
-        #     return HttpResponseRedirect(reverse('update', args=(order.pk,)))
-        # else:
-        #     return redirect('home')
 
 
 @login_required

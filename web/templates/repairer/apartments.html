@@ -1,63 +1,41 @@
-{% extends 'flatpages/default_owner.html' %}
+{% extends 'flatpages/default_user.html' %}
 {% load custom_filters %}
 {% load custom_tags %}
+{% load static %}
 {% load slippers %}
 
 {% block subbody %}
-<!-- from filterset -->
 <div class="container text-white">
-    <form action="" method="get" class="">
-        {{ filterset.form.time_in_sence.label }}:
-        {{ filterset.form.time_in_sence }}
-        {{ filterset.form.time_in_until.label }}:
-        {{ filterset.form.time_in_until }}
-        {{ filterset.form.order_status.label }}:
-        {{ filterset.form.order_status }}
+    <form action="" method="get">
+        {{ filterset.form }}
         <input type="submit" value=" Submit " class="btn btn-sm btn-orange">
-            <h5>Amount of money : {{ summ_orders }} / Order`s quantity : {{ count_orders }}</h5>
     </form>
 </div>
-<!-- end from filterset -->
 {% endblock subbody %}
 
 {% block body %}
-
-<div id="head" class="container">
-{% url 'ownerinvoice' i.pk as the_url_invoice %}
-{% url 'delete-order' i.pk as the_url_delete %}
-{% url 'update' i.pk as the_url_update %}
-
-{% for i in order %}
-<div  class="row border-bottom p-1 mb-3 mt-1" id="{{ id_ }}">
-    <div class="col-md-4">
-        <a href="{% url 'ownerinvoice' i.pk %}" id="order_{{ i.pk }}" class="h5 mycolor">Order № {{ i.pk }}</a>
-        <a href="{% url 'delete-order' i.pk %}" id="delete_{{ i.pk }}" class="mycolor" title="Delete">
-            <i class="fas fa-trash text-secondary ml-3"></i></a><br>
-        <div id="time_in" class="mt-2">{{ i.time_in }}</div>
+{% regroup apart by address_street_app|first as name %}
+{% for i in name %}
+<div  class="row" id="">
+    <div class="col-md-12 mycolor">
+        <br><br><h4>{{ i.grouper }}</h4><hr>
     </div>
-    <div class="col-md-4 ">
-        <span id="customer_name_{{ i.pk }}" class="text-secondary" aria-hidden="true">Repaier:
-            <a href="" class="text-secondary h5">
-                {{ i.repairer_id__username|capfirst }}
+</div>
+    {% for b in i.list %}
+    <div  class="row" id="">
+        <div class="col-md-6">
+            <a href="{{ b.pk  }}" id="link" class="h5 " data-toggle="modal" data-target="#exampleModal">
+                {{ b.customer_name }}
             </a>
-        </span><br>
-        <span class="fas fa-home prefix text-secondary mt-2" aria-hidden="true" >
-            <span id="street_app_{{ i.pk }}">{{ i.apartment_id__address_street_app }}</span>
-            <span id="num_{{ i.pk }}">{{ i.apartment_id__address_num }}</span>,
-            <span id="city_{{ i.pk }}" >{{ i.apartment_id__address_city|choice_tag:'city'}}</span>.
-        </span>
+        </div>
+        <div class="col-md-6">
+            {{ b|default_if_none:"" }}
+        </div>
     </div>
-    <div class="col-md-4">
-        <p id="text_order_{{ i.pk }}" class="fas text-secondary">{{ i.text_order|truncatechars:200|capfirst }}</p>
-    </div>
-</div>
+    {% endfor %}
 {% empty %}
-<div  class="row border-bottom p-1 mb-3 mt-1">
-    <h3>No orders</h3>
-</div>
-
+<h3 class="mycolor">NO DATA<br>Enter customer details</h3>
 {% endfor %}
-
 
 
     <!-- Modal Window -->
@@ -103,7 +81,7 @@
 
 
 
-                            <div class="row mb-2 mt-2" id="order1">Client requests:
+                            <div class="row mb-2 mt-2" id="order1">5 latest client requests::
                             </div>
                     </div>
                 </div>
@@ -201,4 +179,8 @@ else {input.hidden = false;}
 
 
 
+
+
+
 {% endblock body %}
+

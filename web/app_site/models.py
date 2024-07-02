@@ -86,7 +86,7 @@ class Apartment(models.Model):
         verbose_name_plural = 'Appartment list'
 
     def __str__(self):
-        return f"{self.address_street_app} {self.address_num} | {self.name}"
+        return f"{self.address_street_app} {self.address_num} "
 
 class OrderList(models.Model):
     """________________________"""

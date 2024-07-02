@@ -100,4 +100,34 @@ class ClientFilter(FilterSet):
 
 
 
+class ApartmentFilter(FilterSet):
+
+    address_street_app = CharFilter(
+        field_name='address_street_app',
+        label='',
+        widget=forms.TextInput(attrs={"class": "", "placeholder": "Street"}),
+
+        lookup_expr='icontains',
+
+    )
+
+    address_city = ChoiceFilter(
+        field_name='address_city',
+        label='City',
+        lookup_expr='icontains',
+        choices=CITY_CHOICES,
+
+    )
+
+    # address_city = ChoiceFilter(
+    #     field_name='address_city',
+    #     label='City',
+    #     lookup_expr='icontains',
+    #     choices=CITY_CHOICES,
+    #
+    # )
+
+    class Meta:
+        model = OrderList
+        fields = ['address_city']
 

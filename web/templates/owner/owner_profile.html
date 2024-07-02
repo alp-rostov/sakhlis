@@ -91,9 +91,6 @@
     <a href="{% url 'apartment_create' %}" class="btn btn-sm btn-orange ml-0 mb-2 p-2" >
         new apartment
     </a>
-    <a href="" class="btn btn-sm btn-orange ml-0 mb-2 p-2" >
-        delete apartment
-    </a>
     <div class="tab">
         <!--menu apartments-->
         <input checked id="tab-btn-{{ apartments.0.pk }}" name="tab-btn" type="radio" value="">
@@ -150,21 +147,28 @@
                     <!-- end form for order -->
                     <div id="list_orders-{{ c.grouper.pk }}" >
                         {% for b in c.list %}
-                        <div class="mt-1 mb-3 pb-2 border-bottom">
-                            <a href="{% url 'delete-order' b.pk %}" id="delete_{{ b.pk }}" class="mycolor" title="Delete">
-                                <i class="fas fa-trash text-secondary"></i>
-                            </a>
-                            <a href="{% url 'ownerinvoice' b.pk %}" class="mycolor">
-                                <b>Order № {{ b.pk }}</b>
-                                {% if b.order_status != "END" %}
-                                <U>in progress</U>
-                                {% endif %}
-                           </a>
-                            | {{ b.time_in }} |
-                            <a href="{{ b.repairer_id.pk }}" id="link" class="text-secondary" data-toggle="modal" data-target="#exampleModal">
-                                Repaier: {{ b.repairer_id|default_if_none:""|capfirst }}
-                            </a><br>
-                            <div class="mt-2"> {{ b.text_order }} </div>
+                        <div class="row  mt-1 mb-3 pb-2  border-bottom">
+                            <div class=" col-6">
+                                <a href="{% url 'delete-order' b.pk %}" id="delete_{{ b.pk }}" class="mycolor" title="Delete">
+                                    <i class="fas fa-trash text-secondary"></i>
+                                </a>
+                                <a href="{% url 'ownerinvoice' b.pk %}" class="mycolor">
+                                    <b>Order № {{ b.pk }}</b>
+                                    {% if b.order_status != "END" %}
+                                    <U>in progress</U>
+                                    {% endif %}
+                               </a>
+                                | {{ b.time_in }}
+                                <br>
+                                <div class="mt-2"> {{ b.text_order }} </div>
+                            </div>
+                            <div class=" col-6">
+                                <img src="../media/masters/{{ b.repairer_id.pk }}.jpg"
+                                class="rounded-circle" align="center" width="60"><br>
+                                <a href="" class="text-secondary">
+                                <b>{{ b.repairer_id|default_if_none:""|capfirst }}</b>
+                                </a>
+                            </div>
                         </div>
                         {% endfor %}
                     </div>

@@ -25,14 +25,14 @@ urlpatterns = [
 
     path('clients/', Clients.as_view(), name='clients'),
     path('clients/update/<int:pk>', ClientsUpdate.as_view(), name='clients_update'),
-
+    path('apartments/', ApartmentList.as_view(), name='apartments'),
 
     path('stat/', Statistica.as_view(), name='stat'),
     path('user/<int:pk>', RepairerDetailInformation.as_view(), name='user'),
 
 
 
-    path('owner/', OwnerDetailInformation.as_view(), name='owner'),
+    path('owner/apartment', OwnerDetailInformation.as_view(), name='apartment'),
     path('owner/apartment/<int:pk>', OwnerApartmentUpdate.as_view(), name='apartment_update'),
     path('owner/apartment/create', OwnerApartmentCreate.as_view(), name='apartment_create'),
     path('owner/list_order', OwnerOrderManagementSystem.as_view(), name='o_list_order'),

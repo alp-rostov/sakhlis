@@ -38,7 +38,7 @@ top: 0;
 
 
 
-{% url 'owner' as the_url1 %}
+{% url 'apartment' as the_url1 %}
 
 {% url 'o_list_order' as the_url2 %}
 
@@ -48,14 +48,6 @@ top: 0;
 {% #menu %}
     <li class="nav-item mr-4">
         <a class="nav-link" href="{% url 'home' %}">Main</a>
-    </li>
-
-    <li class="nav-item mr-4">
-        {% if the_url3 in request.get_full_path  %}
-        <a class="nav-link"  href="{{ the_url3 }}"><b>Profile</b></a>
-        {% else %}
-        <a class="nav-link"  href="{{ the_url3 }}">Profile</a>
-        {% endif %}
     </li>
 
 
