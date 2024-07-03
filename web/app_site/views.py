@@ -41,13 +41,18 @@ class ApartmentList(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMix
     def get_queryset(self):
         queryset = super().get_queryset()
         if self.request.GET.get('address_city') != None:
-            queryset = Apartment.objects.order_by('address_street_app').all()
+            queryset = Apartment.objects.order_by('address_street_app').only('pk', 'address_city','address_street_app', 'address_num').all()
             # queryset = DataFromUserProfile().get_clients_of_orders_from_UserProfile(self.request.user)
 
         self.filterset = ApartmentFilter(self.request.GET, queryset)
 
         return self.filterset.qs
 
+class ApartmentUpdate(PermissionRequiredMixin, LoginRequiredMixin, UpdateView):
+    model = Apartment
+    template_name = 'repairer/apartment_update.html'
+    form_class = ApartentUpdateForm
+    permission_required = PERMISSION_FOR_REPAIER
 
 class Clients(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, ListView):
     model = UserProfile
@@ -72,18 +77,19 @@ class Clients(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, Li
         return self.filterset.qs
 
 
-class ClientsUpdate(PermissionRequiredMixin, LoginRequiredMixin, UpdateView):
+class ClientsUpdate(PermissionRequiredMixin, LoginRequiredMixin, UpdateView): #TODO add redirest
     model = UserProfile
     template_name = 'repairer/clients_update.html'
     form_class = CustomerForm
     permission_required = PERMISSION_FOR_REPAIER
-    def form_valid(self, form):
-        if OrderList.objects.filter(customer_id=self.object, repairer_id=self.request.user).exists() and not self.object.user:
-            form.save()
-            url = reverse('user', args=(self.request.user.pk, ))
-            return redirect(url)
-        else:
-            return redirect('error404')
+
+    # def form_valid(self, form):
+    #     if OrderList.objects.filter(customer_id=self.object, repairer_id=self.request.user).exists() and not self.object.user:
+    #         form.save()
+    #         url = reverse('user', args=(self.request.user.pk, ))
+    #         return redirect(url)
+    #     else:
+    #         return redirect('error404')
 
 class Error404(TemplateView):
     template_name = '404.html'

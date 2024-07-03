@@ -26,6 +26,7 @@ urlpatterns = [
     path('clients/', Clients.as_view(), name='clients'),
     path('clients/update/<int:pk>', ClientsUpdate.as_view(), name='clients_update'),
     path('apartments/', ApartmentList.as_view(), name='apartments'),
+    path('apartments/update/<int:pk>', ApartmentUpdate.as_view(), name='apart'),
 
     path('stat/', Statistica.as_view(), name='stat'),
     path('user/<int:pk>', RepairerDetailInformation.as_view(), name='user'),
