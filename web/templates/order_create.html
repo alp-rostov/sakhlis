@@ -60,8 +60,16 @@
                     </li>
  {% if request.user.is_authenticated %}
         <li class="nav-item mr-4">
+         {% if request.user.groups.first.name == 'repairer' %}
+        <a class="nav-link" href="{% url 'list_order' %}">
+        {% elif request.user.groups.first.name == 'owner' %}
+            <a class="nav-link" href="{% url 'apartment' %}">
+        {% endif %}
+            {{ request.user }}
+        </a>
 
-        <a class="nav-link" href="{% url 'list_order' %}">{{request.user.username}}</a>
+
+
         </li>
 
              <li class="nav-item mr-4">
@@ -308,7 +316,7 @@
                                 <span aria-hidden="true">×</span>
                                 </button>
 				    </div>
-                            {% #form form_=form %}
+                            {% #form form_order_=form form_appart_=form_appart form_customer_=form_customer %}
                             {% csrf_token %}
                             {% /form %}
                         </fieldset>

@@ -1488,7 +1488,7 @@
   "fields": {
     "time_in": "2023-10-08T18:56:17.518Z",
     "time_out": null,
-    "repairer_id": 96,
+    "repairer_id": 51,
     "apartment_id": 104,
     "customer_id": 979,
     "text_order": "Ремонт стиралки",
@@ -1566,7 +1566,7 @@
   "fields": {
     "time_in": "2023-10-11T17:58:17.789Z",
     "time_out": null,
-    "repairer_id": 96,
+    "repairer_id": 51,
     "apartment_id": 107,
     "customer_id": 985,
     "text_order": "Течет кран",
@@ -1579,7 +1579,7 @@
   "fields": {
     "time_in": "2023-10-11T17:59:13.106Z",
     "time_out": null,
-    "repairer_id": 96,
+    "repairer_id": 51,
     "apartment_id": 108,
     "customer_id": 986,
     "text_order": "remont usluga",
@@ -2151,7 +2151,7 @@
   "fields": {
     "time_in": "2023-11-19T19:42:33.298Z",
     "time_out": null,
-    "repairer_id": 96,
+    "repairer_id": 51,
     "apartment_id": 146,
     "customer_id": 986,
     "text_order": "Ремонт стены",
@@ -2164,7 +2164,7 @@
   "fields": {
     "time_in": "2023-11-19T19:43:38.587Z",
     "time_out": null,
-    "repairer_id": 96,
+    "repairer_id": 51,
     "apartment_id": 107,
     "customer_id": 985,
     "text_order": "Замена крана",
@@ -2177,7 +2177,7 @@
   "fields": {
     "time_in": "2023-11-19T19:46:32.883Z",
     "time_out": null,
-    "repairer_id": 96,
+    "repairer_id": 51,
     "apartment_id": 147,
     "customer_id": 1027,
     "text_order": "Замена ламп",

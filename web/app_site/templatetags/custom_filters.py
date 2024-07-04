@@ -1,5 +1,5 @@
 from django import template
-from app_site.constants import CITY_CHOICES, ORDER_STATUS, MONTH, WORK_CHOICES
+from app_site.constants import CITY_CHOICES, ORDER_STATUS_, MONTH, WORK_CHOICES
 
 register = template.Library()
 
@@ -10,7 +10,7 @@ def choice_tag(value, A):
         if A == 'city':
             a = dict(CITY_CHOICES)
         elif A == 'status_order':
-            a = dict(ORDER_STATUS)
+            a = dict(ORDER_STATUS_)
         elif A == 'month':
             a = dict(MONTH)
         elif A == 'work_type':

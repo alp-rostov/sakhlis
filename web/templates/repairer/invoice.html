@@ -26,15 +26,23 @@
         </div>
     </div>
 
-    <div class="row" >
-        <div class="col-md-4 mt-3" >
-            <h4><b>Order № {{ info.id }}</b></h4>
-            {{ info.time_in }} <a href="../list_order/update/{{ info.pk}}" class="fas fa-pen-square text-secondary"></a>
+    <div class="row border-bottom mb-2" >
+        <div class="col-md-3 mt-3" >
+            <h4 class="mycolor"><b>Order № {{ info.id }}</b></h4>
+            {{ info.time_in }}<br>
+            <a href="{% url 'delete-order' info.pk %}" id="delete_{{ info.pk }}" class="mycolor" title="Delete order">
+                <i class="fas fa-trash text-secondary" style='font-size:14px'> delete</i>
+            </a> |
+            <a href="{% url 'update-order' info.pk %}" id="update_{{ info.pk }}" class="text-secondary" title="Update order">
+                <i class="fas fa-pen text-secondary" style='font-size:14px'> edit</i>
+            </a>
+            <br>
+
             {% if info.order_status == 'SND' %}
-                 <a href="../changestatus?order_pk={{ info.pk}}&work_status=RCV"lh-1 id="workstatus"
+                 <a href="../changestatus?order_pk={{ info.pk}}&work_status=RCV" id="workstatus"
                  class="btn btn-sm btn-orange" >ACCEPT ORDER</a>
             {% elif info.order_status == 'RCV' %}
-                 <a href="../changestatus?order_pk={{ info.pk}}&work_status=END" id="workstatus" class="btn btn-sm btn-orange">Order was completed</a><br>
+                 <a href="../changestatus?order_pk={{ info.pk}}&work_status=END" id="workstatus" class="btn btn-sm btn-orange">Job was completed</a><br>
             {% elif info.order_status == 'END' %}
                 <a href="pdf/{{ info.id }}" class="btn btn-sm btn-orange">Invoice - PDF</a>
             {% endif %}
@@ -42,7 +50,7 @@
         </div>
 
         <div class="col-md-4 text-secondary mt-3" >
-            <h4><b>Order status</b></h4>
+            <h4><b>Job`s status</b></h4>
             {% if info.order_status == 'SND' %}
                 {% #work_status check_1="fas fa-check-circle about-text" check_font_1=" black-text" %}
                 {% /work_status %}
@@ -57,24 +65,45 @@
             {% endif %}
         </div>
 
-        <div class="col-md-4 text-secondary mt-3" >
-            <h4><b>Customer</b></h4>
-            <h5>{{ info.customer_name }}</h5>
+        <div class="col-md-3 text-secondary mt-3" >
+            <h4>
+                <b>Customer</b>
+            </h4>
+            <h5>
+                {{ info.customer_id.customer_name }}<br>
+                <a href="{% url 'clients_update' info.customer_id.pk %}?pk={{info.pk}}" class="text-secondary ml-2" title="update information" >
+                    <i class="fas fa-pen text-secondary" style='font-size:14px'> edit</i>
+                </a>
+            </h5>
 
-              <a href="tel:{{ info.customer_phone }}" title="Телефон" class="fas fa-phone text fa-sm mr-1 btn">
+              <a href="tel:{{ info.customer_id.phone }}" title="Телефон" class="fas fa-phone text fa-sm mr-1 btn">
             </a>
-             <a href="https://t.me/{{ info.customer_telegram|cut:'@' }}" title="Telegram" class="fas fa-paper-plane text fa-sm mr-1 btn">
+             <a href="https://t.me/{{ info.customer_id.telegram|cut:'@' }}" title="Telegram" class="fas fa-paper-plane text fa-sm mr-1 btn">
             </a>
-                      <a href= 'https://yandex.ru/maps/?pt={{ info.location_longitude|change_comma_to_dot }},
-            {{ info.location_latitude|change_comma_to_dot }}&z=18&l=map' id="map_{{ i.pk }}"
-            title="" class="fas fa-map-marker text fa-sm mr-1 btn">
-            </a>
+             <a href="https://wa.me/{{ info.customer_id.whatsapp }}" class="fa fab fa-whatsapp-square btn prefix text-secondary mt-2"
+                            title="Whatsapp" aria-hidden="true" >
+                        </a>
+
+       </div>
+
+        <div class="col-md-2 text-secondary mt-3" >
+            <h4>
+                <b>Handyman</b>
+            </h4>
+
+                <a href="" class="text-secondary" title="handyman">
+                    <img src="../media/masters/{{ info.repairer_id.pk }}.jpg"
+                    class="rounded-circle" align="center" width="60">
+                    <br>
+                    <b>
+                        {{ info.repairer_id}}
+                    </b>
+                </a>
+
+
+
+
         </div>
-
-
-   <div class="col-md-12">
-            <hr>
-   </div>
 
 
 </div>
@@ -83,18 +112,16 @@
 
     <div class="row">
         <div class="col-md-4 text-secondary">
-            <i class="fas fa-home prefix text-secondary mb-2"> </i> {{ info.address_city|choice_tag:'city' }}, {{ info.address_street_app }}, {{ info.address_num }}<br>
-            <i class="fas fa-phone prefix text-secondary mb-2"></i> {{ info.customer_phone }}<br>
-            <i class="fas fa-paper-plane prefix text-secondary mb-2"></i> @{{ info.customer_telegram }}
+            <i class="fas fa-home prefix text-secondary mb-2"> </i> {{ info.apartment_id.address_city|choice_tag:'city' }}, {{ info.apartment_id.address_street_app }}, {{ info.apartment_id.address_num }}<br>
+            <i class="fas fa-phone prefix text-secondary mb-2"></i> {{ info.customer_id.phone }}<br>
+            <i class="fas fa-paper-plane prefix text-secondary mb-2"></i> @{{ info.customer_id.telegram }}<br>
+            <i class="fas fa-paper prefix text-secondary mb-2"></i> Whatsapp{{ info.customer_id.whatsapp }}
         </div>
 
-       <div class="col-md-4 ">
+       <div class="col-md-8 ">
            {{ info.text_order }}
        </div>
 
-        <div class="col-md-4" >
-
-        </div>
     </div>
 
  </div>

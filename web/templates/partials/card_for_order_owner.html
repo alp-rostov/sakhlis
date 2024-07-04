@@ -1,0 +1,39 @@
+   {% load static %}
+   {% load custom_filters %}
+{% load custom_tags %}
+
+{% url 'ownerinvoice' i.pk as the_url_invoice %}
+{% url 'delete-order' i.pk as the_url_delete %}
+{% url 'update' i.pk as the_url_update %}
+
+   <div  class="{{ class_ }}" id="{{ id_ }}">
+                <div class="col-md-4">
+
+                    <a href="{{ the_url_invoice }}" id="order_{{ i.pk }}" class="h5 mycolor">Order № {{ i.pk }}</a>
+                    <a href="{{ the_url_delete }}" id="delete_{{ i.pk }}" class="mycolor" title="Delete">
+                        <i class="fas fa-trash text-secondary ml-3"></i></a><br>
+                    <div id="time_in" class="mt-2">{{ i.time_in }}</div>
+
+
+                </div>
+                <div class="col-md-4 ">
+                    <span id="customer_name_{{ i.pk }}" class="text-secondary" aria-hidden="true">Repaier:  <a href="{{  i.customer_id.pk  }}" id="link" class="text-secondary h5" data-toggle="modal" data-target="#exampleModal"> {{ i.repairer_id__username|capfirst }}</a></span><br>
+
+                    {% if i.apartment_id.link_location  %}
+                    <a href="{{i.apartment_id.link_location}}" class="fas fa-map-marker prefix text-secondary mt-2" title="Open map" aria-hidden="true" >
+                    {% else %}
+                    <a href="" title="" class="fas fa-home prefix text-secondary mt-2" aria-hidden="true" >
+                    {% endif %}
+                        <span id="city_{{ i.pk }}" >{{ i.apartment_id.address_city|choice_tag:'city'}}</span>,
+                        <span id="street_app_{{ i.pk }}">{{ i.apartment_id.address_street_app|capfirst }}</span>,
+                        <span id="num_{{ i.pk }}">{{ i.apartment_id.address_num }}</span>.
+                    </a>
+
+                </div>
+
+                <div class="col-md-4">
+                    <p id="text_order_{{ i.pk }}" class="fas text-secondary">{{ i.text_order|truncatechars:200|capfirst }}</p>
+
+
+                </div>
+            </div>

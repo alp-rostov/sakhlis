@@ -2,32 +2,40 @@
 {% load custom_tags %}
 
 
-
 <form method="post" action="" name="form" id="form"  style="display:{{ hidden }}" class="">
     {{ children }}
+
     <div class="md-form mb-4">
         <i class="fas fa-user prefix grey-text" aria-hidden="true"></i>
-        {{ form_.customer_name.errors }}
-        {{ form_.customer_name }}
+        {{ form_customer_.customer_name.errors }}
+        {{ form_customer_.customer_name }}
         <span id="0"></span>
     </div>
     <div class="md-form mb-4">
         <i class="fas fa-phone prefix grey-text" aria-hidden="true"></i>
-        {{ form_.customer_phone.errors }}
-        {{ form_.customer_phone }}
+        {{ form_customer_.phone.errors }}
+        {{ form_customer_.phone }}
         <span id="1"></span>
     </div>
 
    <div class="md-form mb-4">
        <i class="fas fa fa-paper-plane prefix grey-text" aria-hidden="true"></i>
-       {{ form_.customer_telegram.errors }}
-       {{ form_.customer_telegram }}
+       {{ form_customer_.telegram.errors }}
+       {{ form_customer_.telegram }}
        <span id="2"></span>
+   </div>
+
+
+   <div class="md-form mb-4">
+       <i class="fas fa fa-whatsapp prefix grey-text" aria-hidden="true"></i>
+       {{ form_customer_.whatsapp.errors }}
+       {{ form_customer_.whatsapp }}
+       <span id="3"></span>
    </div>
 
      <div class="" id="ff">
      <i class="fas fa-home prefix grey-text fa-lg" aria-hidden="true"></i>
-        {% for radio in form_.address_city %}
+        {% for radio in form_appart_.address_city %}
         <div class="form-check-inline grey-text ml-2">
         {{ radio }}
         </div>
@@ -38,18 +46,17 @@
         <i class="fas fa-address-card-o prefix grey-text fa-lg" aria-hidden="true"></i>
         <datalist id="languages">
         </datalist>
-        {{ form_.customer_street_app.errors }}
-        {{ form_.customer_num.errors }}
-        {{ form_.address_street_app }}
-        <span id="3"></span>
-        {{ form_.address_num }}
+        {{ form_appart_.address_street_app }}
         <span id="4"></span>
+        {{ form_appart_.address_num }}
+        <span id="5"></span>
+        {{ form_appart_.link_location }}
     </div>
     <div class="md-form mb-4">
         <i class="fa fa-comment prefix grey-text" aria-hidden="true"></i>
-        {{ form_.text_order.errors }}
-        {{ form_.text_order }}
-        <span id="5"></span>
+        {{ form_order_.text_order.errors }}
+        {{ form_order_.text_order }}
+        <span id="6"></span>
     </div>
     <button type="submit" name="submit" class="btn btn-sm btn-orange cta-btn btn-form mt-3 mb-5 ">Send</button>
 

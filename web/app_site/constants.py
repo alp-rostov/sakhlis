@@ -1,9 +1,22 @@
 PERMISSION_FOR_REPAIER = 'app_site.view_invoice'
-PERMISSION_FOR_OWNER = 'app_site.view_order'
+PERMISSION_FOR_OWNER = 'app_site.view_orderlist'
+
+
+APART_CHOICES = [
+    ('FL', 'Flat'),
+    ('HM', 'Home'),
+    ('OF', 'Office'),
+    ('RS', 'Restaurant'),
+    ('SH', 'Store'),
+    ('OT', 'Other'),
+]
+
 
 CITY_CHOICES = [
     ('TB', 'Tbilisi'),
     ('BT', 'Batumi'),
+    ('GD', 'Gudaury'),
+
 ]
 
 WORK_CHOICES = [
@@ -44,6 +57,15 @@ ORDER_STATUS = [
     ('RCV', 'Master accepted the request'),
     ('END', 'Request finished'),
 ]
+
+ORDER_STATUS_ = [
+    ('BEG', 'New requests'),
+    ('SND', 'Request sent to the master'),
+    ('RCV', 'Jobs in progress'),
+    ('END', 'Job completed '),
+]
+
+
 
 ORDER_STATUS_FOR_CHECK = ['BEG', 'SND', 'RCV', 'WRK', 'END']
 

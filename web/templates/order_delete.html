@@ -2,12 +2,12 @@
 
 {% block body %}
 
-<h1>Delete of order</h1>
+<h1>Delete order № {{ object.pk }}, {{ object.time_in }}</h1>
 <hr>
 <form action="" method="post">
     {% csrf_token %}
-    <h3>Attention! It will be impossible to restore the order.</h3>
-    <p>Delete all information about the order "{{ object.pk }}"?</p>
+    <h4>Attention! It will be impossible to restore the order.</h4>
+    <p>Delete all information about the order № {{ object.pk }}?</p>
     <input type="submit" value="Delete" />
 </form>
 

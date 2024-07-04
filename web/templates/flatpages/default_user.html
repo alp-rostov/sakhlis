@@ -1,6 +1,7 @@
 {% load static %}
 {% load slippers %}
 <!doctype html>
+
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -37,56 +38,106 @@ top: 0;
   <body>
 
 
+{% url 'user' request.user.id as the_url1 %}
 
-{% url 'list_order' as the_url1 %}
-{% url 'stat' as the_url2 %}
-{% url 'user' request.user.id as the_url3 %}
-{% url 'search-order' as the_url4 %}
+{% url 'list_order' as the_url2 %}
+{% url 'clients' as the_url3 %}
+{% url 'stat' as the_url4 %}
+{% url 'owner' as the_url5 %}
+{% url 'apartments' as the_url5 %}
+
 
 <!--Header-->
 {% #menu %}
+
 {% if request.user.groups.first.name == 'repairer' %}
+
     <li class="nav-item mr-4">
         <a class="nav-link" href="{% url 'home' %}">Main</a>
+    </li>
+
+    <li class="nav-item mr-4">
+        {% if the_url1 in request.get_full_path  %}
+        <a class="nav-link" href="{{ the_url1 }}"><b>Profile</b></a>
+        {% else %}
+        <a class="nav-link" href="{{ the_url1 }}">Profile</a>
+        {% endif %}
+    </li>
+
+
+    <li class="nav-item  mr-4">
+        {% if the_url2 in request.get_full_path  %}
+        <a class="nav-link " href="{{ the_url2 }}"><b>Orders</b></a>
+        {% else %}
+        <a class="nav-link" href="{{ the_url2 }}">Orders</a>
+        {% endif %}
     </li>
 
     <li class="nav-item  mr-4">
-        {% if the_url1 in request.get_full_path  %}
-        <a class="nav-link " href="{{ the_url1 }}"><b>My orders</b></a>
+        {% if the_url3 in request.get_full_path  %}
+        <a class="nav-link " href="{{ the_url3 }}"><b>Clients</b></a>
         {% else %}
-        <a class="nav-link" href="{{ the_url1 }}">My orders</a>
+        <a class="nav-link" href="{{ the_url3 }}">Clients</a>
         {% endif %}
     </li>
 
-    <li class="nav-item mr-4" class="nav-item mr-4">
-        {% if the_url2 in request.get_full_path  %}
-        <a class="nav-link"  href="{{ the_url2 }}"><b>Statistics</b></a>
+
+    <li class="nav-item  mr-4">
+        {% if the_url5 in request.get_full_path  %}
+        <a class="nav-link " href="{{ the_url5 }}"><b>Apartments</b></a>
         {% else %}
-        <a class="nav-link"  href="{{ the_url2 }}">Statistics</a>
+        <a class="nav-link" href="{{ the_url5 }}">Apartments</a>
         {% endif %}
     </li>
 
     <li class="nav-item mr-4">
-        {% if the_url3 in request.get_full_path  %}
-        <a class="nav-link" href="{{ the_url3 }}"><b>My details</b></a>
+        {% if the_url4 in request.get_full_path  %}
+        <a class="nav-link"  href="{{ the_url4 }}"><b>Statistics</b></a>
         {% else %}
-        <a class="nav-link" href="{{ the_url3 }}">My details</a>
+        <a class="nav-link"  href="{{ the_url4 }}">Statistics</a>
         {% endif %}
     </li>
 
-    {% if request.user.is_authenticated %}
-        <li class="nav-item mr-4">
-            <a class="nav-link" href="{% url 'logout' %}">{{ user.username }} : Log out</a>
-        </li>
-    {% endif %}
 
 {% elif request.user.groups.first.name == 'owner' %}
+
     <li class="nav-item mr-4">
         <a class="nav-link" href="{% url 'home' %}">Main</a>
     </li>
 
+    <li class="nav-item mr-4">
+        {% if the_url5 in request.get_full_path  %}
+        <a class="nav-link"  href="{{ the_url5 }}"><b>Profile</b></a>
+        {% else %}
+        <a class="nav-link"  href="{{ the_url5 }}">Profile</a>
+        {% endif %}
+    </li>
+
+
+    <li class="nav-item mr-4">
+        <a class="nav-link" href="">Appartments</a>
+    </li>
+
+
+    <li class="nav-item mr-4">
+        <a class="nav-link" href="">Statistica</a>
+    </li>
 
 {% endif%}
+
+
+
+
+
+    {% if request.user.is_authenticated %}
+        <li class="nav-item mr-4">
+            <a class="nav-link" href="{% url 'logout' %}">
+
+                {{ user.username }} : Log out</a>
+        </li>
+    {% endif %}
+
+
 
 {% /menu %}
 
@@ -95,31 +146,6 @@ top: 0;
                             {% block subbody %}
 
                             {% endblock subbody%}
-
-                            {% if request.GET.work_status == 'SND' %}
-                            <a href="{% url 'list_order' %}?work_status=SND"><b>New orders</b></a> |
-                            {% else %}
-                            <a href="{% url 'list_order' %}?work_status=SND">New orders</a> |
-                            {% endif %}
-
-                            {% if request.GET.work_status == 'RCV' %}
-                            <a href="{% url 'list_order'%}?work_status=RCV"><b>Orders in progress</b></a> |
-                            {% else %}
-                            <a href="{% url 'list_order'%}?work_status=RCV">Orders in progress</a> |
-                            {% endif %}
-
-                            {% if request.GET.work_status == 'END' %}
-                            <a href="{% url 'list_order'%}?work_status=END"><b>Completed orders</b></a> |
-                            {% else %}
-                            <a href="{% url 'list_order'%}?work_status=END">Completed orders</a> |
-                            {% endif %}
-
-
-                            {% if the_url4 in request.get_full_path %}
-                            <a href="{% url 'search-order' %}" class="fa fa-search fa-border " aria-hidden="true" title="find"><b></b></a>
-                            {% else %}
-                            <a href="{% url 'search-order' %}" class="fa fa-search fa-border" aria-hidden="true"></a>
-                            {% endif %}
                     </div>
 
     </section>

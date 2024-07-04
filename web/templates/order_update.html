@@ -4,40 +4,15 @@
 
 {% block body %}
 
-<h1>Order № {{ pk }} от {{ time_in|date:"d.m.Y" }}</h1>
+<h1>Order № {{ object.pk }}, {{ object.time_in }}</h1>
 <hr>
-  <datalist id="languages"></datalist>
- {% #form form_=form %}
-{% csrf_token %}
-{% /form%}
+<h4>Update information:</h4>
+<form action="" method="post">
+    {% csrf_token %}
+{{ form }}
 
-<script>
+   <input type="submit" value="Submit"  class="btn btn-orange" />
 
- $(document.body).on( "input", "#id_address_street_app", function(e) {
-        e.preventDefault();
-
-         $.ajax({
-            url: "/street?street="+$(this).val() ,
-            type: "GET",
-
-            dataType: 'json',
-            success: function(b){
-              let type=JSON.parse(b);
-                $('#languages option').remove();
-
-                 for (i = 0; i < type.length; i++) {
-                            full_name_street=type[i].type_street+type[i].name_street
-                            $('#languages').append('<option value="'+full_name_street+'">');
-
-                        }
-            }
-        });
-    });
-
-
-</script>
-
-
-
+</form>
 
 {% endblock body %}

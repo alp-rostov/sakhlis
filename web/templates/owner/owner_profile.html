@@ -1,0 +1,314 @@
+{% extends 'flatpages/default_owner.html' %}
+{% load custom_filters %}
+{% load custom_tags %}
+{% load static %}
+{% load slippers %}
+
+{% block subbody %}
+<div class="row">
+    <div class="col-lg-4 col-md-4 col-sm-12" align="right">
+      <img src="../media/{{ prof.foto|default_if_none:'images/none.jpg' }}"
+           class="rounded-circle border border-5 border-white" align="center" width="60">
+    </div>
+    <div class="col-lg-8 col-md-8 col-sm-12" align="left" >
+     <a href="" ><b>{{ user.username }} </b></a><br>
+        <a href=""><u><h6>{{prof.profile}}</u></a>
+    </div>
+
+</div>
+{% endblock subbody%}
+
+
+{% block body %}
+
+<style>
+  .tab {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .tab > input[type="radio"] {
+    display: none;
+  }
+
+  .tab-content {
+    display: none;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+{% for z in apartments %}
+  #tab-btn-{{z.pk}}:checked~#content-{{z.pk}},
+{% endfor %}
+
+#tab-btn-0:checked~#content-0
+  {
+    display: block;
+  }
+
+  .tab > label {
+    display: block;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+    text-decoration: none;
+    color: #ca5718;
+    border: 0;
+    border-radius: 0.375rem;
+    background: 0 0;
+  }
+
+  .tab > input[type="radio"]:checked + label {
+    cursor: default;
+    color: #fff;
+    background-color: #ca5718;
+  }
+</style>
+
+<style>
+    .hidden{
+    display:none
+    }
+
+</style>
+<!--empty div for add order -->
+<div class="hidden" id="empty-form" >
+    <a href="" id="link-delete" class="mycolor" title="Delete">
+    <i class="fas fa-trash text-secondary"></i>
+    </a>
+    <a href="" class="mycolor" id="order_number">
+    <b>Order № </b>
+    <U>in progress</U>
+    </a>
+    | <span id="time_in"></span> |
+    <a href="" id="repaier" class="text-secondary" data-toggle="modal" data-target="#exampleModal"></a><br>
+    <div class="mt-2" id="text"></div>
+</div>
+<!-- end empty div for add order -->
+
+
+<div class="container">
+    <a href="{% url 'apartment_create' %}" class="btn btn-sm btn-orange ml-0 mb-2 p-2" >
+        new apartment
+    </a>
+    <div class="tab">
+        <!--menu apartments-->
+        <input checked id="tab-btn-{{ apartments.0.pk }}" name="tab-btn" type="radio" value="">
+        <label for="tab-btn-{{ apartments.0.pk }}">{{apartments.0.address_street_app}} {{apartments.0.address_num|default_if_none:''}}</label>
+        {% for b in apartments|slice:"1:" %}
+        <input id="tab-btn-{{ b.pk }}" name="tab-btn" type="radio" value="">
+        <label for="tab-btn-{{ b.pk }}">{{b.address_street_app}} {{b.address_num|default_if_none:''}}</label>
+        {% endfor %}
+        <!--end menu apartments-->
+        {% regroup order_list_by_apartments by apartment_id as ap_list %}
+        {% for c in ap_list %}
+        <div class="tab-content" id="content-{{ c.grouper.pk }}">
+            <div class="row">
+                <!--details about apartment-->
+                <div class="col-lg-4 col-md-4 col-sm-12 border-right" align="center">
+                    <h4>
+                        {{ c.grouper.name|default_if_none:'' }}
+                    </h4>
+                    <h5 class="mt-0 p-0">
+                        {{ c.grouper.address_street_app }} {{ c.grouper.address_num }},
+                        {{ c.grouper.address_city|choice_tag:'city' }}
+                    </h5>
+                    <p class="text-secondary ">
+                        {{ c.grouper.notes|default_if_none:'' }}
+                        <a href="{% url 'apartment_update' c.grouper.pk %}" class="mycolor"
+                           title="update apartment"><i class="fas fa-pen text-secondary"> </i>
+                        </a>
+                    </p>
+                    <img src="../media/{{ c.grouper.foto|default_if_none:'images/none.jpg' }} "
+                         alt="" class="" width="200">
+                </div>
+                <!-- end details about apartments-->
+                <!-- list of orders for a specific apartment -->
+                <div class="col-lg-8 col-md-8 col-sm-12" align="left">
+                    <div id="button-form-{{ c.grouper.pk }}">
+                        <a id="toggleLink" class="btn btn-sm btn-orange m-0 p-1"
+                           href="javascript:void(0)" onclick="viewdiv('form-{{ c.grouper.pk }}')"
+                        data-text-hide="create new request" data-text-show="close">
+                            add new request
+                        </a>
+                    </div>
+                    <!-- form for order -->
+                    <div id="form-{{ c.grouper.pk }}" style="display:none;" class="mb-5">
+                        <form method="POST" action="" name="form_order{{ c.grouper.pk }}"
+                              id="form_order{{ c.grouper.pk }}" class="form_order">
+                            {% csrf_token %}
+                            <input type="hidden" name="customer_id" value="{{ prof.pk }}"/>
+                            <input type="hidden"  name="apartment_id" value="{{ c.grouper.pk }}"/>
+                            <textarea name="text_order" rows="4" cols="50"></textarea>
+                            <br>
+                            <button type="submit" name="submit" class="btn btn-sm btn-orange cta-btn btn-form ">Send</button>
+                        </form>
+                    </div>
+                    <!-- end form for order -->
+                    <div id="list_orders-{{ c.grouper.pk }}" >
+                        {% for b in c.list %}
+                        <div class="row  mt-1 mb-3 pb-2  border-bottom">
+                            <div class=" col-6">
+                                <a href="{% url 'delete-order' b.pk %}" id="delete_{{ b.pk }}" class="mycolor" title="Delete">
+                                    <i class="fas fa-trash text-secondary"></i>
+                                </a>
+                                <a href="{% url 'ownerinvoice' b.pk %}" class="mycolor">
+                                    <b>Order № {{ b.pk }}</b>
+                                    {% if b.order_status != "END" %}
+                                    <U>in progress</U>
+                                    {% endif %}
+                               </a>
+                                | {{ b.time_in }}
+                                <br>
+                                <div class="mt-2"> {{ b.text_order }} </div>
+                            </div>
+                            <div class=" col-6">
+                                <img src="../media/masters/{{ b.repairer_id.pk }}.jpg"
+                                class="rounded-circle" align="center" width="60"><br>
+                                <a href="" class="text-secondary">
+                                <b>{{ b.repairer_id|default_if_none:""|capfirst }}</b>
+                                </a>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <!-- end list of orders for a specific apartment -->
+            </div>
+        </div>
+        {% endfor %}
+
+        {% for q in list_app %}
+        <!--details apartments without orders-->
+        <div class="tab-content" id="content-{{ q.pk }}">
+            <div class="row">
+                <!--details about apartment-->
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <h4>
+                        {{ q.name|default_if_none:'' }}
+                    </h4>
+                    <h5 class="mt-0 p-0">
+                        {{ q.address_street_app }}
+                        {{ q.address_num }},
+                        {{ q.address_city|choice_tag:'city' }}
+                    </h5>
+                    <p class="text-secondary ">{{ q.notes|default_if_none:'' }}
+                        <a href="{% url 'apartment_update' q.pk %}" class="mycolor" title="изменить данные">
+                            <i class="fas fa-pen text-secondary"> </i>
+                        </a>
+                    </p>
+                    <img src="../media/{{ q.foto|default_if_none:'images/none.jpg' }} "
+                         alt="" class="" width="200">
+                </div>
+                <!-- end details about apartment-->
+
+                <div class="col-lg-8 col-md-8 col-sm-12">
+                    <div class="mt-1 mb-2 p-2  border-5 rounded">
+                        <div id="button-form-{{ q.pk }}">
+                        <a id="toggleLinkq" class="btn btn-sm btn-orange m-0 p-1"
+                           href="javascript:void(0)" onclick="viewdiv('form-{{ q.pk }}')"
+                            data-text-hide="create new request" data-text-show="close" >
+                            add new request
+                        </a>
+                        </div>
+                        <!-- form for order -->
+                        <div id="form-{{ q.pk }}" style="display:none;" class="mb-5">
+                            <form method="POST" action="" name="form_order{{ q.pk }}" id="form_order{{ q.pk }}" class="form_order">
+                                 {% csrf_token %}
+                                <input type="hidden"  name="customer_id" value="{{ prof.pk }}"/>
+                                <input type="hidden" name="apartment_id" value="{{ q.pk }}"/>
+                                <textarea name="text_order" rows="4" cols="50"></textarea>
+                                <br>
+                                <button type="submit" name="submit" class="btn btn-sm btn-orange cta-btn btn-form ">Send</button>
+                            </form>
+                        </div>
+                        <!-- end form for order -->
+                        <div id="list_orders-{{ q.pk }}" >
+                            <h4>No orders</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+
+    <!-- Modal Window -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                </div>
+                <div class="modal-body  mx-3">
+                    <div id="contact" class="form-container">
+                        <fieldset>
+                            <div id="message">
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                                </button>
+				    </div>
+                            <form method="post" action="" class="" id="form">
+                                {% csrf_token %}
+                                {{ formorder}}
+                                <br>
+                                <button type="submit" name="submit" class="btn btn-sm btn-orange cta-btn btn-form mt-3 mb-5 ">
+                                    Send</button>
+
+                                </form>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- And Modal Window -->
+
+<script>
+<!--SENT ORDER -->
+$(document.body).ready(function() {
+
+    $('.form_order').submit(function(e) {
+        e.preventDefault();
+            $.ajax({
+                url: '../',
+                type: 'POST',
+                data: $(this).serialize(),
+                dataType: 'text',
+                beforeSend: function () {},
+                success: function (resp) {
+                        let info=JSON.parse(resp);
+                        let order_list = $('#empty-form').clone();
+                        order_list.find('#order_number').html('<b>New order №'+info.pk+'</b>');
+                        order_list.find('#order_number').attr('href', '/owner-invoice/'+info.pk);
+                        order_list.find('#link-delete').attr('href', '../invoice/delete-order/'+info.pk);
+                        let date_order=info.date.substr(0, 10).split("-").reverse().join(".");
+                        order_list.find('#time_in').html(date_order);
+                        order_list.find('#text').html(info.text);
+                        order_list.attr('class','mt-2 mb-3 pb-2 border-bottom');
+                        $('#list_orders-'+info.apartment).before(order_list);
+                        $('#form-'+info.apartment).remove();
+                        $('#button-form-'+info.apartment).remove();
+                },
+            });
+
+    });
+});
+
+
+
+<!--SHOW ELEMENTS -->
+function viewdiv(id) {
+    var el = document.getElementById(id);
+    var link = document.getElementById('toggleLink'+id);
+    if (el.style.display == "block") {
+        el.style.display = "none";
+        link.innerText = link.getAttribute('data-text-hide');
+    } else {
+        el.style.display = "block";
+        link.innerText = link.getAttribute('data-text-show');
+    }
+}
+
+</script>
+{% endblock body %}

@@ -4,77 +4,261 @@
 {% load slippers %}
 
 {% block subbody %}
+<div class="container text-white">
+<form action="" method="get" class="">
+    {{ filterset.form.time_in_sence.label }}:
+    {{ filterset.form.time_in_sence }}
+
+    {{ filterset.form.time_in_until.label }}:
+    {{ filterset.form.time_in_until }}
+
+    {{ filterset.form.order_status.label }}:
+    {{ filterset.form.order_status }}
+
+    {{ filterset.form.repairer_id.label }}:
+    {{ filterset.form.repairer_id }}
+    <input type="submit" value=" Submit " class="btn btn-sm btn-orange">
+    <br><br>
+</form>
+    <h5>Amount of money : {{ summ_orders }} / Order`s quantity : {{ count_orders }}</h5>
+
+</div>
+
 {% endblock subbody %}
 
 {% block body %}
 
-<div align="center">
-    <a href="#"  onclick="show_create_order_form(document.getElementById('form'))"
-    class="btn btn-sm btn-orange cta-btn btn-form mt-3 mb-5 " id="link_create_order_form">Create an order</a>
+
+<div id="head" class="container">
+    {% for i in order %}
+
+    <div  class="row border-bottom  rounded p-2 m-3" id="{{ id_ }}">
+                <div class="col-md-3">
+
+                    <a href="{% url 'invoice' i.pk %}" id="order_{{ i.pk }}" class="h5 mycolor">Order № {{ i.pk }}</a>
+
+                    <div id="time_in" class="mt-2">{{ i.time_in }}</div>
+                        <a href="{% url 'delete-order' i.pk %}" id="delete_{{ i.pk }}" class="mycolor" title="Delete order">
+                            <i class="fas fa-trash text-secondary" style='font-size:14px'> delete</i>
+                        </a> |
+                        <a href="{% url 'update-order' i.pk %}" id="update_{{ i.pk }}" class="text-secondary" title="Update order">
+                            <i class="fas fa-pen text-secondary" style='font-size:14px'> edit</i>
+                        </a>
+
+                </div>
+                <div class="col-md-3">
+                    <span id="customer_name_{{ i.pk }}" class="" aria-hidden="true">
+                        <a href="{{  i.customer_id__pk  }}" id="link" class="text-secondary h5" data-toggle="modal"
+                           data-target="#exampleModal"> {{ i.customer_id__customer_name|capfirst }}</a></span>
+                        <br>
+
+                    {% if i.customer_id__phone %}
+                    <a href="tel:{{ i.customer_id__phone }}" title="Phone" id="customer_phone_{{ i.pk }}" class="fas fa-phone prefix text-secondary mt-2" aria-hidden="true">
+                        {{ i.customer_id__phone }}</a><br>
+                    {% endif %}
+
+                    {% if i.customer_id__telegram %}
+                    <a href="https://t.me/{{ i.customer_id__telegram|cut:'@' }}" title="Telegram" id="customer_id__telegram_{{ i.pk }}"
+                       class ="fas fa fa-paper-plane text-secondary mt-2" aria-hidden="true">
+                         @{{i.customer_id__telegram}}</a><br>
+                    {% endif %}
+
+                    {% if i.customer_id__whatsapp %}
+                    <a href="https://wa.me/{{ i.customer_id__whatsapp }}" title="whatsapp" id="customer_id__whatsapp_{{ i.pk }}"
+                       class ="fas fa text-secondary mt-2" aria-hidden="true">
+                         Whatsapp: {{i.customer_id__whatsapp}}</a><br>
+                    {% endif %}
+
+
+                    {% if i.apartment_id__link_location  %}
+                    <a href="{{i.apartment_id__link_location}}" class="fas fa-map-marker prefix text-secondary mt-2" title="Open map" aria-hidden="true" >
+                    {% else %}
+                    <a href="" title="" class="fas fa-home prefix text-secondary mt-2" aria-hidden="true" >
+                    {% endif %}
+                        <span id="city_{{ i.pk }}" >{{ i.apartment_id__address_city|choice_tag:'city'}}</span>,
+                        <span id="street_app_{{ i.pk }}">{{ i.apartment_id__address_street_app|capfirst }}</span>,
+                        <span id="num_{{ i.pk }}">{{ i.apartment_id__address_num }}</span>.
+                    </a>
+
+                </div>
+
+                <div class="col-md-3">
+                    <p id="text_order_{{ i.pk }}" class="fas text-secondary">{{ i.text_order|truncatechars:200|capfirst }}</p>
+
+
+                </div>
+                <div class="col-md-3" align="center">
+                        <a href="" class="text-secondary" title="handyman">
+                        <img src="../media/masters/{{ i.repairer_id__pk }}.jpg"
+                               class="rounded-circle" align="center" width="60"><br>
+
+                             <b>{{ i.repairer_id__username}}</b>
+                         </a>
+                </div>
+            </div>
+    {% empty %}
+                <div  class="row border  rounded p-2 m-3" >
+                    <h3>No orders</h3>
+                </div>
+    {% endfor %}
 </div>
 
-{% #form form_=form hidden="none" %}
-    {% csrf_token %}
-{% /form %}
+<!--{% #card_order class_="hidden" id_="row_order" i='' %}-->
+<!--{% /card_order %}-->
 
-<script type="text/javascript">
-    $(document).ready(function() {
-        $('#form').submit(function(e) {
-            e.preventDefault();
+
+
+<!--<h2>-->
+<!--    {% if order.13.pk %}-->
+<!--        <a href="../listorderjson?last_pk={{ order.13.pk }}&time_in_sence={{request.GET.time_in_sence}}&time_in_until={{request.GET.time_in_until}}&order_status={{request.GET.order_status}}"-->
+<!--        class="btn btn-orange cta-btn btn-form mt-3 mb-5"-->
+<!--        id="paginator_next">-->
+<!--            View more-->
+<!--        </a>-->
+<!--    {% endif %}-->
+<!--</h2>-->
+
+
+
+    <!-- Modal Window -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body  mx-3">
+                    <div id="contact" class="form-container">
+                        <fieldset>
+                            <div id="message">
+    				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                            </div>
+                        </fieldset>
+                            <div class="row">
+                                <div class="col-12 text-center">
+                                    <h4 id="name" class="mycolor font-weight-bold"></h4>
+                                    <img id="foto1" class="rounded-circle" align="" width="100">
+                                    <div class="row center" hidden id="profile"></div>
+                                </div>
+                            </div>
+                            <div class="row mb-3 border-bottom">
+                                <div class="col-6 text-center"><a href="tel:" title="Phone"  id="customer_phone" class="fas fa-phone prefix text-secondary mt-3" aria-hidden="true"></a></div>
+                                <div class="col-6 text-center"><a href="https://t.me/" title="Telegram" id="customer_telegram" class ="fas fa fa-paper-plane text-secondary mt-3" aria-hidden="true"></a></div>
+                            </div>
+
+
+<form method="post" action="" name="form" id="form">{% csrf_token %}
+
+  <div><input type="hidden" name="form-TOTAL_FORMS" id="id_form-TOTAL_FORMS" value="20">
+      <input type="hidden" name="form-INITIAL_FORMS" id="id_form-INITIAL_FORMS" value="0">
+      <input type="hidden" name="form-MIN_NUM_FORMS" id="id_form-MIN_NUM_FORMS">
+      <input type="hidden" name="form-MAX_NUM_FORMS" id="id_form-MAX_NUM_FORMS"></div>
+      <input type="hidden" name="customer_id" id="customer_id" value="">
+
+
+                            <div class="row mb-2 mt-2" id="apart">Apartments:
+                            </div>
+    <button type="submit" name="submit" class="btn btn-sm btn-orange cta-btn btn-form mt-3 mb-5 ">Send</button>
+
+      </form>
+
+
+
+                            <div class="row mb-2 mt-2" id="order1">5 latest client requests::
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- And Modal Window -->
+
+
+<script>
+$(document).on('click', '#link', function (e) {
+    e.preventDefault();
+
+         $.ajax({
+            url: "../client?pk="+$(this).attr("href") ,
+            type: "GET",
+            dataType: 'json',
+
+            success: function(resp){
+            document.getElementById("name").innerHTML =resp.name;
+            document.getElementById("customer_phone").innerHTML =' '+resp.phone;
+            document.getElementById("customer_telegram").innerHTML = ' '+resp.telegram;
+            document.getElementById("profile").innerHTML = resp.profile;
+            document.getElementById("foto1").src ='../media/'+resp.foto;
+            document.getElementById("customer_id").value =resp.pk;
+
+            b=JSON.parse(resp.orders);
+            c=JSON.parse(resp.apartment);
+
+
+            let f=$('div[new="new"]');
+                    for (i = 0; i < f.length; i++) {
+                        f[i].remove();
+                    }
+
+            let a=$('div[ap="ap"]');
+                    for (i = 0; i < a.length; i++) {
+                        a[i].remove();
+                    }
+
+            b.forEach((element, index ) =>  {
+            let order_ = $("#order1").clone();
+                order_.attr('id', 'order_'+element.pk);
+                order_.attr('new', 'new');
+                order_.attr('class', 'prefix text-secondary mb-2');
+                let date_order=element.time_in.substr(0, 10).split("-").reverse().join(".");
+                order_.html('<div class="mb-2 mb-3 border-bottom"><a href=../list_order/' + element.pk + ' class="prefix text-secondary ">' + date_order + ' | ' + element.text_order + '</a></div>');
+                $('#order1').after(order_);
+            })
+
+            c.forEach((element, index ) =>  {
+            let ap_ = $("#apart").clone();
+                ap_.attr('id', 'ap_');
+                ap_.attr('ap', 'ap');
+                ap_.attr('class', 'prefix text-secondary mb-2');
+                ap_.html('<div class="row mb-3 border-bottom"><div class="col-9">'+element.address_street_app + ' '+element.address_num +', '+ element.address_city + '<input type="hidden" name="form-'+index+'-apartment_id" id="id_form-'+index+'-apartment_id" value='+ element.pk +'> <br><input hidden type="text" id="id_form-'+index+'-text_order" name="form-'+index+'-text_order" placeholder="Input your job"> </div> <div class="col-3"><a class="mycolor" href="#" onclick=show_input_form(document.getElementById("id_form-'+index+'-text_order"))>add job</a></div></div>');
+                $('#apart').after(ap_);
+            })
+
+         }
+    });
+
+
+
+
+
+})
+
+
+$(document.body).ready(function() {
+
+    $('#form').submit(function(e) {
+        e.preventDefault();
+
+
             $.ajax({
-                url: '../',
+                url: '../save_list',
                 type: 'POST',
                 data: $(this).serialize(),
                 dataType: 'text',
                 beforeSend: function () {$("#form").html('<h3>Sending...</h3>');},
-                success: function (resp_) {
-                                    window.location.href = '/list_order/'+JSON.parse(resp_).pk;
-                           },
+                success: function (resp) {window.location.href = '/list_order?order_status=SND'},
             });
-        });
+
     });
+});
+
+function show_input_form(input) {
+if (input.hidden == false)  {input.hidden = true;}
+
+else {input.hidden = false;}
+
+}
 </script>
 
-<div id="head" class="container">
-    {% for i in order %}
-        {% #card_order class_="row p-1 mb-1" i=i %}
-        {% /card_order %}
-    {% endfor %}
-</div>
-
-{% #card_order class_="hidden" id_="row_order" i='' %}
-{% /card_order %}
 
 
-
-<h2>
-    {% if order.13.pk %}
-        <a href="../listorderjson?last_pk={{ order.13.pk }}&work_status=ALL"
-        class="btn btn-lg btn-orange cta-btn btn-form mt-3 mb-5 wow fadeIn waves-effect waves-light animated"
-        id="paginator_next">
-            Next
-        </a>
-    {% endif %}
-</h2>
-
-<script>
-    $(document.body).on( "input", "#id_address_street_app", function(e) {
-        e.preventDefault();
-        $.ajax({
-            url: "/street?street="+$(this).val() ,
-            type: "GET",
-
-            dataType: 'json',
-            success: function(b){
-                let type=JSON.parse(b);
-                $('#languages option').remove();
-                for (i = 0; i < type.length; i++) {
-                    full_name_street=type[i].type_street+type[i].name_street
-                    $('#languages').append('<option value="'+full_name_street+'">');
-
-                }
-            }
-        });
-    });
-</script>
 {% endblock body %}
