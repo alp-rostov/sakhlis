@@ -41,18 +41,18 @@ class ApartmentList(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMix
     def get_queryset(self):
         queryset = super().get_queryset()
         if self.request.GET.get('address_city') != None:
-            queryset = Apartment.objects.order_by('address_street_app').only('pk', 'address_city','address_street_app', 'address_num').all()
-            # queryset = DataFromUserProfile().get_clients_of_orders_from_UserProfile(self.request.user)
-
+            queryset = Apartment.objects.order_by('address_street_app').only('pk', 'address_city', 'address_street_app',
+                                                                             'address_num').all()
         self.filterset = ApartmentFilter(self.request.GET, queryset)
-
         return self.filterset.qs
+
 
 class ApartmentUpdate(PermissionRequiredMixin, LoginRequiredMixin, UpdateView):
     model = Apartment
     template_name = 'repairer/apartment_update.html'
     form_class = ApartentUpdateForm
     permission_required = PERMISSION_FOR_REPAIER
+
 
 class Clients(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, ListView):
     model = UserProfile
@@ -68,28 +68,23 @@ class Clients(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, Li
 
     def get_queryset(self):
         queryset = super().get_queryset()
-        if self.request.GET.get('customer_name')!=None:
-            queryset=UserProfile.objects.order_by('customer_name').all()
+        if self.request.GET.get('customer_name') != None:
+            queryset = UserProfile.objects.order_by('customer_name').all()
             # queryset = DataFromUserProfile().get_clients_of_orders_from_UserProfile(self.request.user)
-
         self.filterset = ClientFilter(self.request.GET, queryset)
-
         return self.filterset.qs
 
 
-class ClientsUpdate(PermissionRequiredMixin, LoginRequiredMixin, UpdateView): #TODO add redirest
+class ClientsUpdate(PermissionRequiredMixin, LoginRequiredMixin, UpdateView):
     model = UserProfile
     template_name = 'repairer/clients_update.html'
     form_class = CustomerForm
     permission_required = PERMISSION_FOR_REPAIER
 
-    # def form_valid(self, form):
-    #     if OrderList.objects.filter(customer_id=self.object, repairer_id=self.request.user).exists() and not self.object.user:
-    #         form.save()
-    #         url = reverse('user', args=(self.request.user.pk, ))
-    #         return redirect(url)
-    #     else:
-    #         return redirect('error404')
+    def get_success_url(self):
+        dict_choice_url={'repairer': '/list_order/'+self.request.GET.get('pk'), 'owner': '/owner/apartment'}
+        return dict_choice_url[self.request.user.groups.first().name]
+
 
 class Error404(TemplateView):
     template_name = '404.html'
@@ -156,62 +151,54 @@ class OrderCreate(BaseClassExeption, CreateView):
 
     def form_valid(self, form):
         # if OrderCustomerForm(self.request.POST).is_valid() and ApartmentForm(self.request.POST).is_valid():
-            with transaction.atomic():
+        with transaction.atomic():
 
-                if self.request.user.is_authenticated and self.request.user.groups.first().name == 'owner':  # TODO add logic for owner and set a responseble person
-                    form.instance.customer_id = UserProfile.objects.get(pk=self.request.POST.get('customer_id'))
-                    form.instance.apartment_id = Apartment.objects.get(pk=self.request.POST.get('apartment_id'))
-                    form.instance.order_status = 'SND'
-                    form.instance.repairer_id = User.objects.get(pk=51)
-                    form.save()
-                    return JsonResponse({'message': f'<h3>Заявка № {form.instance.pk} отправлена успешно!</h3>',
-                                         'pk': form.instance.pk,
-                                         'text': form.instance.text_order,
-                                         'date': form.instance.time_in,
-                                         'repaier': form.instance.repairer_id.username,
-                                         'apartment':form.instance.apartment_id.pk
-                                         })
-
-                elif self.request.user.is_authenticated and self.request.user.groups.first().name == 'repairer':
-                    customer = OrderCustomerForm(self.request.POST).save()
-                    app = ApartmentForm(self.request.POST).save(commit=False)
-                    app.owner = customer
-                    app.save()
-                    form.instance.apartment_id = app
-                    form.instance.customer_id = customer
-                    form.instance.repairer_id = self.request.user
-                    form.instance.order_status = 'SND'
-                else:
-                    customer = OrderCustomerForm(self.request.POST).save()
-                    app = ApartmentForm(self.request.POST).save(commit=False)
-                    app.owner = customer
-                    app.save()
-                    form.instance.apartment_id = app
-                    form.instance.customer_id = customer
-                    form.instance.order_status = 'BEG'
-
+            if self.request.user.is_authenticated and self.request.user.groups.first().name == 'owner':  # TODO add logic for owner and set a responseble person
+                form.instance.customer_id = UserProfile.objects.get(pk=self.request.POST.get('customer_id'))
+                form.instance.apartment_id = Apartment.objects.get(pk=self.request.POST.get('apartment_id'))
+                form.instance.order_status = 'SND'
+                form.instance.repairer_id = User.objects.get(pk=51)
                 form.save()
                 return JsonResponse({'message': f'<h3>Заявка № {form.instance.pk} отправлена успешно!</h3>',
                                      'pk': form.instance.pk,
-                                     'auth': self.request.user.is_authenticated
+                                     'text': form.instance.text_order,
+                                     'date': form.instance.time_in,
+                                     'repaier': form.instance.repairer_id.username,
+                                     'apartment': form.instance.apartment_id.pk
                                      })
-        # else:
-        #     return JsonResponse({'message': f'<h3>Ошибка, форма не валидна</h3>',
-        #                          'pk': form.instance.pk,
-        #                          'auth': self.request.user.is_authenticated
-        #                          })
+
+            elif self.request.user.is_authenticated and self.request.user.groups.first().name == 'repairer':
+                customer = OrderCustomerForm(self.request.POST).save()
+                app = ApartmentForm(self.request.POST).save(commit=False)
+                app.owner = customer
+                app.save()
+                form.instance.apartment_id = app
+                form.instance.customer_id = customer
+                form.instance.repairer_id = self.request.user
+                form.instance.order_status = 'SND'
+            else:
+                customer = OrderCustomerForm(self.request.POST).save()
+                app = ApartmentForm(self.request.POST).save(commit=False)
+                app.owner = customer
+                app.save()
+                form.instance.apartment_id = app
+                form.instance.customer_id = customer
+                form.instance.order_status = 'BEG'
+
+            form.save()
+            return JsonResponse({'message': f'<h3>Заявка № {form.instance.pk} отправлена успешно!</h3>',
+                                 'pk': form.instance.pk,
+                                 'auth': self.request.user.is_authenticated
+                                 })
 
 
-
-class OrderDelete(BaseClassExeption, LoginRequiredMixin, DeleteView):  #TODO refactor redirect
+class OrderDelete(BaseClassExeption, LoginRequiredMixin, DeleteView):
     model = OrderList
     template_name = 'order_delete.html'
 
     def get_success_url(self):
-        if self.request.user.groups.first().name == 'owner':
-            return redirect('apartment')
-        elif self.request.user.groups.first().name == 'repairer':
-            return redirect('list_order')
+        dict_choice_url={'repairer': '/list_order', 'owner': '/owner/apartment'}
+        return dict_choice_url[self.request.user.groups.first().name]
 
 
 class OwnerDetailInformation(PermissionRequiredMixin, LoginRequiredMixin, TemplateView):
@@ -221,24 +208,26 @@ class OwnerDetailInformation(PermissionRequiredMixin, LoginRequiredMixin, Templa
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['prof'] = DataFromRepairerList().get_object_from_UserProfile(user=self.request.user)
-        context['order_list_by_apartments']=(OrderList.objects.only('time_in', 'text_order', 'apartment_id__address_street_app',
-                                                       'apartment_id__address_num', 'apartment_id__name', 'apartment_id__notes',
-                                                       'apartment_id__address_city', 'apartment_id__foto', 'order_status',
-                                                       'repairer_id__username')
-                                .filter(customer_id=context['prof'])
-                                .order_by('apartment_id__address_street_app', '-time_in')
-                                .select_related('apartment_id', 'repairer_id')
-                                )
+        context['order_list_by_apartments'] = (
+            OrderList.objects.only('time_in', 'text_order', 'apartment_id__address_street_app',
+                                   'apartment_id__address_num', 'apartment_id__name', 'apartment_id__notes',
+                                   'apartment_id__address_city', 'apartment_id__foto', 'order_status',
+                                   'repairer_id__username')
+            .filter(customer_id=context['prof'])
+            .order_by('apartment_id__address_street_app', '-time_in')
+            .select_related('apartment_id', 'repairer_id')
+            )
 
-        context['apartments']=(Apartment.objects
-                               .filter(owner=context['prof'])
-                               .only('pk', 'address_city', 'address_street_app', 'address_num', 'foto', 'notes', 'name')
-                               .order_by('address_street_app'))
+        context['apartments'] = (Apartment.objects
+                                 .filter(owner=context['prof'])
+                                 .only('pk', 'address_city', 'address_street_app', 'address_num', 'foto', 'notes',
+                                       'name')
+                                 .order_by('address_street_app'))
 
-        list_app_=set([i.get('apartment_id') for i in context['order_list_by_apartments'].values('apartment_id')])
-        list_app=context['apartments'].exclude(pk__in=list_app_)
-        context['list_app']=list_app
-        context['form']=ApartentUpdateForm
+        list_app_ = set([i.get('apartment_id') for i in context['order_list_by_apartments'].values('apartment_id')])
+        list_app = context['apartments'].exclude(pk__in=list_app_)
+        context['list_app'] = list_app
+        context['form'] = ApartentUpdateForm
         return context
 
 
@@ -248,6 +237,7 @@ class OwnerInvoice(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixi
     context_object_name = 'info'
     template_name = 'owner/owner_invoice.html'
     permission_required = PERMISSION_FOR_OWNER
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data()
         context['invoice'] = DataFromInvoice().get_data_from_Invoice_with_amount(order_id_=self.object.pk)
@@ -268,7 +258,7 @@ class OrderManagementSystem(BaseClassExeption, LoginRequiredMixin, ListView):
                     .select_related('customer_id', 'apartment_id', 'repairer_id')
                     .values('pk', 'time_in', 'repairer_id__pk', 'repairer_id__username',
                             'text_order', 'customer_id__pk',
-                            'customer_id__customer_name','customer_id__phone',
+                            'customer_id__customer_name', 'customer_id__phone',
                             'customer_id__telegram', 'customer_id__whatsapp',
                             'apartment_id__link_location', 'apartment_id__address_street_app',
                             'apartment_id__address_city', 'apartment_id__address_num'
@@ -292,15 +282,15 @@ class OwnerOrderManagementSystem(OrderManagementSystem, BaseClassExeption, Login
     permission_required = PERMISSION_FOR_OWNER
 
     def get_queryset(self):
-        userprof=UserProfile.objects.get(user=self.request.user)
+        userprof = UserProfile.objects.get(user=self.request.user)
         queryset = OrderList.objects \
-                    .filter(customer_id=userprof) \
-                    .select_related('apartment_id', 'repairer_id') \
-                    .values('pk', 'time_in',
-                            'text_order', 'apartment_id',
-                            'repairer_id__username', 'apartment_id__address_street_app',
-                            'apartment_id__address_city', 'apartment_id__address_num'
-                            ).order_by('-time_in')
+            .filter(customer_id=userprof) \
+            .select_related('apartment_id', 'repairer_id') \
+            .values('pk', 'time_in',
+                    'text_order', 'apartment_id',
+                    'repairer_id__username', 'apartment_id__address_street_app',
+                    'apartment_id__address_city', 'apartment_id__address_num'
+                    ).order_by('-time_in')
         self.filterset = OrderFilter(self.request.GET, queryset)
         return self.filterset.qs
 
@@ -310,11 +300,13 @@ class OwnerApartmentCreate(BaseClassExeption, LoginRequiredMixin, CreateView):
     template_name = 'owner/apartment_update.html'
     form_class = ApartentUpdateForm
     success_url = '../apartment'
+
     def form_valid(self, form):
         super().form_valid(form)
-        form.instance.owner=UserProfile.objects.get(user=self.request.user)
+        form.instance.owner = UserProfile.objects.get(user=self.request.user)
         form.save()
         return redirect('apartment')
+
 
 class OwnerApartmentUpdate(LoginRequiredMixin, UpdateView):
     model = Apartment
@@ -372,34 +364,24 @@ class Statistica(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin,
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-
         context['filterset'] = self.filterset
-
         queryset_from_OrderList = self.filterset.qs
-
         list_objects_from_OrderList = list(queryset_from_OrderList)
-
         data_from_invoice = DataFromInvoice(Invoice.objects.filter(order_id__in=list_objects_from_OrderList))
         data_from_oder = DataFromOrderList(queryset_from_OrderList)
-
         context['form'] = OrderForm
-
         context['d'] = Graph(data_from_invoice.get_quantity_of_orders_by_type(repairer=self.request.user),
                              'service_id__type', 'count', WORK_CHOICES_, 'Order structure, quantity.', '') \
             .make_graf_pie()
-
         context['d_'] = Graph(data_from_invoice.get_cost_of_orders_by_type(repairer=self.request.user),
                               'service_id__type', 'count', WORK_CHOICES_, 'Order structure, lar.', '') \
             .make_graf_pie()
-
         context['f'] = Graph(data_from_oder.get_monthly_order_cost_from_OrderList(repairer=self.request.user),
                              'time_in__month', 'count', MONTH_, 'Earnings', 'lar') \
             .make_graf_bar()
-
         context['g'] = Graph(data_from_oder.get_monthly_order_quantity_from_OrderList(repairer=self.request.user),
                              'time_in__month', 'count', MONTH_, 'Order`s quantity', 'quantity') \
             .make_graf_bar()
-
         context['hh'] = Graph(data_from_oder.get_dayly_cost_of_orders(repairer=self.request.user),
                               'time_in__date', 'count', None, 'Dynamics', '') \
             .make_graf_plot()
@@ -409,10 +391,10 @@ class Statistica(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin,
 class UserAuthorizationView(LoginView):
     def get_success_url(self):
         super().get_success_url()
-        if 'repairer' == self.request.user.groups.first().name:
-            return reverse_lazy('user', kwargs={'pk': self.request.user.pk})
-        elif 'owner' == self.request.user.groups.first().name:
-            return reverse_lazy('apartment')
+        dict_choice_url = {'repairer': reverse_lazy('user', kwargs={'pk': self.request.user.pk}),
+                           'owner': reverse_lazy('/owner/apartment')}
+        return dict_choice_url[self.request.user.groups.first().name]
+
 
 
 class UserRegisterView(CreateView):
@@ -426,6 +408,7 @@ class UserRegisterView(CreateView):
         context = super().get_context_data(**kwargs)
         context['profile_form'] = CustomerForm
         return context
+
     def form_valid(self, form):
         try:
             with transaction.atomic():
@@ -433,15 +416,12 @@ class UserRegisterView(CreateView):
                 group_ = self.request.POST.get('group')
                 my_group = Group.objects.get(name=group_)
                 my_group.user_set.add(self.object)
-                profile=CustomerForm(self.request.POST, self.request.FILES).save(commit=False)
-                profile.user=self.object
+                profile = CustomerForm(self.request.POST, self.request.FILES).save(commit=False)
+                profile.user = self.object
                 profile.save()
                 return redirect('home')
         except Exception as e:
             return redirect('../404.html')
-
-
-
 
 
 def CreateIvoicePDF(request, **kwargs):
@@ -457,6 +437,7 @@ def CreateIvoicePDF(request, **kwargs):
     doc.savePDF()
     buf.seek(0)
     return FileResponse(buf, as_attachment=True, filename=f'Invoice_{order_pk}_.pdf')
+
 
 @login_required
 def OrderAddRepaier(request):
@@ -480,29 +461,31 @@ def listservices_for_invoice_json(request, **kwargs):
     json_data = json.dumps(list(data))
     return JsonResponse(json_data, safe=False)
 
+
 @login_required
 def client_details_json(request, **kwargs):
     """for ajax request """
     data = UserProfile.objects.get(pk=request.GET.get('pk'))
-    orders = OrderList.objects.filter(customer_id=data).values('pk','text_order', 'time_in').order_by('-time_in')[0:5]
+    orders = OrderList.objects.filter(customer_id=data).values('pk', 'text_order', 'time_in').order_by('-time_in')[0:5]
     json_orders = json.dumps(list(orders), default=str)
-    apartment=Apartment.objects.filter(owner=data).values('pk','name','address_city', 'address_street_app', 'address_num').order_by('-address_street_app')
+    apartment = Apartment.objects.filter(owner=data).values('pk', 'name', 'address_city', 'address_street_app',
+                                                            'address_num').order_by('-address_street_app')
     json_apartment = json.dumps(list(apartment), default=str)
     if orders.exists():
         return JsonResponse({'pk': data.pk,
-                         'name':data.customer_name,
-                         'phone':data.phone,
-                         'telegram':data.telegram,
-                         'foto': str(data.foto),
-                         'profile': data.profile,
-                         'orders': json_orders,
-                         'apartment': json_apartment,
-                         })
-    else: return JsonResponse({'pk': 'None',})
+                             'name': data.customer_name,
+                             'phone': data.phone,
+                             'telegram': data.telegram,
+                             'foto': str(data.foto),
+                             'profile': data.profile,
+                             'orders': json_orders,
+                             'apartment': json_apartment,
+                             })
+    else:
+        return JsonResponse({'pk': 'None', })
 
-
-# @login_required
-# def listorder_for_order_list_paginator_json(request, **kwargs):
+    # @login_required
+    # def listorder_for_order_list_paginator_json(request, **kwargs):
     """for ajax request """
     # data = OrderList.objects.filter(pk__lt=request.GET.get('last_pk'), repairer_id=request.user) \
     #            .select_related('apartment_id', 'customer_id') \
@@ -530,7 +513,7 @@ def client_details_json(request, **kwargs):
 @login_required
 def save_list_jobs(request, **kwargs):
     """for ajax request """
-    FormSet_ = modelformset_factory(OrderList, fields=('text_order','apartment_id', 'customer_id'))
+    FormSet_ = modelformset_factory(OrderList, fields=('text_order', 'apartment_id', 'customer_id'))
 
     formset = FormSet_(request.POST).save(commit=False)
     if formset:
@@ -575,12 +558,10 @@ def input_street(request, **kwargs):
 
 
 def creat_order_from_owner_profile(request, **kwargs):
-    b=OrderForm().save(commit=False)
-    print(b)
-    b.repairer_id=User.objects.get(pk=51)  #TODO add logic to set master
-    b.customer_id=UserProfile.objects.get(pk=request.POST.get('customer_id'))
-    b.apartment_id=Apartment.objects.get(pk=request.POST.get('apartment_id'))
+    b = OrderForm().save(commit=False)
+    b.repairer_id = User.objects.get(pk=51)  # TODO add logic to set master
+    b.customer_id = UserProfile.objects.get(pk=request.POST.get('customer_id'))
+    b.apartment_id = Apartment.objects.get(pk=request.POST.get('apartment_id'))
     b.text_order = request.POST.get('text_order')
     b.save()
-
     return JsonResponse({"message": request.POST.get('name')})
