@@ -275,24 +275,6 @@ $(document.body).ready(function() {
     });
 });
 
-<!--SHOW INPUT IN CLIENT WINDOW-->
-function show_input_form(input) {
-    if (input.hidden == false)  {input.hidden = true;}
-    else {input.hidden = false;}
-}
-
-<!--SHOW ELEMENTS -->
-function viewdiv(id) {
-    var el = document.getElementById(id);
-    var link = document.getElementById('toggleLink'+id);
-    if (el.style.display == "block") {
-        el.style.display = "none";
-        link.innerText = link.getAttribute('data-text-hide');
-    } else {
-        el.style.display = "block";
-        link.innerText = link.getAttribute('data-text-show');
-    }
-}
 
 
 <!--CREATE NEW REQUEST -->

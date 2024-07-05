@@ -52,6 +52,7 @@ class ApartmentUpdate(PermissionRequiredMixin, LoginRequiredMixin, UpdateView):
     template_name = 'repairer/apartment_update.html'
     form_class = ApartentUpdateForm
     permission_required = PERMISSION_FOR_REPAIER
+    success_url = '/apartments/?address_city=&address_street_app='
 
 
 class Clients(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, ListView):
