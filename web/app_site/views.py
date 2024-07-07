@@ -18,7 +18,6 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 from .constants import *
 from .exeptions import BaseClassExeption
 from .filters import OrderFilter, ClientFilter, ApartmentFilter
-from .models import *
 from .forms import *
 from .repository import DataFromRepairerList, DataFromOrderList, DataFromInvoice, DataFromUserProfile
 from .utils import *

@@ -47,7 +47,6 @@ INSTALLED_APPS = [
     'rest_framework',
     "debug_toolbar",
     'django_cleanup.apps.CleanupConfig',
-
     'app_site.apps.AppSiteConfig',
     'api.apps.ApiConfig',
 ]

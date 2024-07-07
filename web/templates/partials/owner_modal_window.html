@@ -1,0 +1,53 @@
+ <!-- Modal Window -->
+   {% load static %}
+
+     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body  mx-3">
+                    <div id="contact" class="form-container">
+                        <fieldset>
+                            <div id="message">
+    				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">X</span>
+                            </button>
+                            </div>
+                        </fieldset>
+                            <div class="row">
+                                <div class="col-12 text-center">
+                                    <h4 id="name" class="mycolor font-weight-bold"></h4>
+                                    <img id="foto1" class="rounded-circle" align="" width="100">
+                                    <div class="row center" hidden id="profile"></div>
+                                </div>
+                            </div>
+                            <div class="row mb-3 border-bottom">
+                                <div class="col-6 text-center"><a href="tel:" title="Phone"  id="customer_phone" class="fas fa-phone prefix text-secondary mt-3" aria-hidden="true"></a></div>
+                                <div class="col-6 text-center"><a href="https://t.me/" title="Telegram" id="customer_telegram" class ="fas fa fa-paper-plane text-secondary mt-3" aria-hidden="true"></a></div>
+                            </div>
+
+
+<form method="post" action="" name="form" id="form">{% csrf_token %}
+
+  <div><input type="hidden" name="form-TOTAL_FORMS" id="id_form-TOTAL_FORMS" value="20">
+      <input type="hidden" name="form-INITIAL_FORMS" id="id_form-INITIAL_FORMS" value="0">
+      <input type="hidden" name="form-MIN_NUM_FORMS" id="id_form-MIN_NUM_FORMS">
+      <input type="hidden" name="form-MAX_NUM_FORMS" id="id_form-MAX_NUM_FORMS"></div>
+      <input type="hidden" name="customer_id" id="customer_id" value="">
+
+
+                            <div class="row mb-2 mt-2" id="apart">Apartments:
+                            </div>
+    <button type="submit" name="submit" class="btn btn-sm btn-orange cta-btn btn-form mt-3 mb-5 ">Send</button>
+
+      </form>
+
+
+
+                            <div class="row mb-2 mt-2" id="order1">5 latest client requests::
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- And Modal Window -->

@@ -26,6 +26,7 @@ dj-database-url==1.3.0
 Django==4.2
 django-appconf==1.0.5
 django-classy-tags==4.0.0
+django-cleanup==8.1.0
 django-cms==3.11.2
 django-crispy-forms==2.1
 django-debug-toolbar==4.1.0
@@ -38,6 +39,7 @@ django-sekizai==4.0.0
 django-treebeard==4.7
 djangocms-admin-style==3.2.3
 djangocms-installer==2.0.0
+djangorestframework==3.14.0
 error404==1.1.7
 Flask==3.0.0
 fonttools==4.43.1
