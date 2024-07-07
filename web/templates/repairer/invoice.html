@@ -112,7 +112,12 @@
 
     <div class="row">
         <div class="col-md-4 text-secondary">
-            <i class="fas fa-home prefix text-secondary mb-2"> </i> {{ info.apartment_id.address_city|choice_tag:'city' }}, {{ info.apartment_id.address_street_app }}, {{ info.apartment_id.address_num }}<br>
+            <i class="fas fa-home prefix text-secondary mb-2"> </i>
+            {{ info.apartment_id.address_num|default_if_none:""  }} {{ info.apartment_id.address_street_app }}, {{ info.apartment_id.address_city|choice_tag:'city' }}
+            <a href="../apartments/update/{{ info.apartment_id.pk }}" class="h5 text-secondary " >
+                | <i class="fas fa-pen text-secondary" style='font-size:14px'> edit</i>
+            </a>
+            <br>
             <i class="fas fa-phone prefix text-secondary mb-2"></i> {{ info.customer_id.phone }}<br>
             <i class="fas fa-paper-plane prefix text-secondary mb-2"></i> @{{ info.customer_id.telegram }}<br>
             <i class="fas fa-paper prefix text-secondary mb-2"></i> Whatsapp{{ info.customer_id.whatsapp }}

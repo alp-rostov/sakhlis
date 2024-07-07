@@ -184,26 +184,26 @@ class OrderUpdateForm(forms.ModelForm):
         fields = ('repairer_id', 'order_status', 'text_order')
 
 
-class OwnerFormOrder(forms.ModelForm):
-    def __init__(self, user, app):
-        super().__init__()
-        self.user = UserProfile.objects.get(user=user)
-        self.app = app
-        self.fields['apartment_id'] = forms.ModelChoiceField(label='Apartment`s customer', queryset=app,
-                                                             empty_label="Choose address...")
-        self.fields['customer_id'] = forms.ModelChoiceField(
-            queryset=UserProfile.objects.filter(user=user).only('customer_name'), empty_label=None)
-
-    text_order = forms.CharField(
-        label='Order`s message',
-        widget=forms.Textarea(attrs={"class": "md-textarea form-control",
-                                     'placeholder': "Describe problems", 'maxlength': 1500, 'rows': 5, 'cols': 10}),
-        required=True
-    )
-
-    class Meta:
-        model = OrderList
-        fields = ('text_order',)
+# class OwnerFormOrder(forms.ModelForm):
+#     def __init__(self, user, app):
+#         super().__init__()
+#         self.user = UserProfile.objects.get(user=user)
+#         self.app = app
+#         self.fields['apartment_id'] = forms.ModelChoiceField(label='Apartment`s customer', queryset=app,
+#                                                              empty_label="Choose address...")
+#         self.fields['customer_id'] = forms.ModelChoiceField(
+#             queryset=UserProfile.objects.filter(user=user).only('customer_name'), empty_label=None)
+#
+#     text_order = forms.CharField(
+#         label='Order`s message',
+#         widget=forms.Textarea(attrs={"class": "md-textarea form-control",
+#                                      'placeholder': "Describe problems", 'maxlength': 1500, 'rows': 5, 'cols': 10}),
+#         required=True
+#     )
+#
+#     class Meta:
+#         model = OrderList
+#         fields = ('text_order',)
 
 
 class UserRegisterForm(UserCreationForm):

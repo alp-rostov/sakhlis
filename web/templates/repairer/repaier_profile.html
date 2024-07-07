@@ -79,8 +79,9 @@
         <label for="tab-btn-1">Add new request</label>
 
         {% for i in order_list %}
+
         <input id="tab-btn-{{ i.grouper }}" name="tab-btn" type="radio" value="">
-        <label for="tab-btn-{{ i.grouper }}">{{ i.grouper|choice_tag:'status_order' }}</label>
+        <label for="tab-btn-{{ i.grouper }}">{{ i.grouper|choice_tag:'status_order' }} - {{i.1|length}}</label>
          {% endfor %}
 
         <!--end menu apartments-->
@@ -109,6 +110,7 @@
                     </a><br>
 
                     <a href="{{ b.customer_id.pk }}" id="link_customer" class="text-secondary" data-toggle="modal" data-target="#exampleModal" title="client">
+                        
                         {{ b.customer_id.customer_name }}
                     </a>
 
@@ -327,5 +329,12 @@ $(document.body).ready(function() {
         });
     });
 
+
+
+function show_input_form(input) {
+    if (input.hidden == false)  {input.hidden = true;}
+
+    else {input.hidden = false;}
+}
 </script>
 {% endblock body %}
