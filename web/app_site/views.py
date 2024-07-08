@@ -156,7 +156,6 @@ class OrderCreate(BaseClassExeption, CreateView):
                 if self.request.user.groups.first().name == 'owner':
                     form.instance.customer_id = UserProfile.objects.get(pk=self.request.POST.get('customer_id'))
                     form.instance.apartment_id = Apartment.objects.get(pk=self.request.POST.get('apartment_id'))
-                    # form.instance.order_status = 'SND'
                     form.save()
                     return JsonResponse({'message': f'<h3>Заявка № {form.instance.pk} отправлена успешно!</h3>',
                                          'pk': form.instance.pk,
@@ -172,8 +171,8 @@ class OrderCreate(BaseClassExeption, CreateView):
                     app.save()
                     form.instance.apartment_id = app
                     form.instance.customer_id = customer
-                    form.instance.repairer_id = self.request.user
-                    # form.instance.order_status = 'SND'
+                    # form.instance.reapier_id = 'SND'
+                    # form.instance.repairer_id = self.request.user
 
             else:
                 customer = OrderCustomerForm(self.request.POST).save()
@@ -182,7 +181,6 @@ class OrderCreate(BaseClassExeption, CreateView):
                 app.save()
                 form.instance.apartment_id = app
                 form.instance.customer_id = customer
-                # form.instance.order_status = 'BEG'
 
             form.save()
             return JsonResponse({'message': f'<h3>Заявка № {form.instance.pk} отправлена успешно!</h3>',

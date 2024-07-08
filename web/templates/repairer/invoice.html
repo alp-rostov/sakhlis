@@ -90,15 +90,12 @@
             <h4>
                 <b>Handyman</b>
             </h4>
-
                 <a href="" class="text-secondary" title="handyman">
-                    <img src="../media/masters/{{ info.repairer_id.pk }}.jpg"
-                    class="rounded-circle" align="center" width="60">
-                    <br>
-                    <b>
-                        {{ info.repairer_id}}
-                    </b>
-                </a>
+                        <img src="../media/masters/{% if info.repairer_id %}{{info.repairer_id.pk}}{% else %}unknown_person{% endif %}.jpg"
+                               class="rounded-circle" align="center" width="60"><br>
+                             <b>{{ info.repairer_id|default_if_none:'unknown handyman'}}</b>
+                         </a>
+                        {{ info.repairer_id.pk}}
 
 
 

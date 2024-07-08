@@ -1,6 +1,8 @@
+from django.contrib.auth.mixins import PermissionRequiredMixin, LoginRequiredMixin
 from django.db.models import Q
 from rest_framework import serializers, generics
 
+from api.serialaizers import ApartmentModelSerializer
 from app_site.models import UserProfile, StreetTbilisi, Apartment
 
 
@@ -13,11 +15,6 @@ class ClientsModelSerializer(serializers.ModelSerializer):
     class Meta:
         model = UserProfile
         fields = ['pk', 'customer_name', 'phone', 'telegram']
-
-class AppartModelSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Apartment
-        fields = ['pk', 'address_street_app', 'address_num']
 
 
 class StreetView(generics.ListAPIView):
@@ -43,11 +40,10 @@ class ClientsView(generics.ListAPIView):
                                               |Q(telegram__icontains=self.request.GET.get('client')))[0:10]
         return queryset
 
-class AppartView(generics.ListAPIView):
-    serializer_class = AppartModelSerializer
-    http_method_names = ['get']
-    def get_queryset(self):
-        queryset = Apartment.objects.filter(owner=self.request.GET.get('owner'))
-        return queryset
 
+
+class AppartList(generics.ListAPIView):
+    queryset = Apartment.objects.order_by('address_street_app').all()
+    serializer_class = ApartmentModelSerializer
+    http_method_names = ['get']
 
