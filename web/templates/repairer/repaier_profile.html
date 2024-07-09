@@ -206,7 +206,7 @@ $(document.body).ready(function() {
                 data: $(this).serialize(),
                 dataType: 'text',
                 beforeSend: function () {$("#form").html('<h3>Sending...</h3>');},
-                success: function (resp) {window.location.href = '/list_order?work_status=BEG'},
+                success: function (resp) {window.location.href = '/list_order?work_status=SND'},
             });
     });
 });

@@ -52,22 +52,22 @@ QUANTITY_CHOICES = [
 ]
 
 ORDER_STATUS = [
-    ('BEG', 'Request received'),
-    ('SND', 'Request sent to the master'),
-    ('RCV', 'Master accepted the request'),
+    # ('BEG', 'Request received'),
+    ('SND', 'New requests'),
+    ('RCV', 'Request sent to the master'),
     ('END', 'Request finished'),
 ]
 
 ORDER_STATUS_ = [
-    ('BEG', 'New requests'),
-    ('SND', 'Request sent to the master'),
-    ('RCV', 'Jobs in progress'),
+    # ('BEG', 'New requests'),
+    ('SND', 'New requests'),
+    ('RCV', 'Request sent to the master'),
     ('END', 'Job completed '),
 ]
 
 
 
-ORDER_STATUS_FOR_CHECK = ['BEG', 'SND', 'RCV', 'WRK', 'END']
+ORDER_STATUS_FOR_CHECK = ['SND', 'RCV', 'WRK', 'END']
 
 
 MONTH = [

@@ -14,7 +14,7 @@ class PersonalOrders(admin.TabularInline):
 
 
 class OrderListAdmin(admin.ModelAdmin):
-    list_display = ('id', 'time_in', 'time_out', 'text_order',
+    list_display = ('id', 'time_in', 'repairer_id', 'apartment_id', 'text_order',
                     'customer_id', 'repairer_id',  'apartment_id')
     list_display_links = ('id', )
     list_filter = ('repairer_id', 'customer_id')
@@ -54,7 +54,7 @@ class UserAdmin(admin.ModelAdmin):
     list_display_links = ('pk', 'customer_name',)
     list_filter = ('telegram',)
     search_fields = ('telegram',)
-    inlines = [PersonalApartment]
+    inlines = [PersonalOrders]
 
 
 

@@ -27,7 +27,7 @@
     </div>
 
     <div class="row border-bottom mb-2" >
-        <div class="col-md-3 mt-3" >
+        <div class="col-3 mt-2" >
             <h4 class="mycolor"><b>Order № {{ info.id }}</b></h4>
             {{ info.time_in }}<br>
             <a href="{% url 'delete-order' info.pk %}" id="delete_{{ info.pk }}" class="mycolor" title="Delete order">
@@ -49,7 +49,7 @@
             <div id="stepstatuswork"></div>
         </div>
 
-        <div class="col-md-4 text-secondary mt-3" >
+        <div class="col-3 text-secondary" >
             <h4><b>Job`s status</b></h4>
             {% if info.order_status == 'SND' %}
                 {% #work_status check_1="fas fa-check-circle about-text" check_font_1=" black-text" %}
@@ -65,7 +65,7 @@
             {% endif %}
         </div>
 
-        <div class="col-md-3 text-secondary mt-3" >
+        <div class="col-3 text-secondary mt-2" >
             <h4>
                 <b>Customer</b>
             </h4>
@@ -86,7 +86,7 @@
 
        </div>
 
-        <div class="col-md-2 text-secondary mt-3" >
+        <div class="col-3 text-secondary mt-2" >
             <h4>
                 <b>Handyman</b>
             </h4>
@@ -95,7 +95,7 @@
                                class="rounded-circle" align="center" width="60"><br>
                              <b>{{ info.repairer_id|default_if_none:'unknown handyman'}}</b>
                          </a>
-                        {{ info.repairer_id.pk}}
+
 
 
 

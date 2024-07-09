@@ -516,7 +516,7 @@ def save_list_jobs(request, **kwargs):
     if formset:
         for instance in formset:
             if instance.text_order:
-                instance.order_status = 'BEG'
+                instance.order_status = 'SND'
                 instance.customer_id = UserProfile.objects.get(pk=request.POST.get('customer_id'))
                 instance.save()
     return JsonResponse(request.GET, safe=False)

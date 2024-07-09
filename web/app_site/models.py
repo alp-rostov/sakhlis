@@ -94,16 +94,16 @@ class OrderList(models.Model):
     time_out = models.DateTimeField(null=True, blank=True, verbose_name='Order completion date')
 
     repairer_id = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True,
-                                    verbose_name='Repairer', default='', )
+                                    verbose_name='Repairer', )
     apartment_id = models.ForeignKey(Apartment, on_delete=models.SET_NULL, null=True, blank=True,
-                                    verbose_name='Appartment', default='', )
+                                    verbose_name='Appartment', )
     customer_id = models.ForeignKey(UserProfile, on_delete=models.SET_NULL, null=True, blank=True,
-                                    verbose_name='Client', default='', )
+                                    verbose_name='Client', )
 
     text_order = models.CharField(max_length=1500, verbose_name='Description of the problem', blank=True, null=True)
 
 
-    order_status = models.CharField(max_length=3, choices=ORDER_STATUS, default='BEG', null=True, blank=True,
+    order_status = models.CharField(max_length=3, choices=ORDER_STATUS, default='SND', null=True, blank=True,  #TODO delete job in progress
                                     verbose_name='Order status')
     services = models.ManyToManyField('Service', through='Invoice')
 
