@@ -590,6 +590,17 @@ class OrderStatusUpdateAPI(generics.UpdateAPIView):
     serializer_class = OrderStatusSerializer
     http_method_names = ['patch']
 
+    def get_object(self):
+        b=super().get_object()
+        f=orderstat.index(b.order_status)
+        try:
+            index_list=orderstat[f+1]
+        except IndexError:
+            index_list = orderstat[0]
+        b.order_status = index_list
+        b.save()
+        return b
+
     def get_queryset(self):
         queryset = OrderList.objects.all()
         return queryset

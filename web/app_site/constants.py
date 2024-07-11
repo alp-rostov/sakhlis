@@ -58,6 +58,8 @@ ORDER_STATUS = [
     ('END', 'Request finished'),
 ]
 
+orderstat=['SND', 'RCV', 'END']
+
 ORDER_STATUS_ = [
     # ('BEG', 'New requests'),
     ('SND', 'New requests'),
