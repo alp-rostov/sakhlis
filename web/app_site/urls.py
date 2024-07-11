@@ -48,7 +48,8 @@ urlpatterns = [
     path('client', client_details_json),
     # path('listorderjson', listorder_for_order_list_paginator_json),
     path('set_work_status', change_work_status),
-    path('street', input_street),
+    path('street', StreetListApi.as_view()),
+    path('orderstatus/<int:pk>', OrderStatusUpdateAPI.as_view()),
     # path('create_order_by_owner', creat_order_from_owner_profile),
     # path('geo', geo_map),
 ]

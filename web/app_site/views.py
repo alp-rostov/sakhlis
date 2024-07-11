@@ -3,6 +3,7 @@ import logging
 from datetime import datetime
 from django.contrib.auth.models import Group
 from django.contrib.auth.views import LoginView
+from .models import *
 
 from django.db import transaction
 
@@ -14,13 +15,17 @@ from django.forms import modelformset_factory
 from django.shortcuts import redirect, get_object_or_404
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
+from rest_framework.renderers import JSONRenderer
 
 from .constants import *
 from .exeptions import BaseClassExeption
 from .filters import OrderFilter, ClientFilter, ApartmentFilter
 from .forms import *
 from .repository import DataFromRepairerList, DataFromOrderList, DataFromInvoice, DataFromUserProfile
+from .serialaizers import StreetModelSerializer, OrderStatusSerializer
 from .utils import *
+
+from rest_framework import serializers, generics
 
 logger = logging.getLogger(__name__)
 
@@ -238,7 +243,7 @@ class OwnerInvoice(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixi
     def get_context_data(self, **kwargs):
         context = super().get_context_data()
         context['invoice'] = DataFromInvoice().get_data_from_Invoice_with_amount(order_id_=self.object.pk)
-        context['repair'] = UserProfile.objects.get(user=self.object.repairer_id)
+
         return context
 
 
@@ -389,7 +394,7 @@ class UserAuthorizationView(LoginView):
     def get_success_url(self):
         super().get_success_url()
         dict_choice_url = {'repairer': reverse_lazy('user', kwargs={'pk': self.request.user.pk}),
-                           'owner': reverse_lazy('/owner/apartment')}
+                           'owner': reverse_lazy('apartment')}
         return dict_choice_url[self.request.user.groups.first().name]
 
 
@@ -458,13 +463,25 @@ def listservices_for_invoice_json(request, **kwargs):
     json_data = json.dumps(list(data))
     return JsonResponse(json_data, safe=False)
 
+class ClientSerialaisers(serializers.ModelSerializer):
+    class Meta:
+        model = UserProfile
+        fields = ['pk', 'customer_name', 'phone', 'telegram']
+
 
 @login_required
 def client_details_json(request, **kwargs):
     """for ajax request """
     data = UserProfile.objects.get(pk=request.GET.get('pk'))
+    m = ClientSerialaisers(data)
+    print(JSONRenderer().render(m.data))
+
     orders = OrderList.objects.filter(customer_id=data).values('pk', 'text_order', 'time_in').order_by('-time_in')[0:5]
     json_orders = json.dumps(list(orders), default=str)
+
+
+
+
     apartment = Apartment.objects.filter(owner=data).values('pk', 'name', 'address_city', 'address_street_app',
                                                             'address_num').order_by('-address_street_app')
     json_apartment = json.dumps(list(apartment), default=str)
@@ -544,13 +561,39 @@ def change_work_status(request, **kwargs):
     # else:
     #     return JsonResponse({"message": "error"})
 
+# class StreertApi(serializers.ModelSerializer):
+#     class Meta:
+#         model = StreetTbilisi
+#         fields = ['type_street', 'name_street']
+#
+# from rest_framework.response import Response
+#
+# def input_street(request, **kwargs):
+#     """for ajax request """
+#     b = StreetTbilisi.objects.filter(name_street__istartswith=request.GET.get('street')) \
+#             .values('type_street', 'name_street')[0:5]
+#     data = StreertApi(b, many=True)
+#     print(data.data)
+#     return JsonResponse(list(b), safe=False)
 
-def input_street(request, **kwargs):
-    """for ajax request """
-    b = StreerTbilisi.objects.filter(name_street__istartswith=request.GET.get('street')) \
-            .values('type_street', 'name_street')[0:15]
-    json_data = json.dumps(list(b), default=str)
-    return JsonResponse(json_data, safe=False)
+
+class StreetListApi(generics.ListAPIView):
+    """API for ajax request """
+    serializer_class = StreetModelSerializer
+    http_method_names = ['get']
+    def get_queryset(self):
+        queryset = StreetTbilisi.objects.filter(name_street__istartswith=self.request.GET.get('street'))[0:10]
+        return queryset
+
+class OrderStatusUpdateAPI(generics.UpdateAPIView):
+    """API for ajax request """
+    serializer_class = OrderStatusSerializer
+    http_method_names = ['patch']
+
+    def get_queryset(self):
+        queryset = OrderList.objects.all()
+        return queryset
+
 
 
 def creat_order_from_owner_profile(request, **kwargs):
