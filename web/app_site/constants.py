@@ -62,8 +62,8 @@ orderstat=['SND', 'RCV', 'END']
 
 ORDER_STATUS_ = [
     # ('BEG', 'New requests'),
-    ('SND', 'New requests'),
-    ('RCV', 'Request sent to the master'),
+    ('SND', 'New job'),
+    ('RCV', 'Job in progress'),
     ('END', 'Job completed '),
 ]
 

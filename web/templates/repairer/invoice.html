@@ -27,45 +27,22 @@
     </div>
 
     <div class="row border-bottom mb-2" >
-        <div class="col-3 mt-2" >
+        <div class="col-4 mt-2" >
             <h4 class="mycolor"><b>Order № {{ info.id }}</b></h4>
             {{ info.time_in }}<br>
+            <button id="orderstatus" class="btn btn-sm btn-orange">{{ info.order_status|choice_tag:'status_order' }}</button>
+            <br>
             <a href="{% url 'delete-order' info.pk %}" id="delete_{{ info.pk }}" class="mycolor" title="Delete order">
                 <i class="fas fa-trash text-secondary" style='font-size:14px'> delete</i>
             </a> |
             <a href="{% url 'update-order' info.pk %}" id="update_{{ info.pk }}" class="text-secondary" title="Update order">
                 <i class="fas fa-pen text-secondary" style='font-size:14px'> edit</i>
             </a>
-            <br>
 
-            {% if info.order_status == 'SND' %}
-                 <a href="../changestatus?order_pk={{ info.pk}}&work_status=RCV" id="workstatus"
-                 class="btn btn-sm btn-orange" >ACCEPT ORDER</a>
-            {% elif info.order_status == 'RCV' %}
-                 <a href="../changestatus?order_pk={{ info.pk}}&work_status=END" id="workstatus" class="btn btn-sm btn-orange">Job was completed</a><br>
-            {% elif info.order_status == 'END' %}
-                <a href="pdf/{{ info.id }}" class="btn btn-sm btn-orange">Invoice - PDF</a>
-            {% endif %}
-            <div id="stepstatuswork"></div>
+
         </div>
 
-        <div class="col-3 text-secondary" >
-            <h4><b>Job`s status</b></h4>
-            {% if info.order_status == 'SND' %}
-                {% #work_status check_1="fas fa-check-circle about-text" check_font_1=" black-text" %}
-                {% /work_status %}
-
-            {% elif info.order_status == 'RCV' %}
-                {% #work_status check_1="fas fa-check-circle text-secondary" check_2="fas fa-check-circle about-text" check_font_2="black-text" %}
-                {% /work_status %}
-
-            {% elif info.order_status == 'END' %}
-                {% #work_status check_1="fas fa-check-circle text-secondary" check_2="fas fa-check-circle text-secondary" check_3="fas fa-check-circle about-text" check_font_3=" black-text"   %}
-                {% /work_status %}
-            {% endif %}
-        </div>
-
-        <div class="col-3 text-secondary mt-2" >
+        <div class="col-4 text-secondary mt-2" >
             <h4>
                 <b>Customer</b>
             </h4>
@@ -86,7 +63,7 @@
 
        </div>
 
-        <div class="col-3 text-secondary mt-2" >
+        <div class="col-4 text-secondary mt-2" >
             <h4>
                 <b>Handyman</b>
             </h4>
@@ -95,10 +72,6 @@
                                class="rounded-circle" align="center" width="60"><br>
                              <b>{{ info.repairer_id|default_if_none:'unknown handyman'}}</b>
                          </a>
-
-
-
-
 
         </div>
 
@@ -128,11 +101,8 @@
 
  </div>
 
-{% if info.order_status == 'SND' %}
-    <table id="table_invoice" class="hidden">
-{% else %}
-    <table id="table_invoice" class="table" >
-{% endif %}
+<table id="table_invoice" class="table" >
+
 <thead>
 <tr  class="table-warning">
     <th>Name of service </th>
@@ -190,11 +160,7 @@
 
 </table>
 
-{% if info.order_status == 'SND' %}
-<form action="" method="post" id="id_form" class="hidden">
-{% else %}
 <form action="" method="post" id="id_form" >
-{% endif %}
 
     {% csrf_token %}
     <div id="form-list">
@@ -218,11 +184,31 @@
     </div>
 
 </form>
+<script>
+<!-- SENT AJAX - CREATE NEW REQUEST FROM CLIENT WINDOW -->
+$(document).on('click', '#orderstatus', function (e) {
+        e.preventDefault();
+            $.ajax({
+                url: '../orderstatus/{{ info.pk }}',
+                type: 'PATCH',
+                data: $(this).serialize(),
+                dataType: 'text',
+                beforeSend: function () {},
+                success: function (resp) {
+                    const elem = document.getElementById("orderstatus");
+                    const dict={'SND':'New job', 'RCV':'Job in progress', 'END':'Job completed' };
+                    let key=JSON.parse(resp).order_status;
+                    elem.innerHTML = dict[key];
+                },
+            });
+
+});
+</script>
 
 {% endblock body %}
 
-
-
 {% block js %}
+    <script src="{% static 'js/custom.js' %}"></script>
+
     <script src="{% static 'js/invoice.js' %}"></script>
 {% endblock js %}
