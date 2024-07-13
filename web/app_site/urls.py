@@ -15,7 +15,7 @@ urlpatterns = [
 
     path('add', OrderAddRepaier, name='add_repairer'),
     path('invoice/delete-order/<int:pk>', OrderDelete.as_view(), name='delete-order'),
-    path('invoice/delete/<int:invoice_pk>', DeleteIvoiceService, name='delete-item-of-order'),
+    # path('deleteservice/<int:invoice_pk>', DeleteIvoiceServiceAPI.as_view(), name='delete-item-of-order'),
 
     path('login/', UserAuthorizationView.as_view(template_name='account/login.html'), name='login'),
     path('logout/', LogoutView.as_view(template_name='account/logout.html'), name='logout'),
@@ -31,8 +31,6 @@ urlpatterns = [
     path('stat/', Statistica.as_view(), name='stat'),
     path('user/<int:pk>', RepairerDetailInformation.as_view(), name='user'),
 
-
-
     path('owner/apartment', OwnerDetailInformation.as_view(), name='apartment'),
     path('owner/apartment/<int:pk>', OwnerApartmentUpdate.as_view(), name='apartment_update'),
     path('owner/apartment/create', OwnerApartmentCreate.as_view(), name='apartment_create'),
@@ -44,12 +42,12 @@ urlpatterns = [
 
     path('serv', listservices_for_invoice_json),
     path('save_list', save_list_jobs),
-    path('changestatus', change_work_status),
     path('client', client_details_json),
     # path('listorderjson', listorder_for_order_list_paginator_json),
-    path('set_work_status', change_work_status),
     path('street', StreetListApi.as_view()),
     path('orderstatus/<int:pk>', OrderStatusUpdateAPI.as_view()),
+    path('deleteivoice/<int:pk>', DeleteIvoiceServiceAPI.as_view()),
+
     # path('create_order_by_owner', creat_order_from_owner_profile),
     # path('geo', geo_map),
 ]

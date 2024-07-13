@@ -128,7 +128,7 @@
             <td name="quantity">{{ g.quantity }} </td>
             <td name="price">{{ g.price }}</td>
             <td name="amount">{{ g.amount }}</td>
-            <td name="delete"><a href="{% url 'delete-item-of-order' g.pk %}" class="link-delete" ><i class="fas fa-trash text-secondary"></i></a></td>
+            <td name="delete"><a href="{{g.pk}}" class="link-delete" id="deleteservice"><i class="fas fa-trash text-secondary">{{g.pk}}</i></a></td>
     </tr>
 {% endfor %}
 </tbody>
@@ -185,6 +185,25 @@
 
 </form>
 <script>
+
+<!-- SENT AJAX - CREATE NEW REQUEST FROM CLIENT WINDOW -->
+$(document).on('click', '#deleteservice', function (e) {
+        e.preventDefault();
+        console.log(e);
+        alert(e);
+        $.ajax({
+            url: '../deleteivoice',
+            type: 'PATCH',
+            data: $(this).serialize(),
+            dataType: 'text',
+            beforeSend: function () {},
+            success: function (resp) {        },
+        });
+
+
+});
+
+
 <!-- SENT AJAX - CREATE NEW REQUEST FROM CLIENT WINDOW -->
 $(document).on('click', '#orderstatus', function (e) {
         e.preventDefault();

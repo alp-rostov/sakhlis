@@ -22,7 +22,7 @@ from .exeptions import BaseClassExeption
 from .filters import OrderFilter, ClientFilter, ApartmentFilter
 from .forms import *
 from .repository import DataFromRepairerList, DataFromOrderList, DataFromInvoice, DataFromUserProfile
-from .serialaizers import StreetModelSerializer, OrderStatusSerializer
+from .serialaizers import StreetModelSerializer, OrderStatusSerializer, InvoiceSerializer
 from .utils import *
 
 from rest_framework import serializers, generics
@@ -538,43 +538,25 @@ def save_list_jobs(request, **kwargs):
                 instance.save()
     return JsonResponse(request.GET, safe=False)
 
-
-@login_required
-def DeleteIvoiceService(request, **kwargs):
-    """for ajax request """
-
-    invoice_object = get_object_or_404(Invoice.objects.filter(order_id__repairer_id=request.user),
-                                       pk=kwargs.get("invoice_pk"))
-    invoice_object.delete()
-    return JsonResponse({"message": "success"})
-
-
-@login_required
-def change_work_status(request, **kwargs):
-    """for ajax request """
-    b = get_object_or_404(OrderList, pk=request.GET.get("order_pk"))
-    # if request.GET.get('work_status') in ORDER_STATUS_FOR_CHECK and b.repairer_id == request.user:
-    b.order_status = request.GET.get('work_status')
-    if b.order_status == 'END': b.time_out = datetime.now()
-    b.save()
-    return JsonResponse({"message": request.GET.get('work_status'), "pk": request.GET.get("order_pk")})
-    # else:
-    #     return JsonResponse({"message": "error"})
-
-# class StreertApi(serializers.ModelSerializer):
-#     class Meta:
-#         model = StreetTbilisi
-#         fields = ['type_street', 'name_street']
 #
-# from rest_framework.response import Response
-#
-# def input_street(request, **kwargs):
+# @login_required
+# def DeleteIvoiceService(request, **kwargs):
 #     """for ajax request """
-#     b = StreetTbilisi.objects.filter(name_street__istartswith=request.GET.get('street')) \
-#             .values('type_street', 'name_street')[0:5]
-#     data = StreertApi(b, many=True)
-#     print(data.data)
-#     return JsonResponse(list(b), safe=False)
+#
+#     invoice_object = get_object_or_404(Invoice.objects.filter(order_id__repairer_id=request.user),
+#                                        pk=kwargs.get("invoice_pk"))
+#     invoice_object.delete()
+#     return JsonResponse({"message": "success"})
+
+class DeleteIvoiceServiceAPI(generics.DestroyAPIView):
+    """API for ajax request """
+    serializer_class = InvoiceSerializer
+    http_method_names = ['delete']
+
+    def get_queryset(self):
+        queryset = Invoice.objects.all()
+        return queryset
+
 
 
 class StreetListApi(generics.ListAPIView):
