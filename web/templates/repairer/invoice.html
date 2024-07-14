@@ -27,7 +27,7 @@
     </div>
 
     <div class="row border-bottom mb-2" >
-        <div class="col-4 mt-2" >
+        <div class="col-md-4 mt-2" >
             <h4 class="mycolor"><b>Order № {{ info.id }}</b></h4>
             {{ info.time_in }}<br>
             <button id="orderstatus" class="btn btn-sm btn-orange">{{ info.order_status|choice_tag:'status_order' }}</button>
@@ -42,7 +42,7 @@
 
         </div>
 
-        <div class="col-4 text-secondary mt-2" >
+        <div class="col-md-4 text-secondary mt-2" >
             <h4>
                 <b>Customer</b>
             </h4>
@@ -63,7 +63,7 @@
 
        </div>
 
-        <div class="col-4 text-secondary mt-2" >
+        <div class="col-md-4 text-secondary mt-2" >
             <h4>
                 <b>Handyman</b>
             </h4>
@@ -128,7 +128,7 @@
             <td name="quantity">{{ g.quantity }} </td>
             <td name="price">{{ g.price }}</td>
             <td name="amount">{{ g.amount }}</td>
-            <td name="delete"><a href="{{g.pk}}" class="link-delete" id="deleteservice"><i class="fas fa-trash text-secondary">{{g.pk}}</i></a></td>
+            <td name="delete"><a href="../deleteinvoice/{{g.pk}}" class="link-delete" ><i class="fas fa-trash text-secondary"></i></a></td>
     </tr>
 {% endfor %}
 </tbody>
@@ -186,18 +186,22 @@
 </form>
 <script>
 
+
 <!-- SENT AJAX - CREATE NEW REQUEST FROM CLIENT WINDOW -->
-$(document).on('click', '#deleteservice', function (e) {
+$(document.body).on( "click", ".link-delete", function(e) {
         e.preventDefault();
-        console.log(e);
-        alert(e);
+        let $this=$(this);
         $.ajax({
-            url: '../deleteivoice',
-            type: 'PATCH',
-            data: $(this).serialize(),
-            dataType: 'text',
+            url: $this.attr("href"),
+            type: 'DELETE',
+            dataType: 'json',
             beforeSend: function () {},
-            success: function (resp) {        },
+            success: function (resp) {
+                $this.parents(".form_text").fadeOut("slow", function(){
+                    $this.parents(".form_text").remove();
+                    sum_total()
+                });
+            },
         });
 
 

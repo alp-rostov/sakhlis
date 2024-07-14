@@ -428,7 +428,6 @@ class UserRegisterView(CreateView):
 
 def CreateIvoicePDF(request, **kwargs):
     """ Create invoice pdf-file for printing """
-
     # get information from models
     order_pk = kwargs.get("order_pk")
     info = DataFromOrderList().get_all_data_of_order_with_from_invoice().get(pk=order_pk)
@@ -479,9 +478,6 @@ def client_details_json(request, **kwargs):
     orders = OrderList.objects.filter(customer_id=data).values('pk', 'text_order', 'time_in').order_by('-time_in')[0:5]
     json_orders = json.dumps(list(orders), default=str)
 
-
-
-
     apartment = Apartment.objects.filter(owner=data).values('pk', 'name', 'address_city', 'address_street_app',
                                                             'address_num').order_by('-address_street_app')
     json_apartment = json.dumps(list(apartment), default=str)
@@ -498,32 +494,6 @@ def client_details_json(request, **kwargs):
     else:
         return JsonResponse({'pk': 'None', })
 
-    # @login_required
-    # def listorder_for_order_list_paginator_json(request, **kwargs):
-    """for ajax request """
-    # data = OrderList.objects.filter(pk__lt=request.GET.get('last_pk'), repairer_id=request.user) \
-    #            .select_related('apartment_id', 'customer_id') \
-    #            .order_by('-pk') \
-    #            .values('pk', 'time_in', 'text_order', 'customer_id__customer_name',
-    #                    'customer_id__phone', 'customer_id__telegram',
-    #                    'apartment_id__address_city', 'apartment_id__address_street_app',
-    #                    'apartment_id__address_num', 'apartment_id__location_longitude',
-    #                    'apartment_id__location_latitude')[0:14]
-    # print(request.GET)
-    # data = OrderList.objects.filter(pk__lt=request.GET.get('last_pk'), repairer_id=request.user) \
-    #            .select_related('apartment_id', 'customer_id') \
-    #            .order_by('-pk')
-    #
-    # filterset = OrderFilter(request.GET, data).qs.values('pk', 'time_in', 'text_order', 'customer_id__customer_name',
-    #                    'customer_id__phone', 'customer_id__telegram',
-    #                    'apartment_id__address_city', 'apartment_id__address_street_app',
-    #                    'apartment_id__address_num', 'apartment_id__location_longitude',
-    #                    'apartment_id__location_latitude')[0:14]
-    #
-    # json_data = json.dumps(list(filterset), default=str)
-    # return JsonResponse(json_data, safe=False)
-
-
 @login_required
 def save_list_jobs(request, **kwargs):
     """for ajax request """
@@ -538,16 +508,6 @@ def save_list_jobs(request, **kwargs):
                 instance.save()
     return JsonResponse(request.GET, safe=False)
 
-#
-# @login_required
-# def DeleteIvoiceService(request, **kwargs):
-#     """for ajax request """
-#
-#     invoice_object = get_object_or_404(Invoice.objects.filter(order_id__repairer_id=request.user),
-#                                        pk=kwargs.get("invoice_pk"))
-#     invoice_object.delete()
-#     return JsonResponse({"message": "success"})
-
 class DeleteIvoiceServiceAPI(generics.DestroyAPIView):
     """API for ajax request """
     serializer_class = InvoiceSerializer
@@ -556,7 +516,6 @@ class DeleteIvoiceServiceAPI(generics.DestroyAPIView):
     def get_queryset(self):
         queryset = Invoice.objects.all()
         return queryset
-
 
 
 class StreetListApi(generics.ListAPIView):

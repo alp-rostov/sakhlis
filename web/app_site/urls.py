@@ -46,7 +46,7 @@ urlpatterns = [
     # path('listorderjson', listorder_for_order_list_paginator_json),
     path('street', StreetListApi.as_view()),
     path('orderstatus/<int:pk>', OrderStatusUpdateAPI.as_view()),
-    path('deleteivoice/<int:pk>', DeleteIvoiceServiceAPI.as_view()),
+    path('deleteinvoice/<int:pk>', DeleteIvoiceServiceAPI.as_view()),
 
     # path('create_order_by_owner', creat_order_from_owner_profile),
     # path('geo', geo_map),

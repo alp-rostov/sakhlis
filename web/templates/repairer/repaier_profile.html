@@ -101,7 +101,7 @@
         <div class="tab-content" id="content-{{ i.grouper }}">
             {% for b in i.list %}
             <div class="row border-bottom mb-3 p-1">
-                <div class="col-4 " >
+                <div class="col-md-4" >
                     <a href="../list_order/{{b.pk}}" id="order_{{ b.pk }}" class ='text-secondary'>
                     Order № {{ b.pk }}</a>, {{ b.time_in|date:"d b Y" }}
                     <a href="{% url 'delete-order' b.pk %}" id="delete_{{ b.pk }}" class="mycolor mr-1 text-secondary" title="Delete order">
@@ -120,11 +120,11 @@
                     </div>
                 </div>
 
-                <div class="col-4 ">
+                <div class="col-md-4 ">
                     <span class="text-secondary"> {{ b.text_order }}</span>
                 </div>
 
-                <div class="col-4">
+                <div class="col-md-4">
                       <img src="../media/masters/{{ b.repairer_id.pk }}.jpg"
                            class="rounded-circle" align="center" width="60"><br>
                      <a href="" class="text-secondary">

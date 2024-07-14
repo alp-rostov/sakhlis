@@ -1,5 +1,6 @@
 
 /* ================   using in invoice for add information about works  ============= */
+/* ================   using in invoice for add information about works  ============= */
 
 function show_type_work(form) {
             $(form.nextElementSibling).fadeIn("slow", function(){
@@ -94,7 +95,7 @@ $('#id_form').submit(function(e) {
                     tr.find('td[name="quantity"]').html(b[i].quantity);
                     tr.find('td[name="price"]').html(b[i].price);
                     tr.find('td[name="amount"]').html(b[i].price*b[i].quantity);
-                    tr.find('td[name="delete"]').html('<a href="/invoice/delete/'+b[i].pk+'" class="link-delete" ><i class="fas fa-trash text-secondary"></i></a>');
+                    tr.find('td[name="delete"]').html('<a href="../deleteinvoice/'+b[i].pk+'" class="link-delete" ><i class="fas fa-trash text-secondary"></i></a>');
                     tr.attr('class','form_text');
                     $('#total_').before(tr);
                     sum_total();
@@ -107,63 +108,6 @@ $('#id_form').submit(function(e) {
     });
 
 });
-
-$(document.body).on( "click", ".link-delete", function(e) {
-        e.preventDefault();
-        let $this=$(this);
-        $.ajax({
-            url: $this.attr("href"),
-            type: "GET",
-            dataType: "json",
-            success: function(){
-                        $this.parents(".form_text").fadeOut("slow", function(){
-                        $this.parents(".form_text").remove();
-                        sum_total()
-                    });
-            }
-        });
-    });
-
-
-
-
-$(document.body).on( "click", "#workstatus", function(e) {
-        e.preventDefault();
-        let $this=$(this);
-        $.ajax({
-            url: $this.attr("href"),
-            type: "GET",
-            dataType: "json",
-            success: function(r){
-                        let b=r.message;
-                        let pk=r.pk;
-                        if (b=='RCV') {
-                            $('#check1').attr('class', 'fas fa-check-circle text-secondary');
-                            $('#check2').attr('class', 'fas fa-check-circle about-text');
-                            $('#check_text_1').attr('class', 'col-md-11');
-                            $('#check_text_2').attr('class', 'col-md-11 black-text');
-                            $('#workstatus').html('Order is completed');
-                            $('#workstatus').attr('href', "../changestatus?order_pk="+pk+"&work_status=END");
-                            $('#id_form').attr('class', '');
-                            $('#table_invoice').attr('class', 'table');
-                        } else
-
-
-                        if (b=='END') {
-                            $('#check1').attr('class', 'fas fa-check-circle text-secondary');
-                            $('#check2').attr('class', 'fas fa-check-circle text-secondary');
-                            $('#check3').attr('class', 'fas fa-check-circle about-text');
-                            $('#check_text_1').attr('class', 'col-md-11');
-                            $('#check_text_2').attr('class', 'col-md-11');
-                            $('#check_text_3').attr('class', 'col-md-11 black-text');
-                            $('#check_text_1').attr('class', 'col-md-11');
-                            $('#check_text_2').attr('class', 'col-md-11 black-text');
-                            $('#workstatus').remove();
-                            $('#stepstatuswork').html('<a href="pdf/'+pk+'" class="btn btn-sm btn-orange">Invoice - PDF</a>');
-                        }
-            }
-        });
-    });
 
 
 /* ================   END using in invoice  ============= */
