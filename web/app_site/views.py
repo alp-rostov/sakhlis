@@ -3,6 +3,8 @@ import logging
 from datetime import datetime
 from django.contrib.auth.models import Group
 from django.contrib.auth.views import LoginView
+from rest_framework.permissions import IsAuthenticated, IsAdminUser
+
 from .models import *
 
 from django.db import transaction
@@ -277,6 +279,18 @@ class OrderManagementSystem(BaseClassExeption, LoginRequiredMixin, ListView):
         context['count_orders'] = self.get_queryset().count()
         return context
 
+class OrdersOnTheStreet(ListView):
+    model = OrderList
+    context_object_name = 'orders'
+    # template_name = pass
+
+
+    def get_queryset(self):
+        queryset = (super().get_queryset()
+                    .filter(apartment_id__address_street_app__icontains=self.request.GET.get('street')))
+
+        return queryset
+
 
 class OwnerOrderManagementSystem(OrderManagementSystem, BaseClassExeption, LoginRequiredMixin, ListView):
     """ list of all orders """
@@ -512,7 +526,7 @@ class DeleteIvoiceServiceAPI(generics.DestroyAPIView):
     """API for ajax request """
     serializer_class = InvoiceSerializer
     http_method_names = ['delete']
-
+    permission_classes = (IsAdminUser,)
     def get_queryset(self):
         queryset = Invoice.objects.all()
         return queryset
@@ -530,6 +544,7 @@ class OrderStatusUpdateAPI(generics.UpdateAPIView):
     """API for ajax request """
     serializer_class = OrderStatusSerializer
     http_method_names = ['patch']
+    permission_classes = (IsAdminUser,)
 
     def get_object(self):
         b=super().get_object()
