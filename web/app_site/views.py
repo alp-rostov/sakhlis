@@ -24,7 +24,8 @@ from .exeptions import BaseClassExeption
 from .filters import OrderFilter, ClientFilter, ApartmentFilter
 from .forms import *
 from .repository import DataFromRepairerList, DataFromOrderList, DataFromInvoice, DataFromUserProfile
-from .serialaizers import StreetModelSerializer, OrderStatusSerializer, InvoiceSerializer
+from .serialaizers import StreetModelSerializer, OrderStatusSerializer, InvoiceSerializer, UserSerializer, \
+    UpdateMasterSerializer
 from .utils import *
 
 from rest_framework import serializers, generics
@@ -281,13 +282,22 @@ class OrderManagementSystem(BaseClassExeption, LoginRequiredMixin, ListView):
 
 class OrdersOnTheStreet(ListView):
     model = OrderList
-    context_object_name = 'orders'
-    # template_name = pass
+    context_object_name = 'order'
+    template_name = 'repairer/order_list.html'
 
 
     def get_queryset(self):
         queryset = (super().get_queryset()
-                    .filter(apartment_id__address_street_app__icontains=self.request.GET.get('street')))
+                    .select_related('customer_id', 'apartment_id', 'repairer_id')
+                    .filter(apartment_id__address_street_app__icontains=self.request.GET.get('street'))
+                    .values('pk', 'time_in', 'repairer_id__pk', 'repairer_id__username',
+                            'text_order', 'customer_id__pk',
+                            'customer_id__customer_name', 'customer_id__phone',
+                            'customer_id__telegram', 'customer_id__whatsapp',
+                            'apartment_id__link_location', 'apartment_id__address_street_app',
+                            'apartment_id__address_city', 'apartment_id__address_num'
+                            ))
+
 
         return queryset
 
@@ -349,7 +359,7 @@ class RepairerDetailInformation(BaseClassExeption, PermissionRequiredMixin, Logi
         context['form_order'] = OrderForm
         context['form_appart'] = ApartmentForm
         context['form_customer'] = CustomerForm
-        context['feedbacks'] = ClientFeedback.objects.all()
+        context['list_masters'] = User.objects.filter(groups=3).values('pk', 'username', 'groups') #TODO refactor filter 3 is a group`s number 'repaier'
         context['orders'] = DataFromOrderList().get_data_from_OrderList_with_order_status(repairer=self.request.user,
                                                                                           status_of_order=['SND',
                                                                                                            'RCV'])
@@ -476,18 +486,11 @@ def listservices_for_invoice_json(request, **kwargs):
     json_data = json.dumps(list(data))
     return JsonResponse(json_data, safe=False)
 
-class ClientSerialaisers(serializers.ModelSerializer):
-    class Meta:
-        model = UserProfile
-        fields = ['pk', 'customer_name', 'phone', 'telegram']
-
 
 @login_required
 def client_details_json(request, **kwargs):
     """for ajax request """
     data = UserProfile.objects.get(pk=request.GET.get('pk'))
-    m = ClientSerialaisers(data)
-    print(JSONRenderer().render(m.data))
 
     orders = OrderList.objects.filter(customer_id=data).values('pk', 'text_order', 'time_in').order_by('-time_in')[0:5]
     json_orders = json.dumps(list(orders), default=str)
@@ -560,6 +563,23 @@ class OrderStatusUpdateAPI(generics.UpdateAPIView):
     def get_queryset(self):
         queryset = OrderList.objects.all()
         return queryset
+
+class MasterUpdateAPI(generics.UpdateAPIView):
+    """API for ajax request """
+    serializer_class = UpdateMasterSerializer
+    http_method_names = ['patch']
+
+    def get_queryset(self):
+        queryset = OrderList.objects.all()
+        return queryset
+
+class MastersListAPI(generics.ListAPIView):
+    serializer_class = UserSerializer
+    http_method_names = ['get']
+    def get_queryset(self):
+        queryset = User.objects.filter(groups=3).values('pk', 'username', 'groups') #TODO refactor filter 3 is a group`s number 'repaier'
+        return queryset
+
 
 
 

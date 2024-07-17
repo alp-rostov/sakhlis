@@ -11,3 +11,4 @@ components:
   about_me: "partials/about_me.html"
   work_status: "partials/work_status.html"
   owner_modal_window: "partials/owner_modal_window.html"
+  master_modal_window: "partials/master_modal_window.html"

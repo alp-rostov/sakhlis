@@ -1,5 +1,6 @@
 from rest_framework import serializers, generics
-from app_site.models import UserProfile, StreetTbilisi, Apartment, OrderList, Invoice
+from app_site.models import UserProfile, StreetTbilisi, OrderList, Invoice
+from django.contrib.auth.models import User
 
 
 class StreetModelSerializer(serializers.ModelSerializer):
@@ -13,7 +14,17 @@ class OrderStatusSerializer(serializers.ModelSerializer):
         model = OrderList
         fields = ['order_status']
 
+class UpdateMasterSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = OrderList
+        fields = ['repairer_id']
+
 class InvoiceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Invoice
         fields = '__all__'
+
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ['pk','username', ]

@@ -108,10 +108,10 @@
                         <i class="fas fa-trash text-secondary ml-5"></i>
                     </a><br>
 
-                    <a href="{{ b.customer_id.pk }}" id="link_customer" class="text-secondary" data-toggle="modal" data-target="#exampleModal" title="client">
+                    <b class="text-secondary">
                         
                         {{ b.customer_id.customer_name }}
-                    </a>
+                    </b>
 
                     <div class="mt-2 ">
                         <span id="city_{{ b.pk }}" >{{ b.apartment_id.address_city|choice_tag:'city'}}</span>,
@@ -127,8 +127,14 @@
                 <div class="col-md-4">
                       <img src="../media/masters/{{ b.repairer_id.pk }}.jpg"
                            class="rounded-circle" align="center" width="60"><br>
-                     <a href="" class="text-secondary">
-                         <b>{{ b.repairer_id.username }}</b>
+
+
+                     {% if b.repairer_id %}
+                         <b class="text-secondary">{{ b.repairer_id.username }}</b>
+                     {% else %}
+                        <a href="" class="link_master" data-toggle="modal" data-target="#exampleModal" title="{{ b.pk }}">Appoint a master to the order</a>
+                     {% endif %}
+
                      </a>
                 </div>
             </div>
@@ -139,62 +145,83 @@
     </div>
 </div>
 
-{% #owner_modal_window   %}
-{% csrf_token %}
-{% /owner_modal_window %}
+ <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body  mx-3">
+                <div id="contact" class="form-container">
+                    <fieldset>
+                        <div id="message">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">X</span>
+                        </button>
+                        </div>
+                    </fieldset>
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <h4 id="" class="mycolor font-weight-bold">List of masters</h4>
+                            </div>
+                        </div>
+
+                        <div class="row" id="master">
+                            <div id="pk"></div>
+                            {% for i in list_masters %}
+                            <div class="col-12 text-center m-2 font-weight-bold" id="master_col">
+                                <a href="{{i.pk}}" class="link-text-secondary" title="{{i.pk}}">
+
+                                <img src="../media/masters/{{ i.pk }}.jpg" class="rounded-circle border
+                                border-white" align="center" width="70">- {{ i.username }}
+                                </a>
+                            </div>
+                            {% endfor %}
+                        </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
 <script>
-<!--  SHOW CLIENT INFO WINDOW WHEN YOU PUT A CLIENT NAME  -->
-$(document).on('click', '#link_customer', function (e) {
-    e.preventDefault();
+$(document.body).on( "click", ".link_master", function(e) {
+        let b=$(this).attr('title');
+        links=document.getElementById('master').querySelectorAll('a');
+        links.forEach((element) => element.setAttribute('href', '/setmaster/'+b));
 
-         $.ajax({
-            url: "../client?pk="+$(this).attr("href") ,
-            type: "GET",
-            dataType: 'json',
+});
 
-            success: function(response){
-            document.getElementById("name").innerHTML =response.name;
-            document.getElementById("customer_phone").innerHTML =' '+response.phone;
-            document.getElementById("customer_telegram").innerHTML = ' '+response.telegram;
-            document.getElementById("profile").innerHTML = response.profile;
-            document.getElementById("foto1").src ='../media/'+response.foto;
-            document.getElementById("customer_id").value =response.pk;
 
-            b=JSON.parse(response.orders);
-            c=JSON.parse(response.apartment);
+<!-- SENT AJAX - SET MASTER FOR ORDER -->
+$(document.getElementById('master')).on( "click", ".link-text-secondary", function(e) {
+       e.preventDefault();
+            $.ajax({
+                url: $(this).attr("href"),
+                type: 'PATCH',
+                data:{repairer_id:$(this).attr("title")},
+                dataType: 'json',
+                beforeSend: function () {},
+                success: function (resp) {},
+            });
 
-            let f=$('div[new="new"]');
-                    for (i = 0; i < f.length; i++) {
-                        f[i].remove();
-                    }
+});
 
-            let a=$('div[ap="ap"]');
-                    for (i = 0; i < a.length; i++) {
-                        a[i].remove();
-                    }
 
-            b.forEach((element, index ) =>  {
-            let order_ = $("#order1").clone();
-                order_.attr('id', 'order_'+element.pk);
-                order_.attr('new', 'new');
-                order_.attr('class', 'prefix text-secondary mb-2');
-                let date_order=element.time_in.substr(0, 10).split("-").reverse().join(".");
-                order_.html('<div class="mb-2 mb-3 border-bottom"><a href=../list_order/' + element.pk + ' class="prefix text-secondary ">' + date_order + ' | ' + element.text_order + '</a></div>');
-                $('#order1').after(order_);
-            })
 
-            c.forEach((element, index ) =>  {
-            let ap_ = $("#apart").clone();
-                ap_.attr('id', 'ap_');
-                ap_.attr('ap', 'ap');
-                ap_.attr('class', 'prefix text-secondary mb-2');
-                ap_.html('<div class="row mb-3 border-bottom"><div class="col-7">'+element.address_street_app + ' '+element.address_num +', '+ element.address_city + '<input type="hidden" name="form-'+index+'-apartment_id" id="id_form-'+index+'-apartment_id" value='+ element.pk +'> <br><input hidden type="text" id="id_form-'+index+'-text_order" name="form-'+index+'-text_order" placeholder="Input your job"> </div> <div class="col-5"><a class="mycolor " href="#" onclick=show_input_form(document.getElementById("id_form-'+index+'-text_order"))>add new request</a></div></div>');
-                $('#apart').after(ap_);
-            })
-         }
-    });
-})
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- SENT AJAX - CREATE NEW REQUEST FROM CLIENT WINDOW -->
 $(document.body).ready(function() {

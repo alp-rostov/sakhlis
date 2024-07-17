@@ -7,6 +7,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('', OrderCreate.as_view(), name='home'),
     path('list_order', OrderManagementSystem.as_view(), name='list_order'),
+    # path('street', OrdersOnTheStreet.as_view(), name='aaa'),
     path('list_order/<int:pk>', InvoiceCreate.as_view(), name='invoice'),
     path('list_order/update/<int:pk>', OrderUpdate.as_view(), name='update-order'),
     path('list_order/pdf/<int:order_pk>', CreateIvoicePDF, name='invoice_pdf'),
@@ -47,6 +48,8 @@ urlpatterns = [
     path('street', StreetListApi.as_view()),
     path('orderstatus/<int:pk>', OrderStatusUpdateAPI.as_view()),
     path('deleteinvoice/<int:pk>', DeleteIvoiceServiceAPI.as_view()),
+    path('masters', MastersListAPI.as_view()),
+    path('setmaster/<int:pk>', MasterUpdateAPI.as_view()),
 
     # path('create_order_by_owner', creat_order_from_owner_profile),
     # path('geo', geo_map),
