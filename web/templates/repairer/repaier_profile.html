@@ -124,15 +124,13 @@
                     <span class="text-secondary"> {{ b.text_order }}</span>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-4" id="{{ b.pk }}">
                       <img src="../media/masters/{{ b.repairer_id.pk }}.jpg"
                            class="rounded-circle" align="center" width="60"><br>
-
-
                      {% if b.repairer_id %}
                          <b class="text-secondary">{{ b.repairer_id.username }}</b>
                      {% else %}
-                        <a href="" class="link_master" data-toggle="modal" data-target="#exampleModal" title="{{ b.pk }}">Appoint a master to the order</a>
+                        <a href="" class="link_master text-secondary" data-toggle="modal" data-target="#exampleModal" title="{{ b.pk }}">Appoint a master to the order</a>
                      {% endif %}
 
                      </a>
@@ -187,7 +185,7 @@
 
 <script>
 $(document.body).on( "click", ".link_master", function(e) {
-        let b=$(this).attr('title');
+        let b=this.getAttribute('title');
         links=document.getElementById('master').querySelectorAll('a');
         links.forEach((element) => element.setAttribute('href', '/setmaster/'+b));
 
@@ -203,24 +201,17 @@ $(document.getElementById('master')).on( "click", ".link-text-secondary", functi
                 data:{repairer_id:$(this).attr("title")},
                 dataType: 'json',
                 beforeSend: function () {},
-                success: function (resp) {},
+                success: function (resp) {
+                $('#exampleModal').modal('hide');
+                const gg = '<img src="../media/masters/'+resp.repairer_id+'.jpg" class="rounded-circle" align="center" width="60">'+'<br><b class="text-secondary">'+resp.repairer_name+'</b>'
+
+                document.getElementById(resp.pk).innerHTML=gg;
+
+
+                },
             });
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <!-- SENT AJAX - CREATE NEW REQUEST FROM CLIENT WINDOW -->
@@ -278,11 +269,7 @@ $(document.body).ready(function() {
             success: function(response){
                 $('#aaa').html(" ")
                  for (i = 0; i < response.length; i++) {
-
                             $('#aaa').append('<div class="row border-bottom mb-2"><div class="col-4"><a href="'+response[i].pk+'" id="link_customer" class="text-secondary" data-toggle="modal" data-target="#exampleModal">'+response[i].customer_name+'</div><div class="col-4">  '+response[i].phone+'</div><div class="col-4"> '+response[i].telegram+'</a></div></div>');
-
-
-
                         }
                  $('#aaa').append('<a href="/clients" class="text-secondary">See more...</a>');
             }

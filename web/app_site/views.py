@@ -564,11 +564,22 @@ class OrderStatusUpdateAPI(generics.UpdateAPIView):
         queryset = OrderList.objects.all()
         return queryset
 
+
+
 class MasterUpdateAPI(generics.UpdateAPIView):
     """API for ajax request """
     serializer_class = UpdateMasterSerializer
     http_method_names = ['patch']
 
+    def update(self, request, *args, **kwargs):
+        s=super().update(request, *args, **kwargs)
+        try:
+            z=self.get_object()
+            print(z.repairer_id)
+            resp={'pk':z.pk, 'repairer_name':str(z.repairer_id),'repairer_id':str(z.repairer_id.pk) }
+            return JsonResponse(resp, safe=False)
+        except:
+            return s
     def get_queryset(self):
         queryset = OrderList.objects.all()
         return queryset
@@ -579,8 +590,6 @@ class MastersListAPI(generics.ListAPIView):
     def get_queryset(self):
         queryset = User.objects.filter(groups=3).values('pk', 'username', 'groups') #TODO refactor filter 3 is a group`s number 'repaier'
         return queryset
-
-
 
 
 def creat_order_from_owner_profile(request, **kwargs):
