@@ -38,7 +38,6 @@
 {% regroup orders by order_status as order_list %}
 
 #tab-btn-0:checked~#content-0,
-#tab-btn-1:checked~#content-1,
 
 {% for z in order_list %}
 #tab-btn-{{z.grouper}}:checked~#content-{{z.grouper}},
@@ -75,8 +74,6 @@
         <!--menu apartments-->
         <input id="tab-btn-0" checked name="tab-btn" type="radio" value="">
         <label for="tab-btn-0">Create new request</label>
-        <input id="tab-btn-1" name="tab-btn" type="radio" value="">
-        <label for="tab-btn-1">Add new request</label>
 
         {% for i in order_list %}
         <input id="tab-btn-{{ i.grouper }}" name="tab-btn" type="radio" value="">
@@ -92,10 +89,6 @@
             {% /form %}
         </div>
 
-        <div class="tab-content" id="content-1">
-                <input type="text" id="hh" name="client" value="" placeholder="Enter customer details" >
-                <div id="aaa"></div>
-        </div>
 
         {% for i in order_list %}
         <div class="tab-content" id="content-{{ i.grouper }}">
@@ -125,12 +118,16 @@
                 </div>
 
                 <div class="col-md-4" id="{{ b.pk }}">
-                      <img src="../media/masters/{{ b.repairer_id.pk }}.jpg"
-                           class="rounded-circle" align="center" width="60"><br>
                      {% if b.repairer_id %}
+                         <img src="../media/masters/{{ b.repairer_id.pk }}.jpg"
+                         class="rounded-circle" align="center" width="60"><br>
                          <b class="text-secondary">{{ b.repairer_id.username }}</b>
+                         <a href="" class="link_master text-secondary"  data-toggle="modal" data-target="#exampleModal" title="{{ b.pk }}">
+                             <i class="fas fa-pen text-secondary" style='font-size:14px'></i>
+                         </a>
+
                      {% else %}
-                        <a href="" class="link_master text-secondary" data-toggle="modal" data-target="#exampleModal" title="{{ b.pk }}">Appoint a master to the order</a>
+                        <a href="" class="link_master btn btn-sm btn-orange" data-toggle="modal" data-target="#exampleModal" title="{{ b.pk }}">Appoint a master</a>
                      {% endif %}
 
                      </a>
@@ -165,7 +162,7 @@
                             <div id="pk"></div>
                             {% for i in list_masters %}
                             <div class="col-12 text-center m-2 font-weight-bold" id="master_col">
-                                <a href="{{i.pk}}" class="link-text-secondary" title="{{i.pk}}">
+                                <a href="{{i.pk}}" class="link-text-secondary text-secondary" title="{{i.pk}}">
 
                                 <img src="../media/masters/{{ i.pk }}.jpg" class="rounded-circle border
                                 border-white" align="center" width="70">- {{ i.username }}
@@ -203,9 +200,9 @@ $(document.getElementById('master')).on( "click", ".link-text-secondary", functi
                 beforeSend: function () {},
                 success: function (resp) {
                 $('#exampleModal').modal('hide');
-                const gg = '<img src="../media/masters/'+resp.repairer_id+'.jpg" class="rounded-circle" align="center" width="60">'+'<br><b class="text-secondary">'+resp.repairer_name+'</b>'
-
-                document.getElementById(resp.pk).innerHTML=gg;
+                const con1 = '<img src="../media/masters/'+resp.repairer_id+'.jpg" class="rounded-circle" align="center" width="60">'+'<br><b class="text-secondary">'+resp.repairer_name+'</b>';
+                const con2 = ' <a href="" class="link_master text-secondary" data-toggle="modal" data-target="#exampleModal" title="'+resp.pk+'"><i class="fas fa-pen text-secondary" style="font-size:14px"></i></a>';
+                document.getElementById(resp.pk).innerHTML=con1+con2;
 
 
                 },
