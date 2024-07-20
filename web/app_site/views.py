@@ -573,7 +573,7 @@ class MasterUpdateAPI(generics.UpdateAPIView):
 
     def update(self, request, *args, **kwargs):
         s=super().update(request, *args, **kwargs)
-        try:
+        try:                      #TODO add  type`s exeption
             z=self.get_object()
             print(z.repairer_id)
             resp={'pk':z.pk, 'repairer_name':str(z.repairer_id),'repairer_id':str(z.repairer_id.pk) }
