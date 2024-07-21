@@ -104,6 +104,9 @@
                     <b class="text-secondary">
                         
                         {{ b.customer_id.customer_name }}
+                        {% if b.customer_id.user %}
+                        <i class="fas fa-check mycolor ml-1" title="Registered user"></i>
+                        {% endif %}
                     </b>
 
                     <div class="mt-2 ">

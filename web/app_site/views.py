@@ -258,7 +258,7 @@ class OrderManagementSystem(BaseClassExeption, LoginRequiredMixin, ListView):
         queryset = (super().get_queryset()
                     .select_related('customer_id', 'apartment_id', 'repairer_id')
                     .values('pk', 'time_in', 'repairer_id__pk', 'repairer_id__username',
-                            'text_order', 'customer_id__pk',
+                            'text_order', 'customer_id__pk', 'customer_id__user',
                             'customer_id__customer_name', 'customer_id__phone',
                             'customer_id__telegram', 'customer_id__whatsapp',
                             'apartment_id__link_location', 'apartment_id__address_street_app',

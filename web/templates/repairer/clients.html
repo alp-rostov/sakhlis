@@ -26,7 +26,9 @@
         <div class="col-md-6">
             <a href="{{ b.pk  }}" id="link" class="h5 " data-toggle="modal" data-target="#exampleModal">
                 {{ b.customer_name }}
-            </a>
+                        {% if b.user %}
+                        <i class="fas fa-check mycolor ml-1" title="Registered user"></i>
+                        {% endif %}            </a>
         </div>
         <div class="col-md-6">
             {{ b.profile|default_if_none:"" }}
