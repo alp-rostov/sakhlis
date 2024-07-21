@@ -3,11 +3,14 @@ from django.contrib.auth.models import Permission
 
 from .models import *
 
+
 class PersonalInvoice(admin.TabularInline):
     model = Invoice
 
+
 class PersonalApartment(admin.TabularInline):
     model = Apartment
+
 
 class PersonalOrders(admin.TabularInline):
     model = OrderList
@@ -20,16 +23,17 @@ class OrderListAdmin(admin.ModelAdmin):
     list_filter = ('repairer_id', 'customer_id')
     inlines = [PersonalInvoice]
 
+
 class FeedbackListAdmin(admin.ModelAdmin):
     list_display = ('id', 'text_feedback', 'mark')
     list_display_links = ('id', )
-
 
 
 class InvoiceAdmin(admin.ModelAdmin):
     list_display = ('service_id', 'order_id', 'quantity', 'price')
     list_display_links = ('service_id', 'order_id', 'quantity', 'price')
     list_filter = ('service_id', )
+
 
 class ServiceAdmin(admin.ModelAdmin):
     list_display = ('pk', 'name', 'type')
@@ -41,12 +45,14 @@ class StreetAdmin(admin.ModelAdmin):
     list_display = ('type_street', 'name_street')
     list_display_links = ('type_street', 'name_street')
 
+
 class AppartamentAdmin(admin.ModelAdmin):
     list_display = ('pk', 'name', 'owner', 'address_city',
                     'address_street_app','address_num', 'foto',
                     'notes')
     list_display_links = ('pk', 'name',)
     list_filter = ('owner',)
+
 
 class UserAdmin(admin.ModelAdmin):
     list_display = ('pk', 'customer_name', 'phone', 'telegram', 'whatsapp',

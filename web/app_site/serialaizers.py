@@ -14,15 +14,18 @@ class OrderStatusSerializer(serializers.ModelSerializer):
         model = OrderList
         fields = ['order_status']
 
+
 class UpdateMasterSerializer(serializers.ModelSerializer):
     class Meta:
         model = OrderList
         fields = ['repairer_id']
 
+
 class InvoiceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Invoice
         fields = '__all__'
+
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:

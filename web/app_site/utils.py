@@ -15,7 +15,7 @@ import io
 
 from .models import OrderList
 
-ww=22
+
 class Location:
     def __init__(self, instance: OrderList):
         self.instance = instance
@@ -44,7 +44,6 @@ class Location:
         return ' '
 
 
-
 def get_telegram_button(repairer: list, order_pk: int) -> types.InlineKeyboardMarkup:
     """
     creating buttons for telegram-bot message.
@@ -59,8 +58,9 @@ def get_telegram_button(repairer: list, order_pk: int) -> types.InlineKeyboardMa
         button.append(types.InlineKeyboardButton(text=i[1], url=url_))
     return keyboard.add(*button)
 
+
 class InvoiceMaker(object):
-    """ create pdf-document -> an invoice for payment """
+    """ create pdf-document -> the invoice for payment """
     def __init__(self, pdf_file: _io.BytesIO, info: OrderList):
         """ pdf_file = io.BytesIO()"""
         self.c = canvas.Canvas(pdf_file, bottomup=0)
@@ -127,7 +127,6 @@ class InvoiceMaker(object):
 
     def coord(self, x, y, unit=1) -> tuple:
         """
-        # http://stackoverflow.com/questions/4726011/wrap-text-in-a-table-reportlab
         Helper class to help position flowables in Canvas objects
         """
         x, y = x * unit, y * unit

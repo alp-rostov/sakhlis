@@ -1,14 +1,11 @@
 import json
 import logging
-from datetime import datetime
 from django.contrib.auth.models import Group
 from django.contrib.auth.views import LoginView
-from rest_framework.permissions import IsAuthenticated, IsAdminUser
 
-from .models import *
+from rest_framework.permissions import IsAdminUser
 
 from django.db import transaction
-
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.contrib.auth.decorators import login_required
 
@@ -17,7 +14,6 @@ from django.forms import modelformset_factory
 from django.shortcuts import redirect, get_object_or_404
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
-from rest_framework.renderers import JSONRenderer
 
 from .constants import *
 from .exeptions import BaseClassExeption
@@ -280,6 +276,7 @@ class OrderManagementSystem(BaseClassExeption, LoginRequiredMixin, ListView):
         context['count_orders'] = self.get_queryset().count()
         return context
 
+
 class OrdersOnTheStreet(ListView):
     model = OrderList
     context_object_name = 'order'
@@ -422,7 +419,6 @@ class UserAuthorizationView(LoginView):
         return dict_choice_url[self.request.user.groups.first().name]
 
 
-
 class UserRegisterView(CreateView):
     """ Registration of repairer """
     model = User
@@ -511,6 +507,7 @@ def client_details_json(request, **kwargs):
     else:
         return JsonResponse({'pk': 'None', })
 
+
 @login_required
 def save_list_jobs(request, **kwargs):
     """for ajax request """
@@ -524,6 +521,7 @@ def save_list_jobs(request, **kwargs):
                 instance.customer_id = UserProfile.objects.get(pk=request.POST.get('customer_id'))
                 instance.save()
     return JsonResponse(request.GET, safe=False)
+
 
 class DeleteIvoiceServiceAPI(generics.DestroyAPIView):
     """API for ajax request """
@@ -542,6 +540,7 @@ class StreetListApi(generics.ListAPIView):
     def get_queryset(self):
         queryset = StreetTbilisi.objects.filter(name_street__istartswith=self.request.GET.get('street'))[0:10]
         return queryset
+
 
 class OrderStatusUpdateAPI(generics.UpdateAPIView):
     """API for ajax request """
@@ -565,7 +564,6 @@ class OrderStatusUpdateAPI(generics.UpdateAPIView):
         return queryset
 
 
-
 class MasterUpdateAPI(generics.UpdateAPIView):
     """API for ajax request """
     serializer_class = UpdateMasterSerializer
@@ -580,13 +578,16 @@ class MasterUpdateAPI(generics.UpdateAPIView):
             return JsonResponse(resp, safe=False)
         except:
             return s
+
     def get_queryset(self):
         queryset = OrderList.objects.all()
         return queryset
 
+
 class MastersListAPI(generics.ListAPIView):
     serializer_class = UserSerializer
     http_method_names = ['get']
+
     def get_queryset(self):
         queryset = User.objects.filter(groups=3).values('pk', 'username', 'groups') #TODO refactor filter 3 is a group`s number 'repaier'
         return queryset

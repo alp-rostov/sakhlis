@@ -8,24 +8,24 @@ from .models import *
 class ApartmentForm(forms.ModelForm):
     address_city = forms.ChoiceField(
         choices=CITY_CHOICES,
-
-        widget=forms.RadioSelect(
-            attrs={"class": ""
-                   },
-        ),
+        widget=forms.RadioSelect(attrs={"class": ""},),
         initial="TB"
     )
-
     address_street_app = forms.CharField(
         label='Street',
         widget=forms.TextInput(
             attrs={"class": "form-control", 'list': 'languages', 'placeholder': "Street", 'maxlength': 40}),
         required=False
     )
-
     address_num = forms.CharField(
         label='Appartment',
-        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "App1", 'maxlength': 10}),
+        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Appartment", 'maxlength': 10}),
+        required=False
+    )
+    notes = forms.CharField(
+        label='Note(entrance, floor, apartment, door code, etc. )',
+        widget=forms.TextInput(
+            attrs={"class": "form-control", 'placeholder': "entrance, floor, door code, etc.", 'maxlength': 40}),
         required=False
     )
 
@@ -58,13 +58,8 @@ class ApartentUpdateForm(ApartmentForm, forms.ModelForm):
     type = forms.ChoiceField(
         choices=APART_CHOICES,
         label='Type of apartment',
-
-        widget=forms.Select(
-            attrs={"class": "form-control"
-                   },
-        ),
+        widget=forms.Select(attrs={"class": "form-control"},),
         initial="FL"
-
     )
 
     class Meta:
@@ -78,14 +73,12 @@ class CustomerForm(forms.ModelForm):
         widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Username", 'maxlength': 20}),
         required=True
     )
-
     profile = forms.CharField(
         label='Additional information:',
         widget=forms.TextInput(
             attrs={"class": "form-control", 'placeholder': "About company, job title, etm", 'maxlength': 1500}),
         required=False
     )
-
     city = forms.ChoiceField(
         choices=CITY_CHOICES,
 
@@ -95,13 +88,11 @@ class CustomerForm(forms.ModelForm):
         ),
         initial="TB"
     )
-
     phone = forms.CharField(
         label='Phone',
         widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Phone", 'type': 'tel', 'maxlength': 16}),
         required=False
     )
-
     telegram = forms.CharField(
         label='Telegram',
         widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Telegram", 'maxlength': 26}),
@@ -123,12 +114,10 @@ class InvoiceForm(forms.ModelForm):
         label='',
         queryset=Service.objects.all(),
         widget=forms.Select(attrs={'placeholder': "Works`s type"}),
-
     )
     quantity = forms.IntegerField(
         label='',
         widget=forms.NumberInput(attrs={'placeholder': "Quantity", "min": 1, "max": 10000, 'value': 1}),
-
     )
     price = forms.DecimalField(
         label='',
@@ -165,18 +154,15 @@ class OrderUpdateForm(forms.ModelForm):
         widget=forms.Select(attrs={"class": "md-textarea form-control", }),
         queryset=User.objects.all()
     )
-
     order_status = forms.ChoiceField(
         label='Order`s status',
         widget=forms.Select(attrs={"class": "md-textarea form-control", }),
         choices=ORDER_STATUS
     )
-
     text_order = forms.CharField(
         label='Order`s message',
         widget=forms.TextInput(attrs={"class": "md-textarea form-control",
                                       'placeholder': "Describe your problem", 'maxlength': 1500}),
-
     )
 
     class Meta:
@@ -184,46 +170,20 @@ class OrderUpdateForm(forms.ModelForm):
         fields = ('repairer_id', 'order_status', 'text_order')
 
 
-# class OwnerFormOrder(forms.ModelForm):
-#     def __init__(self, user, app):
-#         super().__init__()
-#         self.user = UserProfile.objects.get(user=user)
-#         self.app = app
-#         self.fields['apartment_id'] = forms.ModelChoiceField(label='Apartment`s customer', queryset=app,
-#                                                              empty_label="Choose address...")
-#         self.fields['customer_id'] = forms.ModelChoiceField(
-#             queryset=UserProfile.objects.filter(user=user).only('customer_name'), empty_label=None)
-#
-#     text_order = forms.CharField(
-#         label='Order`s message',
-#         widget=forms.Textarea(attrs={"class": "md-textarea form-control",
-#                                      'placeholder': "Describe problems", 'maxlength': 1500, 'rows': 5, 'cols': 10}),
-#         required=True
-#     )
-#
-#     class Meta:
-#         model = OrderList
-#         fields = ('text_order',)
-
-
 class UserRegisterForm(UserCreationForm):
     username = forms.CharField(
         label='Login',
-        widget=forms.TextInput(attrs={"class": "form-control",
-                                      'placeholder': "Login"}),
+        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Login"}),
     )
     email = forms.EmailField(
         label="Email",
-        widget=forms.EmailInput(attrs={"class": "form-control",
-                                       'placeholder': "Email"}),
+        widget=forms.EmailInput(attrs={"class": "form-control", 'placeholder': "Email"}),
     )
 
     group = forms.ChoiceField(
         choices=[('owner', 'Owner'), ('repairer', 'Repairer')],
-
         widget=forms.RadioSelect(
-            attrs={"class": ""
-                   },
+            attrs={"class": "",},
         ),
         initial="owner"
     )
@@ -233,7 +193,6 @@ class UserRegisterForm(UserCreationForm):
             attrs={"class": "form-control", 'placeholder': "Password"}, ),
     )
     password2 = forms.CharField(
-
         widget=forms.PasswordInput(
             attrs={"class": "form-control", 'placeholder': "Password"}, ),
     )

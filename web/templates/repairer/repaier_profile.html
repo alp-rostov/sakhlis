@@ -72,13 +72,13 @@
 
     <div class="tab">
         <!--menu apartments-->
-        <input id="tab-btn-0" checked name="tab-btn" type="radio" value="">
+        <input id="tab-btn-0"  name="tab-btn" type="radio" value="">
         <label for="tab-btn-0">Create new request</label>
 
         {% for i in order_list %}
-        <input id="tab-btn-{{ i.grouper }}" name="tab-btn" type="radio" value="">
+        <input id="tab-btn-{{ i.grouper }}" checked name="tab-btn" type="radio" value="">
         <label for="tab-btn-{{ i.grouper }}">{{ i.grouper|choice_tag:'status_order' }} - {{i.1|length}}</label>
-         {% endfor %}
+        {% endfor %}
 
         <!--end menu apartments-->
 

@@ -88,6 +88,7 @@ class Apartment(models.Model):
     def __str__(self):
         return f"{self.address_street_app} {self.address_num} "
 
+
 class OrderList(models.Model):
     """________________________"""
     time_in = models.DateTimeField(auto_now_add=True, verbose_name='Date of order')
@@ -110,6 +111,7 @@ class OrderList(models.Model):
     class Meta:
         verbose_name = 'Order list'
         verbose_name_plural = 'Order list'
+
 
 class ClientFeedback(models.Model):
     text_feedback = models.CharField(max_length=1500, verbose_name='Feedback', blank=True, null=True)
