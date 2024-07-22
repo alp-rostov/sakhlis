@@ -1,3 +1,10 @@
+gunicorn --env DJANGO_SETTINGS_MODULE=web.settings.dev web.wsgDi
+
+sudo lsof -t -i tcp:8000 | xargs kill -9
+
+
+
+
 POSTGRES
 sudo -u postgres psql   -  start posters terminal
 \list or \l              - to show list of database

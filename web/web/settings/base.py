@@ -13,11 +13,9 @@ import logging
 import os
 from pathlib import Path
 from django.utils.encoding import force_bytes, force_str
-from django.urls import reverse_lazy
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -27,7 +25,7 @@ SECRET_KEY = force_str(os.environ.get('SECRET_KEY'))
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = True
+# DEBUG = False
 
 # Application definition
 
@@ -44,7 +42,7 @@ INSTALLED_APPS = [
     'formtools',
     'slippers',
     'rest_framework',
-    "debug_toolbar",
+    # "debug_toolbar",
     'django_cleanup.apps.CleanupConfig',
     'app_site.apps.AppSiteConfig',
     'api.apps.ApiConfig',
@@ -60,7 +58,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
-    "debug_toolbar.middleware.DebugToolbarMiddleware",
+    # "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
 ROOT_URLCONF = 'web.urls'
@@ -148,11 +146,11 @@ LOGOUT_URL = '/logout/'
 LOGIN_REDIRECT_URL = '/list_order?work_status=RCV'
 LOGOUT_REDIRECT_URL = '/'
 
-CELERY_BROKER_URL = 'redis://localhost:6379'
-CELERY_RESULT_BACKEND = 'redis://localhost:6379'
-CELERY_ACCEPT_CONTENT = ['application/json']
-CELERY_TASK_SERIALIZER = 'json'
-CELERY_RESULT_SERIALIZER = 'json'
+# CELERY_BROKER_URL = 'redis://localhost:6379'
+# CELERY_RESULT_BACKEND = 'redis://localhost:6379'
+# CELERY_ACCEPT_CONTENT = ['application/json']
+# CELERY_TASK_SERIALIZER = 'json'
+# CELERY_RESULT_SERIALIZER = 'json'
 
 
 # Celery Configuration Options
@@ -164,12 +162,11 @@ INTERNAL_IPS = [
     "127.0.0.1",
 ]
 
-
-EMAIL_HOST = 'smtp.mail.ru'  # адрес сервера почты для всех один и тот же
-EMAIL_PORT = 465  # порт smtp сервера тоже одинаковый
-EMAIL_HOST_USER = 'alp-rostov'  # ваше имя пользователя, например, если ваша почта user@yandex.ru, то сюда надо писать user, иными словами, это всё то что идёт до собаки
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')  # пароль от почты
-EMAIL_USE_SSL = True  # Яндекс использует ssl, подробнее о том, что это, почитайте в дополнительных источниках, но включать его здесь обязательно
+# EMAIL_HOST = 'smtp.mail.ru'  # адрес сервера почты для всех один и тот же
+# EMAIL_PORT = 465  # порт smtp сервера тоже одинаковый
+# EMAIL_HOST_USER = 'alp-rostov'  # ваше имя пользователя, например, если ваша почта user@yandex.ru, то сюда надо писать user, иными словами, это всё то что идёт до собаки
+# EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')  # пароль от почты
+# EMAIL_USE_SSL = True  # Яндекс использует ssl, подробнее о том, что это, почитайте в дополнительных источниках, но включать его здесь обязательно
 
 DEFAULT_CHARSET = 'utf-8'
 

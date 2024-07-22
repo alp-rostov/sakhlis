@@ -4,16 +4,14 @@ import os
 import sys
 import dotenv
 import pathlib
-# from web.settings.settings import DEBUG
 
 
 def main():
     """Run administrative tasks."""
-    # if settings.DEBUG:
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'web.settings.development')
-    print("Manage: Django loaded up in setting mode : Development")
-
-# else:
+    # if DEBUG:
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'web.settings.dev')
+    #     print("Manage: Django loaded up in setting mode : Development")
+    # else:
     #     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'web.settings.production')
     #     print("Manage: Django loaded up in setting mode : Production")
     #     print(os.environ.get('DJANGO_SETTINGS_MODULE'))
