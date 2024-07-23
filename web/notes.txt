@@ -1,4 +1,4 @@
-gunicorn --env DJANGO_SETTINGS_MODULE=web.settings.dev web.wsgDi
+gunicorn --env DJANGO_SETTINGS_MODULE=web.settings.dev web.wsgi
 
 sudo lsof -t -i tcp:8000 | xargs kill -9
 
