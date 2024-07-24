@@ -1,3 +1,22 @@
+pip freeze > requirements.txt  - create requirements
+pip install -r requirements.txt  - Install from the given requirements file..
+pip list
+
+
+puthon -m venv [dir]
+source [dir]/bin/activate
+
+
+
+
+
+
+
+
+
+
+
+
 gunicorn --env DJANGO_SETTINGS_MODULE=web.settings.dev web.wsgi
 
 sudo lsof -t -i tcp:8000 | xargs kill -9
