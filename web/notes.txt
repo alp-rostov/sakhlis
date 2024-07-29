@@ -7,17 +7,13 @@ puthon -m venv [dir]
 source [dir]/bin/activate
 
 
+sudo dnf install nginx
+sudo systemctl start nginx
 
 
+gunicorn --env DJANGO_SETTINGS_MODULE=web.settings.dev -c gunicorn.conf.py web.wsgi
 
-
-
-
-
-
-
-
-gunicorn --env DJANGO_SETTINGS_MODULE=web.settings.dev web.wsgi
+-c gunicorn.conf.py
 
 sudo lsof -t -i tcp:8000 | xargs kill -9
 

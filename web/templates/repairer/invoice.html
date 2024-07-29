@@ -11,7 +11,6 @@
     .hidden{
     display:none
     }
-
 </style>
 
 <div class="container">
@@ -28,9 +27,13 @@
 
     <div class="row border-bottom mb-2" >
         <div class="col-md-4 mt-2" >
-            <h4 class="mycolor"><b>Order № {{ info.id }}</b></h4>
+            <h4 class="mycolor">
+                <b>Order № {{ info.id }}</b>
+            </h4>
             {{ info.time_in }}<br>
-            <button id="orderstatus" class="btn btn-sm btn-orange">{{ info.order_status|choice_tag:'status_order' }}</button>
+            <button id="orderstatus" class="btn btn-sm btn-orange">
+                {{ info.order_status|choice_tag:'status_order' }}
+            </button>
             <br>
             <a href="{% url 'delete-order' info.pk %}" id="delete_{{ info.pk }}" class="mycolor" title="Delete order">
                 <i class="fas fa-trash text-secondary" style='font-size:14px'> delete</i>
@@ -38,8 +41,6 @@
             <a href="{% url 'update-order' info.pk %}" id="update_{{ info.pk }}" class="text-secondary" title="Update order">
                 <i class="fas fa-pen text-secondary" style='font-size:14px'> edit</i>
             </a>
-
-
         </div>
 
         <div class="col-md-4 text-secondary mt-2" >
@@ -52,35 +53,36 @@
                     <i class="fas fa-pen text-secondary" style='font-size:14px'> edit</i>
                 </a>
             </h5>
-
-              <a href="tel:{{ info.customer_id.phone }}" title="Телефон" class="fas fa-phone text fa-sm mr-1 btn">
+            <a href="tel:{{ info.customer_id.phone }}" title="Телефон" class="fas fa-phone text fa-sm mr-1 btn">
             </a>
-             <a href="https://t.me/{{ info.customer_id.telegram|cut:'@' }}" title="Telegram" class="fas fa-paper-plane text fa-sm mr-1 btn">
+            <a href="https://t.me/{{ info.customer_id.telegram|cut:'@' }}" title="Telegram" class="fas fa-paper-plane text fa-sm mr-1 btn">
             </a>
              <a href="https://wa.me/{{ info.customer_id.whatsapp }}" class="fa fab fa-whatsapp-square btn prefix text-secondary mt-2"
                             title="Whatsapp" aria-hidden="true" >
-                        </a>
-
+             </a>
        </div>
 
-        <div class="col-md-4 text-secondary mt-2" >
+        <div class="col-md-4 text-secondary mb-2" >
             <h4>
                 <b>Handyman</b>
             </h4>
-                <a href="" class="text-secondary" title="handyman">
-                        <img src="../media/masters/{% if info.repairer_id %}{{info.repairer_id.pk}}{% else %}unknown_person{% endif %}.jpg"
-                               class="rounded-circle" align="center" width="60"><br>
-                             <b>{{ info.repairer_id|default_if_none:'unknown handyman'}}</b>
-                         </a>
-
+                <a href="" class="text-secondary" title="handyman" id="handyman">
+                    <img src="../media/masters/{% if info.repairer_id %}{{info.repairer_id.pk}}{% else %}unknown_person{% endif %}.jpg"
+                    class="rounded-circle" align="center" width="60"><br>
+                    {% if info.repairer_id %}
+                    <b>{{ info.repairer_id.username}}</b></a>
+                    <a href="" class="link_master text-secondary"  data-toggle="modal" data-target="#exampleModal" title="{{ info.pk }}">
+                        <i class="fas fa-pen text-secondary" style='font-size:14px'></i>
+                    </a>
+                    {% else %}
+                    <a href="" class="link_master btn btn-sm btn-orange" data-toggle="modal" data-target="#exampleModal" title="{{ info.pk }}">
+                        Appoint a master
+                    </a>
+                    {% endif %}
         </div>
+    </div>
 
-
-</div>
-
-<div>
-
-    <div class="row">
+    <div class="row mb-2">
         <div class="col-md-4 text-secondary">
             <i class="fas fa-home prefix text-secondary mb-2"> </i>
             {{ info.apartment_id.address_num|default_if_none:""  }} {{ info.apartment_id.address_street_app }}, {{ info.apartment_id.address_city|choice_tag:'city' }}
@@ -93,7 +95,7 @@
             <i class="fas fa-paper prefix text-secondary mb-2"></i> Whatsapp{{ info.customer_id.whatsapp }}
         </div>
 
-       <div class="col-md-8 ">
+       <div class="col-md-8 " style='font-size:22px'>
            {{ info.text_order }}
        </div>
 
@@ -135,20 +137,17 @@
 <tr class="table-warning" id="total_">
     <th>
     </th>
-
     <th class="h5-responsive" >
     </th>
-
     <th class="h5-responsive ">
         Total:
     </th>
-
     <th class="h5-responsive" id="total">
     </th>
-
     <th>
     </th>
 </tr>
+
 <script>
     function sum_total() {
         let sum_total=0;
@@ -184,7 +183,36 @@
     </div>
 
 </form>
+
+
+{% #master_modal_window list_masters_=list_masters %}
+{% /master_modal_window %}
+
+
 <script>
+$(document.body).on( "click", ".link_master", function(e) {
+        let b=this.getAttribute('title');
+        links=document.getElementById('master').querySelectorAll('a');
+        links.forEach((element) => element.setAttribute('href', '/setmaster/'+b));
+});
+
+<!-- SENT AJAX - SET MASTER FOR ORDER -->
+$(document.getElementById('master')).on( "click", ".link-text-secondary", function(e) {
+       e.preventDefault();
+            $.ajax({
+                url: $(this).attr("href"),
+                type: 'PATCH',
+                data:{repairer_id:$(this).attr("title")},
+                dataType: 'json',
+                beforeSend: function () {},
+                success: function (resp) {
+                $('#exampleModal').modal('hide');
+                const con1 = '<img src="../media/masters/'+resp.repairer_id+'.jpg" class="rounded-circle" align="center" width="60">'+'<br><b class="text-secondary">'+resp.repairer_name+'</b>';
+                const con2 = ' <a href="" class="link_master text-secondary" data-toggle="modal" data-target="#exampleModal" title="'+resp.pk+'"><i class="fas fa-pen text-secondary" style="font-size:14px"></i></a>';
+                document.getElementById('handyman').innerHTML=con1;
+                },
+            });
+});
 
 
 <!-- SENT AJAX - CREATE NEW REQUEST FROM CLIENT WINDOW -->

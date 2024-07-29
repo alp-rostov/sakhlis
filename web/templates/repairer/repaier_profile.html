@@ -143,45 +143,8 @@
     </div>
 </div>
 
- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-body  mx-3">
-                <div id="contact" class="form-container">
-                    <fieldset>
-                        <div id="message">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">X</span>
-                        </button>
-                        </div>
-                    </fieldset>
-                        <div class="row">
-                            <div class="col-12 text-center">
-                                <h4 id="" class="mycolor font-weight-bold">List of masters</h4>
-                            </div>
-                        </div>
-
-                        <div class="row" id="master">
-                            <div id="pk"></div>
-                            {% for i in list_masters %}
-                            <div class="col-12 text-center m-2 font-weight-bold" id="master_col">
-                                <a href="{{i.pk}}" class="link-text-secondary text-secondary" title="{{i.pk}}">
-
-                                <img src="../media/masters/{{ i.pk }}.jpg" class="rounded-circle border
-                                border-white" align="center" width="70">- {{ i.username }}
-                                </a>
-                            </div>
-                            {% endfor %}
-                        </div>
-
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
+{% #master_modal_window list_masters_=list_masters %}
+{% /master_modal_window %}
 
 <script>
 $(document.body).on( "click", ".link_master", function(e) {

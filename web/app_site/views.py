@@ -112,6 +112,8 @@ class InvoiceCreate(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMix
         InvoiceFormSet = modelformset_factory(Invoice, form=InvoiceForm, extra=0)
         formset = InvoiceFormSet(queryset=Invoice.objects.none())
         context['form'] = formset
+        context['list_masters'] = User.objects.filter(groups=3).values('pk', 'username',
+                                                                       'groups')  # TODO refactor filter 3 is a group`s number 'repaier'
         return context
 
     def post(self, formset, **kwargs):
