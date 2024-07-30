@@ -63,7 +63,7 @@ a:hover, a:focus, a:active {
  }
  
  a {
-	 color: fefefe;
+	 color: #fefefe;
  }
 
 section {
@@ -145,7 +145,7 @@ header h1 {
 
 a {
     text-decoration: none!important;
-	color: fefefe;
+	color: #fefefe;
 }
 
 .btn-orange-tel {
@@ -612,3 +612,26 @@ footer hr {
         margin: 13.5rem 0;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'formtools',
     'slippers',
     'rest_framework',
-    # "debug_toolbar",
     'django_cleanup.apps.CleanupConfig',
     'app_site.apps.AppSiteConfig',
     'api.apps.ApiConfig',
@@ -58,7 +57,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
-    # "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
 ROOT_URLCONF = 'web.urls'
@@ -80,7 +78,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'web.wsgi.application'
-
 
 
 # Password validation
@@ -128,7 +125,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
-# STATIC_ROOT='stat1/'
 STATICFILES_DIRS = [
     BASE_DIR / "static/",
 ]
@@ -161,12 +157,6 @@ CELERY_TASK_TIME_LIMIT = 30 * 60
 INTERNAL_IPS = [
     "127.0.0.1",
 ]
-
-# EMAIL_HOST = 'smtp.mail.ru'  # адрес сервера почты для всех один и тот же
-# EMAIL_PORT = 465  # порт smtp сервера тоже одинаковый
-# EMAIL_HOST_USER = 'alp-rostov'  # ваше имя пользователя, например, если ваша почта user@yandex.ru, то сюда надо писать user, иными словами, это всё то что идёт до собаки
-# EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')  # пароль от почты
-# EMAIL_USE_SSL = True  # Яндекс использует ssl, подробнее о том, что это, почитайте в дополнительных источниках, но включать его здесь обязательно
 
 DEFAULT_CHARSET = 'utf-8'
 

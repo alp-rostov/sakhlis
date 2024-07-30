@@ -11,7 +11,7 @@
         /* demo functions */
         $("a[rel='next']").click(function(e) {
             e.preventDefault();
-            var to = $(this).parent().parent("section").next().attr("id");
+            let to = $(this).parent().parent("section").next().attr("id");
             $.mPageScroll2id("scrollTo", to);
         });
 
