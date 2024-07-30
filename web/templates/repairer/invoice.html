@@ -15,7 +15,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-12" align="center">
+        <div class="col-md-12">
         {% if prev.pk %}
             <a href="{% url 'invoice' prev.pk %}" class="btn"><</a>
         {% endif %}
@@ -68,7 +68,7 @@
             </h4>
                 <a href="" class="text-secondary" title="handyman" id="handyman">
                     <img src="../media/masters/{% if info.repairer_id %}{{info.repairer_id.pk}}{% else %}unknown_person{% endif %}.jpg"
-                    class="rounded-circle" align="center" width="60"><br>
+                    class="rounded-circle" width="60" alt="master"><br>
                     {% if info.repairer_id %}
                     <b>{{ info.repairer_id.username}}</b></a>
                     <a href="" class="link_master text-secondary"  data-toggle="modal" data-target="#exampleModal" title="{{ info.pk }}">
@@ -207,7 +207,7 @@ $(document.getElementById('master')).on( "click", ".link-text-secondary", functi
                 beforeSend: function () {},
                 success: function (resp) {
                 $('#exampleModal').modal('hide');
-                const con1 = '<img src="../media/masters/'+resp.repairer_id+'.jpg" class="rounded-circle" align="center" width="60">'+'<br><b class="text-secondary">'+resp.repairer_name+'</b>';
+                const con1 = '<img src="../media/masters/'+resp.repairer_id+'.jpg" alt="" class="rounded-circle" align="center" width="60">'+'<br><b class="text-secondary">'+resp.repairer_name+'</b>';
                 const con2 = ' <a href="" class="link_master text-secondary" data-toggle="modal" data-target="#exampleModal" title="'+resp.pk+'"><i class="fas fa-pen text-secondary" style="font-size:14px"></i></a>';
                 document.getElementById('handyman').innerHTML=con1;
                 },
@@ -224,7 +224,7 @@ $(document.body).on( "click", ".link-delete", function(e) {
             type: 'DELETE',
             dataType: 'json',
             beforeSend: function () {},
-            success: function (resp) {
+            success: function () {
                 $this.parents(".form_text").fadeOut("slow", function(){
                     $this.parents(".form_text").remove();
                     sum_total()

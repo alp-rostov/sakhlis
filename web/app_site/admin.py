@@ -48,7 +48,7 @@ class StreetAdmin(admin.ModelAdmin):
 
 class AppartamentAdmin(admin.ModelAdmin):
     list_display = ('pk', 'name', 'owner', 'address_city',
-                    'address_street_app','address_num', 'foto',
+                    'address_street_app', 'address_num', 'foto',
                     'notes')
     list_display_links = ('pk', 'name',)
     list_filter = ('owner',)
@@ -61,7 +61,6 @@ class UserAdmin(admin.ModelAdmin):
     list_filter = ('telegram',)
     search_fields = ('telegram',)
     inlines = [PersonalOrders]
-
 
 
 admin.site.register(UserProfile, UserAdmin)

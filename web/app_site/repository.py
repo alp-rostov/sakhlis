@@ -1,4 +1,3 @@
-from django.contrib.auth.models import User
 from django.db.models import Count, Sum, F, Prefetch, QuerySet
 from app_site.models import *
 
@@ -21,7 +20,7 @@ class DataFromUserProfile:
             .values('customer_id') \
             .filter(customer_id__gt=0) \
             # .annotate(count=Count(F('pk')))
-        return (self.model \
+        return (self.model
                 .filter(pk__in=list_orders)
                 .values('pk', 'customer_name', 'profile', 'foto')
                 .order_by('customer_name'))
@@ -32,13 +31,13 @@ class DataFromOrderList:
     def __init__(self, model=OrderList.objects):
         self.model = model
 
-    def get_number_of_orders_from_OrderList(self, repairer: User) -> int:
+    def get_number_of_orders_from_orderList(self, repairer: User) -> int:
         return self.model \
             .values('repairer_id') \
             .annotate(count=Count('repairer_id')) \
             .filter(repairer_id=repairer)[0]['count']
 
-    def get_data_from_OrderList_all(self, repairer: User) -> QuerySet:
+    def get_data_from_orderList_all(self, repairer: User) -> QuerySet:
         return self.model \
             .filter(repairer_id=repairer) \
             .select_related('apartment_id', 'customer_id') \
@@ -56,8 +55,8 @@ class DataFromOrderList:
                 .select_related('apartment_id', 'customer_id', 'repairer_id') \
                 .order_by("order_status", "-pk")
 
-    def get_next_number_for_paginator_from_OrderList(self, pk: int,
-                                                     repairer: User = None) -> OrderList:  # TODO refactor repeatable code
+    def get_next_number_for_paginator_from_OrderList(self, pk: int,             # TODO refactor repeatable code
+                                                     repairer: User = None) -> OrderList:
         if repairer:
             return self.model \
                 .filter(pk__gt=pk, repairer_id=repairer) \
@@ -69,8 +68,8 @@ class DataFromOrderList:
                 .values('pk') \
                 .first()
 
-    def get_previous_number_for_paginator_from_OrderList(self, pk: int,
-                                                         repairer: User = None) -> OrderList:  # TODO refactor repeatable code
+    def get_previous_number_for_paginator_from_OrderList(self, pk: int,         # TODO refactor repeatable code
+                                                         repairer: User = None) -> OrderList:
         if repairer:
             return self.model \
                 .filter(pk__lt=pk, repairer_id=repairer) \
@@ -122,7 +121,7 @@ class DataFromInvoice:
             .annotate(sum=Sum(F('price') * F('quantity'))) \
             .filter(order_id__repairer_id=repairer)[0]['sum']
 
-    def get_data_from_Invoice_with_amount(self, order_id_: int):
+    def get_data_from_invoice_with_amount(self, order_id_: int):
         return self.model \
             .filter(order_id=order_id_) \
             .select_related('service_id') \

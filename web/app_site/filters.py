@@ -1,6 +1,5 @@
 
-from django_filters import FilterSet, CharFilter, DateFilter, ChoiceFilter, MultipleChoiceFilter, \
-    TypedMultipleChoiceFilter, ModelChoiceFilter
+from django_filters import FilterSet, CharFilter, DateFilter, ChoiceFilter, ModelChoiceFilter
 from .models import *
 from django import forms
 
@@ -8,13 +7,13 @@ from django import forms
 class OrderFilter(FilterSet):
     time_in_sence = DateFilter(
         field_name="time_in__date",
-        widget=forms.DateInput(attrs={'type': 'date', 'class': 'mr-3',}),
+        widget=forms.DateInput(attrs={'type': 'date', 'class': 'mr-3', }),
         label='From',
         lookup_expr='gte'
     )
     time_in_until = DateFilter(
         field_name="time_in__date",
-        widget=forms.DateInput(attrs={'type': 'date', 'class': 'mr-3',}),
+        widget=forms.DateInput(attrs={'type': 'date', 'class': 'mr-3', }),
         label='To',
         lookup_expr='lte'
     )

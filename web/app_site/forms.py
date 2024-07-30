@@ -1,6 +1,5 @@
 from django.contrib.auth.forms import UserCreationForm
 from django import forms
-from django.forms import ChoiceField
 
 from .models import *
 
@@ -183,7 +182,7 @@ class UserRegisterForm(UserCreationForm):
     group = forms.ChoiceField(
         choices=[('owner', 'Owner'), ('repairer', 'Repairer')],
         widget=forms.RadioSelect(
-            attrs={"class": "",},
+            attrs={"class": "", },
         ),
         initial="owner"
     )

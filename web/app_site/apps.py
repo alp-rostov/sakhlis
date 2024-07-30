@@ -7,6 +7,4 @@ class AppSiteConfig(AppConfig):
     verbose_name = 'Система учета заказов'
 
     def ready(self):
-        import app_site.signals
-
-
+        pass

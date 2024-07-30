@@ -43,7 +43,7 @@ class ApartmentList(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMix
 
     def get_queryset(self):
         queryset = super().get_queryset()
-        if self.request.GET.get('address_city') != None:
+        if self.request.GET.get('address_city') is not None:
             queryset = Apartment.objects.order_by('address_street_app').only('pk', 'address_city', 'address_street_app',
                                                                              'address_num').all()
         self.filterset = ApartmentFilter(self.request.GET, queryset)
@@ -72,7 +72,7 @@ class Clients(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, Li
 
     def get_queryset(self):
         queryset = super().get_queryset()
-        if self.request.GET.get('customer_name') != None:
+        if self.request.GET.get('customer_name') is not None:
             queryset = UserProfile.objects.order_by('customer_name').all()
             # queryset = DataFromUserProfile().get_clients_of_orders_from_UserProfile(self.request.user)
         self.filterset = ClientFilter(self.request.GET, queryset)
@@ -86,7 +86,7 @@ class ClientsUpdate(PermissionRequiredMixin, LoginRequiredMixin, UpdateView):
     permission_required = PERMISSION_FOR_REPAIER
 
     def get_success_url(self):
-        dict_choice_url={'repairer': '/list_order/'+self.request.GET.get('pk'), 'owner': '/owner/apartment'}
+        dict_choice_url = {'repairer': '/list_order/'+self.request.GET.get('pk'), 'owner': '/owner/apartment'}
         return dict_choice_url[self.request.user.groups.first().name]
 
 
@@ -103,7 +103,7 @@ class InvoiceCreate(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMix
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data()
-        context['invoice'] = DataFromInvoice().get_data_from_Invoice_with_amount(order_id_=self.object.pk)
+        context['invoice'] = DataFromInvoice().get_data_from_invoice_with_amount(order_id_=self.object.pk)
         context['type_work'] = WORK_CHOICES
         context['next'] = DataFromOrderList() \
             .get_next_number_for_paginator_from_OrderList(pk=self.object.pk)
@@ -111,9 +111,9 @@ class InvoiceCreate(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMix
             .get_previous_number_for_paginator_from_OrderList(pk=self.object.pk)
         InvoiceFormSet = modelformset_factory(Invoice, form=InvoiceForm, extra=0)
         formset = InvoiceFormSet(queryset=Invoice.objects.none())
-        context['form'] = formset
+        context['form'] = formset                          # TODO refactor filter 3 is a group`s number 'repaier'
         context['list_masters'] = User.objects.filter(groups=3).values('pk', 'username',
-                                                                       'groups')  # TODO refactor filter 3 is a group`s number 'repaier'
+                                                                       'groups')
         return context
 
     def post(self, formset, **kwargs):
@@ -177,9 +177,6 @@ class OrderCreate(BaseClassExeption, CreateView):
                     app.save()
                     form.instance.apartment_id = app
                     form.instance.customer_id = customer
-                    # form.instance.reapier_id = 'SND'
-                    # form.instance.repairer_id = self.request.user
-
             else:
                 customer = OrderCustomerForm(self.request.POST).save()
                 app = ApartmentForm(self.request.POST).save(commit=False)
@@ -200,7 +197,7 @@ class OrderDelete(BaseClassExeption, LoginRequiredMixin, DeleteView):
     template_name = 'order_delete.html'
 
     def get_success_url(self):
-        dict_choice_url={'repairer': '/list_order', 'owner': '/owner/apartment'}
+        dict_choice_url = {'repairer': '/list_order', 'owner': '/owner/apartment'}
         return dict_choice_url[self.request.user.groups.first().name]
 
 
@@ -243,7 +240,7 @@ class OwnerInvoice(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixi
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data()
-        context['invoice'] = DataFromInvoice().get_data_from_Invoice_with_amount(order_id_=self.object.pk)
+        context['invoice'] = DataFromInvoice().get_data_from_invoice_with_amount(order_id_=self.object.pk)
 
         return context
 
@@ -284,7 +281,6 @@ class OrdersOnTheStreet(ListView):
     context_object_name = 'order'
     template_name = 'repairer/order_list.html'
 
-
     def get_queryset(self):
         queryset = (super().get_queryset()
                     .select_related('customer_id', 'apartment_id', 'repairer_id')
@@ -296,8 +292,6 @@ class OrdersOnTheStreet(ListView):
                             'apartment_id__link_location', 'apartment_id__address_street_app',
                             'apartment_id__address_city', 'apartment_id__address_num'
                             ))
-
-
         return queryset
 
 
@@ -357,8 +351,8 @@ class RepairerDetailInformation(BaseClassExeption, PermissionRequiredMixin, Logi
         context = super().get_context_data(**kwargs)
         context['form_order'] = OrderForm
         context['form_appart'] = ApartmentForm
-        context['form_customer'] = CustomerForm
-        context['list_masters'] = User.objects.filter(groups=3).values('pk', 'username', 'groups') #TODO refactor filter 3 is a group`s number 'repaier'
+        context['form_customer'] = CustomerForm               # TODO refactor filter 3 is a group`s number 'repaier'
+        context['list_masters'] = User.objects.filter(groups=3).values('pk', 'username', 'groups')
         context['orders'] = DataFromOrderList().get_data_from_OrderList_with_order_status(repairer=self.request.user,
                                                                                           status_of_order=['SND',
                                                                                                            'RCV'])
@@ -530,6 +524,7 @@ class DeleteIvoiceServiceAPI(generics.DestroyAPIView):
     serializer_class = InvoiceSerializer
     http_method_names = ['delete']
     permission_classes = (IsAdminUser,)
+
     def get_queryset(self):
         queryset = Invoice.objects.all()
         return queryset
@@ -539,6 +534,7 @@ class StreetListApi(generics.ListAPIView):
     """API for ajax request """
     serializer_class = StreetModelSerializer
     http_method_names = ['get']
+
     def get_queryset(self):
         queryset = StreetTbilisi.objects.filter(name_street__istartswith=self.request.GET.get('street'))[0:10]
         return queryset
@@ -551,10 +547,10 @@ class OrderStatusUpdateAPI(generics.UpdateAPIView):
     permission_classes = (IsAdminUser,)
 
     def get_object(self):
-        b=super().get_object()
-        f=orderstat.index(b.order_status)
+        b = super().get_object()
+        f = orderstat.index(b.order_status)
         try:
-            index_list=orderstat[f+1]
+            index_list = orderstat[f+1]
         except IndexError:
             index_list = orderstat[0]
         b.order_status = index_list
@@ -572,13 +568,12 @@ class MasterUpdateAPI(generics.UpdateAPIView):
     http_method_names = ['patch']
 
     def update(self, request, *args, **kwargs):
-        s=super().update(request, *args, **kwargs)
-        try:                      #TODO add  type`s exeption
-            z=self.get_object()
-            print(z.repairer_id)
-            resp={'pk':z.pk, 'repairer_name':str(z.repairer_id),'repairer_id':str(z.repairer_id.pk) }
+        s = super().update(request, *args, **kwargs)
+        try:
+            z = self.get_object()
+            resp = {'pk': z.pk, 'repairer_name': str(z.repairer_id), 'repairer_id': str(z.repairer_id.pk)}
             return JsonResponse(resp, safe=False)
-        except:
+        except Exception as e:       # TODO add  type`s exeption
             return s
 
     def get_queryset(self):
@@ -590,8 +585,8 @@ class MastersListAPI(generics.ListAPIView):
     serializer_class = UserSerializer
     http_method_names = ['get']
 
-    def get_queryset(self):
-        queryset = User.objects.filter(groups=3).values('pk', 'username', 'groups') #TODO refactor filter 3 is a group`s number 'repaier'
+    def get_queryset(self):                 # TODO refactor filter 3 is a group`s number 'repaier'
+        queryset = User.objects.filter(groups=3).values('pk', 'username', 'groups')
         return queryset
 
 

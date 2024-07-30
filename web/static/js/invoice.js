@@ -89,7 +89,6 @@ $('#id_form').submit(function(e) {
             if (b!=='error') {
                 let c = $('div[new="new"]');
                 for (i = 0; i < c.length; i++) {
-                    let form_name = c[i]['id'];
                     let tr = $('tr.hidden').clone();
                     tr.find('td[name="service_id"]').html(b[i].service_id_name);
                     tr.find('td[name="quantity"]').html(b[i].quantity);

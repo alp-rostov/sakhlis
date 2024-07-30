@@ -56,7 +56,7 @@ ORDER_STATUS = [
     ('END', 'Request finished'),
 ]
 
-orderstat=['SND', 'RCV', 'END']
+orderstat = ['SND', 'RCV', 'END']
 
 ORDER_STATUS_ = [
     # ('BEG', 'New requests'),
@@ -65,10 +65,7 @@ ORDER_STATUS_ = [
     ('END', 'Job completed '),
 ]
 
-
-
 ORDER_STATUS_FOR_CHECK = ['SND', 'RCV', 'WRK', 'END']
-
 
 MONTH = [
     (1, 'January'),
@@ -87,7 +84,5 @@ MONTH = [
 ]
 
 
-MONTH_ = ['','Jan', 'Feb', 'Mch', 'Aprl', 'May',
-    'Jun', 'Jul', 'Aug', 'Sept', 'Oct',
-    'Nov', 'Dec']
-
+MONTH_ = ['', 'Jan', 'Feb', 'Mch', 'Aprl', 'May',
+          'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']

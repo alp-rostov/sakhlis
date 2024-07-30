@@ -6,11 +6,11 @@
 
 {% block subbody %}
 <div class="row">
-    <div class="col-lg-4 col-md-4 col-sm-12" align="right">
+    <div class="col-lg-4 col-md-4 col-sm-12">
       <img src="../media/masters/{{ request.user.pk|default_if_none:'images/none' }}.jpg"
-           class="rounded-circle border border-5 border-white" align="center" width="100">
+           class="rounded-circle border border-5 border-white"  width="100" alt="master">
     </div>
-    <div class="col-lg-8 col-md-8 col-sm-12" align="left" >
+    <div class="col-lg-8 col-md-8 col-sm-12">
      <a href="" ><b>{{ request.user }} </b></a>
     </div>
 
@@ -116,7 +116,7 @@
                 <div class="col-md-4" id="{{ b.pk }}">
                      {% if b.repairer_id %}
                          <img src="../media/masters/{{ b.repairer_id.pk }}.jpg"
-                         class="rounded-circle" align="center" width="60"><br>
+                         class="rounded-circle" width="60" alt="master"><br>
                          <b class="text-secondary">{{ b.repairer_id.username }}</b>
                          <a href="" class="link_master text-secondary"  data-toggle="modal" data-target="#exampleModal" title="{{ b.pk }}">
                              <i class="fas fa-pen text-secondary" style='font-size:14px'></i>
@@ -125,8 +125,6 @@
                      {% else %}
                         <a href="" class="link_master btn btn-sm btn-orange" data-toggle="modal" data-target="#exampleModal" title="{{ b.pk }}">Appoint a master</a>
                      {% endif %}
-
-                     </a>
                 </div>
             </div>
             {% endfor %}
@@ -140,9 +138,9 @@
 {% /master_modal_window %}
 
 <script>
-$(document.body).on( "click", ".link_master", function(e) {
+$(document.body).on( "click", ".link_master", function() {
         let b=this.getAttribute('title');
-        links=document.getElementById('master').querySelectorAll('a');
+        let links=document.getElementById('master').querySelectorAll('a');
         links.forEach((element) => element.setAttribute('href', '/setmaster/'+b));
 
 });
@@ -159,11 +157,9 @@ $(document.getElementById('master')).on( "click", ".link-text-secondary", functi
                 beforeSend: function () {},
                 success: function (resp) {
                 $('#exampleModal').modal('hide');
-                const con1 = '<img src="../media/masters/'+resp.repairer_id+'.jpg" class="rounded-circle" align="center" width="60">'+'<br><b class="text-secondary">'+resp.repairer_name+'</b>';
+                const con1 = '<img src="../media/masters/'+resp.repairer_id+'.jpg" class="rounded-circle" width="60" alt="master">'+'<br><b class="text-secondary">'+resp.repairer_name+'</b>';
                 const con2 = ' <a href="" class="link_master text-secondary" data-toggle="modal" data-target="#exampleModal" title="'+resp.pk+'"><i class="fas fa-pen text-secondary" style="font-size:14px"></i></a>';
                 document.getElementById(resp.pk).innerHTML=con1+con2;
-
-
                 },
             });
 
@@ -180,7 +176,7 @@ $(document.body).ready(function() {
                 data: $(this).serialize(),
                 dataType: 'text',
                 beforeSend: function () {$("#form").html('<h3>Sending...</h3>');},
-                success: function (resp) {window.location.href = '/list_order?work_status=SND'},
+                success: function () {window.location.href = '/list_order?work_status=SND'},
             });
     });
 });
@@ -201,7 +197,7 @@ $(document.body).ready(function() {
                 beforeSend: function () {$("#form").html('<h3>Отправляется...</h3>');},
                 success: function (resp) {
 
-                    if (JSON.parse(resp).auth==true) {
+                    if (JSON.parse(resp).auth===true) {
                         window.location.href = '/list_order/'+JSON.parse(resp).pk;
                     }
                     else {
@@ -224,7 +220,7 @@ $(document.body).ready(function() {
             dataType: 'json',
             success: function(response){
                 $('#aaa').html(" ")
-                 for (i = 0; i < response.length; i++) {
+                 for (let i = 0; i < response.length; i++) {
                             $('#aaa').append('<div class="row border-bottom mb-2"><div class="col-4"><a href="'+response[i].pk+'" id="link_customer" class="text-secondary" data-toggle="modal" data-target="#exampleModal">'+response[i].customer_name+'</div><div class="col-4">  '+response[i].phone+'</div><div class="col-4"> '+response[i].telegram+'</a></div></div>');
                         }
                  $('#aaa').append('<a href="/clients" class="text-secondary">See more...</a>');
@@ -232,10 +228,6 @@ $(document.body).ready(function() {
         });
     });
 
-function show_input_form(input) {
-    if (input.hidden == false)  {input.hidden = true;}
 
-    else {input.hidden = false;}
-}
 </script>
 {% endblock body %}

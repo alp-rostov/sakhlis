@@ -3,7 +3,7 @@ from app_site.forms import *
 from app_site.forms import OrderForm, InvoiceForm
 
 from app_site.models import OrderList, Invoice
-from sakhlis.web.app_site.tests.tests_models import Settings
+from app_site.tests.tests_models import Settings
 
 
 class FormTest(Settings):
@@ -12,7 +12,7 @@ class FormTest(Settings):
         count_of_order_before = OrderList.objects.count()
         not_valid_data = {'text_order': '', 'customer_name': '', 'customer_phone': '', 'address_city': ''}
         form = OrderForm(self.data)
-        b=form.save()
+        b = form.save()
 
         count_of_order_after = OrderList.objects.count()
         form_check_valid = OrderForm(not_valid_data)
@@ -22,8 +22,9 @@ class FormTest(Settings):
 
     def test_invoiceform(self):
 
-        data = {'service_id': self.serv, 'order_id': self.ord, 'quantity_type': 'SV', 'quantity': 4, 'price':50}
-        not_valid_data = {'service_id': self.serv, 'order_id': self.ord, 'quantity_type': 'SV', 'quantity': 'one', 'price':'ten'}
+        data = {'service_id': self.serv, 'order_id': self.ord, 'quantity_type': 'SV', 'quantity': 4, 'price': 50}
+        not_valid_data = {'service_id': self.serv, 'order_id': self.ord, 'quantity_type': 'SV',
+                          'quantity': 'one', 'price': 'ten'}
 
         count_of_invoice_before = Invoice.objects.count()
         form = InvoiceForm(data)

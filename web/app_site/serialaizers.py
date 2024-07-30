@@ -1,5 +1,5 @@
-from rest_framework import serializers, generics
-from app_site.models import UserProfile, StreetTbilisi, OrderList, Invoice
+from rest_framework import serializers
+from app_site.models import StreetTbilisi, OrderList, Invoice
 from django.contrib.auth.models import User
 
 
@@ -30,4 +30,4 @@ class InvoiceSerializer(serializers.ModelSerializer):
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['pk','username', ]
+        fields = ['pk', 'username',]

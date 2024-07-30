@@ -1,13 +1,12 @@
-from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
-from kombu.exceptions import OperationalError
 
 from .models import OrderList, UserProfile
 from .tasks import send_order_information,  task_save_location_
 from .utils import Location
 
 from django.contrib.auth.models import Group
+
 
 @receiver(post_save, sender=OrderList)
 def send_post_new_order(instance, created, **kwargs):
@@ -25,4 +24,3 @@ def send_post_new_order(instance, created, **kwargs):
         # my_group = Group.objects.get(name='repairer')
         # my_group.user_set.add(instance)
         # # send_email_after_registration.apply_async([instance.pk], countdown=5, expires=20)
-
