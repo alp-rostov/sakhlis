@@ -149,7 +149,7 @@ $(document).on('click', '#link', function (e) {
                 order_.attr('id', 'order_'+element.pk);
                 order_.attr('new', 'new');
                 order_.attr('class', 'prefix text-secondary mb-2');
-                let date_order=element.time_in.substr(0, 10).split("-").reverse().join(".");
+                let date_order=element.time_in.substring(0, 10).split("-").reverse().join(".");
                 order_.html('<div class="mb-2 mb-3 border-bottom"><a href=../list_order/' + element.pk + ' class="prefix text-secondary ">' + date_order + ' | ' + element.text_order + '</a></div>');
                 $('#order1').after(order_);
             })
@@ -192,7 +192,7 @@ $(document.body).ready(function() {
 });
 
 function show_input_form(input) {
-if (input.hidden == false)  {input.hidden = true;}
+if (input.hidden === false)  {input.hidden = true;}
 
 else {input.hidden = false;}
 

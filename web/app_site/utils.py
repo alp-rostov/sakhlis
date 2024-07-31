@@ -23,8 +23,9 @@ class Location:
     def set_location(self):
         geolocator = Nominatim(user_agent="app_site")
         location = geolocator.geocode({'city': 'Тбилиси',
-                                   'street': str(self.instance.address_street_app)+', '+str(self.instance.address_num)},
-                                    addressdetails=True)
+                                       'street': str(self.instance.address_street_app) + ', ' + str(
+                                           self.instance.address_num)},
+                                      addressdetails=True)
         if location:
             return str(location.longitude), str(location.latitude)
         return None
@@ -39,7 +40,7 @@ class Location:
             return None
 
     def print_yandex_location(self):
-        if self.instance.location_longitude != None:
+        if self.instance.location_longitude is not None:
             return f'https://yandex.ru/maps/?pt={self.instance.location_longitude},{self.instance.location_latitude}&z=18&l=map'
         return ' '
 
@@ -61,6 +62,7 @@ def get_telegram_button(repairer: list, order_pk: int) -> types.InlineKeyboardMa
 
 class InvoiceMaker(object):
     """ create pdf-document -> the invoice for payment """
+
     def __init__(self, pdf_file: _io.BytesIO, info: OrderList):
         """ pdf_file = io.BytesIO()"""
         self.c = canvas.Canvas(pdf_file, bottomup=0)
@@ -78,7 +80,8 @@ class InvoiceMaker(object):
         # create a table containing company information
         data = [
             ['My Company: ', ' Gotsin S.A.', 'Customer company:', self.info.customer_name],
-            ['Adress Company: ', ' Tbilisi, Zuraba Pataridze.', 'Customer Adress:', self.info.address_street_app + ', ' + self.info.address_num],
+            ['Adress Company: ', ' Tbilisi, Zuraba Pataridze.', 'Customer Adress:',
+             self.info.address_street_app + ', ' + self.info.address_num],
             ['Code Company: ', ' 302265920', 'Customer code:', self.info.customer_code],
             ['Phone:', '+995598259119', 'Phone:', self.info.customer_phone],
             ['Bank:', 'Credo Bank'],
@@ -154,11 +157,12 @@ class InvoiceMaker(object):
 
 class Graph:
     """ create a graph"""
+
     def __init__(self,
                  queryset,
                  name_X: str,
                  data_Y: str,
-                 help_dict: dict = None,          # help_dict is a WORK_CHOICES_ or MONTH_ or None
+                 help_dict: dict = None,  # help_dict is a WORK_CHOICES_ or MONTH_ or None
                  name_graf: str = '',
                  name_legend: str = ''):
 
@@ -183,7 +187,6 @@ class Graph:
                     labels.append(_[self.name_X])
                     data.append(_[self.data_Y])
 
-
             return labels, data
 
         self.labels, self.data = get_data_for_graph(queryset)
@@ -198,7 +201,7 @@ class Graph:
                 self.data = self.data[0:4]
                 self.data.append(a)
             else:
-                explode=explode[0:len(self.labels)]
+                explode = explode[0:len(self.labels)]
             self.ax.pie(self.data, labels=self.labels, autopct='%1.1f%%', explode=explode)
 
             warnings.simplefilter("ignore", UserWarning)
@@ -223,7 +226,7 @@ class Graph:
             self.fig = plt.gcf()
 
         except Exception:
-            self.fig=''
+            self.fig = ''
 
         return self.sent(self.fig)
 
@@ -234,5 +237,3 @@ class Graph:
             buf.seek(0)
             string = base64.b64encode(buf.read())
             return urllib.parse.quote(string)
-
-

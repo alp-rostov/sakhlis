@@ -192,7 +192,7 @@
 <script>
 $(document.body).on( "click", ".link_master", function(e) {
         let b=this.getAttribute('title');
-        links=document.getElementById('master').querySelectorAll('a');
+        let links=document.getElementById('master').querySelectorAll('a');
         links.forEach((element) => element.setAttribute('href', '/setmaster/'+b));
 });
 

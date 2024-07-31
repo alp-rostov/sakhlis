@@ -16,7 +16,7 @@
 {% block body %}
 {% regroup clients by customer_name|first as name %}
 {% for i in name %}
-<div  class="row" id="">
+<div  class="row" id="-">
     <div class="col-md-12 mycolor">
         <br><br><h4>{{ i.grouper }}</h4><hr>
     </div>
@@ -61,12 +61,12 @@ $(document).on('click', '#link', function (e) {
             document.getElementById("foto1").src ='../media/'+resp.foto;
             document.getElementById("customer_id").value =resp.pk;
 
-            b=JSON.parse(resp.orders);
-            c=JSON.parse(resp.apartment);
+            let b=JSON.parse(resp.orders);
+            let c=JSON.parse(resp.apartment);
 
 
             let f=$('div[new="new"]');
-                    for (i = 0; i < f.length; i++) {
+                    for (let i = 0; i < f.length; i++) {
                         f[i].remove();
                     }
 
@@ -75,13 +75,13 @@ $(document).on('click', '#link', function (e) {
                         a[i].remove();
                     }
 
-            b.forEach((element, index ) =>  {
+            b.forEach((element) =>  {
             let order_ = $("#order1").clone();
                 order_.attr('id', 'order_'+element.pk);
                 order_.attr('new', 'new');
                 order_.attr('class', 'prefix text-secondary mb-2');
-                let date_order=element.time_in.substr(0, 10).split("-").reverse().join(".");
-                order_.html('<div class="mb-2 mb-3 border-bottom"><a href=../list_order/' + element.pk + ' class="prefix text-secondary ">' + date_order + ' | ' + element.text_order + '</a></div>');
+                let date_order=element.time_in.substring(0, 10).split("-").reverse().join(".");
+                order_.html('<div class="mb-2 mb-3 border-bottom"><a href=../list_order/' + element.pk + ' class="text-secondary ">' + date_order + ' | ' + element.text_order + '</a></div>');
                 $('#order1').after(order_);
             })
 
@@ -116,16 +116,14 @@ $(document.body).ready(function() {
                 data: $(this).serialize(),
                 dataType: 'text',
                 beforeSend: function () {$("#form").html('<h3>Sending...</h3>');},
-                success: function (resp) {window.location.href = '/list_order?order_status=SND'},
+                success: function () {window.location.href = '/list_order?order_status=SND'},
             });
 
     });
 });
 
 function show_input_form(input) {
-if (input.hidden == false)  {input.hidden = true;}
-
-else {input.hidden = false;}
+input.hidden = input.hidden === false;
 
 }
 </script>

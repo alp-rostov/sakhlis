@@ -457,7 +457,7 @@ def CreateIvoicePDF(request, **kwargs):
 
 
 @login_required
-def OrderAddRepaier(request):
+def OrderAddRepaier(request):   # TODO refactor with serializers
     """Add the repairer to order using telegram-bot"""
     order = get_object_or_404(OrderList, pk=request.GET['pk_order'])
     repaier = get_object_or_404(User, pk=request.GET['pk_repairer'])
@@ -466,9 +466,9 @@ def OrderAddRepaier(request):
             order.repairer_id = repaier
             order.order_status = 'SND'
             order.save()
-            return HttpResponseRedirect(reverse('update', args=(order.pk,)))
+            return redirect('home', args=(order.pk,))  # TODO настроить сообщение, что ремонтник уже указан
         else:
-            return redirect('home')  # TODO настроить сообщение, что ремонтник уже указан
+            return redirect('home')
 
 
 @login_required

@@ -22,7 +22,6 @@ def main():
     else:
         print('no .env found')
 
-
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:

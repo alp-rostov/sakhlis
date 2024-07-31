@@ -282,7 +282,7 @@ $(document.body).ready(function() {
                         order_list.find('#order_number').html('<b>New order №'+info.pk+'</b>');
                         order_list.find('#order_number').attr('href', '/owner-invoice/'+info.pk);
                         order_list.find('#link-delete').attr('href', '../invoice/delete-order/'+info.pk);
-                        let date_order=info.date.substr(0, 10).split("-").reverse().join(".");
+                        let date_order=info.date.substring(0, 10).split("-").reverse().join(".");
                         order_list.find('#time_in').html(date_order);
                         order_list.find('#text').html(info.text);
                         order_list.attr('class','mt-2 mb-3 pb-2 border-bottom');
@@ -299,8 +299,8 @@ $(document.body).ready(function() {
 
 <!--SHOW ELEMENTS -->
 function viewdiv(id) {
-    var el = document.getElementById(id);
-    var link = document.getElementById('toggleLink'+id);
+    let el = document.getElementById(id);
+    let link = document.getElementById('toggleLink'+id);
     if (el.style.display == "block") {
         el.style.display = "none";
         link.innerText = link.getAttribute('data-text-hide');

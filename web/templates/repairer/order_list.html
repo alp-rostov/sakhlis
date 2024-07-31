@@ -163,7 +163,7 @@ $(document).on('click', '#link', function (e) {
                 order_.attr('id', 'order_'+element.pk);
                 order_.attr('new', 'new');
                 order_.attr('class', 'prefix text-secondary mb-2');
-                let date_order=element.time_in.substr(0, 10).split("-").reverse().join(".");
+                let date_order=element.time_in.substring(0, 10).split("-").reverse().join(".");
                 order_.html('<div class="mb-2 mb-3 border-bottom"><a href=../list_order/' + element.pk + ' class="prefix text-secondary ">' + date_order + ' | ' + element.text_order + '</a></div>');
                 $('#order1').after(order_);
             })
