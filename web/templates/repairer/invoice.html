@@ -53,13 +53,19 @@
                     <i class="fas fa-pen text-secondary" style='font-size:14px'> edit</i>
                 </a>
             </h5>
+            {% if info.customer_id.phone%}
             <a href="tel:{{ info.customer_id.phone }}" title="Телефон" class="fas fa-phone text fa-sm mr-1 btn">
             </a>
+            {% endif %}
+            {% if info.customer_id.telegram %}
             <a href="https://t.me/{{ info.customer_id.telegram|cut:'@' }}" title="Telegram" class="fas fa-paper-plane text fa-sm mr-1 btn">
             </a>
-             <a href="https://wa.me/{{ info.customer_id.whatsapp }}" class="fa fab fa-whatsapp-square btn prefix text-secondary mt-2"
+            {% endif %}
+            {% if info.customer_id.whatsapp %}
+            <a href="https://wa.me/{{ info.customer_id.whatsapp }}" class="fa fab fa-whatsapp-square btn prefix text-secondary mt-2"
                             title="Whatsapp" aria-hidden="true" >
-             </a>
+            </a>
+            {% endif %}
        </div>
 
         <div class="col-md-4 text-secondary mb-2" >
@@ -70,9 +76,9 @@
                     <img src="../media/masters/{% if info.repairer_id %}{{info.repairer_id.pk}}{% else %}unknown_person{% endif %}.jpg"
                     class="rounded-circle" width="60" alt="master"><br>
                     {% if info.repairer_id %}
-                    <b>{{ info.repairer_id.username}}</b></a>
+                    <b>{{ info.repairer_id.username}}</b></a> |
                     <a href="" class="link_master text-secondary"  data-toggle="modal" data-target="#exampleModal" title="{{ info.pk }}">
-                        <i class="fas fa-pen text-secondary" style='font-size:14px'></i>
+                        <i class="fas fa-pen text-secondary" style='font-size:14px'>edit</i>
                     </a>
                     {% else %}
                     <a href="" class="link_master btn btn-sm btn-orange" data-toggle="modal" data-target="#exampleModal" title="{{ info.pk }}">
@@ -190,7 +196,7 @@
 
 
 <script>
-$(document.body).on( "click", ".link_master", function(e) {
+$(document.body).on( "click", ".link_master", function() {
         let b=this.getAttribute('title');
         let links=document.getElementById('master').querySelectorAll('a');
         links.forEach((element) => element.setAttribute('href', '/setmaster/'+b));
