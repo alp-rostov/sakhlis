@@ -1,0 +1,37 @@
+WARNING:django.request:Unauthorized: /orderstatus/1803
+WARNING:django.request:Unauthorized: /deleteinvoice/2106
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /owner-invoice/pdf/1094
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/web/manage.py changed, reloading.
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/undefined
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg

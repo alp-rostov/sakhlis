@@ -1,6 +1,5 @@
 
 /* ================   using in invoice for add information about works  ============= */
-/* ================   using in invoice for add information about works  ============= */
 
 function show_type_work(form) {
             $(form.nextElementSibling).fadeIn("slow", function(){
@@ -21,11 +20,11 @@ $(document.body).on( "click", ".type_work", function(e) {
                     let nametype='#'+idname.attr('name')+'_type_work';
 
                     $(idname).empty();
-                    for (i = 0; i < type.length; i++) {
+                    for (let i = 0; i < type.length; i++) {
                         $(idname).append('<option value='+type[i].id+'>'+type[i].name+'</option>');
                     }
 
-                    idh=$(nametype);
+                    let idh=$(nametype);
                     idh.fadeOut("slow", function(){   });
 
         }

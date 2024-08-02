@@ -8,13 +8,7 @@ import pathlib
 
 def main():
     """Run administrative tasks."""
-    # if DEBUG:
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'web.settings.dev')
-    #     print("Manage: Django loaded up in setting mode : Development")
-    # else:
-    #     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'web.settings.production')
-    #     print("Manage: Django loaded up in setting mode : Production")
-    #     print(os.environ.get('DJANGO_SETTINGS_MODULE'))
 
     DOT_INV_PASS = pathlib.Path() / 'env/.env'
     if DOT_INV_PASS.exists():

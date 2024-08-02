@@ -47,36 +47,29 @@
 <script>
 $(document).on('click', '#link', function (e) {
     e.preventDefault();
-
-         $.ajax({
-            url: "../client?pk="+$(this).attr("href") ,
-            type: "GET",
-            dataType: 'json',
-
-            success: function(resp){
+    $.ajax({
+        url: "../client?pk="+$(this).attr("href") ,
+        type: "GET",
+        dataType: 'json',
+        success: function(resp){
             document.getElementById("name").innerHTML =resp.name;
             document.getElementById("customer_phone").innerHTML =' '+resp.phone;
             document.getElementById("customer_telegram").innerHTML = ' '+resp.telegram;
             document.getElementById("profile").innerHTML = resp.profile;
             document.getElementById("foto1").src ='../media/'+resp.foto;
             document.getElementById("customer_id").value =resp.pk;
-
             let b=JSON.parse(resp.orders);
             let c=JSON.parse(resp.apartment);
-
-
             let f=$('div[new="new"]');
-                    for (let i = 0; i < f.length; i++) {
-                        f[i].remove();
-                    }
-
+            for (let i = 0; i < f.length; i++) {
+                f[i].remove();
+            }
             let a=$('div[ap="ap"]');
-                    for (i = 0; i < a.length; i++) {
-                        a[i].remove();
-                    }
-
+            for (i = 0; i < a.length; i++) {
+                a[i].remove();
+            }
             b.forEach((element) =>  {
-            let order_ = $("#order1").clone();
+                let order_ = $("#order1").clone();
                 order_.attr('id', 'order_'+element.pk);
                 order_.attr('new', 'new');
                 order_.attr('class', 'prefix text-secondary mb-2');
@@ -84,54 +77,36 @@ $(document).on('click', '#link', function (e) {
                 order_.html('<div class="mb-2 mb-3 border-bottom"><a href=../list_order/' + element.pk + ' class="text-secondary ">' + date_order + ' | ' + element.text_order + '</a></div>');
                 $('#order1').after(order_);
             })
-
             c.forEach((element, index ) =>  {
-            let ap_ = $("#apart").clone();
+                let ap_ = $("#apart").clone();
                 ap_.attr('id', 'ap_');
                 ap_.attr('ap', 'ap');
                 ap_.attr('class', 'prefix text-secondary mb-2');
                 ap_.html('<div class="row mb-3 border-bottom"><div class="col-9">'+element.address_street_app + ' '+element.address_num +', '+ element.address_city + '<input type="hidden" name="form-'+index+'-apartment_id" id="id_form-'+index+'-apartment_id" value='+ element.pk +'> <br><input hidden type="text" id="id_form-'+index+'-text_order" name="form-'+index+'-text_order" placeholder="Input your job"> </div> <div class="col-3"><a class="mycolor" href="#" onclick=show_input_form(document.getElementById("id_form-'+index+'-text_order"))>add job</a></div></div>');
                 $('#apart').after(ap_);
             })
-
-         }
+        }
     });
-
-
-
-
-
 })
 
-
 $(document.body).ready(function() {
-
     $('#form').submit(function(e) {
         e.preventDefault();
-
-
-            $.ajax({
-                url: '../save_list',
-                type: 'POST',
-                data: $(this).serialize(),
-                dataType: 'text',
-                beforeSend: function () {$("#form").html('<h3>Sending...</h3>');},
-                success: function () {window.location.href = '/list_order?order_status=SND'},
-            });
-
+        $.ajax({
+            url: '../save_list',
+            type: 'POST',
+            data: $(this).serialize(),
+            dataType: 'text',
+            beforeSend: function () {$("#form").html('<h3>Sending...</h3>');},
+            success: function () {window.location.href = '/list_order?order_status=SND'},
+        });
     });
 });
 
 function show_input_form(input) {
 input.hidden = input.hidden === false;
-
 }
 </script>
-
-
-
-
-
 
 {% endblock body %}
 

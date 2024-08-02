@@ -197,68 +197,64 @@
 
 <script>
 $(document.body).on( "click", ".link_master", function() {
-        let b=this.getAttribute('title');
-        let links=document.getElementById('master').querySelectorAll('a');
-        links.forEach((element) => element.setAttribute('href', '/setmaster/'+b));
+    let b=this.getAttribute('title');
+    let links=document.getElementById('master').querySelectorAll('a');
+    links.forEach((element) => element.setAttribute('href', '/setmaster/'+b));
 });
 
 <!-- SENT AJAX - SET MASTER FOR ORDER -->
 $(document.getElementById('master')).on( "click", ".link-text-secondary", function(e) {
-       e.preventDefault();
-            $.ajax({
-                url: $(this).attr("href"),
-                type: 'PATCH',
-                data:{repairer_id:$(this).attr("title")},
-                dataType: 'json',
-                beforeSend: function () {},
-                success: function (resp) {
-                $('#exampleModal').modal('hide');
-                const con1 = '<img src="../media/masters/'+resp.repairer_id+'.jpg" alt="" class="rounded-circle" align="center" width="60">'+'<br><b class="text-secondary">'+resp.repairer_name+'</b>';
-                const con2 = ' <a href="" class="link_master text-secondary" data-toggle="modal" data-target="#exampleModal" title="'+resp.pk+'"><i class="fas fa-pen text-secondary" style="font-size:14px"></i></a>';
-                document.getElementById('handyman').innerHTML=con1;
-                },
-            });
+    e.preventDefault();
+    $.ajax({
+        url: $(this).attr("href"),
+        type: 'PATCH',
+        data:{repairer_id:$(this).attr("title")},
+        dataType: 'json',
+        beforeSend: function () {},
+        success: function (resp) {
+            $('#exampleModal').modal('hide');
+            const con1 = '<img src="../media/masters/'+resp.repairer_id+'.jpg" alt="" class="rounded-circle" align="center" width="60">'+'<br><b class="text-secondary">'+resp.repairer_name+'</b>';
+            const con2 = ' <a href="" class="link_master text-secondary" data-toggle="modal" data-target="#exampleModal" title="'+resp.pk+'"><i class="fas fa-pen text-secondary" style="font-size:14px"></i></a>';
+            document.getElementById('handyman').innerHTML=con1;
+        },
+    });
 });
-
 
 <!-- SENT AJAX - CREATE NEW REQUEST FROM CLIENT WINDOW -->
 $(document.body).on( "click", ".link-delete", function(e) {
-        e.preventDefault();
-        let $this=$(this);
-        $.ajax({
-            url: $this.attr("href"),
-            type: 'DELETE',
-            dataType: 'json',
-            beforeSend: function () {},
-            success: function () {
-                $this.parents(".form_text").fadeOut("slow", function(){
-                    $this.parents(".form_text").remove();
-                    sum_total()
-                });
-            },
-        });
-
-
+    e.preventDefault();
+    let $this=$(this);
+    $.ajax({
+        url: $this.attr("href"),
+        type: 'DELETE',
+        dataType: 'json',
+        beforeSend: function () {},
+        success: function () {
+            $this.parents(".form_text").fadeOut("slow", function(){
+            $this.parents(".form_text").remove();
+            sum_total()
+            });
+        },
+    });
 });
 
 
 <!-- SENT AJAX - CREATE NEW REQUEST FROM CLIENT WINDOW -->
 $(document).on('click', '#orderstatus', function (e) {
-        e.preventDefault();
-            $.ajax({
-                url: '../orderstatus/{{ info.pk }}',
-                type: 'PATCH',
-                data: $(this).serialize(),
-                dataType: 'text',
-                beforeSend: function () {},
-                success: function (resp) {
-                    const elem = document.getElementById("orderstatus");
-                    const dict={'SND':'New job', 'RCV':'Job in progress', 'END':'Job completed' };
-                    let key=JSON.parse(resp).order_status;
-                    elem.innerHTML = dict[key];
-                },
-            });
-
+    e.preventDefault();
+        $.ajax({
+            url: '../orderstatus/{{ info.pk }}',
+            type: 'PATCH',
+            data: $(this).serialize(),
+            dataType: 'text',
+            beforeSend: function () {},
+            success: function (resp) {
+                const elem = document.getElementById("orderstatus");
+                const dict={'SND':'New job', 'RCV':'Job in progress', 'END':'Job completed' };
+                let key=JSON.parse(resp).order_status;
+                elem.innerHTML = dict[key];
+            },
+        });
 });
 </script>
 
@@ -266,6 +262,5 @@ $(document).on('click', '#orderstatus', function (e) {
 
 {% block js %}
     <script src="{% static 'js/custom.js' %}"></script>
-
     <script src="{% static 'js/invoice.js' %}"></script>
 {% endblock js %}
