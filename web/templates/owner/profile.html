@@ -6,13 +6,13 @@
 
 {% block subbody %}
 <div class="row">
-    <div class="col-lg-4 col-md-4 col-sm-12" align="right">
+    <div class="col-lg-4 col-md-4 col-sm-12">
       <img src="../media/{{ prof.foto|default_if_none:'images/none.jpg' }}"
            class="rounded-circle border border-5 border-white" align="center" width="60">
     </div>
-    <div class="col-lg-8 col-md-8 col-sm-12" align="left" >
+    <div class="col-lg-8 col-md-8 col-sm-12" >
      <a href="" ><b>{{ user.username }} </b></a><br>
-        <a href=""><u><h6>{{prof.profile}}</u></a>
+        <a href=""><u><h6>{{prof.profile}}</h6></u></a>
     </div>
 
 </div>
@@ -21,83 +21,21 @@
 
 {% block body %}
 
-<style>
-  .tab {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .tab > input[type="radio"] {
-    display: none;
-  }
-
-  .tab-content {
-    display: none;
-    width: 100%;
-    margin-top: 1rem;
-  }
-
-{% for z in apartments %}
-  #tab-btn-{{z.pk}}:checked~#content-{{z.pk}},
-{% endfor %}
-
-#tab-btn-0:checked~#content-0
-  {
-    display: block;
-  }
-
-  .tab > label {
-    display: block;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
-    text-decoration: none;
-    color: #ca5718;
-    border-radius: 0.375rem;
-    background: 0 0;
-    border: solid;
-    border-width: 1px;
-    margin-left: 10px;
-  }
-
-  .tab > input[type="radio"]:checked + label {
-    cursor: default;
-    color: #fff;
-    background-color: #ca5718;
-  }
-</style>
-
-<style>
-    .hidden{
-    display:none
-    }
-
-</style>
-<!--empty div for add order -->
-<div class="hidden" id="empty-form" >
-    <a href="" id="link-delete" class="mycolor" title="Delete">
-    <i class="fas fa-trash text-secondary"></i>
-    </a>
-    <a href="" class="mycolor" id="order_number">
-    <b>Order № </b>
-    <U>in progress</U>
-    </a>
-    | <span id="time_in"></span> |
-    <a href="" id="repaier" class="text-secondary" data-toggle="modal" data-target="#exampleModal"></a><br>
-    <div class="mt-2" id="text"></div>
-</div>
-<!-- end empty div for add order -->
 
 
 <div class="container">
-    <a href="{% url 'apartment_create' %}" class="btn btn-sm btn-orange ml-0 mb-2 p-2" >
-        new apartment
-    </a>
     <div class="tab">
+
+
+
+
+
+
+
+
         <!--menu apartments-->
         <input checked id="tab-btn-{{ apartments.0.pk }}" name="tab-btn" type="radio" value="">
         <label for="tab-btn-{{ apartments.0.pk }}">{{apartments.0.address_street_app}} {{apartments.0.address_num|default_if_none:''}}</label>
-
         {% for b in apartments|slice:"1:" %}
         <input id="tab-btn-{{ b.pk }}" name="tab-btn" type="radio" value="">
         <label for="tab-btn-{{ b.pk }}">{{b.address_street_app}} {{b.address_num|default_if_none:''}}</label>

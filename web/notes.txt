@@ -1,19 +1,39 @@
+Работа с пакетами
 pip freeze > requirements.txt  - create requirements
 pip install -r requirements.txt  - Install from the given requirements file..
 pip list
+_________________________________
 
-
+Установка и активация виртуального окружения
 puthon -m venv [dir]
 source [dir]/bin/activate
+___________________
 
-
+Установка и настройка nginx
 sudo dnf install nginx
 sudo systemctl start nginx
 
+nano /etc/nginx/sites-available/default
 
-gunicorn --env DJANGO_SETTINGS_MODULE=web.settings.dev -c gunicorn.conf.py web.wsgi
 
--c gunicorn.conf.py
+
+____________________________________
+
+
+Настройка и запуск гуникорна
+gunicorn_conf.py
+    import multiprocessing
+    bind = "127.0.0.1:8000"
+    workers = multiprocessing.cpu_count() * 2 + 1
+    limit_request_fields = 100
+    limit_request_field_size = 8190
+    raw_env = 'DJANGO_SETTINGS_MODULE=web.settings.dev'
+старт гуникорна
+gunicorn -c gunicorn_conf.py web.wsgi
+
+_____________
+
+
 
 sudo lsof -t -i tcp:8000 | xargs kill -9
 

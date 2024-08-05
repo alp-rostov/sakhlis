@@ -9,10 +9,9 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-import logging
 import os
 from pathlib import Path
-from django.utils.encoding import force_bytes, force_str
+from django.utils.encoding import force_str
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
@@ -125,9 +124,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [
-    BASE_DIR / "static/",
-]
+
+STATIC_ROOT = os.path.join(BASE_DIR, '/static/')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
@@ -161,4 +159,3 @@ INTERNAL_IPS = [
 DEFAULT_CHARSET = 'utf-8'
 
 handler404 = 'app_site.views.Error404.as_view()'
-

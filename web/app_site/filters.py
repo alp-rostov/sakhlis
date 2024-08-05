@@ -22,11 +22,14 @@ class OrderFilter(FilterSet):
         label='Order_status',
         lookup_expr='icontains',
         choices=ORDER_STATUS,
+        empty_label='Choose order status'
+
     )
     repairer_id = ModelChoiceFilter(
         queryset=User.objects.all(),
         field_name='repairer_id',
-        label='Master'
+        label='Master',
+        empty_label='Choose master'
 
     )
 

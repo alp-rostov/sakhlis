@@ -1,0 +1,216 @@
+[2024-08-04 07:47:54 -0400] [17877] [INFO] Starting gunicorn 22.0.0
+[2024-08-04 07:47:54 -0400] [17877] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:47:54 -0400] [17877] [ERROR] Retrying in 1 second.
+[2024-08-04 07:47:55 -0400] [17877] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:47:55 -0400] [17877] [ERROR] Retrying in 1 second.
+[2024-08-04 07:47:56 -0400] [17877] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:47:56 -0400] [17877] [ERROR] Retrying in 1 second.
+[2024-08-04 07:47:57 -0400] [17877] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:47:57 -0400] [17877] [ERROR] Retrying in 1 second.
+[2024-08-04 07:47:58 -0400] [17877] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:47:58 -0400] [17877] [ERROR] Retrying in 1 second.
+[2024-08-04 07:47:59 -0400] [17877] [ERROR] Can't connect to ('127.0.0.1', 8000)
+[2024-08-04 07:48:02 -0400] [17879] [INFO] Starting gunicorn 22.0.0
+[2024-08-04 07:48:02 -0400] [17879] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:48:02 -0400] [17879] [ERROR] Retrying in 1 second.
+[2024-08-04 07:48:03 -0400] [17879] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:48:03 -0400] [17879] [ERROR] Retrying in 1 second.
+[2024-08-04 07:48:04 -0400] [17879] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:48:04 -0400] [17879] [ERROR] Retrying in 1 second.
+[2024-08-04 07:48:05 -0400] [17879] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:48:05 -0400] [17879] [ERROR] Retrying in 1 second.
+[2024-08-04 07:48:06 -0400] [17879] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:48:06 -0400] [17879] [ERROR] Retrying in 1 second.
+[2024-08-04 07:48:07 -0400] [17879] [ERROR] Can't connect to ('127.0.0.1', 8000)
+[2024-08-04 07:48:09 -0400] [17884] [INFO] Starting gunicorn 22.0.0
+[2024-08-04 07:48:09 -0400] [17884] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:48:09 -0400] [17884] [ERROR] Retrying in 1 second.
+[2024-08-04 07:48:10 -0400] [17884] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:48:10 -0400] [17884] [ERROR] Retrying in 1 second.
+[2024-08-04 07:48:11 -0400] [17884] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:48:11 -0400] [17884] [ERROR] Retrying in 1 second.
+[2024-08-04 07:48:12 -0400] [17884] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:48:12 -0400] [17884] [ERROR] Retrying in 1 second.
+[2024-08-04 07:48:13 -0400] [17884] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:48:13 -0400] [17884] [ERROR] Retrying in 1 second.
+[2024-08-04 07:48:14 -0400] [17884] [ERROR] Can't connect to ('127.0.0.1', 8000)
+[2024-08-04 07:48:16 -0400] [17885] [INFO] Starting gunicorn 22.0.0
+[2024-08-04 07:48:16 -0400] [17885] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:48:16 -0400] [17885] [ERROR] Retrying in 1 second.
+[2024-08-04 07:48:17 -0400] [17885] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:48:17 -0400] [17885] [ERROR] Retrying in 1 second.
+[2024-08-04 07:48:18 -0400] [17885] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:48:18 -0400] [17885] [ERROR] Retrying in 1 second.
+[2024-08-04 07:48:19 -0400] [17885] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:48:19 -0400] [17885] [ERROR] Retrying in 1 second.
+[2024-08-04 07:48:20 -0400] [17885] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:48:20 -0400] [17885] [ERROR] Retrying in 1 second.
+[2024-08-04 07:48:21 -0400] [17885] [ERROR] Can't connect to ('127.0.0.1', 8000)
+[2024-08-04 07:48:24 -0400] [17886] [INFO] Starting gunicorn 22.0.0
+[2024-08-04 07:48:24 -0400] [17886] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:48:24 -0400] [17886] [ERROR] Retrying in 1 second.
+[2024-08-04 07:48:25 -0400] [17886] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:48:25 -0400] [17886] [ERROR] Retrying in 1 second.
+[2024-08-04 07:48:26 -0400] [17886] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:48:26 -0400] [17886] [ERROR] Retrying in 1 second.
+[2024-08-04 07:48:27 -0400] [17886] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:48:27 -0400] [17886] [ERROR] Retrying in 1 second.
+[2024-08-04 07:48:28 -0400] [17886] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:48:28 -0400] [17886] [ERROR] Retrying in 1 second.
+[2024-08-04 07:48:29 -0400] [17886] [ERROR] Can't connect to ('127.0.0.1', 8000)
+[2024-08-04 07:48:31 -0400] [17888] [INFO] Starting gunicorn 22.0.0
+[2024-08-04 07:48:31 -0400] [17888] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:48:31 -0400] [17888] [ERROR] Retrying in 1 second.
+[2024-08-04 07:48:32 -0400] [17888] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:48:32 -0400] [17888] [ERROR] Retrying in 1 second.
+[2024-08-04 07:48:33 -0400] [17888] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:48:33 -0400] [17888] [ERROR] Retrying in 1 second.
+[2024-08-04 07:48:34 -0400] [17888] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:48:34 -0400] [17888] [ERROR] Retrying in 1 second.
+[2024-08-04 07:48:35 -0400] [17888] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:48:35 -0400] [17888] [ERROR] Retrying in 1 second.
+[2024-08-04 07:48:36 -0400] [17888] [ERROR] Can't connect to ('127.0.0.1', 8000)
+[2024-08-04 07:48:38 -0400] [17889] [INFO] Starting gunicorn 22.0.0
+[2024-08-04 07:48:38 -0400] [17889] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:48:38 -0400] [17889] [ERROR] Retrying in 1 second.
+[2024-08-04 07:48:39 -0400] [17889] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:48:39 -0400] [17889] [ERROR] Retrying in 1 second.
+[2024-08-04 07:48:40 -0400] [17889] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:48:40 -0400] [17889] [ERROR] Retrying in 1 second.
+[2024-08-04 07:48:41 -0400] [17889] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:48:41 -0400] [17889] [ERROR] Retrying in 1 second.
+[2024-08-04 07:48:42 -0400] [17889] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:48:42 -0400] [17889] [ERROR] Retrying in 1 second.
+[2024-08-04 07:48:43 -0400] [17889] [ERROR] Can't connect to ('127.0.0.1', 8000)
+[2024-08-04 07:48:46 -0400] [17890] [INFO] Starting gunicorn 22.0.0
+[2024-08-04 07:48:46 -0400] [17890] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:48:46 -0400] [17890] [ERROR] Retrying in 1 second.
+[2024-08-04 07:48:47 -0400] [17890] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:48:47 -0400] [17890] [ERROR] Retrying in 1 second.
+[2024-08-04 07:48:48 -0400] [17890] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:48:48 -0400] [17890] [ERROR] Retrying in 1 second.
+[2024-08-04 07:48:49 -0400] [17890] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:48:49 -0400] [17890] [ERROR] Retrying in 1 second.
+[2024-08-04 07:48:50 -0400] [17890] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:48:50 -0400] [17890] [ERROR] Retrying in 1 second.
+[2024-08-04 07:48:51 -0400] [17890] [ERROR] Can't connect to ('127.0.0.1', 8000)
+[2024-08-04 07:48:53 -0400] [17891] [INFO] Starting gunicorn 22.0.0
+[2024-08-04 07:48:53 -0400] [17891] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:48:53 -0400] [17891] [ERROR] Retrying in 1 second.
+[2024-08-04 07:48:54 -0400] [17891] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:48:54 -0400] [17891] [ERROR] Retrying in 1 second.
+[2024-08-04 07:48:55 -0400] [17891] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:48:55 -0400] [17891] [ERROR] Retrying in 1 second.
+[2024-08-04 07:48:56 -0400] [17891] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:48:56 -0400] [17891] [ERROR] Retrying in 1 second.
+[2024-08-04 07:48:57 -0400] [17891] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:48:57 -0400] [17891] [ERROR] Retrying in 1 second.
+[2024-08-04 07:48:58 -0400] [17891] [ERROR] Can't connect to ('127.0.0.1', 8000)
+[2024-08-04 07:49:01 -0400] [17893] [INFO] Starting gunicorn 22.0.0
+[2024-08-04 07:49:01 -0400] [17893] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:49:01 -0400] [17893] [ERROR] Retrying in 1 second.
+[2024-08-04 07:49:02 -0400] [17893] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:49:02 -0400] [17893] [ERROR] Retrying in 1 second.
+[2024-08-04 07:49:03 -0400] [17893] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:49:03 -0400] [17893] [ERROR] Retrying in 1 second.
+[2024-08-04 07:49:04 -0400] [17893] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:49:04 -0400] [17893] [ERROR] Retrying in 1 second.
+[2024-08-04 07:49:05 -0400] [17893] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:49:05 -0400] [17893] [ERROR] Retrying in 1 second.
+[2024-08-04 07:49:06 -0400] [17893] [ERROR] Can't connect to ('127.0.0.1', 8000)
+[2024-08-04 07:49:08 -0400] [17894] [INFO] Starting gunicorn 22.0.0
+[2024-08-04 07:49:08 -0400] [17894] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:49:08 -0400] [17894] [ERROR] Retrying in 1 second.
+[2024-08-04 07:49:09 -0400] [17894] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:49:09 -0400] [17894] [ERROR] Retrying in 1 second.
+[2024-08-04 07:49:10 -0400] [17894] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:49:10 -0400] [17894] [ERROR] Retrying in 1 second.
+[2024-08-04 07:49:11 -0400] [17894] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:49:11 -0400] [17894] [ERROR] Retrying in 1 second.
+[2024-08-04 07:49:12 -0400] [17894] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:49:12 -0400] [17894] [ERROR] Retrying in 1 second.
+[2024-08-04 07:49:13 -0400] [17894] [ERROR] Can't connect to ('127.0.0.1', 8000)
+[2024-08-04 07:49:15 -0400] [17897] [INFO] Starting gunicorn 22.0.0
+[2024-08-04 07:49:15 -0400] [17897] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:49:15 -0400] [17897] [ERROR] Retrying in 1 second.
+[2024-08-04 07:49:16 -0400] [17897] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:49:16 -0400] [17897] [ERROR] Retrying in 1 second.
+[2024-08-04 07:49:17 -0400] [17897] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:49:17 -0400] [17897] [ERROR] Retrying in 1 second.
+[2024-08-04 07:49:18 -0400] [17897] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:49:18 -0400] [17897] [ERROR] Retrying in 1 second.
+[2024-08-04 07:49:19 -0400] [17897] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:49:19 -0400] [17897] [ERROR] Retrying in 1 second.
+[2024-08-04 07:49:20 -0400] [17897] [ERROR] Can't connect to ('127.0.0.1', 8000)
+[2024-08-04 07:49:23 -0400] [17898] [INFO] Starting gunicorn 22.0.0
+[2024-08-04 07:49:23 -0400] [17898] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:49:23 -0400] [17898] [ERROR] Retrying in 1 second.
+[2024-08-04 07:49:24 -0400] [17898] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:49:24 -0400] [17898] [ERROR] Retrying in 1 second.
+[2024-08-04 07:49:25 -0400] [17898] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:49:25 -0400] [17898] [ERROR] Retrying in 1 second.
+[2024-08-04 07:49:26 -0400] [17898] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:49:26 -0400] [17898] [ERROR] Retrying in 1 second.
+[2024-08-04 07:49:27 -0400] [17898] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:49:27 -0400] [17898] [ERROR] Retrying in 1 second.
+[2024-08-04 07:49:28 -0400] [17898] [ERROR] Can't connect to ('127.0.0.1', 8000)
+[2024-08-04 07:49:30 -0400] [17900] [INFO] Starting gunicorn 22.0.0
+[2024-08-04 07:49:30 -0400] [17900] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:49:30 -0400] [17900] [ERROR] Retrying in 1 second.
+[2024-08-04 07:49:31 -0400] [17900] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:49:31 -0400] [17900] [ERROR] Retrying in 1 second.
+[2024-08-04 07:49:32 -0400] [17900] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:49:32 -0400] [17900] [ERROR] Retrying in 1 second.
+[2024-08-04 07:49:33 -0400] [17900] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:49:33 -0400] [17900] [ERROR] Retrying in 1 second.
+[2024-08-04 07:49:34 -0400] [17900] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:49:34 -0400] [17900] [ERROR] Retrying in 1 second.
+[2024-08-04 07:49:35 -0400] [17900] [ERROR] Can't connect to ('127.0.0.1', 8000)
+[2024-08-04 07:49:37 -0400] [17904] [INFO] Starting gunicorn 22.0.0
+[2024-08-04 07:49:37 -0400] [17904] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:49:37 -0400] [17904] [ERROR] Retrying in 1 second.
+[2024-08-04 07:49:38 -0400] [17904] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:49:38 -0400] [17904] [ERROR] Retrying in 1 second.
+[2024-08-04 07:49:39 -0400] [17904] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:49:39 -0400] [17904] [ERROR] Retrying in 1 second.
+[2024-08-04 07:49:40 -0400] [17904] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:49:40 -0400] [17904] [ERROR] Retrying in 1 second.
+[2024-08-04 07:49:41 -0400] [17904] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:49:41 -0400] [17904] [ERROR] Retrying in 1 second.
+[2024-08-04 07:49:42 -0400] [17904] [ERROR] Can't connect to ('127.0.0.1', 8000)
+[2024-08-04 07:49:45 -0400] [17907] [INFO] Starting gunicorn 22.0.0
+[2024-08-04 07:49:45 -0400] [17907] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:49:45 -0400] [17907] [ERROR] Retrying in 1 second.
+[2024-08-04 07:49:46 -0400] [17907] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:49:46 -0400] [17907] [ERROR] Retrying in 1 second.
+[2024-08-04 07:49:47 -0400] [17907] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:49:47 -0400] [17907] [ERROR] Retrying in 1 second.
+[2024-08-04 07:49:48 -0400] [17907] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:49:48 -0400] [17907] [ERROR] Retrying in 1 second.
+[2024-08-04 07:49:49 -0400] [17907] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:49:49 -0400] [17907] [ERROR] Retrying in 1 second.
+[2024-08-04 07:49:50 -0400] [17907] [ERROR] Can't connect to ('127.0.0.1', 8000)
+[2024-08-04 07:49:52 -0400] [17911] [INFO] Starting gunicorn 22.0.0
+[2024-08-04 07:49:52 -0400] [17911] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:49:52 -0400] [17911] [ERROR] Retrying in 1 second.
+[2024-08-04 07:49:53 -0400] [17911] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:49:53 -0400] [17911] [ERROR] Retrying in 1 second.
+[2024-08-04 07:49:54 -0400] [17911] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:49:54 -0400] [17911] [ERROR] Retrying in 1 second.
+[2024-08-04 07:49:55 -0400] [17911] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:49:55 -0400] [17911] [ERROR] Retrying in 1 second.
+[2024-08-04 07:49:56 -0400] [17911] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:49:56 -0400] [17911] [ERROR] Retrying in 1 second.
+[2024-08-04 07:49:57 -0400] [17911] [ERROR] Can't connect to ('127.0.0.1', 8000)
+[2024-08-04 07:49:59 -0400] [17913] [INFO] Starting gunicorn 22.0.0
+[2024-08-04 07:49:59 -0400] [17913] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:49:59 -0400] [17913] [ERROR] Retrying in 1 second.
+[2024-08-04 07:50:00 -0400] [17913] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:50:00 -0400] [17913] [ERROR] Retrying in 1 second.
+[2024-08-04 07:50:01 -0400] [17913] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:50:01 -0400] [17913] [ERROR] Retrying in 1 second.
+[2024-08-04 07:50:02 -0400] [17913] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:50:02 -0400] [17913] [ERROR] Retrying in 1 second.
+[2024-08-04 07:50:03 -0400] [17913] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-08-04 07:50:03 -0400] [17913] [ERROR] Retrying in 1 second.
+[2024-08-04 07:50:04 -0400] [17913] [ERROR] Can't connect to ('127.0.0.1', 8000)
