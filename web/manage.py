@@ -8,7 +8,7 @@ import pathlib
 
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'web.settings.dev')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'web.settings')
 
     DOT_INV_PASS = pathlib.Path() / 'env/.env'
     if DOT_INV_PASS.exists():
