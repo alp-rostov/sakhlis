@@ -13,6 +13,9 @@ ___________________
 sudo dnf install nginx
 sudo systemctl start nginx
 
+поменять имя user на имя от которого запускаешь  в nginx.conf
+
+
 nano /etc/nginx/sites-available/default
 
 
@@ -86,3 +89,8 @@ os.getcwd()   -  determine current directory
 DATABASE DJANGO
 python manage.py dumpdata --inden 2 > copydata.json  - export to json-file
 ____________
+
+
+
+
+sudo chown -R www-data:www-data *

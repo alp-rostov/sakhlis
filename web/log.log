@@ -61,3 +61,8 @@ WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
 WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
 WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
 WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /index-en.html
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
