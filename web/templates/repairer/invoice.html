@@ -54,7 +54,7 @@
                 </a>
             </h5>
             {% if info.customer_id.phone%}
-            <a href="tel:{{ info.customer_id.phone }}" title="Телефон" class="fas fa-phone text fa-sm mr-1 btn">
+            <a href="tel:+{{ info.customer_id.phone }}" title="Телефон" class="fas fa-phone text fa-sm mr-1 btn">
             </a>
             {% endif %}
             {% if info.customer_id.telegram %}
@@ -62,10 +62,17 @@
             </a>
             {% endif %}
             {% if info.customer_id.whatsapp %}
-            <a href="https://wa.me/{{ info.customer_id.whatsapp }}" class="fa fab fa-whatsapp-square btn prefix text-secondary mt-2"
+            <a href="https://wa.me/+{{ info.customer_id.whatsapp }}" class="fa fab fa-whatsapp-square text fa-sm mr-1 btn"
                             title="Whatsapp" aria-hidden="true" >
             </a>
             {% endif %}
+
+            {% if info.apartment_id.link_location  %}
+            <a href="{{info.apartment_id.link_location}}" class="fas fa-map-marker text fa-sm mr-1 btn" title="Open map" aria-hidden="true">
+            </a>
+            {% endif %}
+
+
        </div>
 
         <div class="col-md-4 text-secondary mb-2" >
