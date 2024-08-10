@@ -85,15 +85,17 @@
 <div class="container">
     <a href="{% url 'apartment_create' %}" class="fa fa-plus mycolor m-3" >
         Add new apartment
-    </a>
-    <div class="tab">
+    </a>  <button class="btn mycolor m-1" style="display:none;" onclick='menu_hide_show()' id="showallapat">Show all apartments</button>
+
+    <div class="tab" >
+
         <!--menu apartments-->
         <input checked id="tab-btn-{{ apartments.0.pk }}" name="tab-btn" type="radio" value="">
-        <label  for="tab-btn-{{ apartments.0.pk }}">{{apartments.0.address_street_app}} {{apartments.0.address_num|default_if_none:''}}</label>
+        <label onclick="menu_hide_show()" for="tab-btn-{{ apartments.0.pk }}" class="menu">{{apartments.0.address_street_app}} {{apartments.0.address_num|default_if_none:''}}</label>
 
         {% for b in apartments|slice:"1:" %}
         <input id="tab-btn-{{ b.pk }}" name="tab-btn" type="radio" value="">
-        <label for="tab-btn-{{ b.pk }}">{{b.address_street_app}} {{b.address_num|default_if_none:''}}</label>
+        <label onclick="menu_hide_show()" for="tab-btn-{{ b.pk }}">{{b.address_street_app}} {{b.address_num|default_if_none:''}}</label>
         {% endfor %}
         <!--end menu apartments-->
         {% regroup order_list_by_apartments by apartment_id as ap_list %}
@@ -115,16 +117,17 @@
                            title="update apartment"><i class="fas fa-pen text-secondary"> </i>
                         </a>
                     </p>
-                    <img src="../media/{{ c.grouper.foto|default_if_none:'images/none.jpg' }} "
+                    {% if c.grouper.foto %}
+                    <img src="../media/{{ c.grouper.foto }} "
                          alt="" class="" width="200">
+                    {% endif %}
                 </div>
                 <!-- end details about apartments-->
                 <!-- list of orders for a specific apartment -->
                 <div class="col-lg-8 col-md-8 col-sm-12" align="left">
                     <div id="button-form-{{ c.grouper.pk }}">
                         <a id="toggleLink" class="fa fa-plus mycolor m-1"
-                           href="javascript:void(0)" onclick="viewdiv('form-{{ c.grouper.pk }}')"
-                        data-text-hide="create new request" data-text-show="close">
+                           href="javascript:void(0)" onclick="viewdiv('form-{{ c.grouper.pk }}')">
                             Add new request
                         </a>
                     </div>
@@ -193,8 +196,11 @@
                             <i class="fas fa-pen text-secondary"> </i>
                         </a>
                     </p>
-                    <img src="../media/{{ q.foto|default_if_none:'images/none.jpg' }} "
+                    {% if q.foto %}
+                    <img src="../media/{{ q.foto }} "
                          alt="" class="" width="200">
+                    {% endif %}
+
                 </div>
                 <!-- end details about apartment-->
 
@@ -202,8 +208,7 @@
                     <div class="mt-1 mb-2 p-2  border-5 rounded">
                         <div id="button-form-{{ q.pk }}">
                         <a id="toggleLinkq" class="fa fa-plus mycolor m-1"
-                           href="javascript:void(0)" onclick="viewdiv('form-{{ q.pk }}')"
-                            data-text-hide="create new request" data-text-show="close" >
+                           href="javascript:void(0)" onclick="viewdiv('form-{{ q.pk }}')">
                             Add new request
                         </a>
                         </div>
@@ -230,40 +235,9 @@
 
     </div>
 
-    <!-- Modal Window -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header text-center">
-                </div>
-                <div class="modal-body  mx-3">
-                    <div id="contact" class="form-container">
-                        <fieldset>
-                            <div id="message">
-				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">×</span>
-                                </button>
-				    </div>
-                            <form method="post" action="" class="" id="form">
-                                {% csrf_token %}
-                                {{ formorder}}
-                                <br>
-                                <button type="submit" name="submit" class="btn btn-sm btn-orange cta-btn btn-form mt-3 mb-5 ">
-                                    Send</button>
-
-                                </form>
-                        </fieldset>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- And Modal Window -->
-
 <script>
-<!--SENT ORDER -->
+    <!--SEND ORDER -->
 $(document.body).ready(function() {
-
     $('.form_order').submit(function(e) {
         e.preventDefault();
             $.ajax({
@@ -291,20 +265,29 @@ $(document.body).ready(function() {
     });
 });
 
-
-
 <!--SHOW ELEMENTS -->
 function viewdiv(id) {
     let el = document.getElementById(id);
-    let link = document.getElementById('toggleLink'+id);
     if (el.style.display == "block") {
         el.style.display = "none";
-        link.innerText = link.getAttribute('data-text-hide');
     } else {
         el.style.display = "block";
-        link.innerText = link.getAttribute('data-text-show');
     }
 }
 
+function menu_hide_show() {
+    let el = document.getElementsByTagName('label');
+        for (let i = 0; i < el.length; i++) {
+            if (el[i].style.display == "none") {
+            el[i].style.display = "block";
+            document.getElementById('showallapat').style.display = "none";
+
+            } else {
+            el[i].style.display = "none";
+            document.getElementById('showallapat').style.display = "block";
+            }
+        }
+
+}
 </script>
 {% endblock body %}
