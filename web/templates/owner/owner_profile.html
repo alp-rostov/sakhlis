@@ -4,49 +4,37 @@
 {% load static %}
 {% load slippers %}
 
-{% block subbody %}
-<div class="row">
-    <div class="col-lg-4 col-md-4 col-sm-12" align="right">
-      <img src="../media/{{ prof.foto|default_if_none:'images/none.jpg' }}"
-           class="rounded-circle border border-5 border-white" align="center" width="60">
-    </div>
-    <div class="col-lg-8 col-md-8 col-sm-12" align="left" >
-     <a href="" ><b>{{ user.username }} </b></a><br>
-        <a href=""><u><h6>{{prof.profile}}</u></a>
-    </div>
-
-</div>
-{% endblock subbody%}
-
-
-{% block body %}
-
+{% block head %}
 <style>
-  .tab {
+.hidden{
+    display:none;
+}
+
+.tab {
     display: flex;
     flex-wrap: wrap;
-  }
+}
 
-  .tab > input[type="radio"] {
+.tab > input[type="radio"] {
     display: none;
-  }
+}
 
-  .tab-content {
+.tab-content {
     display: none;
     width: 100%;
     margin-top: 1rem;
-  }
+}
 
 {% for z in apartments %}
-  #tab-btn-{{z.pk}}:checked~#content-{{z.pk}},
+#tab-btn-{{z.pk}}:checked~#content-{{z.pk}},
 {% endfor %}
 
 #tab-btn-0:checked~#content-0
-  {
+{
     display: block;
-  }
+}
 
-  .tab > label {
+.tab > label {
     display: block;
     padding: 0.5rem 1rem;
     cursor: pointer;
@@ -58,21 +46,26 @@
     border: solid;
     border-width: 1px;
     margin-left: 10px;
-  }
+}
 
-  .tab > input[type="radio"]:checked + label {
+.tab > input[type="radio"]:checked + label {
     cursor: default;
     color: #fff;
     background-color: #ca5718;
-  }
+}
 </style>
 
-<style>
-    .hidden{
-    display:none
-    }
+{% endblock head%}
 
-</style>
+
+{% block subbody %}
+
+{% endblock subbody%}
+
+
+{% block body %}
+
+
 <!--empty div for add order -->
 <div class="hidden" id="empty-form" >
     <a href="" id="link-delete" class="mycolor" title="Delete">
@@ -90,13 +83,13 @@
 
 
 <div class="container">
-    <a href="{% url 'apartment_create' %}" class="btn btn-sm btn-orange ml-0 mb-2 p-2" >
-        new apartment
+    <a href="{% url 'apartment_create' %}" class="fa fa-plus mycolor m-3" >
+        Add new apartment
     </a>
     <div class="tab">
         <!--menu apartments-->
         <input checked id="tab-btn-{{ apartments.0.pk }}" name="tab-btn" type="radio" value="">
-        <label for="tab-btn-{{ apartments.0.pk }}">{{apartments.0.address_street_app}} {{apartments.0.address_num|default_if_none:''}}</label>
+        <label  for="tab-btn-{{ apartments.0.pk }}">{{apartments.0.address_street_app}} {{apartments.0.address_num|default_if_none:''}}</label>
 
         {% for b in apartments|slice:"1:" %}
         <input id="tab-btn-{{ b.pk }}" name="tab-btn" type="radio" value="">
@@ -129,10 +122,10 @@
                 <!-- list of orders for a specific apartment -->
                 <div class="col-lg-8 col-md-8 col-sm-12" align="left">
                     <div id="button-form-{{ c.grouper.pk }}">
-                        <a id="toggleLink" class="btn btn-sm btn-orange m-0 p-1"
+                        <a id="toggleLink" class="fa fa-plus mycolor m-1"
                            href="javascript:void(0)" onclick="viewdiv('form-{{ c.grouper.pk }}')"
                         data-text-hide="create new request" data-text-show="close">
-                            add new request
+                            Add new request
                         </a>
                     </div>
                     <!-- form for order -->
@@ -208,10 +201,10 @@
                 <div class="col-lg-8 col-md-8 col-sm-12">
                     <div class="mt-1 mb-2 p-2  border-5 rounded">
                         <div id="button-form-{{ q.pk }}">
-                        <a id="toggleLinkq" class="btn btn-sm btn-orange m-0 p-1"
+                        <a id="toggleLinkq" class="fa fa-plus mycolor m-1"
                            href="javascript:void(0)" onclick="viewdiv('form-{{ q.pk }}')"
                             data-text-hide="create new request" data-text-show="close" >
-                            add new request
+                            Add new request
                         </a>
                         </div>
                         <!-- form for order -->

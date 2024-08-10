@@ -5,16 +5,14 @@
 {% load slippers %}
 
 {% block subbody %}
-<div class="row">
-    <div class="col-lg-4 col-md-4 col-sm-12">
-      <img src="../media/masters/{{ request.user.pk|default_if_none:'images/none' }}.jpg"
-           class="rounded-circle border border-5 border-white"  width="100" alt="master">
-    </div>
-    <div class="col-lg-8 col-md-8 col-sm-12">
-     <a href="" ><b>{{ request.user }} </b></a>
-    </div>
+<!--<div class="row">-->
+<!--    <div class="col-lg-4 col-md-4 col-sm-12">-->
+<!--      <img src="../media/masters/{{ request.user.pk|default_if_none:'images/none' }}.jpg"-->
+<!--           class="rounded-circle border border-5 border-white"  width="50" alt="master">-->
+<!--        <a href="">{{ request.user }}</a>-->
+<!--    </div>-->
 
-</div>
+<!--</div>-->
 {% endblock subbody%}
 
 {% block body %}

@@ -196,3 +196,842 @@ WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
 WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
 WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
 WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /index-ge.html
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /user/index-ge.html
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py changed, reloading.
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py changed, reloading.
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /owner/apartment
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 226, in get
+    context = self.get_context_data(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 222, in get_context_data
+    .filter(owner=context['prof'])
+                  ~~~~~~~^^^^^^^^
+KeyError: 'prof'
+ERROR:django.request:Internal Server Error: /owner/apartment
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 226, in get
+    context = self.get_context_data(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 222, in get_context_data
+    .filter(owner=user_obj)
+                  ^^^^^^^^^^
+KeyError: 'prof'
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py changed, reloading.
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /owner/apartment
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/response.py", line 89, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/test/utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/test/utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/defaulttags.py", line 368, in render
+    for key, val in groupby(
+                    ^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/query.py", line 398, in __iter__
+    self._fetch_all()
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1547, in execute_sql
+    sql, params = self.as_sql()
+                  ^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 734, in as_sql
+    extra_select, order_by, group_by = self.pre_sql_setup(
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 84, in pre_sql_setup
+    self.setup_query(with_col_aliases=with_col_aliases)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 73, in setup_query
+    self.select, self.klass_info, self.annotation_col_map = self.get_select(
+                                                            ^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 279, in get_select
+    related_klass_infos = self.get_related_selections(select, select_mask)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1209, in get_related_selections
+    if not select_related_descend(f, restricted, requested, select_mask):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/query_utils.py", line 347, in select_related_descend
+    raise FieldError(
+django.core.exceptions.FieldError: Field OrderList.apartment_id cannot be both deferred and traversed using select_related at the same time.
+ERROR:django.request:Internal Server Error: /owner/apartment
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/response.py", line 89, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/test/utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/test/utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/defaulttags.py", line 368, in render
+    for key, val in groupby(
+                    ^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/query.py", line 398, in __iter__
+    self._fetch_all()
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1547, in execute_sql
+    sql, params = self.as_sql()
+                  ^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 734, in as_sql
+    extra_select, order_by, group_by = self.pre_sql_setup(
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 84, in pre_sql_setup
+    self.setup_query(with_col_aliases=with_col_aliases)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 73, in setup_query
+    self.select, self.klass_info, self.annotation_col_map = self.get_select(
+                                                            ^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 279, in get_select
+    related_klass_infos = self.get_related_selections(select, select_mask)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1209, in get_related_selections
+    if not select_related_descend(f, restricted, requested, select_mask):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/query_utils.py", line 347, in select_related_descend
+    raise FieldError(
+django.core.exceptions.FieldError: Field OrderList.apartment_id cannot be both deferred and traversed using select_related at the same time.
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py changed, reloading.
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py changed, reloading.
+WARNING:django.request:Not Found: /media/
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py changed, reloading.
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py changed, reloading.
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py changed, reloading.
+WARNING:django.request:Not Found: /media/
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py changed, reloading.
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py changed, reloading.
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py changed, reloading.
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-08-09 18:01:48.979710
+WARNING:root:ОШИБКА:        Field 'id' expected a number but got ''.
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2055, in get_prep_value
+    return int(value)
+           ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/exeptions.py", line 34, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 184, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 163, in form_valid
+    form.instance.customer_id = UserProfile.objects.get(pk=self.request.POST.get('customer_id'))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/query.py", line 623, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1498, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1529, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1444, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1271, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/lookups.py", line 341, in get_prep_lookup
+    return super().get_prep_lookup()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/lookups.py", line 85, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2057, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got ''.
+
+WARNING:root:============================================================
+WARNING:django.request:Bad Request: /
+WARNING:django.request:Not Found: /media/
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py changed, reloading.
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-08-09 18:02:11.736278
+WARNING:root:ОШИБКА:        Field 'id' expected a number but got ''.
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2055, in get_prep_value
+    return int(value)
+           ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/exeptions.py", line 34, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 184, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 163, in form_valid
+    form.instance.customer_id = UserProfile.objects.get(pk=self.request.POST.get('customer_id'))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/query.py", line 623, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1498, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1529, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1444, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1271, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/lookups.py", line 341, in get_prep_lookup
+    return super().get_prep_lookup()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/lookups.py", line 85, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2057, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got ''.
+
+WARNING:root:============================================================
+WARNING:django.request:Bad Request: /
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-08-09 18:02:33.893095
+WARNING:root:ОШИБКА:        Field 'id' expected a number but got ''.
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2055, in get_prep_value
+    return int(value)
+           ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/exeptions.py", line 34, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 184, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 163, in form_valid
+    form.instance.customer_id = UserProfile.objects.get(pk=self.request.POST.get('customer_id'))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/query.py", line 623, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1498, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1529, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1444, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1271, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/lookups.py", line 341, in get_prep_lookup
+    return super().get_prep_lookup()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/lookups.py", line 85, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2057, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got ''.
+
+WARNING:root:============================================================
+WARNING:django.request:Bad Request: /
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py changed, reloading.
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py changed, reloading.
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py changed, reloading.
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py changed, reloading.
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-08-09 18:26:09.605858
+WARNING:root:ОШИБКА:        
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/exeptions.py", line 34, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 108, in dispatch
+    return self.handle_no_permission()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 48, in handle_no_permission
+    raise PermissionDenied(self.get_permission_denied_message())
+django.core.exceptions.PermissionDenied
+
+WARNING:root:============================================================
+WARNING:django.request:Bad Request: /apartments/
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-08-09 18:26:12.094014
+WARNING:root:ОШИБКА:        
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/exeptions.py", line 34, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 108, in dispatch
+    return self.handle_no_permission()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 48, in handle_no_permission
+    raise PermissionDenied(self.get_permission_denied_message())
+django.core.exceptions.PermissionDenied
+
+WARNING:root:============================================================
+WARNING:django.request:Bad Request: /apartments/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:root:===========================================================
+WARNING:root:ВРЕМЯ:     2024-08-10 08:38:49.365940
+WARNING:root:ОШИБКА:        
+WARNING:root:ТРЭЙСБЭК:     Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/exeptions.py", line 34, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 108, in dispatch
+    return self.handle_no_permission()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 48, in handle_no_permission
+    raise PermissionDenied(self.get_permission_denied_message())
+django.core.exceptions.PermissionDenied
+
+WARNING:root:============================================================
+WARNING:django.request:Bad Request: /apartments/
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py changed, reloading.
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py changed, reloading.
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/

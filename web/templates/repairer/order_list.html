@@ -29,7 +29,7 @@
     {% for i in order %}
 
     <div  class="row border-bottom  rounded p-2 m-3" id="{{ id_ }}">
-                <div class="col-md-3">
+                <div class="col-md-3  mt-3">
 
                     <a href="{% url 'invoice' i.pk %}" id="order_{{ i.pk }}" class="h5 mycolor">Order № {{ i.pk }}</a>
 
@@ -44,7 +44,7 @@
                 </div>
 
 
-                <div class="col-md-6">
+                <div class="col-md-6 mt-3">
 
                     <h5 id="customer_name_{{ i.pk }}" class="" aria-hidden="true">
                     <a href="{{  i.customer_id__pk  }}" id="link" class="text-secondary " data-toggle="modal" title="Customer information"
@@ -59,7 +59,7 @@
 
 
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 mt-3">
 
                         <a href="" class="text-secondary" title="handyman">
                         <img src="../media/masters/{{ i.repairer_id__pk|default_if_none:'unknown_person'}}.jpg"

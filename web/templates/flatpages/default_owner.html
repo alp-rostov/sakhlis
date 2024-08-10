@@ -3,55 +3,32 @@
 <!doctype html>
 
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Repair service in Tbilisi</title>
-
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{% static 'css/mdb.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
     <!-- Custom Stylesheets -->
     <link rel="stylesheet" href="{% static 'css/custom.css' %}">
-    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
-
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
- {% block head %}
+{% block head %}
 
 {% endblock head %}
-
-
-<style>
-.hidden{
-display:none;
-}
-
-.sticky {
-position: sticky;
-top: 0;
-}
-</style>
-  </head>
-  <body>
-
-
+</head>
+<body>
 
 {% url 'apartment' as the_url1 %}
-
 {% url 'o_list_order' as the_url2 %}
-
-
 
 <!--Header-->
 {% #menu %}
     <li class="nav-item mr-4">
         <a class="nav-link" href="{% url 'home' %}">Main</a>
     </li>
-
-
     <li class="nav-item mr-4">
         {% if the_url1 in request.get_full_path  %}
         <a class="nav-link"  href="{{ the_url1 }}"><b>Apartment</b></a>
@@ -59,8 +36,6 @@ top: 0;
         <a class="nav-link"  href="{{ the_url1 }}">Apartment</a>
         {% endif %}
     </li>
-
-
     <li class="nav-item mr-4">
         {% if the_url2 in request.get_full_path  %}
         <a class="nav-link"  href="{{ the_url2 }}"><b>Orders</b></a>
@@ -69,46 +44,33 @@ top: 0;
         {% endif %}
 
     </li>
-
-
-
     {% if request.user.is_authenticated %}
         <li class="nav-item mr-4">
             <a class="nav-link" href="{% url 'logout' %}">
-                             {{ user.username }} : Log out</a>
+                {{ user.username }} : Log out
+            </a>
         </li>
     {% endif %}
-
 {% /menu %}
 
-        <section id="section-0" class="bg_img">
-                    <div class="text-center h5 mt-5">
-                            {% block subbody %}
+<section id="section-0" class="bg_img">
+    <div class="text-center h5 mt-5">
+        {% block subbody %}
+        {% endblock subbody%}
+    </div>
+</section>
 
-                            {% endblock subbody%}
-                    </div>
-
-    </section>
-
-
-    <section id="section-1">
-        <div class="container">
-            <div >
-                        {% block body %}
-
-                        {% endblock body%}
-            </div>
-
-
-            </div>
-        </div>
-    </section>
+<section id="section-1">
+    <div class="container">
+        {% block body %}
+        {% endblock body%}
+    </div>
+</section>
 
 
     <!-- jQuery first, then Bootstrap JS -->
     <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'js/mdb.min.js' %}"></script>
     <!-- Optional JavaScript -->
 	<script src="{% static 'js/wow.min.js' %}"></script>
     <script src="{% static 'js/owl.carousel.min.js' %}"></script>
@@ -116,12 +78,6 @@ top: 0;
     <script src="{% static 'js/jquery.malihu.PageScroll2id.min.js' %}"></script>
     <script src="{% static 'js/maskedinput.min.js' %}"></script>
     <script src="{% static 'js/custom.js' %}"></script>
-	<script type="text/javascript">
-    $(document).ready(function() {
-      new WOW().init();
-    });
-    </script>
-
    {% block js %}
    {% endblock js %}
 
