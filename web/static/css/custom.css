@@ -1,6 +1,28 @@
 @charset "utf-8";
+/* CSS Document */
 
+/*------------------------------------------
+Project Name : Master na chas
+Desgined By  : hassan_malik19
+Developed and desgined : Oleg Tsapko;
+Date        :  11/May/19;
 
+Table Of Index
+------------------
+1. Base css
+2. Header css
+3. Services css
+4. Price css
+5. About css
+6. Call to Action css
+7. Text css
+8. Counter css
+9. Testimonials Css
+10. Footer css
+11. Modal Window css
+12. Media Screen
+
+------------------------------------------*/
 
 /*********************************************
 		Base css
@@ -41,7 +63,7 @@ h2, h3{
 
 h2:after {
     content: "";
-    background: url('../images/underline1.png') no-repeat;
+    background: url(../images/underline1.png) no-repeat;
     width: 94px;
     height: 11px;
     position: absolute;
@@ -61,7 +83,7 @@ a:hover, a:focus, a:active {
       text-decoration: none;
       color: inherit;
  }
- 
+
  a {
 	 color: #fefefe;
  }
@@ -93,7 +115,7 @@ header h1 {
 
 .bg_img {
     background-image: linear-gradient(135deg, #febb79,
-        rgba(0, 0, 0, 0.5), rgba(52, 72, 106, 0.3)), url('../images/master-na-chas_1.jpg');
+        rgba(0, 0, 0, 0.5), rgba(52, 72, 106, 0.3)), url(../images/master-na-chas_1.jpg);
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: cover;
@@ -145,7 +167,7 @@ header h1 {
 
 a {
     text-decoration: none!important;
-	color: #fefefe;
+	color: fefefe;
 }
 
 .btn-orange-tel {
@@ -182,7 +204,7 @@ h1.display-4 {
 }
 
 .space {
-	padding: 8rem 1rem 3rem;
+	padding: 1rem 1rem 1rem;
 }
 /*********************************************
 		Services css
@@ -528,7 +550,7 @@ footer hr {
     .navbar {
         background-color: rgba(28, 35, 49, 0.93);
     }
-	
+
 	.testimonial-carousel .testimonial {
 		margin-left:  15%;
 		margin-right:  15%;
@@ -545,7 +567,7 @@ footer hr {
     .h-tel {
         display: block;
     }
-	
+
     .btn-orange-tel {
         display: inline;
     }
@@ -554,16 +576,16 @@ footer hr {
     button.mt-5-5 {
         margin: 1.5rem 0;
     }
-	
+
 	.h-form,
     .btn-form {
         display: none;
     }
-	
+
 	h2:after {
         display: none;
     }
-	
+
 	section.frame_bg {
         background: linear-gradient(40deg, #45cafc, #303f9f);
     }
@@ -612,26 +634,3 @@ footer hr {
         margin: 13.5rem 0;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

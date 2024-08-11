@@ -59,12 +59,10 @@
 
 
 {% block subbody %}
-
 {% endblock subbody%}
 
 
 {% block body %}
-
 
 <!--empty div for add order -->
 <div class="hidden" id="empty-form" >
@@ -83,16 +81,17 @@
 
 
 <div class="container">
-    <a href="{% url 'apartment_create' %}" class="fa fa-plus mycolor m-3" >
+    <a href="{% url 'apartment_create' %}" class="fa fa-plus text-secondary m-3" >
         Add new apartment
-    </a>  <button class="btn mycolor m-1" style="display:none;" onclick='menu_hide_show()' id="showallapat">Show all apartments</button>
+    </a>
+    <span class="fa fa-trash text-secondary m-3" >
+        Delete apartment
+    </span>
+    <button class="btn mycolor m-1" style="display:none;" onclick='menu_hide_show()' id="showallapat">Show all apartments</button>
 
     <div class="tab" >
 
         <!--menu apartments-->
-<!--        <input checked id="tab-btn-{{ apartments.0.pk }}" name="tab-btn" type="radio" value="">-->
-<!--        <label onclick="menu_hide_show()" for="tab-btn-{{ apartments.0.pk }}" class="menu">{{apartments.0.address_street_app}} {{apartments.0.address_num|default_if_none:''}}</label>-->
-
         {% for b in apartments %}
         <input id="tab-btn-{{ b.pk }}" name="tab-btn" type="radio" value="">
         <label onclick="menu_hide_show()" for="tab-btn-{{ b.pk }}">
@@ -127,10 +126,10 @@
                 <!-- list of orders for a specific apartment -->
                 <div class="col-lg-8 col-md-8 col-sm-12" align="left">
                     <div id="button-form-{{ c.grouper.pk }}">
-                        <a id="toggleLink" class="fa fa-plus mycolor m-1"
-                           href="javascript:void(0)" onclick="viewdiv('form-{{ c.grouper.pk }}')">
+                        <button id="toggleLink" class="btn btn-lg btn-block fa fa-plus mycolor m-2 p-2"
+                           onclick="viewdiv('form-{{ c.grouper.pk }}')">
                             Add new request
-                        </a>
+                        </button>
                     </div>
                     <!-- form for order -->
                     <div id="form-{{ c.grouper.pk }}" style="display:none;" class="mb-5">
@@ -147,8 +146,8 @@
                     <!-- end form for order -->
                     <div id="list_orders-{{ c.grouper.pk }}" >
                         {% for b in c.list %}
-                        <div class="row  mt-1 mb-3 pb-2  border-bottom">
-                            <div class=" col-6">
+                        <div class="row mt-1 mb-3 pb-2  border-bottom">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
                                 <a href="{% url 'delete-order' b.pk %}" id="delete_{{ b.pk }}" class="mycolor" title="Delete">
                                     <i class="fas fa-trash text-secondary"></i>
                                 </a>
@@ -157,17 +156,24 @@
                                     {% if b.order_status != "END" %}
                                     <U>in progress</U>
                                     {% endif %}
-                               </a>
-                                | {{ b.time_in }}
+
+                                    | <span class="text-body mt-1">{{ b.time_in }}</span>
                                 <br>
-                                <div class="mt-2"> {{ b.text_order }} </div>
+                                    <div class="text-body mt-1">{{ b.text_order }}</div> </a>
                             </div>
-                            <div class=" col-6">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
+                                {% if b.repairer_id %}
                                 <img src="../media/masters/{{ b.repairer_id.pk }}.jpg"
-                                class="rounded-circle" align="center" width="60"><br>
-                                <a href="" class="text-secondary">
-                                <b>{{ b.repairer_id|default_if_none:""|capfirst }}</b>
+                                class="rounded-circle  mt-1" align="center" width="60" alt="master">
+                                <a href="" class="text-secondary" title="master">
+                                <b>{{ b.repairer_id|capfirst }}</b>
                                 </a>
+                                {% else %}
+                                 <span class="text-secondary">
+                                <b>Unkonw master</b>
+                                </span>
+                                {% endif %}
+
                             </div>
                         </div>
                         {% endfor %}

@@ -7,14 +7,11 @@
 <!-- from filterset -->
 <div class="container text-white">
     <form action="" method="get" class="">
-        {{ filterset.form.time_in_sence.label }}:
         {{ filterset.form.time_in_sence }}
-        {{ filterset.form.time_in_until.label }}:
         {{ filterset.form.time_in_until }}
-        {{ filterset.form.order_status.label }}:
         {{ filterset.form.order_status }}
         <input type="submit" value=" Submit " class="btn btn-sm btn-orange">
-            <h5>Amount of money : {{ summ_orders }} / Order`s quantity : {{ count_orders }}</h5>
+
     </form>
 </div>
 <!-- end from filterset -->
@@ -29,26 +26,27 @@
 
 {% for i in order %}
 <div  class="row border-bottom p-1 mb-3 mt-1" id="{{ id_ }}">
-    <div class="col-md-4">
+    <div class="col-sm-12 col-md-4 col-lg-4 mt-3">
         <a href="{% url 'ownerinvoice' i.pk %}" id="order_{{ i.pk }}" class="h5 mycolor">Order № {{ i.pk }}</a>
         <a href="{% url 'delete-order' i.pk %}" id="delete_{{ i.pk }}" class="mycolor" title="Delete">
             <i class="fas fa-trash text-secondary ml-3"></i></a><br>
-        <div id="time_in" class="mt-2">{{ i.time_in }}</div>
+        {{ i.time_in }}
     </div>
-    <div class="col-md-4 ">
-        <span id="customer_name_{{ i.pk }}" class="text-secondary" aria-hidden="true">Repaier:
-            <a href="" class="text-secondary h5">
-                {{ i.repairer_id__username|capfirst }}
-            </a>
-        </span><br>
+    <div class="col-sm-12 col-md-4 col-lg-4 mt-3">
+
         <span class="fas fa-home prefix text-secondary mt-2" aria-hidden="true" >
             <span id="street_app_{{ i.pk }}">{{ i.apartment_id__address_street_app }}</span>
             <span id="num_{{ i.pk }}">{{ i.apartment_id__address_num }}</span>,
             <span id="city_{{ i.pk }}" >{{ i.apartment_id__address_city|choice_tag:'city'}}</span>.
         </span>
+        <p id="text_order_{{ i.pk }}" class="mt-1">{{ i.text_order|truncatechars:200|capfirst }}</p>
     </div>
-    <div class="col-md-4">
-        <p id="text_order_{{ i.pk }}" class="fas text-secondary">{{ i.text_order|truncatechars:200|capfirst }}</p>
+    <div class="col-sm-12 col-md-4 col-lg-4 mb-3">
+            <a href="" class="text-secondary h5" title="master">
+                <img src="../media/masters/{{i.repairer_id}}.jpg" alt="master" class="rounded-circle"  width="60">
+                {{ i.repairer_id__username|capfirst }}
+            </a>
+        <br>
     </div>
 </div>
 {% empty %}

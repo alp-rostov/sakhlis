@@ -78,21 +78,6 @@
     {% endfor %}
 </div>
 
-<!--{% #card_order class_="hidden" id_="row_order" i='' %}-->
-<!--{% /card_order %}-->
-
-
-
-<!--<h2>-->
-<!--    {% if order.13.pk %}-->
-<!--        <a href="../listorderjson?last_pk={{ order.13.pk }}&time_in_sence={{request.GET.time_in_sence}}&time_in_until={{request.GET.time_in_until}}&order_status={{request.GET.order_status}}"-->
-<!--        class="btn btn-orange cta-btn btn-form mt-3 mb-5"-->
-<!--        id="paginator_next">-->
-<!--            View more-->
-<!--        </a>-->
-<!--    {% endif %}-->
-<!--</h2>-->
-
 
 {% #owner_modal_window   %}
 {% csrf_token %}
@@ -109,7 +94,10 @@ $(document).on('click', '#link', function (e) {
             success: function(resp){
             document.getElementById("name").innerHTML =resp.name;
             document.getElementById("customer_phone").innerHTML =' '+resp.phone;
+            document.getElementById("customer_phone").setAttribute('href','tel:+'+resp.phone);
             document.getElementById("customer_telegram").innerHTML = ' '+resp.telegram;
+            document.getElementById("customer_telegram").setAttribute('href','https://t.me/'+resp.telegram);
+
             document.getElementById("profile").innerHTML = resp.profile;
             document.getElementById("foto1").src ='../media/'+resp.foto;
             document.getElementById("customer_id").value =resp.pk;

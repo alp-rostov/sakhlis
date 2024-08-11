@@ -303,7 +303,7 @@ class OwnerOrderManagementSystem(OrderManagementSystem, BaseClassExeption, Login
             .filter(customer_id=userprof) \
             .select_related('apartment_id', 'repairer_id') \
             .values('pk', 'time_in',
-                    'text_order', 'apartment_id',
+                    'text_order', 'apartment_id','repairer_id',
                     'repairer_id__username', 'apartment_id__address_street_app',
                     'apartment_id__address_city', 'apartment_id__address_num'
                     ).order_by('-time_in')

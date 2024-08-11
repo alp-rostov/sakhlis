@@ -7,52 +7,31 @@
 {% block body %}
 
 <div class="container">
-    <div class="row" >
-        <div class="col-md-4 mt-3" >
+    <div class="row mb-3" >
+        <div class="col-sm-12 col-md-4 col-lg-4 mt-1" >
             <h4 class="mycolor"><b>Order № {{ info.id }}</b></h4>
             {{ info.time_in }}<br>
-                <a href="pdf/{{ info.id }}" class="btn btn-sm btn-orange">Invoice - PDF</a>
+            <i class="fas fa-home prefix text-secondary mt-1"> </i> {{ info.apartment_id.address_city|choice_tag:'city' }}, {{ info.apartment_id.address_street_app }}, {{ info.apartment_id.address_num }}<br>
         </div>
-        <div class="col-md-4 text-secondary mt-3" >
-            <h4><b>Job`s status</b></h4>
-            {% if info.order_status == 'SND' %}
-                {% #work_status check_1="fas fa-check-circle about-text" check_font_1=" black-text" %}
-                {% /work_status %}
 
-            {% elif info.order_status == 'RCV' %}
-                {% #work_status check_1="fas fa-check-circle text-secondary" check_2="fas fa-check-circle about-text" check_font_2="black-text" %}
-                {% /work_status %}
+        <div class="col-lg-4 col-md-4 col-sm-12 text-secondary mt-1 h5" >
+            {{ info.text_order }}
+        </div>
 
-            {% elif info.order_status == 'END' %}
-                {% #work_status check_1="fas fa-check-circle text-secondary" check_2="fas fa-check-circle text-secondary" check_3="fas fa-check-circle about-text" check_font_3=" black-text"   %}
-                {% /work_status %}
-            {% endif %}
+        <div class="col-lg-4 col-md-4 col-sm-12 text-secondary mt-1" >
+            <a href="" class="text-secondary">
+                <img src="../media/masters/{{ info.repairer_id.pk }}.jpg"
+                                class="rounded-circle" width="60">
+                <b>
+                    {{ info.repairer_id|default_if_none:""|capfirst }}
+                </b>
+            </a>
         </div>
-        <div class="col-md-4 text-secondary mt-3" >
-            <h4><b>Repairer</b></h4>
-            <img src="../media/masters/{{ info.repairer_id.pk }}.jpg"
-                                class="rounded-circle" align="center" width="60"><br>
-                                <a href="" class="text-secondary">
-                                <b>{{ info.repairer_id|default_if_none:""|capfirst }}</b>
-                                </a>
-        </div>
-   <div class="col-md-12">
-            <hr>
-   </div>
+
 </div>
 
-<div>
 
-    <div class="row mb-3">
-        <div class="col-md-4 text-secondary">
-            <i class="fas fa-home prefix text-secondary mb-2"> </i> {{ info.apartment_id.address_city|choice_tag:'city' }}, {{ info.apartment_id.address_street_app }}, {{ info.apartment_id.address_num }}<br>
-        </div>
 
-       <div class="col-md-8 ">
-           {{ info.text_order }}
-       </div>
-    </div>
- </div>
 
 <table id="table_invoice" class="table" >
 <thead>
@@ -76,10 +55,11 @@
 {% endfor %}
 </tbody>
 <tr class="table-warning" id="total_">
-    <th>
+    <th>developing: <button class="btn btn-sm ">Invoice - XLS</button> <button class="btn btn-sm ">Invoice - PDF</button>
     </th>
 
     <th class="h5-responsive" >
+        <button class="btn btn-sm ">Bank card</button>
     </th>
 
     <th class="h5-responsive ">
