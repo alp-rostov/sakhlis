@@ -125,8 +125,9 @@
                          </a>
 
                      {% else %}
-                        <a href="" class="link_master btn btn-sm btn-orange" data-toggle="modal" data-target="#exampleModal" title="{{ b.pk }}">Appoint a master</a>
+                        <button class="btn btn-lg btn-block mycolor m-2 p-2 waves-effect waves-light" data-toggle="modal" data-target="#exampleModal" title="{{ b.pk }}"> Appoint a master</button>
                      {% endif %}
+
                 </div>
             </div>
             {% endfor %}
