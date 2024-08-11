@@ -156,7 +156,6 @@ class OrderCreate(BaseClassExeption, CreateView):
         return context
 
     def form_valid(self, form):
-        # if OrderCustomerForm(self.request.POST).is_valid() and ApartmentForm(self.request.POST).is_valid():
         with transaction.atomic():
             if self.request.user.is_authenticated:
                 if self.request.user.groups.first().name == 'owner':
