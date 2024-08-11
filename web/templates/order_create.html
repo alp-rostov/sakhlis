@@ -312,7 +312,7 @@
 				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">×</span>
                                 </button>
-				    </div>
+				    </div><div id="answer"></div>
                             {% #form form_order_=form form_appart_=form_appart form_customer_=form_customer %}
                             {% csrf_token %}
                             {% /form %}
@@ -350,11 +350,14 @@ $(document.body).ready(function() {
             dataType: 'text',
             beforeSend: function () {$("#form").html('<h3>Отправляется...</h3>');},
             success: function (resp) {
-                if (JSON.parse(resp).auth==true) {
-                    window.location.href = '/list_order/'+JSON.parse(resp).pk;
+                let mes=JSON.parse(resp);
+                if (mes.auth==true) {
+                    window.location.href = '/list_order/'+mes.pk;
                     }
                 else {
-                    $("#form").html(JSON.parse(resp).message);
+                    $("#form").html(' ');
+                    $("#answer").html(mes.message+mes.contact);
+
                     }
                 },
             });

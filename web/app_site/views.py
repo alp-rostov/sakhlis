@@ -185,7 +185,11 @@ class OrderCreate(BaseClassExeption, CreateView):
                 form.instance.customer_id = customer
 
             form.save()
-            return JsonResponse({'message': f'<h3>Заявка № {form.instance.pk} отправлена успешно!</h3>',
+            return JsonResponse({'message': f'<h2>Благодарим Вас за заявку!</h1><h3>Заявка № {form.instance.pk} отправлена успешно!</h2>',
+                                 'contact': f'<h5>Ваш менеджер мастер Сергей: <br><img src="/media/masters/51.jpg" class="rounded-circle" width="100">.</h5>'
+                                            f'Вы можете написать ему, уточнить детали, отправить фото работ или геопозицию:<br>'
+                                            f'<a class="mx-2" title="Telegram" href="https://t.me/+995598259119"><img src="/static/images/telegram.gif" width="50" alt="Telegram"></a>'
+                                            f'<a class="mx-2" title="WhatsApp" href="https://wa.me/+79604458687"><img src="/static/images/whatsapp.png" width="55" alt="WhatsApp"></a>',
                                  'pk': form.instance.pk,
                                  'auth': self.request.user.is_authenticated
                                  })
