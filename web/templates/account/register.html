@@ -1,6 +1,8 @@
 {% extends 'flatpages/default_user.html' %}
 {% load custom_filters %}
 {% load custom_tags %}
+{% load static %}
+{% load slippers %}
 
 {% block body %}
 <h2> Registration </h2>
@@ -78,6 +80,6 @@
         </div>
 
 
-    <button type="submit" class="btn btn-sm btn-orange btn-form cta-btn waves-effect">Registration</button>
+    <button type="submit" class="btn m-2 p-2">Registration</button>
 </form>
         {% endblock body %}

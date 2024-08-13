@@ -1,7 +1,8 @@
 {% load static %}
 {% load slippers %}
 
-<!DOCTYPE html><html lang="ru" prefix="og: http://ogp.me/ns#"><head>
+
+<!DOCTYPE html><html lang="en" prefix="og: http://ogp.me/ns#"><head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,11 +10,11 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <!-- Fav Icon -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <title>Мастер на час в Тбилиси | Мелкие ремонтные работы</title>
-    <meta name="description" content="Услуги по ремонту в Тбилиси ✔ Вызвать мастера на дом ✔ Услуги электрика, сантехника, мелкий ремонт квартир"">
+    <title>Repair service in Tbilisi</title>
+    <meta name="description" content="">
     <!-- Facebook -->
-    <meta property="og:title" content="Мастер на час в Тбилиси">
-	<meta property="og:description" content="Услуги по ремонту в Тбилиси ✔ Вызвать мастера на дом ✔ Услуги электрика, сантехника, мелкий ремонт квартир">
+	<meta property="og:title" content="Repair service in Tbilisi and Batumi">
+	<meta property="og:description" content="Repair service in Tbilisi and Batumi">
 	<meta property="og:image" content="images/master-na-chas.jpg">
 	<meta property="og:image:width" content>
 	<meta property="og:image:height" content>
@@ -34,16 +35,16 @@
 {% #menu %}
 
 <li class="nav-item mr-4 active">
-    <a class="nav-link" href="#section-0">Главная <span class="sr-only">(current)</span></a>
+    <a class="nav-link" href="#section-0">Main <span class="sr-only">(current)</span></a>
 </li>
 <li class="nav-item mr-4">
-    <a class="nav-link" href="#section-1">Услуги</a>
+    <a class="nav-link" href="#section-1">Services</a>
 </li>
 <li class="nav-item mr-4">
-    <a class="nav-link" href="#section-3">Фото</a>
+    <a class="nav-link" href="#section-3">Foto</a>
 </li>
 <li class="nav-item mr-4">
-    <a class="nav-link" href="#section-2">О нас</a>
+    <a class="nav-link" href="#section-2">About</a>
 </li>
 
 {% if request.user.is_authenticated %}
@@ -58,18 +59,18 @@
     </li>
     <li class="nav-item mr-4">
         <a class="nav-link" href="{% url 'logout' %}">
-            Выйти
+            Exit
         </a>
     </li>
 {% else %}
     <li class="nav-item mr-4">
         <a class="nav-link" href="{% url 'login' %}" title='Sign in'>
-            Авторизоваться
+            Login
         </a>
     </li>
     <li class="nav-item mr-4">
         <a class="nav-link" href="{% url 'signup' %}" title='Sign in'>
-            Регистарция
+            Registration
         </a>
     </li>
 {% endif %}
@@ -80,10 +81,10 @@
 <header id="section-0" class="bg_img jarallax _mPS2id-t mPS2id-target mPS2id-target-first mPS2id-target-last" data-jarallax="{'speed': 0.2}">
     <div class="space">
         <div class="text-center">
-            <h1 class="h1-responsive display-4 wow fadeIn animated" data-wow-delay="1s" style="visibility: visible; animation-name: none; animation-delay: 1s;">Мастер на час в Тбилиси <a href="https://www.instagram.com/repairservicetbilisi/"><img src="{% static 'images/instagram.png' %}" width="60" alt="Instagram"></a> </h1>
-            <p class="lead py-3 wow fadeIn animated" data-wow-delay="1s" style="visibility: visible; animation-name: none; animation-delay: 1s;">Нужны мужские руки? Домашний мастер быстро решит <br>любые проблемы с ремонтом в квартире, доме и офисе!</p>
+            <h1 class="h1-responsive display-4 wow fadeIn animated" data-wow-delay="1s" style="visibility: visible; animation-name: none; animation-delay: 1s;">Repair service in Tbilisi <a href="https://www.instagram.com/repairservicetbilisi/"><img src="{% static 'images/instagram.png' %}" width="60" alt="Instagram"></a> </h1>
+            <p class="lead py-3 wow fadeIn animated" data-wow-delay="1s" style="visibility: visible; animation-name: none; animation-delay: 1s;">Do you need working hands? Serviceman quickly will solve the problem of repair at the home or office.</p>
             <p class="lead py-3 ">
-                Написать мастеру:
+                Write to the repairman
                     <!--Telegramm-->
                     <a class="mx-2" title="Telegram" href="https://t.me/+995598259119"><img src="{% static 'images/telegram.gif' %}" width="50" alt="Telegram"></a>
                     <!--WhatsApp-->
@@ -93,7 +94,7 @@
                 <button class="btn btn-lg btn-orange cta-btn btn-form mt-3 mb-5 wow fadeIn" data-toggle="modal" data-target="#exampleModal" data-wow-delay="1s">
                     Send request <i class="far fa-paper-plane animated tada delay-5s infinite ml-1"></i>
                 </button>
-                <br><img src="{% static 'images/card.jpg' %}" class="item" width="350" alt="Оплата картой за услуги &quot;Мастер на час&quot;">
+                <br><img src="{% static 'images/card.jpg' %}" class="item" width="350" alt="Payment by card for services Master for an hour">
             </div>
         </div>
     </div>
@@ -111,22 +112,22 @@
         <div class="row">
             <div class="col-12 columns mt-4">
                 <div class="owl-carousel owl-theme pt-5">
-                    {% #card name_service="Услуги электрика" name_service1="Ремонт выключателя, розетки" name_service2="Монтаж счетчика" name_service3="Прокладка электропроводки" %}
+                    {% #card name_service="Electrician services" name_service1="Repair sockets and switch" name_service2="Electric meter installation" name_service3="Wiring" %}
                         <img src="{% static 'fonts/broken-cable.svg' %}" class="rounded-circle img-fluid">
                     {% /card %}
-                    {% #card name_service="Услуги сантехника" name_service1="Устранение засора" name_service2="Установка раковины, унитаза, смесителя" name_service3="Устранение протечки крана"  %}
+                    {% #card name_service="Plumber services" name_service1="Elimination of pipe blockage" name_service2="Installation of sink, toilet, water taps" name_service3="Laying of water pipes"  %}
                         <img src="{% static 'fonts/leak.svg' %}" class="rounded-circle img-fluid">
                     {% /card %}
-                    {% #card name_service="Cборка мебели" name_service1="Шкафы, диваны, кухни" name_service2="Установка встраиваемой техники" name_service3="Подъем на этаж"  %}
+                    {% #card name_service="Furniture assembly" name_service1="Cupboard, sofa, kitchen" name_service2="Equipment installation" name_service3="Help for lifting to the floor"  %}
                         <img src="{% static 'fonts/living-room.svg' %}" class="rounded-circle img-fluid">
                     {% /card %}
-                    {% #card name_service="Мелкий ремонт в квартире" name_service1="Монтаж карнизов и плинтусов" name_service2="Ремонт межкомнатных дверей" name_service3="Повесить картину, телевизор, люстру"  %}
+                    {% #card name_service="Minor repairs in the apartment" name_service1="Installation of cornices, skirting boards" name_service2="Appartment`s door repair" name_service3="Hang a picture, TV, chandelier"  %}
                         <img src="{% static 'fonts/living-room.svg' %}" class="rounded-circle img-fluid">
                     {% /card %}
-                    {% #card name_service="Установка бытовой техники" name_service1="Сплит-системы" name_service2="Холодильники" name_service3="Стиральные машины"  %}
+                    {% #card name_service="Installation of house devices" name_service1="Air conditioner" name_service2="Fridge" name_service3="Washing machine"  %}
                         <img src="{% static 'fonts/washing-machine.svg' %}" class="rounded-circle img-fluid">
                     {% /card %}
-                    {% #card name_service="Мелкий ремонт офиса" name_service1="Офисная мебель" name_service2="Обслуживание куллеров для воды: чистка, ремонт" name_service3="Обслуживание сплит-систем"  %}
+                    {% #card name_service="Minor office repairs" name_service1="Office furniture" name_service2="Service and repair of air conditioner" name_service3="Air conditioning service"  %}
                         <img src="{% static 'fonts/3d-buildings.svg' %}" class="rounded-circle img-fluid">
                     {% /card %}
                 </div>
@@ -142,20 +143,20 @@
 <section class="text-center cloudy-knoxville-gradient">
     <div class="container">
         <!-- Section heading -->
-        <h2 class="h1-responsive">Фото<strong class="mycolor"> наших работ</strong></h2>
+        <h2 class="h1-responsive">Photos<strong class="mycolor"> of our work</strong></h2>
 
         <div class="wrapper-carousel-fix py-4">
             <!-- Carousel Wrapper -->
             <div id="carousel-example-1" class="carousel no-flex testimonial-carousel slide carousel-fade" data-ride="carousel" data-interval="false">
                 <!--Slides-->
                 <div class="carousel-inner" role="listbox">
-                    {% #carusel active="active" text="Монтаж и установка проектора, экрана на стену и косметический ремонт помещения."  %}
+                    {% #carusel active="active" text="Installation and installation of the projector, screen on the wall and redecoration of the office."  %}
                         <img src="{% static 'images/1.jpg' %}" class="" width='250' alt="Фотогаллерея работ мастер на час: монтаж проектора">
                     {% /carusel %}
-                    {% #carusel text="Установка кодового замка двери с открыванием по  отпечатку пальца или цифровому коду."  %}
+                    {% #carusel text="Installation of a coded door lock with opening by fingerprint or digital code."  %}
                         <img src="{% static 'images/2.jpg' %}" class="" width='250' alt="Фотогаллерея работ мастер на час: монтаж замка">
                     {% /carusel %}
-                    {% #carusel text=" Установка освещения и бытовой техники"  %}
+                    {% #carusel text="Installation of a coded door lock with opening by fingerprint or digital code."  %}
                         <img src="{% static 'images/3.jpg' %}" class="" width='250' alt="Фотогаллерея работ мастер на час: монтаж кухни">
                     {% /carusel %}
                 </div>
@@ -183,9 +184,9 @@
 <!-- How I work -->
 <section>
     <h2 class="h1-responsive">
-        Мастер на час в Тбилиси:
+        Master for an hour in Tbilisi:
         <strong class="mycolor">
-            принципы работы
+            work principles
         </strong>
     </h2>
     <!--Container-->
@@ -195,15 +196,15 @@
             <!--First column-->
             <div class="col-md-4">
                 <!--First row-->
-                {% #container head_name="Профессионализм" text="В нашей команде опытные специалисты с многолетним стажем."  %}
+                {% #container head_name="Professionalism" text="There are specialists with many years of experience in our team."  %}
                 {% /container %}
                 <!--/First row-->
                 <!--Second row-->
-                {% #container head_name="Современный инструмент" text="Мы используем в работе только качественные инструменты и расходные материалы."  %}
+                {% #container head_name="Modern instrument" text="We use only qualitative equipment and building materials in working."  %}
                 {% /container %}
                 <!--/Second row-->
                 <!--Third row-->
-                {% #container head_name="Быстрая помощь" text="Срочный выезд в течение часа."  %}
+                {% #container head_name="Quik help" text="Express check out to your problem within an hour"  %}
                 {% /container %}
                 <!--/Third row-->
             </div>
@@ -211,18 +212,18 @@
 
             <!--Second column-->
             <div class="col-md-4 flex-center mb-4">
-                <img src="{% static 'images/o-mastere-na-chas.png' %}" alt="Мастер на час услуга" class="z-depth-0 img-fluid">
+                <img src="{% static 'images/o-mastere-na-chas.png' %}" alt="Master" class="z-depth-0 img-fluid">
             </div>
             <!--/Second column-->
 
             <!--Third column-->
             <div class="col-md-4">
                 <!--First row-->
-                {% #container head_name="Порядочность" text="Гарантируем качественную и ответственную работу."  %}
+                {% #container head_name="Decency" text="We guarantee quality and responsible work."  %}
                 {% /container %}
                 <!--/First row-->
                 <!--Second row-->
-                {% #container head_name="Бережное обращение с имуществом клиента" text="Мы не испортим пол, мебель, стены. Убираем мусор за собой."  %}
+                {% #container head_name="Careful handling to client property" text="We will not spoil the floor, furniture, walls. We clean up our trash."  %}
                 {% /container %}
                 <!--/Second row-->
             </div>
@@ -239,14 +240,15 @@
 <!--About Me -->
 <section id="section-2">
 
-    {% #about_me head="«Мастер на час»<strong class='mycolor'> всегда на связи</strong>" img="images/muzg-na-chas.jpg" %}
+    {% #about_me head="«Master for an hour»<strong class='mycolor'>is always in touch</strong>" img="images/muzg-na-chas.jpg" %}
 
-    <p><i class="fas fa-quote-left pr-2"></i>Мы готовы приехать на вызов в любое время в экстренной ситуации.</p>
-                <h4><i class="fas fa-wrench fa-sm mr-3"></i>Режим работы: КРУГЛОСУТОЧНО!</h4>
-                <p>Наша команда имеет многолетний опыт работы по данному направлению. Предлагаем только качественное решение вашей проблемы будь-то поломаный выключатель, скрипящая дверь, протекающая сантехника.</p>
+    <p><i class="fas fa-quote-left pr-2"></i>We are ready to come any time in an emergency.</p>
+                <h4><i class="fas fa-wrench fa-sm mr-3"></i>Working hours: ROUND THE CLOCK!</h4>
+                <p>Our team has many years of experience in this field. We offer only a high-quality solution to your problem,
+				whether it is a broken switch, a creaking door, leaking plumbing.</p>
                 <blockquote class="blockquote">
-                    <p class="mb-0">Контактная информация: +995 598259119</p>
-                    <footer class="blockquote-footer">Ремонт - наша работа.
+                    <p class="mb-0">Phone: +995 598259119</p>
+                    <footer class="blockquote-footer">Repair is our job.
                     </footer>
                 </blockquote>
     {% /about_me%}
@@ -263,19 +265,19 @@
                     <!-- Grid column -->
                     <div class="mt-5 mb-0 pl-3">
                         <p>
-                            <i class="mr-3"></i>Тбилиси, ул. Зураба Патаридзе 8</p>
+                            <i class="mr-3"></i>Tbilisi, st. Zuraba Pataridze 8</p>
                     </div>
                 </div>
                 <!-- Contact window button -->
                 <div class="col-md-4 col-sm-12 mb-md-0 col-lg-4 mb-5">
-                    <h4 class="">Контактная форма</h4>
+                    <h4 class="">Contact form</h4>
                     <div class="text-center m-5">
                         <h4>+995-598-259-119</h4>
                     </div>
                 </div>
                 <!-- Grid column -->
                 <div class="col-sm-12 col-md-4 col-lg-4">
-                    <h4 class="">Написать нам</h4>
+                    <h4 class="">Write to us</h4>
                     <div class="col-md-12">
                         <div class="py-5 text-center">
 				            <!--Facebook-->
@@ -293,7 +295,7 @@
             <a href="#top" class="back-to-top float-right __mPS2id mPS2id-clicked" style=""><i class="far fa-arrow-alt-circle-up fa-2x text-danger"></i></a>
         </div>
         <div class="footer-copyright py-3 text-center">
-            <span class="text-muted"> © 2024 |</span> <a href=""> Мастер на час в Тбилиси</a>
+            <span class="text-muted"> © 2024 |</span> <a href="">Repair services in Tbilisi</a>
         </div>
     </footer>
 <!-- And Footer -->
@@ -347,7 +349,7 @@ $(document.body).ready(function() {
             type: 'POST',
             data: $(this).serialize(),
             dataType: 'text',
-            beforeSend: function () {$("#form").html('<h3>Отправляется...</h3>');},
+            beforeSend: function () {$("#form").html('<h3>Please wait...</h3>');},
             success: function (resp) {
                 let mes=JSON.parse(resp);
                 if (mes.auth==true) {

@@ -54,21 +54,23 @@
                 </a>
             </h5>
             {% if info.customer_id.phone%}
-            <a href="tel:+{{ info.customer_id.phone }}" title="Телефон" class="fas fa-phone text fa-sm mr-1 btn">
-            </a>
+            <a href="tel:+{{ info.customer_id.phone }}" title="Телефон" class="">
+            <i class="text-secondary fas fa-phone m-1 p-1"></i></a>
             {% endif %}
             {% if info.customer_id.telegram %}
-            <a href="https://t.me/{{ info.customer_id.telegram|cut:'@' }}" title="Telegram" class="fas fa-paper-plane text fa-sm mr-1 btn">
-            </a>
+            <a href="https://t.me/{{ info.customer_id.telegram|cut:'@' }}" title="Telegram" class="">
+            <i class="text-secondary fas fa-paper-plane text fa-sm mr-1 btn m-1 p-1"></i></a>
             {% endif %}
             {% if info.customer_id.whatsapp %}
             <a href="https://wa.me/+{{ info.customer_id.whatsapp }}" class="fa fab fa-whatsapp-square text fa-sm mr-1 btn"
                             title="Whatsapp" aria-hidden="true" >
+                <i class="text-secondary fa fab fa-whatsapp-square btn m-1 p-1"></i>
             </a>
             {% endif %}
 
             {% if info.apartment_id.link_location  %}
-            <a href="{{info.apartment_id.link_location}}" class="fas fa-map-marker text fa-sm mr-1 btn" title="Open map" aria-hidden="true">
+            <a href="{{info.apartment_id.link_location}}" class="" title="Open map" aria-hidden="true">
+             <i class="text-secondary fas fa-map-marker text fa-sm mr-1 btn m-1 p-1"></i>
             </a>
             {% endif %}
 
@@ -88,8 +90,8 @@
                         <i class="fas fa-pen text-secondary" style='font-size:14px'>edit</i>
                     </a>
                     {% else %}
-                    <a href="" class="link_master btn btn-sm btn-orange" data-toggle="modal" data-target="#exampleModal" title="{{ info.pk }}">
-                        Appoint a master
+                    <a href="" class="link_master text-secondary" data-toggle="modal" data-target="#exampleModal" title="{{ info.pk }}">
+                        <i class="fas fa-pen text-secondary" style='font-size:14px'>Appoint master</i>
                     </a>
                     {% endif %}
         </div>
@@ -172,27 +174,27 @@
 
 </table>
 
-<form action="" method="post" id="id_form" >
+<form action="" method="post" id="id_form" class="" >
 
     {% csrf_token %}
     <div id="form-list">
         <div id="empty-form" class="hidden">
-            <a href="#" onclick="show_type_work(this)" class="btn btn-sm">open</a>
+            <a href="#" onclick="show_type_work(this)" class="btn btn-sm border border-1 text-body m-2 p-2">open</a>
             <span class="type_work">
             {% for u in type_work %}
-                <a href="../serv?type_work={{ u.0 }}" class="type_work btn btn-sm">{{ u.1 }}</a>
+                <a href="../serv?type_work={{ u.0 }}" class="type_work btn btn-sm border border-1 text-body m-2 p-2">{{ u.1 }}</a>
             {% endfor %}
             </span>
             <br> {{ form.empty_form }}
 
-            <button type="button" class="delete-empty-form">Delete</button>
+            <button type="button" class="delete-empty-form p-1">Delete</button>
         </div>
         {{ form.management_form }}
     </div>
     <div id="error"></div>
     <div align="center">
-        <button id="add-more" type="button" class="btn btn-md btn-orange">add-more</button>
-        <button type="submit" class="btn btn-md btn-orange"> Save </button><br>
+        <button id="add-more" type="button" class="btn p-2 m-2">add-more</button>
+        <button type="submit" class="btn p-2 m-2"> Save </button><br>
     </div>
 
 </form>

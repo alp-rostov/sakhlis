@@ -172,28 +172,28 @@ class OrderUpdateForm(forms.ModelForm):
 class UserRegisterForm(UserCreationForm):
     username = forms.CharField(
         label='Login',
-        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Login"}),
+        widget=forms.TextInput(attrs={"class": "form-control mb-2", 'placeholder': "Login"}),
     )
     email = forms.EmailField(
         label="Email",
-        widget=forms.EmailInput(attrs={"class": "form-control", 'placeholder': "Email"}),
+        widget=forms.EmailInput(attrs={"class": "form-control mb-2", 'placeholder': "Email"}),
     )
 
     group = forms.ChoiceField(
         choices=[('owner', 'Owner'), ('repairer', 'Repairer')],
         widget=forms.RadioSelect(
-            attrs={"class": "", },
+            attrs={"class": "mb-2", },
         ),
         initial="owner"
     )
     password1 = forms.CharField(
         label='Password',
         widget=forms.PasswordInput(
-            attrs={"class": "form-control", 'placeholder': "Password"}, ),
+            attrs={"class": "form-control mb-2", 'placeholder': "Password"}, ),
     )
     password2 = forms.CharField(
         widget=forms.PasswordInput(
-            attrs={"class": "form-control", 'placeholder': "Password"}, ),
+            attrs={"class": "form-control mb-2", 'placeholder': "Password"}, ),
     )
 
     class Meta:

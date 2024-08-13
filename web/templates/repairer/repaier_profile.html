@@ -123,9 +123,10 @@
                          <a href="" class="link_master text-secondary"  data-toggle="modal" data-target="#exampleModal" title="{{ b.pk }}">
                              <i class="fas fa-pen text-secondary" style='font-size:14px'></i>
                          </a>
-
                      {% else %}
-                        <button class="btn btn-lg btn-block mycolor m-2 p-2 waves-effect waves-light" data-toggle="modal" data-target="#exampleModal" title="{{ b.pk }}"> Appoint a master</button>
+                        <a href="" class="link_master text-secondary"  data-toggle="modal" data-target="#exampleModal" title="{{ b.pk }}">
+                            <i class="fas fa-pen text-secondary" style='font-size:14px'>Appoint master</i>
+                         </a>
                      {% endif %}
 
                 </div>

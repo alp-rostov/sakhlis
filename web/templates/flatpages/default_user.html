@@ -122,7 +122,10 @@ top: 0;
     <li class="nav-item mr-4">
         <a class="nav-link" href="">Statistica</a>
     </li>
-
+{% else %}
+ <li class="nav-item mr-4">
+        <a class="nav-link" href="{% url 'home' %}">Main</a>
+    </li>
 {% endif%}
 
 
