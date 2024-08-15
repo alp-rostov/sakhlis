@@ -30,11 +30,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 #     }
 # }
 
-
-
-
-
-
 CELERY_BROKER_URL = ''
 CELERY_RESULT_BACKEND = ''
 CELERY_ACCEPT_CONTENT = ['application/json']

@@ -34,7 +34,7 @@ SITE_ID = 1
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.locale.LocaleMiddleware',  # for translate
+    # 'django.middleware.locale.LocaleMiddleware',  # for translate
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -99,17 +99,8 @@ REST_FRAMEWORK = {
 
 
 
-LANGUAGE_CODE = 'ru'
+LANGUAGE_CODE = 'en'
 
-LANGUAGES = [
-    ('ka', _('Georgian')),
-    ('ru', _('Russian')),
-    ('en', _('English')),
-]
-
-LOCALE_PATHS = [
-    os.path.join(BASE_DIR, 'locale')
-]
 
 
 

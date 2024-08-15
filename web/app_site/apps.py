@@ -4,7 +4,7 @@ from django.apps import AppConfig
 class AppSiteConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
     name = 'app_site'
-    verbose_name = 'Система учета заказов'
+    verbose_name = 'Order accounting system'
 
     def ready(self):
-        pass
+        import app_site.signals
