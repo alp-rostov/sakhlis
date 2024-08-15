@@ -22,6 +22,7 @@ from .forms import *
 from .repository import DataFromRepairerList, DataFromOrderList, DataFromInvoice, DataFromUserProfile
 from .serialaizers import StreetModelSerializer, OrderStatusSerializer, InvoiceSerializer, UserSerializer, \
     UpdateMasterSerializer
+from .tasks import send_order_information
 from .utils import *
 
 from rest_framework import serializers, generics
@@ -185,6 +186,9 @@ class OrderCreate(BaseClassExeption, CreateView):
                 form.instance.customer_id = customer
 
             form.save()
+
+
+
             return JsonResponse({'message': f'<h2>Благодарим Вас за заявку!</h1><h3>Заявка № {form.instance.pk} отправлена успешно!</h2>',
                                  'contact': f'<h5>Ваш менеджер мастер Сергей: <br><img src="/media/masters/51.jpg" class="rounded-circle" width="100">.</h5>'
                                             f'Вы можете написать ему, уточнить детали, отправить фото работ или геопозицию:<br>'

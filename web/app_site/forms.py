@@ -18,7 +18,7 @@ class ApartmentForm(forms.ModelForm):
     )
     address_num = forms.CharField(
         label='Appartment',
-        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Appartment", 'maxlength': 10}),
+        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Apartment", 'maxlength': 10}),
         required=False
     )
     notes = forms.CharField(

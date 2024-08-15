@@ -9,8 +9,8 @@ def send_post_new_order(sender, instance, created, **kwargs):
     if created:
         print('-----------------------------')
         # task_save_location_.apply_async([instance.pk], countdown=5, expires=20)
-        send_order_information.apply_async([instance.pk], countdown=5, expires=20)
-
+        # send_order_information.apply_async([instance.pk], countdown=5, expires=20)
+        send_order_information(instance.pk)
 
 # @receiver(post_save, sender=User)
 # def create_user_profile(sender, instance, created, **kwargs):

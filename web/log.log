@@ -2520,3 +2520,225 @@ WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
 WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
 WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
 INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/web/web/settings.py changed, reloading.
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/web/api/models.py changed, reloading.
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/web/app_site/tasks.py changed, reloading.
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py changed, reloading.
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/
+ERROR:django.request:Internal Server Error: /save_list
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 522, in save_list_jobs
+    instance.save()
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/base.py", line 892, in save_base
+    post_save.send(
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 176, in send
+    return [
+           ^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/signals.py", line 12, in send_post_new_order
+    send_order_information.apply_async([instance.pk], countdown=5, expires=20)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'function' object has no attribute 'apply_async'
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/web/app_site/signals.py changed, reloading.
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/web/app_site/tasks.py changed, reloading.
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/web/app_site/tasks.py changed, reloading.
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/web/app_site/tasks.py changed, reloading.
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py changed, reloading.
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py changed, reloading.
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/web/app_site/signals.py changed, reloading.
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/web/app_site/signals.py changed, reloading.
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/web/app_site/signals.py changed, reloading.
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/
+ERROR:django.request:Internal Server Error: /save_list
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 522, in save_list_jobs
+    instance.save()
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/base.py", line 892, in save_base
+    post_save.send(
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 176, in send
+    return [
+           ^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/signals.py", line 13, in send_post_new_order
+    send_order_information(instance.pk)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/tasks.py", line 20, in send_order_information
+    bot.send_message(CHAT_ID_, text, parse_mode='HTML')
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/telebot/__init__.py", line 1549, in send_message
+    apihelper.send_message(
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/telebot/apihelper.py", line 264, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/telebot/apihelper.py", line 162, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/telebot/apihelper.py", line 189, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 404. Description: Not Found
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/web/app_site/tasks.py changed, reloading.
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/
+ERROR:django.request:Internal Server Error: /save_list
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 522, in save_list_jobs
+    instance.save()
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/base.py", line 892, in save_base
+    post_save.send(
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 176, in send
+    return [
+           ^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/signals.py", line 13, in send_post_new_order
+    send_order_information(instance.pk)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/tasks.py", line 20, in send_order_information
+    bot.send_message(CHAT_ID_, text, parse_mode='HTML')
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/telebot/__init__.py", line 1549, in send_message
+    apihelper.send_message(
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/telebot/apihelper.py", line 264, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/telebot/apihelper.py", line 162, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/telebot/apihelper.py", line 189, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 404. Description: Not Found
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/web/app_site/tasks.py changed, reloading.
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/web/app_site/tasks.py changed, reloading.
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/web/app_site/tasks.py changed, reloading.
+WARNING:django.request:Not Found: /media/
+ERROR:django.request:Internal Server Error: /save_list
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 522, in save_list_jobs
+    instance.save()
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/base.py", line 892, in save_base
+    post_save.send(
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 176, in send
+    return [
+           ^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/signals.py", line 13, in send_post_new_order
+    send_order_information(instance.pk)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/tasks.py", line 20, in send_order_information
+    f'АДРЕС: {instance.apartment_id.address_street_app},{instance.apartment_id.address_num}, {instance.apartment_id.city}, ' \
+                                                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Apartment' object has no attribute 'city'
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/web/app_site/tasks.py changed, reloading.
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/web/app_site/tasks.py changed, reloading.
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/web/app_site/forms.py changed, reloading.
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/web/app_site/tasks.py changed, reloading.
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/web/app_site/tasks.py changed, reloading.
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/web/app_site/tasks.py changed, reloading.
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
+INFO:django.utils.autoreload:/home/alprostov/PycharmProjects/sakhlis/web/app_site/tasks.py changed, reloading.
+WARNING:django.request:Not Found: /media/
+WARNING:django.request:Not Found: /media/masters/unknown_person.jpg
