@@ -106,9 +106,10 @@ server{
 ---------------------------------------
 Настройка supervisor
 cd /etc/supervisor/conf.d/
+
 sudo update-rc.d supervisor enable
 sudo service supervisor start
-sudo supervisorctl reread
+sudo supervisorctl reread  (подцепить файл в папке conf.d)
 sudo supervisorctl update
 sudo supervisorctl status project
 sudo supervisorctl restart project

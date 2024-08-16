@@ -30,11 +30,18 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 #     }
 # }
 
-CELERY_BROKER_URL = ''
-CELERY_RESULT_BACKEND = ''
+
+CELERY_BROKER_URL = 'redis://localhost:6379'
+CELERY_RESULT_BACKEND = 'redis://localhost:6379'
 CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
+
+# Celery Configuration Options
+CELERY_TIMEZONE = "Australia/Tasmania"
+CELERY_TASK_TRACK_STARTED = True
+CELERY_TASK_TIME_LIMIT = 30 * 60
+
 
 EMAIL_HOST = ''  # адрес сервера почты для всех один и тот же
 EMAIL_PORT = 465  # порт smtp сервера тоже одинаковый
