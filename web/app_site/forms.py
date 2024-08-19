@@ -131,7 +131,8 @@ class InvoiceForm(forms.ModelForm):
 class OrderCustomerForm(forms.ModelForm):
     class Meta:
         model = UserProfile
-        fields = ('customer_name', 'phone', 'telegram')
+        fields = ('customer_name', 'phone', 'telegram', 'whatsapp')
+
 
 
 class OrderForm(forms.ModelForm):

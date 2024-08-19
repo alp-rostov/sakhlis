@@ -67,8 +67,8 @@
 
     <div class="tab">
         <!--menu apartments-->
-        <input id="tab-btn-0"  name="tab-btn" type="radio" value="">
-        <label for="tab-btn-0">Create new request</label>
+        <input id="tab-btn-0" checked  name="tab-btn" type="radio" value="">
+        <label for="tab-btn-0" >Create new request</label>
 
         {% for i in order_list %}
         <input id="tab-btn-{{ i.grouper }}" checked name="tab-btn" type="radio" value="">

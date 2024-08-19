@@ -4,7 +4,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['91.239.206.142', '127.0.0.1']
+ALLOWED_HOSTS = ['91.239.206.142', 'www.sakhlis-remonti.ge', 'www.sakhlis-remonti.ge', 'sakhlis-remonti.ge', 'sakhlis-remonti.ge', '127.0.0.1']
 
 DATABASES = {
     'default': {
@@ -12,6 +12,8 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
  }
+
+CSRF_TRUSTED_ORIGINS = ['http://sakhlis-remonti.ge', 'https://sakhlis-remonti.ge','https://www.sakhlis-remonti.ge', 'http://www.sakhlis-remonti.ge']
 
 STATIC_URL = '/static/'
 STATIC_DIR=os.path.join(BASE_DIR, 'staticfiles')
@@ -31,8 +33,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # }
 
 
-CELERY_BROKER_URL = 'redis://localhost:6379'
-CELERY_RESULT_BACKEND = 'redis://localhost:6379'
+CELERY_BROKER_URL = 'redis://127.0.0.1:6379'
+CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379'
 CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'

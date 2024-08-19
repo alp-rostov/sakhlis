@@ -187,8 +187,6 @@ class OrderCreate(BaseClassExeption, CreateView):
 
             form.save()
 
-
-
             return JsonResponse({'message': f'<h2>Благодарим Вас за заявку!</h1><h3>Заявка № {form.instance.pk} отправлена успешно!</h2>',
                                  'contact': f'<h5>Ваш менеджер мастер Сергей: <br><img src="/media/masters/51.jpg" class="rounded-circle" width="100">.</h5>'
                                             f'Вы можете написать ему, уточнить детали, отправить фото работ или геопозицию:<br>'
