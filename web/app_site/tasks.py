@@ -1,19 +1,16 @@
 import os
 import telebot
 from celery import shared_task
-from django.utils.encoding import force_str
+from django.core.mail import EmailMultiAlternatives
+from django.template.loader import render_to_string
 
 from .models import OrderList
 
-
-
-
 @shared_task
-def send_order_information(inst: int,TOKEN_:str, CHAT_ID_:str):
+def send_to_telegrambot(inst: int,TOKEN_:str, CHAT_ID_:str):
     """" send order`s information to telegram group"""
     instance = OrderList.objects.get(pk=inst)
-
-    subject_ = f'<b>Заказ на работы № {instance.pk} от {instance.time_in.strftime("%m/%d/%Y")}</b>'
+    subject_ = f'<b>Order № {instance.pk} от {instance.time_in.strftime("%m/%d/%Y")}</b>'
     text = f'\n ' \
            f'Name: {instance.customer_id.customer_name} \n' \
            f'Phone: {instance.customer_id.phone} \n ' \
@@ -24,3 +21,21 @@ def send_order_information(inst: int,TOKEN_:str, CHAT_ID_:str):
 
     bot = telebot.TeleBot( TOKEN_)
     bot.send_message(CHAT_ID_,  subject_+text, parse_mode='HTML')
+
+
+
+@shared_task
+def send_email(pk:int, username:str, email:str,):
+    html_content = render_to_string(
+        'emails/registration.html',
+        {'pk': pk, 'username': username }
+    )
+    subject_ = f'User registration | sakhlis-remonti.ge'
+    msg = EmailMultiAlternatives(
+        subject=subject_,
+        from_email='admin@sakhlis-remonti.ge',
+        to=[email],
+        )
+    msg.attach_alternative(html_content, "text/html")  # add html
+
+    msg.send()  # send email

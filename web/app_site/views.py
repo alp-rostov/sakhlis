@@ -22,12 +22,11 @@ from .forms import *
 from .repository import DataFromRepairerList, DataFromOrderList, DataFromInvoice, DataFromUserProfile
 from .serialaizers import StreetModelSerializer, OrderStatusSerializer, InvoiceSerializer, UserSerializer, \
     UpdateMasterSerializer
-from .tasks import send_order_information
 from .utils import *
 
-from rest_framework import serializers, generics
+from rest_framework import generics
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger('django')
 
 
 class ApartmentList(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, ListView):
@@ -151,6 +150,7 @@ class OrderCreate(BaseClassExeption, CreateView):
     success_url = 'home'
 
     def get_context_data(self, **kwargs):
+
         context = super().get_context_data(**kwargs)
         context['form_appart'] = ApartmentForm
         context['form_customer'] = CustomerForm
@@ -410,12 +410,12 @@ class Statistica(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin,
 
 
 class UserAuthorizationView(LoginView):
+    template_name = 'account/login.html'
     def get_success_url(self):
         super().get_success_url()
         dict_choice_url = {'repairer': reverse_lazy('user', kwargs={'pk': self.request.user.pk}),
                            'owner': reverse_lazy('apartment')}
         return dict_choice_url[self.request.user.groups.first().name]
-
 
 class UserRegisterView(CreateView):
     """ Registration of repairer """
@@ -424,24 +424,12 @@ class UserRegisterView(CreateView):
     success_url = reverse_lazy('home')
     template_name = 'account/register.html'
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['profile_form'] = CustomerForm
-        return context
-
     def form_valid(self, form):
-        try:
-            with transaction.atomic():
-                self.object = form.save()
-                group_ = self.request.POST.get('group')
-                my_group = Group.objects.get(name=group_)
-                my_group.user_set.add(self.object)
-                profile = CustomerForm(self.request.POST, self.request.FILES).save(commit=False)
-                profile.user = self.object
-                profile.save()
-                return redirect('home')
-        except Exception as e:
-            return redirect('../404.html')
+        with transaction.atomic():
+            self.object = form.save()
+            my_group = Group.objects.get(name='owner')
+            my_group.user_set.add(self.object)
+            return redirect('home')
 
 
 def CreateIvoicePDF(request, **kwargs):

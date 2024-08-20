@@ -1,5 +1,5 @@
 import os
-
+from django.utils.encoding import force_str
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 DEBUG = False
@@ -45,10 +45,9 @@ CELERY_TASK_TRACK_STARTED = True
 CELERY_TASK_TIME_LIMIT = 30 * 60
 
 
-EMAIL_HOST = ''  # адрес сервера почты для всех один и тот же
-EMAIL_PORT = 465  # порт smtp сервера тоже одинаковый
-EMAIL_HOST_USER = ''  # ваше имя пользователя, например, если ваша почта user@yandex.ru, то сюда надо писать user, иными словами, это всё то что идёт до собаки
-EMAIL_HOST_PASSWORD = ''  # пароль от почты
-EMAIL_USE_SSL = True  # Яндекс использует ssl, подробнее о том, что это, почитайте в дополнительных источниках, но включать его здесь обязательно
 
-
+EMAIL_HOST = 'mail.sakhlis-remonti.ge'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'admin@sakhlis-remonti.ge'
+EMAIL_HOST_PASSWORD = force_str(os.environ.get('EMAIL_PASSW'))
+EMAIL_USE_SSL = False

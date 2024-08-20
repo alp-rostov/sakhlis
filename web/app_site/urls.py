@@ -20,7 +20,7 @@ urlpatterns = [
     path('invoice/delete-order/<int:pk>', OrderDelete.as_view(), name='delete-order'),
     # path('deleteservice/<int:invoice_pk>', DeleteIvoiceServiceAPI.as_view(), name='delete-item-of-order'),
 
-    path('login/', UserAuthorizationView.as_view(template_name='account/login.html'), name='login'),
+    path('login/', UserAuthorizationView.as_view(), name='login'),
     path('logout/', LogoutView.as_view(template_name='account/logout.html'), name='logout'),
 
     path('register/', UserRegisterView.as_view(), name='signup'),

@@ -180,13 +180,6 @@ class UserRegisterForm(UserCreationForm):
         widget=forms.EmailInput(attrs={"class": "form-control mb-2", 'placeholder': "Email"}),
     )
 
-    group = forms.ChoiceField(
-        choices=[('owner', 'Owner'), ('repairer', 'Repairer')],
-        widget=forms.RadioSelect(
-            attrs={"class": "mb-2", },
-        ),
-        initial="owner"
-    )
     password1 = forms.CharField(
         label='Password',
         widget=forms.PasswordInput(
@@ -203,5 +196,4 @@ class UserRegisterForm(UserCreationForm):
                   "email",
                   "password1",
                   "password2",
-                  'group'
                   )

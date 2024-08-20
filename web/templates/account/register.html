@@ -10,75 +10,8 @@
     {% csrf_token %}
     <div class="">
         <i class="" ></i>
-        {{ form.username.errors }}
-        {{ form.username }}
-        <span id="0"></span>
+        {{ form }}
     </div>
-    <div class="">
-        <i class="" ></i>
-        {{ form.email.errors }}
-        {{ form.email }}
-        <span id="0"></span>
-    </div>
-    <div class="">
-        <i class="" ></i>
-        {{ form.group.error }}
-        {{ form.group }}
-        <span id="0"></span>
-    </div>
-    <div class="">
-        <i class="" ></i>
-        {{ form.password1.error }}
-        {{ form.password1 }}
-        <span id="0"></span>
-    </div>
-    <div class="">
-        <i class="" ></i>
-        {{ form.password2.error }}
-        {{ form.password2 }}
-        <span id="0"></span>
-    </div>
-<hr>
-
-        <div class="">
-        <i class="" ></i>
-        {{ profile_form.customer_name }}
-        <span id="0"></span>
-        </div>
-
-        <div class="">
-        <i class="" ></i>
-        {{ profile_form.profile }}
-        <span id="0"></span>
-        </div>
-
-        <div class="">
-        <i class="" ></i>
-        {{ profile_form.phone }}
-        <span id="0"></span>
-        </div>
-
-        <div class="">
-        <i class="" ></i>
-        {{ profile_form.telegram }}
-        <span id="0"></span>
-        </div>
-
-
-            <div class="">
-        <i class="" ></i>
-        {{ profile_form.city }}
-        <span id="0"></span>
-        </div>
-
-        <div class="">
-        <i class="" >Photo: </i>
-        {{ profile_form.lable }}
-
-        {{ profile_form.foto }}
-        <span id="0"></span>
-        </div>
-
 
     <button type="submit" class="btn m-2 p-2">Registration</button>
 </form>

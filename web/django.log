@@ -1,0 +1,668 @@
+19/Aug/2024 10:58:35    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+19/Aug/2024 10:58:37    INFO    basehttp    "GET / HTTP/1.1" 200 38404   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 10:58:40    INFO    basehttp    "GET /list_order HTTP/1.1" 200 923777   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 10:58:40    WARNING    log    Not Found: /media/masters/unknown_person.jpg   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+19/Aug/2024 10:58:40    WARNING    basehttp    "GET /media/masters/unknown_person.jpg HTTP/1.1" 404 17890   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 10:58:40    WARNING    log    Not Found: /media/masters/unknown_person.jpg   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+19/Aug/2024 10:58:40    WARNING    basehttp    "GET /media/masters/unknown_person.jpg HTTP/1.1" 404 17890   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 10:58:42    INFO    basehttp    "GET /list_order/1845 HTTP/1.1" 200 29757   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 10:58:45    INFO    basehttp    "GET /stat/ HTTP/1.1" 200 200818   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 10:59:14    INFO    basehttp    "GET /stat/ HTTP/1.1" 200 200818   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 10:59:14    INFO    basehttp    "GET /apartments/ HTTP/1.1" 200 13453   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 10:59:15    INFO    basehttp    "GET /clients/ HTTP/1.1" 200 19418   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 10:59:16    INFO    basehttp    "GET /list_order HTTP/1.1" 200 923777   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 10:59:16    WARNING    log    Not Found: /media/masters/unknown_person.jpg   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+19/Aug/2024 10:59:16    WARNING    basehttp    "GET /media/masters/unknown_person.jpg HTTP/1.1" 404 17890   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 10:59:16    INFO    basehttp    "GET /user/51 HTTP/1.1" 200 24318   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:14:35    INFO    basehttp    "GET /user/51 HTTP/1.1" 200 24318   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:14:37    INFO    basehttp    "GET /user/51 HTTP/1.1" 200 24318   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:14:39    INFO    basehttp    "GET /list_order HTTP/1.1" 200 923777   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:14:39    WARNING    log    Not Found: /media/masters/unknown_person.jpg   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+19/Aug/2024 11:14:39    WARNING    basehttp    "GET /media/masters/unknown_person.jpg HTTP/1.1" 404 17890   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:14:41    INFO    basehttp    "GET /user/51 HTTP/1.1" 200 24318   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:16:50    INFO    basehttp    "GET /list_order HTTP/1.1" 200 923777   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:16:50    WARNING    log    Not Found: /media/masters/unknown_person.jpg   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+19/Aug/2024 11:16:50    WARNING    basehttp    "GET /media/masters/unknown_person.jpg HTTP/1.1" 404 17890   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:16:51    INFO    basehttp    "GET /clients/ HTTP/1.1" 200 19418   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:16:52    INFO    basehttp    "GET /apartments/ HTTP/1.1" 200 13453   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:16:53    INFO    basehttp    "GET /stat/ HTTP/1.1" 200 200818   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:16:55    INFO    basehttp    "GET /user/51 HTTP/1.1" 200 24318   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:16:56    INFO    basehttp    "GET /list_order HTTP/1.1" 200 923777   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:16:56    WARNING    log    Not Found: /media/masters/unknown_person.jpg   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+19/Aug/2024 11:16:56    WARNING    basehttp    "GET /media/masters/unknown_person.jpg HTTP/1.1" 404 17890   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:16:57    INFO    basehttp    "GET /clients/ HTTP/1.1" 200 19418   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:32:28    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+19/Aug/2024 11:32:32    INFO    basehttp    "GET /list_order HTTP/1.1" 200 923777   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:32:32    WARNING    log    Not Found: /media/masters/unknown_person.jpg   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+19/Aug/2024 11:32:32    WARNING    basehttp    "GET /media/masters/unknown_person.jpg HTTP/1.1" 404 17890   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:32:32    WARNING    log    Not Found: /media/masters/unknown_person.jpg   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+19/Aug/2024 11:32:32    WARNING    basehttp    "GET /media/masters/unknown_person.jpg HTTP/1.1" 404 17890   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:32:32    WARNING    log    Not Found: /favicon.ico   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+19/Aug/2024 11:32:32    WARNING    basehttp    "GET /favicon.ico HTTP/1.1" 404 17590   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:32:34    INFO    basehttp    "GET /user/51 HTTP/1.1" 200 24318   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:33:21    INFO    basehttp    "GET /user/51 HTTP/1.1" 200 24318   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:33:22    INFO    basehttp    "GET /logout/ HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:33:22    INFO    basehttp    "GET / HTTP/1.1" 200 38479   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:33:25    INFO    basehttp    "GET /login/ HTTP/1.1" 200 12554   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:33:31    INFO    basehttp    "POST /login/ HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:33:31    INFO    basehttp    "GET /user/51 HTTP/1.1" 200 24318   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:33:44    INFO    basehttp    "GET /logout/ HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:33:44    INFO    basehttp    "GET / HTTP/1.1" 200 38479   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:33:45    INFO    basehttp    "GET /login/ HTTP/1.1" 200 12554   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:33:51    INFO    basehttp    "POST /login/ HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:33:52    INFO    basehttp    "GET /owner/apartment HTTP/1.1" 200 121751   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:33:52    INFO    basehttp    "GET /media/images/appartment/photo_2024-07-10_22-46-02.jpg HTTP/1.1" 200 132043   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:33:52    INFO    basehttp    "GET /media/images/appartment/photo_2024-05-15_17-47-44.jpg HTTP/1.1" 200 167408   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:33:52    INFO    basehttp    "GET /media/images/appartment/photo_2024-05-14_19-59-52.jpg HTTP/1.1" 200 134491   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:33:52    INFO    basehttp    "GET /media/images/appartment/photo_2024-05-14_20-05-37.jpg HTTP/1.1" 200 135501   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:33:52    INFO    basehttp    "GET /media/images/appartment/photo_2024-07-02_17-38-29.jpg HTTP/1.1" 200 136289   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:33:52    INFO    basehttp    "GET /media/images/appartment/photo_2024-05-14_20-08-28.jpg HTTP/1.1" 200 152876   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:33:52    INFO    basehttp    "GET /media/images/appartment/photo_2024-05-14_19-57-04.jpg HTTP/1.1" 200 101109   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:33:52    INFO    basehttp    "GET /media/images/appartment/photo_2024-05-14_20-03-07.jpg HTTP/1.1" 200 169481   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:33:52    INFO    basehttp    "GET /media/images/appartment/photo_2024-05-14_19-58-41.jpg HTTP/1.1" 200 112284   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:33:55    INFO    basehttp    "GET /logout/ HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:33:55    INFO    basehttp    "GET / HTTP/1.1" 200 38479   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:36:22    INFO    basehttp    "GET /login/ HTTP/1.1" 200 12554   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:36:26    INFO    basehttp    "POST /login/ HTTP/1.1" 200 12563   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:36:27    INFO    basehttp    "POST /login/ HTTP/1.1" 200 12563   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:36:28    INFO    basehttp    "POST /login/ HTTP/1.1" 200 12563   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:36:30    INFO    basehttp    "POST /login/ HTTP/1.1" 200 12562   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:36:31    INFO    basehttp    "POST /login/ HTTP/1.1" 200 12562   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:37:57    INFO    basehttp    "POST /login/ HTTP/1.1" 200 12563   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:37:58    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+19/Aug/2024 11:37:59    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+19/Aug/2024 11:38:30    INFO    basehttp    "POST /login/ HTTP/1.1" 200 12565   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:38:30    WARNING    basehttp    "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:38:30    WARNING    basehttp    "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:38:31    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+19/Aug/2024 11:38:32    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+19/Aug/2024 11:38:47    INFO    basehttp    "GET / HTTP/1.1" 200 38479   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:38:47    WARNING    basehttp    "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:38:47    WARNING    basehttp    "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:38:50    INFO    basehttp    "GET /login/ HTTP/1.1" 200 12550   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:38:50    WARNING    basehttp    "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:38:50    WARNING    basehttp    "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:38:50    WARNING    basehttp    "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:38:52    INFO    basehttp    "POST /login/ HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:38:52    INFO    basehttp    "GET /list_order?work_status=RCV HTTP/1.1" 200 923496   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:38:52    WARNING    basehttp    "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:38:52    INFO    basehttp    "GET /media/masters/145.jpg HTTP/1.1" 200 17963   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:38:52    INFO    basehttp    "GET /media/masters/51.jpg HTTP/1.1" 200 14689   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:38:52    INFO    basehttp    "GET /media/masters/144.jpg HTTP/1.1" 200 21612   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:38:52    INFO    basehttp    "GET /media/masters/100.jpg HTTP/1.1" 200 96940   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:38:52    WARNING    basehttp    "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:38:52    WARNING    log    Not Found: /media/masters/unknown_person.jpg   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+19/Aug/2024 11:38:52    WARNING    basehttp    "GET /media/masters/unknown_person.jpg HTTP/1.1" 404 17890   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:38:53    WARNING    basehttp    "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:38:56    INFO    basehttp    "GET /login/ HTTP/1.1" 200 13006   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:38:56    WARNING    basehttp    "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:38:56    WARNING    basehttp    "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:38:56    WARNING    basehttp    "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:39:00    INFO    basehttp    "POST /login/ HTTP/1.1" 200 13026   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:39:00    WARNING    basehttp    "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:39:00    WARNING    basehttp    "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:39:08    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+19/Aug/2024 11:39:09    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+19/Aug/2024 11:39:55    INFO    basehttp    "POST /login/ HTTP/1.1" 200 12615   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:40:10    INFO    basehttp    "POST /login/ HTTP/1.1" 200 13299   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:40:35    INFO    basehttp    "POST /login/ HTTP/1.1" 200 13158   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:41:05    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+19/Aug/2024 11:41:07    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+19/Aug/2024 11:41:09    INFO    basehttp    "POST /login/ HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:41:09    INFO    basehttp    "GET /owner/apartment HTTP/1.1" 200 121751   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:41:09    INFO    basehttp    "GET /media/images/appartment/photo_2024-05-14_20-05-37.jpg HTTP/1.1" 200 135501   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:41:09    INFO    basehttp    "GET /media/images/appartment/photo_2024-05-14_20-08-28.jpg HTTP/1.1" 200 152876   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:41:09    INFO    basehttp    "GET /media/images/appartment/photo_2024-07-02_17-38-29.jpg HTTP/1.1" 200 136289   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:41:09    INFO    basehttp    "GET /media/images/appartment/photo_2024-05-15_17-47-44.jpg HTTP/1.1" 200 167408   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:41:09    INFO    basehttp    "GET /media/images/appartment/photo_2024-07-10_22-46-02.jpg HTTP/1.1" 200 132043   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:41:09    INFO    basehttp    "GET /media/images/appartment/photo_2024-05-14_19-59-52.jpg HTTP/1.1" 200 134491   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:41:09    INFO    basehttp    "GET /media/images/appartment/photo_2024-05-14_20-03-07.jpg HTTP/1.1" 200 169481   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:41:09    INFO    basehttp    "GET /media/images/appartment/photo_2024-05-14_19-58-41.jpg HTTP/1.1" 200 112284   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:41:09    INFO    basehttp    "GET /media/images/appartment/photo_2024-05-14_19-57-04.jpg HTTP/1.1" 200 101109   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:41:14    WARNING    log    Forbidden (CSRF token from POST incorrect.): /login/   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+19/Aug/2024 11:41:14    WARNING    basehttp    "POST /login/ HTTP/1.1" 403 11816   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:41:16    INFO    basehttp    "GET /login/ HTTP/1.1" 200 12994   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:41:19    INFO    basehttp    "GET /login/ HTTP/1.1" 200 12994   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:41:31    INFO    basehttp    "POST /login/ HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:41:31    INFO    basehttp    "GET /user/51 HTTP/1.1" 200 24318   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:41:31    INFO    basehttp    "GET /media/masters/146.jpg HTTP/1.1" 200 32498   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:42:37    INFO    basehttp    "GET /user/51 HTTP/1.1" 200 24318   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:42:39    INFO    basehttp    "GET /logout/ HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:42:39    INFO    basehttp    "GET / HTTP/1.1" 200 38479   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:42:41    INFO    basehttp    "GET /register/ HTTP/1.1" 200 15132   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:43:34    INFO    basehttp    "POST /register/ HTTP/1.1" 200 15238   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:44:10    INFO    basehttp    "GET / HTTP/1.1" 200 38479   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:44:11    INFO    basehttp    "GET /register/ HTTP/1.1" 200 15135   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:44:15    INFO    basehttp    "GET / HTTP/1.1" 200 38479   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:44:16    INFO    basehttp    "GET /login/ HTTP/1.1" 200 12542   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:44:24    INFO    basehttp    "GET / HTTP/1.1" 200 38479   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:44:25    INFO    basehttp    "GET /register/ HTTP/1.1" 200 15135   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:45:33    INFO    basehttp    "GET /register/ HTTP/1.1" 200 15135   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:45:34    INFO    basehttp    "GET /register/ HTTP/1.1" 200 15135   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:47:32    INFO    basehttp    "GET / HTTP/1.1" 200 38479   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:47:33    INFO    basehttp    "GET /login/ HTTP/1.1" 200 12542   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:47:37    INFO    basehttp    "POST /login/ HTTP/1.1" 200 12697   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:48:09    INFO    basehttp    "POST /login/ HTTP/1.1" 200 12702   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:48:12    INFO    basehttp    "GET / HTTP/1.1" 200 38479   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:48:14    INFO    basehttp    "GET /login/ HTTP/1.1" 200 12547   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:48:18    INFO    basehttp    "POST /login/ HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:48:18    INFO    basehttp    "GET /owner/apartment HTTP/1.1" 200 121751   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:48:18    INFO    basehttp    "GET /media/images/appartment/photo_2024-05-14_20-08-28.jpg HTTP/1.1" 200 152876   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:48:18    INFO    basehttp    "GET /media/masters/51.jpg HTTP/1.1" 200 14689   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:48:18    INFO    basehttp    "GET /media/images/appartment/photo_2024-05-15_17-47-44.jpg HTTP/1.1" 200 167408   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:48:18    INFO    basehttp    "GET /media/images/appartment/photo_2024-05-14_20-05-37.jpg HTTP/1.1" 200 135501   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:48:18    INFO    basehttp    "GET /media/images/appartment/photo_2024-07-02_17-38-29.jpg HTTP/1.1" 200 136289   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:48:18    INFO    basehttp    "GET /media/images/appartment/photo_2024-07-10_22-46-02.jpg HTTP/1.1" 200 132043   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:48:18    INFO    basehttp    "GET /media/masters/100.jpg HTTP/1.1" 200 96940   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:48:18    INFO    basehttp    "GET /media/images/appartment/photo_2024-05-14_19-59-52.jpg HTTP/1.1" 200 134491   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:48:18    INFO    basehttp    "GET /media/images/appartment/photo_2024-05-14_20-03-07.jpg HTTP/1.1" 200 169481   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:48:18    INFO    basehttp    "GET /media/images/appartment/photo_2024-05-14_19-58-41.jpg HTTP/1.1" 200 112284   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:48:18    INFO    basehttp    "GET /media/images/appartment/photo_2024-05-14_19-57-04.jpg HTTP/1.1" 200 101109   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:48:20    INFO    basehttp    "GET /login/ HTTP/1.1" 200 12999   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:48:21    INFO    basehttp    "GET /logout/ HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:48:21    INFO    basehttp    "GET / HTTP/1.1" 200 38479   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:48:23    INFO    basehttp    "GET /login/ HTTP/1.1" 200 12547   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:48:26    INFO    basehttp    "POST /login/ HTTP/1.1" 200 12702   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Aug/2024 11:57:33    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/app_site/signals.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+19/Aug/2024 11:57:34    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+19/Aug/2024 12:04:05    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/app_site/tasks.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+19/Aug/2024 12:04:06    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 16:35:55    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 16:39:24    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 16:41:36    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/app_site/signals.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 16:41:37    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 16:41:42    INFO    basehttp    "GET / HTTP/1.1" 200 38449   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:41:42    INFO    basehttp    "GET /static/css/bootstrap.min.css HTTP/1.1" 200 140936   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:41:42    INFO    basehttp    "GET /static/css/custom.css HTTP/1.1" 304 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:41:42    INFO    basehttp    "GET /static/css/owl.carousel.min.css HTTP/1.1" 304 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:41:42    INFO    basehttp    "GET /static/images/flag_ru.png HTTP/1.1" 304 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:41:42    INFO    basehttp    "GET /static/images/flag_en.png HTTP/1.1" 304 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:41:42    INFO    basehttp    "GET /static/images/flag_ge.png HTTP/1.1" 304 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:41:42    INFO    basehttp    "GET /static/images/instagram.png HTTP/1.1" 200 79716   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:41:42    INFO    basehttp    "GET /static/images/telegram.gif HTTP/1.1" 200 38309   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:41:42    INFO    basehttp    "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 200 87412   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:41:42    INFO    basehttp    "GET /static/js/bootstrap.min.js HTTP/1.1" 200 51039   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:41:42    INFO    basehttp    "GET /static/js/mdb.min.js HTTP/1.1" 200 207332   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:41:42    INFO    basehttp    "GET /static/js/owl.carousel.min.js HTTP/1.1" 200 44342   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:41:42    INFO    basehttp    "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 304 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:41:42    INFO    basehttp    "GET /static/js/custom.js HTTP/1.1" 304 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:41:42    INFO    basehttp    "GET /static/images/whatsapp.png HTTP/1.1" 200 167171   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:41:42    INFO    basehttp    "GET /static/images/card.jpg HTTP/1.1" 304 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:41:42    INFO    basehttp    "GET /static/fonts/broken-cable.svg HTTP/1.1" 304 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:41:42    INFO    basehttp    "GET /static/fonts/leak.svg HTTP/1.1" 304 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:41:43    INFO    basehttp    "GET /static/fonts/3d-buildings.svg HTTP/1.1" 304 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:41:43    INFO    basehttp    "GET /static/fonts/living-room.svg HTTP/1.1" 304 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:41:43    INFO    basehttp    "GET /static/fonts/washing-machine.svg HTTP/1.1" 304 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:41:43    INFO    basehttp    "GET /static/images/1.jpg HTTP/1.1" 200 68159   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:41:43    INFO    basehttp    "GET /static/images/2.jpg HTTP/1.1" 200 73588   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:41:43    INFO    basehttp    "GET /static/images/3.jpg HTTP/1.1" 200 64252   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:41:43    INFO    basehttp    "GET /static/images/o-mastere-na-chas.png HTTP/1.1" 200 149377   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:41:43    INFO    basehttp    "GET /static/images/underline1.png HTTP/1.1" 304 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:41:43    INFO    basehttp    "GET /static/images/master-na-chas_1.jpg HTTP/1.1" 200 323239   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:41:43    INFO    basehttp    "GET /static/images/usluga-master-na-chas.jpg HTTP/1.1" 200 159701   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:41:43    WARNING    log    Not Found: /favicon.ico   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+20/Aug/2024 16:41:43    WARNING    basehttp    "GET /favicon.ico HTTP/1.1" 404 17590   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:41:47    INFO    basehttp    "GET /list_order HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:41:47    INFO    basehttp    "GET /login/?next=/list_order HTTP/1.1" 200 12559   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:41:48    INFO    basehttp    "GET /static/css/fonts.css HTTP/1.1" 200 68940   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:41:48    INFO    basehttp    "GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 200 74256   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:41:51    INFO    basehttp    "GET /admin/ HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:41:51    INFO    basehttp    "GET /admin/login/?next=/admin/ HTTP/1.1" 200 13533   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:41:51    INFO    basehttp    "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:41:51    INFO    basehttp    "GET /static/admin/css/base.css HTTP/1.1" 200 21207   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:41:51    INFO    basehttp    "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:41:51    INFO    basehttp    "GET /static/admin/css/login.css HTTP/1.1" 200 958   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:41:51    INFO    basehttp    "GET /static/admin/css/responsive.css HTTP/1.1" 200 18557   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:41:51    INFO    basehttp    "GET /static/admin/js/theme.js HTTP/1.1" 200 1943   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:41:51    INFO    basehttp    "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:42:06    INFO    basehttp    "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:42:06    INFO    basehttp    "GET /admin/ HTTP/1.1" 200 22342   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:42:06    INFO    basehttp    "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:42:06    INFO    basehttp    "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:42:06    INFO    basehttp    "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:42:06    INFO    basehttp    "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:42:15    INFO    basehttp    "GET /admin/auth/user/ HTTP/1.1" 200 25832   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:42:15    INFO    basehttp    "GET /static/admin/css/changelists.css HTTP/1.1" 200 6584   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:42:15    INFO    basehttp    "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:42:15    INFO    basehttp    "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 8943   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:42:15    INFO    basehttp    "GET /static/admin/js/core.js HTTP/1.1" 200 5682   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:42:15    INFO    basehttp    "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:42:15    INFO    basehttp    "GET /static/admin/js/actions.js HTTP/1.1" 200 7872   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:42:15    INFO    basehttp    "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:42:15    INFO    basehttp    "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 292458   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:42:15    INFO    basehttp    "GET /admin/jsi18n/ HTTP/1.1" 200 3343   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:42:15    INFO    basehttp    "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:42:15    INFO    basehttp    "GET /static/admin/img/search.svg HTTP/1.1" 200 458   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:42:15    INFO    basehttp    "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:42:15    INFO    basehttp    "GET /static/admin/js/filters.js HTTP/1.1" 200 978   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:42:15    INFO    basehttp    "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:42:15    INFO    basehttp    "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:42:15    INFO    basehttp    "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:42:21    INFO    basehttp    "GET /admin/auth/user/51/change/ HTTP/1.1" 200 37595   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:42:21    INFO    basehttp    "GET /static/admin/css/forms.css HTTP/1.1" 200 8953   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:42:21    INFO    basehttp    "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:42:21    INFO    basehttp    "GET /static/admin/js/calendar.js HTTP/1.1" 200 8466   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:42:21    INFO    basehttp    "GET /static/admin/js/SelectBox.js HTTP/1.1" 200 4530   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:42:21    INFO    basehttp    "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 15292   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:42:21    INFO    basehttp    "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:42:21    INFO    basehttp    "GET /admin/jsi18n/ HTTP/1.1" 200 3343   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:42:21    INFO    basehttp    "GET /static/admin/js/change_form.js HTTP/1.1" 200 606   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:42:21    INFO    basehttp    "GET /static/admin/css/widgets.css HTTP/1.1" 200 11952   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:42:21    INFO    basehttp    "GET /static/admin/img/icon-unknown.svg HTTP/1.1" 200 655   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:42:21    INFO    basehttp    "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:42:21    INFO    basehttp    "GET /static/admin/img/selector-icons.svg HTTP/1.1" 200 3291   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:42:21    INFO    basehttp    "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:42:21    INFO    basehttp    "GET /static/admin/img/icon-unknown-alt.svg HTTP/1.1" 200 655   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:42:28    INFO    basehttp    "POST /admin/auth/user/51/change/ HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:42:28    INFO    basehttp    "GET /admin/auth/user/ HTTP/1.1" 200 26025   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:42:29    INFO    basehttp    "GET /admin/jsi18n/ HTTP/1.1" 200 3343   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:42:35    INFO    basehttp    "GET / HTTP/1.1" 200 38372   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:42:37    INFO    basehttp    "GET /logout/ HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:42:37    INFO    basehttp    "GET / HTTP/1.1" 200 38449   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:42:42    INFO    basehttp    "GET /register/ HTTP/1.1" 200 14812   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:43:15    INFO    basehttp    "POST /register/ HTTP/1.1" 200 14848   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:43:42    INFO    basehttp    "POST /register/ HTTP/1.1" 200 14984   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:44:05    INFO    basehttp    "POST /register/ HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:44:05    INFO    basehttp    "GET / HTTP/1.1" 200 38449   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:44:18    INFO    basehttp    "GET /admin/auth/user/ HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:44:18    INFO    basehttp    "GET /admin/login/?next=/admin/auth/user/ HTTP/1.1" 200 13561   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:44:27    INFO    basehttp    "POST /admin/login/?next=/admin/auth/user/ HTTP/1.1" 200 13722   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:45:19    INFO    basehttp    "GET /register/ HTTP/1.1" 200 14812   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:48:11    INFO    basehttp    "GET /register/ HTTP/1.1" 200 14812   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:48:12    INFO    basehttp    "GET /register/ HTTP/1.1" 200 13650   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:50:37    INFO    basehttp    "GET /register/ HTTP/1.1" 200 13649   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:50:37    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 16:50:38    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 16:51:35    INFO    basehttp    "GET /register/ HTTP/1.1" 200 13649   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:51:35    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/app_site/forms.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 16:51:36    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 16:53:34    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 16:53:38    INFO    basehttp    "GET /register/ HTTP/1.1" 200 13649   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:53:38    INFO    basehttp    "GET /register/ HTTP/1.1" 200 13649   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:53:39    INFO    basehttp    "GET /register/ HTTP/1.1" 200 13649   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:53:48    INFO    basehttp    "GET /register/ HTTP/1.1" 200 13649   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:53:49    INFO    basehttp    "GET /register/ HTTP/1.1" 200 13649   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:54:37    INFO    basehttp    "GET /register/ HTTP/1.1" 200 13649   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 16:54:37    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/app_site/forms.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 16:54:38    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 16:54:41    INFO    basehttp    "GET /register/ HTTP/1.1" 200 13214   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 17:01:34    INFO    basehttp    "GET /register/ HTTP/1.1" 200 13214   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 17:01:34    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 17:01:35    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 17:02:11    INFO    basehttp    "POST /register/ HTTP/1.1" 200 13355   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 17:02:35    ERROR    log    Internal Server Error: /register/   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'AttributeError'>, AttributeError("'User' object has no attribute 'gr'"), <traceback object at 0x7f36c3ed7600>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 184, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 429, in form_valid
+    self.object = form.save()
+                  ^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/contrib/auth/forms.py", line 143, in save
+    user.save()
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/contrib/auth/base_user.py", line 76, in save
+    super().save(*args, **kwargs)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/base.py", line 892, in save_base
+    post_save.send(
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 176, in send
+    return [
+           ^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/signals.py", line 24, in send_email_after_registration
+    instance.gr
+AttributeError: 'User' object has no attribute 'gr'
+20/Aug/2024 17:02:35    ERROR    basehttp    "POST /register/ HTTP/1.1" 500 132065   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 17:03:12    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/app_site/signals.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 17:03:13    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 17:03:14    INFO    basehttp    "POST /register/ HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 17:03:14    INFO    basehttp    "GET / HTTP/1.1" 200 38449   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 17:03:18    INFO    basehttp    "GET /admin/ HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 17:03:19    INFO    basehttp    "GET /admin/login/?next=/admin/ HTTP/1.1" 200 13529   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 17:03:31    INFO    basehttp    "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 17:03:32    INFO    basehttp    "GET /admin/ HTTP/1.1" 200 22374   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 17:03:38    INFO    basehttp    "GET /admin/auth/user/ HTTP/1.1" 200 26640   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 17:03:38    INFO    basehttp    "GET /admin/jsi18n/ HTTP/1.1" 200 3343   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 17:03:42    INFO    basehttp    "GET /admin/auth/user/147/change/ HTTP/1.1" 200 37512   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 17:03:42    INFO    basehttp    "GET /admin/jsi18n/ HTTP/1.1" 200 3343   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 17:03:48    INFO    basehttp    "GET /admin/auth/user/ HTTP/1.1" 200 26640   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 17:03:55    INFO    basehttp    "POST /admin/auth/user/ HTTP/1.1" 200 20330   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 17:03:55    INFO    basehttp    "GET /static/admin/js/cancel.js HTTP/1.1" 200 884   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 17:03:59    INFO    basehttp    "POST /admin/auth/user/ HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 17:03:59    INFO    basehttp    "GET /admin/auth/user/ HTTP/1.1" 200 25966   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 17:03:59    INFO    basehttp    "GET /admin/jsi18n/ HTTP/1.1" 200 3343   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 17:09:23    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/app_site/signals.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 17:09:24    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 17:58:15    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/web/settings.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 17:58:17    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 18:00:21    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/web/settings_dev.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 18:00:23    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 18:00:26    INFO    basehttp    "GET /list_order HTTP/1.1" 200 923777   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:00:26    INFO    basehttp    "GET /media/masters/51.jpg HTTP/1.1" 200 14689   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:00:27    INFO    basehttp    "GET /media/masters/145.jpg HTTP/1.1" 200 17963   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:00:27    INFO    basehttp    "GET /static/fonts/fa-regular-400.woff2 HTTP/1.1" 200 13552   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:00:27    INFO    basehttp    "GET /media/masters/144.jpg HTTP/1.1" 200 21612   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:00:27    WARNING    log    Not Found: /media/masters/unknown_person.jpg   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+20/Aug/2024 18:00:27    INFO    basehttp    "GET /media/masters/100.jpg HTTP/1.1" 200 96940   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:00:27    WARNING    basehttp    "GET /media/masters/unknown_person.jpg HTTP/1.1" 404 17890   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:00:29    INFO    basehttp    "GET / HTTP/1.1" 200 38372   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:00:31    INFO    basehttp    "GET /logout/ HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:00:31    INFO    basehttp    "GET / HTTP/1.1" 200 38449   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:00:32    INFO    basehttp    "GET /register/ HTTP/1.1" 200 13214   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:01:09    INFO    basehttp    "POST /register/ HTTP/1.1" 200 13332   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:01:26    ERROR    log    Internal Server Error: /register/   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'AttributeError'>, AttributeError("'function' object has no attribute 'apply_async'"), <traceback object at 0x7f8d611bb480>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 184, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 429, in form_valid
+    self.object = form.save()
+                  ^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/contrib/auth/forms.py", line 143, in save
+    user.save()
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/contrib/auth/base_user.py", line 76, in save
+    super().save(*args, **kwargs)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/base.py", line 892, in save_base
+    post_save.send(
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 176, in send
+    return [
+           ^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/signals.py", line 24, in send_email_after_registration
+    send_email_after_registration.apply_async([instance.pk, instance.username, instance.email], countdown=5, expires=20)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'function' object has no attribute 'apply_async'
+20/Aug/2024 18:01:26    ERROR    basehttp    "POST /register/ HTTP/1.1" 500 131541   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:02:53    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/app_site/signals.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 18:02:54    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 18:03:01    INFO    basehttp    "POST /register/ HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:03:01    INFO    basehttp    "GET / HTTP/1.1" 200 38449   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:06:31    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/app_site/tasks.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 18:06:31    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 18:06:45    INFO    basehttp    "GET /register/ HTTP/1.1" 200 13214   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:07:43    INFO    basehttp    "POST /register/ HTTP/1.1" 200 13336   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:08:02    INFO    basehttp    "POST /register/ HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:08:02    INFO    basehttp    "GET / HTTP/1.1" 200 38449   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:09:02    INFO    basehttp    "GET /register/ HTTP/1.1" 200 13214   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:09:19    INFO    basehttp    "POST /register/ HTTP/1.1" 200 13336   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:09:31    INFO    basehttp    "POST /register/ HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:09:31    INFO    basehttp    "GET / HTTP/1.1" 200 38449   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:09:56    INFO    basehttp    "GET / HTTP/1.1" 200 38449   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:09:56    INFO    basehttp    "GET /static/css/custom.css HTTP/1.1" 200 10944   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:09:56    INFO    basehttp    "GET /static/css/owl.carousel.min.css HTTP/1.1" 200 4376   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:09:56    INFO    basehttp    "GET /static/js/custom.js HTTP/1.1" 200 958   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:09:56    INFO    basehttp    "GET /static/css/bootstrap.min.css HTTP/1.1" 200 140936   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:09:56    INFO    basehttp    "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 304 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:09:56    INFO    basehttp    "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12664   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:09:56    INFO    basehttp    "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:09:56    INFO    basehttp    "GET /static/js/owl.carousel.min.js HTTP/1.1" 304 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:09:56    INFO    basehttp    "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 304 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:09:56    INFO    basehttp    "GET /static/js/mdb.min.js HTTP/1.1" 304 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:09:56    INFO    basehttp    "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:09:56    INFO    basehttp    "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:09:58    INFO    basehttp    "GET /static/images/card.jpg HTTP/1.1" 200 7319   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:09:58    INFO    basehttp    "GET /static/fonts/leak.svg HTTP/1.1" 200 756   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:09:58    INFO    basehttp    "GET /static/fonts/washing-machine.svg HTTP/1.1" 200 1621   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:09:58    INFO    basehttp    "GET /static/fonts/living-room.svg HTTP/1.1" 200 6568   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:09:58    INFO    basehttp    "GET /static/fonts/3d-buildings.svg HTTP/1.1" 200 9340   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:09:58    INFO    basehttp    "GET /static/images/instagram.png HTTP/1.1" 200 79716   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:09:58    INFO    basehttp    "GET /static/images/1.jpg HTTP/1.1" 200 68159   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:09:58    INFO    basehttp    "GET /static/images/2.jpg HTTP/1.1" 200 73588   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:09:58    INFO    basehttp    "GET /static/fonts/broken-cable.svg HTTP/1.1" 200 2810   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:09:58    INFO    basehttp    "GET /static/images/whatsapp.png HTTP/1.1" 200 167171   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:09:58    INFO    basehttp    "GET /static/images/flag_ge.png HTTP/1.1" 200 1771   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:09:58    INFO    basehttp    "GET /static/images/3.jpg HTTP/1.1" 200 64252   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:09:58    INFO    basehttp    "GET /static/images/o-mastere-na-chas.png HTTP/1.1" 200 149377   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:09:58    INFO    basehttp    "GET /static/images/flag_ru.png HTTP/1.1" 200 1096   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:09:58    INFO    basehttp    "GET /static/images/flag_en.png HTTP/1.1" 200 3087   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:09:58    INFO    basehttp    "GET /static/images/telegram.gif HTTP/1.1" 200 38309   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:09:58    INFO    basehttp    "GET /static/images/underline1.png HTTP/1.1" 200 645   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:09:58    INFO    basehttp    "GET /static/images/master-na-chas_1.jpg HTTP/1.1" 304 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:09:58    INFO    basehttp    "GET /static/images/usluga-master-na-chas.jpg HTTP/1.1" 200 159701   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:09:58    INFO    basehttp    "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:10:02    INFO    basehttp    "GET /login/ HTTP/1.1" 200 12538   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:10:02    INFO    basehttp    "GET /static/css/fonts.css HTTP/1.1" 200 68940   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:10:02    INFO    basehttp    "GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 200 74256   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:10:15    INFO    basehttp    "POST /login/ HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:10:15    INFO    basehttp    "GET /user/51 HTTP/1.1" 200 24318   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:10:15    INFO    basehttp    "GET /media/masters/51.jpg HTTP/1.1" 200 14689   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:10:15    INFO    basehttp    "GET /media/masters/100.jpg HTTP/1.1" 200 96940   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:10:15    INFO    basehttp    "GET /media/masters/145.jpg HTTP/1.1" 200 17963   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:10:15    INFO    basehttp    "GET /media/masters/144.jpg HTTP/1.1" 200 21612   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:10:15    INFO    basehttp    "GET /media/masters/146.jpg HTTP/1.1" 200 32498   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:10:15    WARNING    log    Not Found: /favicon.ico   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+20/Aug/2024 18:10:15    WARNING    basehttp    "GET /favicon.ico HTTP/1.1" 404 17590   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:10:23    INFO    basehttp    "GET /admin/ HTTP/1.1" 200 22358   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:10:24    INFO    basehttp    "GET /static/admin/css/base.css HTTP/1.1" 200 21207   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:10:24    INFO    basehttp    "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:10:24    INFO    basehttp    "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:10:24    INFO    basehttp    "GET /static/admin/js/theme.js HTTP/1.1" 304 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:10:24    INFO    basehttp    "GET /static/admin/css/responsive.css HTTP/1.1" 200 18557   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:10:24    INFO    basehttp    "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:10:24    INFO    basehttp    "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:10:24    INFO    basehttp    "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:10:24    INFO    basehttp    "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:10:24    INFO    basehttp    "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:10:25    INFO    basehttp    "GET /admin/auth/user/ HTTP/1.1" 200 27066   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:10:25    INFO    basehttp    "GET /static/admin/img/search.svg HTTP/1.1" 200 458   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:10:25    INFO    basehttp    "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:10:25    INFO    basehttp    "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:10:25    INFO    basehttp    "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:10:25    INFO    basehttp    "GET /static/admin/css/changelists.css HTTP/1.1" 200 6584   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:10:25    INFO    basehttp    "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:10:25    INFO    basehttp    "GET /static/admin/js/actions.js HTTP/1.1" 200 7872   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:10:25    INFO    basehttp    "GET /static/admin/js/core.js HTTP/1.1" 200 5682   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:10:25    INFO    basehttp    "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 8943   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:10:26    INFO    basehttp    "GET /admin/jsi18n/ HTTP/1.1" 200 3343   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:10:26    INFO    basehttp    "GET /static/admin/js/filters.js HTTP/1.1" 200 978   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:10:26    INFO    basehttp    "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:10:26    INFO    basehttp    "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:10:26    INFO    basehttp    "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:10:26    INFO    basehttp    "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:10:26    INFO    basehttp    "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:10:47    INFO    basehttp    "POST /admin/auth/user/ HTTP/1.1" 200 20430   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:10:47    INFO    basehttp    "GET /static/admin/js/cancel.js HTTP/1.1" 200 884   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:10:48    INFO    basehttp    "POST /admin/auth/user/ HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:10:49    INFO    basehttp    "GET /admin/auth/user/ HTTP/1.1" 200 25966   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:10:49    INFO    basehttp    "GET /admin/jsi18n/ HTTP/1.1" 200 3343   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:11:23    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/app_site/tasks.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 18:11:24    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 18:11:31    INFO    basehttp    "GET /register/ HTTP/1.1" 200 13214   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:11:59    INFO    basehttp    "POST /register/ HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:11:59    INFO    basehttp    "GET / HTTP/1.1" 200 38449   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 18:20:33    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/app_site/signals.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 19:25:18    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 19:25:35    INFO    basehttp    "GET /list_order HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:25:35    INFO    basehttp    "GET /login/?next=/list_order HTTP/1.1" 200 12557   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:25:36    WARNING    log    Not Found: /favicon.ico   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+20/Aug/2024 19:25:36    WARNING    basehttp    "GET /favicon.ico HTTP/1.1" 404 17590   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:25:38    INFO    basehttp    "GET / HTTP/1.1" 200 38449   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:25:39    INFO    basehttp    "GET /register/ HTTP/1.1" 200 13214   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:26:03    INFO    basehttp    "POST /register/ HTTP/1.1" 200 13332   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:26:22    INFO    basehttp    "POST /register/ HTTP/1.1" 200 13332   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:26:33    INFO    basehttp    "POST /register/ HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:26:34    INFO    basehttp    "GET / HTTP/1.1" 200 38449   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:29:26    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/web/settings_dev.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 19:29:27    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 19:29:36    INFO    basehttp    "GET / HTTP/1.1" 200 38374   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:29:41    INFO    basehttp    "GET /list_order HTTP/1.1" 200 923864   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:29:42    WARNING    log    Not Found: /media/masters/unknown_person.jpg   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+20/Aug/2024 19:29:42    WARNING    basehttp    "GET /media/masters/unknown_person.jpg HTTP/1.1" 404 17890   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:29:42    INFO    basehttp    "GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 200 74256   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:29:42    INFO    basehttp    "GET /static/fonts/fa-regular-400.woff2 HTTP/1.1" 200 13552   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:29:42    WARNING    log    Not Found: /favicon.ico   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+20/Aug/2024 19:29:45    INFO    basehttp    "GET /admin/ HTTP/1.1" 200 22240   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:29:45    INFO    basehttp    "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:29:45    INFO    basehttp    "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:29:45    INFO    basehttp    "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:29:47    INFO    basehttp    "GET /admin/auth/user/ HTTP/1.1" 200 26652   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:29:47    INFO    basehttp    "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:29:47    INFO    basehttp    "GET /static/admin/img/search.svg HTTP/1.1" 200 458   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:29:47    INFO    basehttp    "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:29:47    INFO    basehttp    "GET /admin/jsi18n/ HTTP/1.1" 200 3343   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:29:47    INFO    basehttp    "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:29:47    INFO    basehttp    "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:29:58    INFO    basehttp    "POST /admin/auth/user/ HTTP/1.1" 200 20218   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:30:00    INFO    basehttp    "POST /admin/auth/user/ HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:30:00    INFO    basehttp    "GET /admin/auth/user/ HTTP/1.1" 200 25966   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:30:00    INFO    basehttp    "GET /admin/jsi18n/ HTTP/1.1" 200 3343   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:30:11    INFO    basehttp    "GET /register/ HTTP/1.1" 200 13214   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:30:56    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 19:31:24    INFO    basehttp    "POST /register/ HTTP/1.1" 200 13333   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:31:38    INFO    basehttp    "POST /register/ HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:31:38    INFO    basehttp    "GET / HTTP/1.1" 200 38449   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:32:32    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/web/settings_dev.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 19:32:33    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 19:32:38    INFO    basehttp    "GET / HTTP/1.1" 200 38449   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:32:40    INFO    basehttp    "GET /register/ HTTP/1.1" 200 13214   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:33:03    INFO    basehttp    "POST /register/ HTTP/1.1" 200 13330   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:33:17    INFO    basehttp    "POST /register/ HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:33:17    INFO    basehttp    "GET / HTTP/1.1" 200 38449   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:38:34    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/web/settings_dev.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 19:38:35    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 19:39:17    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/web/settings_dev.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 19:39:18    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 19:39:48    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 19:39:59    INFO    basehttp    "GET /register/ HTTP/1.1" 200 13214   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:40:23    INFO    basehttp    "POST /register/ HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:40:23    INFO    basehttp    "GET / HTTP/1.1" 200 38449   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:41:52    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/web/settings_dev.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 19:41:53    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 19:42:18    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 19:42:31    INFO    basehttp    "GET / HTTP/1.1" 200 38449   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:42:33    INFO    basehttp    "GET /register/ HTTP/1.1" 200 13214   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:42:59    INFO    basehttp    "POST /register/ HTTP/1.1" 200 13354   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:43:14    INFO    basehttp    "POST /register/ HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:43:14    INFO    basehttp    "GET / HTTP/1.1" 200 38449   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:49:33    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/web/settings_dev.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 19:49:33    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 19:49:42    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 19:49:59    INFO    basehttp    "GET /register/ HTTP/1.1" 200 13214   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:50:20    INFO    basehttp    "POST /register/ HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:50:20    INFO    basehttp    "GET / HTTP/1.1" 200 38449   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:50:50    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/web/settings_dev.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 19:50:51    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 19:51:03    INFO    basehttp    "GET / HTTP/1.1" 200 38449   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:51:05    INFO    basehttp    "GET /register/ HTTP/1.1" 200 13214   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:51:25    INFO    basehttp    "POST /register/ HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:51:25    INFO    basehttp    "GET / HTTP/1.1" 200 38449   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:52:45    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/web/settings_dev.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 19:52:46    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 19:57:15    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/app_site/tasks.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 19:57:16    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 19:57:25    INFO    basehttp    "GET / HTTP/1.1" 200 38449   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:57:34    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 19:57:52    INFO    basehttp    "GET /register/ HTTP/1.1" 200 13214   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:58:09    INFO    basehttp    "POST /register/ HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 19:58:09    INFO    basehttp    "GET / HTTP/1.1" 200 38449   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 20:04:45    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/web/settings_dev.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 20:04:46    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 20:05:08    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/web/settings_dev.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 20:05:09    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 20:06:28    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/web/settings_dev.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 20:06:29    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 20:06:45    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 20:06:56    INFO    basehttp    "GET /register/ HTTP/1.1" 200 13214   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 20:07:16    INFO    basehttp    "POST /register/ HTTP/1.1" 200 13340   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 20:07:28    INFO    basehttp    "POST /register/ HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 20:07:28    INFO    basehttp    "GET / HTTP/1.1" 200 38449   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 20:08:26    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/app_site/tasks.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 20:08:27    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 20:08:33    INFO    basehttp    "GET /register/ HTTP/1.1" 200 13214   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 20:08:52    INFO    basehttp    "POST /register/ HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 20:08:52    INFO    basehttp    "GET / HTTP/1.1" 200 38449   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 20:11:48    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/web/settings_dev.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 20:11:49    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 20:12:22    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/web/settings_dev.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 20:12:23    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 20:12:33    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 20:13:00    INFO    basehttp    "GET /register/ HTTP/1.1" 200 13214   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 20:13:19    INFO    basehttp    "POST /register/ HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 20:13:19    INFO    basehttp    "GET / HTTP/1.1" 200 38449   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 20:15:05    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/app_site/tasks.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 20:15:06    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 20:15:15    INFO    basehttp    "GET / HTTP/1.1" 200 38449   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 20:15:18    INFO    basehttp    "GET / HTTP/1.1" 200 38449   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 20:15:20    INFO    basehttp    "GET /login/ HTTP/1.1" 200 12541   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 20:15:34    INFO    basehttp    "GET / HTTP/1.1" 200 38449   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 20:15:35    INFO    basehttp    "GET /register/ HTTP/1.1" 200 13214   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 20:15:49    INFO    basehttp    "POST /register/ HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 20:15:49    INFO    basehttp    "GET / HTTP/1.1" 200 38449   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 20:16:32    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/app_site/tasks.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 20:16:33    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 20:16:45    INFO    basehttp    "GET /register/ HTTP/1.1" 200 13214   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 20:16:59    INFO    basehttp    "POST /register/ HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 20:16:59    INFO    basehttp    "GET / HTTP/1.1" 200 38449   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 20:18:46    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/app_site/tasks.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 20:18:47    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 20:19:12    INFO    basehttp    "GET /register/ HTTP/1.1" 200 13214   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 20:19:25    INFO    basehttp    "POST /register/ HTTP/1.1" 200 13395   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 20:19:48    INFO    basehttp    "POST /register/ HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 20:19:48    INFO    basehttp    "GET / HTTP/1.1" 200 38449   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 20:20:31    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/web/settings_dev.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 20:20:32    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 20:20:42    INFO    basehttp    "GET /register/ HTTP/1.1" 200 13214   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 20:20:55    INFO    basehttp    "POST /register/ HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 20:20:55    INFO    basehttp    "GET / HTTP/1.1" 200 38449   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 20:22:12    INFO    basehttp    "GET /register/ HTTP/1.1" 200 13214   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 20:22:37    INFO    basehttp    "POST /register/ HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 20:22:37    INFO    basehttp    "GET / HTTP/1.1" 200 38449   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 20:24:13    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/web/settings_dev.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 20:24:14    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 20:24:32    INFO    basehttp    "GET /register/ HTTP/1.1" 200 13214   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 20:24:45    INFO    basehttp    "POST /register/ HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 20:24:45    INFO    basehttp    "GET / HTTP/1.1" 200 38449   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 20:25:58    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/app_site/tasks.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 20:25:59    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 20:26:37    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/web/settings_dev.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 20:26:38    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 20:27:01    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/web/settings_dev.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 20:27:02    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 20:28:24    INFO    basehttp    "GET /register/ HTTP/1.1" 200 13214   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 20:28:37    INFO    basehttp    "POST /register/ HTTP/1.1" 302 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 20:28:37    INFO    basehttp    "GET / HTTP/1.1" 200 38449   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 20:28:45    INFO    basehttp    "GET /register/ HTTP/1.1" 200 13214   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 20:28:46    INFO    basehttp    "GET / HTTP/1.1" 200 38449   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Aug/2024 20:32:28    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/web/settings_dev.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 20:32:29    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 20:33:18    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/app_site/tasks.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 20:33:19    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 20:35:15    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/app_site/tasks.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+20/Aug/2024 20:35:16    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
