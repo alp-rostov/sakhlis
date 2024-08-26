@@ -1,7 +1,6 @@
 from django.db.models import Count, Sum, F, Prefetch, QuerySet
 from app_site.models import *
 
-
 class DataFromRepairerList:
     model = UserProfile.objects
 

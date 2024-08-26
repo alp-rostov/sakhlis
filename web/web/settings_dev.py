@@ -3,9 +3,9 @@ from django.utils.encoding import force_str
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 DATABASES = {
     'default': {
@@ -28,12 +28,8 @@ CELERY_RESULT_SERIALIZER = 'json'
 EMAIL_HOST = 'mail.sakhlis-remonti.ge'  # адрес сервера почты для всех один и тот же
 EMAIL_PORT = 587  # порт smtp сервера тоже одинаковый
 EMAIL_HOST_USER = 'admin@sakhlis-remonti.ge'  # ваше имя пользователя, например, если ваша почта user@yandex.ru, то сюда надо писать user, иными словами, это всё то что идёт до собаки
-EMAIL_HOST_PASSWORD = force_str(os.environ.get('EMAIL_PASSW'))   # пароль от почты
+EMAIL_HOST_PASSWORD = '******'  # пароль от почты
 EMAIL_USE_SSL = False  # Яндекс использует ssl, подробнее о том, что это, почитайте в дополнительных источниках, но включать его здесь обязательно
-
-
-
-
 
 # Celery Configuration Options
 CELERY_TIMEZONE = "Australia/Tasmania"

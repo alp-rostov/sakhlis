@@ -1,4 +1,6 @@
 import logging
+import environ
+
 from django.utils.encoding import force_str
 
 try:
@@ -149,5 +151,4 @@ INTERNAL_IPS = [
 DEFAULT_CHARSET = 'utf-8'
 
 handler404 = 'app_site.views.Error404.as_view()'
-
 

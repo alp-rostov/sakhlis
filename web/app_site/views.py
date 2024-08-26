@@ -1,5 +1,7 @@
 import json
 import logging
+import uuid
+
 from django.contrib.auth.models import Group
 from django.contrib.auth.views import LoginView
 
@@ -9,7 +11,7 @@ from django.db import transaction
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.contrib.auth.decorators import login_required
 
-from django.http import FileResponse, HttpResponseRedirect, JsonResponse
+from django.http import FileResponse, HttpResponseRedirect, JsonResponse, Http404
 from django.forms import modelformset_factory
 from django.shortcuts import redirect, get_object_or_404
 from django.urls import reverse_lazy
@@ -92,6 +94,9 @@ class ClientsUpdate(PermissionRequiredMixin, LoginRequiredMixin, UpdateView):
 
 class Error404(TemplateView):
     template_name = '404.html'
+
+class InfoTemplate(TemplateView):
+    template_name = 'information.html'
 
 
 class InvoiceCreate(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, DetailView):
@@ -426,10 +431,16 @@ class UserRegisterView(CreateView):
 
     def form_valid(self, form):
         with transaction.atomic():
-            self.object = form.save()
+            self.object = form.save(commit=False)
+            self.object.is_active = False
+            self.object.save()
             my_group = Group.objects.get(name='owner')
             my_group.user_set.add(self.object)
-            return redirect('home')
+            profile=UserProfile()
+            profile.user = self.object
+            profile.customer_name=uuid.uuid4
+            profile.save()
+            return redirect('message_after_registration')
 
 
 def CreateIvoicePDF(request, **kwargs):
@@ -588,3 +599,22 @@ def creat_order_from_owner_profile(request, **kwargs):
     b.text_order = request.POST.get('text_order')
     b.save()
     return JsonResponse({"message": request.POST.get('name')})
+
+def verife_account(request):
+    token_ = request.GET.get('token')
+    print(token_)
+    pk_=request.GET.get('pk')
+    print(pk_)
+    user_ = get_object_or_404(User, pk=pk_)
+    profile = UserProfile.objects.get(user=user_)
+    if profile.customer_name == token_:
+        with transaction.atomic():
+            user_.is_active=True
+            user_.save()
+            profile.customer_name=''
+            profile.save()
+        return redirect('confirm_registration')
+    else:
+        raise Http404("")
+
+

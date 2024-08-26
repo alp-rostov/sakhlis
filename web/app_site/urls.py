@@ -25,6 +25,12 @@ urlpatterns = [
 
     path('register/', UserRegisterView.as_view(), name='signup'),
     path('error404/', Error404.as_view(), name='error404'),
+    path('registration/', InfoTemplate.as_view(extra_context = {'title':'Thank you for registration',
+                                                            'info':'Please check your email and confirm your account'}),
+                                           name='message_after_registration'),
+    path('confirm_registration/', InfoTemplate.as_view(extra_context={'title': 'Your account has been verified',
+                                                          'info': ''}),
+         name='message_after_registration'),
 
     path('clients/', Clients.as_view(), name='clients'),
     path('clients/update/<int:pk>', ClientsUpdate.as_view(), name='clients_update'),
@@ -52,9 +58,7 @@ urlpatterns = [
     path('deleteinvoice/<int:pk>', DeleteIvoiceServiceAPI.as_view()),
     path('masters', MastersListAPI.as_view()),
     path('setmaster/<int:pk>', MasterUpdateAPI.as_view()),
-
-    # path('create_order_by_owner', creat_order_from_owner_profile),
-    # path('geo', geo_map),
+    path('verification', verife_account),
 ]
 
 

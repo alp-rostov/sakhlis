@@ -3,11 +3,18 @@ import telebot
 from celery import shared_task
 from django.core.mail import EmailMultiAlternatives
 from django.template.loader import render_to_string
+from django.contrib.auth.models import User
 
-from .models import OrderList
+from .models import OrderList, UserProfile
+
 
 @shared_task
-def send_to_telegrambot(inst: int,TOKEN_:str, CHAT_ID_:str):
+def send_to_telegrambot(inst: int):
+    # TOKEN_ = os.environ.get("TOKEN")
+    # CHAT_ID_ = os.environ.get("CHAT_ID")
+    TOKEN_ = '********'
+    CHAT_ID_ = '****************'
+
     """" send order`s information to telegram group"""
     instance = OrderList.objects.get(pk=inst)
     subject_ = f'<b>Order № {instance.pk} от {instance.time_in.strftime("%m/%d/%Y")}</b>'
@@ -19,23 +26,24 @@ def send_to_telegrambot(inst: int,TOKEN_:str, CHAT_ID_:str):
            f'Address: {instance.apartment_id.address_street_app},{instance.apartment_id.address_num}, {instance.apartment_id.address_city}, \n' \
            f'{instance.text_order} \n' \
 
-    bot = telebot.TeleBot( TOKEN_)
+    bot = telebot.TeleBot(TOKEN_)
     bot.send_message(CHAT_ID_,  subject_+text, parse_mode='HTML')
 
 
 
 @shared_task
-def send_email(pk:int, username:str, email:str,):
+def send_email(email:str='', subject_:str=f'sakhlis-remonti.ge', template_name_:str = 'emails/registration.html', context_:dict={}):
+    user_ = User.objects.get(pk=context_['pk'])
+    token=UserProfile.objects.get(user=user_).customer_name
+    context_['token'] = str(token)
     html_content = render_to_string(
-        'emails/registration.html',
-        {'pk': pk, 'username': username }
+        template_name=template_name_,
+        context=context_
     )
-    subject_ = f'User registration | sakhlis-remonti.ge'
     msg = EmailMultiAlternatives(
         subject=subject_,
         from_email='admin@sakhlis-remonti.ge',
         to=[email],
         )
-    msg.attach_alternative(html_content, "text/html")  # add html
-
+    msg.attach_alternative(html_content, "text/html")
     msg.send()  # send email

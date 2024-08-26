@@ -1,14 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-</head>
+<html>
+<head></head>
 <body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+        <td align="center" style="padding: 20px;">
+            <table class="content" width="" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: 1px solid #cccccc;">
+                <!-- Header -->
+                <tr>
+                    <td class="header" style="background-color:#ca5718; padding: 30px; text-align: center; color: #ffffff; font-size: 24px;">
+                    <h3>Repair service in Tbilisi</h3>
+                    </td>
+                </tr>
 
-    <h2>Здравствуй {{ username }}. Благодарим Вас за регистрацию!<br>
-    </h2>
-    <p>
+                <!-- Body -->
+                <tr>
+                    <td class="body" style="padding: 30px; text-align: left; font-size: 16px; line-height: 1.6;">
+                    Hello, {{ username }}! <br>
+                    Thank you for registration.<br>
+                        <ul>
+                            <li>id: {{ pk }}</li>
+                            <li>Login: {{ username }}</li>
+                            <li>{{ token }}</li>
+                        </ul>
+                        Please confirm your registration:
+                       <a href="https://www.sakhlis-remonti.ge/verification?pk={{pk}}&token={{token}}" target="_blank" style="text-decoration: none; font-weight: bold;">
+                           <h2>Activate account</h2></a>
+                    </td>
+                </tr>
 
-    </p>
-
+                <!-- Call to action Button -->
+                <tr>
+                    <td style="padding: 0px 10px 0px 10px; text-align: center;">
+                        <a href="https://www.sakhlis-remonti.ge" target="_blank" style="color: #ca5718; text-decoration: none; font-weight: bold; font-size: 20px;">Visit our website</a><br>
+                        <a href="https://www.sakhlis-remonti.ge/login" target="_blank" style="color: #ca5718; text-decoration: none; font-weight: bold; font-size: 20px;"> Log in to your account</a>
+                     </td>
+                </tr>
+                <tr>
+                    <td class="body" style="padding: 30px; text-align: left; font-size: 16px; line-height: 1.6;">
+                        <img src="https://www.sakhlis-remonti.ge/static/images/card.jpg" class="item" width="200" alt="Оплата картой за услуги &quot;Мастер на час&quot;">
+                    </td>
+                </tr>
+                <!-- Footer -->
+                <tr>
+                    <td class="footer" style="background-color: #ece9e9; padding: 40px; text-align: center; font-size: 14px;">
+                           <div class="m-3 text-center">
+                                <!--Facebook-->
+                                <a class="mx-2" title="Facebook" href="https://www.facebook.com/profile.php?id=100089613313605">Facebook</a>
+                                <!--Telegramm-->
+                                <a class="mx-2" title="Telegram" href="https://t.me/+995598259119">Telegramm</a>
+                                <!--WhatsApp-->
+                                <a class="mx-2" title="WhatsApp" href="https://wa.me/+79604458687">WhatsApp</a>
+                           </div>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
 </body>
 </html>
