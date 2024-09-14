@@ -12,8 +12,8 @@ from .models import OrderList, UserProfile
 def send_to_telegrambot(inst: int):
     # TOKEN_ = os.environ.get("TOKEN")
     # CHAT_ID_ = os.environ.get("CHAT_ID")
-    TOKEN_ = '********'
-    CHAT_ID_ = '****************'
+    TOKEN_ = '6082335579:AAHqLPJB2RSdczDSbshpYV5Q7oqmyIcnbFI'
+    CHAT_ID_ = '5621399532'
 
     """" send order`s information to telegram group"""
     instance = OrderList.objects.get(pk=inst)

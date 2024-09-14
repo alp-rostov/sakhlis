@@ -107,7 +107,7 @@ class DataFromOrderList:
                                        .select_related('service_id')
                                        .annotate(sum=F('price') * F('quantity')))
                               ) \
-            .select_related('repairer_id')
+            .select_related('repairer_id', 'apartment_id')
 
 
 class DataFromInvoice:

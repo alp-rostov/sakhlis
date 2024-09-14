@@ -524,7 +524,6 @@ class DeleteIvoiceServiceAPI(generics.DestroyAPIView):
     """API for ajax request """
     serializer_class = InvoiceSerializer
     http_method_names = ['delete']
-    permission_classes = (IsAdminUser,)
 
     def get_queryset(self):
         queryset = Invoice.objects.all()
@@ -545,7 +544,6 @@ class OrderStatusUpdateAPI(generics.UpdateAPIView):
     """API for ajax request """
     serializer_class = OrderStatusSerializer
     http_method_names = ['patch']
-    permission_classes = (IsAdminUser,)
 
     def get_object(self):
         b = super().get_object()

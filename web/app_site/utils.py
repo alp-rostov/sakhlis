@@ -1,9 +1,14 @@
 import _io
+import os
 
+import reportlab
 from geopy.geocoders import Nominatim
+from reportlab.lib import styles
+from reportlab.pdfbase.ttfonts import TTFont
+from reportlab.pdfbase import pdfmetrics
 from telebot import types
 from reportlab.lib.pagesizes import A4
-from reportlab.lib.styles import getSampleStyleSheet
+from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.units import mm, inch
 from reportlab.pdfgen import canvas
 from reportlab.platypus import Paragraph, Table, TableStyle
@@ -13,6 +18,9 @@ import urllib.parse
 import warnings
 import io
 
+from web.settings import BASE_DIR
+
+from web.settings_dev import STATIC_DIR
 from .models import OrderList
 
 
@@ -66,67 +74,84 @@ class InvoiceMaker(object):
     def __init__(self, pdf_file: _io.BytesIO, info: OrderList):
         """ pdf_file = io.BytesIO()"""
         self.c = canvas.Canvas(pdf_file, bottomup=0)
+        folder = os.path.dirname(reportlab.__file__)
+        folder_font = os.path.join(folder, 'fonts')
+        print(folder_font)
+        custom_font = os.path.join(folder_font, 'Tantular.ttf')
+        print(custom_font)
+        pdfmetrics.registerFont(TTFont('Tantular', custom_font,))
+
         self.styles = getSampleStyleSheet()
+
         self.width, self.height = A4
         self.info = info
 
     def createDocument(self) -> None:
         # create a header
         date_info = str(self.info.time_in)[0:10]
-        line = f'Invoice № {self.info.pk}, date: {date_info}'
+        #
 
-        self.createParagraph(line, *self.coord(60, 30), style='Heading1')
+
+        line1 = '<font fontName="Tantular">საქართველო, თბილისიsdfbedbbцццццаывысывм</font>ddcghergdуксерруексеру '
+
+        self.createParagraph(line1, *self.coord(80, 10))
+
+        # line2 = f'vherther საქართველო, თბილისი, დიდუბის რაიონი, მურმან ლებანიძის ქუჩა, N 10, სართული 1, ბინა N3'
+        # self.createParagraph(line2, *self.coord(120, 50))
+        #
+        # line = f'<font backcolor="red" size=25>CF Invoice: <b>{self.info.pk}</b>, date: {date_info}</font>'
+        #
+        # self.createParagraph(line, *self.coord(10, 120))
 
         # create a table containing company information
-        data = [
-            ['My Company: ', ' Gotsin S.A.', 'Customer company:', self.info.customer_name],
-            ['Adress Company: ', ' Tbilisi, Zuraba Pataridze.', 'Customer Adress:',
-             self.info.address_street_app + ', ' + self.info.address_num],
-            ['Code Company: ', ' 302265920', 'Customer code:', self.info.customer_code],
-            ['Phone:', '+995598259119', 'Phone:', self.info.customer_phone],
-            ['Bank:', 'Credo Bank'],
-            ['CODE:', 'JSCRG22'],
-            ['Account:', 'GE18CD0360000030597044']
-        ]
-        data = data[::-1]
+        # data = [
+        #     ['My Company: ', ' Gotsin S.A.', 'Customer company:', self.info.customer_id],
+        #     ['Adress Company: ', ' Tbilisi, Zuraba Pataridze.', 'Customer Adress:'],
+        #     ['Code Company: ', ' 302265920', 'Customer code: customer_code'],
+        #     ['Phone:', '+995598259119', 'Phone:', self.info.customer_id],
+        #     ['Bank:', 'Credo Bank'],
+        #     ['CODE:', 'JSCRG22'],
+        #     ['Account:', 'GE18CD0360000030597044']
+        # ]
+        # data = data[::-1]
+        #
+        # a = TableStyle([('ALIGN', (0, 0), (0, 6), 'RIGHT'),
+        #                 ('ALIGN', (2, 0), (2, 6), 'RIGHT'),
+        #                 ('FONT', (2, 0), (2, 6), 'Times-Bold'),
+        #                 ('FONT', (0, 0), (0, 6), 'Times-Bold'),
+        #                 ('SIZE', (0, 0), (4, 6), 10)
+        #                 ]
+        #                )
 
-        a = TableStyle([('ALIGN', (0, 0), (0, 6), 'RIGHT'),
-                        ('ALIGN', (2, 0), (2, 6), 'RIGHT'),
-                        ('FONT', (2, 0), (2, 6), 'Times-Bold'),
-                        ('FONT', (0, 0), (0, 6), 'Times-Bold'),
-                        ('SIZE', (0, 0), (4, 6), 10)
-                        ]
-                       )
-
-        self.createTable(data, 30, 120, a, 1.8 * inch)
+        # self.createTable(data, 30, 120, a, 1.8 * inch)
 
         # create a service list
-        table_serv = []
-        table_serv.append(['Name', 'Count', 'Price', 'Amount'])
-        i = 1
-        sum_ = 0
-        for service in self.info.invoice_set.all():
-            table_serv.append([service.service_id, service.quantity, service.price, round(service.sum, 2)])
-            i = i + 1
-            sum_ = sum_ + service.sum
-        table_serv.append(['', '', 'Total:', round(sum_, 2)])
-
-        table_serv = table_serv[::-1]
-        c_width = [200, 80, 80, 80]
-        b = TableStyle([
-            ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
-            ('BOTTOMPADDING', (0, 0), (-1, -1), 5),
-            ('TOPPADDING', (0, 0), (-1, -1), 5),
-            ('FONT', (0, -1), (4, -1), 'Helvetica-Bold'),
-            ('SIZE', (0, -1), (4, -1), 12),
-            ('ALIGN', (2, 0), (2, 0), 'RIGHT'),
-            ('SIZE', (2, 0), (3, 0), 12),
-        ]
-        )
-
-        self.createTable(table_serv, 70, 280, b, c_width)
-
-        self.createParagraph('Sign_____________S.A.Gostin', *self.coord(50, 110 + i * 10), style='Heading4')
+        # table_serv = []
+        # table_serv.append(['Name', 'Count', 'Price', 'Amount'])
+        # i = 1
+        # sum_ = 0
+        # for service in self.info.invoice_set.all():
+        #     table_serv.append([service.service_id, service.quantity, service.price, round(service.sum, 2)])
+        #     i = i + 1
+        #     sum_ = sum_ + service.sum
+        # table_serv.append(['', '', 'Total:', round(sum_, 2)])
+        #
+        # table_serv = table_serv[::-1]
+        # c_width = [200, 80, 80, 80]
+        # b = TableStyle([
+        #     ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+        #     ('BOTTOMPADDING', (0, 0), (-1, -1), 5),
+        #     ('TOPPADDING', (0, 0), (-1, -1), 5),
+        #     ('FONT', (0, -1), (4, -1), 'Helvetica-Bold'),
+        #     ('SIZE', (0, -1), (4, -1), 12),
+        #     ('ALIGN', (2, 0), (2, 0), 'RIGHT'),
+        #     ('SIZE', (2, 0), (3, 0), 12),
+        # ]
+        # )
+        #
+        # self.createTable(table_serv, 70, 280, b, c_width)
+        # i=50
+        # self.createParagraph('Sign_____________S.A.Gostin', *self.coord(50, 210 + i * 10), style='Heading4')
 
     def coord(self, x, y, unit=1) -> tuple:
         """

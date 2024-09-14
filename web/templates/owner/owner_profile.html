@@ -111,6 +111,7 @@
                         {{ c.grouper.address_street_app }} {{ c.grouper.address_num }},
                         {{ c.grouper.address_city|choice_tag:'city' }}
                     </h5>
+                
                     <p class="text-secondary ">
                         {{ c.grouper.notes|default_if_none:'' }}
                         <a href="{% url 'apartment_update' c.grouper.pk %}" class="fas fa-pen text-secondary"

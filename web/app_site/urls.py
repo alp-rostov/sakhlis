@@ -12,7 +12,13 @@ urlpatterns = [
     # path('street', OrdersOnTheStreet.as_view(), name='aaa'),
     path('list_order/<int:pk>', InvoiceCreate.as_view(), name='invoice'),
     path('list_order/update/<int:pk>', OrderUpdate.as_view(), name='update-order'),
+
+
+
     path('list_order/pdf/<int:order_pk>', CreateIvoicePDF, name='invoice_pdf'),
+
+
+
 
     path('update-user/<int:pk>', RepaierUpdate.as_view(), name='update-user'),
 
@@ -30,7 +36,7 @@ urlpatterns = [
                                            name='message_after_registration'),
     path('confirm_registration/', InfoTemplate.as_view(extra_context={'title': 'Your account has been verified',
                                                           'info': ''}),
-         name='message_after_registration'),
+         name='confirm_registration'),
 
     path('clients/', Clients.as_view(), name='clients'),
     path('clients/update/<int:pk>', ClientsUpdate.as_view(), name='clients_update'),
@@ -45,9 +51,6 @@ urlpatterns = [
     path('owner/apartment/create', OwnerApartmentCreate.as_view(), name='apartment_create'),
     path('owner/list_order', OwnerOrderManagementSystem.as_view(), name='o_list_order'),
     path('owner-invoice/<int:pk>', OwnerInvoice.as_view(), name='ownerinvoice'),
-
-
-    # path('ordersearch/', OrderSearchForm.as_view(), name='search-order'),
 
     path('serv', listservices_for_invoice_json),
     path('save_list', save_list_jobs),

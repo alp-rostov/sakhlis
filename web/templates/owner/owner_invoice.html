@@ -55,7 +55,7 @@
 {% endfor %}
 </tbody>
 <tr class="table-warning" id="total_">
-    <th>developing: <button class="btn btn-sm ">Invoice - XLS</button> <button class="btn btn-sm ">Invoice - PDF</button>
+    <th><a href="{% url 'invoice_pdf' info.id  %}" class="btn border">Invoice - PDF</a>
     </th>
 
     <th class="h5-responsive" >
