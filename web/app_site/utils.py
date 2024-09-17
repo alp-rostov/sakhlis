@@ -4,6 +4,7 @@ import os
 import reportlab
 from geopy.geocoders import Nominatim
 from reportlab.lib import styles
+from reportlab.lib.enums import TA_LEFT, TA_RIGHT
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfbase import pdfmetrics
 from telebot import types
@@ -17,10 +18,6 @@ import base64
 import urllib.parse
 import warnings
 import io
-
-from web.settings import BASE_DIR
-
-from web.settings_dev import STATIC_DIR
 from .models import OrderList
 
 
@@ -76,12 +73,42 @@ class InvoiceMaker(object):
         self.c = canvas.Canvas(pdf_file, bottomup=0)
         folder = os.path.dirname(reportlab.__file__)
         folder_font = os.path.join(folder, 'fonts')
-        print(folder_font)
-        custom_font = os.path.join(folder_font, 'Tantular.ttf')
-        print(custom_font)
-        pdfmetrics.registerFont(TTFont('Tantular', custom_font,))
 
+        custom_font = os.path.join(folder_font, 'Tantular.ttf') # add file to ...reportlab/fonts
+        gergian_font = os.path.join(folder_font, 'ARIALUNI.TTF')
+        lary_font = os.path.join(folder_font, 'font-larisome.ttf')
+        pdfmetrics.registerFont(TTFont('Tantular', custom_font,))
+        pdfmetrics.registerFont(TTFont('Georgian', gergian_font, ))
+        pdfmetrics.registerFont(TTFont('font-larisome', lary_font, ))
         self.styles = getSampleStyleSheet()
+        self.styles.add(ParagraphStyle(name='Top_Right',
+                                  fontName='Georgian',
+                                  bulletAnchor='start',
+                                  alignment=TA_RIGHT,
+                                  fontSize=14,
+                                  leading=22,
+                                  # textColor=colors.black,
+                                  borderPadding=0,
+                                  leftIndent=0,
+                                  rightIndent=0,
+                                  spaceAfter=0,
+                                  spaceBefore=0,
+                                  spaceShrinkage=0.05,
+                                  ))
+        self.styles.add(ParagraphStyle(name='Invoice_center',
+                                       fontName='Helvetica',
+                                       fontSize=25,
+                                       leading=13,
+                                       leftIndent=70,
+                                       rightIndent=70,
+                                       spaceBefore=0,
+                                       spaceAfter=0,
+                                       backColor='#efefef',
+                                       borderWidth=1,
+                                       borderPadding=20,
+                                       borderColor='#8c8a8a',
+                                       borderRadius=5,
+                                                                             ))
 
         self.width, self.height = A4
         self.info = info
@@ -92,66 +119,61 @@ class InvoiceMaker(object):
         #
 
 
-        line1 = '<font fontName="Tantular">საქართველო, თბილისიsdfbedbbцццццаывысывм</font>ddcghergdуксерруексеру '
+        line1 = ('ინდივიდუალურიმეწარმე სერგეი გოცინ <br />'
+                 'საქართველო, თბილისი, დიდუბის რაიონი, <br />'
+                 'მურმან ლებანიძის ქუჩა, N 10, <br />'
+                 'სართული 1, ბინა N3 <br />'
+                 'საიდენტიფიკაციო ნომერი: 302264920 <br />'
+                 'კრედო ბანკი <br /> ბანკის კოდი JSCRG22 <br /> ა/ა GE18CD0360000030597044<br />')
 
-        self.createParagraph(line1, *self.coord(80, 10))
+        self.createParagraph(line1, *self.coord(-20, -35), style='Top_Right')
 
-        # line2 = f'vherther საქართველო, თბილისი, დიდუბის რაიონი, მურმან ლებანიძის ქუჩა, N 10, სართული 1, ბინა N3'
-        # self.createParagraph(line2, *self.coord(120, 50))
-        #
-        # line = f'<font backcolor="red" size=25>CF Invoice: <b>{self.info.pk}</b>, date: {date_info}</font>'
-        #
-        # self.createParagraph(line, *self.coord(10, 120))
+        line2 = f'<b>Invoice # {self.info.pk} </b><br /><br /><font fontsize=18>Data {date_info}</font>'
+        self.createParagraph(line2, *self.coord(0, 80), style='Invoice_center')
 
-        # create a table containing company information
-        # data = [
-        #     ['My Company: ', ' Gotsin S.A.', 'Customer company:', self.info.customer_id],
-        #     ['Adress Company: ', ' Tbilisi, Zuraba Pataridze.', 'Customer Adress:'],
-        #     ['Code Company: ', ' 302265920', 'Customer code: customer_code'],
-        #     ['Phone:', '+995598259119', 'Phone:', self.info.customer_id],
-        #     ['Bank:', 'Credo Bank'],
-        #     ['CODE:', 'JSCRG22'],
-        #     ['Account:', 'GE18CD0360000030597044']
-        # ]
-        # data = data[::-1]
-        #
-        # a = TableStyle([('ALIGN', (0, 0), (0, 6), 'RIGHT'),
-        #                 ('ALIGN', (2, 0), (2, 6), 'RIGHT'),
-        #                 ('FONT', (2, 0), (2, 6), 'Times-Bold'),
-        #                 ('FONT', (0, 0), (0, 6), 'Times-Bold'),
-        #                 ('SIZE', (0, 0), (4, 6), 10)
-        #                 ]
-        #                )
+        line3 = f'<font fontName="Georgian">Invoiced To: <br /><b>{self.info.customer_id.customer_name}</b><br /> ს/კ ---------</font>'
 
-        # self.createTable(data, 30, 120, a, 1.8 * inch)
+        self.createParagraph(line3, *self.coord(20, 95), style='Heading2')
 
-        # create a service list
-        # table_serv = []
-        # table_serv.append(['Name', 'Count', 'Price', 'Amount'])
-        # i = 1
-        # sum_ = 0
-        # for service in self.info.invoice_set.all():
-        #     table_serv.append([service.service_id, service.quantity, service.price, round(service.sum, 2)])
-        #     i = i + 1
-        #     sum_ = sum_ + service.sum
-        # table_serv.append(['', '', 'Total:', round(sum_, 2)])
-        #
-        # table_serv = table_serv[::-1]
-        # c_width = [200, 80, 80, 80]
-        # b = TableStyle([
-        #     ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
-        #     ('BOTTOMPADDING', (0, 0), (-1, -1), 5),
-        #     ('TOPPADDING', (0, 0), (-1, -1), 5),
-        #     ('FONT', (0, -1), (4, -1), 'Helvetica-Bold'),
-        #     ('SIZE', (0, -1), (4, -1), 12),
-        #     ('ALIGN', (2, 0), (2, 0), 'RIGHT'),
-        #     ('SIZE', (2, 0), (3, 0), 12),
-        # ]
-        # )
-        #
-        # self.createTable(table_serv, 70, 280, b, c_width)
-        # i=50
-        # self.createParagraph('Sign_____________S.A.Gostin', *self.coord(50, 210 + i * 10), style='Heading4')
+        #create a service list
+        table_serv = []
+        table_serv.append(['#', 'მომსახურება/პროდუქტები', 'რაოდენობა', 'ფასი', 'ჯამი']) # name / count/price/amount
+        i = 1
+        sum_ = 0
+        for service in self.info.invoice_set.all():
+            table_serv.append([i,service.service_id, service.quantity, service.price, round(service.sum, 2)])
+            i = i + 1
+            sum_ = sum_ + service.sum
+        table_serv.append(['','', '', '', f'{round(sum_, 2)} e'])
+
+        table_serv = table_serv[::-1]
+        c_width = [20, 220, 80, 80, 80]
+        b = TableStyle([
+            ('BOTTOMPADDING', (0, 0), (-1, -1), 15),
+            ('TOPPADDING', (0, 0), (-1, -1), 0),
+            ('TEXTCOLOR', (0, -1), (5, -1), '#FFFFFF'),
+            ('FONTSIZE', (0, -1), (5, -1), 12),
+            ('FONTNAME', (0, 0), (-1, -1), 'Georgian'),
+            ('BACKGROUND', (0, -1), (5, -1), '#666666'),
+            ('GRID', (0, -1), (5, -1), 1.5, '#FFFFFF'),
+            ('LINEBELOW', (0, 0), (5, -3), 0.5, '#666666'),
+            ('FONTSIZE', (0, 0), (5, 0), 12),
+            ('BOX', (4, 0), (5, 0), 0.5, '#666666'),
+            ('FONTNAME', (4, 0), (5, 0), 'font-larisome'),
+            ('ALIGN', (2, 0), (5, -1), 'CENTER')
+        ]
+        )
+        self.createTable(table_serv, 50, 350, b, c_width)
+
+        self.createParagraph('<font fontName="Georgian">ინდივიდუალური მეწარმე _______  სერგეი გოცინ</font>', *self.coord(50, 160+i * 10), style='Heading3')
+
+
+        line4 = (f'<b>Repair service in Tbilisi </b><br />'
+                 f'+995 598 259 119 | '
+                 f'<a href="https://www.sakhlis-remonti.ge/" color="blue">www.sakhlis-remonti.ge</a> |'
+                 f'alprostov.1982@gmail.com')
+        self.createParagraph(line4, *self.coord(20, 270), style='Normal')
+
 
     def coord(self, x, y, unit=1) -> tuple:
         """

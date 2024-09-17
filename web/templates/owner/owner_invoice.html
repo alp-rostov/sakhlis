@@ -55,11 +55,11 @@
 {% endfor %}
 </tbody>
 <tr class="table-warning" id="total_">
-    <th><a href="{% url 'invoice_pdf' info.id  %}" class="btn border">Invoice - PDF</a>
+    <th>
     </th>
 
     <th class="h5-responsive" >
-        <button class="btn btn-sm ">Bank card</button>
+        <a href="{% url 'invoice_pdf' info.id  %}" class="btn btn-light"><b>Invoice - PDF</b></a>
     </th>
 
     <th class="h5-responsive ">
