@@ -52,23 +52,20 @@
                     {% if i.customer_id__user %}
                     <i class="fas fa-check mycolor ml-1" title="Registered user"></i>
                     {% endif %}</h5>
-
-
-
+                    <p>
+                        {% if i.apartment_id__name %}
+                        <b>{{ i.apartment_id__name }} |</b>
+                        {% endif %}
+                        {{ i.apartment_id__address_city|choice_tag:'city' }}, {{ i.apartment_id__address_street_app }}, {{i.apartment_id__address_num }}
+                    </p>
                     <p id="text_order_{{ i.pk }}" class="fas text-secondary">{{ i.text_order|truncatechars:100|capfirst }}</p>
-
-
                 </div>
                 <div class="col-md-3 mt-3">
-
                         <a href="" class="text-secondary" title="handyman">
                         <img src="../media/masters/{{ i.repairer_id__pk|default_if_none:'unknown_person'}}.jpg"
                                class="rounded-circle" width="60" alt="master"><br>
-
                              <b>{{ i.repairer_id__username|default_if_none:'unknown handyman'}}</b>
                          </a>
-
-
                 </div>
             </div>
     {% empty %}

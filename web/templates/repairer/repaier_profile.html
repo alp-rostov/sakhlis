@@ -105,9 +105,14 @@
                     </b>
 
                     <div class="mt-2 ">
-                        <span id="city_{{ b.pk }}" >{{ b.apartment_id.address_city|choice_tag:'city'}}</span>,
-                        <span id="street_app_{{ i.pk }}">{{ b.apartment_id.address_street_app|capfirst }}</span>,
-                        <span id="num_{{ i.pk }}">{{ b.apartment_id.address_num }}</span>.
+                        {%  if b.apartment_id.name %}
+                        <b>{{ b.apartment_id.name }}</b><br>
+                        {% endif %}
+                        {{ b.apartment_id.address_city|choice_tag:'city'}},
+                        {{ b.apartment_id.address_street_app|capfirst }},
+                        {{ b.apartment_id.address_num }}.<br>
+                        <i> {{ b.apartment_id.notes }}</i>
+                        
                     </div>
                 </div>
 

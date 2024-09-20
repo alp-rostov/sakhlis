@@ -46,6 +46,10 @@
     <a class="nav-link" href="#section-2">О нас</a>
 </li>
 
+<li class="nav-item mr-4">
+    <a class="nav-link" href="#section-4">Наши клиенты</a>
+</li>
+
 {% if request.user.is_authenticated %}
 <li class="nav-item mr-4">
     {% if request.user.groups.first.name == 'repairer' %}
@@ -253,8 +257,10 @@
 </section>
 <!-- About Me -->
 
+
+
 <!-- Footer -->
-<footer id="section-5" class="footer_bg">
+<footer class="footer_bg">
        {% #footer address_title='Адрес' address_name='Тбилиси, ул.Зураба Патаридзе 8' phone_title='Контакты' write_to_us_title='Написать нам' master_title='Мастер на час в Тбилиси' %}
        {% /footer %}
 </footer>

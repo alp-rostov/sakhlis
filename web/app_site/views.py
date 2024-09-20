@@ -267,8 +267,9 @@ class OrderManagementSystem(BaseClassExeption, LoginRequiredMixin, ListView):
         queryset = (super().get_queryset()
                     .select_related('customer_id', 'apartment_id', 'repairer_id')
                     .values('pk', 'time_in', 'repairer_id__pk', 'repairer_id__username',
-                            'text_order', 'customer_id__pk', 'customer_id__user',
-                            'customer_id__customer_name'
+                            'text_order', 'apartment_id__address_city', 'apartment_id__name',
+                          'apartment_id__address_street_app', 'apartment_id__address_num',
+                            'customer_id__pk', 'customer_id__user', 'customer_id__customer_name'
                             ))
         self.filterset = OrderFilter(self.request.GET, queryset)
         return self.filterset.qs

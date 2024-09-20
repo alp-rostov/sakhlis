@@ -2,6 +2,7 @@ import logging
 import environ
 
 from django.utils.encoding import force_str
+from flask import request
 
 try:
     from .settings_dev import *
@@ -144,7 +145,7 @@ MEDIA_URL = '/media/'
 
 LOGIN_URL = '/login/'
 LOGOUT_URL = '/logout/'
-LOGIN_REDIRECT_URL = '/list_order?work_status=RCV'
+# LOGIN_REDIRECT_URL = f'/user/51'
 LOGOUT_REDIRECT_URL = '/'
 
 INTERNAL_IPS = [
