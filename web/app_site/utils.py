@@ -165,7 +165,14 @@ class InvoiceMaker(object):
         )
         self.createTable(table_serv, 50, 350, b, c_width)
 
-        self.createParagraph('<font fontName="Georgian">ინდივიდუალური მეწარმე _______  სერგეი გოცინ</font>', *self.coord(50, 160+i * 10), style='Heading3')
+        self.createParagraph('<font fontName="Georgian">ინდივიდუალური მეწარმე      '
+                             '<img src="static/images/sign.png" valign="top" width=70 height=55 />'
+                             '      სერგეი გოცინ</font>',
+                             *self.coord(50, 160+i * 10), style='Heading3')
+
+        self.createParagraph('',
+                             *self.coord(50, 160+i * 10), style='Heading3')
+
 
 
         line4 = (f'<b>Repair service in Tbilisi </b><br />'

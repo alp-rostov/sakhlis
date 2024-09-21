@@ -16205,3 +16205,1221 @@ django.core.exceptions.FieldError: Cannot resolve keyword 'address_city,apartmen
 20/Sep/2024 19:48:23    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 404 1831   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
 20/Sep/2024 19:48:23    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
 20/Sep/2024 19:48:23    WARNING    basehttp    "GET /static/fonts/fa-solid-900.ttf HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:42:23    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+21/Sep/2024 19:45:27    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+21/Sep/2024 19:45:28    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+21/Sep/2024 19:45:32    INFO    basehttp    "GET / HTTP/1.1" 200 38465   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:32    INFO    basehttp    "GET /static/css/bootstrap.min.css HTTP/1.1" 200 140936   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:32    INFO    basehttp    "GET /static/css/owl.carousel.min.css HTTP/1.1" 304 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:32    INFO    basehttp    "GET /static/images/flag_en.png HTTP/1.1" 304 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:32    INFO    basehttp    "GET /static/images/flag_ru.png HTTP/1.1" 304 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:32    INFO    basehttp    "GET /static/images/flag_ge.png HTTP/1.1" 304 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:32    INFO    basehttp    "GET /static/images/instagram.png HTTP/1.1" 200 79716   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:32    INFO    basehttp    "GET /static/images/telegram.gif HTTP/1.1" 200 38309   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:32    WARNING    basehttp    "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:32    WARNING    basehttp    "GET /static/js/bootstrap.min.js HTTP/1.1" 404 1816   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:32    WARNING    basehttp    "GET /static/js/mdb.min.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:32    WARNING    basehttp    "GET /static/js/owl.carousel.min.js HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:33    WARNING    basehttp    "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 1870   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:33    WARNING    basehttp    "GET /static/js/custom.js HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:33    INFO    basehttp    "GET /static/images/whatsapp.png HTTP/1.1" 200 167171   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:33    WARNING    basehttp    "GET /static/fonts/broken-cable.svg HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:33    WARNING    basehttp    "GET /static/fonts/leak.svg HTTP/1.1" 404 1801   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:33    WARNING    basehttp    "GET /static/fonts/living-room.svg HTTP/1.1" 404 1822   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:33    WARNING    basehttp    "GET /static/fonts/washing-machine.svg HTTP/1.1" 404 1834   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:33    WARNING    basehttp    "GET /static/fonts/3d-buildings.svg HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:33    INFO    basehttp    "GET /static/images/1.jpg HTTP/1.1" 200 68159   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:33    INFO    basehttp    "GET /static/images/2.jpg HTTP/1.1" 200 73588   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:33    INFO    basehttp    "GET /static/images/3.jpg HTTP/1.1" 200 64252   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:33    INFO    basehttp    "GET /static/images/o-mastere-na-chas.png HTTP/1.1" 200 149377   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:33    INFO    basehttp    "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:33    WARNING    basehttp    "GET /static/fonts/living-room.svg HTTP/1.1" 404 1822   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:33    INFO    basehttp    "GET /static/images/underline1.png HTTP/1.1" 304 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:33    INFO    basehttp    "GET /static/images/usluga-master-na-chas.jpg HTTP/1.1" 200 159701   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:33    INFO    basehttp    "GET /static/images/master-na-chas_1.jpg HTTP/1.1" 200 323239   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:33    INFO    basehttp    "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:33    WARNING    log    Not Found: /favicon.ico   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+21/Sep/2024 19:45:33    WARNING    basehttp    "GET /favicon.ico HTTP/1.1" 404 18141   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:36    INFO    basehttp    "GET /list_order HTTP/1.1" 200 1089196   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:36    INFO    basehttp    "GET /static/css/fonts.css HTTP/1.1" 200 68940   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:36    WARNING    basehttp    "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:36    WARNING    basehttp    "GET /static/js/bootstrap.min.js HTTP/1.1" 404 1816   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:36    WARNING    log    Not Found: /media/masters/unknown_person.jpg   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+21/Sep/2024 19:45:36    WARNING    basehttp    "GET /static/js/mdb.min.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:36    WARNING    basehttp    "GET /media/masters/unknown_person.jpg HTTP/1.1" 404 18441   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:36    WARNING    basehttp    "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 1870   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:36    INFO    basehttp    "GET /media/masters/145.jpg HTTP/1.1" 200 17963   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:36    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 404 1831   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:36    WARNING    basehttp    "GET /static/fonts/fa-regular-400.woff2 HTTP/1.1" 404 1837   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:36    INFO    basehttp    "GET /media/masters/144.jpg HTTP/1.1" 200 21612   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:36    INFO    basehttp    "GET /media/masters/100.jpg HTTP/1.1" 200 96940   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:36    INFO    basehttp    "GET /media/masters/51.jpg HTTP/1.1" 200 14689   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:36    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:36    WARNING    basehttp    "GET /static/fonts/fa-regular-400.woff HTTP/1.1" 404 1834   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:37    WARNING    basehttp    "GET /static/fonts/fa-solid-900.ttf HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:37    WARNING    basehttp    "GET /static/fonts/fa-regular-400.ttf HTTP/1.1" 404 1831   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:37    WARNING    log    Not Found: /media/masters/unknown_person.jpg   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+21/Sep/2024 19:45:37    WARNING    basehttp    "GET /media/masters/unknown_person.jpg HTTP/1.1" 404 18441   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:39    INFO    basehttp    "GET /list_order/1914 HTTP/1.1" 200 29365   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:39    WARNING    basehttp    "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:39    WARNING    basehttp    "GET /static/js/bootstrap.min.js HTTP/1.1" 404 1816   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:39    WARNING    basehttp    "GET /static/js/mdb.min.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:39    WARNING    basehttp    "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 1870   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:39    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 404 1831   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:39    WARNING    basehttp    "GET /static/js/custom.js HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:39    WARNING    basehttp    "GET /static/js/invoice.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:39    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:39    INFO    basehttp    "GET /media/masters/146.jpg HTTP/1.1" 200 32498   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:39    WARNING    basehttp    "GET /static/fonts/fa-solid-900.ttf HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:39    WARNING    log    Not Found: /media/masters/unknown_person.jpg   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+21/Sep/2024 19:45:39    WARNING    basehttp    "GET /media/masters/unknown_person.jpg HTTP/1.1" 404 18443   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:40    ERROR    log    Internal Server Error: /list_order/pdf/1914   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'OSError'>, OSError('\nparagraph text \'<para><font fontName="Georgian">\\u10d8\\u10dc\\u10d3\\u10d8\\u10d5\\u10d8\\u10d3\\u10e3\\u10d0\\u10da\\u10e3\\u10e0\\u10d8 \\u10db\\u10d4\\u10ec\\u10d0\\u10e0\\u10db\\u10d4 _______ \\u10e1\\u10d4\\u10e0\\u10d2\\u10d4\\u10d8 \\u10d2\\u10dd\\u10ea\\u10d8\\u10dc</font><img src="../images/testimg.gif" valign="top"/></para>\' caused exception \nfileName=\'../images/testimg.gif\' identity=[ImageReader@0x7fcea31f3550 filename=\'../images/testimg.gif\'] Cannot open resource "../images/testimg.gif"'), <traceback object at 0x7fcea318a8c0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 523, in open_for_read
+    return open_for_read_by_name(name,mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 463, in open_for_read_by_name
+    return open(name,mode)
+           ^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../images/testimg.gif'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 530, in open_for_read
+    return BytesIO((datareader if name[:5].lower()=='data:' else rlUrlRead)(name))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 476, in rlUrlRead
+    return urlopen(name).read()
+           ^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/urllib/request.py", line 503, in open
+    req = Request(fullurl, data)
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/urllib/request.py", line 322, in __init__
+    self.full_url = url
+    ^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/urllib/request.py", line 348, in full_url
+    self._parse()
+  File "/usr/lib/python3.11/urllib/request.py", line 377, in _parse
+    raise ValueError("unknown url type: %r" % self.full_url)
+ValueError: unknown url type: '../images/testimg.gif'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 643, in __init__
+    fp = open_for_read(fileName,'b')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 532, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: Cannot open resource "../images/testimg.gif"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 3215, in parse
+    self.feed(text)
+  File "/usr/lib/python3.11/html/parser.py", line 110, in feed
+    self.goahead(0)
+  File "/usr/lib/python3.11/html/parser.py", line 170, in goahead
+    k = self.parse_starttag(i)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/html/parser.py", line 335, in parse_starttag
+    self.handle_startendtag(tag, attrs)
+  File "/usr/lib/python3.11/html/parser.py", line 420, in handle_startendtag
+    self.handle_endtag(tag)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 3251, in handle_endtag
+    end()
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 2718, in end_img
+    defn.image = ImageReader(defn.src)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 655, in __init__
+    annotateException('\nfileName=%r identity=%s'%(fileName,self.identity()))
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 1176, in annotateException
+    rl_reraise(t,t(sep.join((_ for _ in (msg,str(v),postMsg) if _))),b)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 138, in rl_reraise
+    raise v.with_traceback(b)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 643, in __init__
+    fp = open_for_read(fileName,'b')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 532, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: 
+fileName='../images/testimg.gif' identity=[ImageReader@0x7fcea31f3550 filename='../images/testimg.gif'] Cannot open resource "../images/testimg.gif"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 455, in CreateIvoicePDF
+    doc.createDocument()
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 168, in createDocument
+    self.createParagraph('<font fontName="Georgian">ინდივიდუალური მეწარმე _______  სერგეი გოცინ</font>'
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 192, in createParagraph
+    p = Paragraph(ptext, style=style)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paragraph.py", line 1809, in __init__
+    self._setup(text, style, bulletText or getattr(style,'bulletText',None), frags, cleanBlockQuotedText)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paragraph.py", line 1830, in _setup
+    style, frags, bulletTextFrags = _parser.parse(text,style)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 3217, in parse
+    annotateException('\nparagraph text %s caused exception' % ascii(text))
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 1176, in annotateException
+    rl_reraise(t,t(sep.join((_ for _ in (msg,str(v),postMsg) if _))),b)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 138, in rl_reraise
+    raise v.with_traceback(b)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 3215, in parse
+    self.feed(text)
+  File "/usr/lib/python3.11/html/parser.py", line 110, in feed
+    self.goahead(0)
+  File "/usr/lib/python3.11/html/parser.py", line 170, in goahead
+    k = self.parse_starttag(i)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/html/parser.py", line 335, in parse_starttag
+    self.handle_startendtag(tag, attrs)
+  File "/usr/lib/python3.11/html/parser.py", line 420, in handle_startendtag
+    self.handle_endtag(tag)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 3251, in handle_endtag
+    end()
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 2718, in end_img
+    defn.image = ImageReader(defn.src)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 655, in __init__
+    annotateException('\nfileName=%r identity=%s'%(fileName,self.identity()))
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 1176, in annotateException
+    rl_reraise(t,t(sep.join((_ for _ in (msg,str(v),postMsg) if _))),b)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 138, in rl_reraise
+    raise v.with_traceback(b)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 643, in __init__
+    fp = open_for_read(fileName,'b')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 532, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: 
+paragraph text '<para><font fontName="Georgian">\u10d8\u10dc\u10d3\u10d8\u10d5\u10d8\u10d3\u10e3\u10d0\u10da\u10e3\u10e0\u10d8 \u10db\u10d4\u10ec\u10d0\u10e0\u10db\u10d4 _______ \u10e1\u10d4\u10e0\u10d2\u10d4\u10d8 \u10d2\u10dd\u10ea\u10d8\u10dc</font><img src="../images/testimg.gif" valign="top"/></para>' caused exception 
+fileName='../images/testimg.gif' identity=[ImageReader@0x7fcea31f3550 filename='../images/testimg.gif'] Cannot open resource "../images/testimg.gif"
+21/Sep/2024 19:45:41    ERROR    basehttp    "GET /list_order/pdf/1914 HTTP/1.1" 500 283947   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:46    INFO    basehttp    "GET /list_order/1913 HTTP/1.1" 200 29434   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:46    WARNING    basehttp    "GET /static/js/bootstrap.min.js HTTP/1.1" 404 1816   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:46    WARNING    basehttp    "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:46    WARNING    basehttp    "GET /static/js/mdb.min.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:46    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 404 1831   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:46    WARNING    basehttp    "GET /static/js/custom.js HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:47    WARNING    basehttp    "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 1870   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:47    WARNING    basehttp    "GET /static/js/invoice.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:47    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:47    WARNING    basehttp    "GET /static/fonts/fa-solid-900.ttf HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:47    WARNING    log    Not Found: /media/masters/unknown_person.jpg   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+21/Sep/2024 19:45:47    WARNING    basehttp    "GET /media/masters/unknown_person.jpg HTTP/1.1" 404 18443   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:47    INFO    basehttp    "GET /list_order/1912 HTTP/1.1" 200 30306   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:47    WARNING    basehttp    "GET /static/js/bootstrap.min.js HTTP/1.1" 404 1816   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:47    WARNING    basehttp    "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:47    WARNING    basehttp    "GET /static/js/mdb.min.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:47    WARNING    basehttp    "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 1870   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:47    WARNING    basehttp    "GET /static/js/invoice.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:47    WARNING    basehttp    "GET /static/js/custom.js HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:47    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 404 1831   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:48    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:48    WARNING    basehttp    "GET /static/fonts/fa-solid-900.ttf HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:48    INFO    basehttp    "GET /list_order/1910 HTTP/1.1" 200 30371   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:48    WARNING    basehttp    "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:48    WARNING    basehttp    "GET /static/js/mdb.min.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:48    WARNING    basehttp    "GET /static/js/bootstrap.min.js HTTP/1.1" 404 1816   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:48    WARNING    basehttp    "GET /static/js/invoice.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:48    WARNING    basehttp    "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 1870   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:48    WARNING    basehttp    "GET /static/js/custom.js HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:48    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 404 1831   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:48    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:48    WARNING    basehttp    "GET /static/fonts/fa-solid-900.ttf HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:48    INFO    basehttp    "GET /list_order/1909 HTTP/1.1" 200 29961   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:48    WARNING    basehttp    "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:48    WARNING    basehttp    "GET /static/js/mdb.min.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:48    WARNING    basehttp    "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 1870   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:48    WARNING    basehttp    "GET /static/js/bootstrap.min.js HTTP/1.1" 404 1816   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:48    WARNING    basehttp    "GET /static/js/invoice.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:48    WARNING    basehttp    "GET /static/js/custom.js HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:48    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 404 1831   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:48    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:48    WARNING    basehttp    "GET /static/fonts/fa-solid-900.ttf HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:49    INFO    basehttp    "GET /list_order/1908 HTTP/1.1" 200 30037   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:49    WARNING    basehttp    "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:49    WARNING    basehttp    "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 1870   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:49    WARNING    basehttp    "GET /static/js/bootstrap.min.js HTTP/1.1" 404 1816   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:49    WARNING    basehttp    "GET /static/js/mdb.min.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:49    WARNING    basehttp    "GET /static/js/invoice.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:49    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 404 1831   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:49    WARNING    basehttp    "GET /static/js/custom.js HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:49    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:49    WARNING    basehttp    "GET /static/fonts/fa-solid-900.ttf HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:49    INFO    basehttp    "GET /list_order/1907 HTTP/1.1" 200 29784   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:49    WARNING    basehttp    "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:49    WARNING    basehttp    "GET /static/js/bootstrap.min.js HTTP/1.1" 404 1816   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:50    WARNING    basehttp    "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 1870   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:50    WARNING    basehttp    "GET /static/js/mdb.min.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:50    WARNING    basehttp    "GET /static/js/custom.js HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:50    WARNING    basehttp    "GET /static/js/invoice.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:50    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 404 1831   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:50    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:50    WARNING    basehttp    "GET /static/fonts/fa-solid-900.ttf HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:50    INFO    basehttp    "GET /list_order/1906 HTTP/1.1" 200 29783   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:50    WARNING    basehttp    "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:50    WARNING    basehttp    "GET /static/js/bootstrap.min.js HTTP/1.1" 404 1816   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:50    WARNING    basehttp    "GET /static/js/mdb.min.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:50    WARNING    basehttp    "GET /static/js/invoice.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:50    WARNING    basehttp    "GET /static/js/custom.js HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:50    WARNING    basehttp    "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 1870   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:50    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 404 1831   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:50    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:50    WARNING    basehttp    "GET /static/fonts/fa-solid-900.ttf HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:50    INFO    basehttp    "GET /list_order/1905 HTTP/1.1" 200 29791   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:50    WARNING    basehttp    "GET /static/js/mdb.min.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:50    WARNING    basehttp    "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 1870   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:50    WARNING    basehttp    "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:50    WARNING    basehttp    "GET /static/js/bootstrap.min.js HTTP/1.1" 404 1816   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:50    WARNING    basehttp    "GET /static/js/custom.js HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:50    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 404 1831   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:50    WARNING    basehttp    "GET /static/js/invoice.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:50    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:50    WARNING    basehttp    "GET /static/fonts/fa-solid-900.ttf HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:51    INFO    basehttp    "GET /list_order/1904 HTTP/1.1" 200 29791   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:51    WARNING    basehttp    "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:51    WARNING    basehttp    "GET /static/js/custom.js HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:51    WARNING    basehttp    "GET /static/js/bootstrap.min.js HTTP/1.1" 404 1816   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:51    WARNING    basehttp    "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 1870   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:51    WARNING    basehttp    "GET /static/js/invoice.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:51    WARNING    basehttp    "GET /static/js/mdb.min.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:51    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 404 1831   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:51    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:51    WARNING    basehttp    "GET /static/fonts/fa-solid-900.ttf HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:51    INFO    basehttp    "GET /list_order/1903 HTTP/1.1" 200 29842   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:51    WARNING    basehttp    "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:51    WARNING    basehttp    "GET /static/js/bootstrap.min.js HTTP/1.1" 404 1816   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:51    WARNING    basehttp    "GET /static/js/invoice.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:51    WARNING    basehttp    "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 1870   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:51    WARNING    basehttp    "GET /static/js/custom.js HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:51    WARNING    basehttp    "GET /static/js/mdb.min.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:51    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 404 1831   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:51    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:51    WARNING    basehttp    "GET /static/fonts/fa-solid-900.ttf HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:52    INFO    basehttp    "GET /list_order/1902 HTTP/1.1" 200 29781   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:52    WARNING    basehttp    "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:52    WARNING    basehttp    "GET /static/js/bootstrap.min.js HTTP/1.1" 404 1816   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:52    WARNING    basehttp    "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 1870   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:52    WARNING    basehttp    "GET /static/js/custom.js HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:52    WARNING    basehttp    "GET /static/js/mdb.min.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:52    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 404 1831   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:52    WARNING    basehttp    "GET /static/js/invoice.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:52    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:52    WARNING    basehttp    "GET /static/fonts/fa-solid-900.ttf HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:53    INFO    basehttp    "GET /list_order/1901 HTTP/1.1" 200 29781   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:53    WARNING    basehttp    "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:53    WARNING    basehttp    "GET /static/js/bootstrap.min.js HTTP/1.1" 404 1816   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:53    WARNING    basehttp    "GET /static/js/custom.js HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:53    WARNING    basehttp    "GET /static/js/mdb.min.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:53    WARNING    basehttp    "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 1870   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:53    WARNING    basehttp    "GET /static/js/invoice.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:53    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 404 1831   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:53    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:53    WARNING    basehttp    "GET /static/fonts/fa-solid-900.ttf HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:54    INFO    basehttp    "GET /list_order/1900 HTTP/1.1" 200 29783   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:54    WARNING    basehttp    "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:54    WARNING    basehttp    "GET /static/js/bootstrap.min.js HTTP/1.1" 404 1816   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:54    WARNING    basehttp    "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 1870   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:54    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 404 1831   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:54    WARNING    basehttp    "GET /static/js/mdb.min.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:54    WARNING    basehttp    "GET /static/js/invoice.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:54    WARNING    basehttp    "GET /static/js/custom.js HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:54    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:54    WARNING    basehttp    "GET /static/fonts/fa-solid-900.ttf HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:54    INFO    basehttp    "GET /list_order/1899 HTTP/1.1" 200 29785   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:54    WARNING    basehttp    "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:54    WARNING    basehttp    "GET /static/js/bootstrap.min.js HTTP/1.1" 404 1816   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:54    WARNING    basehttp    "GET /static/js/custom.js HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:54    WARNING    basehttp    "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 1870   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:54    WARNING    basehttp    "GET /static/js/invoice.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:54    WARNING    basehttp    "GET /static/js/mdb.min.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:54    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 404 1831   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:54    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:54    WARNING    basehttp    "GET /static/fonts/fa-solid-900.ttf HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:54    INFO    basehttp    "GET /list_order/1898 HTTP/1.1" 200 29790   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:54    WARNING    basehttp    "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:54    WARNING    basehttp    "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 1870   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:54    WARNING    basehttp    "GET /static/js/custom.js HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:54    WARNING    basehttp    "GET /static/js/bootstrap.min.js HTTP/1.1" 404 1816   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:54    WARNING    basehttp    "GET /static/js/mdb.min.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:54    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 404 1831   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:54    WARNING    basehttp    "GET /static/js/invoice.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:54    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:54    WARNING    basehttp    "GET /static/fonts/fa-solid-900.ttf HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:55    INFO    basehttp    "GET /list_order/1897 HTTP/1.1" 200 29785   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:55    WARNING    basehttp    "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:55    WARNING    basehttp    "GET /static/js/mdb.min.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:55    WARNING    basehttp    "GET /static/js/bootstrap.min.js HTTP/1.1" 404 1816   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:55    WARNING    basehttp    "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 1870   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:55    WARNING    basehttp    "GET /static/js/custom.js HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:55    WARNING    basehttp    "GET /static/js/invoice.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:55    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 404 1831   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:55    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:55    WARNING    basehttp    "GET /static/fonts/fa-solid-900.ttf HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:56    INFO    basehttp    "GET /list_order/1896 HTTP/1.1" 200 29793   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:56    WARNING    basehttp    "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:56    WARNING    basehttp    "GET /static/js/bootstrap.min.js HTTP/1.1" 404 1816   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:56    WARNING    basehttp    "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 1870   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:56    WARNING    basehttp    "GET /static/js/custom.js HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:56    WARNING    basehttp    "GET /static/js/invoice.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:56    WARNING    basehttp    "GET /static/js/mdb.min.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:56    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 404 1831   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:56    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:56    WARNING    basehttp    "GET /static/fonts/fa-solid-900.ttf HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:56    INFO    basehttp    "GET /list_order/1895 HTTP/1.1" 200 29788   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:56    WARNING    basehttp    "GET /static/js/bootstrap.min.js HTTP/1.1" 404 1816   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:56    WARNING    basehttp    "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:56    WARNING    basehttp    "GET /static/js/mdb.min.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:56    WARNING    basehttp    "GET /static/js/custom.js HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:56    WARNING    basehttp    "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 1870   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:56    WARNING    basehttp    "GET /static/js/invoice.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:56    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 404 1831   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:56    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:56    WARNING    basehttp    "GET /static/fonts/fa-solid-900.ttf HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:56    INFO    basehttp    "GET /list_order/1894 HTTP/1.1" 200 29791   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:56    WARNING    basehttp    "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:56    WARNING    basehttp    "GET /static/js/bootstrap.min.js HTTP/1.1" 404 1816   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:56    WARNING    basehttp    "GET /static/js/mdb.min.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:56    WARNING    basehttp    "GET /static/js/custom.js HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:56    WARNING    basehttp    "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 1870   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:56    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 404 1831   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:56    WARNING    basehttp    "GET /static/js/invoice.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:56    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:56    WARNING    basehttp    "GET /static/fonts/fa-solid-900.ttf HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:57    INFO    basehttp    "GET /list_order/1893 HTTP/1.1" 200 29807   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:57    WARNING    basehttp    "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:57    WARNING    basehttp    "GET /static/js/mdb.min.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:57    WARNING    basehttp    "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 1870   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:57    WARNING    basehttp    "GET /static/js/bootstrap.min.js HTTP/1.1" 404 1816   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:57    WARNING    basehttp    "GET /static/js/invoice.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:57    WARNING    basehttp    "GET /static/js/custom.js HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:57    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 404 1831   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:57    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:57    WARNING    basehttp    "GET /static/fonts/fa-solid-900.ttf HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:57    INFO    basehttp    "GET /list_order/1892 HTTP/1.1" 200 29795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:57    WARNING    basehttp    "GET /static/js/bootstrap.min.js HTTP/1.1" 404 1816   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:57    WARNING    basehttp    "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:57    WARNING    basehttp    "GET /static/js/mdb.min.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:57    WARNING    basehttp    "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 1870   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:57    WARNING    basehttp    "GET /static/js/custom.js HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:57    WARNING    basehttp    "GET /static/js/invoice.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:57    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 404 1831   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:57    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:57    WARNING    basehttp    "GET /static/fonts/fa-solid-900.ttf HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:57    INFO    basehttp    "GET /list_order/1891 HTTP/1.1" 200 29783   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:57    WARNING    basehttp    "GET /static/js/bootstrap.min.js HTTP/1.1" 404 1816   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:57    WARNING    basehttp    "GET /static/js/mdb.min.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:57    WARNING    basehttp    "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:57    WARNING    basehttp    "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 1870   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:57    WARNING    basehttp    "GET /static/js/custom.js HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:57    WARNING    basehttp    "GET /static/js/invoice.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:57    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 404 1831   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:57    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:57    WARNING    basehttp    "GET /static/fonts/fa-solid-900.ttf HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:58    INFO    basehttp    "GET /list_order/1890 HTTP/1.1" 200 29781   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:58    WARNING    basehttp    "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:58    WARNING    basehttp    "GET /static/js/mdb.min.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:58    WARNING    basehttp    "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 1870   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:58    WARNING    basehttp    "GET /static/js/custom.js HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:58    WARNING    basehttp    "GET /static/js/bootstrap.min.js HTTP/1.1" 404 1816   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:58    WARNING    basehttp    "GET /static/js/invoice.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:58    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 404 1831   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:58    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:58    WARNING    basehttp    "GET /static/fonts/fa-solid-900.ttf HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:58    INFO    basehttp    "GET /list_order/1889 HTTP/1.1" 200 29784   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:58    WARNING    basehttp    "GET /static/js/invoice.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:58    WARNING    basehttp    "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:58    WARNING    basehttp    "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 1870   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:58    WARNING    basehttp    "GET /static/js/bootstrap.min.js HTTP/1.1" 404 1816   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:58    WARNING    basehttp    "GET /static/js/mdb.min.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:58    WARNING    basehttp    "GET /static/js/custom.js HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:58    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 404 1831   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:58    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:58    WARNING    basehttp    "GET /static/fonts/fa-solid-900.ttf HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:58    INFO    basehttp    "GET /list_order/1888 HTTP/1.1" 200 29793   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:58    WARNING    basehttp    "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:58    WARNING    basehttp    "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 1870   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:58    WARNING    basehttp    "GET /static/js/custom.js HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:58    WARNING    basehttp    "GET /static/js/mdb.min.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:58    WARNING    basehttp    "GET /static/js/bootstrap.min.js HTTP/1.1" 404 1816   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:58    WARNING    basehttp    "GET /static/js/invoice.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:58    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 404 1831   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:58    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:45:58    WARNING    basehttp    "GET /static/fonts/fa-solid-900.ttf HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:00    INFO    basehttp    "GET /list_order/1887 HTTP/1.1" 200 29810   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:00    WARNING    basehttp    "GET /static/js/bootstrap.min.js HTTP/1.1" 404 1816   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:00    WARNING    basehttp    "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:00    WARNING    basehttp    "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 1870   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:00    WARNING    basehttp    "GET /static/js/mdb.min.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:00    WARNING    basehttp    "GET /static/js/custom.js HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:00    WARNING    basehttp    "GET /static/js/invoice.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:00    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 404 1831   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:00    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:00    WARNING    basehttp    "GET /static/fonts/fa-solid-900.ttf HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:01    INFO    basehttp    "GET /list_order/1886 HTTP/1.1" 200 29781   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:01    WARNING    basehttp    "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:01    WARNING    basehttp    "GET /static/js/bootstrap.min.js HTTP/1.1" 404 1816   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:01    WARNING    basehttp    "GET /static/js/mdb.min.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:01    WARNING    basehttp    "GET /static/js/invoice.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:01    WARNING    basehttp    "GET /static/js/custom.js HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:01    WARNING    basehttp    "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 1870   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:01    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 404 1831   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:01    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:01    WARNING    basehttp    "GET /static/fonts/fa-solid-900.ttf HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:01    INFO    basehttp    "GET /list_order/1885 HTTP/1.1" 200 29783   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:01    WARNING    basehttp    "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:01    WARNING    basehttp    "GET /static/js/mdb.min.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:01    WARNING    basehttp    "GET /static/js/bootstrap.min.js HTTP/1.1" 404 1816   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:01    WARNING    basehttp    "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 1870   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:01    WARNING    basehttp    "GET /static/js/custom.js HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:01    WARNING    basehttp    "GET /static/js/invoice.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:01    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 404 1831   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:01    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:01    WARNING    basehttp    "GET /static/fonts/fa-solid-900.ttf HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:01    INFO    basehttp    "GET /list_order/1884 HTTP/1.1" 200 29890   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:01    WARNING    basehttp    "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:01    WARNING    basehttp    "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 1870   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:01    WARNING    basehttp    "GET /static/js/bootstrap.min.js HTTP/1.1" 404 1816   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:01    WARNING    basehttp    "GET /static/js/mdb.min.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:01    WARNING    basehttp    "GET /static/js/custom.js HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:01    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 404 1831   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:01    WARNING    basehttp    "GET /static/js/invoice.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:01    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:01    WARNING    basehttp    "GET /static/fonts/fa-solid-900.ttf HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:02    INFO    basehttp    "GET /list_order/1883 HTTP/1.1" 200 29754   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:02    WARNING    basehttp    "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:02    WARNING    basehttp    "GET /static/js/bootstrap.min.js HTTP/1.1" 404 1816   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:02    WARNING    basehttp    "GET /static/js/custom.js HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:02    WARNING    basehttp    "GET /static/js/mdb.min.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:02    WARNING    basehttp    "GET /static/js/invoice.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:02    WARNING    basehttp    "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 1870   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:02    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 404 1831   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:02    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:02    WARNING    basehttp    "GET /static/fonts/fa-solid-900.ttf HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:02    INFO    basehttp    "GET /list_order/1882 HTTP/1.1" 200 30223   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:02    WARNING    basehttp    "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:02    WARNING    basehttp    "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 1870   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:02    WARNING    basehttp    "GET /static/js/custom.js HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:02    WARNING    basehttp    "GET /static/js/mdb.min.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:02    WARNING    basehttp    "GET /static/js/invoice.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:02    WARNING    basehttp    "GET /static/js/bootstrap.min.js HTTP/1.1" 404 1816   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:02    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 404 1831   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:02    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:02    WARNING    basehttp    "GET /static/fonts/fa-solid-900.ttf HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:02    INFO    basehttp    "GET /list_order/1881 HTTP/1.1" 200 30475   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:03    WARNING    basehttp    "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:03    WARNING    basehttp    "GET /static/js/bootstrap.min.js HTTP/1.1" 404 1816   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:03    WARNING    basehttp    "GET /static/js/invoice.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:03    WARNING    basehttp    "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 1870   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:03    WARNING    basehttp    "GET /static/js/mdb.min.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:03    WARNING    basehttp    "GET /static/js/custom.js HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:03    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 404 1831   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:03    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:03    WARNING    basehttp    "GET /static/fonts/fa-solid-900.ttf HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:03    INFO    basehttp    "GET /list_order/1879 HTTP/1.1" 200 30307   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:03    WARNING    basehttp    "GET /static/js/bootstrap.min.js HTTP/1.1" 404 1816   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:03    WARNING    basehttp    "GET /static/js/mdb.min.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:03    WARNING    basehttp    "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:03    WARNING    basehttp    "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 1870   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:03    WARNING    basehttp    "GET /static/js/custom.js HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:03    WARNING    basehttp    "GET /static/js/invoice.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:03    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 404 1831   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:03    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:03    WARNING    basehttp    "GET /static/fonts/fa-solid-900.ttf HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:03    INFO    basehttp    "GET /list_order/1878 HTTP/1.1" 200 29738   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:03    WARNING    basehttp    "GET /static/js/bootstrap.min.js HTTP/1.1" 404 1816   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:03    WARNING    basehttp    "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:03    WARNING    basehttp    "GET /static/js/custom.js HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:03    WARNING    basehttp    "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 1870   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:04    WARNING    basehttp    "GET /static/js/mdb.min.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:04    WARNING    basehttp    "GET /static/js/invoice.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:04    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 404 1831   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:04    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:04    WARNING    basehttp    "GET /static/fonts/fa-solid-900.ttf HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:04    INFO    basehttp    "GET /list_order/1874 HTTP/1.1" 200 29794   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:04    WARNING    basehttp    "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:04    WARNING    basehttp    "GET /static/js/bootstrap.min.js HTTP/1.1" 404 1816   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:04    WARNING    basehttp    "GET /static/js/mdb.min.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:04    WARNING    basehttp    "GET /static/js/invoice.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:04    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 404 1831   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:04    WARNING    basehttp    "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 1870   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:04    WARNING    basehttp    "GET /static/js/custom.js HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:04    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:04    WARNING    basehttp    "GET /static/fonts/fa-solid-900.ttf HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:04    INFO    basehttp    "GET /list_order/1873 HTTP/1.1" 200 30129   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:04    WARNING    basehttp    "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:04    WARNING    basehttp    "GET /static/js/bootstrap.min.js HTTP/1.1" 404 1816   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:04    WARNING    basehttp    "GET /static/js/invoice.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:04    WARNING    basehttp    "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 1870   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:04    WARNING    basehttp    "GET /static/js/custom.js HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:04    WARNING    basehttp    "GET /static/js/mdb.min.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:04    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 404 1831   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:04    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:04    WARNING    basehttp    "GET /static/fonts/fa-solid-900.ttf HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:05    INFO    basehttp    "GET /list_order/1871 HTTP/1.1" 200 31790   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:05    WARNING    basehttp    "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:05    WARNING    basehttp    "GET /static/js/bootstrap.min.js HTTP/1.1" 404 1816   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:05    WARNING    basehttp    "GET /static/js/mdb.min.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:05    WARNING    basehttp    "GET /static/js/custom.js HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:05    WARNING    basehttp    "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 1870   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:05    WARNING    basehttp    "GET /static/js/invoice.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:05    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 404 1831   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:05    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:05    WARNING    basehttp    "GET /static/fonts/fa-solid-900.ttf HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:05    INFO    basehttp    "GET /list_order/1870 HTTP/1.1" 200 30271   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:05    WARNING    basehttp    "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:05    WARNING    basehttp    "GET /static/js/bootstrap.min.js HTTP/1.1" 404 1816   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:05    WARNING    basehttp    "GET /static/js/mdb.min.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:05    WARNING    basehttp    "GET /static/js/custom.js HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:05    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 404 1831   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:05    WARNING    basehttp    "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 1870   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:05    WARNING    basehttp    "GET /static/js/invoice.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:05    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:05    WARNING    basehttp    "GET /static/fonts/fa-solid-900.ttf HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:07    INFO    basehttp    "GET /list_order/1871 HTTP/1.1" 200 31788   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:07    WARNING    basehttp    "GET /static/js/jquery-3.3.1.min.js HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:07    WARNING    basehttp    "GET /static/js/bootstrap.min.js HTTP/1.1" 404 1816   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:07    WARNING    basehttp    "GET /static/js/jquery.malihu.PageScroll2id.min.js HTTP/1.1" 404 1870   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:07    WARNING    basehttp    "GET /static/js/mdb.min.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:07    WARNING    basehttp    "GET /static/js/custom.js HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:07    WARNING    basehttp    "GET /static/js/invoice.js HTTP/1.1" 404 1798   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:07    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff2 HTTP/1.1" 404 1831   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:07    WARNING    basehttp    "GET /static/fonts/fa-solid-900.woff HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:07    WARNING    basehttp    "GET /static/fonts/fa-solid-900.ttf HTTP/1.1" 404 1825   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:46:10    ERROR    log    Internal Server Error: /list_order/pdf/1871   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'OSError'>, OSError('\nparagraph text \'<para><font fontName="Georgian">\\u10d8\\u10dc\\u10d3\\u10d8\\u10d5\\u10d8\\u10d3\\u10e3\\u10d0\\u10da\\u10e3\\u10e0\\u10d8 \\u10db\\u10d4\\u10ec\\u10d0\\u10e0\\u10db\\u10d4 _______ \\u10e1\\u10d4\\u10e0\\u10d2\\u10d4\\u10d8 \\u10d2\\u10dd\\u10ea\\u10d8\\u10dc</font><img src="../images/testimg.gif" valign="top"/></para>\' caused exception \nfileName=\'../images/testimg.gif\' identity=[ImageReader@0x7fce9bf9e910 filename=\'../images/testimg.gif\'] Cannot open resource "../images/testimg.gif"'), <traceback object at 0x7fce9bf9c8c0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 523, in open_for_read
+    return open_for_read_by_name(name,mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 463, in open_for_read_by_name
+    return open(name,mode)
+           ^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../images/testimg.gif'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 530, in open_for_read
+    return BytesIO((datareader if name[:5].lower()=='data:' else rlUrlRead)(name))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 476, in rlUrlRead
+    return urlopen(name).read()
+           ^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/urllib/request.py", line 503, in open
+    req = Request(fullurl, data)
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/urllib/request.py", line 322, in __init__
+    self.full_url = url
+    ^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/urllib/request.py", line 348, in full_url
+    self._parse()
+  File "/usr/lib/python3.11/urllib/request.py", line 377, in _parse
+    raise ValueError("unknown url type: %r" % self.full_url)
+ValueError: unknown url type: '../images/testimg.gif'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 643, in __init__
+    fp = open_for_read(fileName,'b')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 532, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: Cannot open resource "../images/testimg.gif"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 3215, in parse
+    self.feed(text)
+  File "/usr/lib/python3.11/html/parser.py", line 110, in feed
+    self.goahead(0)
+  File "/usr/lib/python3.11/html/parser.py", line 170, in goahead
+    k = self.parse_starttag(i)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/html/parser.py", line 335, in parse_starttag
+    self.handle_startendtag(tag, attrs)
+  File "/usr/lib/python3.11/html/parser.py", line 420, in handle_startendtag
+    self.handle_endtag(tag)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 3251, in handle_endtag
+    end()
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 2718, in end_img
+    defn.image = ImageReader(defn.src)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 655, in __init__
+    annotateException('\nfileName=%r identity=%s'%(fileName,self.identity()))
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 1176, in annotateException
+    rl_reraise(t,t(sep.join((_ for _ in (msg,str(v),postMsg) if _))),b)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 138, in rl_reraise
+    raise v.with_traceback(b)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 643, in __init__
+    fp = open_for_read(fileName,'b')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 532, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: 
+fileName='../images/testimg.gif' identity=[ImageReader@0x7fce9bf9e910 filename='../images/testimg.gif'] Cannot open resource "../images/testimg.gif"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 455, in CreateIvoicePDF
+    doc.createDocument()
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 168, in createDocument
+    self.createParagraph('<font fontName="Georgian">ინდივიდუალური მეწარმე _______  სერგეი გოცინ</font>'
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 192, in createParagraph
+    p = Paragraph(ptext, style=style)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paragraph.py", line 1809, in __init__
+    self._setup(text, style, bulletText or getattr(style,'bulletText',None), frags, cleanBlockQuotedText)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paragraph.py", line 1830, in _setup
+    style, frags, bulletTextFrags = _parser.parse(text,style)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 3217, in parse
+    annotateException('\nparagraph text %s caused exception' % ascii(text))
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 1176, in annotateException
+    rl_reraise(t,t(sep.join((_ for _ in (msg,str(v),postMsg) if _))),b)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 138, in rl_reraise
+    raise v.with_traceback(b)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 3215, in parse
+    self.feed(text)
+  File "/usr/lib/python3.11/html/parser.py", line 110, in feed
+    self.goahead(0)
+  File "/usr/lib/python3.11/html/parser.py", line 170, in goahead
+    k = self.parse_starttag(i)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/html/parser.py", line 335, in parse_starttag
+    self.handle_startendtag(tag, attrs)
+  File "/usr/lib/python3.11/html/parser.py", line 420, in handle_startendtag
+    self.handle_endtag(tag)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 3251, in handle_endtag
+    end()
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 2718, in end_img
+    defn.image = ImageReader(defn.src)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 655, in __init__
+    annotateException('\nfileName=%r identity=%s'%(fileName,self.identity()))
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 1176, in annotateException
+    rl_reraise(t,t(sep.join((_ for _ in (msg,str(v),postMsg) if _))),b)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 138, in rl_reraise
+    raise v.with_traceback(b)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 643, in __init__
+    fp = open_for_read(fileName,'b')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 532, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: 
+paragraph text '<para><font fontName="Georgian">\u10d8\u10dc\u10d3\u10d8\u10d5\u10d8\u10d3\u10e3\u10d0\u10da\u10e3\u10e0\u10d8 \u10db\u10d4\u10ec\u10d0\u10e0\u10db\u10d4 _______ \u10e1\u10d4\u10e0\u10d2\u10d4\u10d8 \u10d2\u10dd\u10ea\u10d8\u10dc</font><img src="../images/testimg.gif" valign="top"/></para>' caused exception 
+fileName='../images/testimg.gif' identity=[ImageReader@0x7fce9bf9e910 filename='../images/testimg.gif'] Cannot open resource "../images/testimg.gif"
+21/Sep/2024 19:46:10    ERROR    basehttp    "GET /list_order/pdf/1871 HTTP/1.1" 500 284811   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:47:10    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+21/Sep/2024 19:47:12    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+21/Sep/2024 19:47:15    ERROR    log    Internal Server Error: /list_order/pdf/1871   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'OSError'>, OSError('\nparagraph text \'<para><font fontName="Georgian">\\u10d8\\u10dc\\u10d3\\u10d8\\u10d5\\u10d8\\u10d3\\u10e3\\u10d0\\u10da\\u10e3\\u10e0\\u10d8 \\u10db\\u10d4\\u10ec\\u10d0\\u10e0\\u10db\\u10d4 _______ \\u10e1\\u10d4\\u10e0\\u10d2\\u10d4\\u10d8 \\u10d2\\u10dd\\u10ea\\u10d8\\u10dc</font><img src="../media/images/2.png" valign="top"/></para>\' caused exception \nfileName=\'../media/images/2.png\' identity=[ImageReader@0x7f0829bdc490 filename=\'../media/images/2.png\'] Cannot open resource "../media/images/2.png"'), <traceback object at 0x7f0828d0cf80>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 523, in open_for_read
+    return open_for_read_by_name(name,mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 463, in open_for_read_by_name
+    return open(name,mode)
+           ^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../media/images/2.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 530, in open_for_read
+    return BytesIO((datareader if name[:5].lower()=='data:' else rlUrlRead)(name))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 476, in rlUrlRead
+    return urlopen(name).read()
+           ^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/urllib/request.py", line 503, in open
+    req = Request(fullurl, data)
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/urllib/request.py", line 322, in __init__
+    self.full_url = url
+    ^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/urllib/request.py", line 348, in full_url
+    self._parse()
+  File "/usr/lib/python3.11/urllib/request.py", line 377, in _parse
+    raise ValueError("unknown url type: %r" % self.full_url)
+ValueError: unknown url type: '../media/images/2.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 643, in __init__
+    fp = open_for_read(fileName,'b')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 532, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: Cannot open resource "../media/images/2.png"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 3215, in parse
+    self.feed(text)
+  File "/usr/lib/python3.11/html/parser.py", line 110, in feed
+    self.goahead(0)
+  File "/usr/lib/python3.11/html/parser.py", line 170, in goahead
+    k = self.parse_starttag(i)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/html/parser.py", line 335, in parse_starttag
+    self.handle_startendtag(tag, attrs)
+  File "/usr/lib/python3.11/html/parser.py", line 420, in handle_startendtag
+    self.handle_endtag(tag)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 3251, in handle_endtag
+    end()
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 2718, in end_img
+    defn.image = ImageReader(defn.src)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 655, in __init__
+    annotateException('\nfileName=%r identity=%s'%(fileName,self.identity()))
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 1176, in annotateException
+    rl_reraise(t,t(sep.join((_ for _ in (msg,str(v),postMsg) if _))),b)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 138, in rl_reraise
+    raise v.with_traceback(b)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 643, in __init__
+    fp = open_for_read(fileName,'b')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 532, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: 
+fileName='../media/images/2.png' identity=[ImageReader@0x7f0829bdc490 filename='../media/images/2.png'] Cannot open resource "../media/images/2.png"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 455, in CreateIvoicePDF
+    doc.createDocument()
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 168, in createDocument
+    self.createParagraph('<font fontName="Georgian">ინდივიდუალური მეწარმე _______  სერგეი გოცინ</font>'
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 192, in createParagraph
+    p = Paragraph(ptext, style=style)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paragraph.py", line 1809, in __init__
+    self._setup(text, style, bulletText or getattr(style,'bulletText',None), frags, cleanBlockQuotedText)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paragraph.py", line 1830, in _setup
+    style, frags, bulletTextFrags = _parser.parse(text,style)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 3217, in parse
+    annotateException('\nparagraph text %s caused exception' % ascii(text))
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 1176, in annotateException
+    rl_reraise(t,t(sep.join((_ for _ in (msg,str(v),postMsg) if _))),b)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 138, in rl_reraise
+    raise v.with_traceback(b)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 3215, in parse
+    self.feed(text)
+  File "/usr/lib/python3.11/html/parser.py", line 110, in feed
+    self.goahead(0)
+  File "/usr/lib/python3.11/html/parser.py", line 170, in goahead
+    k = self.parse_starttag(i)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/html/parser.py", line 335, in parse_starttag
+    self.handle_startendtag(tag, attrs)
+  File "/usr/lib/python3.11/html/parser.py", line 420, in handle_startendtag
+    self.handle_endtag(tag)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 3251, in handle_endtag
+    end()
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 2718, in end_img
+    defn.image = ImageReader(defn.src)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 655, in __init__
+    annotateException('\nfileName=%r identity=%s'%(fileName,self.identity()))
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 1176, in annotateException
+    rl_reraise(t,t(sep.join((_ for _ in (msg,str(v),postMsg) if _))),b)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 138, in rl_reraise
+    raise v.with_traceback(b)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 643, in __init__
+    fp = open_for_read(fileName,'b')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 532, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: 
+paragraph text '<para><font fontName="Georgian">\u10d8\u10dc\u10d3\u10d8\u10d5\u10d8\u10d3\u10e3\u10d0\u10da\u10e3\u10e0\u10d8 \u10db\u10d4\u10ec\u10d0\u10e0\u10db\u10d4 _______ \u10e1\u10d4\u10e0\u10d2\u10d4\u10d8 \u10d2\u10dd\u10ea\u10d8\u10dc</font><img src="../media/images/2.png" valign="top"/></para>' caused exception 
+fileName='../media/images/2.png' identity=[ImageReader@0x7f0829bdc490 filename='../media/images/2.png'] Cannot open resource "../media/images/2.png"
+21/Sep/2024 19:47:15    ERROR    basehttp    "GET /list_order/pdf/1871 HTTP/1.1" 500 284948   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:50:19    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+21/Sep/2024 19:50:21    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+21/Sep/2024 19:50:29    ERROR    log    Internal Server Error: /list_order/pdf/1871   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'OSError'>, OSError('\nparagraph text \'<para><font fontName="Georgian">\\u10d8\\u10dc\\u10d3\\u10d8\\u10d5\\u10d8\\u10d3\\u10e3\\u10d0\\u10da\\u10e3\\u10e0\\u10d8 \\u10db\\u10d4\\u10ec\\u10d0\\u10e0\\u10db\\u10d4 _______ \\u10e1\\u10d4\\u10e0\\u10d2\\u10d4\\u10d8 \\u10d2\\u10dd\\u10ea\\u10d8\\u10dc</font><img src="/media/images/2.png" valign="top"/></para>\' caused exception \nfileName=\'/media/images/2.png\' identity=[ImageReader@0x7fa879321a10 filename=\'/media/images/2.png\'] Cannot open resource "/media/images/2.png"'), <traceback object at 0x7fa87061b500>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 523, in open_for_read
+    return open_for_read_by_name(name,mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 463, in open_for_read_by_name
+    return open(name,mode)
+           ^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/media/images/2.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 530, in open_for_read
+    return BytesIO((datareader if name[:5].lower()=='data:' else rlUrlRead)(name))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 476, in rlUrlRead
+    return urlopen(name).read()
+           ^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/urllib/request.py", line 503, in open
+    req = Request(fullurl, data)
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/urllib/request.py", line 322, in __init__
+    self.full_url = url
+    ^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/urllib/request.py", line 348, in full_url
+    self._parse()
+  File "/usr/lib/python3.11/urllib/request.py", line 377, in _parse
+    raise ValueError("unknown url type: %r" % self.full_url)
+ValueError: unknown url type: '/media/images/2.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 643, in __init__
+    fp = open_for_read(fileName,'b')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 532, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: Cannot open resource "/media/images/2.png"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 3215, in parse
+    self.feed(text)
+  File "/usr/lib/python3.11/html/parser.py", line 110, in feed
+    self.goahead(0)
+  File "/usr/lib/python3.11/html/parser.py", line 170, in goahead
+    k = self.parse_starttag(i)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/html/parser.py", line 335, in parse_starttag
+    self.handle_startendtag(tag, attrs)
+  File "/usr/lib/python3.11/html/parser.py", line 420, in handle_startendtag
+    self.handle_endtag(tag)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 3251, in handle_endtag
+    end()
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 2718, in end_img
+    defn.image = ImageReader(defn.src)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 655, in __init__
+    annotateException('\nfileName=%r identity=%s'%(fileName,self.identity()))
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 1176, in annotateException
+    rl_reraise(t,t(sep.join((_ for _ in (msg,str(v),postMsg) if _))),b)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 138, in rl_reraise
+    raise v.with_traceback(b)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 643, in __init__
+    fp = open_for_read(fileName,'b')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 532, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: 
+fileName='/media/images/2.png' identity=[ImageReader@0x7fa879321a10 filename='/media/images/2.png'] Cannot open resource "/media/images/2.png"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 455, in CreateIvoicePDF
+    doc.createDocument()
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 168, in createDocument
+    self.createParagraph('<font fontName="Georgian">ინდივიდუალური მეწარმე _______  სერგეი გოცინ</font>'
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 192, in createParagraph
+    p = Paragraph(ptext, style=style)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paragraph.py", line 1809, in __init__
+    self._setup(text, style, bulletText or getattr(style,'bulletText',None), frags, cleanBlockQuotedText)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paragraph.py", line 1830, in _setup
+    style, frags, bulletTextFrags = _parser.parse(text,style)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 3217, in parse
+    annotateException('\nparagraph text %s caused exception' % ascii(text))
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 1176, in annotateException
+    rl_reraise(t,t(sep.join((_ for _ in (msg,str(v),postMsg) if _))),b)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 138, in rl_reraise
+    raise v.with_traceback(b)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 3215, in parse
+    self.feed(text)
+  File "/usr/lib/python3.11/html/parser.py", line 110, in feed
+    self.goahead(0)
+  File "/usr/lib/python3.11/html/parser.py", line 170, in goahead
+    k = self.parse_starttag(i)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/html/parser.py", line 335, in parse_starttag
+    self.handle_startendtag(tag, attrs)
+  File "/usr/lib/python3.11/html/parser.py", line 420, in handle_startendtag
+    self.handle_endtag(tag)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 3251, in handle_endtag
+    end()
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 2718, in end_img
+    defn.image = ImageReader(defn.src)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 655, in __init__
+    annotateException('\nfileName=%r identity=%s'%(fileName,self.identity()))
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 1176, in annotateException
+    rl_reraise(t,t(sep.join((_ for _ in (msg,str(v),postMsg) if _))),b)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 138, in rl_reraise
+    raise v.with_traceback(b)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 643, in __init__
+    fp = open_for_read(fileName,'b')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 532, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: 
+paragraph text '<para><font fontName="Georgian">\u10d8\u10dc\u10d3\u10d8\u10d5\u10d8\u10d3\u10e3\u10d0\u10da\u10e3\u10e0\u10d8 \u10db\u10d4\u10ec\u10d0\u10e0\u10db\u10d4 _______ \u10e1\u10d4\u10e0\u10d2\u10d4\u10d8 \u10d2\u10dd\u10ea\u10d8\u10dc</font><img src="/media/images/2.png" valign="top"/></para>' caused exception 
+fileName='/media/images/2.png' identity=[ImageReader@0x7fa879321a10 filename='/media/images/2.png'] Cannot open resource "/media/images/2.png"
+21/Sep/2024 19:50:29    ERROR    basehttp    "GET /list_order/pdf/1871 HTTP/1.1" 500 284606   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:50:40    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+21/Sep/2024 19:50:41    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+21/Sep/2024 19:50:44    INFO    basehttp    "GET /list_order/pdf/1871 HTTP/1.1" 200 151428   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:51:06    INFO    basehttp    "GET /list_order/pdf/1871 HTTP/1.1" 200 151428   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:51:36    INFO    basehttp    "GET /list_order/pdf/1871 HTTP/1.1" 200 151428   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:52:36    INFO    basehttp    "GET /list_order/pdf/1871 HTTP/1.1" 200 151428   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:57:06    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+21/Sep/2024 19:57:08    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+21/Sep/2024 19:57:13    ERROR    log    Internal Server Error: /list_order/pdf/1871   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'IndexError'>, IndexError('\nparagraph text \'<para><font fontName="Georgian">\\u10d8\\u10dc\\u10d3\\u10d8\\u10d5\\u10d8\\u10d3\\u10e3\\u10d0\\u10da\\u10e3\\u10e0\\u10d8 \\u10db\\u10d4\\u10ec\\u10d0\\u10e0\\u10db\\u10d4 _______ \\u10e1\\u10d4\\u10e0\\u10d2\\u10d4\\u10d8 \\u10d2\\u10dd\\u10ea\\u10d8\\u10dc</font><img src="static/images/sign.png" valign=""/></para>\' caused exception string index out of range'), <traceback object at 0x7f268d516d40>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 3215, in parse
+    self.feed(text)
+  File "/usr/lib/python3.11/html/parser.py", line 110, in feed
+    self.goahead(0)
+  File "/usr/lib/python3.11/html/parser.py", line 170, in goahead
+    k = self.parse_starttag(i)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/html/parser.py", line 335, in parse_starttag
+    self.handle_startendtag(tag, attrs)
+  File "/usr/lib/python3.11/html/parser.py", line 419, in handle_startendtag
+    self.handle_starttag(tag, attrs)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 3238, in handle_starttag
+    start(attrs or {})
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 2705, in start_img
+    A = self.getAttributes(attributes,_imgAttrMap)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 3077, in getAttributes
+    v = func(self,v) if isinstance(func,_ExValidate) else func(v)
+                                                          ^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 163, in _valignpc
+    n = _num(s)
+        ^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 55, in _num
+    return _convnum(s,unit,allowRelative)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 32, in _convnum
+    if s[0] in ('+','-') and allowRelative:
+       ~^^^
+IndexError: string index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 455, in CreateIvoicePDF
+    doc.createDocument()
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 168, in createDocument
+    self.createParagraph('<font fontName="Georgian">ინდივიდუალური მეწარმე _______  სერგეი გოცინ</font>'
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 192, in createParagraph
+    p = Paragraph(ptext, style=style)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paragraph.py", line 1809, in __init__
+    self._setup(text, style, bulletText or getattr(style,'bulletText',None), frags, cleanBlockQuotedText)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paragraph.py", line 1830, in _setup
+    style, frags, bulletTextFrags = _parser.parse(text,style)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 3217, in parse
+    annotateException('\nparagraph text %s caused exception' % ascii(text))
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 1176, in annotateException
+    rl_reraise(t,t(sep.join((_ for _ in (msg,str(v),postMsg) if _))),b)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 138, in rl_reraise
+    raise v.with_traceback(b)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 3215, in parse
+    self.feed(text)
+  File "/usr/lib/python3.11/html/parser.py", line 110, in feed
+    self.goahead(0)
+  File "/usr/lib/python3.11/html/parser.py", line 170, in goahead
+    k = self.parse_starttag(i)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/html/parser.py", line 335, in parse_starttag
+    self.handle_startendtag(tag, attrs)
+  File "/usr/lib/python3.11/html/parser.py", line 419, in handle_startendtag
+    self.handle_starttag(tag, attrs)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 3238, in handle_starttag
+    start(attrs or {})
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 2705, in start_img
+    A = self.getAttributes(attributes,_imgAttrMap)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 3077, in getAttributes
+    v = func(self,v) if isinstance(func,_ExValidate) else func(v)
+                                                          ^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 163, in _valignpc
+    n = _num(s)
+        ^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 55, in _num
+    return _convnum(s,unit,allowRelative)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 32, in _convnum
+    if s[0] in ('+','-') and allowRelative:
+       ~^^^
+IndexError: 
+paragraph text '<para><font fontName="Georgian">\u10d8\u10dc\u10d3\u10d8\u10d5\u10d8\u10d3\u10e3\u10d0\u10da\u10e3\u10e0\u10d8 \u10db\u10d4\u10ec\u10d0\u10e0\u10db\u10d4 _______ \u10e1\u10d4\u10e0\u10d2\u10d4\u10d8 \u10d2\u10dd\u10ea\u10d8\u10dc</font><img src="static/images/sign.png" valign=""/></para>' caused exception string index out of range
+21/Sep/2024 19:57:13    ERROR    basehttp    "GET /list_order/pdf/1871 HTTP/1.1" 500 224206   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:57:45    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+21/Sep/2024 19:57:46    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+21/Sep/2024 19:57:48    INFO    basehttp    "GET /list_order/pdf/1871 HTTP/1.1" 200 84536   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:58:18    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+21/Sep/2024 19:58:19    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+21/Sep/2024 19:58:24    INFO    basehttp    "GET /list_order/pdf/1871 HTTP/1.1" 200 84536   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 19:59:55    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+21/Sep/2024 19:59:57    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+21/Sep/2024 19:59:59    INFO    basehttp    "GET /list_order/pdf/1871 HTTP/1.1" 200 84693   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 20:00:21    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+21/Sep/2024 20:00:22    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+21/Sep/2024 20:00:25    ERROR    log    Internal Server Error: /list_order/pdf/1871   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'ValueError'>, ValueError('\nparagraph text \'<para><img src="static/images/sign.png" valign="top" hight=150 width=150 /></para>\' caused exception paraparser: syntax error: invalid attribute name hight attrMap=[\'height\', \'src\', \'valign\', \'width\']'), <traceback object at 0x7fcd275d0400>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 3215, in parse
+    self.feed(text)
+  File "/usr/lib/python3.11/html/parser.py", line 110, in feed
+    self.goahead(0)
+  File "/usr/lib/python3.11/html/parser.py", line 170, in goahead
+    k = self.parse_starttag(i)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/html/parser.py", line 335, in parse_starttag
+    self.handle_startendtag(tag, attrs)
+  File "/usr/lib/python3.11/html/parser.py", line 419, in handle_startendtag
+    self.handle_starttag(tag, attrs)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 3238, in handle_starttag
+    start(attrs or {})
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 2705, in start_img
+    A = self.getAttributes(attributes,_imgAttrMap)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 3080, in getAttributes
+    self._syntax_error('invalid attribute name %s attrMap=%r'% (k,list(sorted(attrMap.keys()))))
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 2779, in _syntax_error
+    raise ValueError('paraparser: syntax error: %s' % message)
+ValueError: paraparser: syntax error: invalid attribute name hight attrMap=['height', 'src', 'valign', 'width']
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 455, in CreateIvoicePDF
+    doc.createDocument()
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 171, in createDocument
+    self.createParagraph('<img src="static/images/sign.png" valign="top" hight=150 width=150 />',
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 195, in createParagraph
+    p = Paragraph(ptext, style=style)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paragraph.py", line 1809, in __init__
+    self._setup(text, style, bulletText or getattr(style,'bulletText',None), frags, cleanBlockQuotedText)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paragraph.py", line 1830, in _setup
+    style, frags, bulletTextFrags = _parser.parse(text,style)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 3217, in parse
+    annotateException('\nparagraph text %s caused exception' % ascii(text))
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 1176, in annotateException
+    rl_reraise(t,t(sep.join((_ for _ in (msg,str(v),postMsg) if _))),b)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/lib/utils.py", line 138, in rl_reraise
+    raise v.with_traceback(b)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 3215, in parse
+    self.feed(text)
+  File "/usr/lib/python3.11/html/parser.py", line 110, in feed
+    self.goahead(0)
+  File "/usr/lib/python3.11/html/parser.py", line 170, in goahead
+    k = self.parse_starttag(i)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/html/parser.py", line 335, in parse_starttag
+    self.handle_startendtag(tag, attrs)
+  File "/usr/lib/python3.11/html/parser.py", line 419, in handle_startendtag
+    self.handle_starttag(tag, attrs)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 3238, in handle_starttag
+    start(attrs or {})
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 2705, in start_img
+    A = self.getAttributes(attributes,_imgAttrMap)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 3080, in getAttributes
+    self._syntax_error('invalid attribute name %s attrMap=%r'% (k,list(sorted(attrMap.keys()))))
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/reportlab/platypus/paraparser.py", line 2779, in _syntax_error
+    raise ValueError('paraparser: syntax error: %s' % message)
+ValueError: 
+paragraph text '<para><img src="static/images/sign.png" valign="top" hight=150 width=150 /></para>' caused exception paraparser: syntax error: invalid attribute name hight attrMap=['height', 'src', 'valign', 'width']
+21/Sep/2024 20:00:25    ERROR    basehttp    "GET /list_order/pdf/1871 HTTP/1.1" 500 206768   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 20:01:14    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+21/Sep/2024 20:01:15    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+21/Sep/2024 20:01:17    INFO    basehttp    "GET /list_order/pdf/1871 HTTP/1.1" 200 84695   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 20:04:28    INFO    basehttp    "GET /list_order/pdf/1871 HTTP/1.1" 200 53230   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 20:07:19    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+21/Sep/2024 20:07:21    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+21/Sep/2024 20:07:30    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+21/Sep/2024 20:07:31    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+21/Sep/2024 20:07:35    INFO    basehttp    "GET /list_order/pdf/1871 HTTP/1.1" 200 53229   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 20:09:14    INFO    basehttp    "GET /list_order/pdf/1871 HTTP/1.1" 200 53233   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 20:09:48    INFO    basehttp    "GET /list_order/pdf/1871 HTTP/1.1" 200 53229   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 20:11:05    INFO    basehttp    "GET /list_order/pdf/1871 HTTP/1.1" 200 53344   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 20:11:32    INFO    basehttp    "GET /list_order/pdf/1871 HTTP/1.1" 200 53229   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 20:13:29    INFO    basehttp    "GET /list_order/pdf/1871 HTTP/1.1" 200 52701   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 20:15:27    INFO    basehttp    "GET /list_order/pdf/1871 HTTP/1.1" 200 52594   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 20:15:46    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+21/Sep/2024 20:15:47    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+21/Sep/2024 20:15:51    INFO    basehttp    "GET /list_order/pdf/1871 HTTP/1.1" 200 52596   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 20:16:09    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+21/Sep/2024 20:16:10    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+21/Sep/2024 20:16:14    INFO    basehttp    "GET /list_order/pdf/1871 HTTP/1.1" 200 52594   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 20:17:16    INFO    basehttp    "GET /list_order/pdf/1871 HTTP/1.1" 200 54457   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 20:17:51    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+21/Sep/2024 20:17:52    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+21/Sep/2024 20:17:57    INFO    basehttp    "GET /list_order/pdf/1871 HTTP/1.1" 200 54310   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 20:18:19    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+21/Sep/2024 20:18:20    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+21/Sep/2024 20:18:25    INFO    basehttp    "GET /list_order/pdf/1871 HTTP/1.1" 200 54310   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+21/Sep/2024 20:18:44    INFO    autoreload    /home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py changed, reloading.   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+21/Sep/2024 20:18:45    INFO    autoreload    Watching for file changes with StatReloader   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/autoreload.py   None
+21/Sep/2024 20:18:49    INFO    basehttp    "GET /list_order/pdf/1871 HTTP/1.1" 200 54310   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None

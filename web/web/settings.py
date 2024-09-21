@@ -1,5 +1,5 @@
 import logging
-import environ
+import os
 
 from django.utils.encoding import force_str
 from flask import request
@@ -11,8 +11,7 @@ except ImportError:
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-env=environ.Env()
-environ.Env.read_env(env_file=os.path.join(BASE_DIR, '.env'))
+SECRET_KEY=force_str(os.environ.get('SECRET_KEY'))
 
 logger = logging.getLogger('django')
 
