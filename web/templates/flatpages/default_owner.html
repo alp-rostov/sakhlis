@@ -21,8 +21,9 @@
 </head>
 <body>
 
-{% url 'apartment' as the_url1 %}
+{% url 'profile' as the_url1 %}
 {% url 'o_list_order' as the_url2 %}
+{% url 'apartments' as the_url3 %}
 
 <!--Header-->
 {% #menu %}
@@ -31,11 +32,20 @@
     </li>
     <li class="nav-item mr-4">
         {% if the_url1 in request.get_full_path  %}
-        <a class="nav-link"  href="{{ the_url1 }}"><b>Apartment</b></a>
+        <a class="nav-link"  href="{{ the_url1 }}"><b>Profile</b></a>
         {% else %}
-        <a class="nav-link"  href="{{ the_url1 }}">Apartment</a>
+        <a class="nav-link"  href="{{ the_url1 }}">Profile</a>
         {% endif %}
     </li>
+
+    <li class="nav-item mr-4">
+        {% if the_url3 in request.get_full_path  %}
+        <a class="nav-link"  href="{{ the_url3 }}"><b>Apartments</b></a>
+        {% else %}
+        <a class="nav-link"  href="{{ the_url3 }}">Apartments</a>
+        {% endif %}
+    </li>
+
     <li class="nav-item mr-4">
         {% if the_url2 in request.get_full_path  %}
         <a class="nav-link"  href="{{ the_url2 }}"><b>Orders</b></a>

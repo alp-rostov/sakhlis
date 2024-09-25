@@ -170,11 +170,6 @@ class InvoiceMaker(object):
                              '      სერგეი გოცინ</font>',
                              *self.coord(50, 160+i * 10), style='Heading3')
 
-        self.createParagraph('',
-                             *self.coord(50, 160+i * 10), style='Heading3')
-
-
-
         line4 = (f'<b>Repair service in Tbilisi </b><br />'
                  f'+995 598 259 119 | '
                  f'<a href="https://www.sakhlis-remonti.ge/" color="blue">www.sakhlis-remonti.ge</a> |'

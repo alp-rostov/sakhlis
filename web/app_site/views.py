@@ -4,6 +4,7 @@ import uuid
 
 from django.contrib.auth.models import Group
 from django.contrib.auth.views import LoginView
+from django.db.models import Count
 
 from rest_framework.permissions import IsAdminUser
 
@@ -59,6 +60,17 @@ class ApartmentUpdate(PermissionRequiredMixin, LoginRequiredMixin, UpdateView):
     permission_required = PERMISSION_FOR_REPAIER
     success_url = '/apartments/?address_city=&address_street_app='
 
+
+class ApartmentOwner(PermissionRequiredMixin, LoginRequiredMixin, ListView):
+    model = Apartment
+    template_name = 'owner/apartment.html'
+    form_class = ApartentUpdateForm
+    permission_required = PERMISSION_FOR_OWNER
+    context_object_name = 'appartment'
+    def get_queryset(self):
+        _=UserProfile.objects.get(user=self.request.user)
+        return Apartment.objects.filter(owner=_).order_by('address_street_app')
+    # success_url = '/apartments/?address_city=&address_street_app='
 
 class Clients(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, ListView):
     model = UserProfile
@@ -225,16 +237,21 @@ class OwnerDetailInformation(PermissionRequiredMixin, LoginRequiredMixin, Templa
                                    'apartment_id__address_city', 'apartment_id__foto', 'order_status',
                                    'repairer_id__username')
             .filter(customer_id=context['prof'])
+            .exclude(order_status='END' )
             .order_by('apartment_id__address_street_app', '-time_in')
             .select_related('apartment_id', 'repairer_id')
             )
-                   #  apartments` list for top buttons
+        #            #  apartments` list for top buttons
+        from django.db.models import Count, Sum, F, Prefetch, QuerySet
+
         context['apartments'] = (Apartment.objects
-                                 .filter(owner=context['prof'])
+                                  .filter(owner=context['prof'])
                                  .only('pk', 'address_city', 'address_street_app', 'address_num', 'foto', 'notes',
                                        'name')
                                  .order_by('address_street_app'))
-                    # detail info of apartments without orders
+
+
+                    #detail info of apartments without orders
         list_app_ = set([i.get('apartment_id') for i in context['order_list_by_apartments'].values('apartment_id')])
         list_app = context['apartments'].exclude(pk__in=list_app_)
         context['list_app'] = list_app
