@@ -230,7 +230,6 @@ class OwnerDetailInformation(PermissionRequiredMixin, LoginRequiredMixin, Templa
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['prof'] = DataFromRepairerList().get_object_from_UserProfile(user=self.request.user)
-
         context['order_list_by_apartments'] = (
             OrderList.objects.only('time_in', 'text_order', 'apartment_id__address_street_app',
                                    'apartment_id__address_num', 'apartment_id__name', 'apartment_id__notes',
@@ -241,20 +240,20 @@ class OwnerDetailInformation(PermissionRequiredMixin, LoginRequiredMixin, Templa
             .order_by('apartment_id__address_street_app', '-time_in')
             .select_related('apartment_id', 'repairer_id')
             )
-        #            #  apartments` list for top buttons
-        from django.db.models import Count, Sum, F, Prefetch, QuerySet
 
+        #  apartments` list for top buttons
+        list_pk_apartments = set([i.get('apartment_id') for i in context['order_list_by_apartments'].values('apartment_id')])
         context['apartments'] = (Apartment.objects
-                                  .filter(owner=context['prof'])
+                                  .filter(pk__in=list_pk_apartments)
                                  .only('pk', 'address_city', 'address_street_app', 'address_num', 'foto', 'notes',
                                        'name')
                                  .order_by('address_street_app'))
 
 
-                    #detail info of apartments without orders
-        list_app_ = set([i.get('apartment_id') for i in context['order_list_by_apartments'].values('apartment_id')])
-        list_app = context['apartments'].exclude(pk__in=list_app_)
-        context['list_app'] = list_app
+        #             #detail info of apartments without orders
+        # list_app_ = set([i.get('apartment_id') for i in context['order_list_by_apartments'].values('apartment_id')])
+        # list_app = context['apartments'].exclude(pk__in=list_app_)
+        # context['list_app'] = list_app
         return context
 
 
@@ -437,7 +436,7 @@ class UserAuthorizationView(LoginView):
     def get_success_url(self):
         super().get_success_url()
         dict_choice_url = {'repairer': reverse_lazy('user', kwargs={'pk': self.request.user.pk}),
-                           'owner': reverse_lazy('apartment')}
+                           'owner': reverse_lazy('profile')}
         return dict_choice_url[self.request.user.groups.first().name]
 
 class UserRegisterView(CreateView):

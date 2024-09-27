@@ -10,6 +10,13 @@
 
 <div class="container">
     <h1>Apartments</h1>
+ <a href="{% url 'apartment_create' %}" class="fa fa-plus text-secondary m-3" >
+        Add new apartment
+    </a>
+    <span class="fa fa-trash text-secondary m-3" >
+        Delete apartment
+    </span>
+   
 
     {% for b in appartment %}
           <div class="col-3 border m-2 p-2">
