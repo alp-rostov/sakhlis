@@ -120,7 +120,7 @@ header h1 {
     background-position: center bottom;
     background-size: cover;
     width: 100%;
-    filter: brightness(75%);
+    filter: brightness(90%);
 }
 
 .flag {
@@ -167,7 +167,7 @@ header h1 {
 
 a {
     text-decoration: none!important;
-	color: fefefe;
+	color: #fefefe;
 }
 
 .btn-orange-tel {
@@ -178,6 +178,19 @@ a {
     border-radius: inherit;
     padding: 10px 15px;
 }
+
+
+.btn-order {
+    color: #fff;
+    background-color: #FFFFFF;
+    border-color: #583939;
+    font-weight: 150;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+
+
 
 .cta-btn:hover {
     background-color: transparent!important;

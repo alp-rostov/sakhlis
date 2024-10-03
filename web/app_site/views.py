@@ -4,9 +4,7 @@ import uuid
 
 from django.contrib.auth.models import Group
 from django.contrib.auth.views import LoginView
-from django.db.models import Count
-
-from rest_framework.permissions import IsAdminUser
+from django.db.models import Count, Subquery, F, Exists, OuterRef
 
 from django.db import transaction
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
@@ -230,32 +228,32 @@ class OwnerDetailInformation(PermissionRequiredMixin, LoginRequiredMixin, Templa
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['prof'] = DataFromRepairerList().get_object_from_UserProfile(user=self.request.user)
+
         context['order_list_by_apartments'] = (
             OrderList.objects.only('time_in', 'text_order', 'apartment_id__address_street_app',
                                    'apartment_id__address_num', 'apartment_id__name', 'apartment_id__notes',
                                    'apartment_id__address_city', 'apartment_id__foto', 'order_status',
                                    'repairer_id__username')
             .filter(customer_id=context['prof'])
-            .exclude(order_status='END' )
             .order_by('apartment_id__address_street_app', '-time_in')
             .select_related('apartment_id', 'repairer_id')
-            )
-
+        )
         #  apartments` list for top buttons
-        list_pk_apartments = set([i.get('apartment_id') for i in context['order_list_by_apartments'].values('apartment_id')])
         context['apartments'] = (Apartment.objects
-                                  .filter(pk__in=list_pk_apartments)
+                                 .filter(owner=context['prof'])
+                                 .annotate(top=Subquery(Exists(OrderList.objects.filter(apartment_id=OuterRef('pk')).exclude(order_status='END'))))
+
                                  .only('pk', 'address_city', 'address_street_app', 'address_num', 'foto', 'notes',
-                                       'name')
+                                        'name')
                                  .order_by('address_street_app'))
+        for i in context['apartments']:
+            print(i.top)
 
-
-        #             #detail info of apartments without orders
-        # list_app_ = set([i.get('apartment_id') for i in context['order_list_by_apartments'].values('apartment_id')])
-        # list_app = context['apartments'].exclude(pk__in=list_app_)
-        # context['list_app'] = list_app
+        # detail info of apartments wich have no orders
+        list_app_ = set([i.get('apartment_id') for i in context['order_list_by_apartments'].values('apartment_id')])
+        list_app = context['apartments'].exclude(pk__in=list_app_)
+        context['list_app'] = list_app
         return context
-
 
 class OwnerInvoice(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, DetailView):
     """ list of all orders """
