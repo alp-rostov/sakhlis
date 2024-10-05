@@ -151,11 +151,14 @@
 </tbody>
 <tr class="table-warning" id="total_">
     <th>
+        <a href="{% url 'invoice_pdf' info.id  %}" title="Invoice #{{ info.pk }}">
+            <img src={% static 'images/invoice.png' %} width=60 alt="Invoice">
+        </a>
     </th>
     <th class="h5-responsive" >
-        <a href="{% url 'invoice_pdf' info.id  %}" class="btn btn-light"><b>Invoice - PDF</b></a>
+        
     </th>
-    <th class="h5-responsive ">
+    <th class="h5-responsive">
         Total:
     </th>
     <th class="h5-responsive" id="total">

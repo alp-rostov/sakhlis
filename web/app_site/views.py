@@ -62,13 +62,13 @@ class ApartmentUpdate(PermissionRequiredMixin, LoginRequiredMixin, UpdateView):
 class ApartmentOwner(PermissionRequiredMixin, LoginRequiredMixin, ListView):
     model = Apartment
     template_name = 'owner/apartment.html'
-    form_class = ApartentUpdateForm
     permission_required = PERMISSION_FOR_OWNER
     context_object_name = 'appartment'
+
     def get_queryset(self):
         _=UserProfile.objects.get(user=self.request.user)
         return Apartment.objects.filter(owner=_).order_by('address_street_app')
-    # success_url = '/apartments/?address_city=&address_street_app='
+
 
 class Clients(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, ListView):
     model = UserProfile
@@ -246,9 +246,6 @@ class OwnerDetailInformation(PermissionRequiredMixin, LoginRequiredMixin, Templa
                                  .only('pk', 'address_city', 'address_street_app', 'address_num', 'foto', 'notes',
                                         'name')
                                  .order_by('address_street_app'))
-        for i in context['apartments']:
-            print(i.top)
-
         # detail info of apartments wich have no orders
         list_app_ = set([i.get('apartment_id') for i in context['order_list_by_apartments'].values('apartment_id')])
         list_app = context['apartments'].exclude(pk__in=list_app_)
@@ -265,7 +262,6 @@ class OwnerInvoice(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixi
     def get_context_data(self, **kwargs):
         context = super().get_context_data()
         context['invoice'] = DataFromInvoice().get_data_from_invoice_with_amount(order_id_=self.object.pk)
-
         return context
 
 
@@ -330,7 +326,7 @@ class OwnerOrderManagementSystem(OrderManagementSystem, BaseClassExeption, Login
             .values('pk', 'time_in',
                     'text_order', 'apartment_id','repairer_id',
                     'repairer_id__username', 'apartment_id__address_street_app',
-                    'apartment_id__address_city', 'apartment_id__address_num'
+                    'apartment_id__address_city', 'apartment_id__address_num', 'apartment_id__name'
                     ).order_by('-time_in')
         self.filterset = OrderFilter(self.request.GET, queryset)
         return self.filterset.qs

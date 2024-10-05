@@ -39,11 +39,9 @@ top: 0;
 
 
 {% url 'user' request.user.id as the_url1 %}
-
 {% url 'list_order' as the_url2 %}
 {% url 'clients' as the_url3 %}
 {% url 'stat' as the_url4 %}
-{% url 'owner' as the_url5 %}
 {% url 'apartments' as the_url5 %}
 
 
@@ -97,31 +95,7 @@ top: 0;
         <a class="nav-link"  href="{{ the_url4 }}">Statistics</a>
         {% endif %}
     </li>
-
-
-{% elif request.user.groups.first.name == 'owner' %}
-
-    <li class="nav-item mr-4">
-        <a class="nav-link" href="{% url 'home' %}">Main</a>
-    </li>
-
-    <li class="nav-item mr-4">
-        {% if the_url5 in request.get_full_path  %}
-        <a class="nav-link"  href="{{ the_url5 }}"><b>Profile</b></a>
-        {% else %}
-        <a class="nav-link"  href="{{ the_url5 }}">Profile</a>
-        {% endif %}
-    </li>
-
-
-    <li class="nav-item mr-4">
-        <a class="nav-link" href="">Appartments</a>
-    </li>
-
-
-    <li class="nav-item mr-4">
-        <a class="nav-link" href="">Statistica</a>
-    </li>
+    
 {% else %}
  <li class="nav-item mr-4">
         <a class="nav-link" href="{% url 'home' %}">Main</a>
@@ -129,10 +103,7 @@ top: 0;
 {% endif%}
 
 
-
-
-
-    {% if request.user.is_authenticated %}
+{% if request.user.is_authenticated %}
         <li class="nav-item mr-4">
             <a class="nav-link" href="{% url 'logout' %}">
 

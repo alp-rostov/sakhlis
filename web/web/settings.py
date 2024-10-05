@@ -28,7 +28,7 @@ LOGGING = {
 
     'handlers': {
         'security': {
-            'level': 'INFO',
+            'level': 'WARNING',
             'class': 'logging.FileHandler',
             'filename': 'django.log',
             'formatter': 'verbose_info'

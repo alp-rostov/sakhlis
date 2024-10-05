@@ -33,12 +33,10 @@
         {{ i.time_in }}
     </div>
     <div class="col-sm-12 col-md-4 col-lg-4 mt-3">
-
-        <span class="fas fa-home prefix text-secondary mt-2" aria-hidden="true" >
+         <h5 >{{ i.apartment_id__name }}</h5>
             <span id="street_app_{{ i.pk }}">{{ i.apartment_id__address_street_app }}</span>
             <span id="num_{{ i.pk }}">{{ i.apartment_id__address_num }}</span>,
             <span id="city_{{ i.pk }}" >{{ i.apartment_id__address_city|choice_tag:'city'}}</span>.
-        </span>
         <p id="text_order_{{ i.pk }}" class="mt-1">{{ i.text_order|truncatechars:200|capfirst }}</p>
     </div>
     <div class="col-sm-12 col-md-4 col-lg-4 mb-3">

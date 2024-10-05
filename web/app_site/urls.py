@@ -45,7 +45,7 @@ urlpatterns = [
     path('user/<int:pk>', RepairerDetailInformation.as_view(), name='user'),
 
     path('owner/profile', OwnerDetailInformation.as_view(), name='profile'),
-    path('owner/apartments', ApartmentOwner.as_view(), name='apartments'),
+    path('owner/apartments', ApartmentOwner.as_view(), name='apartments_owner'),
 
     path('owner/apartment/<int:pk>', OwnerApartmentUpdate.as_view(), name='apartment_update'),
     path('owner/apartment/create', OwnerApartmentCreate.as_view(), name='apartment_create'),

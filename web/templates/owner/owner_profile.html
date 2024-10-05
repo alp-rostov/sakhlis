@@ -92,7 +92,7 @@
         <label onclick="menu_hide_show()" for="tab-btn-{{ b.pk }}">
             
             {{b.address_street_app}} {{b.address_num|default_if_none:''}}  | <span class="text-secondary">{{b.name}}</span>
-            {% if b.top %} <b> in progres orders   </b>{% endif %}    
+            {% if b.top %}<br> <span class="text-secondary"> Orders in progress</span>{% endif %}    
         </label>
         {% endfor %}
         <!--end menu apartments-->
