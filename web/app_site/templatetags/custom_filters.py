@@ -3,6 +3,10 @@ from app_site.constants import CITY_CHOICES, ORDER_STATUS_, MONTH, WORK_CHOICES
 
 register = template.Library()
 
+@register.filter
+def get_item(dictionary, key):
+    return dictionary[key]
+
 
 @register.filter()
 def choice_tag(value, A):

@@ -1,10 +1,11 @@
 import json
 import logging
 import uuid
+from itertools import count
 
 from django.contrib.auth.models import Group
 from django.contrib.auth.views import LoginView
-from django.db.models import Count, Subquery, F, Exists, OuterRef
+from django.db.models import Count, Subquery, F, Exists, OuterRef, Sum
 
 from django.db import transaction
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
@@ -67,9 +68,31 @@ class ApartmentOwner(PermissionRequiredMixin, LoginRequiredMixin, ListView):
 
     def get_queryset(self):
         _=UserProfile.objects.get(user=self.request.user)
-        return Apartment.objects.filter(owner=_).order_by('address_street_app')
+        return (Apartment.objects
+                .filter(owner=_)
+                # .annotate(info=Subquery(Count(orders)))
+                .order_by('address_street_app'))
 
+    def get_context_data(self, *, object_list=None, **kwargs):
+        _=UserProfile.objects.get(user=self.request.user)  # TODO delete DRY
+        context=super().get_context_data(**kwargs)
+        orders_quantity = OrderList.objects.filter(apartment_id__owner=_).values('apartment_id').annotate(
+            quantity=Count("apartment_id"))
+        orders_amount=(Invoice.objects
+             .filter(order_id__apartment_id__owner_id=_)
+             .values('order_id__apartment_id')
+             .annotate(ss=Sum(F('price')*F('quantity')))
+             )
+        summ = {}
+        for ii in orders_amount:
+            summ[ii['order_id__apartment_id']] = str(ii['ss'])
+        context['orders_summ'] = summ
 
+        count = {}
+        for i in orders_quantity:
+            count[i['apartment_id']] = i['quantity']
+        context['orders_count'] = count
+        return context
 class Clients(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, ListView):
     model = UserProfile
     context_object_name = 'clients'

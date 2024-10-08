@@ -9,42 +9,39 @@
 
 
 <div class="container">
-    <h1>Apartments</h1>
+
  <a href="{% url 'apartment_create' %}" class="fa fa-plus text-secondary m-3" >
         Add new apartment
     </a>
-    <span class="fa fa-trash text-secondary m-3" >
-        Delete apartment
-    </span>
-   
-
     {% for b in appartment %}
-          <div class="col-3 border m-2 p-2">
-                <h4>{{ b.name|default_if_none:'' }}</h4>
-                <h5 class="mt-0 p-0">{{ b.address_street_app }} {{ b.address_num }}, {{ b.address_city|choice_tag:'city' }}</h5>
-              <p class="text-secondary ">{{ b.notes|default_if_none:'' }}<a href="{{b.link_location }}">MAP</a></p>
-                <img src="../media/{{ b.foto|default_if_none:'images/none.jpg' }} " alt="" class="" width="200"><br>
-            </div>
+          <div class="row border p-2 mb-3">
+              <div class="col-lg-2 col-md-2 col-sm-12">
+                                      <a href="../owner/apartment/{{ b.pk }}" class="h5 text-secondary " >
+                    <i class="fas fa-pen text-secondary" style='font-size:14px'> edit</i></a> | 
+                    <a href="" ><i class="fas fa-trash text-secondary" style='font-size:14px'>delete</i></a>
 
-
-<!--    <div class="card mb-3" style="max-width: 540px;">-->
-<!--  <div class="row g-0">-->
-<!--    <div class="col-md-4">-->
-<!--      <img src="../media/{{ i.foto|default_if_none:'images/none.jpg' }} " class="img-fluid rounded-start" alt="...">-->
-
-<!--    </div>-->
-<!--    <div class="col-md-8">-->
-<!--      <div class="card-body">-->
-<!--        <h5 class="card-title">{{ i.address_street_app }} {{ i.address_num }}, {{ i.address_city|choice_tag:'city' }}</h5>-->
-<!--        <p class="card-text"><small class="text-muted">{{ i.notes|default_if_none:'' }}</small></p>-->
-<!--          <p class="card-text">{{ i.name }}</p>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</div>-->
-
-
-
+                  <img src="../media/{{ b.foto }} " alt="" class="" width="100">
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-12">
+                  <h4>{{ b.name|default_if_none:'' }}</h4>
+                    
+                  <h5 class="mt-0 p-0">
+                      {{ b.address_street_app }} {{ b.address_num }}, {{ b.address_city|choice_tag:'city' }}
+                  </h5>
+                  <span class="text-secondary ">
+                      {{ b.notes|default_if_none:'' }}
+                      <a href="{{b.link_location }}">
+                          MAP
+                      </a>
+                  </span>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-12">
+                  oders: {{ orders_count|get_item:b.pk }}<br>
+                  spend: {{ orders_summ|get_item:b.pk }}
+                  <br>masters: 
+              </div>
+              
+          </div>
     {% endfor%}
 </div>
 
