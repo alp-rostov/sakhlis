@@ -33,21 +33,21 @@
 <!--Header-->
 {% #menu %}
 
-<li class="nav-item mr-4 active">
+<li class="nav-item mr-3 active">
     <a class="nav-link" href="#section-0">Главная <span class="sr-only">(current)</span></a>
 </li>
-<li class="nav-item mr-4">
+<li class="nav-item mr-3">
     <a class="nav-link" href="#section-1">Услуги</a>
 </li>
-<li class="nav-item mr-4">
-    <a class="nav-link" href="#section-3">Фото</a>
+<li class="nav-item mr-3">
+    <a class="nav-link" href="#section-2">Фото</a>
 </li>
-<li class="nav-item mr-4">
-    <a class="nav-link" href="#section-2">О нас</a>
+<li class="nav-item mr-3">
+    <a class="nav-link" href="#section-3">О нас</a>
 </li>
 
-<li class="nav-item mr-4">
-    <a class="nav-link" href="#section-4">Наши клиенты</a>
+<li class="nav-item mr-3">
+    <a class="nav-link" href="#section-4">Режим работы</a>
 </li>
 
 {% if request.user.is_authenticated %}
@@ -141,12 +141,12 @@
 <!-- And Services -->
 
 <!-- Foto -->
-<section id="section-3" class="accordion-bg">
+<section id="section-2" class="accordion-bg">
 <!-- Testimonials -->
 <section class="text-center cloudy-knoxville-gradient">
     <div class="container">
         <!-- Section heading -->
-        <h2 class="h1-responsive">Фото<strong class="mycolor"> наших работ</strong></h2>
+        <h2 class="h1-responsive">Фото работ<strong class="mycolor"> "Мастер на час" </strong></h2>
 
         <div class="wrapper-carousel-fix py-4">
             <!-- Carousel Wrapper -->
@@ -185,7 +185,7 @@
 <!-- And Foto -->
 
 <!-- How I work -->
-<section>
+<section id="section-3">
     <h2 class="h1-responsive">
         Мастер на час в Тбилиси:
         <strong class="mycolor">
@@ -241,12 +241,16 @@
 <!-- And How I work -->
 
 <!--About Me -->
-<section id="section-2">
+<section id="section-4">
 
     {% #about_me head="«Мастер на час»<strong class='mycolor'> всегда на связи</strong>" img="images/muzg-na-chas.jpg" %}
-
-    <p><i class="fas fa-quote-left pr-2"></i>Мы готовы приехать на вызов в любое время в экстренной ситуации.</p>
-                <h4><i class="fas fa-wrench fa-sm mr-3"></i>Режим работы: КРУГЛОСУТОЧНО!</h4>
+    <ul>
+    <li>Пн-Пт: 9.00-18.00
+    <li>Суб: 9.00-15.00
+    <li>Воск: выходной
+    </ul>
+    <p><i class="fas fa-quote-left pr-2"></i>Мы готовы приехать на вызов в <b>любое время в экстренной ситуации.</b></p>
+                <h4><i class="fas fa-wrench fa-sm mr-3"></i>Режим работы: КРУГЛОСУТОЧНО! (в экстренной ситуации)</h4>
                 <p>Наша команда имеет многолетний опыт работы по данному направлению. Предлагаем только качественное решение вашей проблемы будь-то поломаный выключатель, скрипящая дверь, протекающая сантехника.</p>
                 <blockquote class="blockquote">
                     <p class="mb-0">Контактная информация: +995 598259119</p>
