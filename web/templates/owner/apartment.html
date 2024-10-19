@@ -14,7 +14,7 @@
         Add new apartment
     </a>
     {% for b in appartment %}
-          <div class="row border p-2 mb-3">
+          <div class="row border-bottom p-3 mb-3">
               <div class="col-lg-2 col-md-2 col-sm-12">
                                       <a href="../owner/apartment/{{ b.pk }}" class="h5 text-secondary " >
                     <i class="fas fa-pen text-secondary" style='font-size:14px'> edit</i></a> | 
@@ -36,9 +36,14 @@
                   </span>
               </div>
               <div class="col-lg-4 col-md-4 col-sm-12">
-                  oders: {{ orders_count|get_item:b.pk  }}<br>
-                  spend: {{ orders_summ|get_item:b.pk }}<br>
-                  <br>masters: {{ list_master|get_item:b.pk}}
+
+                  Oders: {{ orders_count|get_item:b.pk  }}<br>
+                  Costs: {{ orders_summ|get_item:b.pk }}<br>
+                  Masters:<br>
+                  {% for i in list_master|get_item:b.pk %}
+                  <img src="../media/masters/{{ i.0|default_if_none:'images/none.jpg' }}.jpg"
+                    class="rounded-circle border border-5 border-white" width="35"> {{ i.1 }}
+                  {% endfor %}
               </div>
               
           </div>
