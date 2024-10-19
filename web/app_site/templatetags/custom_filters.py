@@ -5,8 +5,10 @@ register = template.Library()
 
 @register.filter
 def get_item(dictionary, key):
-    return dictionary[key]
-
+    if dictionary.get(key):
+        return dictionary.get(key)
+    else:
+        return '-'
 
 @register.filter()
 def choice_tag(value, A):

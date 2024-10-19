@@ -70,15 +70,22 @@ class ApartmentOwner(PermissionRequiredMixin, LoginRequiredMixin, ListView):
         _=UserProfile.objects.get(user=self.request.user)
         return (Apartment.objects
                 .filter(owner=_)
-                # .annotate(info=Subquery(Count(orders)))
                 .order_by('address_street_app'))
 
     def get_context_data(self, *, object_list=None, **kwargs):
         _=UserProfile.objects.get(user=self.request.user)  # TODO delete DRY
         context=super().get_context_data(**kwargs)
-        orders_quantity = OrderList.objects.filter(apartment_id__owner=_).values('apartment_id').annotate(
+
+        list_orders_master=OrderList.objects.filter(apartment_id__owner=_)
+
+        orders_quantity = list_orders_master.values('apartment_id').annotate(
             quantity=Count("apartment_id"))
-        orders_amount=(Invoice.objects
+        count = {}
+        for i in orders_quantity:
+            count[i['apartment_id']] = i['quantity']
+        context['orders_count'] = count
+
+        orders_amount = (Invoice.objects
              .filter(order_id__apartment_id__owner_id=_)
              .values('order_id__apartment_id')
              .annotate(ss=Sum(F('price')*F('quantity')))
@@ -88,11 +95,21 @@ class ApartmentOwner(PermissionRequiredMixin, LoginRequiredMixin, ListView):
             summ[ii['order_id__apartment_id']] = str(ii['ss'])
         context['orders_summ'] = summ
 
-        count = {}
-        for i in orders_quantity:
-            count[i['apartment_id']] = i['quantity']
-        context['orders_count'] = count
+        masters={}
+        list_masters = list_orders_master.exclude(repairer_id=None).values('apartment_id','repairer_id', 'repairer_id__username').distinct()
+        for iii in list_masters:
+            if not masters.get(iii.get('apartment_id')):
+                masters[iii['apartment_id']] = [(iii['repairer_id'], iii['repairer_id__username'])]
+            else:
+                t= masters.get(iii.get('apartment_id'))
+                t.append((iii['repairer_id'], iii['repairer_id__username']))
+                masters[iii['apartment_id']]=t
+        context['list_master'] = masters
+
+
         return context
+
+
 class Clients(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, ListView):
     model = UserProfile
     context_object_name = 'clients'

@@ -53,7 +53,7 @@
 {% if request.user.is_authenticated %}
 <li class="nav-item mr-4">
     {% if request.user.groups.first.name == 'repairer' %}
-    <a class="nav-link" href="{% url 'list_order' %}">
+    <a class="nav-link" href="{% url 'user' request.user.pk %}">
     {% elif request.user.groups.first.name == 'owner' %}
     <a class="nav-link" href="{% url 'profile' %}">
     {% endif %}
@@ -243,7 +243,7 @@
 <!--About Me -->
 <section id="section-4">
 
-    {% #about_me head="«Мастер на час»<strong class='mycolor'> всегда на связи</strong>" img="images/muzg-na-chas.jpg" %}
+    {% #about_me head="«Мастер на час»<strong class='mycolor'> всегда на связи</strong>" %}
     <ul>
     <li>Пн-Пт: 9.00-18.00
     <li>Суб: 9.00-15.00

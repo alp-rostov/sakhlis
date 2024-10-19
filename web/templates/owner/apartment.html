@@ -36,9 +36,9 @@
                   </span>
               </div>
               <div class="col-lg-4 col-md-4 col-sm-12">
-                  oders: {{ orders_count|get_item:b.pk }}<br>
-                  spend: {{ orders_summ|get_item:b.pk }}
-                  <br>masters: 
+                  oders: {{ orders_count|get_item:b.pk  }}<br>
+                  spend: {{ orders_summ|get_item:b.pk }}<br>
+                  <br>masters: {{ list_master|get_item:b.pk}}
               </div>
               
           </div>

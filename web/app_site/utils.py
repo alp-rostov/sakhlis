@@ -18,6 +18,8 @@ import base64
 import urllib.parse
 import warnings
 import io
+
+from .constants import CITY_CHOICES_INVOICE
 from .models import OrderList
 
 
@@ -131,7 +133,8 @@ class InvoiceMaker(object):
         line2 = f'<b>Invoice # {self.info.pk} </b><br /><br /><font fontsize=18>Data {date_info}</font>'
         self.createParagraph(line2, *self.coord(0, 80), style='Invoice_center')
 
-        line3 = f'<font fontName="Georgian">Invoiced To: <br /><b>{self.info.customer_id.customer_name}</b><br /> ს/კ ---------</font>'
+        line3 = (f'<font fontName="Georgian">Invoiced To: <br /><b>{self.info.customer_id.customer_name}</b><br />'
+                 f'{self.info.apartment_id}, {CITY_CHOICES_INVOICE[self.info.apartment_id.address_city]}</font>')
 
         self.createParagraph(line3, *self.coord(20, 95), style='Heading2')
 
@@ -163,7 +166,7 @@ class InvoiceMaker(object):
             ('ALIGN', (2, 0), (5, -1), 'CENTER')
         ]
         )
-        self.createTable(table_serv, 50, 350, b, c_width)
+        self.createTable(table_serv, 50, 360, b, c_width)
 
         self.createParagraph('<font fontName="Georgian">ინდივიდუალური მეწარმე      '
                              '<img src="static/images/sign.png" valign="top" width=70 height=55 />'
