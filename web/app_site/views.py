@@ -282,7 +282,6 @@ class OwnerDetailInformation(PermissionRequiredMixin, LoginRequiredMixin, Templa
         context['apartments'] = (Apartment.objects
                                  .filter(owner=context['prof'])
                                  .annotate(top=Subquery(Exists(OrderList.objects.filter(apartment_id=OuterRef('pk')).exclude(order_status='END'))))
-
                                  .only('pk', 'address_city', 'address_street_app', 'address_num', 'foto', 'notes',
                                         'name')
                                  .order_by('address_street_app'))

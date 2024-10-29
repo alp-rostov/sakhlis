@@ -5,6 +5,6 @@ from api.views import *
 # noinspection PyPep8
 urlpatterns = [
     path('street/', StreetView.as_view(), name='street'),
-    # path('apartments/', AppartList.as_view(), name='apartments'),
+    path('orders/', OrderView.as_view()),
 
 ]

@@ -13,6 +13,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY=force_str(os.environ.get('SECRET_KEY'))
 
+CORS_ALLOWED_ORIGINS = ["http://localhost:3000"]
+
 logger = logging.getLogger('django')
 
 LOGGING = {
@@ -63,7 +65,8 @@ INSTALLED_APPS = [
     'django_cleanup.apps.CleanupConfig',
     'app_site.apps.AppSiteConfig',
     'api.apps.ApiConfig',
-    'debug_toolbar'
+    'debug_toolbar',
+    'corsheaders',  # app is for giving permission to use api from other sources
 ]
 SITE_ID = 1
 
@@ -76,6 +79,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
      'debug_toolbar.middleware.DebugToolbarMiddleware'
 ]

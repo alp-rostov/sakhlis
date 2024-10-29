@@ -41,7 +41,7 @@
                   Costs: {{ orders_summ|get_item:b.pk }}<br>
                   Masters:<br>
                   {% for i in list_master|get_item:b.pk %}
-                  <img src="../media/masters/{{ i.0|default_if_none:'images/none.jpg' }}.jpg"
+                  <img src="../media/masters/{{ i.0 }}.jpg"
                     class="rounded-circle border border-5 border-white" width="35"> {{ i.1 }}
                   {% endfor %}
               </div>
