@@ -9,10 +9,10 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <!-- Fav Icon -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <title>Мастер на час в Тбилиси | Мелкие ремонтные работы</title>
-    <meta name="description" content="Услуги по ремонту в Тбилиси ✔ Вызвать мастера на дом ✔ Услуги электрика, сантехника, мелкий ремонт квартир"">
+    <title>Мастер на час в Тбилиси | Техническое обслуживание вашего бизнеса и апартаментов</title>
+    <meta name="description" content="Услуги по ремонту в Тбилиси: Техническое обслуживание вашего бизнеса и апартаментов">
     <!-- Facebook -->
-    <meta property="og:title" content="Мастер на час в Тбилиси">
+    <meta property="og:title" content="Мастер на час в Тбилиси: обслуживание бизнеса и апартаментов">
 	<meta property="og:description" content="Услуги по ремонту в Тбилиси ✔ Вызвать мастера на дом ✔ Услуги электрика, сантехника, мелкий ремонт квартир">
 	<meta property="og:image" content="images/master-na-chas.jpg">
 	<meta property="og:image:width" content>
@@ -34,16 +34,16 @@
 {% #menu %}
 
 <li class="nav-item mr-3 active">
-    <a class="nav-link" href="#section-0"><b>Главная </b><span class="sr-only">(current)</span></a>
+    <a class="nav-link" href="{% url 'home' %}"><b>Главная </b><span class="sr-only">(current)</span></a>
 </li>
 <li class="nav-item mr-3">
-    <a class="nav-link" href="#section-1">Услуги</a>
+    <a class="nav-link" href="#section-1">Пакет ТО</a>
 </li>
 <li class="nav-item mr-3">
-    <a class="nav-link" href="#section-2">Фото</a>
+    <a class="nav-link" href="#section-2">Выгоды</a>
 </li>
 <li class="nav-item mr-3">
-    <a class="nav-link" href="#section-3">О нас</a>
+    <a class="nav-link" href="#section-3">Стоимость</a>
 </li>
 
 <li class="nav-item mr-3">
@@ -76,12 +76,12 @@
 {% /menu %}
 
 
-<header id="section-0" class="bg_img jarallax _mPS2id-t mPS2id-target mPS2id-target-first mPS2id-target-last" data-jarallax="{'speed': 0.2}">
+<header id="section-0" class="bg_img jarallax">
     <div class="space">
         <div class="text-center">
             <img src="{% static 'images/logo.png' %}" alt="Мастер на час в Тбилиси" class="logo mt-5" width="200">
-            <h1 class="display-4 mb-0" >Мастер на час в Тбилиси </h1>
-            <p class="lead">Нужны мужские руки? Домашний мастер быстро решит <br>любые проблемы с ремонтом в квартире, доме и офисе!<br>
+            <h1 class="display-4 mb-0" >Мастер на час для вашего бизнеса </h1>
+            <p class="lead">Обслуживание офисов, апартаментов, производств, бизнесс-центорв!<br>
                 <br><u>Написать мастеру </u></p>
             <div class="lead" >
                     <!--Telegramm-->
@@ -91,11 +91,13 @@
                     <!--Instagram-->
                     <a class="m-2" href="https://www.instagram.com/repairservicetbilisi/"><img src="{% static 'images/instagram.png' %}" width="70" alt="Instagram"></a>
             </div>
-            <div class="flex-center">
-                <button class="btn-send " data-toggle="modal" data-target="#exampleModal">
-                    Отправить заявку
+                            <button class="btn-send " data-toggle="modal" data-target="#exampleModal">
+                    Отправить заявку на ремонт
                 </button>
-            </div>
+                <button class="btn-send " data-toggle="modal" data-target="#exampleModal">
+                    Регистрация <i class="far fa-paper-plane animated tada delay-5s infinite ml-1"></i>
+                </button>
+
         </div>
     </div>
 </header>

@@ -1,8 +1,7 @@
-from time import strptime
 
-from django.db.models import F
 from rest_framework import serializers, generics
 from django.contrib.auth.models import User
+
 from app_site.models import UserProfile, StreetTbilisi, Apartment, OrderList
 
 
@@ -19,6 +18,7 @@ class CustomerModelSerializer(serializers.ModelSerializer):
         fields = ['pk', 'customer_name', 'user']
 
 class ApartmentModelSerializer(serializers.ModelSerializer):
+    address_city =  serializers.CharField(source='get_address_city_display')
     class Meta:
         model = Apartment
         fields = ['pk', 'address_city', 'name',
@@ -34,11 +34,12 @@ class OrderModelSerializer(serializers.ModelSerializer):
     customer_id = CustomerModelSerializer(required=False)
     apartment_id = ApartmentModelSerializer(required=False)
     repairer_id = RepaierModelSerializer(required=False)
+    order_status = serializers.CharField(source='get_order_status_display')
     class Meta:
         model = OrderList
         fields =['pk', 'time_in', 'repairer_id',
                             'text_order', 'apartment_id',
-                            'customer_id']
+                            'customer_id', 'order_status']
 
 class StreetView(generics.ListAPIView):
     serializer_class = StreetModelSerializer
@@ -52,6 +53,5 @@ class OrderView(generics.ListAPIView):
     queryset = OrderList.objects.select_related('customer_id',
                                                 'apartment_id',
                                                 'repairer_id').all()[::-1]
-    print(queryset[2])
 
 

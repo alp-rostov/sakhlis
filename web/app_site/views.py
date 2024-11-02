@@ -252,6 +252,9 @@ class OrderCreate(BaseClassExeption, CreateView):
                                  })
 
 
+
+
+
 class OrderDelete(BaseClassExeption, LoginRequiredMixin, DeleteView):
     model = OrderList
     template_name = 'order_delete.html'

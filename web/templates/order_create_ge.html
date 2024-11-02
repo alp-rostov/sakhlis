@@ -59,18 +59,13 @@
     </li>
     <li class="nav-item mr-4">
         <a class="nav-link" href="{% url 'logout' %}">
-            Выйти
+            Log out
         </a>
     </li>
 {% else %}
     <li class="nav-item mr-4">
         <a class="nav-link" href="{% url 'login' %}" title='Sign in'>
-            Авторизоваться
-        </a>
-    </li>
-    <li class="nav-item mr-4">
-        <a class="nav-link" href="{% url 'signup' %}" title='Sign in'>
-            Регистарция
+            Login
         </a>
     </li>
 {% endif %}
@@ -95,7 +90,7 @@
             </div>
             <div class="flex-center">
                 <button class="btn-send " data-toggle="modal" data-target="#exampleModal">
-                    გაგზავნეთ მოთხოვნა <i class="far fa-paper-plane animated tada delay-5s infinite ml-1"></i>
+                    გაგზავნეთ მოთხოვნა
                 </button>
             </div>
         </div>
