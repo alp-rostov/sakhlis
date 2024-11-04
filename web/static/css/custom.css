@@ -92,6 +92,14 @@ section {
 	padding: 3rem 0px;
 }
 
+section h1 {
+	margin: 3rem 0 1rem;
+	color: #FFFFFF;
+    font-size: 80px;
+    font-family: 'Cygre-ExtraBold';
+    text-align: center
+}
+
 /*********************************************
 		Header css
 *********************************************/
@@ -126,6 +134,12 @@ header h1 {
     background-size: cover;
     width: 100%;
 }
+
+.bottom {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
 
 .flag {
 	width: 25px;

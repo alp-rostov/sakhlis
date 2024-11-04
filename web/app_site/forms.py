@@ -3,6 +3,17 @@ from django import forms
 
 from .models import *
 
+class ApartmentFormOwner(forms.Form):
+    address_street_app = forms.ChoiceField(
+        choices=[],
+        widget=forms.Select(attrs={"class": "form-control"}),
+    )
+
+    def __init__(self, person, *args, **kwargs):
+        self.person=person
+        super(ApartmentFormOwner, self).__init__(*args, **kwargs)
+        self.fields['address_street_app'].choices = [(x.pk, x.address_street_app) for x in Apartment.objects.filter(owner=self.person)]
+
 
 class ApartmentForm(forms.ModelForm):
     address_city = forms.ChoiceField(

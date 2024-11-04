@@ -205,16 +205,21 @@ class OrderCreate(BaseClassExeption, CreateView):
     success_url = 'home'
 
     def get_context_data(self, **kwargs):
-
         context = super().get_context_data(**kwargs)
         context['form_appart'] = ApartmentForm
+        if self.request.user.is_authenticated:
+            if self.request.user.groups.first().name == 'owner':
+                per = UserProfile.objects.get(pk=1101)
+                context['form_appart']=ApartmentFormOwner(person=per)
+
+
         context['form_customer'] = CustomerForm
         return context
 
     def form_valid(self, form):
-        with transaction.atomic():
+        with (transaction.atomic()):
             if self.request.user.is_authenticated:
-                if self.request.user.groups.first().name == 'owner':
+                if self.request.user.groups.first().name == 'owner' and self.request.POST.get('apartment_id') and self.request.POST.get('customer_id'):
                     form.instance.customer_id = UserProfile.objects.get(pk=self.request.POST.get('customer_id'))
                     form.instance.apartment_id = Apartment.objects.get(pk=self.request.POST.get('apartment_id'))
                     form.save()
@@ -243,8 +248,8 @@ class OrderCreate(BaseClassExeption, CreateView):
             form.save()
 
             return JsonResponse({'message': f'<h2>Благодарим Вас за заявку!</h1><h3>Заявка № {form.instance.pk} отправлена успешно!</h2>',
-                                 'contact': f'<h5>Ваш менеджер мастер Сергей: <br><img src="/media/masters/51.jpg" class="rounded-circle" width="100">.</h5>'
-                                            f'Вы можете написать ему, уточнить детали, отправить фото работ или геопозицию:<br>'
+                                 'contact': f'<h4>Ваш менеджер мастер Сергей: <br><img src="/media/masters/51.jpg" class="rounded-circle" width="100">.</h4>'
+                                            f'<h5>Вы можете написать ему, уточнить детали, отправить фото работ или геопозицию:</h5>'
                                             f'<a class="mx-2" title="Telegram" href="https://t.me/+995598259119"><img src="/static/images/telegram.gif" width="50" alt="Telegram"></a>'
                                             f'<a class="mx-2" title="WhatsApp" href="https://wa.me/+79604458687"><img src="/static/images/whatsapp.png" width="55" alt="WhatsApp"></a>',
                                  'pk': form.instance.pk,

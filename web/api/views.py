@@ -1,6 +1,7 @@
 
 from rest_framework import serializers, generics
 from django.contrib.auth.models import User
+from rest_framework.permissions import IsAuthenticated
 
 from app_site.models import UserProfile, StreetTbilisi, Apartment, OrderList
 
@@ -48,6 +49,7 @@ class StreetView(generics.ListAPIView):
         return StreetTbilisi.objects.all()
 
 class OrderView(generics.ListAPIView):
+    permission_classes = (IsAuthenticated,)
     serializer_class = OrderModelSerializer
     http_method_names = ['get']
     queryset = OrderList.objects.select_related('customer_id',

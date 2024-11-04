@@ -8,6 +8,8 @@ urlpatterns = [
     path('en', OrderCreate.as_view(template_name='order_create_en.html'), name='home_en'),
     path('ge', OrderCreate.as_view(template_name='order_create_ge.html'), name='home_ge'),
     path('corporate', OrderCreate.as_view(template_name='business.html'), name='business'),
+    path('createorder', OrderCreate.as_view(template_name='createorder.html'), name='createorder'),
+
 
     path('list_order', OrderManagementSystem.as_view(), name='list_order'),
     # path('street', OrdersOnTheStreet.as_view(), name='aaa'),

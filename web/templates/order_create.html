@@ -82,6 +82,8 @@
             <img src="{% static 'images/logo.png' %}" alt="Мастер на час в Тбилиси" class="logo mt-5" width="200">
             <h1 class="display-4 mb-0" >Мастер на час в Тбилиси </h1>
             <p class="lead">Нужны мужские руки? Домашний мастер быстро решит <br>любые проблемы с ремонтом в квартире, доме и офисе!<br>
+
+            {% if not request.user.is_authenticated %}
                 <br><u>Написать мастеру </u></p>
             <div class="lead" >
                     <!--Telegramm-->
@@ -91,10 +93,17 @@
                     <!--Instagram-->
                     <a class="m-2" href="https://www.instagram.com/repairservicetbilisi/"><img src="{% static 'images/instagram.png' %}" width="70" alt="Instagram"></a>
             </div>
+            {% endif %}
+
             <div class="flex-center">
-                <button class="btn-send " data-toggle="modal" data-target="#exampleModal">
+
+                {% if request.user.groups.first.name == 'owner' %}
+                <br><a href="{% url 'profile' %}" class="btn-send p-3 h2 lead">Личный кабинет</a>
+                {% else %}
+                <button class="btn-send" data-toggle="modal" data-target="#exampleModal">
                     Отправить заявку
                 </button>
+                {% endif %}
             </div>
         </div>
     </div>
