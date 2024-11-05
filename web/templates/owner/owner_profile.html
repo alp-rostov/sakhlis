@@ -136,7 +136,6 @@
                         <form method="POST" action="" name="form_order{{ c.grouper.pk }}"
                               id="form_order{{ c.grouper.pk }}" class="form_order">
                             {% csrf_token %}
-                            <input type="hidden" name="customer_id" value="{{ prof.pk }}"/>
                             <input type="hidden"  name="apartment_id" value="{{ c.grouper.pk }}"/>
                             <textarea name="text_order" rows="4" cols="50"></textarea>
                             <br>

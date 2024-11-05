@@ -207,21 +207,28 @@ class OrderCreate(BaseClassExeption, CreateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['form_appart'] = ApartmentForm
-        if self.request.user.is_authenticated:
-            if self.request.user.groups.first().name == 'owner':
-                per = UserProfile.objects.get(pk=1101)
-                context['form_appart']=ApartmentFormOwner(person=per)
-
-
         context['form_customer'] = CustomerForm
+        if self.request.user.is_authenticated:   # TODO to improve code
+            if self.request.user.groups.first().name == 'owner':
+                per = UserProfile.objects.get(user=self.request.user)
+                context['form_appart']=ApartmentFormOwner(person=per)
+                context['form_customer'] = ''
         return context
 
     def form_valid(self, form):
         with (transaction.atomic()):
             if self.request.user.is_authenticated:
-                if self.request.user.groups.first().name == 'owner' and self.request.POST.get('apartment_id') and self.request.POST.get('customer_id'):
-                    form.instance.customer_id = UserProfile.objects.get(pk=self.request.POST.get('customer_id'))
+                print(self.request.POST.get('apartment_id'))
+
+                if self.request.user.groups.first().name == 'owner':
+
+                    form.instance.customer_id = UserProfile.objects.get(user=self.request.user.id)
+
                     form.instance.apartment_id = Apartment.objects.get(pk=self.request.POST.get('apartment_id'))
+                    print(self.request.POST.get('apartment_id'))
+                    print('------------')
+                    print(self.request.POST.get('customer_id'))
+                    print('------------')
                     form.save()
                     return JsonResponse({'message': f'<h3>Заявка № {form.instance.pk} отправлена успешно!</h3>',
                                          'pk': form.instance.pk,
