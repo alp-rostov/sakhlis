@@ -31,7 +31,7 @@
 <body id="top">
 
 <!--Header-->
-{% #menu %}
+{% #menu line='border_line_orange' %}
 
 <li class="nav-item mr-3 active">
     <a class="nav-link" href="#section-0"><b>Главная </b><span class="sr-only">(current)</span></a>
@@ -47,7 +47,7 @@
 </li>
 
 <li class="nav-item mr-3">
-    <a class="nav-link" href="#section-4">Режим работы</a>
+    <a class="nav-link btn border border-white" href="{% url 'createorder'%}">Заказать ремонт</a>
 </li>
 
 {% if request.user.is_authenticated %}
@@ -101,8 +101,12 @@
                 <br><a href="{% url 'profile' %}" class="btn-send p-3 h2 lead">Личный кабинет</a>
                 {% else %}
                 <button class="btn-send" data-toggle="modal" data-target="#exampleModal">
-                    Отправить заявку
+                    Отправить заявку на ремонт
                 </button>
+                <br><br>
+                <a href="{% url 'business' %}" class="btn-send">Для бизнеса</a>
+
+
                 {% endif %}
             </div>
         </div>
@@ -127,14 +131,14 @@
                     {% #card name_service="Услуги сантехника" name_service1="Устранение засора" name_service2="Установка раковины, унитаза, смесителя" name_service3="Устранение протечки крана"  %}
                         <img src="{% static 'fonts/leak.svg' %}" class="rounded-circle img-fluid">
                     {% /card %}
+                    {% #card name_service="Ремонт бытовой техники" name_service1="Посудомоечные машины" name_service2="Стиральные машины и сушильные машины" name_service3="Духовки и печки"  %}
+                        <img src="{% static 'fonts/washing-machine.svg' %}" class="rounded-circle img-fluid">
+                    {% /card %}
                     {% #card name_service="Cборка мебели" name_service1="Шкафы, диваны, кухни" name_service2="Установка встраиваемой техники" name_service3="Подъем на этаж"  %}
                         <img src="{% static 'fonts/living-room.svg' %}" class="rounded-circle img-fluid">
                     {% /card %}
                     {% #card name_service="Мелкий ремонт в квартире" name_service1="Монтаж карнизов и плинтусов" name_service2="Ремонт межкомнатных дверей" name_service3="Повесить картину, телевизор, люстру"  %}
                         <img src="{% static 'fonts/living-room.svg' %}" class="rounded-circle img-fluid">
-                    {% /card %}
-                    {% #card name_service="Установка бытовой техники" name_service1="Сплит-системы" name_service2="Холодильники" name_service3="Стиральные машины"  %}
-                        <img src="{% static 'fonts/washing-machine.svg' %}" class="rounded-circle img-fluid">
                     {% /card %}
                     {% #card name_service="Мелкий ремонт офиса" name_service1="Офисная мебель" name_service2="Обслуживание куллеров для воды: чистка, ремонт" name_service3="Обслуживание сплит-систем"  %}
                         <img src="{% static 'fonts/3d-buildings.svg' %}" class="rounded-circle img-fluid">

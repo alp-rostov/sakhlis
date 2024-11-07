@@ -24290,3 +24290,74 @@ app_site.models.UserProfile.DoesNotExist: UserProfile matching query does not ex
 05/Nov/2024 21:11:27    WARNING    basehttp    "GET /media/images/appartment/2679.jpg HTTP/1.1" 404 18978   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
 05/Nov/2024 21:11:30    WARNING    log    Not Found: /media/masters/None.jpg   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
 05/Nov/2024 21:11:30    WARNING    basehttp    "GET /media/masters/None.jpg HTTP/1.1" 404 18926   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+06/Nov/2024 19:12:20    WARNING    log    Not Found: /favicon.ico   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+06/Nov/2024 19:12:20    WARNING    basehttp    "GET /favicon.ico HTTP/1.1" 404 18676   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+07/Nov/2024 19:54:53    WARNING    log    Not Found: /favicon.ico   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+07/Nov/2024 19:54:53    WARNING    basehttp    "GET /favicon.ico HTTP/1.1" 404 18676   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+07/Nov/2024 19:55:49    WARNING    log    Not Found: /buisness   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+07/Nov/2024 19:55:49    WARNING    basehttp    "GET /buisness HTTP/1.1" 404 18664   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+07/Nov/2024 20:14:40    ERROR    log    Internal Server Error: /corporate   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("Could not parse the remainder: '='border_line_blue'' from 'line='border_line_blue''"), <traceback object at 0x7f3451f7b880>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/response.py", line 89, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/test/utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/slippers/templatetags/slippers.py", line 102, in render
+    template = context.template.engine.get_template(self.template_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 484, in parse
+    raise self.error(token, e)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 482, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 703, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '='border_line_blue'' from 'line='border_line_blue''
+07/Nov/2024 20:14:40    ERROR    basehttp    "GET /corporate HTTP/1.1" 500 191011   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None

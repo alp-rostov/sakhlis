@@ -100,6 +100,43 @@ section h1 {
     text-align: center
 }
 
+.corporateheader {
+    margin-top: 120px;
+    margin-left: -3px;
+    margin-right: 50px;
+    border-radius: 0px 50px 50px 0px;
+    backdrop-filter: blur(8px);
+    border: 2px solid;
+    border-color: #00ACFF;
+}
+
+.textcotporate {
+    margin-left: 150px;
+    margin-right: 60px;
+    padding: 50px;
+    text-align: left;
+
+}
+
+.leftcorporate {
+    text-align: left;
+
+}
+
+
+.button-like {
+  padding: 10px 15px;
+  background-color: #00ACFF;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+}
+
+
+
 /*********************************************
 		Header css
 *********************************************/
@@ -155,6 +192,17 @@ header h1 {
     z-index: 2;
 }
 
+.border_line_blue {
+    border-bottom: #00ACFF;
+    border-style: solid;
+}
+
+.border_line_orange {
+    border-bottom: #FF6A00;
+    border-style: solid;
+
+}
+
 .navbar-brand {
 	font-size: inherit;
 	text-decoration-line: underline!important;
@@ -164,6 +212,7 @@ header h1 {
 	color: #F57C00!important;
 	transition: color 0.5s linear;
 }
+
 
 .btn-rounded {
     border-radius: 10em;
@@ -177,6 +226,7 @@ header h1 {
 .navbar.navbar-dark .navbar-nav .nav-item.active > .nav-link {
     background-color: rgba(255, 255, 255, 0);
 }
+
 
 .btn.dropdown-toggle,
 .top-nav-collapse {
@@ -208,9 +258,10 @@ a {
     border-radius: 50px;
     border-style: solid;
     border-color: #FFFFFF;
-    width: 250px;
-    padding: 5px;
+    width: 320px;
+    padding: 8px;
     margin-top: 15px;
+    cursor: pointer;
 }
 
 
@@ -563,8 +614,33 @@ footer hr {
 
 @media(min-width: 320px) and (max-width: 576px) {
 
+    .textcotporate {
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 5px;
+    text-align: left;
+
+}
+
+    .corporateheader {
+    margin-top: 120px;
+    margin-left: -3px;
+    margin-right: 6px;
+    border-radius: 0px 50px 50px 0px;
+    backdrop-filter: blur(8px);
+    border: 2px solid;
+    border-color: #00ACFF;
+}
+
+
     .display-4 {
         font-size: 2.0rem;
+        line-height: 1.2;
+
+    }
+
+    .display-small {
+        font-size: 1.5rem;
         line-height: 1.2;
 
     }
@@ -591,6 +667,12 @@ footer hr {
 }
 
 @media(min-width: 577px) and (max-width: 767.8px) {
+    .textcotporate {
+        margin-left: 25px;
+        padding: 25px;
+        text-align: left;
+    }
+
     .display-4 {
         font-size: 2.5rem;
         line-height: 1.2;
@@ -614,6 +696,11 @@ footer hr {
 }
 
 @media(min-width: 768px) and (max-width: 1024px) {
+    .textcotporate {
+        margin-left: 25px;
+        padding: 25px;
+        text-align: left;
+    }
 
       .navbar {
         background-color: rgba(28, 35, 49, 0.93);
@@ -642,7 +729,6 @@ footer hr {
 }
 
 @media(min-width: 1025px) and (max-width: 1440px) {
-
       .navbar {
         background-color: rgba(28, 35, 49, 0.93);
     }

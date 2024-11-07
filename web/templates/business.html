@@ -9,8 +9,8 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <!-- Fav Icon -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <title>Мастер на час в Тбилиси | Техническое обслуживание вашего бизнеса и апартаментов</title>
-    <meta name="description" content="Услуги по ремонту в Тбилиси: Техническое обслуживание вашего бизнеса и апартаментов">
+    <title>Мастер на час в Тбилиси | Техническое обслуживание офисов и апартаментов для вашего бизнеса</title>
+    <meta name="description" content="Услуги по ремонту офисов и апартаментов Тбилиси">
     <!-- Facebook -->
     <meta property="og:title" content="Мастер на час в Тбилиси: обслуживание бизнеса и апартаментов">
 	<meta property="og:description" content="Услуги по ремонту в Тбилиси ✔ Вызвать мастера на дом ✔ Услуги электрика, сантехника, мелкий ремонт квартир">
@@ -31,7 +31,7 @@
 <body id="top">
 
 <!--Header-->
-{% #menu %}
+{% #menu line='border_line_blue' %}
 
 <li class="nav-item mr-3 active">
     <a class="nav-link" href="{% url 'home' %}"><b>Главная </b><span class="sr-only">(current)</span></a>
@@ -77,28 +77,17 @@
 
 
 <header id="section-0" class="bg_img jarallax">
-    <div class="space">
-        <div class="text-center">
-            <img src="{% static 'images/logo.png' %}" alt="Мастер на час в Тбилиси" class="logo mt-5" width="200">
-            <h1 class="display-4 mb-0" >Мастер на час для вашего бизнеса </h1>
-            <p class="lead">Обслуживание офисов, апартаментов, производств, бизнесс-центорв!<br>
-                <br><u>Написать мастеру </u></p>
-            <div class="lead" >
-                    <!--Telegramm-->
-                    <a class="m-2" title="Telegram" href="https://t.me/+995598259119"><img src="{% static 'images/telegram.gif' %}" width="60" alt="Telegram"></a>
-                    <!--WhatsApp-->
-                    <a class="m-2" title="WhatsApp" href="https://wa.me/+79604458687"><img src="{% static 'images/whatsapp.png' %}" width="65" alt="WhatsApp"></a>
-                    <!--Instagram-->
-                    <a class="m-2" href="https://www.instagram.com/repairservicetbilisi/"><img src="{% static 'images/instagram.png' %}" width="70" alt="Instagram"></a>
+    <div class="row corporateheader space">
+            <div class="col-md-6 col-sm-12 textcotporate">
+            <h1 class="display-4 mb-0 leftcorporate display-small">Техническое обслуживание офисов и апартаментов для вашего бизнеса</h1>
+            <p class="lead mt-4">Нужны мужские руки? Домашний мастер быстро решит любые проблемы с ремонтом в квартире, доме и офисе!
+<br><br><br>
+        <a href="" class="button-like">                    <b>Отправить заявку на регистрацию</b></a>
             </div>
-                            <button class="btn-send " data-toggle="modal" data-target="#exampleModal">
-                    Отправить заявку на ремонт
-                </button>
-                <button class="btn-send " data-toggle="modal" data-target="#exampleModal">
-                    Регистрация <i class="far fa-paper-plane animated tada delay-5s infinite ml-1"></i>
-                </button>
 
-        </div>
+            <div class="col-2 " >xxxxxxxxxxx
+<!--                <img src="{% static 'images/logo.png' %}" alt="Мастер на час в Тбилиси" class="logo" width="150">-->
+            </div>
     </div>
 </header>
 

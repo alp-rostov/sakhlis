@@ -1,6 +1,6 @@
    {% load static %}
 
-    <nav id="navigation-menu" class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+    <nav id="navigation-menu" class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar {{ line }}">
         <div class="container">
             <a class="navbar-brand" href="tel:+995598259119"><i class="fas fa-phone animated tada delay-1s infinite fa-sm fa-rotate-90"></i>+995 598-259-119</a>
 		    <a href="{% url 'home' %}"><img src="{% static 'images/flag_ru.png' %}" class="flag" alt="ru"></a>
