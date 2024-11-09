@@ -10,11 +10,11 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <!-- Fav Icon -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <title>Мастер на час в Тбилиси | Мелкие ремонтные работы: Заказать ремонтные работы</title>
-    <meta name="description" content="Формат отправки заявки на ремонтные работы: yслуги электрика, сантехника, мелкий ремонт квартир, ремонт бытовой техники">
+    <title>Repair service in Tbilisi | Order repair work</title>
+    <meta name="description" content="Format for sending an application for repair work: electrician services, plumbing, minor apartment repairs, household appliance repairs">
     <!-- Facebook -->
-    <meta property="og:title" content="Мастер на час в Тбилиси: заказать ремонтные работы">
-	<meta property="og:description" content="Услуги по ремонту в Тбилиси ✔ Вызвать мастера на дом ✔ Услуги электрика, сантехника, мелкий ремонт квартир">
+    <meta property="og:title" content="Handyman in Tbilisi: order repair work">
+	<meta property="og:description" content="Repair services in Tbilisi ✔ Call a technician to your home ✔ Electrician, plumber, minor apartment repairs">
 	<meta property="og:image" content="images/master-na-chas.jpg">
 	<meta property="og:image:width" content>
 	<meta property="og:image:height" content>
@@ -35,7 +35,7 @@
 {% #menu_lg_createorder line='border_line_orange' %}
 
 <li class="nav-item mr-3 active">
-    <a class="nav-link" href={% url 'home' %}><b>Главная </b><span class="sr-only">(current)</span></a>
+    <a class="nav-link" href={% url 'home_en' %}><b>Main </b><span class="sr-only">(current)</span></a>
 </li>
 
 {% if request.user.is_authenticated %}
@@ -50,13 +50,13 @@
     </li>
     <li class="nav-item mr-4">
         <a class="nav-link" href="{% url 'logout' %}">
-            Выйти
+            Logout
         </a>
     </li>
 {% else %}
     <li class="nav-item mr-4">
         <a class="nav-link" href="{% url 'login' %}" title='Sign in'>
-            Авторизоваться
+            Login
         </a>
     </li>
 {% endif %}
@@ -65,8 +65,8 @@
 
 <section id="section-0" class="bg_img bottom">
     <div class="space text-center">
-            <h1 class="display-4 m-0" >Мастер на час в Тбилиси</h1>
-                <span class="lead border-bottom">Написать мастеру:</span>
+            <h1 class="display-4 m-0" >Repair service in Tbilisi</h1>
+                <span class="lead border-bottom">Contact the master:</span>
                 <!--Telegramm-->
                 <a class="m-1" title="Telegram" href="https://t.me/+995598259119"><img src="{% static 'images/telegram.gif' %}" width="40" alt="Telegram"></a>
                 <!--WhatsApp-->
@@ -78,7 +78,7 @@
 
 <!-- Services -->
 <section id="section-1" class="container">
-    <h2 class="mt-0" id="answer">Отправить заявку на ремонт</h2>
+    <h2 class="mt-0" id="answer">Submit a repair request</h2>
        <div id="contact" class="form-container">
            <div id="message"></div>
            {% #form form_order_=form form_appart_=form_appart  form_customer_=form_customer %}
@@ -92,8 +92,8 @@
 
 <!-- Footer -->
 <footer class="footer_bg">
-       {% #footer address_title='Адрес' address_name='Тбилиси, ул.Зураба Патаридзе 8' phone_title='Контакты' write_to_us_title='Написать нам' master_title='Мастер на час в Тбилиси' %}
-       {% /footer %}
+   {% #footer address_title='Address' address_name='8 Zurab Pataridze St, Tbilisi' phone_title='Contact' write_to_us_title='Write to us' master_title='Repair services in Tbilisi' %}
+   {% /footer %}
 </footer>
 <!-- And Footer -->
 

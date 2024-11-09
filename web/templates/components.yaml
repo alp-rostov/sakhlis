@@ -5,6 +5,7 @@ components:
   carusel: "partials/carusel.html"
   container: "partials/container.html"
   menu: "partials/menu.html"
+  menu_lg_createorder: "partials/menu_lg_createorder.html"
   form: "partials/form_for_order.html"
   form1: "partials/form_for_order_owner.html"
   footer: "partials/footer.html"
