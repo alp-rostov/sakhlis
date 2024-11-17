@@ -126,9 +126,10 @@ class InvoiceMaker(object):
                  'მურმან ლებანიძის ქუჩა, N 10, <br />'
                  'სართული 1, ბინა N3 <br />'
                  'საიდენტიფიკაციო ნომერი: 302264920 <br />'
-                 'კრედო ბანკი <br /> ბანკის კოდი JSCRG22 <br /> ა/ა GE18CD0360000030597044<br />')
+                 'კრედო ბანკი <br /> ბანკის კოდი JSCRG22 <br /> '
+                 'ა/ა GE18CD0360000030597044<br />')
 
-        self.createParagraph(line1, *self.coord(-20, -35), style='Top_Right')
+        self.createParagraph(line1, *self.coord(-20, -45), style='Top_Right')
 
         line2 = f'<b>Invoice # {self.info.pk} </b><br /><br /><font fontsize=18>Data {date_info}</font>'
         self.createParagraph(line2, *self.coord(0, 80), style='Invoice_center')

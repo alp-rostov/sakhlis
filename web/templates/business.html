@@ -37,18 +37,18 @@
     <a class="nav-link" href="{% url 'home' %}"><b>Главная </b><span class="sr-only">(current)</span></a>
 </li>
 <li class="nav-item mr-3">
-    <a class="nav-link" href="#section-1">Пакет ТО</a>
+    <a class="nav-link" href="#section-1">Приемущества</a>
 </li>
 <li class="nav-item mr-3">
-    <a class="nav-link" href="#section-2">Выгоды</a>
+    <a class="nav-link" href="#section-2">Как работаем</a>
 </li>
 <li class="nav-item mr-3">
     <a class="nav-link" href="#section-3">Стоимость</a>
 </li>
 
-<li class="nav-item mr-3">
-    <a class="nav-link" href="#section-4">Режим работы</a>
-</li>
+<!--<li class="nav-item mr-3">-->
+<!--    <a class="nav-link" href="#section-4">Режим работы</a>-->
+<!--</li>-->
 
 {% if request.user.is_authenticated %}
 <li class="nav-item mr-4">
@@ -76,22 +76,23 @@
 {% /menu %}
 
 
-<header id="section-0" class="bg_img jarallax ">
-<div class="corporateheader space ">
-    <div class="rowcenter ddd">
-        <div class="row textcotporate ddd">
+<header id="section-0" class="bg_img">
+<div class="corporateheader  ">
+    <div class="rowcenter ddd ">
+        <div class="row textcotporate">
             <div class="col-lg-9 col-md-10 col-sm-12 lead">
                 <h1 class="display-4 displ">Техническое обслуживание<br>офисов и апартаментов<br> для вашего бизнеса</h1>
-                <p class="lead mt-4">Нужны мужские руки? Домашний мастер быстро решит<br> любые проблемы с ремонтом в квартире, доме и офисе!</p>
-                <a href="" class="button-like">Заказать ремонт</a>
+<!--                <p class="lead mt-4">Нужны мужские руки? Домашний мастер быстро решит<br> любые проблемы с ремонтом в квартире, доме и офисе!</p>-->
+                <a href="" class="button-like m-3">Заказать ремонт</a>         <a href="" class="button-like m-3">Технический аудит</a>
+
             </div>
             <div class="col-lg-3 col-md-2">
-                <img src="{% static 'images/logo-b.png' %}" width="240" alt="Telegram" class=" logo mt-5 r">
+                <img src="{% static 'images/logo-b.png' %}" width="240" alt="Telegram" class=" logo r">
 
             </div>
         </div>
 
-        <div class="row textcotporate  ">
+        <div class="row textcotporate  hhh">
             <div class="col-lg-6 col-md-6 col-sm-12 lead mt-2">
                 <img src="{% static 'images/location.png'%}" width="40" class="mr-4"> Грузия, Тбилиси
             </div>
@@ -116,133 +117,41 @@
 <!--And Header-->
 
 <!-- Services -->
-<section id="section-1" class="row_bg">
+<section id="section-1" class="">
     <div class="container">
         <div class="position-relative">
-            <h2 class="h1-responsive">Услуга<strong class="mycolor">"Мастер на час"</strong></h2>
+            <h2 class="header-coor"><strong class="mycolorcoor">Наши приемущества</strong> по комплексному техническому обслуживани</h2>
         </div>
-        <div class="row">
-            <div class="col-12 columns mt-4">
-                <div class="owl-carousel owl-theme pt-5">
-                    {% #card name_service="Услуги электрика" name_service1="Ремонт выключателя, розетки" name_service2="Монтаж счетчика" name_service3="Прокладка электропроводки" %}
-                        <img src="{% static 'fonts/broken-cable.svg' %}" class="rounded-circle img-fluid">
-                    {% /card %}
-                    {% #card name_service="Услуги сантехника" name_service1="Устранение засора" name_service2="Установка раковины, унитаза, смесителя" name_service3="Устранение протечки крана"  %}
-                        <img src="{% static 'fonts/leak.svg' %}" class="rounded-circle img-fluid">
-                    {% /card %}
-                    {% #card name_service="Cборка мебели" name_service1="Шкафы, диваны, кухни" name_service2="Установка встраиваемой техники" name_service3="Подъем на этаж"  %}
-                        <img src="{% static 'fonts/living-room.svg' %}" class="rounded-circle img-fluid">
-                    {% /card %}
-                    {% #card name_service="Мелкий ремонт в квартире" name_service1="Монтаж карнизов и плинтусов" name_service2="Ремонт межкомнатных дверей" name_service3="Повесить картину, телевизор, люстру"  %}
-                        <img src="{% static 'fonts/living-room.svg' %}" class="rounded-circle img-fluid">
-                    {% /card %}
-                    {% #card name_service="Установка бытовой техники" name_service1="Сплит-системы" name_service2="Холодильники" name_service3="Стиральные машины"  %}
-                        <img src="{% static 'fonts/washing-machine.svg' %}" class="rounded-circle img-fluid">
-                    {% /card %}
-                    {% #card name_service="Мелкий ремонт офиса" name_service1="Офисная мебель" name_service2="Обслуживание куллеров для воды: чистка, ремонт" name_service3="Обслуживание сплит-систем"  %}
-                        <img src="{% static 'fonts/3d-buildings.svg' %}" class="rounded-circle img-fluid">
-                    {% /card %}
-                </div>
-            </div>
+        <div class="row pt-4">
+            <div class="col-6 text-coor">Быстрое реагирование</div>
+            <div class="col-6 text-coor">Опытные технические мастера</div>
         </div>
+            <div class="text-coor"> Широкий спектр проводимых работ(от замены лампочки до монтажа сложных конструкций и инженерных сетей)</div>
+
+        <div class="text-coor"> Оплата наличными, банковской картой и безналичным способом</div>
+            <div class="text-coor"> Удобный <a href="{% url 'login' %}" title='Sign in' class="btn-warning">личный кабинет</a> на сайте, где можно отследить всю историю расходов, распечатать счет на оплату, посмотреть виды выполненных работ.</div>
+        <div class="text-coor"> Гарантия на выполненные работы</div>
+
+
     </div>
 </section>
 <!-- And Services -->
 
-<!-- Foto -->
-<section id="section-2" class="accordion-bg">
-<!-- Testimonials -->
-<section class="text-center cloudy-knoxville-gradient">
-    <div class="container">
-        <!-- Section heading -->
-        <h2 class="h1-responsive">Фото работ<strong class="mycolor"> "Мастер на час" </strong></h2>
-
-        <div class="wrapper-carousel-fix py-4">
-            <!-- Carousel Wrapper -->
-            <div id="carousel-example-1" class="carousel no-flex testimonial-carousel slide carousel-fade" data-ride="carousel" data-interval="false">
-                <!--Slides-->
-                <div class="carousel-inner" role="listbox">
-                    {% #carusel active="active" text="Монтаж и установка проектора, экрана на стену и косметический ремонт помещения."  %}
-                        <img src="{% static 'images/1.jpg' %}" class="" width='250' alt="Фотогаллерея работ мастер на час: монтаж проектора">
-                    {% /carusel %}
-                    {% #carusel text="Установка кодового замка двери с открыванием по  отпечатку пальца или цифровому коду."  %}
-                        <img src="{% static 'images/2.jpg' %}" class="" width='250' alt="Фотогаллерея работ мастер на час: монтаж замка">
-                    {% /carusel %}
-                    {% #carusel text=" Установка освещения и бытовой техники"  %}
-                        <img src="{% static 'images/3.jpg' %}" class="" width='250' alt="Фотогаллерея работ мастер на час: монтаж кухни">
-                    {% /carusel %}
-                </div>
-                <!--Slides-->
-                <!--Controls-->
-                <a class="carousel-control-prev left carousel-control" href="#carousel-example-1" role="button" data-slide="prev">
-                    <span class="icon-prev" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next right carousel-control" href="#carousel-example-1" role="button" data-slide="next">
-                    <span class="icon-next" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-                <!--Controls-->
-            </div>
-            <!-- Carousel Wrapper -->
-        </div>
-    </div>
-    <!-- Container -->
-</section>
-<!-- Testimonials -->
-</section>
-<!-- And Foto -->
 
 <!-- How I work -->
 <section id="section-3">
-    <h2 class="h1-responsive">
-        Мастер на час в Тбилиси:
-        <strong class="mycolor">
-            принципы работы
-        </strong>
+    <h2 class="header-coor"><strong class="mycolorcoor">Как мы работаем?</strong>
+        Принципы работы по техническому осблуживанию
     </h2>
     <!--Container-->
     <div class="container">
-        <!--First row-->
-        <div class="row features-small my-5 pt-5 wow fadeIn" data-wow-delay="0.6s">
-            <!--First column-->
-            <div class="col-md-4">
-                <!--First row-->
-                {% #container head_name="Профессионализм" text="В нашей команде опытные специалисты с многолетним стажем."  %}
-                {% /container %}
-                <!--/First row-->
-                <!--Second row-->
-                {% #container head_name="Современный инструмент" text="Мы используем в работе только качественные инструменты и расходные материалы."  %}
-                {% /container %}
-                <!--/Second row-->
-                <!--Third row-->
-                {% #container head_name="Быстрая помощь" text="Срочный выезд в течение часа."  %}
-                {% /container %}
-                <!--/Third row-->
-            </div>
-            <!--/First column-->
 
-            <!--Second column-->
-            <div class="col-md-4 flex-center mb-4">
-                <img src="{% static 'images/o-mastere-na-chas.png' %}" alt="Мастер на час услуга" class="z-depth-0 img-fluid">
-            </div>
-            <!--/Second column-->
+        <div class="text-coor text-coor-farme">Заключаем договор на техническое обслуживание помещения  по утвержденным видам работ</div>
+        <div class="text-coor text-coor-farme">Специалисты сервисной службы регулярно выезжают для профилактического осмотра помещения</div>
+        <div class="text-coor text-coor-farme">В случае выявления неисправностей специалисты осуществляют  их устранение сразу</div>
+        <div class="text-coor text-coor-farme">Сройчный выезд по аварийным ситуациям</div>
+        <div class="text-coor text-coor-farme">Техническая поддержка в удобном формате через мессенджер</div>
 
-            <!--Third column-->
-            <div class="col-md-4">
-                <!--First row-->
-                {% #container head_name="Порядочность" text="Гарантируем качественную и ответственную работу."  %}
-                {% /container %}
-                <!--/First row-->
-                <!--Second row-->
-                {% #container head_name="Бережное обращение с имуществом клиента" text="Мы не испортим пол, мебель, стены. Убираем мусор за собой."  %}
-                {% /container %}
-                <!--/Second row-->
-            </div>
-            <!--/Third column-->
-
-        </div>
-        <!--/First row-->
     </div>
     <!--/Container-->
 
@@ -251,28 +160,45 @@
 
 <!--About Me -->
 <section id="section-4">
+    <h2 class="h1-responsive">
+        <strong class="mycolor">Стоимость работ</strong> по техническому осблуживанию
+    </h2>
+    <div class="container">
+        <ul>
+        Стоимость обслуживания офиса или апартаментов формируется из следующего:
+        <li>Перечень видов работ по обслуживанию
+        <li>Текущее состояние оборудования, коммуникаци и помещения
+        <li>Периодичность обслуживания
+        <li>Сложность инженерных конструкций
+        </ul>
 
-    {% #about_me head="«Мастер на час»<strong class='mycolor'> всегда на связи</strong>" %}
-    <ul>
-    <li>Пн-Пт: 9.00-18.00
-    <li>Суб: 9.00-15.00
-    <li>Воск: выходной
-    </ul>
+
+        Для получения индивидуального расчета стоимости оставьте заявку у нашего специалиста.
+
+При заключении долгосрочнго договора на обслуживания, мы берем на себя ответственность за слаженную и четкую работу нащих специалистов.
+Вам больше не придется думать, где искать хорошего мастера для ремонтных работ по разным задачам.
+Мы берем решение этих задач на себя.<br><br><br>
+Также у нас можно оформить технический аудит всего здания в ходе которого будут выявлены недостатки в работе систем и предложены оптимальные решения по их преодолению.
 
 
-    <p><i class="fas fa-quote-left pr-2"></i>Мы готовы приехать на вызов в <b>любое время в экстренной ситуации.</b></p>
-                <h4><i class="fas fa-wrench fa-sm mr-3"></i>Режим работы: КРУГЛОСУТОЧНО! (в экстренной ситуации)</h4>
-                <p>Наша команда имеет многолетний опыт работы по данному направлению. Предлагаем только качественное решение вашей проблемы будь-то поломаный выключатель, скрипящая дверь, протекающая сантехника.</p>
-                <blockquote class="blockquote">
-                    <p class="mb-0">Контактная информация: +995 598259119</p>
-                    <footer class="blockquote-footer">Ремонт - наша работа.
-                    </footer>
-                </blockquote>
-    {% /about_me%}
+
+    </div>
 </section>
 <!-- About Me -->
 
 
+<section id="section-4">
+    <h2 class="h1-responsive">
+        <strong class="mycolor">Виды технического обслуживания</strong>
+    </h2>
+    <div class="container">
+1. Электрика
+2. Сантехника
+3. Системы отопления и кондиционирования
+4. Текущий мелки ремонт задния и оборудования
+5. Обслуживание бытовой техники.
+    </div>
+</section>
 
 <!-- Footer -->
 <footer class="footer_bg">
@@ -280,31 +206,6 @@
        {% /footer %}
 </footer>
 <!-- And Footer -->
-
-    <!-- Modal Window -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header text-center">
-                </div>
-                <div class="modal-body  mx-3">
-                    <div id="contact" class="form-container">
-                        <fieldset>
-                            <div id="message">
-				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">×</span>
-                                </button>
-				    </div><div id="answer"></div>
-                            {% #form form_order_=form form_appart_=form_appart form_customer_=form_customer %}
-                            {% csrf_token %}
-                            {% /form %}
-                        </fieldset>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- And Modal Window -->
 
     <!-- jQuery first, then Bootstrap JS -->
     <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
@@ -315,11 +216,6 @@
     <script src="{% static 'js/owl.carousel.min.js' %}"></script>
     <script src="{% static 'js/jquery.malihu.PageScroll2id.min.js' %}"></script>
     <script src="{% static 'js/custom.js' %}"></script>
-	<script type="text/javascript">
-        $(document).ready(function() {
-            new WOW().init();
-        });
-    </script>
 
 <script>
 $(document.body).ready(function() {

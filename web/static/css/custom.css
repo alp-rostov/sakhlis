@@ -36,6 +36,7 @@ Table Of Index
 :root {
   --text-color: #15171d;
   --span-color: #D75900;
+  --span-color-corporate:#00ACFF;
 }
 
 body {
@@ -102,23 +103,66 @@ section h1 {
 
 .corporateheader {
     margin-top: 100px;
-    margin-bottom: 100px;
-    margin-right: 50px;
+    margin-bottom: 30px;
+    margin-right: 30px;
     margin-left: -3px;
     border-radius: 0px 50px 50px 0px;
     backdrop-filter: blur(8px);
     border: 3px solid;
-    border-color: #00ACFF;
-    height: 80%;
+    border-color: var(--span-color-corporate);
+    height: 60%;
+    padding-top: 10px;
 }
 
 .rowcenter {
     display: flex;
     flex-direction: column;
-	justify-content: center;
+	/*justify-content: center;*/
 	align-items: center;
-    padding-top: 20px;
+    padding-top: 5px;
+
 }
+
+.hhh {
+    height: 100%;
+    display: flex;
+	align-items: flex-end;
+    padding-top: 5px;
+
+}
+
+.header-coor {
+        font-family: Cygre-ExtraBold;
+
+}
+.mycolorcoor {
+    background: var(--span-color-corporate);
+    color: #FFFFFF;
+    padding: 5px;
+    line-height: 68.94px;
+
+}
+
+.text-coor {
+    font-size: 25px;
+    margin-bottom: 40px;
+}
+
+.text-coor-farme {
+    background: #00ACFF33;
+    border-radius: 0px 50px 50px 0px;
+    padding-left: 150px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    min-height: 100px;
+    align-content: center;
+
+
+
+}
+
+
 
 .textcotporate {
     max-width: 1300px;
@@ -131,15 +175,15 @@ section h1 {
 
   }
 .ddd {
+    padding-top: 10px;
+    padding-bottom: 10px;
     height: 100%;
-    padding-top: 50px;
-    padding-bottom: 25px;
-    
+
 }
 
 .button-like {
   padding: 10px 15px;
-  background-color: #00ACFF;
+  background-color: var(--span-color-corporate);
   color: white;
   border: none;
   border-radius: 25px;
@@ -212,12 +256,12 @@ header h1 {
 }
 
 .border_line_blue {
-    border-bottom: #00ACFF;
+    border-bottom: var(--span-color-corporate);
     border-style: solid;
 }
 
 .border_line_orange {
-    border-bottom: #FF6A00;
+    border-bottom: var(--span-color);
     border-style: solid;
 
 }
@@ -301,6 +345,12 @@ h1.display-4 {
 .mycolor {
 	color: var(--span-color);
 }
+
+.mycolorcorporate {
+	color: var(--span-color);
+}
+
+
 .display-4 {
     font-weight: 800;
 }
@@ -316,6 +366,8 @@ h1.display-4 {
 
 
 }
+
+
 /*********************************************
 		Services css
 *********************************************/
@@ -646,15 +698,15 @@ footer hr {
 
 }
 
-    .corporateheader {
-    margin-top: 120px;
-    margin-left: -3px;
-    margin-right: 6px;
-    border-radius: 0px 50px 50px 0px;
-    backdrop-filter: blur(8px);
-    border: 2px solid;
-    border-color: #00ACFF;
-}
+/*    .corporateheader {*/
+/*    margin-top: 120px;*/
+/*    margin-left: -3px;*/
+/*    margin-right: 6px;*/
+/*    border-radius: 0px 50px 50px 0px;*/
+/*    backdrop-filter: blur(8px);*/
+/*    border: 2px solid;*/
+/*    border-color: #00ACFF;*/
+/*}*/
 
 
     .display-4 {
@@ -694,11 +746,6 @@ footer hr {
     .r {
  display: none;
 }
-    .textcotporate {
-        margin-left: 25px;
-        padding: 25px;
-
-    }
 
     .display-4 {
         font-size: 2.5rem;
@@ -726,12 +773,6 @@ footer hr {
     .r {
  display: none;
 }
-
-    .textcotporate {
-        margin-left: 25px;
-        padding: 40px;
-
-    }
 
       .navbar {
         background-color: rgba(28, 35, 49, 0.93);
@@ -776,11 +817,6 @@ footer hr {
     }
 
 
-    .textcotporate {
-        margin-left: 25px;
-        padding: 40px;
-        text-align: left;
-    }
 
     .navbar {
         background-color: rgba(28, 35, 49, 0.93);
