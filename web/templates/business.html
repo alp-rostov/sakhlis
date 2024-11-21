@@ -34,7 +34,7 @@
 {% #menu line='border_line_blue' %}
 
 <li class="nav-item mr-3 active">
-    <a class="nav-link" href="{% url 'home' %}"><b>Главная </b><span class="sr-only">(current)</span></a>
+    <a class="nav-link" href="#section-0"><b>Главная </b><span class="sr-only">(current)</span></a>
 </li>
 <li class="nav-item mr-3">
     <a class="nav-link" href="#section-1">Приемущества</a>
@@ -45,10 +45,9 @@
 <li class="nav-item mr-3">
     <a class="nav-link" href="#section-3">Стоимость</a>
 </li>
-
-<!--<li class="nav-item mr-3">-->
-<!--    <a class="nav-link" href="#section-4">Режим работы</a>-->
-<!--</li>-->
+<li class="nav-item mr-3">
+    <a class="nav-link" href="#section-4">Виды работ</a>
+</li>
 
 {% if request.user.is_authenticated %}
 <li class="nav-item mr-4">
@@ -78,12 +77,12 @@
 
 <header id="section-0" class="bg_img">
 <div class="corporateheader  ">
-    <div class="rowcenter ddd ">
+    <div class="rowcenter pad ">
         <div class="row textcotporate">
             <div class="col-lg-9 col-md-10 col-sm-12 lead">
                 <h1 class="display-4 displ">Техническое обслуживание<br>офисов и апартаментов<br> для вашего бизнеса</h1>
 <!--                <p class="lead mt-4">Нужны мужские руки? Домашний мастер быстро решит<br> любые проблемы с ремонтом в квартире, доме и офисе!</p>-->
-                <a href="" class="button-like m-3">Заказать ремонт</a>         <a href="" class="button-like m-3">Технический аудит</a>
+                <a href="" class="button-like m-3">Заказать ремонт</a><a href="" class="button-like m-3">Технический аудит</a>
 
             </div>
             <div class="col-lg-3 col-md-2">
@@ -92,7 +91,7 @@
             </div>
         </div>
 
-        <div class="row textcotporate  hhh">
+        <div class="row textcotporate  pred">
             <div class="col-lg-6 col-md-6 col-sm-12 lead mt-2">
                 <img src="{% static 'images/location.png'%}" width="40" class="mr-4"> Грузия, Тбилиси
             </div>
@@ -107,9 +106,6 @@
         </div>
     </div>
 </div>
-
-
-
 
 </header>
 
@@ -156,9 +152,8 @@
 </section>
 <!-- And Services -->
 
-
 <!-- How I work -->
-<section id="section-3">
+<section id="section-2">
     <h2 class="header-coor"><strong class="mycolorcoor">Как мы работаем?</strong>
         Принципы работы по техническому осблуживанию
     </h2>
@@ -169,16 +164,18 @@
         </div>
         <div class="row pb-4 m-1">
             <div class="col-3 text-coor-farme p-0"><img src="{% static 'images/2.png' %}" alt="2" ></div>
-            <div class="col-9 text-coor-farme frame_radius">Специалисты сервисной службы регулярно выезжают для профилактического осмотра помещения</div>
+            <div class="col-9 text-coor-farme frame_radius">Регистрируем личный кабинет и qr-код компании для качественного
+                и быстрого взаимодествия.</div>
         </div>
         <div class="row pb-4 m-1">
             <div class="col-3 text-coor-farme p-0"><img src="{% static 'images/3.png' %}" alt="3" ></div>
-            <div class="col-9 text-coor-farme frame_radius">В случае выявления неисправностей специалисты осуществляют  их устранение сразу</div>
+            <div class="col-9 text-coor-farme frame_radius">Наши специалисты сервисной службы регулярно
+                выезжают для профилактического осмотра помещения</div>
         </div>
 
         <div class="row pb-4 m-1">
             <div class="col-3 text-coor-farme p-0"><img src="{% static 'images/4.png' %}" alt="4" ></div>
-            <div class="col-9 text-coor-farme frame_radius">Сройчный выезд по аварийным ситуациям</div>
+            <div class="col-9 text-coor-farme frame_radius">Осуществляем срочный выезд по аварийным ситуациям</div>
         </div>
 
         <div class="row pb-4 m-1">
@@ -190,27 +187,27 @@
 <!-- And How I work -->
 
 <!--About Me -->
-<section id="section-4">
-    <h2 class="h1-responsive">
-        <strong class="mycolor">Стоимость работ</strong> по техническому осблуживанию
+<section id="section-3">
+    <h2 class="header-coor">
+        <strong class="mycolorcoor">Стоимость работ</strong> по техническому осблуживанию
     </h2>
-    <div class="container">
-        <ul>
+    <div class="container text-coor">
         Стоимость обслуживания офиса или апартаментов формируется из следующего:
-        <li>Перечень видов работ по обслуживанию
-        <li>Текущее состояние оборудования, коммуникаци и помещения
-        <li>Периодичность обслуживания
-        <li>Сложность инженерных конструкций
+        <ul>
+        <li class="servicesLinks">Перечень видов работ по обслуживанию
+        <li class="servicesLinks">Текущее состояние оборудования, коммуникаци и помещения
+        <li class="servicesLinks">Периодичность обслуживания
+        <li class="servicesLinks">Сложность инженерных конструкций
         </ul>
 
 
-        Для получения индивидуального расчета стоимости оставьте заявку у нашего специалиста.
+<div class="mycolorcoor_back">Для получения индивидуального расчета стоимости оставьте заявку у нашего специалиста.
 
 При заключении долгосрочнго договора на обслуживания, мы берем на себя ответственность за слаженную и четкую работу нащих специалистов.
+</div>
+        <h3 class="font-weight-bold">
 Вам больше не придется думать, где искать хорошего мастера для ремонтных работ по разным задачам.
-Мы берем решение этих задач на себя.<br><br><br>
-Также у нас можно оформить технический аудит всего здания в ходе которого будут выявлены недостатки в работе систем и предложены оптимальные решения по их преодолению.
-
+Мы берем решение этих задач на себя.</h3>
 
 
     </div>
@@ -219,15 +216,15 @@
 
 
 <section id="section-4">
-    <h2 class="h1-responsive">
-        <strong class="mycolor">Виды технического обслуживания</strong>
+    <h2 class="header-coor">
+        Виды <strong class="mycolorcoor">технического обслуживания</strong>
     </h2>
-    <div class="container">
-1. Электрика
-2. Сантехника
-3. Системы отопления и кондиционирования
-4. Текущий мелки ремонт задния и оборудования
-5. Обслуживание бытовой техники.
+    <div class="container center text-coor" align="center">
+        <div class="btn mycolorcoor_back_span text-coor">Электрика</div>
+        <div class="btn mycolorcoor_back_span text-coor">Сантехника</div><br>
+        <div class="btn mycolorcoor_back_span text-coor">Системы отопления и кондиционирования</div><br>
+        <div class="btn mycolorcoor_back_span text-coor">Текущий мелкий ремонт офисов</div><br>
+        <div class="btn mycolorcoor_back_span text-coor">Обслуживание бытовой техники</div>
     </div>
 </section>
 

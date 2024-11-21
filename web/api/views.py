@@ -49,7 +49,7 @@ class StreetView(generics.ListAPIView):
         return StreetTbilisi.objects.all()
 
 class OrderView(generics.ListAPIView):
-    permission_classes = (IsAuthenticated,)
+    # permission_classes = (IsAuthenticated,)
     serializer_class = OrderModelSerializer
     http_method_names = ['get']
     queryset = OrderList.objects.select_related('customer_id',

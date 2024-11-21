@@ -47,6 +47,11 @@
     <a class="nav-link" href="#section-2">About</a>
 </li>
 
+<li class="nav-item mr-3">
+    <a class="nav-link btn border border-white" href="{% url 'createorder_en'%}">Order repair</a>
+</li>
+
+
 {% if request.user.is_authenticated %}
 <li class="nav-item mr-4">
     {% if request.user.groups.first.name == 'repairer' %}

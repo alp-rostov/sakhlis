@@ -2,7 +2,7 @@ import logging
 import os
 
 from django.utils.encoding import force_str
-from flask import request
+# from flask import request
 
 try:
     from .settings_dev import *

@@ -1,28 +1,4 @@
 @charset "utf-8";
-/* CSS Document */
-
-/*------------------------------------------
-Project Name : Master na chas
-Desgined By  : hassan_malik19
-Developed and desgined : Oleg Tsapko;
-Date        :  11/May/19;
-
-Table Of Index
-------------------
-1. Base css
-2. Header css
-3. Services css
-4. Price css
-5. About css
-6. Call to Action css
-7. Text css
-8. Counter css
-9. Testimonials Css
-10. Footer css
-11. Modal Window css
-12. Media Screen
-
-------------------------------------------*/
 
 /*********************************************
 		Base css
@@ -74,11 +50,11 @@ h2:after {
 }
 
 
-.hr-light-h {
-    width: 50%;
-    border-top: 1px solid #fafafa;
-    margin-left: 25%;
-}
+/*.hr-light-h {*/
+/*    width: 50%;*/
+/*    border-top: 1px solid #fafafa;*/
+/*    margin-left: 25%;*/
+/*}*/
 
 a:hover, a:focus, a:active {
       text-decoration: none;
@@ -123,7 +99,7 @@ section h1 {
 
 }
 
-.hhh {
+.pred {
     height: 100%;
     display: flex;
 	align-items: flex-end;
@@ -133,14 +109,27 @@ section h1 {
 
 .header-coor {
         font-family: Cygre-ExtraBold;
-
 }
+
 .mycolorcoor {
     background: var(--span-color-corporate);
     color: #FFFFFF;
     padding: 5px;
-    line-height: 68.94px;
+}
 
+.mycolorcoor_back {
+    background: #CCEEFF;
+    padding: 35px;
+    border-radius: 50px 50px 50px 50px;
+    text-align: justify;
+    margin-bottom: 35px;
+}
+
+.mycolorcoor_back_span {
+    background: #CCEEFF;
+    padding: 25px;
+    border-radius: 10px;
+    margin: 15px;
 }
 
 /*.text-coor {*/
@@ -156,8 +145,6 @@ section h1 {
   justify-content: flex-end;
 }
 
-
-
 .text-coor-farme {
     background: #00ACFF33;
     padding-bottom: 0px;
@@ -166,11 +153,9 @@ section h1 {
 
 }
 
-
 .frame_radius {
     border-radius: 0px 50px 50px 0px;
 }
-
 
 .textcotporate {
     max-width: 1300px;
@@ -186,7 +171,7 @@ section h1 {
 	justify-content: flex-end;
 
   }
-.ddd {
+.pad {
     padding-top: 10px;
     padding-bottom: 10px;
     height: 100%;
@@ -421,23 +406,26 @@ h4.services_h {
 
 ul,
 ul.servicesLinks {
-    list-style: none;
+    /*list-style: none;*/
 }
 
-.servicesLinks li {
+.servicesLinks {
     position: relative;
-    padding-left: 28px;
+    margin-left: 80px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+
 }
 
-.servicesLinks li:before {
-    content: "\27A5";
-    font-family: 'FontAwesome';
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-size: 18px;
-    color: var(--span-color);
-}
+/*.servicesLinks li:before {*/
+/*    content: "\27A5";*/
+/*    font-family: 'FontAwesome';*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    font-size: 18px;*/
+/*    color: var(--span-color);*/
+/*}*/
 
 
 /* Carusel */
@@ -501,9 +489,9 @@ button:focus {
 		About css
 *********************************************/
 
-.about-text {
-    color: var(--span-color);
-}
+/*.about-text {*/
+/*    color: var(--span-color);*/
+/*}*/
 
 /*********************************************
 		Testimonials css
@@ -546,97 +534,97 @@ button:focus {
 		Price css
 *********************************************/
 
-.accordion-bg {
-    background-image: url(../images/usluga-master-na-chas.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
+/*.accordion-bg {*/
+/*    background-image: url(../images/usluga-master-na-chas.jpg);*/
+/*    background-size: cover;*/
+/*    background-repeat: no-repeat;*/
+/*    background-attachment: fixed;*/
+/*}*/
 
-.accordion.md-accordion.accordion-2 .card {
-    background-color: rgba(2, 1, 1, 0.9);
-}
+/*.accordion.md-accordion.accordion-2 .card {*/
+/*    background-color: rgba(2, 1, 1, 0.9);*/
+/*}*/
 
-.accordion.md-accordion.accordion-2 .card {
-    border: 0;
-}
+/*.accordion.md-accordion.accordion-2 .card {*/
+/*    border: 0;*/
+/*}*/
 
-table td {
-    font-size: 1.1rem;
-    font-weight: 300;
-    letter-spacing: 1px;
-}
+/*table td {*/
+/*    font-size: 1.1rem;*/
+/*    font-weight: 300;*/
+/*    letter-spacing: 1px;*/
+/*}*/
 
 /*********************************************
 		Call to Actions css
 *********************************************/
 
-.cta {
-    font-size: 2rem;
-    font-family: inherit;
-}
+/*.cta {*/
+/*    font-size: 2rem;*/
+/*    font-family: inherit;*/
+/*}*/
 
-.browns {
-    color: var(--span-color);
-}
+/*.browns {*/
+/*    color: var(--span-color);*/
+/*}*/
 
-#typed2.wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
+/*#typed2.wrapper {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*}*/
 
-section.frame_bg {
-    position: relative;
-	 background-image: url('../images/remont-v-vannoy.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
+/*section.frame_bg {*/
+/*    position: relative;*/
+/*	 background-image: url('../images/remont-v-vannoy.jpg');*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: cover;*/
+/*    background-position: center;*/
+/*    background-attachment: fixed;*/
+/*}*/
 
-.mt-6 {
-    margin-top: 7rem !important;
-}
+/*.mt-6 {*/
+/*    margin-top: 7rem !important;*/
+/*}*/
 
-.mt-5-5 {
-    margin-top: 6.5rem;
-}
+/*.mt-5-5 {*/
+/*    margin-top: 6.5rem;*/
+/*}*/
 
-.black {
-    background-color: #000000c7!important;
-    border: 4px #fff;
-    border-style: outset;
-    border-radius: 25px;
-}
+/*.black {*/
+/*    background-color: #000000c7!important;*/
+/*    border: 4px #fff;*/
+/*    border-style: outset;*/
+/*    border-radius: 25px;*/
+/*}*/
 
-/*********************************************
-		Counter css
-*********************************************/
+/*!**********************************************/
+/*		Counter css*/
+/**********************************************!*/
 
-#counter h3 {
-	color :#fdfdfd;
-	text-transform: uppercase;
-	font-weight: bold;
-	margin-bottom: .5rem;
-}
-.streak {
-    display: block;
-    position: relative;
-    overflow: hidden;
-}
+/*#counter h3 {*/
+/*	color :#fdfdfd;*/
+/*	text-transform: uppercase;*/
+/*	font-weight: bold;*/
+/*	margin-bottom: .5rem;*/
+/*}*/
+/*.streak {*/
+/*    display: block;*/
+/*    position: relative;*/
+/*    overflow: hidden;*/
+/*}*/
 
-.streak.streak-long-2 {
-    height: 100%;
-}
+/*.streak.streak-long-2 {*/
+/*    height: 100%;*/
+/*}*/
 
-.streak.streak-photo {
-    background-image: url('../images/populyarnie-uslugi.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
+/*.streak.streak-photo {*/
+/*    background-image: url('../images/populyarnie-uslugi.jpg');*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: cover;*/
+/*    background-position: center;*/
+/*    background-attachment: fixed;*/
+/*}*/
 
 /*********************************************
 		Modal Window css
