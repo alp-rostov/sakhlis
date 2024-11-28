@@ -81,11 +81,12 @@
         <div class="text-center">
             <img src="{% static 'images/logo.png' %}" alt="Мастер на час в Тбилиси" class="logo mt-5" width="200">
             <h1 class="display-4 mb-0" >Мастер на час в Тбилиси </h1>
-            <p class="lead">Нужны мужские руки? Домашний мастер быстро решит <br>любые проблемы с ремонтом в квартире, доме и офисе!<br>
+            <p class="lead">Нужны мужские руки? Домашний мастер быстро решит <br>любые проблемы с ремонтом в квартире, доме и офисе!</p>
 
             {% if not request.user.is_authenticated %}
-                <br><u>Написать мастеру </u></p>
+
             <div class="lead" >
+                    <h2>Написать мастеру </h2>
                     <!--Telegramm-->
                     <a class="m-2" title="Telegram" href="https://t.me/+995598259119"><img src="{% static 'images/telegram.gif' %}" width="60" alt="Telegram"></a>
                     <!--WhatsApp-->
@@ -96,17 +97,12 @@
             {% endif %}
 
             <div class="flex-center">
-
                 {% if request.user.groups.first.name == 'owner' %}
                 <br><a href="{% url 'profile' %}" class="btn-send p-3 h2 lead">Личный кабинет</a>
                 {% else %}
-                <button class="btn-send" data-toggle="modal" data-target="#exampleModal">
-                    Отправить заявку на ремонт
-                </button>
-<!--                <br><br>-->
-<!--                <a href="{% url 'business' %}" class="btn-send">Для бизнеса</a>-->
-
-
+                <a class="btn-send" href="{% url 'createorder'%}">Отправить заявку на ремонт</a>
+                <hr>
+                <a href="{% url 'business' %}" class="button-like_ m-3">Для корпоративных клиентов</a>
                 {% endif %}
             </div>
         </div>

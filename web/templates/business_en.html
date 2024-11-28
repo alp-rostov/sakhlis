@@ -9,11 +9,11 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <!-- Fav Icon -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <title>Мастер на час в Тбилиси | Техническое обслуживание офисов и апартаментов для вашего бизнеса</title>
-    <meta name="description" content="Услуги по ремонту офисов и апартаментов Тбилиси">
+    <title>Repair service in Tbilisi | Office and apartment maintenance for your business</title>
+    <meta name="description" content="Office and apartment renovation services Tbilisi">
     <!-- Facebook -->
-    <meta property="og:title" content="Мастер на час в Тбилиси: обслуживание бизнеса и апартаментов">
-	<meta property="og:description" content="Услуги по ремонту в Тбилиси ✔ Вызвать мастера на дом ✔ Услуги электрика, сантехника, мелкий ремонт квартир">
+    <meta property="og:title" content="Handyman in Tbilisi: business and apartment maintenance">
+	<meta property="og:description" content="Repair services in Tbilisi ✔ Call a technician to your home ✔ Electrician, plumber, minor apartment repairs">
 	<meta property="og:image" content="images/master-na-chas.jpg">
 	<meta property="og:image:width" content>
 	<meta property="og:image:height" content>
@@ -34,19 +34,19 @@
 {% #menu_business line='border_line_blue' %}
 
 <li class="nav-item mr-3 active">
-    <a class="nav-link" href="#section-0"><b>Главная </b><span class="sr-only">(current)</span></a>
+    <a class="nav-link" href="#section-0"><b>Main </b><span class="sr-only">(current)</span></a>
 </li>
 <li class="nav-item mr-3">
-    <a class="nav-link" href="#section-1">Преимущества</a>
+    <a class="nav-link" href="#section-1">Advantages</a>
 </li>
 <li class="nav-item mr-3">
-    <a class="nav-link" href="#section-2">Как работаем</a>
+    <a class="nav-link" href="#section-2">How we work</a>
 </li>
 <li class="nav-item mr-3">
-    <a class="nav-link" href="#section-3">Стоимость</a>
+    <a class="nav-link" href="#section-3">Price</a>
 </li>
 <li class="nav-item mr-3">
-    <a class="nav-link" href="#section-4">Виды работ</a>
+    <a class="nav-link" href="#section-4">Types of work</a>
 </li>
 
 {% if request.user.is_authenticated %}
@@ -61,13 +61,13 @@
     </li>
     <li class="nav-item mr-4">
         <a class="nav-link" href="{% url 'logout' %}">
-            Выйти
+            Log Out
         </a>
     </li>
 {% else %}
     <li class="nav-item mr-4">
         <a class="nav-link" href="{% url 'login' %}" title='Sign in'>
-            Авторизоваться
+            Log in
         </a>
     </li>
 {% endif %}
@@ -80,9 +80,8 @@
     <div class="rowcenter pad ">
         <div class="row textcotporate">
             <div class="col-lg-9 col-md-10 col-sm-12 lead">
-                <h1 class="display-4 displ">Техническое обслуживание<br>офисов и апартаментов<br> для вашего бизнеса</h1>
-<!--                <p class="lead mt-4">Нужны мужские руки? Домашний мастер быстро решит<br> любые проблемы с ремонтом в квартире, доме и офисе!</p>-->
-                    <a class="button-like m-3" href="{% url 'createorder'%}">Заказать ремонт</a>
+                <h1 class="display-4 displ">Technical maintenance of<br>offices and apartments<br> for your business</h1>
+                    <a class="button-like m-3" href="{% url 'createorder_en'%}">Order repair</a>
             </div>
             <div class="col-lg-3 col-md-2">
                 <img src="{% static 'images/logo-b.png' %}" width="240" alt="Telegram" class=" logo r">
@@ -92,7 +91,7 @@
 
         <div class="row textcotporate  pred">
             <div class="col-lg-6 col-md-6 col-sm-12 lead mt-2">
-                <img src="{% static 'images/location.png'%}" width="40" class="mr-4"> Грузия, Тбилиси
+                <img src="{% static 'images/location.png'%}" width="40" class="mr-4"> Georgia, Tbilisi
             </div>
             <div class="col-lg-6 col-md-6 lead r mt-2">
                                     <!--Telegramm-->
@@ -115,35 +114,35 @@
 <section id="section-1" class="">
     <div class="container">
         <div class="position-relative">
-            <h2 class="header-coor"><strong class="mycolorcoor">Наши преимущества</strong> по комплексному техническому обслуживанию</h2>
+            <h2 class="header-coor"><strong class="mycolorcoor">Our advantages</strong>in comprehensive technical maintenance</h2>
         </div>
         <div class="row mb-5">
             <div class="col-2 pic-coor"><img src="{% static 'images/TimeSpan.png' %}" alt="TimeSpan" width="40"></div>
-            <div class="col-10 text-coor">Быстрое реагирование</div>
+            <div class="col-10 text-coor">Rapid response</div>
         </div>
         <div class="row mb-5">
             <div class="col-2 pic-coor"><img src="{% static 'images/DevelopmentSkill.png' %}" alt="DevelopmentSkill.png" width="40"></div>
-            <div class="col-10 text-coor">Опытные технические мастера</div>
+            <div class="col-10 text-coor">Experienced technical experts</div>
         </div>
         <div class="row mb-5">
             <div class="col-2 pic-coor"><img src="{% static 'images/WorkLight.png' %}" alt="WorkLight" width="40" > </div>
-            <div class="col-10 text-coor">Широкий спектр проводимых работ(от замены лампочки до монтажа сложных конструкций и инженерных сетей)</div>
+            <div class="col-10 text-coor">Wide range of work performed</div>
         </div>
 
         <div class="row mb-5">
             <div class="col-2 pic-coor"><img src="{% static 'images/CardPayment.png' %}" alt="CardPayment"width="40"> </div>
-            <div class="col-10 text-coor">Оплата наличными, банковской картой и безналичным способом</div>
+            <div class="col-10 text-coor">Payment in cash, bank card and bank transfer</div>
         </div>
 
         <div class="row mb-5">
             <div class="col-2 pic-coor"><img src="{% static 'images/TestAccount.png' %}" alt="Account" width="40"> </div>
-            <div class="col-10 text-coor"> Удобный личный кабинет на сайте, где можно отследить всю историю расходов, распечатать
-                счет на оплату, посмотреть виды выполненных работ</div>
+            <div class="col-10 text-coor">Convenient personal account on the website, where you can track the entire history
+                of expenses, print an invoice for payment, and view the types of work performed.</div>
         </div>
 
         <div class="row mb-5">
             <div class="col-2 pic-coor"><img src="{% static 'images/Protect.png' %}" alt="Protect" width="40"> </div>
-            <div class="col-10 text-coor"> Гарантия на выполненные работы</div>
+            <div class="col-10 text-coor"> Warranty for work performed</div>
         </div>
 
 
@@ -153,33 +152,33 @@
 
 <!-- How I work -->
 <section id="section-2">
-    <h2 class="header-coor"><strong class="mycolorcoor">Как мы работаем?</strong>
-        Принципы работы по техническому обслуживанию
+    <h2 class="header-coor"><strong class="mycolorcoor">How do we work?</strong>
+        Principles of Maintenance Work
     </h2>
     <div class="container text-coor">
         <div class="row pb-4 m-1">
             <div class="col-3 text-coor-farme p-0"><img src="{% static 'images/1.png' %}" alt="1" ></div>
-            <div class="col-9 text-coor-farme frame_radius">Заключаем договор на техническое обслуживание помещения  по утвержденным видам работ</div>
+            <div class="col-9 text-coor-farme frame_radius">We conclude a contract for technical maintenance of the premises for approved types of work</div>
         </div>
         <div class="row pb-4 m-1">
             <div class="col-3 text-coor-farme p-0"><img src="{% static 'images/2.png' %}" alt="2" ></div>
-            <div class="col-9 text-coor-farme frame_radius">Регистрируем личный кабинет и qr-код компании для качественного
-                и быстрого взаимодествия.</div>
+            <div class="col-9 text-coor-farme frame_radius">We register a personal account and a company QR code
+                for high-quality and fast interaction.</div>
         </div>
         <div class="row pb-4 m-1">
             <div class="col-3 text-coor-farme p-0"><img src="{% static 'images/3.png' %}" alt="3" ></div>
-            <div class="col-9 text-coor-farme frame_radius">Наши специалисты сервисной службы регулярно
-                выезжают для профилактического осмотра помещения</div>
+            <div class="col-9 text-coor-farme frame_radius">Our service specialists regularly visit the
+                premises for preventive inspection</div>
         </div>
 
         <div class="row pb-4 m-1">
             <div class="col-3 text-coor-farme p-0"><img src="{% static 'images/4.png' %}" alt="4" ></div>
-            <div class="col-9 text-coor-farme frame_radius">Осуществляем срочный выезд по аварийным ситуациям</div>
+            <div class="col-9 text-coor-farme frame_radius">We provide emergency response services in emergency situations</div>
         </div>
 
         <div class="row pb-4 m-1">
             <div class="col-3 text-coor-farme p-0"><img src="{% static 'images/5.png' %}" alt="4" ></div>
-            <div class="col-9 text-coor-farme frame_radius">Техническая поддержка в удобном формате через мессенджер</div>
+            <div class="col-9 text-coor-farme frame_radius">Technical support in a convenient format via messenger</div>
         </div>
     </div>
 </section>
@@ -188,26 +187,24 @@
 <!--About Me -->
 <section id="section-3">
     <h2 class="header-coor">
-        <strong class="mycolorcoor">Стоимость работ</strong> по техническому обслуживанию
+        <strong class="mycolorcoor">Cost</strong> of maintenance work
     </h2>
     <div class="container text-coor">
-        Стоимость обслуживания офиса или апартаментов формируется из следующего:
+        The cost of servicing an office or apartment is made up of the following:
         <ul>
-        <li class="servicesLinks">Перечень видов работ по обслуживанию
-        <li class="servicesLinks">Текущее состояние оборудования, коммуникаций и помещения
-        <li class="servicesLinks">Периодичность обслуживания
-        <li class="servicesLinks">Сложность инженерных конструкций
+        <li class="servicesLinks">List of types of maintenance work
+        <li class="servicesLinks">Current state of equipment, communications of the premises
+        <li class="servicesLinks">Maintenance frequency
+        <li class="servicesLinks">Complexity of engineering structures
         </ul>
 
 
-<div class="mycolorcoor_back">Для получения индивидуального расчета стоимости оставьте заявку у нашего специалиста.
+<div class="mycolorcoor_back">To receive an individual cost estimate, leave a request with our specialist.
 
-При заключении долгосрочнго договора на обслуживания, мы берем на себя ответственность за слаженную и четкую работу нащих специалистов.
+When concluding a long-term service contract, we take responsibility for the coordinated and precise work of our specialists.
 </div>
         <h3 class="font-weight-bold">
-Вам больше не придется думать, где искать хорошего мастера для ремонтных работ по разным задачам.
-Мы берем решение этих задач на себя.</h3>
-
+You no longer have to think about where to look for a good master for repair work on various tasks. We take on the solution of these tasks ourselves.</h3>
 
     </div>
 </section>
@@ -216,20 +213,20 @@
 
 <section id="section-4">
     <h2 class="header-coor">
-        Виды <strong class="mycolorcoor">технического обслуживания</strong>
+        Types of <strong class="mycolorcoor">maintenance</strong>
     </h2>
     <div class="container center text-coor" align="center">
-        <div class="btn mycolorcoor_back_span text-coor">Электрика</div>
-        <div class="btn mycolorcoor_back_span text-coor">Сантехника</div><br>
-        <div class="btn mycolorcoor_back_span text-coor">Системы отопления и кондиционирования</div><br>
-        <div class="btn mycolorcoor_back_span text-coor">Текущий мелкий ремонт офисов</div><br>
-        <div class="btn mycolorcoor_back_span text-coor">Обслуживание бытовой техники</div>
+        <div class="btn mycolorcoor_back_span text-coor">Electricity</div>
+        <div class="btn mycolorcoor_back_span text-coor">Plumbing</div><br>
+        <div class="btn mycolorcoor_back_span text-coor">Heating and air conditioning systems</div><br>
+        <div class="btn mycolorcoor_back_span text-coor">Current minor repairs of offices</div><br>
+        <div class="btn mycolorcoor_back_span text-coor">Household appliances maintenance</div>
     </div>
 </section>
 
 <!-- Footer -->
 <footer class="footer_bg">
-       {% #footer address_title='Адрес' address_name='Тбилиси, ул.Зураба Патаридзе 8' phone_title='Контакты' write_to_us_title='Написать нам' master_title='Мастер на час в Тбилиси' %}
+       {% #footer address_title='Address' address_name='8 Zurab Pataridze St, Tbilisi' phone_title='Contact' write_to_us_title='Write to us' master_title='Repair services in Tbilisi' %}
        {% /footer %}
 </footer>
 <!-- And Footer -->

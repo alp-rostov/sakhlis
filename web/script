@@ -113,3 +113,9 @@ sudo supervisorctl reread  (подцепить файл в папке conf.d)
 sudo supervisorctl update
 sudo supervisorctl status project
 sudo supervisorctl restart project
+
+
+
+
+
+Hello. I confirm it. Please make a redirect domen https://www.sakhlis-remonti.ge/ to vps http://91.239.206.142/

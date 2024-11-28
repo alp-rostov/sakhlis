@@ -34,20 +34,20 @@ h6 {
 
 h2, h3{
 	text-align: center;
-	margin: 3rem 0;
+	margin-top: 3rem;
     position: relative;
 }
 
-h2:after {
-    content: "";
-    background: url(../images/underline1.png) no-repeat;
-    width: 94px;
-    height: 11px;
-    position: absolute;
-    bottom: -22px;
-    left: 50%;
-    margin-left: -47px;
-}
+/*h2:after {*/
+/*    content: "";*/
+/*    !*background: url(../images/underline1.png) no-repeat;*!*/
+/*    width: 94px;*/
+/*    height: 11px;*/
+/*    position: absolute;*/
+/*    bottom: -22px;*/
+/*    left: 50%;*/
+/*    margin-left: -47px;*/
+/*}*/
 
 
 /*.hr-light-h {*/
@@ -192,6 +192,22 @@ section h1 {
     font-weight: bold;
 }
 
+.button-like_ {
+  padding: 8px 15px;
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-weight: bold;
+
+    backdrop-filter: blur(30px);
+    border: 1px solid;
+    border-color: var(--span-color-corporate);
+}
+
 
 
 /*********************************************
@@ -311,19 +327,27 @@ a {
 }
 
 .btn-send {
+    padding: 8px 15px;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
     font-weight: bold;
-    color: #FFFFFF;
-    background-color: transparent!important;
-    font-size: 1.2em;
-    border-radius: 50px;
-    border-style: solid;
-    border-color: #FFFFFF;
-    width: 320px;
-    padding: 8px;
     margin-top: 15px;
-    cursor: pointer;
+    backdrop-filter: blur(30px);
+    border: 3px solid;
+    border-color: var(--span-color);
+    transition: 1.0s;
 }
 
+.btn-send:hover {
+color: var(--span-color);
+    border-color: #FFFFFF;
+    background-color: #FFFFFF;
+}
 
 
 .cta-btn:hover {

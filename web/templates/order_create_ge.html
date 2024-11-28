@@ -91,9 +91,13 @@
                     <a class="m-2" href="https://www.instagram.com/repairservicetbilisi/"><img src="{% static 'images/instagram.png' %}" width="70" alt="Instagram"></a>
             </div>
             <div class="flex-center">
-                <button class="btn-send " data-toggle="modal" data-target="#exampleModal">
-                    გაგზავნეთ მოთხოვნა
-                </button>
+                {% if request.user.groups.first.name == 'owner' %}
+                <br><a href="{% url 'profile' %}" class="btn-send p-3 h2 lead">პირადი ანგარიში</a>
+                {% else %}
+                <a class="btn-send" href="{% url 'createorder_ge'%}">გაგზავნეთ მოთხოვნა</a>
+                <hr>
+                <a href="{% url 'business_en' %}" class="button-like_ m-3">For business clients</a>
+                {% endif %}
             </div>
         </div>
     </div>

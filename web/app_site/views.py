@@ -219,16 +219,9 @@ class OrderCreate(BaseClassExeption, CreateView):
         with (transaction.atomic()):
             if self.request.user.is_authenticated:
                 print(self.request.POST.get('apartment_id'))
-
                 if self.request.user.groups.first().name == 'owner':
-
                     form.instance.customer_id = UserProfile.objects.get(user=self.request.user.id)
-
                     form.instance.apartment_id = Apartment.objects.get(pk=self.request.POST.get('apartment_id'))
-                    print(self.request.POST.get('apartment_id'))
-                    print('------------')
-                    print(self.request.POST.get('customer_id'))
-                    print('------------')
                     form.save()
                     return JsonResponse({'message': f'<h3>Заявка № {form.instance.pk} отправлена успешно!</h3>',
                                          'pk': form.instance.pk,
@@ -262,9 +255,6 @@ class OrderCreate(BaseClassExeption, CreateView):
                                  'pk': form.instance.pk,
                                  'auth': self.request.user.is_authenticated
                                  })
-
-
-
 
 
 class OrderDelete(BaseClassExeption, LoginRequiredMixin, DeleteView):
@@ -334,7 +324,7 @@ class OrderManagementSystem(BaseClassExeption, LoginRequiredMixin, ListView):
                             'text_order', 'apartment_id__address_city', 'apartment_id__name',
                           'apartment_id__address_street_app', 'apartment_id__address_num',
                             'customer_id__pk', 'customer_id__user', 'customer_id__customer_name'
-                            ))
+                            ))[0:99]
         self.filterset = OrderFilter(self.request.GET, queryset)
         return self.filterset.qs
 
