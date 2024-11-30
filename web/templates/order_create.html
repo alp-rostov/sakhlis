@@ -108,9 +108,57 @@
         </div>
     </div>
 </header>
-
-
 <!--And Header-->
+
+<section id="section-14" class="row_bg">
+    <div class="container">
+        <div class="position-relative">
+    <h2 class="h1-responsive mb-4"><strong class="mycolor">Как мы работаем?</strong>
+        в компании "Мастер на час"
+    </h2>
+    <div class="container text-coor">
+        <div class="row pb-4 m-1">
+            <div class="col-3 text-farme p-0"><img src="{% static 'images/1_.png' %}" alt="1" ></div>
+            <div class="col-9 text-farme frame_radius">Вы оставляете заказ в одном из мессенджеров
+                    <a class="" title="Telegram" href="https://t.me/+995598259119"><img src="{% static 'images/telegram.gif' %}" width="30" alt="Telegram"></a>
+                    <!--WhatsApp-->
+                    <a class="" title="WhatsApp" href="https://wa.me/+79604458687"><img src="{% static 'images/whatsapp.png' %}" width="35" alt="WhatsApp"></a>
+
+                или заполняете <a class="mycolor font-weight-bold" href="{% url 'createorder'%}"><u>форму заказа</u></a> на сайте.</div>
+        </div>
+        <div class="row pb-4 m-1">
+            <div class="col-3 text-farme p-0"><img src="{% static 'images/2_.png' %}" alt="2" ></div>
+            <div class="col-9 text-farme frame_radius">
+                Мастер связывается с вами и, после уточнения всех деталей заказа, озвучивает стоимость и время выполнения работ.
+            </div>
+        </div>
+        <div class="row pb-4 m-1">
+            <div class="col-3 text-farme p-0"><img src="{% static 'images/3_.png' %}" alt="3" ></div>
+            <div class="col-9 text-farme frame_radius">
+                В согласованное время мастер выполняет все необходимые работы.
+            </div>
+        </div>
+
+        <div class="row pb-4 m-1">
+            <div class="col-3 text-farme p-0"><img src="{% static 'images/4_.png' %}" alt="4" ></div>
+            <div class="col-9 text-farme frame_radius">
+                Вы оплачиваете работу картой <img src="static/images/mastercard.svg" alt="mastercard" >
+                <img src="static/images/visa.svg" alt="visa"  > или наличными. По запросу возможно предоставление
+                <img src="{% static 'images/invoice.png' %}" alt="pdf-invoice" width="40" > счета на выполненные работы.
+            </div>
+        </div>
+
+        <div class="row pb-4 m-1">
+            <div class="col-3 text-farme p-0"><img src="{% static 'images/5_.png' %}" alt="4" ></div>
+            <div class="col-9 text-farme frame_radius">
+                Вы получаете гарантию на выполненную работу.
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+</section>
+
 
 <!-- Services -->
 <section id="section-1" class="row_bg">
@@ -192,6 +240,7 @@
 
 <!-- How I work -->
 <section id="section-3">
+
     <h2 class="h1-responsive">
         Мастер на час в Тбилиси:
         <strong class="mycolor">
@@ -248,24 +297,27 @@
 
 <!--About Me -->
 <section id="section-4">
+    <div class="container">
+        <div class="position-relative">
+            {% #about_me head="«Мастер на час»<strong class='mycolor'> всегда на связи</strong>" %}
+            <ul>
+            <li>Пн-Пт: 9.00-18.00
+            <li>Суб: 9.00-15.00
+            <li>Воск: выходной
+            </ul>
 
-    {% #about_me head="«Мастер на час»<strong class='mycolor'> всегда на связи</strong>" %}
-    <ul>
-    <li>Пн-Пт: 9.00-18.00
-    <li>Суб: 9.00-15.00
-    <li>Воск: выходной
-    </ul>
 
-
-    <p><i class="fas fa-quote-left pr-2"></i>Мы готовы приехать на вызов в <b>любое время в экстренной ситуации.</b></p>
-                <h4><i class="fas fa-wrench fa-sm mr-3"></i>Режим работы: КРУГЛОСУТОЧНО! (в экстренной ситуации)</h4>
-                <p>Наша команда имеет многолетний опыт работы по данному направлению. Предлагаем только качественное решение вашей проблемы будь-то поломаный выключатель, скрипящая дверь, протекающая сантехника.</p>
-                <blockquote class="blockquote">
-                    <p class="mb-0">Контактная информация: +995 598259119</p>
-                    <footer class="blockquote-footer">Ремонт - наша работа.
-                    </footer>
-                </blockquote>
-    {% /about_me%}
+            <p><i class="fas fa-quote-left pr-2"></i>Мы готовы приехать на вызов в <b>любое время в экстренной ситуации.</b></p>
+                        <h4><i class="fas fa-wrench fa-sm mr-3"></i>Режим работы: КРУГЛОСУТОЧНО! (в экстренной ситуации)</h4>
+                        <p>Наша команда имеет многолетний опыт работы по данному направлению. Предлагаем только качественное решение вашей проблемы будь-то поломаный выключатель, скрипящая дверь, протекающая сантехника.</p>
+                        <blockquote class="blockquote">
+                            <p class="mb-0">Контактная информация: +995 598259119</p>
+                            <footer class="blockquote-footer">Ремонт - наша работа.
+                            </footer>
+                        </blockquote>
+            {% /about_me%}
+        </div>
+    </div>
 </section>
 <!-- About Me -->
 

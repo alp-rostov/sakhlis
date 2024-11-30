@@ -169,3 +169,281 @@ TypeError: 'OrderFilter' object is not subscriptable
 28/Nov/2024 17:31:44    WARNING    basehttp    "GET /favicon.ico HTTP/1.1" 404 19223   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
 28/Nov/2024 17:41:34    WARNING    basehttp    "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1828   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
 28/Nov/2024 17:41:34    WARNING    basehttp    "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1834   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+28/Nov/2024 20:46:11    WARNING    log    Not Found: /favicon.ico   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+28/Nov/2024 20:46:11    WARNING    basehttp    "GET /favicon.ico HTTP/1.1" 404 19402   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+28/Nov/2024 21:21:07    WARNING    log    Not Found: /favicon.ico   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+28/Nov/2024 21:21:07    WARNING    basehttp    "GET /favicon.ico HTTP/1.1" 404 19402   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+29/Nov/2024 18:06:45    WARNING    log    Not Found: /favicon.ico   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+29/Nov/2024 18:06:45    WARNING    basehttp    "GET /favicon.ico HTTP/1.1" 404 19572   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+29/Nov/2024 18:07:12    ERROR    log    Internal Server Error: /corporate   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('cbusiness.html'), <traceback object at 0x7fe30497a1c0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: cbusiness.html
+29/Nov/2024 18:07:12    ERROR    basehttp    "GET /corporate HTTP/1.1" 500 97608   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+29/Nov/2024 18:07:13    ERROR    log    Internal Server Error: /corporate   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('cbusiness.html'), <traceback object at 0x7fe2fdbb9a00>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: cbusiness.html
+29/Nov/2024 18:07:13    ERROR    basehttp    "GET /corporate HTTP/1.1" 500 97608   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+29/Nov/2024 18:07:13    ERROR    log    Internal Server Error: /corporate   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('cbusiness.html'), <traceback object at 0x7fe2fd135a40>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: cbusiness.html
+29/Nov/2024 18:07:13    ERROR    basehttp    "GET /corporate HTTP/1.1" 500 97608   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+29/Nov/2024 18:07:14    ERROR    log    Internal Server Error: /corporate   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('cbusiness.html'), <traceback object at 0x7fe2fd1b8540>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: cbusiness.html
+29/Nov/2024 18:07:14    ERROR    basehttp    "GET /corporate HTTP/1.1" 500 97608   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+29/Nov/2024 18:07:14    ERROR    log    Internal Server Error: /corporate   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('cbusiness.html'), <traceback object at 0x7fe2fd02a840>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: cbusiness.html
+29/Nov/2024 18:07:14    ERROR    basehttp    "GET /corporate HTTP/1.1" 500 97608   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+29/Nov/2024 20:50:25    ERROR    log    Internal Server Error: /   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("Invalid block tag on line 37: 'static'. Did you forget to register or load this tag?"), <traceback object at 0x7fcffe724a00>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 505, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/response.py", line 89, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/test/utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/slippers/templatetags/slippers.py", line 102, in render
+    template = context.template.engine.get_template(self.template_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 37: 'static'. Did you forget to register or load this tag?
+29/Nov/2024 20:50:25    ERROR    basehttp    "GET / HTTP/1.1" 500 181728   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+30/Nov/2024 07:13:30    WARNING    log    Not Found: /favicon.ico   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+30/Nov/2024 07:13:30    WARNING    basehttp    "GET /favicon.ico HTTP/1.1" 404 19572   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+30/Nov/2024 12:13:13    WARNING    log    Not Found: /favicon.ico   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+30/Nov/2024 12:13:13    WARNING    basehttp    "GET /favicon.ico HTTP/1.1" 404 19572   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+30/Nov/2024 12:24:50    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'TypeError'>, TypeError('Object of type set is not JSON serializable'), <traceback object at 0x7fc7e95182c0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 184, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 250, in form_valid
+    return JsonResponse({'message': {form.instance.pk},
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/http/response.py", line 748, in __init__
+    data = json.dumps(data, cls=encoder, **json_dumps_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/serializers/json.py", line 106, in default
+    return super().default(o)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type set is not JSON serializable
+30/Nov/2024 12:24:50    ERROR    basehttp    "POST /createorder HTTP/1.1" 500 133417   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+30/Nov/2024 12:25:45    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'TypeError'>, TypeError('Object of type set is not JSON serializable'), <traceback object at 0x7fc7e8b61c00>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 184, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 250, in form_valid
+    return JsonResponse({'message': {form.instance.pk},
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/http/response.py", line 748, in __init__
+    data = json.dumps(data, cls=encoder, **json_dumps_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/serializers/json.py", line 106, in default
+    return super().default(o)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type set is not JSON serializable
+30/Nov/2024 12:25:45    ERROR    basehttp    "POST /createorder HTTP/1.1" 500 133411   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+30/Nov/2024 13:06:03    WARNING    log    Not Found: /favicon.ico   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+30/Nov/2024 13:06:03    WARNING    basehttp    "GET /favicon.ico HTTP/1.1" 404 19573   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+30/Nov/2024 13:58:12    WARNING    basehttp    "GET /static/images/5_png HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+30/Nov/2024 13:58:12    WARNING    basehttp    "GET /static/images/5_png HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+30/Nov/2024 13:58:13    WARNING    basehttp    "GET /static/images/5_png HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+30/Nov/2024 13:58:13    WARNING    basehttp    "GET /static/images/5_png HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+30/Nov/2024 13:58:22    WARNING    basehttp    "GET /static/images/5_png HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+30/Nov/2024 13:58:22    WARNING    basehttp    "GET /static/images/5_png HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+30/Nov/2024 13:59:02    WARNING    basehttp    "GET /static/images/5_png HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+30/Nov/2024 13:59:06    WARNING    basehttp    "GET /static/images/5_png HTTP/1.1" 404 1795   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+30/Nov/2024 14:14:53    WARNING    log    Not Found: /favicon.ico   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+30/Nov/2024 14:14:53    WARNING    basehttp    "GET /favicon.ico HTTP/1.1" 404 19572   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None

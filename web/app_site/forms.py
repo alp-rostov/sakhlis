@@ -80,7 +80,7 @@ class ApartentUpdateForm(ApartmentForm, forms.ModelForm):
 class CustomerForm(forms.ModelForm):
     customer_name = forms.CharField(
         label='Name',
-        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Username", 'maxlength': 20}),
+        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Name", 'maxlength': 20}),
         required=True
     )
     profile = forms.CharField(

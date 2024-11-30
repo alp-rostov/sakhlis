@@ -1,0 +1,244 @@
+{% load static %}
+{% load slippers %}
+
+<!DOCTYPE html><html lang="ru" ><head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- Fav Icon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>სარემონტო მომსახურება თბილისში | ოფისისა და ბინის მოვლა თქვენი ბიზნესისთვის</title>
+    <meta name="description" content="საოფისე და ბინების რემონტი თბილისი">
+    <!-- Facebook -->
+    <meta property="og:title" content="ხელოსანი თბილისში: ბიზნესი და ბინის მოვლა">
+	<meta property="og:description" content="სარემონტო მომსახურება თბილისში ✔ გამოიძახეთ ტექნიკოსი თქვენს სახლში ✔ ელექტრიკოსი, სანტექნიკოსი, ბინის მცირე რემონტი">
+	<meta property="og:image" content="images/master-na-chas.jpg">
+	<meta property="og:image:width" content>
+	<meta property="og:image:height" content>
+	<meta property="og:site_name" content>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <!-- Owl Carusel -->
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <!-- Custom Stylesheets -->
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+
+</head>
+
+<body id="top">
+
+<!--Header-->
+{% #menu_business line='border_line_blue' %}
+
+<li class="nav-item mr-3 active">
+    <a class="nav-link" href="#section-0"><b>მთავარი </b><span class="sr-only">(current)</span></a>
+</li>
+<li class="nav-item mr-3">
+    <a class="nav-link" href="#section-1">უპირატესობები</a>
+</li>
+<li class="nav-item mr-3">
+    <a class="nav-link" href="#section-2">როგორ ვმუშაობთ</a>
+</li>
+<li class="nav-item mr-3">
+    <a class="nav-link" href="#section-3">ფასი</a>
+</li>
+<li class="nav-item mr-3">
+    <a class="nav-link" href="#section-4">სამუშაოს სახეები</a>
+</li>
+
+{% if request.user.is_authenticated %}
+<li class="nav-item mr-4">
+    {% if request.user.groups.first.name == 'repairer' %}
+    <a class="nav-link" href="{% url 'user' request.user.pk %}">
+    {% elif request.user.groups.first.name == 'owner' %}
+    <a class="nav-link" href="{% url 'profile' %}">
+    {% endif %}
+    {{ request.user }}
+    </a>
+    </li>
+    <li class="nav-item mr-4">
+        <a class="nav-link" href="{% url 'logout' %}">
+            Log Out
+        </a>
+    </li>
+{% else %}
+    <li class="nav-item mr-4">
+        <a class="nav-link" href="{% url 'login' %}" title='Sign in'>
+            Log in
+        </a>
+    </li>
+{% endif %}
+
+{% /menu_business %}
+
+
+<header id="section-0" class="bg_img">
+<div class="corporateheader  ">
+    <div class="rowcenter pad ">
+        <div class="row textcotporate">
+            <div class="col-lg-9 col-md-10 col-sm-12 lead">
+                <h1 class="display-4 displ">ოფისებისა და ბინების<br> ტექნიკური მომსახურება თქვენი ბიზნესისთვის</h1>
+                    <a class="button-like m-3" href="{% url 'createorder_ge'%}">შეუკვეთეთ შეკეთება</a>
+            </div>
+            <div class="col-lg-3 col-md-2">
+                <img src="{% static 'images/logo-b.png' %}" width="240" alt="Telegram" class=" logo r">
+
+            </div>
+        </div>
+
+        <div class="row textcotporate  pred">
+            <div class="col-lg-6 col-md-6 col-sm-12 lead mt-2">
+                <img src="{% static 'images/location.png'%}" width="40" class="mr-4">საქართველო, თბილისი
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 lead mt-2">
+                                    <!--Telegramm-->
+                <a class="m-2" title="Telegram" href="https://t.me/+995598259119" ><img src="{% static 'images/telegram.gif' %}" width="40" alt="დეპეშა"></a>
+                <!--WhatsApp-->
+                <a class="m-2" title="WhatsApp" href="https://wa.me/+79604458687"><img src="{% static 'images/whatsapp.png' %}" width="45" alt="WhatsApp"></a>
+                <!--Instagram-->
+                <a class="m-2" href="https://www.instagram.com/repairservicetbilisi/"><img src="{% static 'images/instagram.png' %}" width="50" alt="ინსტაგრამი"></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</header>
+
+
+<!--And Header-->
+
+<!-- Services -->
+<section id="section-1" class="">
+    <div class="container">
+        <div class="position-relative">
+            <h2 class="header-coor"><strong class="mycolorcoor">ჩვენი უპირატესობები</strong> ყოვლისმომცველ ტექნიკურ მოვლაში</h2>
+        </div>
+        <div class="row mb-5">
+            <div class="col-2 pic-coor"><img src="{% static 'images/TimeSpan.png' %}" alt="TimeSpan" width="40"></div>
+            <div class="col-10 text-coor">სწრაფი რეაგირება</div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-2 pic-coor"><img src="{% static 'images/DevelopmentSkill.png' %}" alt="DevelopmentSkill.png" width="40"></div>
+            <div class="col-10 text-coor">გამოცდილი ტექნიკური ექსპერტები</div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-2 pic-coor"><img src="{% static 'images/WorkLight.png' %}" alt="WorkLight" width="40" > </div>
+            <div class="col-10 text-coor">შესრულებული სამუშაოების ფართო სპექტრი</div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-2 pic-coor"><img src="{% static 'images/CardPayment.png' %}" alt="CardPayment"width="40"> </div>
+            <div class="col-10 text-coor">გადახდა ნაღდი ანგარიშსწორებით, საბანკო ბარათით და საბანკო გადარიცხვით</div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-2 pic-coor"><img src="{% static 'images/TestAccount.png' %}" alt="Account" width="40"> </div>
+            <div class="col-10 text-coor">მოსახერხებელი პირადი ანგარიში ვებსაიტზე, სადაც შეგიძლიათ თვალყური ადევნოთ მთელ ისტორიას
+ ხარჯების შესახებ, დაბეჭდეთ გადახდის ინვოისი და ნახეთ შესრულებული სამუშაოს სახეები.</div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-2 pic-coor"><img src="{% static 'images/Protect.png' %}" alt="Protect" width="40"> </div>
+            <div class="col-10 text-coor">გარანტია შესრულებული სამუშაოსთვის</div>
+        </div>
+
+
+    </div>
+</section>
+<!-- And Services -->
+
+<!-- How I work -->
+<section id="section-2">
+    <h2 class="header-coor"><strong class="mycolorcoor">როგორ ვმუშაობთ?</strong>
+        სარემონტო სამუშაოების პრინციპები
+    </h2>
+    <div class="container text-coor">
+        <div class="row pb-4 m-1">
+            <div class="col-3 text-coor-farme p-0"><img src="{% static 'images/1.png' %}" alt="1" ></div>
+            <div class="col-9 text-coor-farme frame_radius">ჩვენ ვაფორმებთ ხელშეკრულებას შენობის ტექნიკური მოვლა-პატრონობის შესახებ დამტკიცებული სამუშაოების ტიპებისთვის</div>
+        </div>
+        <div class="row pb-4 m-1">
+            <div class="col-3 text-coor-farme p-0"><img src="{% static 'images/2.png' %}" alt="2" ></div>
+            <div class="col-9 text-coor-farme frame_radius">ჩვენ ვარეგისტრირებთ პირად ანგარიშს და კომპანიის QR კოდს
+ მაღალი ხარისხის და სწრაფი ურთიერთქმედებისთვის.</div>
+        </div>
+        <div class="row pb-4 m-1">
+            <div class="col-3 text-coor-farme p-0"><img src="{% static 'images/3.png' %}" alt="3" ></div>
+            <div class="col-9 text-coor-farme frame_radius">ჩვენი სერვისის სპეციალისტები რეგულარულად სტუმრობენ შენობას პროფილაქტიკური შემოწმებისთვის</div>
+        </div>
+
+        <div class="row pb-4 m-1">
+            <div class="col-3 text-coor-farme p-0"><img src="{% static 'images/4.png' %}" alt="4" ></div>
+            <div class="col-9 text-coor-farme frame_radius">ჩვენ გთავაზობთ საგანგებო სიტუაციებში რეაგირების სერვისებს</div>
+        </div>
+
+        <div class="row pb-4 m-1">
+            <div class="col-3 text-coor-farme p-0"><img src="{% static 'images/5.png' %}" alt="4" ></div>
+            <div class="col-9 text-coor-farme frame_radius">ტექნიკური მხარდაჭერა მოსახერხებელ ფორმატში მესენჯერის საშუალებით</div>
+        </div>
+    </div>
+</section>
+<!-- And How I work -->
+
+<!--About Me -->
+<section id="section-3">
+    <h2 class="header-coor">
+        <strong class="mycolorcoor">სარემონტო სამუშაოების ღირებულება</strong>
+    </h2>
+    <div class="container text-coor">
+        ოფისის ან ბინის მომსახურების ღირებულება შედგება შემდეგისგან:
+        <ul>
+        <li class="servicesLinks">სარემონტო სამუშაოების ტიპების ჩამონათვალი
+        <li class="servicesLinks">აღჭურვილობის ამჟამინდელი მდგომარეობა, შენობის კომუნიკაციები
+        <li class="servicesLinks">შენარჩუნების სიხშირე
+        <li class="servicesLinks">საინჟინრო ნაგებობების სირთულე
+        </ul>
+
+
+<div class="mycolorcoor_back">ინდივიდუალური ხარჯთაღრიცხვის მისაღებად, დატოვეთ მოთხოვნა ჩვენს სპეციალისტთან.
+
+მომსახურების გრძელვადიანი ხელშეკრულების გაფორმებისას, ჩვენ ვიღებთ პასუხისმგებლობას ჩვენი სპეციალისტების კოორდინირებულ და ზუსტ მუშაობაზე.
+</div>
+        <h3 class="font-weight-bold">
+        თქვენ აღარ გჭირდებათ იმაზე ფიქრი, თუ სად უნდა მოძებნოთ კარგი ოსტატი სხვადასხვა ამოცანებზე სარემონტო სამუშაოებისთვის. ჩვენ თვითონ ვიღებთ ამ ამოცანების გადაწყვეტას.
+        </h3>
+
+    </div>
+</section>
+<!-- About Me -->
+
+
+<section id="section-4">
+    <h2 class="header-coor">
+        <strong class="mycolorcoor">შენარჩუნების</strong> სახეები
+    </h2>
+    <div class="container center text-coor" align="center">
+        <div class="btn mycolorcoor_back_span text-coor">ელექტროენერგია</div>
+        <div class="btn mycolorcoor_back_span text-coor">სანტექნიკა</div><br>
+        <div class="btn mycolorcoor_back_span text-coor">გათბობის და კონდიცირების სისტემები</div><br>
+        <div class="btn mycolorcoor_back_span text-coor">ოფისების მიმდინარე მცირე რემონტი</div><br>
+        <div class="btn mycolorcoor_back_span text-coor">საყოფაცხოვრებო ტექნიკის მოვლა</div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer_bg">
+    {% #footer address_title='მისამართი' address_name='თბილისი, ქ. ზურაბ პატარიძის 8' phone_title='საკონტაქტო' write_to_us_title='მოგვწერეთ' master_title='ოსტატი ერთი საათით თბილისში' %}
+    {% /footer %}
+</footer>
+<!-- And Footer -->
+
+    <!-- jQuery first, then Bootstrap JS -->
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/mdb.min.js' %}"></script>
+    <!-- Optional JavaScript -->
+
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/jquery.malihu.PageScroll2id.min.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+
+
+</body></html>

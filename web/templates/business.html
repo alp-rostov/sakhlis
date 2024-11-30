@@ -24,8 +24,6 @@
     <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
     <!-- Custom Stylesheets -->
     <link rel="stylesheet" href="{% static 'css/custom.css' %}">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 </head>
 
 <body id="top">
@@ -94,7 +92,7 @@
             <div class="col-lg-6 col-md-6 col-sm-12 lead mt-2">
                 <img src="{% static 'images/location.png'%}" width="40" class="mr-4"> Грузия, Тбилиси
             </div>
-            <div class="col-lg-6 col-md-6 lead r mt-2">
+            <div class="col-lg-6 col-md-6 col-sm-12 lead mt-2">
                                     <!--Telegramm-->
                 <a class="m-2" title="Telegram" href="https://t.me/+995598259119" ><img src="{% static 'images/telegram.gif' %}" width="40" alt="Telegram"></a>
                 <!--WhatsApp-->
@@ -239,34 +237,9 @@
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <script src="{% static 'js/mdb.min.js' %}"></script>
     <!-- Optional JavaScript -->
-
     <script src="{% static 'js/owl.carousel.min.js' %}"></script>
     <script src="{% static 'js/jquery.malihu.PageScroll2id.min.js' %}"></script>
     <script src="{% static 'js/custom.js' %}"></script>
 
-<script>
-$(document.body).ready(function() {
-    $('#form').submit(function(e) {
-        e.preventDefault();
-        $.ajax({
-            url: '',
-            type: 'POST',
-            data: $(this).serialize(),
-            dataType: 'text',
-            beforeSend: function () {$("#form").html('<h3>Отправляется...</h3>');},
-            success: function (resp) {
-                let mes=JSON.parse(resp);
-                if (mes.auth==true) {
-                    window.location.href = '/list_order/'+mes.pk;
-                    }
-                else {
-                    $("#form").html(' ');
-                    $("#answer").html(mes.message+mes.contact);
 
-                    }
-                },
-            });
-    });
-});
-</script>
 </body></html>

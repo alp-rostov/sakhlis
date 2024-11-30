@@ -130,8 +130,7 @@ $(document.body).ready(function() {
                     }
                 else {
                     $("#form").html(' ');
-                    $("#answer").html(mes.message+mes.contact);
-
+                    $("#answer").html('<h2>Благодарим Вас за заявку!</h2><h3>Заявка № '+mes.message + ' отправлена успешно!</h2><hr><h4>Ваш менеджер мастер Сергей: <br><img src="/media/masters/51.jpg" class="rounded-circle" width="100">.</h4><h5>Вы можете написать ему, уточнить детали, отправить фото работ или геопозицию:</h5><a class="mx-2" title="Telegram" href="https://t.me/+995598259119"><img src="/static/images/telegram.gif" width="50" alt="Telegram"></a><a class="mx-2" title="WhatsApp" href="https://wa.me/+79604458687"><img src="/static/images/whatsapp.png" width="55" alt="WhatsApp"></a>')
                     }
                 },
             });

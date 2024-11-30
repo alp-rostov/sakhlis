@@ -7,8 +7,11 @@ urlpatterns = [
     path('', OrderCreate.as_view(), name='home'),
     path('en', OrderCreate.as_view(template_name='order_create_en.html'), name='home_en'),
     path('ge', OrderCreate.as_view(template_name='order_create_ge.html'), name='home_ge'),
-    path('corporate', OrderCreate.as_view(template_name='business.html'), name='business'),
-    path('corporate_en', OrderCreate.as_view(template_name='business_en.html'), name='business_en'),
+    path('corporate', TemplateView.as_view(template_name='business.html'), name='business'),
+    path('corporate_en', TemplateView.as_view(template_name='business_en.html'), name='business_en'),
+    path('corporate_ge', TemplateView.as_view(template_name='business_ge.html'), name='business_ge'),
+
+    path('masters', TemplateView.as_view(template_name='masters.html'), name='masters'),
 
     path('createorder', OrderCreate.as_view(template_name='createorder.html'), name='createorder'),
     path('createorder_en', OrderCreate.as_view(template_name='createorder_en.html'), name='createorder_en'),
@@ -20,7 +23,6 @@ urlpatterns = [
     path('list_order/update/<int:pk>', OrderUpdate.as_view(), name='update-order'),
 
     path('list_order/pdf/<int:order_pk>', CreateIvoicePDF, name='invoice_pdf'),
-
 
 
 
