@@ -15,7 +15,7 @@ from django.http import FileResponse, HttpResponseRedirect, JsonResponse, Http40
 from django.forms import modelformset_factory
 from django.shortcuts import redirect, get_object_or_404
 from django.urls import reverse_lazy
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView, FormView
 
 from .constants import *
 from .exeptions import BaseClassExeption
@@ -24,6 +24,7 @@ from .forms import *
 from .repository import DataFromRepairerList, DataFromOrderList, DataFromInvoice, DataFromUserProfile
 from .serialaizers import StreetModelSerializer, OrderStatusSerializer, InvoiceSerializer, UserSerializer, \
     UpdateMasterSerializer
+from .tasks import send_email
 from .utils import *
 
 from rest_framework import generics
@@ -429,6 +430,20 @@ class RepaierUpdate(BaseClassExeption, PermissionRequiredMixin, UpdateView):
 
     def get_success_url(self):
         return '/user/' + str(self.request.user.pk)
+
+
+class SendOffer(FormView):
+    template_name = 'offers.html'
+    form_class = SendOffer
+    def post(self, formset, **kwargs):
+
+        send_email(self.request.POST['email'],
+                   'Repair service for your business: www.sakhlis-remonti.ge',
+                   'emails/mail-offer.html',
+                   {'name': self.request.POST['username']}
+                   )
+
+
 
 
 class Statistica(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, ListView):

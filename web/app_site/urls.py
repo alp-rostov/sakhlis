@@ -44,6 +44,7 @@ urlpatterns = [
                                                           'info': ''}),
          name='confirm_registration'),
 
+
     path('clients/', Clients.as_view(), name='clients'),
     path('clients/update/<int:pk>', ClientsUpdate.as_view(), name='clients_update'),
     path('apartments/', ApartmentList.as_view(), name='apartments'),
@@ -61,6 +62,11 @@ urlpatterns = [
     path('owner-invoice/<int:pk>', OwnerInvoice.as_view(), name='ownerinvoice'),
 
     path('serv', listservices_for_invoice_json),
+
+
+    path('sendoffer', SendOffer.as_view(), name='sendoffer'),
+
+
     path('save_list', save_list_jobs),
     path('client', client_details_json),
     # path('listorderjson', listorder_for_order_list_paginator_json),

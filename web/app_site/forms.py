@@ -208,3 +208,13 @@ class UserRegisterForm(UserCreationForm):
                   "password1",
                   "password2",
                   )
+
+class SendOffer(forms.Form):
+    username = forms.CharField(
+        label='Name',
+        widget=forms.TextInput(attrs={"class": "form-control mb-2", 'placeholder': "Login"}),
+    )
+    email = forms.EmailField(
+        label="Email",
+        widget=forms.EmailInput(attrs={"class": "form-control mb-2", 'placeholder': "Email"}),
+    )

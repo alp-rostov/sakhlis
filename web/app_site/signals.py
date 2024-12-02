@@ -16,4 +16,5 @@ def send_email_after_registration(sender, instance, created, **kwargs):
     if created:
         context={'pk':instance.pk,'username':instance.username}
         subject_='User registration | sakhlis-remonti.ge'
-        send_email.apply_async([instance.email, subject_, 'emails/registration.html', context], countdown=5, expires=20)
+        send_email.apply_async([instance.email, subject_, 'emails/registration.html', context],
+                               countdown=5, expires=20)

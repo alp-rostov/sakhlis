@@ -33,9 +33,9 @@ def send_to_telegrambot(inst: int):
 
 @shared_task
 def send_email(email:str='', subject_:str=f'sakhlis-remonti.ge', template_name_:str = 'emails/registration.html', context_:dict={}):
-    user_ = User.objects.get(pk=context_['pk'])
-    token=UserProfile.objects.get(user=user_).customer_name
-    context_['token'] = str(token)
+    # user_ = User.objects.get(pk=context_['pk'])
+    # token=UserProfile.objects.get(user=user_).customer_name
+    # context_['token'] = str(token)
     html_content = render_to_string(
         template_name=template_name_,
         context=context_

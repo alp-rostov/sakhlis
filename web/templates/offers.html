@@ -1,0 +1,37 @@
+{% extends 'flatpages/default_user.html' %}
+{% load custom_filters %}
+{% load custom_tags %}
+
+
+{% block subbody %}
+
+
+{% endblock subbody %}
+
+{% block body %}
+
+<h2>{{ title }} </h2>
+
+<form method="post" action="" name="form" id="form"  style="display:{{hidden}}" class="">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit" name="submit" >Send</button>
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock body %}
