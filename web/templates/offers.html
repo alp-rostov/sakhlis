@@ -12,7 +12,7 @@
 
 <h2>{{ title }} </h2>
 
-<form method="post" action="" name="form" id="form"  style="display:{{hidden}}" class="">
+<form method="post" action="" name="form" id="form" >
     {% csrf_token %}
     {{ form }}
     <button type="submit" name="submit" >Send</button>

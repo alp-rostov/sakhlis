@@ -33,9 +33,6 @@ def send_to_telegrambot(inst: int):
 
 @shared_task
 def send_email(email:str='', subject_:str=f'sakhlis-remonti.ge', template_name_:str = 'emails/registration.html', context_:dict={}):
-    # user_ = User.objects.get(pk=context_['pk'])
-    # token=UserProfile.objects.get(user=user_).customer_name
-    # context_['token'] = str(token)
     html_content = render_to_string(
         template_name=template_name_,
         context=context_
@@ -47,3 +44,8 @@ def send_email(email:str='', subject_:str=f'sakhlis-remonti.ge', template_name_:
         )
     msg.attach_alternative(html_content, "text/html")
     msg.send()  # send email
+
+@shared_task
+def send_beat_offers():
+    # print('таска распиание')
+    send_email(email='alprostov.1982@gmail.com')

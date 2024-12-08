@@ -731,3 +731,171 @@ Traceback (most recent call last):
     raise ValueError(
 ValueError: The view app_site.views.view didn't return an HttpResponse object. It returned None instead.
 02/Dec/2024 19:07:19    ERROR    basehttp    "POST /sendoffer HTTP/1.1" 500 82676   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+03/Dec/2024 07:10:26    WARNING    log    Not Found: /favicon.ico   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+03/Dec/2024 07:10:26    WARNING    basehttp    "GET /favicon.ico HTTP/1.1" 404 19746   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+03/Dec/2024 07:10:38    ERROR    log    Internal Server Error: /sendoffer   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'ValueError'>, ValueError("The view app_site.views.view didn't return an HttpResponse object. It returned None instead."), <traceback object at 0x7fdec8906b00>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view app_site.views.view didn't return an HttpResponse object. It returned None instead.
+03/Dec/2024 07:10:38    ERROR    basehttp    "POST /sendoffer HTTP/1.1" 500 82675   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+03/Dec/2024 14:59:49    WARNING    log    Not Found: /favicon.ico   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+03/Dec/2024 14:59:49    WARNING    basehttp    "GET /favicon.ico HTTP/1.1" 404 19746   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+03/Dec/2024 14:59:57    ERROR    log    Internal Server Error: /sendoffer   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'ValueError'>, ValueError("The view app_site.views.view didn't return an HttpResponse object. It returned None instead."), <traceback object at 0x7f355cf36fc0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view app_site.views.view didn't return an HttpResponse object. It returned None instead.
+03/Dec/2024 14:59:57    ERROR    basehttp    "POST /sendoffer HTTP/1.1" 500 82675   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+03/Dec/2024 15:00:31    ERROR    log    Internal Server Error: /sendoffer   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'ValueError'>, ValueError("The view app_site.views.view didn't return an HttpResponse object. It returned None instead."), <traceback object at 0x7f355d9733c0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view app_site.views.view didn't return an HttpResponse object. It returned None instead.
+03/Dec/2024 15:00:31    ERROR    basehttp    "POST /sendoffer HTTP/1.1" 500 82675   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+03/Dec/2024 15:12:32    ERROR    log    Internal Server Error: /sendoffer   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'ValueError'>, ValueError("The view app_site.views.view didn't return an HttpResponse object. It returned None instead."), <traceback object at 0x7efcc3bc9e40>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view app_site.views.view didn't return an HttpResponse object. It returned None instead.
+03/Dec/2024 15:12:32    ERROR    basehttp    "POST /sendoffer HTTP/1.1" 500 82676   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+03/Dec/2024 15:12:46    ERROR    log    Internal Server Error: /sendoffer   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'ValueError'>, ValueError("The view app_site.views.view didn't return an HttpResponse object. It returned None instead."), <traceback object at 0x7efcc2d28ec0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view app_site.views.view didn't return an HttpResponse object. It returned None instead.
+03/Dec/2024 15:12:46    ERROR    basehttp    "POST /sendoffer HTTP/1.1" 500 82666   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+03/Dec/2024 15:18:55    ERROR    log    Internal Server Error: /sendoffer   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'ValueError'>, ValueError("The view app_site.views.view didn't return an HttpResponse object. It returned None instead."), <traceback object at 0x7fc65bbb5dc0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view app_site.views.view didn't return an HttpResponse object. It returned None instead.
+03/Dec/2024 15:18:55    ERROR    basehttp    "POST /sendoffer HTTP/1.1" 500 82674   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+03/Dec/2024 16:02:56    WARNING    log    Not Found: /favicon.ico   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+03/Dec/2024 16:02:56    WARNING    basehttp    "GET /favicon.ico HTTP/1.1" 404 19746   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+03/Dec/2024 16:03:01    ERROR    log    Internal Server Error: /sendoffer   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'ValueError'>, ValueError("The view app_site.views.view didn't return an HttpResponse object. It returned None instead."), <traceback object at 0x7f0c6751c940>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view app_site.views.view didn't return an HttpResponse object. It returned None instead.
+03/Dec/2024 16:03:01    ERROR    basehttp    "POST /sendoffer HTTP/1.1" 500 82675   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+03/Dec/2024 16:15:17    WARNING    log    Not Found: /favicon.ico   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+03/Dec/2024 16:15:17    WARNING    basehttp    "GET /favicon.ico HTTP/1.1" 404 19746   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+08/Dec/2024 14:38:25    WARNING    log    Not Found: /favicon.ico   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+08/Dec/2024 14:38:25    WARNING    basehttp    "GET /favicon.ico HTTP/1.1" 404 19746   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+08/Dec/2024 14:38:45    WARNING    log    Not Found: /media/masters/unknown_person.jpg   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+08/Dec/2024 14:38:45    WARNING    basehttp    "GET /media/masters/unknown_person.jpg HTTP/1.1" 404 20046   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+08/Dec/2024 14:38:50    WARNING    log    Not Found: /media/masters/unknown_person.jpg   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+08/Dec/2024 14:38:50    WARNING    basehttp    "GET /media/masters/unknown_person.jpg HTTP/1.1" 404 20046   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+08/Dec/2024 14:38:57    ERROR    log    Internal Server Error: /list_order   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'TypeError'>, TypeError('Cannot filter a query once a slice has been taken.'), <traceback object at 0x7fe02c025080>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/list.py", line 154, in get
+    self.object_list = self.get_queryset()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 330, in get_queryset
+    return self.filterset.qs
+           ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django_filters/filterset.py", line 230, in qs
+    qs = self.filter_queryset(qs)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django_filters/filterset.py", line 213, in filter_queryset
+    queryset = self.filters[name].filter(queryset, value)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django_filters/filters.py", line 158, in filter
+    qs = self.get_method(qs)(**{lookup: value})
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/query.py", line 1448, in _filter_or_exclude
+    raise TypeError("Cannot filter a query once a slice has been taken.")
+TypeError: Cannot filter a query once a slice has been taken.
+08/Dec/2024 14:38:57    ERROR    basehttp    "GET /list_order?time_in_sence=2024-10-08&time_in_until=&order_status=&repairer_id= HTTP/1.1" 500 158647   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+08/Dec/2024 14:40:48    WARNING    log    Not Found: /media/masters/unknown_person.jpg   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+08/Dec/2024 14:40:48    WARNING    basehttp    "GET /media/masters/unknown_person.jpg HTTP/1.1" 404 20046   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+08/Dec/2024 14:41:10    WARNING    log    Not Found: /media/masters/unknown_person.jpg   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+08/Dec/2024 14:41:10    WARNING    basehttp    "GET /media/masters/unknown_person.jpg HTTP/1.1" 404 20046   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+08/Dec/2024 14:41:22    WARNING    log    Not Found: /media/masters/unknown_person.jpg   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+08/Dec/2024 14:41:22    WARNING    basehttp    "GET /media/masters/unknown_person.jpg HTTP/1.1" 404 20046   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+08/Dec/2024 14:41:23    WARNING    log    Not Found: /media/masters/unknown_person.jpg   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+08/Dec/2024 14:41:23    WARNING    basehttp    "GET /media/masters/unknown_person.jpg HTTP/1.1" 404 20046   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+08/Dec/2024 14:41:24    WARNING    log    Not Found: /media/masters/unknown_person.jpg   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+08/Dec/2024 14:41:24    WARNING    basehttp    "GET /media/masters/unknown_person.jpg HTTP/1.1" 404 20046   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+08/Dec/2024 14:41:44    WARNING    log    Not Found: /media/masters/unknown_person.jpg   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+08/Dec/2024 14:41:44    WARNING    basehttp    "GET /media/masters/unknown_person.jpg HTTP/1.1" 404 20046   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+08/Dec/2024 14:41:44    WARNING    log    Not Found: /media/masters/unknown_person.jpg   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+08/Dec/2024 14:41:44    WARNING    basehttp    "GET /media/masters/unknown_person.jpg HTTP/1.1" 404 20046   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+08/Dec/2024 14:41:54    WARNING    log    Not Found: /media/   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+08/Dec/2024 14:41:54    WARNING    basehttp    "GET /media/ HTTP/1.1" 404 19884   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+08/Dec/2024 18:25:58    WARNING    log    Not Found: /media/masters/unknown_person.jpg   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+08/Dec/2024 18:25:58    WARNING    basehttp    "GET /media/masters/unknown_person.jpg HTTP/1.1" 404 20046   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+08/Dec/2024 18:25:59    WARNING    log    Not Found: /favicon.ico   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+08/Dec/2024 18:25:59    WARNING    basehttp    "GET /favicon.ico HTTP/1.1" 404 19746   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+08/Dec/2024 18:26:07    WARNING    log    Not Found: /media/masters/unknown_person.jpg   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+08/Dec/2024 18:26:07    WARNING    basehttp    "GET /media/masters/unknown_person.jpg HTTP/1.1" 404 20046   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+08/Dec/2024 18:28:02    WARNING    log    Not Found: /media/masters/unknown_person.jpg   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+08/Dec/2024 18:28:02    WARNING    basehttp    "GET /media/masters/unknown_person.jpg HTTP/1.1" 404 20046   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+08/Dec/2024 18:30:09    WARNING    log    Not Found: /media/masters/unknown_person.jpg   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+08/Dec/2024 18:30:09    WARNING    basehttp    "GET /media/masters/unknown_person.jpg HTTP/1.1" 404 20046   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+08/Dec/2024 18:30:18    WARNING    log    Not Found: /media/masters/unknown_person.jpg   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+08/Dec/2024 18:30:18    WARNING    basehttp    "GET /media/masters/unknown_person.jpg HTTP/1.1" 404 20046   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+08/Dec/2024 18:30:53    WARNING    log    Not Found: /media/masters/unknown_person.jpg   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+08/Dec/2024 18:30:53    WARNING    basehttp    "GET /media/masters/unknown_person.jpg HTTP/1.1" 404 20046   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+08/Dec/2024 18:31:01    WARNING    log    Not Found: /media/masters/unknown_person.jpg   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+08/Dec/2024 18:31:01    WARNING    basehttp    "GET /media/masters/unknown_person.jpg HTTP/1.1" 404 20046   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+08/Dec/2024 18:35:12    WARNING    log    Not Found: /media/masters/unknown_person.jpg   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+08/Dec/2024 18:35:12    WARNING    basehttp    "GET /media/masters/unknown_person.jpg HTTP/1.1" 404 20046   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+08/Dec/2024 18:36:56    WARNING    log    Not Found: /media/masters/unknown_person.jpg   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+08/Dec/2024 18:36:56    WARNING    basehttp    "GET /media/masters/unknown_person.jpg HTTP/1.1" 404 20046   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+08/Dec/2024 18:46:27    WARNING    log    Not Found: /media/masters/unknown_person.jpg   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+08/Dec/2024 18:46:27    WARNING    basehttp    "GET /media/masters/unknown_person.jpg HTTP/1.1" 404 20046   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
