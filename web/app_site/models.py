@@ -19,6 +19,12 @@ class Service(models.Model):
         return f"{self.name}"
 
 
+
+class Clients(models.Model):
+    """list of clients for sending offers"""
+    mail = models.EmailField(null=True, blank=True)
+    flag = models.BooleanField(default=False)
+
 class Invoice(models.Model):
     """service_id order_id quantity_type quantity price"""
     service_id = models.ForeignKey('Service', on_delete=models.CASCADE, null=True, blank=True, )
