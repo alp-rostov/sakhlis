@@ -62,7 +62,7 @@ class UserAdmin(admin.ModelAdmin):
     search_fields = ('telegram',)
     inlines = [PersonalOrders]
 
-
+admin.site.register(Client)
 admin.site.register(UserProfile, UserAdmin)
 admin.site.register(Service, ServiceAdmin)
 admin.site.register(Invoice, InvoiceAdmin)

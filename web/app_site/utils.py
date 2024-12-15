@@ -119,8 +119,6 @@ class InvoiceMaker(object):
         # create a header
         date_info = str(self.info.time_in)[0:10]
         #
-
-
         line1 = ('ინდივიდუალურიმეწარმე სერგეი გოცინ <br />'
                  'საქართველო, თბილისი, დიდუბის რაიონი, <br />'
                  'მურმან ლებანიძის ქუჩა, N 10, <br />'

@@ -66,6 +66,7 @@ urlpatterns = [
 
     path('sendoffer', SendOffer.as_view(), name='sendoffer'),
 
+    path('mails', aaa),
 
     path('save_list', save_list_jobs),
     path('client', client_details_json),

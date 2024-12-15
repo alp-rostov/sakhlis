@@ -4,8 +4,8 @@ from celery import shared_task
 from django.core.mail import EmailMultiAlternatives
 from django.template.loader import render_to_string
 from django.contrib.auth.models import User
-
-from .models import OrderList, UserProfile
+from time import sleep
+from .models import OrderList, Client
 
 
 @shared_task
@@ -47,5 +47,9 @@ def send_email(email:str='', subject_:str=f'sakhlis-remonti.ge', template_name_:
 
 @shared_task
 def send_beat_offers():
-    # print('таска распиание')
-    send_email(email='alprostov.1982@gmail.com')
+    b=Client.objects.all().values_list('mail')
+    for i in b:
+        # send_email(email='alprostov.1982@gmail.com')
+        print(i)
+        sleep(1)
+

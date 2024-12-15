@@ -24,9 +24,7 @@ from .forms import *
 from .repository import DataFromRepairerList, DataFromOrderList, DataFromInvoice, DataFromUserProfile
 from .serialaizers import StreetModelSerializer, OrderStatusSerializer, InvoiceSerializer, UserSerializer, \
     UpdateMasterSerializer
-from .tasks import send_email
 from .utils import *
-
 from rest_framework import generics
 
 logger = logging.getLogger('django')
@@ -219,7 +217,6 @@ class OrderCreate(BaseClassExeption, CreateView):
     def form_valid(self, form):
         with (transaction.atomic()):
             if self.request.user.is_authenticated:
-                print(self.request.POST.get('apartment_id'))
                 if self.request.user.groups.first().name == 'owner':
                     form.instance.customer_id = UserProfile.objects.get(user=self.request.user.id)
                     form.instance.apartment_id = Apartment.objects.get(pk=self.request.POST.get('apartment_id'))
@@ -685,4 +682,12 @@ def verife_account(request):
     else:
         raise Http404("")
 
+def aaa(request):
+     # Client.objects.all().delete()
+     import pandas as pd
+     excel_data = pd.read_excel('emails.xlsx')
+     data = pd.DataFrame(excel_data, columns=['emails'])
+     for i in data['emails']:
+         b=Client(mail=i,flag=False)
+         b.save()
 
