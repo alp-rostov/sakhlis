@@ -5,14 +5,7 @@
 {% load slippers %}
 
 {% block subbody %}
-<!--<div class="row">-->
-<!--    <div class="col-lg-4 col-md-4 col-sm-12">-->
-<!--      <img src="../media/masters/{{ request.user.pk|default_if_none:'images/none' }}.jpg"-->
-<!--           class="rounded-circle border border-5 border-white"  width="50" alt="master">-->
-<!--        <a href="">{{ request.user }}</a>-->
-<!--    </div>-->
 
-<!--</div>-->
 {% endblock subbody%}
 
 {% block body %}
@@ -117,7 +110,7 @@
                 </div>
 
                 <div class="col-md-4 ">
-                    <span class="text-secondary"> {{ b.text_order }}</span>
+                    <span class="text-secondary"> {{ b.text_order|truncatechars:150 }}</span>
                 </div>
 
                 <div class="col-md-4" id="{{ b.pk }}">
