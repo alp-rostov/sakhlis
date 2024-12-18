@@ -51,7 +51,7 @@ urlpatterns = [
     path('apartments/update/<int:pk>', ApartmentUpdate.as_view(), name='apart'),
 
     path('stat/', Statistica.as_view(), name='stat'),
-    path('user/<int:pk>', RepairerDetailInformation.as_view(), name='user'),
+    # path('user/<int:pk>', RepairerDetailInformation.as_view(), name='user'),
 
     path('owner/profile', OwnerDetailInformation.as_view(), name='profile'),
     path('owner/apartments', ApartmentOwner.as_view(), name='apartments_owner'),

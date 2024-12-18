@@ -403,30 +403,30 @@ class OrderUpdate(LoginRequiredMixin, UpdateView):
         return '/list_order/' + str(self.object.pk)
 
 
-class RepairerDetailInformation(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, TemplateView):
-    template_name = 'repairer/repaier_profile.html'
-    permission_required = PERMISSION_FOR_REPAIER
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['form_order'] = OrderForm
-        context['form_appart'] = ApartmentForm
-        context['form_customer'] = CustomerForm               # TODO refactor filter 3 is a group`s number 'repaier'
-        context['list_masters'] = User.objects.filter(groups=3).values('pk', 'username', 'groups')
-        context['orders'] = DataFromOrderList().get_data_from_OrderList_with_order_status(repairer=self.request.user,
-                                                                                          status_of_order=['SND',
-                                                                                                           'RCV'])
-        return context
-
-
-class RepaierUpdate(BaseClassExeption, PermissionRequiredMixin, UpdateView):
-    model = UserProfile
-    template_name = 'repairer/repaier_create.html'
-    form_class = CustomerForm
-    permission_required = PERMISSION_FOR_REPAIER
-
-    def get_success_url(self):
-        return '/user/' + str(self.request.user.pk)
+# class RepairerDetailInformation(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, TemplateView):
+#     template_name = 'repairer/repaier_profile.html'
+#     permission_required = PERMISSION_FOR_REPAIER
+#
+#     def get_context_data(self, **kwargs):
+#         context = super().get_context_data(**kwargs)
+#         context['form_order'] = OrderForm
+#         context['form_appart'] = ApartmentForm
+#         context['form_customer'] = CustomerForm               # TODO refactor filter 3 is a group`s number 'repaier'
+#         context['list_masters'] = User.objects.filter(groups=3).values('pk', 'username', 'groups')
+#         context['orders'] = DataFromOrderList().get_data_from_OrderList_with_order_status(repairer=self.request.user,
+#                                                                                           status_of_order=['SND',
+#                                                                                                            'RCV'])
+#         return context
+#
+#
+# class RepaierUpdate(BaseClassExeption, PermissionRequiredMixin, UpdateView):
+#     model = UserProfile
+#     template_name = 'repairer/repaier_create.html'
+#     form_class = CustomerForm
+#     permission_required = PERMISSION_FOR_REPAIER
+#
+#     def get_success_url(self):
+#         return '/user/' + str(self.request.user.pk)
 
 
 class SendOffer(FormView):
@@ -681,13 +681,4 @@ def verife_account(request):
         return redirect('confirm_registration')
     else:
         raise Http404("")
-
-def aaa(request):
-     # Client.objects.all().delete()
-     import pandas as pd
-     excel_data = pd.read_excel('emails.xlsx')
-     data = pd.DataFrame(excel_data, columns=['emails'])
-     for i in data['emails']:
-         b=Client(mail=i,flag=False)
-         b.save()
 

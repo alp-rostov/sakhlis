@@ -67,7 +67,8 @@ INSTALLED_APPS = [
     'api.apps.ApiConfig',
     'debug_toolbar',
     'corsheaders',  # app is for giving permission to use api from other sources
-    'repair'
+    'repair',
+    'mails'
 ]
 SITE_ID = 1
 
