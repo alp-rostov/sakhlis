@@ -1420,3 +1420,5 @@ ValueError: The view app_site.views.aaa didn't return an HttpResponse object. It
 15/Dec/2024 21:41:39    WARNING    basehttp    "GET /media/masters/unknown_person.jpg HTTP/1.1" 404 20198   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
 15/Dec/2024 21:41:39    WARNING    log    Not Found: /media/masters/unknown_person.jpg   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
 15/Dec/2024 21:41:39    WARNING    basehttp    "GET /media/masters/unknown_person.jpg HTTP/1.1" 404 20198   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+19/Dec/2024 20:10:43    WARNING    log    Not Found: /favicon.ico   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+19/Dec/2024 20:10:43    WARNING    basehttp    "GET /favicon.ico HTTP/1.1" 404 19851   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None

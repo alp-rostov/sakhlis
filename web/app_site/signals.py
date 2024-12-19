@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from .models import OrderList, UserProfile
-from .tasks import send_to_telegrambot, send_email, send_beat_offers
+from .tasks import send_to_telegrambot, send_email
 
 
 @receiver(post_save, sender=OrderList)

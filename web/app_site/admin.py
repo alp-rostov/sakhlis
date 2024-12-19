@@ -1,5 +1,4 @@
 from django.contrib import admin
-from django.contrib.auth.models import Permission
 
 from .models import *
 
@@ -62,7 +61,7 @@ class UserAdmin(admin.ModelAdmin):
     search_fields = ('telegram',)
     inlines = [PersonalOrders]
 
-admin.site.register(Client)
+# admin.site.register(Client)
 admin.site.register(UserProfile, UserAdmin)
 admin.site.register(Service, ServiceAdmin)
 admin.site.register(Invoice, InvoiceAdmin)
