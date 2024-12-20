@@ -14,8 +14,6 @@ class UserProfile(models.Model):
     city = models.CharField(max_length=2, choices=CITY_CHOICES, default='TB')
     profile = models.CharField(max_length=1500, null=True, blank=True, verbose_name='About me:')
     foto = models.ImageField(upload_to='images/', null=True, blank=True, verbose_name='Photo:')
-    rating_sum = models.IntegerField(default=0, blank=True, null=True)
-    rating_num = models.IntegerField(default=1, blank=True, null=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE, blank=True, null=True)
 
     class Meta:
