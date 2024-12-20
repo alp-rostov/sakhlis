@@ -66,10 +66,10 @@ INSTALLED_APPS = [
     # 'api.apps.ApiConfig',
     'debug_toolbar',
     'corsheaders',  # app is for giving permission to use api from other sources
-    #_______________my app_________________________________________________
     'app_site.apps.AppSiteConfig',
+    'clients.apps.ClientsConfig',
     'mails.apps.MailsConfig',
-    'clients.apps.ClientsConfig'
+    'masters.apps.MastersConfig',
 ]
 SITE_ID = 1
 
