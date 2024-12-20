@@ -63,10 +63,11 @@ INSTALLED_APPS = [
     'slippers',
     'rest_framework',
     'django_cleanup.apps.CleanupConfig',
-    'app_site.apps.AppSiteConfig',
     # 'api.apps.ApiConfig',
     'debug_toolbar',
     'corsheaders',  # app is for giving permission to use api from other sources
+    #_______________my app_________________________________________________
+    'app_site.apps.AppSiteConfig',
     'mails.apps.MailsConfig',
     'clients.apps.ClientsConfig'
 ]
