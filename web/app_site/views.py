@@ -17,11 +17,12 @@ from django.shortcuts import redirect, get_object_or_404
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView, FormView
 
+from clients.form import CustomerForm
 from .constants import *
 from .exeptions import BaseClassExeption
-from .filters import OrderFilter, ClientFilter, ApartmentFilter
+from .filters import OrderFilter, ApartmentFilter
 from .forms import *
-from .repository import DataFromRepairerList, DataFromOrderList, DataFromInvoice, DataFromUserProfile
+from .repository import DataFromRepairerList, DataFromOrderList, DataFromInvoice
 from .serialaizers import StreetModelSerializer, OrderStatusSerializer, InvoiceSerializer, UserSerializer, \
     UpdateMasterSerializer
 from .utils import *
@@ -108,37 +109,37 @@ class ApartmentOwner(PermissionRequiredMixin, LoginRequiredMixin, ListView):
 
         return context
 
-
-class Clients(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, ListView):
-    model = UserProfile
-    context_object_name = 'clients'
-    template_name = 'repairer/clients.html'
-    permission_required = PERMISSION_FOR_REPAIER
-    queryset = UserProfile.objects.none()
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['filterset'] = self.filterset
-        return context
-
-    def get_queryset(self):
-        queryset = super().get_queryset()
-        if self.request.GET.get('customer_name') is not None:
-            queryset = UserProfile.objects.order_by('customer_name').all()
-            # queryset = DataFromUserProfile().get_clients_of_orders_from_UserProfile(self.request.user)
-        self.filterset = ClientFilter(self.request.GET, queryset)
-        return self.filterset.qs
-
-
-class ClientsUpdate(PermissionRequiredMixin, LoginRequiredMixin, UpdateView):
-    model = UserProfile
-    template_name = 'repairer/clients_update.html'
-    form_class = CustomerForm
-    permission_required = PERMISSION_FOR_REPAIER
-
-    def get_success_url(self):
-        dict_choice_url = {'repairer': '/list_order/'+self.request.GET.get('pk'), 'owner': '/owner/apartment'}
-        return dict_choice_url[self.request.user.groups.first().name]
+#
+# class Clients(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, ListView):
+#     model = UserProfile
+#     context_object_name = 'clients'
+#     template_name = 'repairer/clients.html'
+#     permission_required = PERMISSION_FOR_REPAIER
+#     queryset = UserProfile.objects.none()
+#
+#     def get_context_data(self, **kwargs):
+#         context = super().get_context_data(**kwargs)
+#         context['filterset'] = self.filterset
+#         return context
+#
+#     def get_queryset(self):
+#         queryset = super().get_queryset()
+#         if self.request.GET.get('customer_name') is not None:
+#             queryset = UserProfile.objects.order_by('customer_name').all()
+#             # queryset = DataFromUserProfile().get_clients_of_orders_from_UserProfile(self.request.user)
+#         self.filterset = ClientFilter(self.request.GET, queryset)
+#         return self.filterset.qs
+#
+#
+# class ClientsUpdate(PermissionRequiredMixin, LoginRequiredMixin, UpdateView):
+#     model = UserProfile
+#     template_name = 'repairer/clients_update.html'
+#     form_class = CustomerForm
+#     permission_required = PERMISSION_FOR_REPAIER
+#
+#     def get_success_url(self):
+#         dict_choice_url = {'repairer': '/list_order/'+self.request.GET.get('pk'), 'owner': '/owner/apartment'}
+#         return dict_choice_url[self.request.user.groups.first().name]
 
 
 class Error404(TemplateView):

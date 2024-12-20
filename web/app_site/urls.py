@@ -2,7 +2,6 @@ from django.contrib.auth.views import LoginView, LogoutView
 from django.urls import path
 from .views import *
 
-
 urlpatterns = [
     path('', OrderCreate.as_view(), name='home'),
     path('en', OrderCreate.as_view(template_name='order_create_en.html'), name='home_en'),
@@ -44,9 +43,6 @@ urlpatterns = [
                                                           'info': ''}),
          name='confirm_registration'),
 
-
-    path('clients/', Clients.as_view(), name='clients'),
-    path('clients/update/<int:pk>', ClientsUpdate.as_view(), name='clients_update'),
     path('apartments/', ApartmentList.as_view(), name='apartments'),
     path('apartments/update/<int:pk>', ApartmentUpdate.as_view(), name='apart'),
 

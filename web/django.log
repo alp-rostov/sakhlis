@@ -1422,3 +1422,55 @@ ValueError: The view app_site.views.aaa didn't return an HttpResponse object. It
 15/Dec/2024 21:41:39    WARNING    basehttp    "GET /media/masters/unknown_person.jpg HTTP/1.1" 404 20198   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
 19/Dec/2024 20:10:43    WARNING    log    Not Found: /favicon.ico   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
 19/Dec/2024 20:10:43    WARNING    basehttp    "GET /favicon.ico HTTP/1.1" 404 19851   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Dec/2024 19:02:43    WARNING    log    Not Found: /favicon.ico   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+20/Dec/2024 19:02:43    WARNING    basehttp    "GET /favicon.ico HTTP/1.1" 404 19377   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Dec/2024 19:04:37    ERROR    log    Internal Server Error: /   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'AttributeError'>, AttributeError("'NoneType' object has no attribute 'name'"), <traceback object at 0x7f5f629662c0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 180, in get
+    return super().get(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 212, in get_context_data
+    if self.request.user.groups.first().name == 'owner':
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'name'
+20/Dec/2024 19:04:37    ERROR    basehttp    "GET / HTTP/1.1" 500 100023   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+20/Dec/2024 19:04:42    ERROR    log    Internal Server Error: /   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'AttributeError'>, AttributeError("'NoneType' object has no attribute 'name'"), <traceback object at 0x7f5f62add240>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 180, in get
+    return super().get(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 212, in get_context_data
+    if self.request.user.groups.first().name == 'owner':
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'name'
+20/Dec/2024 19:04:42    ERROR    basehttp    "GET / HTTP/1.1" 500 100160   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None

@@ -36,33 +36,12 @@ class Invoice(models.Model):
         return f"{self.service_id}"
 
 
-class UserProfile(models.Model):
-    """phone city foto rating_sum rating_num user"""
-    customer_name = models.CharField(max_length=50, verbose_name='Name', null=True, blank=True)
-    phone = models.CharField(max_length=16, verbose_name='Phone', null=True, blank=True)
-    telegram = models.CharField(max_length=25, verbose_name='Telegram', null=True, blank=True)
-    whatsapp = models.CharField(max_length=16, verbose_name='Whatsapp', null=True, blank=True)
-    city = models.CharField(max_length=2, choices=CITY_CHOICES, default='TB')
-    profile = models.CharField(max_length=1500, null=True, blank=True, verbose_name='About me:')
-    foto = models.ImageField(upload_to='images/', null=True, blank=True, verbose_name='Photo:')
-    rating_sum = models.IntegerField(default=0, blank=True, null=True)
-    rating_num = models.IntegerField(default=1, blank=True, null=True)
-    user = models.OneToOneField(User, on_delete=models.CASCADE, blank=True, null=True)
-
-    class Meta:
-        verbose_name = 'UserProfile'
-        verbose_name_plural = 'UserProfile'
-
-    def __str__(self):
-        return f"{self.customer_name}"
-
-
 class Apartment(models.Model):
     """"""
     name = models.CharField(max_length=150, verbose_name='Name', null=True, blank=True, default='')
     type = models.CharField(max_length=2, choices=APART_CHOICES, default='FL', null=True, blank=True,
                             verbose_name='Type')
-    owner = models.ForeignKey(UserProfile, on_delete=models.SET_NULL, null=True, blank=True,
+    owner = models.ForeignKey('clients.UserProfile', on_delete=models.SET_NULL, null=True, blank=True,
                               verbose_name='Responsible person for apartment')
     address_city = models.CharField(max_length=2, choices=CITY_CHOICES, default='TB', null=True, blank=True,
                                     verbose_name='City')
@@ -89,7 +68,7 @@ class OrderList(models.Model):
                                     verbose_name='Repairer', )
     apartment_id = models.ForeignKey(Apartment, on_delete=models.SET_NULL, null=True, blank=True,
                                      verbose_name='Appartment', )
-    customer_id = models.ForeignKey(UserProfile, on_delete=models.SET_NULL, null=True, blank=True,
+    customer_id = models.ForeignKey('clients.UserProfile', on_delete=models.SET_NULL, null=True, blank=True,
                                     verbose_name='Client', )
 
     text_order = models.CharField(max_length=1500, verbose_name='Description of the problem', blank=True, null=True)
@@ -101,16 +80,6 @@ class OrderList(models.Model):
     class Meta:
         verbose_name = 'Order list'
         verbose_name_plural = 'Order list'
-
-
-class ClientFeedback(models.Model):
-    text_feedback = models.CharField(max_length=1500, verbose_name='Feedback', blank=True, null=True)
-    mark = models.IntegerField(default=0, blank=True, null=True, verbose_name='Raiting')
-    order_id = models.ForeignKey(OrderList, on_delete=models.SET_NULL, null=True, blank=True,
-                                 verbose_name='Order')
-
-    def __str__(self):
-        return f'From: {self.order_id.customer_id.customer_name}, Messege: {self.text_feedback}'
 
 
 class StreetTbilisi(models.Model):

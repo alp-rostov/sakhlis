@@ -3,7 +3,8 @@ from rest_framework import serializers, generics
 from django.contrib.auth.models import User
 from rest_framework.permissions import IsAuthenticated
 
-from app_site.models import UserProfile, StreetTbilisi, Apartment, OrderList
+from app_site.models import StreetTbilisi, Apartment, OrderList
+from clients.models import UserProfile
 
 
 class StreetModelSerializer(serializers.ModelSerializer):

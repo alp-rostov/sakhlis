@@ -62,10 +62,8 @@ class UserAdmin(admin.ModelAdmin):
     inlines = [PersonalOrders]
 
 # admin.site.register(Client)
-admin.site.register(UserProfile, UserAdmin)
 admin.site.register(Service, ServiceAdmin)
 admin.site.register(Invoice, InvoiceAdmin)
 admin.site.register(OrderList, OrderListAdmin)
 admin.site.register(StreetTbilisi, StreetAdmin)
 admin.site.register(Apartment, AppartamentAdmin)
-admin.site.register(ClientFeedback, FeedbackListAdmin)

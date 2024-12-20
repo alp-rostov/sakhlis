@@ -64,10 +64,11 @@ INSTALLED_APPS = [
     'rest_framework',
     'django_cleanup.apps.CleanupConfig',
     'app_site.apps.AppSiteConfig',
-    'api.apps.ApiConfig',
+    # 'api.apps.ApiConfig',
     'debug_toolbar',
     'corsheaders',  # app is for giving permission to use api from other sources
-    'mails'
+    'mails.apps.MailsConfig',
+    'clients.apps.ClientsConfig'
 ]
 SITE_ID = 1
 
