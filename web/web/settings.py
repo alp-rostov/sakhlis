@@ -70,6 +70,7 @@ INSTALLED_APPS = [
     'clients.apps.ClientsConfig',
     'mails.apps.MailsConfig',
     'masters.apps.MastersConfig',
+    'apartments.apps.ApartmentsConfig',
 ]
 SITE_ID = 1
 

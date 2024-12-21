@@ -1,9 +1,9 @@
 from django.contrib import admin
 
-from mails.models import Client
+from mails.models import Mail
 
 
 class MailAdmin(admin.ModelAdmin):
     list_display = ('pk', 'mail', 'flag')
 
-admin.site.register(Client,  MailAdmin)
+admin.site.register(Mail,  MailAdmin)

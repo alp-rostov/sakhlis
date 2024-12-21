@@ -1,6 +1,7 @@
 from django.contrib.auth.models import User
 from django.db import models
 
+from apartments.models import Apartment
 from .constants import CITY_CHOICES, ORDER_STATUS, WORK_CHOICES, QUANTITY_CHOICES, APART_CHOICES
 
 
@@ -12,8 +13,8 @@ class Service(models.Model):
 
     class Meta:
         ordering = ['type', 'name']
-        verbose_name = 'Type of works'
-        verbose_name_plural = 'Type of work'
+        verbose_name = 'Type of work'
+        verbose_name_plural = 'Type of works'
 
     def __str__(self):
         return f"{self.name}"
@@ -36,29 +37,6 @@ class Invoice(models.Model):
         return f"{self.service_id}"
 
 
-class Apartment(models.Model):
-    """"""
-    name = models.CharField(max_length=150, verbose_name='Name', null=True, blank=True, default='')
-    type = models.CharField(max_length=2, choices=APART_CHOICES, default='FL', null=True, blank=True,
-                            verbose_name='Type')
-    owner = models.ForeignKey('clients.UserProfile', on_delete=models.SET_NULL, null=True, blank=True,
-                              verbose_name='Responsible person for apartment')
-    address_city = models.CharField(max_length=2, choices=CITY_CHOICES, default='TB', null=True, blank=True,
-                                    verbose_name='City')
-    address_street_app = models.CharField(max_length=150, verbose_name='Street', null=True, blank=True, default=' ')
-    address_num = models.CharField(max_length=10, verbose_name='House number', null=True, blank=True, default=' ')
-    foto = models.ImageField(upload_to="images/appartment/", null=True, blank=True, verbose_name='Photo:')
-    link_location = models.CharField(max_length=300, verbose_name='GeoPoint', blank=True, null=True)
-    notes = models.CharField(max_length=300, null=True, blank=True, verbose_name='Note:', default='')
-
-    class Meta:
-        verbose_name = 'Appartment list'
-        verbose_name_plural = 'Appartment list'
-
-    def __str__(self):
-        return f"{self.address_street_app} {self.address_num} "
-
-
 class OrderList(models.Model):
     """________________________"""
     time_in = models.DateTimeField(auto_now_add=True, verbose_name='Date of order')
@@ -78,17 +56,5 @@ class OrderList(models.Model):
     services = models.ManyToManyField('Service', through='Invoice')
 
     class Meta:
-        verbose_name = 'Order list'
-        verbose_name_plural = 'Order list'
-
-
-class StreetTbilisi(models.Model):
-    type_street = models.CharField(max_length=50)
-    name_street = models.CharField(max_length=50)
-
-    class Meta:
-        verbose_name = 'Street'
-        verbose_name_plural = 'Street'
-
-    def __str__(self):
-        return f'{self.name_street} {self.type_street}'
+        verbose_name = 'Order'
+        verbose_name_plural = 'Orders'

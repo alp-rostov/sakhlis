@@ -1,12 +1,12 @@
 from rest_framework import serializers
-from app_site.models import StreetTbilisi, OrderList, Invoice
+from app_site.models import OrderList, Invoice
 from django.contrib.auth.models import User
 
-
-class StreetModelSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = StreetTbilisi
-        fields = ['type_street', 'name_street']
+#
+# class StreetModelSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = StreetTbilisi
+#         fields = ['type_street', 'name_street']
 
 
 class OrderStatusSerializer(serializers.ModelSerializer):

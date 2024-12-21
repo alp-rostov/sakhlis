@@ -65,7 +65,6 @@ urlpatterns = [
     path('save_list', save_list_jobs),
     path('client', client_details_json),
     # path('listorderjson', listorder_for_order_list_paginator_json),
-    path('street', StreetListApi.as_view()),
     path('orderstatus/<int:pk>', OrderStatusUpdateAPI.as_view()),
     path('deleteinvoice/<int:pk>', DeleteIvoiceServiceAPI.as_view()),
     path('masters', MastersListAPI.as_view()),

@@ -23,7 +23,7 @@ from .exeptions import BaseClassExeption
 from .filters import OrderFilter, ApartmentFilter
 from .forms import *
 from .repository import DataFromRepairerList, DataFromOrderList, DataFromInvoice
-from .serialaizers import StreetModelSerializer, OrderStatusSerializer, InvoiceSerializer, UserSerializer, \
+from .serialaizers import OrderStatusSerializer, InvoiceSerializer, UserSerializer, \
     UpdateMasterSerializer
 from .utils import *
 from rest_framework import generics
@@ -598,14 +598,14 @@ class DeleteIvoiceServiceAPI(generics.DestroyAPIView):
         return queryset
 
 
-class StreetListApi(generics.ListAPIView):
-    """API for ajax request """
-    serializer_class = StreetModelSerializer
-    http_method_names = ['get']
-
-    def get_queryset(self):
-        queryset = StreetTbilisi.objects.filter(name_street__istartswith=self.request.GET.get('street'))[0:10]
-        return queryset
+# class StreetListApi(generics.ListAPIView):
+#     """API for ajax request """
+#     serializer_class = StreetModelSerializer
+#     http_method_names = ['get']
+#
+#     def get_queryset(self):
+#         queryset = StreetTbilisi.objects.filter(name_street__istartswith=self.request.GET.get('street'))[0:10]
+#         return queryset
 
 
 class OrderStatusUpdateAPI(generics.UpdateAPIView):

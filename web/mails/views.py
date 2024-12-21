@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from mails.models import Client
+from mails.models import Mail
 
 import pandas as pd
 
@@ -10,5 +10,5 @@ def import_data_to_model(request, **kwargs):
     excel_data = pd.read_excel('emails.xlsx')
     data = pd.DataFrame(excel_data, columns=['emails'])
     for i in data['emails']:
-        b = Client(mail=i, flag=False)
+        b = Mail(mail=i, flag=False)
         b.save()
