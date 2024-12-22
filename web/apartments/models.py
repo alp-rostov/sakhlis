@@ -16,6 +16,7 @@ class Apartment(models.Model):
     address_num = models.CharField(max_length=10, verbose_name='House number', null=True, blank=True, default=' ')
     foto = models.ImageField(upload_to="images/appartment/", null=True, blank=True, verbose_name='Photo:')
     notes = models.CharField(max_length=300, null=True, blank=True, verbose_name='Note:', default='')
+    link_location = models.CharField(max_length=300, null=True, blank=True, verbose_name='Link location', default='')
 
     class Meta:
         verbose_name = 'Appartment'

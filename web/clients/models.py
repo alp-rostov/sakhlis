@@ -6,7 +6,7 @@ from app_site.constants import CITY_CHOICES
 
 
 class UserProfile(models.Model):
-    """phone city foto rating_sum rating_num user"""
+    """list of clients"""
     customer_name = models.CharField(max_length=50, verbose_name='Name', null=True, blank=True)
     phone = models.CharField(max_length=16, verbose_name='Phone', null=True, blank=True)
     telegram = models.CharField(max_length=25, verbose_name='Telegram', null=True, blank=True)
@@ -15,7 +15,8 @@ class UserProfile(models.Model):
     profile = models.CharField(max_length=1500, null=True, blank=True, verbose_name='About me:')
     foto = models.ImageField(upload_to='images/', null=True, blank=True, verbose_name='Photo:')
     user = models.OneToOneField(User, on_delete=models.CASCADE, blank=True, null=True)
-
+    rating_sum = models.CharField(max_length=1500, null=True, blank=True)
+    rating_num = models.CharField(max_length=1500, null=True, blank=True)
     class Meta:
         verbose_name = 'UserProfile'
         verbose_name_plural = 'UserProfile'
