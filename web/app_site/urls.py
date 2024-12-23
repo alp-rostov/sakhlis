@@ -9,9 +9,6 @@ urlpatterns = [
     path('corporate', TemplateView.as_view(template_name='business.html'), name='business'),
     path('corporate_en', TemplateView.as_view(template_name='business_en.html'), name='business_en'),
     path('corporate_ge', TemplateView.as_view(template_name='business_ge.html'), name='business_ge'),
-
-    path('masters', TemplateView.as_view(template_name='masters.html'), name='masters'),
-
     path('createorder', OrderCreate.as_view(template_name='createorder.html'), name='createorder'),
     path('createorder_en', OrderCreate.as_view(template_name='createorder_en.html'), name='createorder_en'),
     path('createorder_ge', OrderCreate.as_view(template_name='createorder_ge.html'), name='createorder_ge'),
@@ -49,13 +46,13 @@ urlpatterns = [
     path('stat/', Statistica.as_view(), name='stat'),
     path('user/<int:pk>', RepairerDetailInformation.as_view(), name='user'),
 
-    path('owner/profile', OwnerDetailInformation.as_view(), name='profile'),
-    path('owner/apartments', ApartmentOwner.as_view(), name='apartments_owner'),
+    # path('owner/profile', OwnerDetailInformation.as_view(), name='profile'),
+    # path('owner/apartments', ApartmentOwner.as_view(), name='apartments_owner'),
 
-    path('owner/apartment/<int:pk>', OwnerApartmentUpdate.as_view(), name='apartment_update'),
-    path('owner/apartment/create', OwnerApartmentCreate.as_view(), name='apartment_create'),
-    path('owner/list_order', OwnerOrderManagementSystem.as_view(), name='o_list_order'),
-    path('owner-invoice/<int:pk>', OwnerInvoice.as_view(), name='ownerinvoice'),
+    # path('owner/apartment/<int:pk>', OwnerApartmentUpdate.as_view(), name='apartment_update'),
+    # path('owner/apartment/create', OwnerApartmentCreate.as_view(), name='apartment_create'),
+    # path('owner/list_order', OwnerOrderManagementSystem.as_view(), name='o_list_order'),
+    # path('owner-invoice/<int:pk>', OwnerInvoice.as_view(), name='ownerinvoice'),
 
     path('serv', listservices_for_invoice_json),
 
