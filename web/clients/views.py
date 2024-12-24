@@ -142,3 +142,14 @@ class OwnerApartmentCreate(BaseClassExeption, LoginRequiredMixin, CreateView):
         form.instance.owner = UserProfile.objects.get(user=self.request.user)
         form.save()
         return redirect('apartments')
+
+class ClientsUpdate(PermissionRequiredMixin, LoginRequiredMixin, UpdateView):
+    """UPDATE INFORMATION ABOUT CLIENT"""
+    model = UserProfile
+    template_name = 'repairer/clients_update.html'
+    form_class = CustomerForm
+    permission_required = PERMISSION_FOR_REPAIER
+
+    def get_success_url(self):
+        dict_choice_url = {'repairer': '/list_order/' + self.request.GET.get('pk'), 'owner': '/owner/apartment'}
+        return dict_choice_url[self.request.user.groups.first().name]

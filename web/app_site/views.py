@@ -60,8 +60,14 @@ class ApartmentUpdate(PermissionRequiredMixin, LoginRequiredMixin, UpdateView):
     permission_required = PERMISSION_FOR_REPAIER
     success_url = '/apartments/?address_city=&address_street_app='
 
+class Error404(TemplateView):
+    template_name = '404.html'
+
+class InfoTemplate(TemplateView):
+    template_name = 'information.html'
 
 class Clients(PermissionRequiredMixin, LoginRequiredMixin, ListView):
+    """ LIST OF CLIENTS """
     model = UserProfile
     context_object_name = 'clients'
     template_name = 'repairer/clients.html'
@@ -81,22 +87,6 @@ class Clients(PermissionRequiredMixin, LoginRequiredMixin, ListView):
         self.filterset = ClientFilter(self.request.GET, queryset)
         return self.filterset.qs
 
-
-class ClientsUpdate(PermissionRequiredMixin, LoginRequiredMixin, UpdateView):
-    model = UserProfile
-    template_name = 'repairer/clients_update.html'
-    form_class = CustomerForm
-    permission_required = PERMISSION_FOR_REPAIER
-
-    def get_success_url(self):
-        dict_choice_url = {'repairer': '/list_order/'+self.request.GET.get('pk'), 'owner': '/owner/apartment'}
-        return dict_choice_url[self.request.user.groups.first().name]
-
-class Error404(TemplateView):
-    template_name = '404.html'
-
-class InfoTemplate(TemplateView):
-    template_name = 'information.html'
 
 
 class InvoiceCreate(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, DetailView):
@@ -520,7 +510,9 @@ class MastersListAPI(generics.ListAPIView):
     http_method_names = ['get']
 
     def get_queryset(self):                 # TODO refactor filter 3 is a group`s number 'repaier'
-        queryset = User.objects.filter(groups=3).values('pk', 'username', 'groups')
+        # queryset = User.objects.filter(groups=3).values('pk', 'username', 'groups')
+        queryset = User.objects.values('pk', 'username', 'groups')
+
         return queryset
 
 
