@@ -1,11 +1,9 @@
 import json
 import logging
 import uuid
-from itertools import count
 
 from django.contrib.auth.models import Group
 from django.contrib.auth.views import LoginView
-from django.db.models import Count, Subquery, F, Exists, OuterRef, Sum
 
 from django.db import transaction
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
@@ -107,7 +105,7 @@ class InvoiceCreate(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMix
         InvoiceFormSet = modelformset_factory(Invoice, form=InvoiceForm, extra=0)
         formset = InvoiceFormSet(queryset=Invoice.objects.none())
         context['form'] = formset                          # TODO refactor filter 3 is a group`s number 'repaier'
-        context['list_masters'] = User.objects.filter(groups=3).values('pk', 'username',
+        context['list_masters'] = User.objects.filter(groups=2).values('pk', 'username',
                                                                        'groups')
         return context
 
@@ -271,7 +269,7 @@ class RepairerDetailInformation(BaseClassExeption, PermissionRequiredMixin, Logi
         context['form_order'] = OrderForm
         context['form_appart'] = ApartmentForm
         context['form_customer'] = CustomerForm               # TODO refactor filter 3 is a group`s number 'repaier'
-        context['list_masters'] = User.objects.filter(groups=3).values('pk', 'username', 'groups')
+        context['list_masters'] = User.objects.filter(groups=2).values('pk', 'username', 'groups')
         context['orders'] = DataFromOrderList().get_data_from_OrderList_with_order_status(repairer=self.request.user,
                                                                                           status_of_order=['SND',
                                                                                                            'RCV'])
