@@ -2,7 +2,7 @@ from django.contrib.auth.models import User
 from django.db import models
 
 from apartments.models import Apartment
-from .constants import CITY_CHOICES, ORDER_STATUS, WORK_CHOICES, QUANTITY_CHOICES, APART_CHOICES
+from .constants import ORDER_STATUS, WORK_CHOICES, QUANTITY_CHOICES
 
 
 class Service(models.Model):
@@ -38,7 +38,7 @@ class Invoice(models.Model):
 
 
 class OrderList(models.Model):
-    """________________________"""
+    """List of repair orders"""
     time_in = models.DateTimeField(auto_now_add=True, verbose_name='Date of order')
     time_out = models.DateTimeField(null=True, blank=True, verbose_name='Order completion date')
 

@@ -4,7 +4,7 @@ from app_site.constants import APART_CHOICES, CITY_CHOICES
 
 
 class Apartment(models.Model):
-    """"""
+    """Clients' apartments"""
     name = models.CharField(max_length=150, verbose_name='Name', null=True, blank=True, default='')
     type = models.CharField(max_length=2, choices=APART_CHOICES, default='FL', null=True, blank=True,
                             verbose_name='Type')
