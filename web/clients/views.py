@@ -10,7 +10,7 @@ from app_site.filters import OrderFilter
 from app_site.forms import ApartentUpdateForm
 from app_site.models import OrderList, Invoice
 from app_site.repository import DataFromRepairerList, DataFromInvoice
-from app_site.views import OrderManagementSystem
+from app_site.views import OrderManagementSystem, OrderCreate
 from clients.filters import ClientFilter
 from clients.form import CustomerForm
 from clients.models import UserProfile
@@ -26,7 +26,7 @@ class OwnerDetailInformation(PermissionRequiredMixin, LoginRequiredMixin, Templa
 
         context['order_list_by_apartments'] = (
             OrderList.objects.only('time_in', 'text_order', 'apartment_id__address_street_app',
-                                   'apartment_id__address_num', 'apartment_id__name', 'apartment_id__notes',
+                                   'apartment_id__address_num', 'apartment_id__name',
                                    'apartment_id__address_city', 'apartment_id__foto', 'order_status',
                                    'repairer_id__username')
             .filter(customer_id=context['prof'])
@@ -37,7 +37,7 @@ class OwnerDetailInformation(PermissionRequiredMixin, LoginRequiredMixin, Templa
         context['apartments'] = (Apartment.objects
                                  .filter(owner=context['prof'])
                                  .annotate(top=Subquery(Exists(OrderList.objects.filter(apartment_id=OuterRef('pk')).exclude(order_status='END'))))
-                                 .only('pk', 'address_city', 'address_street_app', 'address_num', 'foto', 'notes',
+                                 .only('pk', 'address_city', 'address_street_app', 'address_num', 'foto',
                                         'name')
                                  .order_by('address_street_app'))
         # detail info of apartments wich have no orders
@@ -153,3 +153,4 @@ class ClientsUpdate(PermissionRequiredMixin, LoginRequiredMixin, UpdateView):
     def get_success_url(self):
         dict_choice_url = {'repairer': '/list_order/' + self.request.GET.get('pk'), 'owner': '/owner/apartment'}
         return dict_choice_url[self.request.user.groups.first().name]
+

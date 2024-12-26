@@ -4,12 +4,13 @@ import uuid
 
 from django.contrib.auth.models import Group
 from django.contrib.auth.views import LoginView
+from django.core.exceptions import ValidationError
 
 from django.db import transaction
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.contrib.auth.decorators import login_required
 
-from django.http import FileResponse, HttpResponseRedirect, JsonResponse, Http404
+from django.http import FileResponse, JsonResponse, Http404
 from django.forms import modelformset_factory
 from django.shortcuts import redirect, get_object_or_404
 from django.urls import reverse_lazy
@@ -146,11 +147,21 @@ class OrderCreate(BaseClassExeption, CreateView):
         context = super().get_context_data(**kwargs)
         context['form_appart'] = ApartmentForm
         context['form_customer'] = CustomerForm
-        if self.request.user.is_authenticated:   # TODO to improve code
+        try:
             if self.request.user.groups.first().name == 'owner':
                 per = UserProfile.objects.get(user=self.request.user)
                 context['form_appart']=ApartmentFormOwner(person=per)
                 context['form_customer'] = ''
+        except AttributeError:
+            if self.request.GET.get('qrcode'):
+                b = UserProfile.objects.get(qrcode_id=self.request.GET.get('qrcode'))
+                context['form_appart'] = ApartmentFormOwner(person=b)
+                context['form_customer'] = ''
+
+        except ValidationError or UserProfile.DoesNotExist:
+            print('Учетная запись при сканировании кода не обнаружена')
+
+
         return context
 
     def form_valid(self, form):
@@ -174,6 +185,13 @@ class OrderCreate(BaseClassExeption, CreateView):
                     app.save()
                     form.instance.apartment_id = app
                     form.instance.customer_id = customer
+
+            elif self.request.GET.get('qrcode'):
+                apart = Apartment.objects.get(pk=self.request.POST.get('apartment_id'))  #TODO eliminate code duplication
+                form.instance.apartment_id = apart
+                form.instance.customer_id = apart.owner
+                form.save()
+
             else:
                 customer = OrderCustomerForm(self.request.POST).save()
                 app = ApartmentForm(self.request.POST).save(commit=False)
