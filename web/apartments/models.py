@@ -13,9 +13,8 @@ class Apartment(models.Model):
     address_city = models.CharField(max_length=2, choices=CITY_CHOICES, default='TB', null=True, blank=True,
                                     verbose_name='City')
     address_street_app = models.CharField(max_length=150, verbose_name='Street', null=True, blank=True, default=' ')
-    address_num = models.CharField(max_length=10, verbose_name='House number', null=True, blank=True, default=' ')
+    address_num = models.CharField(max_length=150, verbose_name='Apartment (number, entrance, floor etc.)', null=True, blank=True, default=' ')
     foto = models.ImageField(upload_to="images/appartment/", null=True, blank=True, verbose_name='Photo:')
-    notes = models.CharField(max_length=300, null=True, blank=True, verbose_name='Note:', default='')
     link_location = models.CharField(max_length=300, null=True, blank=True, verbose_name='Link location', default='')
 
     class Meta:

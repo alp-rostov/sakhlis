@@ -2,6 +2,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django import forms
 
 from clients.models import UserProfile
+from .constants import CITY_CHOICES, APART_CHOICES
 from .models import *
 
 class ApartmentFormOwner(forms.Form):
@@ -29,14 +30,8 @@ class ApartmentForm(forms.ModelForm):
         required=False
     )
     address_num = forms.CharField(
-        label='Appartment',
-        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Apartment", 'maxlength': 10}),
-        required=False
-    )
-    notes = forms.CharField(
-        label='Note(entrance, floor, apartment, door code, etc. )',
-        widget=forms.TextInput(
-            attrs={"class": "form-control", 'placeholder': "entrance, floor, door code, etc.", 'maxlength': 40}),
+        label='Apartment (number, entrance, floor etc.)',
+        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Apartment", 'maxlength': 150}),
         required=False
     )
 
@@ -60,12 +55,7 @@ class ApartentUpdateForm(ApartmentForm, forms.ModelForm):
         widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "", 'maxlength': 40}),
         required=False
     )
-    notes = forms.CharField(
-        label='Note',
-        widget=forms.TextInput(
-            attrs={"class": "form-control", 'placeholder': "Additional information", 'maxlength': 40}),
-        required=False
-    )
+
     type = forms.ChoiceField(
         choices=APART_CHOICES,
         label='Type of apartment',

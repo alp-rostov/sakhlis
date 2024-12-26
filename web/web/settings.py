@@ -30,7 +30,7 @@ LOGGING = {
 
     'handlers': {
         'security': {
-            'level': 'WARNING',
+            'level': 'ERROR',
             'class': 'logging.FileHandler',
             'filename': 'django.log',
             'formatter': 'verbose_info'

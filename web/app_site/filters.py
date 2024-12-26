@@ -1,5 +1,7 @@
 
 from django_filters import FilterSet, CharFilter, DateFilter, ChoiceFilter, ModelChoiceFilter
+
+from .constants import CITY_CHOICES
 from .models import *
 from django import forms
 

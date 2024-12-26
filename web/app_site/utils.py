@@ -24,6 +24,7 @@ from .models import OrderList
 
 
 class Location:
+    """ to get geopoint using address and save to model"""
     def __init__(self, instance: OrderList):
         self.instance = instance
 
@@ -288,3 +289,11 @@ class Graph:
             buf.seek(0)
             string = base64.b64encode(buf.read())
             return urllib.parse.quote(string)
+
+class CodeData():
+    def __init__(self, str_):
+        self.str_ = str_
+    def code(self):
+        pass
+    def decode(self):
+        pass

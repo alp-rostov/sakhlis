@@ -1457,3 +1457,124 @@ django.template.exceptions.TemplateSyntaxError: 'for' statements should use the 
 25/Dec/2024 20:26:54    WARNING    basehttp    "GET /media/images/appartment/2718.jpg HTTP/1.1" 404 18494   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
 25/Dec/2024 20:26:54    WARNING    log    Not Found: /media/images/appartment/photo_2024-09-12_21-08-19_jbnLNP4.jpg   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
 25/Dec/2024 20:26:54    WARNING    basehttp    "GET /media/images/appartment/photo_2024-09-12_21-08-19_jbnLNP4.jpg HTTP/1.1" 404 18639   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+25/Dec/2024 23:01:31    ERROR    log    Internal Server Error: /admin/clients/userprofile/   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'django.db.utils.OperationalError'>, OperationalError('no such column: clients_userprofile.qrcode_id'), <traceback object at 0x7f4196331640>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: clients_userprofile.qrcode_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/contrib/admin/sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 2065, in changelist_view
+    "selection_note": _("0 of %(cnt)s selected") % {"cnt": len(cl.result_list)},
+                                                           ^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/query.py", line 380, in __len__
+    self._fetch_all()
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1560, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/debug_toolbar/panels/sql/tracking.py", line 246, in execute
+    return self._record(super().execute, sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/debug_toolbar/panels/sql/tracking.py", line 167, in _record
+    return method(sql, params)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: clients_userprofile.qrcode_id
+25/Dec/2024 23:01:31    ERROR    basehttp    "GET /admin/clients/userprofile/ HTTP/1.1" 500 190953   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+26/Dec/2024 13:36:47    ERROR    log    Internal Server Error: /   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'AttributeError'>, AttributeError("'NoneType' object has no attribute 'name'"), <traceback object at 0x7f3f51e6d500>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 180, in get
+    return super().get(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 150, in get_context_data
+    if self.request.user.groups.first().name == 'owner':
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'name'
+26/Dec/2024 13:36:47    ERROR    basehttp    "GET / HTTP/1.1" 500 99842   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+26/Dec/2024 13:36:48    WARNING    log    Not Found: /favicon.ico   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+26/Dec/2024 13:36:48    WARNING    basehttp    "GET /favicon.ico HTTP/1.1" 404 18192   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+26/Dec/2024 13:39:28    WARNING    log    Not Found: /media/masters/unknown_person.jpg   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+26/Dec/2024 13:39:28    WARNING    basehttp    "GET /media/masters/unknown_person.jpg HTTP/1.1" 404 18492   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+26/Dec/2024 17:01:38    WARNING    log    Not Found: /favicon.ico   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+26/Dec/2024 17:01:38    WARNING    basehttp    "GET /favicon.ico HTTP/1.1" 404 18192   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+26/Dec/2024 17:13:15    WARNING    log    Not Found: /media/masters/unknown_person.jpg   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+26/Dec/2024 17:13:15    WARNING    basehttp    "GET /media/masters/unknown_person.jpg HTTP/1.1" 404 18492   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+26/Dec/2024 17:13:15    WARNING    log    Not Found: /media/masters/unknown_person.jpg   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+26/Dec/2024 17:13:15    WARNING    basehttp    "GET /media/masters/unknown_person.jpg HTTP/1.1" 404 18492   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+26/Dec/2024 17:35:13    WARNING    log    Not Found: /media/masters/unknown_person.jpg   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+26/Dec/2024 17:35:13    WARNING    basehttp    "GET /media/masters/unknown_person.jpg HTTP/1.1" 404 18492   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+26/Dec/2024 17:37:53    WARNING    log    Not Found: /media/masters/unknown_person.jpg   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+26/Dec/2024 17:37:53    WARNING    basehttp    "GET /media/masters/unknown_person.jpg HTTP/1.1" 404 18492   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+26/Dec/2024 17:37:53    WARNING    log    Not Found: /media/masters/unknown_person.jpg   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+26/Dec/2024 17:37:53    WARNING    basehttp    "GET /media/masters/unknown_person.jpg HTTP/1.1" 404 18492   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+26/Dec/2024 17:38:12    WARNING    log    Not Found: /media/images/Screenshot_from_2024-12-16_21-38-34.png   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+26/Dec/2024 17:38:12    WARNING    basehttp    "GET /media/images/Screenshot_from_2024-12-16_21-38-34.png HTTP/1.1" 404 18592   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+26/Dec/2024 17:39:01    WARNING    log    Not Found: /media/masters/unknown_person.jpg   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+26/Dec/2024 17:39:01    WARNING    basehttp    "GET /media/masters/unknown_person.jpg HTTP/1.1" 404 18492   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+26/Dec/2024 17:39:01    WARNING    log    Not Found: /media/masters/unknown_person.jpg   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   None
+26/Dec/2024 17:39:01    WARNING    basehttp    "GET /media/masters/unknown_person.jpg HTTP/1.1" 404 18492   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
