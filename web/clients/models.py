@@ -9,8 +9,8 @@ from app_site.constants import CITY_CHOICES
 
 class UserProfile(models.Model):
     """list of clients"""
-    # qrcode_id = models.UUIDField(default=uuid.uuid4, unique=True,
-    #                       primary_key=False, editable=True, null=True, blank=True)
+    qrcode_id = models.UUIDField(default=uuid.uuid4, unique=True,
+                          primary_key=False, editable=True, null=True, blank=True)
     customer_name = models.CharField(max_length=50, verbose_name='Name', null=True, blank=True)
     phone = models.CharField(max_length=16, verbose_name='Phone', null=True, blank=True)
     telegram = models.CharField(max_length=25, verbose_name='Telegram', null=True, blank=True)
