@@ -1,5 +1,6 @@
 import _io
 import os
+from uuid import UUID
 
 import reportlab
 from geopy.geocoders import Nominatim
@@ -297,3 +298,14 @@ class CodeData():
         pass
     def decode(self):
         pass
+
+
+def is_valid_uuid(uuid_to_test, version=4):
+    """    Check if uuid_to_test is a valid UUID.    """
+    try:
+        uuid_obj = UUID(uuid_to_test, version=version)
+    except ValueError:
+        return False
+    except TypeError:
+        return False
+    return True

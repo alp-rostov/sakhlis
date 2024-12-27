@@ -4,7 +4,6 @@ import uuid
 
 from django.contrib.auth.models import Group
 from django.contrib.auth.views import LoginView
-from django.core.exceptions import ValidationError
 
 from django.db import transaction
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
@@ -147,29 +146,27 @@ class OrderCreate(BaseClassExeption, CreateView):
         context = super().get_context_data(**kwargs)
         context['form_appart'] = ApartmentForm
         context['form_customer'] = CustomerForm
-        try:
-            if self.request.user.groups.first().name == 'owner':
-                per = UserProfile.objects.get(user=self.request.user)
-                context['form_appart']=ApartmentFormOwner(person=per)
-                context['form_customer'] = ''
-        except AttributeError:
-            if self.request.GET.get('qrcode'):
-                b = UserProfile.objects.get(qrcode_id=self.request.GET.get('qrcode'))
-                context['form_appart'] = ApartmentFormOwner(person=b)
-                context['form_customer'] = ''
-
-        except ValidationError or UserProfile.DoesNotExist:
-            print('Учетная запись при сканировании кода не обнаружена')
-
-
+        if self.request.user.is_authenticated == True and self.request.user.groups.first().name == 'owner':
+            user_ = get_object_or_404(UserProfile, user=self.request.user)
+        elif self.request.user.is_authenticated == False and is_valid_uuid(self.request.GET.get('qrcode'))==True:
+            try:
+                user_ = UserProfile.objects.get(qrcode_id=self.request.GET.get('qrcode'))
+            except UserProfile.DoesNotExist:
+                return context
+        else:
+            return context
+        context['form_appart'] = ApartmentFormOwner(person=user_)
+        context['form_customer'] = ''
         return context
 
     def form_valid(self, form):
         with (transaction.atomic()):
             if self.request.user.is_authenticated:
                 if self.request.user.groups.first().name == 'owner':
-                    form.instance.customer_id = UserProfile.objects.get(user=self.request.user.id)
-                    form.instance.apartment_id = Apartment.objects.get(pk=self.request.POST.get('apartment_id'))
+                    customer_id = UserProfile.objects.get(user=self.request.user.id)
+                    apartment_id = Apartment.objects.get(pk=self.request.POST.get('apartment_id'))
+                    form.instance.apartment_id = apartment_id
+                    form.instance.customer_id = customer_id
                     form.save()
                     return JsonResponse({'message': f'<h3>Заявка № {form.instance.pk} отправлена успешно!</h3>',
                                          'pk': form.instance.pk,
@@ -179,37 +176,32 @@ class OrderCreate(BaseClassExeption, CreateView):
                                          'apartment': form.instance.apartment_id.pk
                                          })
                 elif self.request.user.groups.first().name == 'repairer':
-                    customer = OrderCustomerForm(self.request.POST).save()
-                    app = ApartmentForm(self.request.POST).save(commit=False)
-                    app.owner = customer
-                    app.save()
-                    form.instance.apartment_id = app
-                    form.instance.customer_id = customer
-
+                    customer_id = OrderCustomerForm(self.request.POST).save()
+                    apartment_id = ApartmentForm(self.request.POST).save(commit=False)
+                    apartment_id.owner = customer_id
+                    apartment_id.save()
             elif self.request.GET.get('qrcode'):
-                apart = Apartment.objects.get(pk=self.request.POST.get('apartment_id'))  #TODO eliminate code duplication
-                form.instance.apartment_id = apart
-                form.instance.customer_id = apart.owner
-                form.save()
-
+                apartment_id = Apartment.objects.get(pk=self.request.POST.get('apartment_id'))  #TODO eliminate code duplication
+                customer_id = apartment_id.owner
             else:
-                customer = OrderCustomerForm(self.request.POST).save()
-                app = ApartmentForm(self.request.POST).save(commit=False)
-                app.owner = customer
-                app.save()
-                form.instance.apartment_id = app
-                form.instance.customer_id = customer
+                customer_id = OrderCustomerForm(self.request.POST).save()
+                apartment_id = ApartmentForm(self.request.POST).save(commit=False)
+                apartment_id.owner = customer_id
+                apartment_id.save()
 
+            form.instance.apartment_id = apartment_id
+            form.instance.customer_id = customer_id
             form.save()
 
-            return JsonResponse({'message': f'{form.instance.pk}',
-                                 'contact': f'<h4>Ваш менеджер мастер Сергей: <br><img src="/media/masters/51.jpg" class="rounded-circle" width="100">.</h4>'
-                                            f'<h5>Вы можете написать ему, уточнить детали, отправить фото работ или геопозицию:</h5>'
-                                            f'<a class="mx-2" title="Telegram" href="https://t.me/+995598259119"><img src="/static/images/telegram.gif" width="50" alt="Telegram"></a>'
-                                            f'<a class="mx-2" title="WhatsApp" href="https://wa.me/+79604458687"><img src="/static/images/whatsapp.png" width="55" alt="WhatsApp"></a>',
-                                 'pk': form.instance.pk,
-                                 'auth': self.request.user.is_authenticated
-                                 })
+            response_ = {'message': f'{form.instance.pk}',
+                         'contact': f'<h4>Ваш менеджер мастер Сергей: <br><img src="/media/masters/51.jpg" class="rounded-circle" width="100">.</h4>'
+                                    f'<h5>Вы можете написать ему, уточнить детали, отправить фото работ или геопозицию:</h5>'
+                                    f'<a class="mx-2" title="Telegram" href="https://t.me/+995598259119"><img src="/static/images/telegram.gif" width="50" alt="Telegram"></a>'
+                                    f'<a class="mx-2" title="WhatsApp" href="https://wa.me/+79604458687"><img src="/static/images/whatsapp.png" width="55" alt="WhatsApp"></a>',
+                         'pk': form.instance.pk,
+                         'auth': self.request.user.is_authenticated
+                         }
+            return JsonResponse(response_)
 
 
 class OrderDelete(BaseClassExeption, LoginRequiredMixin, DeleteView):
