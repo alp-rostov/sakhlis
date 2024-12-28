@@ -21,7 +21,7 @@ from .constants import *
 from .exeptions import BaseClassExeption
 from .filters import OrderFilter, ApartmentFilter
 from .forms import *
-from .repository import DataFromRepairerList, DataFromOrderList, DataFromInvoice
+from .repository import DataFromOrderList, DataFromInvoice
 from .serialaizers import OrderStatusSerializer, InvoiceSerializer, UserSerializer, \
     UpdateMasterSerializer
 from .utils import *
@@ -117,7 +117,6 @@ class InvoiceCreate(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMix
             instances = formset.save(commit=False)
         except ValueError:
             return JsonResponse('error', safe=False)
-
         list_num = []
         if instances:
             for instance in instances:
@@ -129,7 +128,6 @@ class InvoiceCreate(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMix
                                  "service_id": instance.service_id.pk,
                                  "service_id_name": instance.service_id.name
                                  })
-
             return JsonResponse(list_num, safe=False)
         else:
             return JsonResponse({}, safe=False)
@@ -146,9 +144,9 @@ class OrderCreate(BaseClassExeption, CreateView):
         context = super().get_context_data(**kwargs)
         context['form_appart'] = ApartmentForm
         context['form_customer'] = CustomerForm
-        if self.request.user.is_authenticated == True and self.request.user.groups.first().name == 'owner':
+        if self.request.user.is_authenticated and self.request.user.groups.first().name == 'owner':
             user_ = get_object_or_404(UserProfile, user=self.request.user)
-        elif self.request.user.is_authenticated == False and is_valid_uuid(self.request.GET.get('qrcode'))==True:
+        elif not self.request.user.is_authenticated and is_valid_uuid(self.request.GET.get('qrcode')):
             try:
                 user_ = UserProfile.objects.get(qrcode_id=self.request.GET.get('qrcode'))
             except UserProfile.DoesNotExist:
@@ -161,28 +159,23 @@ class OrderCreate(BaseClassExeption, CreateView):
 
     def form_valid(self, form):
         with (transaction.atomic()):
-            if self.request.user.is_authenticated:
-                if self.request.user.groups.first().name == 'owner':
-                    customer_id = UserProfile.objects.get(user=self.request.user.id)
-                    apartment_id = Apartment.objects.get(pk=self.request.POST.get('apartment_id'))
-                    form.instance.apartment_id = apartment_id
-                    form.instance.customer_id = customer_id
-                    form.save()
-                    return JsonResponse({'message': f'<h3>Заявка № {form.instance.pk} отправлена успешно!</h3>',
-                                         'pk': form.instance.pk,
-                                         'text': form.instance.text_order,
-                                         'date': form.instance.time_in,
-                                         'repaier': '',
-                                         'apartment': form.instance.apartment_id.pk
-                                         })
-                elif self.request.user.groups.first().name == 'repairer':
-                    customer_id = OrderCustomerForm(self.request.POST).save()
-                    apartment_id = ApartmentForm(self.request.POST).save(commit=False)
-                    apartment_id.owner = customer_id
-                    apartment_id.save()
-            elif self.request.GET.get('qrcode'):
+            if self.request.user.is_authenticated and self.request.user.groups.first().name == 'owner':
+                customer_id = UserProfile.objects.get(user=self.request.user.id)
+                apartment_id = Apartment.objects.get(pk=self.request.POST.get('apartment_id'))
+                form.instance.apartment_id = apartment_id
+                form.instance.customer_id = customer_id
+                form.save()
+                return JsonResponse({'message': f'<h3>Заявка № {form.instance.pk} отправлена успешно!</h3>',
+                                     'pk': form.instance.pk,
+                                     'text': form.instance.text_order,
+                                     'date': form.instance.time_in,
+                                     'repaier': '',
+                                     'apartment': form.instance.apartment_id.pk
+                                     })
+            elif self.request.GET.get('qrcode') and not self.request.user.is_authenticated:
                 apartment_id = Apartment.objects.get(pk=self.request.POST.get('apartment_id'))  #TODO eliminate code duplication
                 customer_id = apartment_id.owner
+
             else:
                 customer_id = OrderCustomerForm(self.request.POST).save()
                 apartment_id = ApartmentForm(self.request.POST).save(commit=False)
@@ -278,7 +271,7 @@ class RepairerDetailInformation(BaseClassExeption, PermissionRequiredMixin, Logi
         context = super().get_context_data(**kwargs)
         context['form_order'] = OrderForm
         context['form_appart'] = ApartmentForm
-        context['form_customer'] = CustomerForm               # TODO refactor filter 3 is a group`s number 'repaier'
+        context['form_customer'] = CustomerForm               # TODO refactor filter 2 is a group`s number 'repaier'
         context['list_masters'] = User.objects.filter(groups=2).values('pk', 'username', 'groups')
         context['orders'] = DataFromOrderList().get_data_from_OrderList_with_order_status(repairer=self.request.user,
                                                                                           status_of_order=['SND',
@@ -294,19 +287,6 @@ class RepaierUpdate(BaseClassExeption, PermissionRequiredMixin, UpdateView):
 
     def get_success_url(self):
         return '/user/' + str(self.request.user.pk)
-
-
-class SendOffer(FormView):
-    template_name = 'offers.html'
-    form_class = SendOffer
-    def post(self, formset, **kwargs):
-
-        send_email(self.request.POST['email'],
-                   'Repair services in Georgia',
-                   'emails/mail-offer.html',
-                   {'name': self.request.POST['username']}
-                   )
-        return redirect('sendoffer')
 
 
 class Statistica(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, ListView):
@@ -461,16 +441,6 @@ class DeleteIvoiceServiceAPI(generics.DestroyAPIView):
     def get_queryset(self):
         queryset = Invoice.objects.all()
         return queryset
-
-
-# class StreetListApi(generics.ListAPIView):
-#     """API for ajax request """
-#     serializer_class = StreetModelSerializer
-#     http_method_names = ['get']
-#
-#     def get_queryset(self):
-#         queryset = StreetTbilisi.objects.filter(name_street__istartswith=self.request.GET.get('street'))[0:10]
-#         return queryset
 
 
 class OrderStatusUpdateAPI(generics.UpdateAPIView):

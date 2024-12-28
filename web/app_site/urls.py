@@ -39,7 +39,7 @@ urlpatterns = [
     path('user/<int:pk>', RepairerDetailInformation.as_view(), name='user'),
 
     path('serv', listservices_for_invoice_json),
-    path('sendoffer', SendOffer.as_view(), name='sendoffer'),
+    # path('sendoffer', SendOffer.as_view(), name='sendoffer'),
     path('save_list', save_list_jobs),
     path('client', client_details_json),
     # path('listorderjson', listorder_for_order_list_paginator_json),

@@ -14,7 +14,7 @@ class ApartmentFormOwner(forms.Form):
     def __init__(self, person, *args, **kwargs):
         self.person=person
         super(ApartmentFormOwner, self).__init__(*args, **kwargs)
-        self.fields['apartment_id'].choices = [(x.pk, x.address_street_app) for x in Apartment.objects.filter(owner=self.person)]
+        self.fields['apartment_id'].choices = [(x.pk, f'{x.name} | {x.address_street_app} {x.address_num}') for x in Apartment.objects.filter(owner=self.person).order_by('name','address_street_app')]
 
 
 class ApartmentForm(forms.ModelForm):
