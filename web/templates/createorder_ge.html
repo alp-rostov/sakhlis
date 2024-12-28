@@ -32,7 +32,7 @@
 <body id="top">
 
 <!--Header-->
-{% #menu_lg_createorder line='border_line_orange' %}
+{% #menu_lg_createorder line='border_line_orange' uuid_=qruuid %}
 
 <li class="nav-item mr-3 active">
     <a class="nav-link" href={% url 'home_ge' %}><b>მთავარი </b><span class="sr-only">(current)</span></a>
@@ -83,6 +83,7 @@
            <div id="message"></div>
            {% #form form_order_=form form_appart_=form_appart  form_customer_=form_customer %}
              {% csrf_token %}
+           <h4>დამკვეთი: {{ client }}</h4>
            {% /form %}
         </div>
 </section>

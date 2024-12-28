@@ -291,14 +291,6 @@ class Graph:
             string = base64.b64encode(buf.read())
             return urllib.parse.quote(string)
 
-class CodeData():
-    def __init__(self, str_):
-        self.str_ = str_
-    def code(self):
-        pass
-    def decode(self):
-        pass
-
 
 def is_valid_uuid(uuid_to_test, version=4):
     """    Check if uuid_to_test is a valid UUID.    """
@@ -309,3 +301,4 @@ def is_valid_uuid(uuid_to_test, version=4):
     except TypeError:
         return False
     return True
+
