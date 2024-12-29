@@ -89,15 +89,22 @@
         <div class="tab-content" id="content-{{ i.grouper }}">
             {% for b in i.list %}
             <div class="row border-bottom mb-3 p-1">
+                <div class="col-md-1" >
+                    <a href="{% url 'delete-order' b.pk %}" id="delete_{{ b.pk }}" class="text-secondary btn border mb-2 ml-2"
+                       title="Delete order">
+                        <i class="fas fa-trash text-secondary "></i>
+                    </a>
+                    <a href="{% url 'update-order' b.pk %}" id="update_{{ info.pk }}" class="text-secondary btn border mb-2 ml-2"
+                       title="Update order">
+                    <i class="fas fa-pen text-secondary" style='font-size:14px'></i>
+            </a>
+
+                </div>
                 <div class="col-md-4" >
                     <a href="../list_order/{{b.pk}}" id="order_{{ b.pk }}" class ='text-secondary'>
-                    Order № {{ b.pk }}</a>, {{ b.time_in|date:"d b Y" }}
-                    <a href="{% url 'delete-order' b.pk %}" id="delete_{{ b.pk }}" class="mycolor mr-1 text-secondary" title="Delete order">
-                        <i class="fas fa-trash text-secondary ml-5"></i>
-                    </a><br>
+                        <h5>Order № {{ b.pk }}, {{ b.time_in|date:"d b Y" }}</h5>
 
                     <b class="text-secondary">
-                        
                         {{ b.customer_id.customer_name }}
                         {% if b.customer_id.user %}
                         <i class="fas fa-check mycolor ml-1" title="Registered user"></i>
@@ -112,15 +119,15 @@
                         {{ b.apartment_id.address_street_app|capfirst }},
                         {{ b.apartment_id.address_num }}.<br>
                         <i> {{ b.apartment_id.notes }}</i>
-                        
+                        </a>
                     </div>
                 </div>
 
-                <div class="col-md-4 ">
+                <div class="col-md-5 ">
                     <span class="text-secondary"> {{ b.text_order|truncatechars:150|capfirst }}</span>
                 </div>
 
-                <div class="col-md-4" id="{{ b.pk }}">
+                <div class="col-md-2" id="{{ b.pk }}">
                      {% if b.repairer_id %}
                          <img src="../media/masters/{{ b.repairer_id.pk }}.jpg"
                          class="rounded-circle" width="60" alt="master"><br>

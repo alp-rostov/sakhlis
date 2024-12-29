@@ -17,10 +17,14 @@
     <div class="row font-weight-bold w-100 text-center">
         <div class="col-md-12">
         {% if prev.pk %}
-            <a href="{% url 'invoice' prev.pk %}" class="mycolor m-2 p-2 btn border-danger"> < </a>
+            <a href="{% url 'invoice' prev.pk %}" class="">
+                <i class="fa fa-arrow-circle-left text-secondary fa-2x btn" aria-hidden="true"></i>
+            </a>
         {% endif %}
         {% if next.pk %}
-            <a href="{% url 'invoice' next.pk %}" class="mycolor m-2 p-2 btn border-danger"> > </a>
+            <a href="{% url 'invoice' next.pk %}" class="">
+                <i class="fa fa-arrow-circle-right text-secondary fa-2x btn" aria-hidden="true"></i>
+            </a>
         {% endif %}
         </div>
     </div>
@@ -56,22 +60,23 @@
 
             {% if info.customer_id.phone %}
             <a href="tel:+{{ info.customer_id.phone }}" title="phone" class="">
-            <i class="fas fa-phone mycolor m-2 p-2 btn border-danger"></i></a>
+            <i class="fa fa-phone mycolor m-2 p-2 btn border-danger" aria-hidden="true"></i></a>
             {% endif %}
             {% if info.customer_id.telegram %}
             <a href="https://t.me/{{ info.customer_id.telegram|cut:'@' }}" title="Telegram" class="">
-            <i class="fas fa-paper-plane mycolor m-2 p-2 btn border-danger"></i></a>
+            <i class="fa fa-telegram mycolor m-2 p-2 btn border-danger" aria-hidden="true"></i></a>
             {% endif %}
             {% if info.customer_id.whatsapp %}
-            <a href="https://wa.me/+{{ info.customer_id.whatsapp }}" class="fa fab fa-whatsapp-square text fa-sm mr-1 btn"
+            <a href="https://wa.me/+{{ info.customer_id.whatsapp }}" class=""
                             title="Whatsapp" aria-hidden="true" >
-                <i class="mycolor m-2 p-2 btn border-danger">WhatsApp</i>
+            <i class="fa fa-whatsapp mycolor m-2 p-2 btn border-danger" aria-hidden="true"></i>
+
             </a>
             {% endif %}
 
             {% if info.apartment_id.link_location  %}
             <a href="{{info.apartment_id.link_location}}" class="" title="Open map" aria-hidden="true">
-             <i class="fas fa-map-marker mycolor m-2 p-2 btn border-danger"></i>
+             <i class="fa fa-location-arrow mycolor m-2 p-2 btn border-danger"></i>
             </a>
             {% endif %}
 
@@ -100,17 +105,17 @@
 
     <div class="row mb-2">
         <div class="col-md-4 text-secondary">
-            <div class="h5">
-            <i class="h6 fas fa-home text-secondary mb-2"></i>
+            <div class="h6">
+            <i class="fa fa-home text-secondary mb-2"></i>
             {{ info.apartment_id.address_street_app }}, {{ info.apartment_id.address_num|default_if_none:""  }}, {{ info.apartment_id.address_city|choice_tag:'city' }}
-                <a href="../apartments/update/{{ info.apartment_id.pk }}" class="h5 text-secondary " >
+                <a href="../apartments/update/{{ info.apartment_id.pk }}" class="text-secondary " >
                  <i class="fas fa-pen text-secondary btn border p-1" style='font-size:14px'> edit</i>
             </a>
             </div>
 
-            <i class="fas fa-phone prefix text-secondary mb-2"></i> {{ info.customer_id.phone }}<br>
-            <i class="fas fa-paper-plane prefix text-secondary mb-2"></i> @{{ info.customer_id.telegram }}<br>
-            <i class="fas fa-paper prefix text-secondary mb-2"></i> Whatsapp: +{{ info.customer_id.whatsapp }}
+            <i class="fa fa-phone prefix text-secondary mb-2"></i> {{ info.customer_id.phone }}<br>
+            <i class="fa fa-paper-plane text-secondary mb-2"></i> @{{ info.customer_id.telegram }}<br>
+            <i class="fa fa-whatsapp text-secondary mb-2"></i> {{ info.customer_id.whatsapp }}
         </div>
 
        <div class="col-md-8 " style='font-size:22px'>
