@@ -302,3 +302,12 @@ def is_valid_uuid(uuid_to_test, version=4):
         return False
     return True
 
+def coding_personal_data(phone:str, telegram:str, whatsapp:str):
+    " coding contact information showing without authentication"
+    phone_ = f'{phone[0:-5]}**{phone[-3:-1]}*' if phone else ''
+    whatsapp_ = f'{whatsapp[0:-5]}**{whatsapp[-3:-1]}*' if whatsapp else ''
+    if phone == telegram:
+        telegram_ = f'{telegram[0:-5]}**{telegram[-3:-1]}*' if telegram else ''
+    else:
+        telegram_ = f'*{telegram[1:-2]}**' if telegram else ''
+    return (phone_, whatsapp_, telegram_)

@@ -98,7 +98,7 @@ class OrderCustomerForm(forms.ModelForm):
 class OrderForm(forms.ModelForm):
     text_order = forms.CharField(
         label='Order`s message',
-        widget=forms.Textarea(attrs={"class": "md-textarea form-control icon_label",
+        widget=forms.Textarea(attrs={"class": "md-textarea form-control",
                                      'placeholder': "Describe problems", 'maxlength': 1500, 'rows': 3, 'cols': 10}),
         required=True
     )

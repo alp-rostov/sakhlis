@@ -86,6 +86,7 @@
            {% #form form_order_=form form_appart_=form_appart  form_customer_=form_customer %}
              {% csrf_token %}
            <h4>Заказчик: {{ client }}</h4>
+           <h4>Контактная информация: {{ contact_data.0 }} , {{ contact_data.1 }} , {{ contact_data.2 }}</h4>
            {% /form %}
         </div>
 </section>

@@ -155,8 +155,8 @@ class OrderCreate(BaseClassExeption, CreateView):
             return context
         context['form_appart'] = ApartmentFormOwner(person=user_)
         context['form_customer'] = ''
-        phone = f'{user_.phone[0:3]} *** ** {user_.phone[-4:-1:]}* '
-        context['client'] = f'{user_} | {phone}'
+        context['client'] = f'{user_}'
+        context['contact_data'] = coding_personal_data(user_.phone, user_.whatsapp, user_.telegram)
         context['qruuid'] =f'?qrcode={self.request.GET.get("qrcode")}'
         return context
 

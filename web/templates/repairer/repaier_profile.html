@@ -97,30 +97,31 @@
                     <a href="{% url 'update-order' b.pk %}" id="update_{{ info.pk }}" class="text-secondary btn border mb-2 ml-2"
                        title="Update order">
                     <i class="fas fa-pen text-secondary" style='font-size:14px'></i>
-            </a>
+                    </a>
 
                 </div>
                 <div class="col-md-4" >
                     <a href="../list_order/{{b.pk}}" id="order_{{ b.pk }}" class ='text-secondary'>
                         <h5>Order № {{ b.pk }}, {{ b.time_in|date:"d b Y" }}</h5>
 
-                    <b class="text-secondary">
-                        {{ b.customer_id.customer_name }}
-                        {% if b.customer_id.user %}
-                        <i class="fas fa-check mycolor ml-1" title="Registered user"></i>
-                        {% endif %}
-                    </b>
+                        <b class="text-secondary">
+                            {{ b.customer_id.customer_name }}
+                            {% if b.customer_id.user %}
+                            <i class="fas fa-check mycolor ml-1" title="Registered user"></i>
+                            {% endif %}
+                        </b>
 
-                    <div class="mt-2 ">
-                        {%  if b.apartment_id.name %}
-                        <b>{{ b.apartment_id.name }}</b><br>
-                        {% endif %}
-                        {{ b.apartment_id.address_city|choice_tag:'city'}},
-                        {{ b.apartment_id.address_street_app|capfirst }},
-                        {{ b.apartment_id.address_num }}.<br>
-                        <i> {{ b.apartment_id.notes }}</i>
-                        </a>
-                    </div>
+                        <div class="mt-2 ">
+                            {%  if b.apartment_id.name %}
+                            <b>{{ b.apartment_id.name }}</b><br>
+                            {% endif %}
+                            {{ b.apartment_id.address_city|choice_tag:'city'}},
+                            {{ b.apartment_id.address_street_app|capfirst }},
+                            {{ b.apartment_id.address_num }}.<br>
+                            <i> {{ b.apartment_id.notes }}</i>
+                        </div>
+                    </a>
+
                 </div>
 
                 <div class="col-md-5 ">
