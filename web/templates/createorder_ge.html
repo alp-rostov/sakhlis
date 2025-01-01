@@ -21,6 +21,8 @@
 	<meta property="og:site_name" content>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'fonts' %}/font-awesome/css/font-awesome.min.css">
+
     <!-- Owl Carusel -->
     <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
     <!-- Custom Stylesheets -->
@@ -81,9 +83,15 @@
     <h2 class="mt-0" id="answer">გაგზავნეთ შეკეთების მოთხოვნა</h2>
        <div id="contact" class="form-container">
            <div id="message"></div>
-           {% #form form_order_=form form_appart_=form_appart  form_customer_=form_customer %}
+           {% #form form_order_=form form_appart_=form_appart  form_customer_=form_customer lng='ge' %}
              {% csrf_token %}
-           <h4>დამკვეთი: {{ client }}</h4>
+           {% if contact_data.name %}
+           <h4>Customer: {{ contact_data.name }}</h4>
+           <h5>
+               <i class="fa fa-phone mycolor m-1 p-2 btn border-danger" aria-hidden="true"> {{contact_data.phone }}</i>
+               <i class="fa fa-telegram mycolor m-1 p-2 btn border-danger" aria-hidden="true"> {{ contact_data.telegram }}</i>
+               <i class="fa fa-whatsapp mycolor m-1 p-2 btn border-danger" aria-hidden="true"> {{ contact_data.whatsapp }}</i> </h5>
+           {% endif %}
            {% /form %}
         </div>
 </section>

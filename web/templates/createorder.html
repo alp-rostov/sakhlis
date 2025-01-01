@@ -39,18 +39,18 @@
 {% #menu_lg_createorder line='border_line_orange' uuid_=qruuid %}
 
 <li class="nav-item mr-3 active">
-    <a class="nav-link" href={% url 'home' %}><b>Главная </b><span class="sr-only">(current)</span></a>
+    <a class="nav-link" href="{% url 'home' %}"><b>Главная </b><span class="sr-only">(current)</span></a>
 </li>
 
 {% if request.user.is_authenticated %}
-<li class="nav-item mr-4">
-    {% if request.user.groups.first.name == 'repairer' %}
-    <a class="nav-link" href="{% url 'user' request.user.pk %}">
-    {% elif request.user.groups.first.name == 'owner' %}
-    <a class="nav-link" href="{% url 'profile' %}">
-    {% endif %}
-    {{ request.user }}
-    </a>
+    <li class="nav-item mr-4">
+        {% if request.user.groups.first.name == 'repairer' %}
+        <a class="nav-link" href="{% url 'user' request.user.pk %}">
+        {% elif request.user.groups.first.name == 'owner' %}
+        <a class="nav-link" href="{% url 'profile' %}">
+        {% endif %}
+        {{ request.user }}
+        </a>
     </li>
     <li class="nav-item mr-4">
         <a class="nav-link" href="{% url 'logout' %}">
@@ -85,25 +85,64 @@
     <h2 class="mt-0" id="answer">Отправить заявку на ремонт</h2>
        <div id="contact" class="form-container">
            <div id="message"></div>
-           {% #form form_order_=form form_appart_=form_appart  form_customer_=form_customer %}
+           {% #form form_order_=form form_appart_=form_appart  form_customer_=form_customer lng='ru' %}
              {% csrf_token %}
-           <h4>Заказчик: {{ client }}</h4>
+           {% if contact_data.name %}
+           <h4>Заказчик: {{contact_data.name }}
+               <a href="" class="link_master text-secondary"  data-toggle="modal" data-target="#exampleModal" title="{{ info.pk }}">
+                   <i class="fa fa-address-card-o ml-5" style="font-size: 18px"> Add new contact</i>
+               </a>
+           </h4>
            <h5>
-               <i class="fa fa-phone mycolor m-1 p-2 btn border-danger" aria-hidden="true">{{contact_data.0 }}</i>
-               <i class="fa fa-telegram mycolor m-1 p-2 btn border-danger" aria-hidden="true"> {{ contact_data.1 }}</i>
-               <i class="fa fa-whatsapp mycolor m-1 p-2 btn border-danger" aria-hidden="true">{{ contact_data.2 }}</i> </h5>
+               <i class="fa fa-phone mycolor m-1 p-2 btn border-danger" aria-hidden="true"> {{contact_data.phone }}</i>
+               <i class="fa fa-telegram mycolor m-1 p-2 btn border-danger" aria-hidden="true"> {{ contact_data.telegram }}</i>
+               <i class="fa fa-whatsapp mycolor m-1 p-2 btn border-danger" aria-hidden="true"> {{ contact_data.whatsapp }}</i>
+
+           {% endif %}
            {% /form %}
         </div>
 </section>
 <!-- And Services -->
-
-
 
 <!-- Footer -->
 <footer class="footer_bg">
        {% #footer address_title='Адрес' address_name='Тбилиси, ул.Зураба Патаридзе 8' phone_title='Контакты' write_to_us_title='Написать нам' master_title='Мастер на час в Тбилиси' %}
        {% /footer %}
 </footer>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body  mx-3">
+                <div id="contact" class="form-container">
+                    <fieldset>
+                        <div id="message">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">X</span>
+                        </button>
+                        </div>
+                    </fieldset>
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <h4 id="" class="mycolor font-weight-bold">Input contact information</h4>
+                            </div>
+                        </div>
+
+                            <form method="post" action="" name="form" id="form" class="">
+                                {% csrf_token %}
+                                {{form_for_modal}}
+                                <button type="submit" name="submit" class="btn btn-lg mycolor m-2 p-2">Сохранить</button>
+                            </form>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- And Footer -->
 
 

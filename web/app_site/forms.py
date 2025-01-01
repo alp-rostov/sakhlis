@@ -18,6 +18,7 @@ class ApartmentFormOwner(forms.Form):
 
 
 class ApartmentForm(forms.ModelForm):
+
     address_city = forms.ChoiceField(
         choices=CITY_CHOICES,
         widget=forms.RadioSelect(attrs={"class": ""},),
@@ -26,12 +27,12 @@ class ApartmentForm(forms.ModelForm):
     address_street_app = forms.CharField(
         label='Street',
         widget=forms.TextInput(
-            attrs={"class": "form-control", 'list': 'languages', 'placeholder': "Street", 'maxlength': 40}),
+            attrs={"class": "form-control", 'list': 'languages', 'placeholder': 'ქუჩა / Street', 'maxlength': 40}),
         required=False
     )
     address_num = forms.CharField(
         label='Apartment (number, entrance, floor etc.)',
-        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Apartment", 'maxlength': 150}),
+        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "ბინა / Apartment", 'maxlength': 150}),
         required=False
     )
 

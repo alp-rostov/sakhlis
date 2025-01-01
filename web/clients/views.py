@@ -94,7 +94,7 @@ class ApartmentOwner(PermissionRequiredMixin, LoginRequiredMixin, ListView):
 
         return context
 
-class OwnerOrderManagementSystem(OrderManagementSystem, BaseClassExeption, LoginRequiredMixin, ListView):
+class OwnerOrderManagementSystem(OrderManagementSystem, LoginRequiredMixin, ListView):
     """ list of all orders """
     template_name = 'owner/order_list.html'
     permission_required = PERMISSION_FOR_OWNER
@@ -113,7 +113,7 @@ class OwnerOrderManagementSystem(OrderManagementSystem, BaseClassExeption, Login
         return self.filterset.qs
 
 
-class OwnerInvoice(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, DetailView):
+class OwnerInvoice(PermissionRequiredMixin, LoginRequiredMixin, DetailView):
     """ list of all orders """
     model = OrderList
     context_object_name = 'info'
@@ -131,7 +131,7 @@ class OwnerApartmentUpdate(LoginRequiredMixin, UpdateView):
     form_class = ApartentUpdateForm
     success_url = '../apartments'
 
-class OwnerApartmentCreate(BaseClassExeption, LoginRequiredMixin, CreateView):
+class OwnerApartmentCreate(LoginRequiredMixin, CreateView):
     model = Apartment
     template_name = 'owner/apartment_update.html'
     form_class = ApartentUpdateForm

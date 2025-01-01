@@ -4,11 +4,9 @@ import uuid
 
 from django.contrib.auth.models import Group
 from django.contrib.auth.views import LoginView
-
 from django.db import transaction
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.contrib.auth.decorators import login_required
-
 from django.http import FileResponse, JsonResponse, Http404
 from django.forms import modelformset_factory
 from django.shortcuts import redirect, get_object_or_404
@@ -16,21 +14,20 @@ from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView, FormView
 
 from clients.filters import ClientFilter
-from clients.form import CustomerForm
+from clients.form import CustomerForm, CustomerFormForModal
 from .constants import *
 from .exeptions import BaseClassExeption
 from .filters import OrderFilter, ApartmentFilter
 from .forms import *
 from .repository import DataFromOrderList, DataFromInvoice
-from .serialaizers import OrderStatusSerializer, InvoiceSerializer, UserSerializer, \
-    UpdateMasterSerializer
+from .serialaizers import OrderStatusSerializer, InvoiceSerializer, UserSerializer, UpdateMasterSerializer
 from .utils import *
 from rest_framework import generics
 
 logger = logging.getLogger('django')
 
 
-class ApartmentList(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, ListView):
+class ApartmentList(PermissionRequiredMixin, LoginRequiredMixin, ListView):
     model = Apartment
     context_object_name = 'apart'
     template_name = 'repairer/apartments.html'
@@ -86,8 +83,7 @@ class Clients(PermissionRequiredMixin, LoginRequiredMixin, ListView):
         return self.filterset.qs
 
 
-
-class InvoiceCreate(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, DetailView):
+class InvoiceCreate(PermissionRequiredMixin, LoginRequiredMixin, DetailView):
     """ Add name of works, quantity, price to order  """
     model = OrderList
     context_object_name = 'info'
@@ -133,7 +129,7 @@ class InvoiceCreate(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMix
             return JsonResponse({}, safe=False)
 
 
-class OrderCreate(BaseClassExeption, CreateView):
+class OrderCreate(CreateView):
     """" Add order """
     model = OrderList
     template_name = 'order_create.html'
@@ -153,10 +149,13 @@ class OrderCreate(BaseClassExeption, CreateView):
                 return context
         else:
             return context
+
         context['form_appart'] = ApartmentFormOwner(person=user_)
         context['form_customer'] = ''
-        context['client'] = f'{user_}'
-        context['contact_data'] = coding_personal_data(user_.phone, user_.whatsapp, user_.telegram)
+        context['form_for_modal'] = CustomerFormForModal
+        context['contact_data'] = coding_personal_data(name=str(user_),  phone=user_.phone, whatsapp=user_.whatsapp,
+                                                       telegram=user_.telegram)
+
         context['qruuid'] =f'?qrcode={self.request.GET.get("qrcode")}'
         return context
 
@@ -200,7 +199,7 @@ class OrderCreate(BaseClassExeption, CreateView):
             return JsonResponse(response_)
 
 
-class OrderDelete(BaseClassExeption, LoginRequiredMixin, DeleteView):
+class OrderDelete(LoginRequiredMixin, DeleteView):
     model = OrderList
     template_name = 'order_delete.html'
 
@@ -209,7 +208,7 @@ class OrderDelete(BaseClassExeption, LoginRequiredMixin, DeleteView):
         return dict_choice_url[self.request.user.groups.first().name]
 
 
-class OrderManagementSystem(BaseClassExeption, LoginRequiredMixin, ListView):
+class OrderManagementSystem(LoginRequiredMixin, ListView):
     """ list of all orders """
     model = OrderList
     context_object_name = 'order'
@@ -231,10 +230,6 @@ class OrderManagementSystem(BaseClassExeption, LoginRequiredMixin, ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['filterset'] = self.filterset
-        # c = context['filterset'].qs.values('pk')
-        # c_ = DataFromInvoice().get_total_cost_of_some_orders(list_of_orders=c)
-        # context['summ_orders'] = c_
-        # context['count_orders'] = self.get_queryset().count()
         return context
 
 
@@ -266,7 +261,7 @@ class OrderUpdate(LoginRequiredMixin, UpdateView):
         return '/list_order/' + str(self.object.pk)
 
 
-class RepairerDetailInformation(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, TemplateView):
+class RepairerDetailInformation(PermissionRequiredMixin, LoginRequiredMixin, TemplateView):
     template_name = 'repairer/repaier_profile.html'
     permission_required = PERMISSION_FOR_REPAIER
 
@@ -282,7 +277,7 @@ class RepairerDetailInformation(BaseClassExeption, PermissionRequiredMixin, Logi
         return context
 
 
-class RepaierUpdate(BaseClassExeption, PermissionRequiredMixin, UpdateView):
+class RepaierUpdate(PermissionRequiredMixin, UpdateView):
     model = UserProfile
     template_name = 'repairer/repaier_create.html'
     form_class = CustomerForm
@@ -292,7 +287,7 @@ class RepaierUpdate(BaseClassExeption, PermissionRequiredMixin, UpdateView):
         return '/user/' + str(self.request.user.pk)
 
 
-class Statistica(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, ListView):
+class Statistica(PermissionRequiredMixin, LoginRequiredMixin, ListView):
     template_name = 'repairer/statistica.html'
     model = OrderList
     context_object_name = 'order'
@@ -315,6 +310,7 @@ class Statistica(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin,
         context['d'] = Graph(data_from_invoice.get_quantity_of_orders_by_type(repairer=self.request.user),
                              'service_id__type', 'count', WORK_CHOICES_, 'Order structure, quantity.', '') \
             .make_graf_pie()
+        print(dir(Graph))
         context['d_'] = Graph(data_from_invoice.get_cost_of_orders_by_type(repairer=self.request.user),
                               'service_id__type', 'count', WORK_CHOICES_, 'Order structure, lar.', '') \
             .make_graf_pie()
@@ -400,10 +396,8 @@ def listservices_for_invoice_json(request, **kwargs):
 def client_details_json(request, **kwargs):
     """for ajax request """
     data = UserProfile.objects.get(pk=request.GET.get('pk'))
-
     orders = OrderList.objects.filter(customer_id=data).values('pk', 'text_order', 'time_in').order_by('-time_in')[0:5]
     json_orders = json.dumps(list(orders), default=str)
-
     apartment = Apartment.objects.filter(owner=data).values('pk', 'name', 'address_city', 'address_street_app',
                                                             'address_num').order_by('-address_street_app')
     json_apartment = json.dumps(list(apartment), default=str)
@@ -425,7 +419,6 @@ def client_details_json(request, **kwargs):
 def save_list_jobs(request, **kwargs):
     """for ajax request """
     FormSet_ = modelformset_factory(OrderList, fields=('text_order', 'apartment_id', 'customer_id'))
-
     formset = FormSet_(request.POST).save(commit=False)
     if formset:
         for instance in formset:
@@ -493,7 +486,6 @@ class MastersListAPI(generics.ListAPIView):
     def get_queryset(self):                 # TODO refactor filter 3 is a group`s number 'repaier'
         # queryset = User.objects.filter(groups=3).values('pk', 'username', 'groups')
         queryset = User.objects.values('pk', 'username', 'groups')
-
         return queryset
 
 
@@ -508,9 +500,7 @@ def creat_order_from_owner_profile(request, **kwargs):
 
 def verife_account(request):
     token_ = request.GET.get('token')
-    print(token_)
     pk_=request.GET.get('pk')
-    print(pk_)
     user_ = get_object_or_404(User, pk=pk_)
     profile = UserProfile.objects.get(user=user_)
     if profile.customer_name == token_:
@@ -522,5 +512,3 @@ def verife_account(request):
         return redirect('confirm_registration')
     else:
         raise Http404("")
-
-

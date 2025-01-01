@@ -58,7 +58,15 @@
         {{ form_order_.text_order }}
         <span id="8"></span>
     </div>
-    <button type="submit" name="submit" class="btn btn-lg btn-block mycolor m-2 p-2 waves-effect waves-light">Send</button>
-
+    {% if lng == 'ru' %}
+        <button type="submit" name="submit" class="btn btn-lg mycolor m-2 p-2">Отправить</button>
+        <a href="{% url 'createorder' %}" class="btn btn-lg mycolor m-2 p-2 border border-danger">Сбросить</a>
+    {% elif lng == 'en'%}
+        <button type="submit" name="submit" class="btn btn-lg mycolor m-2 p-2">Submit</button>
+        <a href="{% url 'createorder_en' %}" class="btn btn-lg mycolor m-2 p-2 border border-danger">Reset</a>
+    {% elif lng == 'ge'%}
+        <button type="submit" name="submit" class="btn btn-lg mycolor m-2 p-2">გაგზავნა</button>
+        <a href="{% url 'createorder_ge' %}" class="btn btn-lg mycolor m-2 p-2 border border-danger">გადატვირთვა</a>
+    {% endif %}
 </form>
 

@@ -6210,3 +6210,1994 @@ Traceback (most recent call last):
     raise TemplateSyntaxError(
 django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '[0]' from 'phone[0]'
 30/Dec/2024 21:02:31    ERROR    basehttp    "GET /createorder?qrcode=229b652b-c573-40a4-806b-7ca2e82dc2cf HTTP/1.1" 500 203273   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 14:58:35    ERROR    log    Internal Server Error: /stat/   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'NameError'>, NameError("name 'obj' is not defined"), <traceback object at 0x7f02e1b21200>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/list.py", line 174, in get
+    context = self.get_context_data()
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 318, in get_context_data
+    print(obj(context['d']))
+          ^^^
+NameError: name 'obj' is not defined
+01/Jan/2025 14:58:35    ERROR    basehttp    "GET /stat/?time_in_sence=2024-10-31&time_in_until=&repairer_id= HTTP/1.1" 500 115133   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 15:06:25    ERROR    log    Internal Server Error: /stat/   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'TypeError'>, TypeError("RenderableFormMixin.as_p() missing 1 required positional argument: 'self'"), <traceback object at 0x7fdd743d3a40>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/list.py", line 174, in get
+    context = self.get_context_data()
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 318, in get_context_data
+    print(OrderForm.as_p())
+          ^^^^^^^^^^^^^^^^
+TypeError: RenderableFormMixin.as_p() missing 1 required positional argument: 'self'
+01/Jan/2025 15:06:26    ERROR    basehttp    "GET /stat/?time_in_sence=2024-08-01&time_in_until=&repairer_id= HTTP/1.1" 500 117217   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 15:06:57    ERROR    log    Internal Server Error: /stat/   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'AttributeError'>, AttributeError("'Statistica' object has no attribute 'render'"), <traceback object at 0x7fca4d915f40>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/list.py", line 174, in get
+    context = self.get_context_data()
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 318, in get_context_data
+    print(OrderForm.as_p(self))
+          ^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/forms/utils.py", line 84, in as_p
+    return self.render(self.template_name_p)
+           ^^^^^^^^^^^
+AttributeError: 'Statistica' object has no attribute 'render'
+01/Jan/2025 15:06:57    ERROR    basehttp    "GET /stat/?time_in_sence=2024-08-01&time_in_until=&repairer_id= HTTP/1.1" 500 120690   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 15:08:31    ERROR    log    Internal Server Error: /stat/   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'TypeError'>, TypeError("RenderableFormMixin.as_p() missing 1 required positional argument: 'self'"), <traceback object at 0x7f8449551040>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/list.py", line 174, in get
+    context = self.get_context_data()
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 318, in get_context_data
+    print(OrderForm.as_p())
+              ^^^^^^^^^^^^^^
+TypeError: RenderableFormMixin.as_p() missing 1 required positional argument: 'self'
+01/Jan/2025 15:08:32    ERROR    basehttp    "GET /stat/?time_in_sence=2024-08-01&time_in_until=&repairer_id= HTTP/1.1" 500 117225   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 15:09:07    ERROR    log    Internal Server Error: /stat/   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'AttributeError'>, AttributeError("'WSGIRequest' object has no attribute 'render'"), <traceback object at 0x7fd59fd94400>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/list.py", line 174, in get
+    context = self.get_context_data()
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 318, in get_context_data
+    print(OrderForm.as_p(self.request))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/forms/utils.py", line 84, in as_p
+    return self.render(self.template_name_p)
+           ^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'render'
+01/Jan/2025 15:09:08    ERROR    log    Internal Server Error: /stat/   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'AttributeError'>, AttributeError("'WSGIRequest' object has no attribute 'render'"), <traceback object at 0x7fd59e7502c0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/list.py", line 174, in get
+    context = self.get_context_data()
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 318, in get_context_data
+    print(OrderForm.as_p(self.request))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/forms/utils.py", line 84, in as_p
+    return self.render(self.template_name_p)
+           ^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'render'
+01/Jan/2025 15:09:08    ERROR    basehttp    "GET /stat/?time_in_sence=2024-08-01&time_in_until=&repairer_id= HTTP/1.1" 500 120990   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 15:09:10    ERROR    log    Internal Server Error: /stat/   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'AttributeError'>, AttributeError("'WSGIRequest' object has no attribute 'render'"), <traceback object at 0x7fd5a0989600>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/list.py", line 174, in get
+    context = self.get_context_data()
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 318, in get_context_data
+    print(OrderForm.as_p(self.request))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/forms/utils.py", line 84, in as_p
+    return self.render(self.template_name_p)
+           ^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'render'
+01/Jan/2025 15:09:10    ERROR    basehttp    "GET /stat/?time_in_sence=2024-08-01&time_in_until=&repairer_id= HTTP/1.1" 500 120989   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 15:09:30    ERROR    log    Internal Server Error: /stat/   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'NameError'>, NameError("name 'none' is not defined"), <traceback object at 0x7fb75b16dc00>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/list.py", line 174, in get
+    context = self.get_context_data()
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 318, in get_context_data
+    print(OrderForm.as_p(none))
+                         ^^^^
+NameError: name 'none' is not defined
+01/Jan/2025 15:09:30    ERROR    basehttp    "GET /stat/?time_in_sence=2024-08-01&time_in_until=&repairer_id= HTTP/1.1" 500 117043   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 15:11:43    ERROR    log    Internal Server Error: /stat/   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'AttributeError'>, AttributeError("'str' object has no attribute 'make_graf_pie'"), <traceback object at 0x7feb49db7a80>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/list.py", line 174, in get
+    context = self.get_context_data()
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 318, in get_context_data
+    print(dir(context['d'].make_graf_pie()))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'make_graf_pie'
+01/Jan/2025 15:11:43    ERROR    basehttp    "GET /stat/?time_in_sence=2024-08-01&time_in_until=&repairer_id= HTTP/1.1" 500 117125   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 15:18:13    ERROR    log    Internal Server Error: /stat/   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'AttributeError'>, AttributeError("'Graph' object has no attribute 'make_graf_pie'"), <traceback object at 0x7f48ba5c9940>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/list.py", line 174, in get
+    context = self.get_context_data()
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 317, in get_context_data
+    .make_graf_pie()
+     ^^^^^^^^^^^^^
+AttributeError: 'Graph' object has no attribute 'make_graf_pie'
+01/Jan/2025 15:18:13    ERROR    basehttp    "GET /stat/?time_in_sence=2024-08-01&time_in_until=&repairer_id= HTTP/1.1" 500 115088   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 15:52:38    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'TypeError'>, TypeError('coding_personal_data() takes 0 positional arguments but 3 were given'), <traceback object at 0x7f40b45ddd80>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 180, in get
+    return super().get(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 155, in get_context_data
+    context['contact_data'] = coding_personal_data(user_.phone, user_.whatsapp, user_.telegram)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: coding_personal_data() takes 0 positional arguments but 3 were given
+01/Jan/2025 15:52:38    ERROR    basehttp    "GET /createorder?qrcode=7abcd515-bc58-4ec4-8119-faae699c3d90 HTTP/1.1" 500 101884   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 15:52:39    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'TypeError'>, TypeError('coding_personal_data() takes 0 positional arguments but 3 were given'), <traceback object at 0x7f40b44254c0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 180, in get
+    return super().get(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 155, in get_context_data
+    context['contact_data'] = coding_personal_data(user_.phone, user_.whatsapp, user_.telegram)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: coding_personal_data() takes 0 positional arguments but 3 were given
+01/Jan/2025 15:52:39    ERROR    basehttp    "GET /createorder?qrcode=7abcd515-bc58-4ec4-8119-faae699c3d90 HTTP/1.1" 500 101610   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 15:53:07    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'AttributeError'>, AttributeError("'tuple' object has no attribute 'items'"), <traceback object at 0x7ff676100b00>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 180, in get
+    return super().get(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 155, in get_context_data
+    context['contact_data'] = coding_personal_data(user_.phone, user_.whatsapp, user_.telegram)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 306, in coding_personal_data
+    for name, value in args.items():
+                       ^^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'items'
+01/Jan/2025 15:53:07    ERROR    basehttp    "GET /createorder?qrcode=7abcd515-bc58-4ec4-8119-faae699c3d90 HTTP/1.1" 500 105538   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 15:53:08    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'AttributeError'>, AttributeError("'tuple' object has no attribute 'items'"), <traceback object at 0x7ff674d71380>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 180, in get
+    return super().get(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 155, in get_context_data
+    context['contact_data'] = coding_personal_data(user_.phone, user_.whatsapp, user_.telegram)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 306, in coding_personal_data
+    for name, value in args.items():
+                       ^^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'items'
+01/Jan/2025 15:53:08    ERROR    basehttp    "GET /createorder?qrcode=7abcd515-bc58-4ec4-8119-faae699c3d90 HTTP/1.1" 500 105536   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 15:58:16    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'KeyError'>, KeyError('name'), <traceback object at 0x7f5dfda49a80>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 180, in get
+    return super().get(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 155, in get_context_data
+    context['contact_data'] = coding_personal_data(phone=user_.phone, whatsapp=user_.whatsapp,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 307, in coding_personal_data
+    print(kwargs['name'])
+          ~~~~~~^^^^^^^^
+KeyError: 'name'
+01/Jan/2025 15:58:16    ERROR    basehttp    "GET /createorder?qrcode=7abcd515-bc58-4ec4-8119-faae699c3d90 HTTP/1.1" 500 105624   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 15:58:18    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'KeyError'>, KeyError('name'), <traceback object at 0x7f5dfdb3a200>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 180, in get
+    return super().get(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 155, in get_context_data
+    context['contact_data'] = coding_personal_data(phone=user_.phone, whatsapp=user_.whatsapp,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 307, in coding_personal_data
+    print(kwargs['name'])
+          ~~~~~~^^^^^^^^
+KeyError: 'name'
+01/Jan/2025 15:58:18    ERROR    basehttp    "GET /createorder?qrcode=7abcd515-bc58-4ec4-8119-faae699c3d90 HTTP/1.1" 500 105622   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 16:25:13    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'TypeError'>, TypeError("'tuple' object is not callable"), <traceback object at 0x7f106a4bb000>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 180, in get
+    return super().get(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 155, in get_context_data
+    context['contact_data'] = coding_personal_data(phone=user_.phone, whatsapp=user_.whatsapp,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 309, in coding_personal_data
+    z= list(map(lambda  x: x('aa', f'*{x[1:-2]}**') , a))
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 309, in <lambda>
+    z= list(map(lambda  x: x('aa', f'*{x[1:-2]}**') , a))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'tuple' object is not callable
+01/Jan/2025 16:25:13    ERROR    basehttp    "GET /createorder?qrcode=7abcd515-bc58-4ec4-8119-faae699c3d90 HTTP/1.1" 500 109859   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 16:25:15    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'TypeError'>, TypeError("'tuple' object is not callable"), <traceback object at 0x7f106a5df4c0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 180, in get
+    return super().get(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 155, in get_context_data
+    context['contact_data'] = coding_personal_data(phone=user_.phone, whatsapp=user_.whatsapp,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 309, in coding_personal_data
+    z= list(map(lambda  x: x('aa', f'*{x[1:-2]}**') , a))
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 309, in <lambda>
+    z= list(map(lambda  x: x('aa', f'*{x[1:-2]}**') , a))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'tuple' object is not callable
+01/Jan/2025 16:25:15    ERROR    basehttp    "GET /createorder?qrcode=7abcd515-bc58-4ec4-8119-faae699c3d90 HTTP/1.1" 500 109857   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 16:25:54    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'TypeError'>, TypeError("'tuple' object is not callable"), <traceback object at 0x7fba9cd0cd80>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 180, in get
+    return super().get(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 155, in get_context_data
+    context['contact_data'] = coding_personal_data(phone=user_.phone, whatsapp=user_.whatsapp,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 309, in coding_personal_data
+    z= list(map(lambda  x: x(x[0], f'*{x[1][1:-2]}**') , a))
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 309, in <lambda>
+    z= list(map(lambda  x: x(x[0], f'*{x[1][1:-2]}**') , a))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'tuple' object is not callable
+01/Jan/2025 16:25:54    ERROR    basehttp    "GET /createorder?qrcode=7abcd515-bc58-4ec4-8119-faae699c3d90 HTTP/1.1" 500 109843   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 16:26:03    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'TypeError'>, TypeError("'tuple' object is not callable"), <traceback object at 0x7fba9c263fc0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 180, in get
+    return super().get(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 155, in get_context_data
+    context['contact_data'] = coding_personal_data(phone=user_.phone, whatsapp=user_.whatsapp,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 309, in coding_personal_data
+    z= list(map(lambda  x: x(x[0], f'*{x[1][1:-2]}**') , a))
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 309, in <lambda>
+    z= list(map(lambda  x: x(x[0], f'*{x[1][1:-2]}**') , a))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'tuple' object is not callable
+01/Jan/2025 16:26:03    ERROR    basehttp    "GET /createorder?qrcode=7abcd515-bc58-4ec4-8119-faae699c3d90 HTTP/1.1" 500 109841   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 16:26:43    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'TypeError'>, TypeError("'tuple' object is not callable"), <traceback object at 0x7f549ca62200>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 180, in get
+    return super().get(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 155, in get_context_data
+    context['contact_data'] = coding_personal_data(phone=user_.phone, whatsapp=user_.whatsapp,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 309, in coding_personal_data
+    z= list(map(lambda  x: x(x[0], x[1]+'aaaaaaa') , a))
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 309, in <lambda>
+    z= list(map(lambda  x: x(x[0], x[1]+'aaaaaaa') , a))
+                           ^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'tuple' object is not callable
+01/Jan/2025 16:26:43    ERROR    basehttp    "GET /createorder?qrcode=7abcd515-bc58-4ec4-8119-faae699c3d90 HTTP/1.1" 500 109811   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 16:26:45    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'TypeError'>, TypeError("'tuple' object is not callable"), <traceback object at 0x7f549cbe01c0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 180, in get
+    return super().get(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 155, in get_context_data
+    context['contact_data'] = coding_personal_data(phone=user_.phone, whatsapp=user_.whatsapp,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 309, in coding_personal_data
+    z= list(map(lambda  x: x(x[0], x[1]+'aaaaaaa') , a))
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 309, in <lambda>
+    z= list(map(lambda  x: x(x[0], x[1]+'aaaaaaa') , a))
+                           ^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'tuple' object is not callable
+01/Jan/2025 16:26:45    ERROR    basehttp    "GET /createorder?qrcode=7abcd515-bc58-4ec4-8119-faae699c3d90 HTTP/1.1" 500 109809   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 16:26:46    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'TypeError'>, TypeError("'tuple' object is not callable"), <traceback object at 0x7f549b572040>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 180, in get
+    return super().get(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 155, in get_context_data
+    context['contact_data'] = coding_personal_data(phone=user_.phone, whatsapp=user_.whatsapp,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 309, in coding_personal_data
+    z= list(map(lambda  x: x(x[0], x[1]+'aaaaaaa') , a))
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 309, in <lambda>
+    z= list(map(lambda  x: x(x[0], x[1]+'aaaaaaa') , a))
+                           ^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'tuple' object is not callable
+01/Jan/2025 16:26:46    ERROR    basehttp    "GET /createorder?qrcode=7abcd515-bc58-4ec4-8119-faae699c3d90 HTTP/1.1" 500 109811   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 16:27:13    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'TypeError'>, TypeError("'tuple' object is not callable"), <traceback object at 0x7ff7b6cd8740>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 180, in get
+    return super().get(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 155, in get_context_data
+    context['contact_data'] = coding_personal_data(phone=user_.phone, whatsapp=user_.whatsapp,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 309, in coding_personal_data
+    z= list(map(lambda  x: x(x[0], x[1]) , a))
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 309, in <lambda>
+    z= list(map(lambda  x: x(x[0], x[1]) , a))
+                           ^^^^^^^^^^^^^
+TypeError: 'tuple' object is not callable
+01/Jan/2025 16:27:13    ERROR    basehttp    "GET /createorder?qrcode=7abcd515-bc58-4ec4-8119-faae699c3d90 HTTP/1.1" 500 109691   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 16:27:15    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'TypeError'>, TypeError("'tuple' object is not callable"), <traceback object at 0x7ff7b6323fc0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 180, in get
+    return super().get(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 155, in get_context_data
+    context['contact_data'] = coding_personal_data(phone=user_.phone, whatsapp=user_.whatsapp,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 309, in coding_personal_data
+    z= list(map(lambda  x: x(x[0], x[1]) , a))
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 309, in <lambda>
+    z= list(map(lambda  x: x(x[0], x[1]) , a))
+                           ^^^^^^^^^^^^^
+TypeError: 'tuple' object is not callable
+01/Jan/2025 16:27:15    ERROR    basehttp    "GET /createorder?qrcode=7abcd515-bc58-4ec4-8119-faae699c3d90 HTTP/1.1" 500 109689   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 16:27:34    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'TypeError'>, TypeError("'tuple' object is not callable"), <traceback object at 0x7f874bae9c40>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 180, in get
+    return super().get(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 155, in get_context_data
+    context['contact_data'] = coding_personal_data(phone=user_.phone, whatsapp=user_.whatsapp,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 309, in coding_personal_data
+    z= list(map(lambda  x: x(x, x) , a))
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 309, in <lambda>
+    z= list(map(lambda  x: x(x, x) , a))
+                           ^^^^^^^
+TypeError: 'tuple' object is not callable
+01/Jan/2025 16:27:34    ERROR    basehttp    "GET /createorder?qrcode=7abcd515-bc58-4ec4-8119-faae699c3d90 HTTP/1.1" 500 109643   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 16:27:35    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'TypeError'>, TypeError("'tuple' object is not callable"), <traceback object at 0x7f874a66dbc0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 180, in get
+    return super().get(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 155, in get_context_data
+    context['contact_data'] = coding_personal_data(phone=user_.phone, whatsapp=user_.whatsapp,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 309, in coding_personal_data
+    z= list(map(lambda  x: x(x, x) , a))
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 309, in <lambda>
+    z= list(map(lambda  x: x(x, x) , a))
+                           ^^^^^^^
+TypeError: 'tuple' object is not callable
+01/Jan/2025 16:27:35    ERROR    basehttp    "GET /createorder?qrcode=7abcd515-bc58-4ec4-8119-faae699c3d90 HTTP/1.1" 500 109641   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 16:30:56    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'TypeError'>, TypeError("'NoneType' object is not subscriptable"), <traceback object at 0x7ff3594552c0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 180, in get
+    return super().get(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 155, in get_context_data
+    context['contact_data'] = coding_personal_data(phone=user_.phone, whatsapp=user_.whatsapp,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 307, in coding_personal_data
+    z= list(map(lambda  x: (x[0], f'*{x[1][1:-2]}**') , a))
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 307, in <lambda>
+    z= list(map(lambda  x: (x[0], f'*{x[1][1:-2]}**') , a))
+                                      ~~~~^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+01/Jan/2025 16:30:56    ERROR    basehttp    "GET /createorder?qrcode=49f44b1d-9afc-4ec4-adb8-7133a7abf619 HTTP/1.1" 500 109509   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 16:31:18    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'TypeError'>, TypeError("'NoneType' object is not subscriptable"), <traceback object at 0x7ff3594da0c0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 180, in get
+    return super().get(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 155, in get_context_data
+    context['contact_data'] = coding_personal_data(phone=user_.phone, whatsapp=user_.whatsapp,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 307, in coding_personal_data
+    z= list(map(lambda  x: (x[0], f'*{x[1][1:-2]}**') , a))
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 307, in <lambda>
+    z= list(map(lambda  x: (x[0], f'*{x[1][1:-2]}**') , a))
+                                      ~~~~^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+01/Jan/2025 16:31:18    ERROR    basehttp    "GET /createorder?qrcode=49f44b1d-9afc-4ec4-adb8-7133a7abf619 HTTP/1.1" 500 109646   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 16:31:44    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'TypeError'>, TypeError("'NoneType' object is not subscriptable"), <traceback object at 0x7ff359376ec0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 180, in get
+    return super().get(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 155, in get_context_data
+    context['contact_data'] = coding_personal_data(phone=user_.phone, whatsapp=user_.whatsapp,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 307, in coding_personal_data
+    z= list(map(lambda  x: (x[0], f'*{x[1][1:-2]}**') , a))
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 307, in <lambda>
+    z= list(map(lambda  x: (x[0], f'*{x[1][1:-2]}**') , a))
+                                      ~~~~^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+01/Jan/2025 16:31:44    ERROR    basehttp    "GET /createorder?qrcode=07158ae6-7785-4b69-8dc0-c50c313d105a HTTP/1.1" 500 109522   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 16:33:22    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'TypeError'>, TypeError("'NoneType' object is not subscriptable"), <traceback object at 0x7f889baf2c40>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 180, in get
+    return super().get(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 155, in get_context_data
+    context['contact_data'] = coding_personal_data(phone=user_.phone, whatsapp=user_.whatsapp,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 308, in coding_personal_data
+    z= list(map(lambda  x: (x[0], f'*{x[1][1:-2]}**') , a))
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 308, in <lambda>
+    z= list(map(lambda  x: (x[0], f'*{x[1][1:-2]}**') , a))
+                                      ~~~~^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+01/Jan/2025 16:33:22    ERROR    basehttp    "GET /createorder?qrcode=07158ae6-7785-4b69-8dc0-c50c313d105a HTTP/1.1" 500 109643   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 16:47:46    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'TypeError'>, TypeError("unsupported operand type(s) for +: 'NoneType' and 'str'"), <traceback object at 0x7fa36b869600>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 180, in get
+    return super().get(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 155, in get_context_data
+    context['contact_data'] = coding_personal_data(phone=user_.phone, whatsapp=user_.whatsapp,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 307, in coding_personal_data
+    b= list(map(lambda  x: (x[0], x[1]+'' ) , a))
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 307, in <lambda>
+    b= list(map(lambda  x: (x[0], x[1]+'' ) , a))
+                                  ~~~~^~~
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+01/Jan/2025 16:47:46    ERROR    basehttp    "GET /createorder?qrcode=07158ae6-7785-4b69-8dc0-c50c313d105a HTTP/1.1" 500 109603   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 16:47:49    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'TypeError'>, TypeError("unsupported operand type(s) for +: 'NoneType' and 'str'"), <traceback object at 0x7fa36b802000>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 180, in get
+    return super().get(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 155, in get_context_data
+    context['contact_data'] = coding_personal_data(phone=user_.phone, whatsapp=user_.whatsapp,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 307, in coding_personal_data
+    b= list(map(lambda  x: (x[0], x[1]+'' ) , a))
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 307, in <lambda>
+    b= list(map(lambda  x: (x[0], x[1]+'' ) , a))
+                                  ~~~~^~~
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+01/Jan/2025 16:47:49    ERROR    basehttp    "GET /createorder?qrcode=07158ae6-7785-4b69-8dc0-c50c313d105a HTTP/1.1" 500 109601   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 16:48:56    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'NameError'>, NameError("name 'b' is not defined"), <traceback object at 0x7f460bbdc240>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 180, in get
+    return super().get(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 155, in get_context_data
+    context['contact_data'] = coding_personal_data(phone=user_.phone, whatsapp=user_.whatsapp,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 309, in coding_personal_data
+    z= list(map(lambda  x: (x[0], f'*{str(x[1])[1:-3]}***') , b))
+                                                              ^
+NameError: name 'b' is not defined
+01/Jan/2025 16:48:57    ERROR    basehttp    "GET /createorder?qrcode=07158ae6-7785-4b69-8dc0-c50c313d105a HTTP/1.1" 500 105810   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 16:56:13    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'NameError'>, NameError("name 'phone_' is not defined"), <traceback object at 0x7f71fe31c7c0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 180, in get
+    return super().get(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 155, in get_context_data
+    context['contact_data'] = coding_personal_data(phone=user_.phone, whatsapp=user_.whatsapp,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 308, in coding_personal_data
+    return (phone_, whatsapp_, telegram_)
+            ^^^^^^
+NameError: name 'phone_' is not defined
+01/Jan/2025 16:56:13    ERROR    basehttp    "GET /createorder?qrcode=49f44b1d-9afc-4ec4-adb8-7133a7abf619 HTTP/1.1" 500 104517   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 16:56:15    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'NameError'>, NameError("name 'phone_' is not defined"), <traceback object at 0x7f71fcf9a080>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 180, in get
+    return super().get(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 155, in get_context_data
+    context['contact_data'] = coding_personal_data(phone=user_.phone, whatsapp=user_.whatsapp,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 308, in coding_personal_data
+    return (phone_, whatsapp_, telegram_)
+            ^^^^^^
+NameError: name 'phone_' is not defined
+01/Jan/2025 16:56:15    ERROR    basehttp    "GET /createorder?qrcode=49f44b1d-9afc-4ec4-adb8-7133a7abf619 HTTP/1.1" 500 104515   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 17:15:56    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'TypeError'>, TypeError("object of type 'NoneType' has no len()"), <traceback object at 0x7f7272013c40>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 180, in get
+    return super().get(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 155, in get_context_data
+    context['contact_data'] = coding_personal_data(phone=user_.phone, whatsapp=user_.whatsapp,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 313, in coding_personal_data
+    _= dict(map(lambda  x: (x[0], code_data(x[1])) , kwargs.items()))
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 313, in <lambda>
+    _= dict(map(lambda  x: (x[0], code_data(x[1])) , kwargs.items()))
+                                  ^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 305, in code_data
+    if len(code) > 6 :
+       ^^^^^^^^^
+TypeError: object of type 'NoneType' has no len()
+01/Jan/2025 17:15:56    ERROR    basehttp    "GET /createorder?qrcode=49f44b1d-9afc-4ec4-adb8-7133a7abf619 HTTP/1.1" 500 112131   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 17:15:58    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'TypeError'>, TypeError("object of type 'NoneType' has no len()"), <traceback object at 0x7f7270b33c80>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 180, in get
+    return super().get(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 155, in get_context_data
+    context['contact_data'] = coding_personal_data(phone=user_.phone, whatsapp=user_.whatsapp,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 313, in coding_personal_data
+    _= dict(map(lambda  x: (x[0], code_data(x[1])) , kwargs.items()))
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 313, in <lambda>
+    _= dict(map(lambda  x: (x[0], code_data(x[1])) , kwargs.items()))
+                                  ^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 305, in code_data
+    if len(code) > 6 :
+       ^^^^^^^^^
+TypeError: object of type 'NoneType' has no len()
+01/Jan/2025 17:15:58    ERROR    basehttp    "GET /createorder?qrcode=49f44b1d-9afc-4ec4-adb8-7133a7abf619 HTTP/1.1" 500 112129   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 17:16:35    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'TypeError'>, TypeError("object of type 'NoneType' has no len()"), <traceback object at 0x7f7270b14bc0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 180, in get
+    return super().get(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 155, in get_context_data
+    context['contact_data'] = coding_personal_data(phone=user_.phone, whatsapp=user_.whatsapp,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 313, in coding_personal_data
+    _= dict(map(lambda  x: (x[0], code_data(x[1])) , kwargs.items()))
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 313, in <lambda>
+    _= dict(map(lambda  x: (x[0], code_data(x[1])) , kwargs.items()))
+                                  ^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 305, in code_data
+    if len(str(code)) > 6 :
+       ^^^^^^^^^
+TypeError: object of type 'NoneType' has no len()
+01/Jan/2025 17:16:35    ERROR    basehttp    "GET /createorder?qrcode=49f44b1d-9afc-4ec4-adb8-7133a7abf619 HTTP/1.1" 500 112154   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 19:48:27    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("Could not parse the remainder: '[phone]' from 'contact_data[phone]'"), <traceback object at 0x7f0421494080>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/slippers/templatetags/slippers.py", line 26, in do_component
+    nodelist = parser.parse((f"/{tag_name[1:]}",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/defaulttags.py", line 953, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 484, in parse
+    raise self.error(token, e)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 482, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 703, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '[phone]' from 'contact_data[phone]'
+01/Jan/2025 19:48:27    ERROR    basehttp    "GET /createorder?qrcode=7abcd515-bc58-4ec4-8119-faae699c3d90 HTTP/1.1" 500 223886   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 19:48:27    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("Could not parse the remainder: '[phone]' from 'contact_data[phone]'"), <traceback object at 0x7f042074cbc0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/slippers/templatetags/slippers.py", line 26, in do_component
+    nodelist = parser.parse((f"/{tag_name[1:]}",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/defaulttags.py", line 953, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 484, in parse
+    raise self.error(token, e)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 482, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 703, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '[phone]' from 'contact_data[phone]'
+01/Jan/2025 19:48:27    ERROR    basehttp    "GET /createorder?qrcode=7abcd515-bc58-4ec4-8119-faae699c3d90 HTTP/1.1" 500 223886   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 19:49:39    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'TypeError'>, TypeError("'NoneType' object is not subscriptable"), <traceback object at 0x7f042055de40>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 180, in get
+    return super().get(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 155, in get_context_data
+    context['contact_data'] = coding_personal_data(phone=user_.phone, whatsapp=user_.whatsapp,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 313, in coding_personal_data
+    _= dict(map(lambda  x: (x[0], code_data(x[1])) , kwargs.items()))
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 313, in <lambda>
+    _= dict(map(lambda  x: (x[0], code_data(x[1])) , kwargs.items()))
+                                  ^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 308, in code_data
+    return f'*{code[1:-1]}*'
+               ~~~~^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+01/Jan/2025 19:49:39    ERROR    basehttp    "GET /createorder?qrcode=49f44b1d-9afc-4ec4-adb8-7133a7abf619 HTTP/1.1" 500 111633   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 19:49:42    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'TypeError'>, TypeError("'NoneType' object is not subscriptable"), <traceback object at 0x7f0420422640>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 180, in get
+    return super().get(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 155, in get_context_data
+    context['contact_data'] = coding_personal_data(phone=user_.phone, whatsapp=user_.whatsapp,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 313, in coding_personal_data
+    _= dict(map(lambda  x: (x[0], code_data(x[1])) , kwargs.items()))
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 313, in <lambda>
+    _= dict(map(lambda  x: (x[0], code_data(x[1])) , kwargs.items()))
+                                  ^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 308, in code_data
+    return f'*{code[1:-1]}*'
+               ~~~~^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+01/Jan/2025 19:49:42    ERROR    basehttp    "GET /createorder?qrcode=49f44b1d-9afc-4ec4-adb8-7133a7abf619 HTTP/1.1" 500 111770   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 19:51:48    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'TypeError'>, TypeError("'NoneType' object is not subscriptable"), <traceback object at 0x7ff56ccba0c0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 180, in get
+    return super().get(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 155, in get_context_data
+    context['contact_data'] = coding_personal_data(phone=user_.phone, whatsapp=user_.whatsapp,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 313, in coding_personal_data
+    _= dict(map(lambda  x: (x[0], code_data(x[1])) , kwargs.items()))
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 313, in <lambda>
+    _= dict(map(lambda  x: (x[0], code_data(x[1])) , kwargs.items()))
+                                  ^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 308, in code_data
+    return f'*{code[1:-1]}*'
+               ~~~~^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+01/Jan/2025 19:51:48    ERROR    basehttp    "GET /createorder?qrcode=853b2386-1621-4828-8f92-245b57d3cdfb HTTP/1.1" 500 111762   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 19:52:53    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'TypeError'>, TypeError("'NoneType' object is not subscriptable"), <traceback object at 0x7ff56c303a80>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 180, in get
+    return super().get(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 155, in get_context_data
+    context['contact_data'] = coding_personal_data(phone=user_.phone, whatsapp=user_.whatsapp,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 313, in coding_personal_data
+    _= dict(map(lambda  x: (x[0], code_data(x[1])) , kwargs.items()))
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 313, in <lambda>
+    _= dict(map(lambda  x: (x[0], code_data(x[1])) , kwargs.items()))
+                                  ^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 308, in code_data
+    return f'*{code[1:-1]}*'
+               ~~~~^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+01/Jan/2025 19:52:53    ERROR    basehttp    "GET /createorder?qrcode=a4d7b33f-dc43-4e6b-91bf-b4787b045e65 HTTP/1.1" 500 111622   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 19:53:08    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'TypeError'>, TypeError("'NoneType' object is not subscriptable"), <traceback object at 0x7ff56c1c2080>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 180, in get
+    return super().get(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 155, in get_context_data
+    context['contact_data'] = coding_personal_data(phone=user_.phone, whatsapp=user_.whatsapp,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 313, in coding_personal_data
+    _= dict(map(lambda  x: (x[0], code_data(x[1])) , kwargs.items()))
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 313, in <lambda>
+    _= dict(map(lambda  x: (x[0], code_data(x[1])) , kwargs.items()))
+                                  ^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 308, in code_data
+    return f'*{code[1:-1]}*'
+               ~~~~^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+01/Jan/2025 19:53:08    ERROR    basehttp    "GET /createorder?qrcode=07158ae6-7785-4b69-8dc0-c50c313d105a HTTP/1.1" 500 111902   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 19:53:08    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'TypeError'>, TypeError("'NoneType' object is not subscriptable"), <traceback object at 0x7ff56c050c00>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 180, in get
+    return super().get(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 155, in get_context_data
+    context['contact_data'] = coding_personal_data(phone=user_.phone, whatsapp=user_.whatsapp,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 313, in coding_personal_data
+    _= dict(map(lambda  x: (x[0], code_data(x[1])) , kwargs.items()))
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 313, in <lambda>
+    _= dict(map(lambda  x: (x[0], code_data(x[1])) , kwargs.items()))
+                                  ^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 308, in code_data
+    return f'*{code[1:-1]}*'
+               ~~~~^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+01/Jan/2025 19:53:08    ERROR    basehttp    "GET /createorder?qrcode=07158ae6-7785-4b69-8dc0-c50c313d105a HTTP/1.1" 500 111628   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 19:53:26    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'TypeError'>, TypeError("'NoneType' object is not subscriptable"), <traceback object at 0x7ff56c0d0200>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 180, in get
+    return super().get(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 155, in get_context_data
+    context['contact_data'] = coding_personal_data(phone=user_.phone, whatsapp=user_.whatsapp,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 313, in coding_personal_data
+    _= dict(map(lambda  x: (x[0], code_data(x[1])) , kwargs.items()))
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 313, in <lambda>
+    _= dict(map(lambda  x: (x[0], code_data(x[1])) , kwargs.items()))
+                                  ^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 308, in code_data
+    return f'*{code[1:-1]}*'
+               ~~~~^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+01/Jan/2025 19:53:26    ERROR    basehttp    "GET /createorder?qrcode=07158ae6-7785-4b69-8dc0-c50c313d105a HTTP/1.1" 500 111765   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 19:53:28    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'TypeError'>, TypeError("'NoneType' object is not subscriptable"), <traceback object at 0x7ff56c22e9c0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 180, in get
+    return super().get(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 155, in get_context_data
+    context['contact_data'] = coding_personal_data(phone=user_.phone, whatsapp=user_.whatsapp,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 313, in coding_personal_data
+    _= dict(map(lambda  x: (x[0], code_data(x[1])) , kwargs.items()))
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 313, in <lambda>
+    _= dict(map(lambda  x: (x[0], code_data(x[1])) , kwargs.items()))
+                                  ^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 308, in code_data
+    return f'*{code[1:-1]}*'
+               ~~~~^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+01/Jan/2025 19:53:28    ERROR    basehttp    "GET /createorder?qrcode=07158ae6-7785-4b69-8dc0-c50c313d105a HTTP/1.1" 500 111765   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 19:53:29    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'TypeError'>, TypeError("'NoneType' object is not subscriptable"), <traceback object at 0x7ff567fff8c0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 180, in get
+    return super().get(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 155, in get_context_data
+    context['contact_data'] = coding_personal_data(phone=user_.phone, whatsapp=user_.whatsapp,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 313, in coding_personal_data
+    _= dict(map(lambda  x: (x[0], code_data(x[1])) , kwargs.items()))
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 313, in <lambda>
+    _= dict(map(lambda  x: (x[0], code_data(x[1])) , kwargs.items()))
+                                  ^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 308, in code_data
+    return f'*{code[1:-1]}*'
+               ~~~~^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+01/Jan/2025 19:53:29    ERROR    basehttp    "GET /createorder?qrcode=07158ae6-7785-4b69-8dc0-c50c313d105a HTTP/1.1" 500 111765   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 19:53:53    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'TypeError'>, TypeError("'NoneType' object is not subscriptable"), <traceback object at 0x7ff567562640>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 180, in get
+    return super().get(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 155, in get_context_data
+    context['contact_data'] = coding_personal_data(phone=user_.phone, whatsapp=user_.whatsapp,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 313, in coding_personal_data
+    _= dict(map(lambda  x: (x[0], code_data(x[1])) , kwargs.items()))
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 313, in <lambda>
+    _= dict(map(lambda  x: (x[0], code_data(x[1])) , kwargs.items()))
+                                  ^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 308, in code_data
+    return f'*{code[1:-1]}*'
+               ~~~~^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+01/Jan/2025 19:53:53    ERROR    basehttp    "GET /createorder?qrcode=07158ae6-7785-4b69-8dc0-c50c313d105a HTTP/1.1" 500 111765   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 19:53:54    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'TypeError'>, TypeError("'NoneType' object is not subscriptable"), <traceback object at 0x7ff5675d7600>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 180, in get
+    return super().get(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 155, in get_context_data
+    context['contact_data'] = coding_personal_data(phone=user_.phone, whatsapp=user_.whatsapp,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 313, in coding_personal_data
+    _= dict(map(lambda  x: (x[0], code_data(x[1])) , kwargs.items()))
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 313, in <lambda>
+    _= dict(map(lambda  x: (x[0], code_data(x[1])) , kwargs.items()))
+                                  ^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 308, in code_data
+    return f'*{code[1:-1]}*'
+               ~~~~^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+01/Jan/2025 19:53:54    ERROR    basehttp    "GET /createorder?qrcode=07158ae6-7785-4b69-8dc0-c50c313d105a HTTP/1.1" 500 111765   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 19:53:55    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'TypeError'>, TypeError("'NoneType' object is not subscriptable"), <traceback object at 0x7ff5674721c0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 180, in get
+    return super().get(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 155, in get_context_data
+    context['contact_data'] = coding_personal_data(phone=user_.phone, whatsapp=user_.whatsapp,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 313, in coding_personal_data
+    _= dict(map(lambda  x: (x[0], code_data(x[1])) , kwargs.items()))
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 313, in <lambda>
+    _= dict(map(lambda  x: (x[0], code_data(x[1])) , kwargs.items()))
+                                  ^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 308, in code_data
+    return f'*{code[1:-1]}*'
+               ~~~~^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+01/Jan/2025 19:53:55    ERROR    basehttp    "GET /createorder?qrcode=07158ae6-7785-4b69-8dc0-c50c313d105a HTTP/1.1" 500 111765   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 19:58:41    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'TypeError'>, TypeError("object of type 'NoneType' has no len()"), <traceback object at 0x7fde3f1f5e00>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 180, in get
+    return super().get(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 155, in get_context_data
+    context['contact_data'] = coding_personal_data(phone=user_.phone, whatsapp=user_.whatsapp,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 314, in coding_personal_data
+    _= dict(map(lambda  x: (x[0], code_data(x[1])) , kwargs.items()))
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 314, in <lambda>
+    _= dict(map(lambda  x: (x[0], code_data(x[1])) , kwargs.items()))
+                                  ^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 305, in code_data
+    if len(code) >= 7 :
+       ^^^^^^^^^
+TypeError: object of type 'NoneType' has no len()
+01/Jan/2025 19:58:41    ERROR    basehttp    "GET /createorder?qrcode=07158ae6-7785-4b69-8dc0-c50c313d105a HTTP/1.1" 500 111497   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 21:19:26    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'TypeError'>, TypeError("object of type 'UserProfile' has no len()"), <traceback object at 0x7f5e55764fc0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 180, in get
+    return super().get(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 156, in get_context_data
+    context['contact_data'] = coding_personal_data(name=user_,  phone=user_.phone, whatsapp=user_.whatsapp,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 314, in coding_personal_data
+    _= dict(map(lambda  x: (x[0], code_data(x[1])) , kwargs.items()))
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 314, in <lambda>
+    _= dict(map(lambda  x: (x[0], code_data(x[1])) , kwargs.items()))
+                                  ^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 307, in code_data
+    if len(code) >= 7 :
+       ^^^^^^^^^
+TypeError: object of type 'UserProfile' has no len()
+01/Jan/2025 21:19:26    ERROR    basehttp    "GET /createorder?qrcode=d70d5e7a-a4f0-4f68-b858-01cb9c4edf40 HTTP/1.1" 500 111802   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 21:58:39    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError('Empty variable tag on line 133'), <traceback object at 0x7f1e1f247b40>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 478, in parse
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Empty variable tag on line 133
+01/Jan/2025 21:58:39    ERROR    basehttp    "GET /createorder?qrcode=853b2386-1621-4828-8f92-245b57d3cdfb HTTP/1.1" 500 161496   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 21:58:48    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("Invalid block tag on line 134: 'endfor'. Did you forget to register or load this tag?"), <traceback object at 0x7f1e2436de80>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 505, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'endfor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 134: 'endfor'. Did you forget to register or load this tag?
+01/Jan/2025 21:58:48    ERROR    basehttp    "GET /createorder?qrcode=853b2386-1621-4828-8f92-245b57d3cdfb HTTP/1.1" 500 175131   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 21:58:50    ERROR    log    Internal Server Error: /createorder   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("Invalid block tag on line 134: 'endfor'. Did you forget to register or load this tag?"), <traceback object at 0x7f1e1f2eb7c0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 505, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'endfor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/response.py", line 111, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/response.py", line 87, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/response.py", line 69, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/template/base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 134: 'endfor'. Did you forget to register or load this tag?
+01/Jan/2025 21:58:50    ERROR    basehttp    "GET /createorder?qrcode=853b2386-1621-4828-8f92-245b57d3cdfb HTTP/1.1" 500 175133   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 22:13:34    ERROR    log    Internal Server Error: /stat/   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'AttributeError'>, AttributeError("'Graph' object has no attribute 'make_graf_pie'"), <traceback object at 0x7f4b81539a40>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/list.py", line 174, in get
+    context = self.get_context_data()
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 312, in get_context_data
+    .make_graf_pie()
+     ^^^^^^^^^^^^^
+AttributeError: 'Graph' object has no attribute 'make_graf_pie'
+01/Jan/2025 22:13:34    ERROR    basehttp    "GET /stat/ HTTP/1.1" 500 113872   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+01/Jan/2025 22:13:41    ERROR    log    Internal Server Error: /stat/   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'AttributeError'>, AttributeError("'Graph' object has no attribute 'make_graf_pie'"), <traceback object at 0x7f4b8111a180>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/views/generic/list.py", line 174, in get
+    context = self.get_context_data()
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 312, in get_context_data
+    .make_graf_pie()
+     ^^^^^^^^^^^^^
+AttributeError: 'Graph' object has no attribute 'make_graf_pie'
+01/Jan/2025 22:13:41    ERROR    basehttp    "GET /stat/ HTTP/1.1" 500 113872   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None

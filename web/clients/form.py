@@ -45,3 +45,29 @@ class CustomerForm(forms.ModelForm):
         fields = ('customer_name', 'phone', 'telegram', 'whatsapp', 'profile', 'foto', 'city')
 
 
+class CustomerFormForModal(forms.ModelForm):
+    customer_name = forms.CharField(
+        label='',
+        widget=forms.TextInput(attrs={"class": "form-control mb-2", 'placeholder': "Name", 'maxlength': 20}),
+        required=True
+    )
+    phone = forms.CharField(
+        label='',
+        widget=forms.TextInput(attrs={"class": "form-control mb-2", 'placeholder': "Phone", 'type': 'tel', 'maxlength': 16}),
+        required=False
+    )
+    telegram = forms.CharField(
+        label='',
+        widget=forms.TextInput(attrs={"class": "form-control  mb-2", 'placeholder': "Telegram", 'maxlength': 26}),
+        required=False
+    )
+    whatsapp = forms.CharField(
+        label='',
+        widget=forms.TextInput(attrs={"class": "form-control  mb-2", 'placeholder': "Whatsapp", 'maxlength': 26}),
+        required=False
+    )
+
+    class Meta:
+        model = UserProfile
+        fields = ('customer_name', 'phone', 'telegram', 'whatsapp')
+

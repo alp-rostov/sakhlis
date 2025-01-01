@@ -11,7 +11,7 @@ from reportlab.pdfbase import pdfmetrics
 from telebot import types
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
-from reportlab.lib.units import mm, inch
+from reportlab.lib.units import mm
 from reportlab.pdfgen import canvas
 from reportlab.platypus import Paragraph, Table, TableStyle
 import matplotlib.pyplot as plt
@@ -210,7 +210,6 @@ class InvoiceMaker(object):
 
 class Graph:
     """ create a graph"""
-
     def __init__(self,
                  queryset,
                  name_X: str,
@@ -302,12 +301,20 @@ def is_valid_uuid(uuid_to_test, version=4):
         return False
     return True
 
-def coding_personal_data(phone:str, telegram:str, whatsapp:str):
+def code_data(code: str or None) -> str:
+    if not code:
+        return ''
+    if len(code) >= 7 :
+        return f'{code[0:-5]}**{code[-3:-1]}*'
+    elif 5<len(code) < 7:
+        return f'{code[0:-2]}**'
+    elif len(code) < 5:
+        return f'{code[0:-1]}*'
+
+def coding_personal_data(**kwargs):
     " coding contact information showing without authentication"
-    phone_ = f'{phone[0:-5]}**{phone[-3:-1]}*' if phone else ''
-    whatsapp_ = f'{whatsapp[0:-5]}**{whatsapp[-3:-1]}*' if whatsapp else ''
-    if phone == telegram:
-        telegram_ = f'{telegram[0:-5]}**{telegram[-3:-1]}*' if telegram else ''
-    else:
-        telegram_ = f'*{telegram[1:-2]}**' if telegram else ''
-    return (phone_, whatsapp_, telegram_)
+    return dict(map(lambda  x: (x[0], code_data(x[1])) , kwargs.items()))
+
+
+
+
