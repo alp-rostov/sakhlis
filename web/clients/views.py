@@ -1,5 +1,6 @@
 from django.contrib.auth.mixins import PermissionRequiredMixin, LoginRequiredMixin
 from django.db.models import Exists, Subquery, OuterRef, Count, Sum, F
+from django.http import JsonResponse
 from django.views.generic import ListView, UpdateView, TemplateView, DetailView, CreateView
 from django.shortcuts import redirect, get_object_or_404
 
@@ -12,7 +13,7 @@ from app_site.models import OrderList, Invoice
 from app_site.repository import DataFromRepairerList, DataFromInvoice
 from app_site.views import OrderManagementSystem, OrderCreate
 from clients.filters import ClientFilter
-from clients.form import CustomerForm
+from clients.form import CustomerForm, CustomerFormForModal
 from clients.models import UserProfile
 
 
@@ -153,4 +154,11 @@ class ClientsUpdate(PermissionRequiredMixin, LoginRequiredMixin, UpdateView):
     def get_success_url(self):
         dict_choice_url = {'repairer': '/list_order/' + self.request.GET.get('pk'), 'owner': '/owner/apartment'}
         return dict_choice_url[self.request.user.groups.first().name]
+
+def clent_create_api(request):
+    _=request.POST.get('qr-code')[8:]
+    if request.method == 'POST' and UserProfile.objects.get(qrcode_id=_):
+        form = CustomerFormForModal(request.POST)
+        form.instance.save()
+    return JsonResponse({'message': 'cccc'})
 

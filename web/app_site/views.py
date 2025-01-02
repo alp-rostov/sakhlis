@@ -310,7 +310,7 @@ class Statistica(PermissionRequiredMixin, LoginRequiredMixin, ListView):
         context['d'] = Graph(data_from_invoice.get_quantity_of_orders_by_type(repairer=self.request.user),
                              'service_id__type', 'count', WORK_CHOICES_, 'Order structure, quantity.', '') \
             .make_graf_pie()
-        print(dir(Graph))
+
         context['d_'] = Graph(data_from_invoice.get_cost_of_orders_by_type(repairer=self.request.user),
                               'service_id__type', 'count', WORK_CHOICES_, 'Order structure, lar.', '') \
             .make_graf_pie()

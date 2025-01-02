@@ -4,7 +4,6 @@ from django.db import models
 from django.contrib.auth.models import User
 
 from app_site.constants import CITY_CHOICES
-# from app_site.models import OrderList
 
 
 class UserProfile(models.Model):
@@ -19,8 +18,6 @@ class UserProfile(models.Model):
     profile = models.CharField(max_length=1500, null=True, blank=True, verbose_name='About me:')
     foto = models.ImageField(upload_to='images/', null=True, blank=True, verbose_name='Photo:')
     user = models.OneToOneField(User, on_delete=models.CASCADE, blank=True, null=True)
-    rating_sum = models.CharField(max_length=1500, null=True, blank=True)
-    rating_num = models.CharField(max_length=1500, null=True, blank=True)
     class Meta:
         verbose_name = 'UserProfile'
         verbose_name_plural = 'UserProfile'

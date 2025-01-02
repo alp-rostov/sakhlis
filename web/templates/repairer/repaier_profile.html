@@ -82,6 +82,7 @@
             {% #form form_order_=form_order form_appart_=form_appart form_customer_=form_customer %}
                 {% csrf_token %}
             {% /form %}
+
         </div>
 
 
@@ -102,7 +103,7 @@
                 </div>
                 <div class="col-md-4" >
                     <a href="../list_order/{{b.pk}}" id="order_{{ b.pk }}" class ='text-secondary'>
-                        <h5>Order № {{ b.pk }}, {{ b.time_in|date:"d b Y" }}</h5>
+                        <h5>Order № {{ b.pk }}</h5> <h6>{{ b.time_in|date:"d b Y" }}</h6>
 
                         <b class="text-secondary">
                             {{ b.customer_id.customer_name }}

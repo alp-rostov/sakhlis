@@ -129,7 +129,8 @@
                             </div>
                         </div>
 
-                            <form method="post" action="" name="form" id="form" class="">
+                            <form method="post" action="" name="form_add_client" id="form_add_client" class="">
+                                <input type="text" value="{{qruuid}}" name="qr-code">
                                 {% csrf_token %}
                                 {{form_for_modal}}
                                 <button type="submit" name="submit" class="btn btn-lg mycolor m-2 p-2">Сохранить</button>
@@ -183,6 +184,25 @@ $(document.body).ready(function() {
                 },
             });
     });
+
+
+
+    $('#form_add_client').submit(function(e) {
+    e.preventDefault();
+    $.ajax({
+        url: '/client/createclient',
+        type: 'POST',
+        data: $(this).serialize(),
+        dataType: 'text',
+        beforeSend: function () {$("#form_add_client").html('<h3>Отправляется...</h3>');},
+        success: function (resp) {
+            let mes=JSON.parse(resp);
+            console.log(mes)
+            },
+        });
+    });
+
+
 });
 </script>
 </body></html>
