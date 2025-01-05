@@ -152,13 +152,16 @@ class ClientsUpdate(PermissionRequiredMixin, LoginRequiredMixin, UpdateView):
     permission_required = PERMISSION_FOR_REPAIER
 
     def get_success_url(self):
-        dict_choice_url = {'repairer': '/list_order/' + self.request.GET.get('pk'), 'owner': '/owner/apartment'}
-        return dict_choice_url[self.request.user.groups.first().name]
+        if self.request.GET.get('pk'):
+            dict_choice_url = {'repairer': '/list_order/' + self.request.GET.get('pk'), 'owner': '/owner/apartment'}
+            return dict_choice_url[self.request.user.groups.first().name]
+        else:
+            return '../../clients'
 
 def clent_create_api(request):
     _=request.POST.get('qr-code')[8:]
     if request.method == 'POST' and UserProfile.objects.get(qrcode_id=_):
         form = CustomerFormForModal(request.POST)
         form.instance.save()
-    return JsonResponse({'message': 'cccc'})
+    return JsonResponse({'message': ''})
 

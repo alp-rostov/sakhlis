@@ -22,21 +22,44 @@
     </div>
 </div>
     {% for b in i.list %}
-    <div  class="row" id="">
-        <div class="col-md-6">
-            <a href="{{ b.pk  }}" id="link" class="h5 " data-toggle="modal" data-target="#exampleModal">
-                {{ b.customer_name }}
-                        {% if b.user %}
-                        <i class="fas fa-check mycolor ml-1" title="Registered user"></i>
-                        {% endif %}            </a>
+    <div  class="row mb-2" id="">
+        <div class="col-md-2">
+            <a href="{% url 'clients_update' b.pk %}" class="text-secondary ml-2" title="update information about client" >
+                <i class='far fa-edit'></i>
+            </a>
+            <a href="" class="text-secondary ml-2" title="delete client" >
+                <i class='far fa-trash-alt'></i>
+            </a>
+            <a href="{{ b.pk  }}" class="text-secondary ml-2" title="about order`s client" id="link_"
+            data-toggle="modal" data-target="#exampleModal" >
+                <i class='far fa-address-book'></i>
+            </a>
+
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
+             <a href="{{ b.pk  }}" class="text-secondary ml-2" title="far fa-address-card" id="link"
+                    data-toggle="modal" data-target="#exampleModal" >            {{ b.customer_name }}
+             </a>
+                {% if b.user %}
+                    <i class="fas fa-check mycolor ml-1" title="Registered user"></i>
+                {% endif %}
+        </div>
+
+        <div class="col-md-2">
+            <a href="{% url 'createorder' %}?qrcode={{b.qrcode_id}}" class="text-secondary ml-2" title="" >
+                <i class='fas fa-qrcode' style='font-size:16px'> qrcode</i>
+            </a>
+        </div>
+
+        <div class="col-md-3">
             {{ b.profile|default_if_none:"" }}
         </div>
+
+
     </div>
     {% endfor %}
 {% empty %}
-<h3 class="mycolor">NO DATA<br>Enter customer details</h3>
+    <h3 class="mycolor">NO DATA<br>Enter customer details</h3>
 {% endfor %}
 
 {% #owner_modal_window   %}

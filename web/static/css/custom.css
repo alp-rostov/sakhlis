@@ -49,7 +49,6 @@ a:hover, a:focus, a:active {
 	 color: #fefefe;
  }
 
-
 section {
 	padding: 3rem 0px;
 }
@@ -177,7 +176,6 @@ section h1 {
 }
 
 .button-like_ {
-  padding: 8px 15px;
   color: white;
   border-radius: 25px;
   text-decoration: none;
@@ -311,7 +309,7 @@ a {
 }
 
 .btn-send {
-    padding: 8px 15px;
+    padding: 8px 8px;
     color: white;
     border-radius: 25px;
     text-decoration: none;
@@ -322,7 +320,7 @@ a {
     font-weight: bold;
     margin-top: 15px;
     backdrop-filter: blur(30px);
-    border: 3px solid;
+    border: 2px solid;
     border-color: var(--span-color);
     transition: 1.0s;
 }

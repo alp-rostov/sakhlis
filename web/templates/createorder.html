@@ -115,9 +115,9 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-body  mx-3">
-                <div id="contact" class="form-container">
+                <div id="contact_" class="form-container">
                     <fieldset>
-                        <div id="message">
+                        <div id="message_">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">X</span>
                         </button>
@@ -130,7 +130,7 @@
                         </div>
 
                             <form method="post" action="" name="form_add_client" id="form_add_client" class="">
-                                <input type="text" value="{{qruuid}}" name="qr-code">
+                                <input type="hidden" value="{{qruuid}}" name="qr-code">
                                 {% csrf_token %}
                                 {{form_for_modal}}
                                 <button type="submit" name="submit" class="btn btn-lg mycolor m-2 p-2">Сохранить</button>

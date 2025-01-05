@@ -78,13 +78,12 @@
 {% /menu %}
 
 
-<header id="section-0" class="bg_img jarallax _mPS2id-t mPS2id-target mPS2id-target-first mPS2id-target-last" data-jarallax="{'speed': 0.2}">
+<header id="section-0" class="bg_img text-center">
     <div class="space">
         <div class="text-center">
             <img src="{% static 'images/logo.png' %}" alt="Мастер на час в Тбилиси" class="logo mt-5" width="200">
             <h1 class="display-4 mb-0" >Мастер на час в Тбилиси </h1>
             <p class="lead">Нужны мужские руки? Домашний мастер быстро решит <br>любые проблемы с ремонтом в квартире, доме и офисе!</p>
-
             {% if not request.user.is_authenticated %}
 
             <div class="lead" >
@@ -102,13 +101,17 @@
                 {% if request.user.groups.first.name == 'owner' %}
                 <br><a href="{% url 'profile' %}" class="btn-send p-3 h2 lead">Личный кабинет</a>
                 {% else %}
-                <a class="btn-send" href="{% url 'createorder'%}">Отправить заявку на ремонт</a>
-                <hr>
-                <a href="{% url 'business' %}" class="button-like_ m-3">Для корпоративных клиентов</a>
+                <a href="{% url 'createorder'%}" class="btn-send">Отправить заявку на ремонт</a><br>
+                <a href="{% url 'business' %}" class="btn-send">Для корпоративных клиентов</a>
                 {% endif %}
             </div>
         </div>
+
     </div>
+    <div class="w-100 mt-5">
+        <p class="lead">{{clients}} клиентов | {{orders}} выполненных работ
+    </div>
+
 </header>
 <!--And Header-->
 
@@ -116,8 +119,9 @@
     <div class="container">
         <div class="position-relative">
     <h2 class="h1-responsive mb-4"><strong class="mycolor">Как мы работаем?</strong>
-        в компании "Мастер на час"
+        в компании "Мастер на час
     </h2>
+
     <div class="container text-coor">
         <div class="row pb-4 m-1">
             <div class="col-3 text-farme p-0"><img src="{% static 'images/1_.png' %}" alt="1" ></div>

@@ -142,20 +142,19 @@ class OrderCreate(CreateView):
         context['form_customer'] = CustomerForm
         if self.request.user.is_authenticated and self.request.user.groups.first().name == 'owner':
             user_ = get_object_or_404(UserProfile, user=self.request.user)
-        elif not self.request.user.is_authenticated and is_valid_uuid(self.request.GET.get('qrcode')):
+        elif ((not self.request.user.is_authenticated or self.request.user.is_superuser)
+              and is_valid_uuid(self.request.GET.get('qrcode'))):
             try:
                 user_ = UserProfile.objects.get(qrcode_id=self.request.GET.get('qrcode'))
             except UserProfile.DoesNotExist:
                 return context
         else:
             return context
-
         context['form_appart'] = ApartmentFormOwner(person=user_)
         context['form_customer'] = ''
         context['form_for_modal'] = CustomerFormForModal
         context['contact_data'] = coding_personal_data(name=str(user_),  phone=user_.phone, whatsapp=user_.whatsapp,
                                                        telegram=user_.telegram)
-
         context['qruuid'] =f'?qrcode={self.request.GET.get("qrcode")}'
         return context
 
