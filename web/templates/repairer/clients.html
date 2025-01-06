@@ -36,7 +36,7 @@
             </a>
 
         </div>
-        <div class="col-md-4">
+        <div class="col-md-2">
              <a href="{{ b.pk  }}" class="text-secondary ml-2" title="far fa-address-card" id="link"
                     data-toggle="modal" data-target="#exampleModal" >            {{ b.customer_name }}
              </a>
@@ -45,9 +45,14 @@
                 {% endif %}
         </div>
 
-        <div class="col-md-2">
-            <a href="{% url 'createorder' %}?qrcode={{b.qrcode_id}}" class="text-secondary ml-2" title="" >
-                <i class='fas fa-qrcode' style='font-size:16px'> qrcode</i>
+        <div class="col-md-1">
+            <a href="{% url 'createorder_en' %}?qrcode={{b.qrcode_id}}" class="text-secondary ml-2" title="" >
+                LINK
+            </a>
+        </div>
+       <div class="col-md-2">
+            <a href="{% url 'qrclients' %}?qrcode={{b.qrcode_id}}" class="text-secondary ml-2" title="" >
+                <i class='fas fa-qrcode' style='font-size:16px'> QR-code</i>
             </a>
         </div>
 

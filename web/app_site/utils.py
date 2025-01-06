@@ -2,10 +2,13 @@ import _io
 import os
 from uuid import UUID
 
+import qrcode
 import reportlab
 from geopy.geocoders import Nominatim
 from reportlab.lib import styles
+from PIL import Image
 from reportlab.lib.enums import TA_LEFT, TA_RIGHT
+from reportlab.lib.utils import ImageReader
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfbase import pdfmetrics
 from telebot import types
@@ -69,10 +72,10 @@ def get_telegram_button(repairer: list, order_pk: int) -> types.InlineKeyboardMa
     return keyboard.add(*button)
 
 
-class InvoiceMaker(object):
+class CreatePDF(object):
     """ create pdf-document -> the invoice for payment """
 
-    def __init__(self, pdf_file: _io.BytesIO, info: OrderList):
+    def __init__(self, pdf_file: _io.BytesIO, info_order: OrderList=None, info_client:str=''):
         """ pdf_file = io.BytesIO()"""
         self.c = canvas.Canvas(pdf_file, bottomup=0)
         folder = os.path.dirname(reportlab.__file__)
@@ -115,11 +118,17 @@ class InvoiceMaker(object):
                                                                              ))
 
         self.width, self.height = A4
-        self.info = info
+        self.info_order = info_order
+        self.info_client = info_client
 
-    def createDocument(self) -> None:
+    def create_qr_code_client(self) -> None:
+        self.createParagraph(('Repair service in Tbilisi'), *self.coord(5, 5))
+        _=f'http://127.0.0.1:8000/createorder_en?qrcode={self.info_client}'
+        self.createQRcode(*self.coord(15, -110), 100, str_=_ )
+
+    def createDocument_invoice(self) -> None:
         # create a header
-        date_info = str(self.info.time_in)[0:10]
+        date_info = str(self.info_order.time_in)[0:10]
         #
         line1 = ('ინდივიდუალურიმეწარმე სერგეი გოცინ <br />'
                  'საქართველო, თბილისი, დიდუბის რაიონი, <br />'
@@ -131,11 +140,11 @@ class InvoiceMaker(object):
 
         self.createParagraph(line1, *self.coord(-20, -45), style='Top_Right')
 
-        line2 = f'<b>Invoice # {self.info.pk} </b><br /><br /><font fontsize=18>Data {date_info}</font>'
+        line2 = f'<b>Invoice # {self.info_order.pk} </b><br /><br /><font fontsize=18>Data {date_info}</font>'
         self.createParagraph(line2, *self.coord(0, 80), style='Invoice_center')
 
-        line3 = (f'<font fontName="Georgian">Invoiced To: <br /><b>{self.info.customer_id.customer_name}</b><br />'
-                 f'{self.info.apartment_id}, {CITY_CHOICES_INVOICE[self.info.apartment_id.address_city]}</font>')
+        line3 = (f'<font fontName="Georgian">Invoiced To: <br /><b>{self.info_order.customer_id.customer_name}</b><br />'
+                 f'{self.info_order.apartment_id}, {CITY_CHOICES_INVOICE[self.info_order.apartment_id.address_city]}</font>')
 
         self.createParagraph(line3, *self.coord(20, 95), style='Heading2')
 
@@ -144,7 +153,7 @@ class InvoiceMaker(object):
         table_serv.append(['#', 'მომსახურება/პროდუქტები', 'რაოდენობა', 'ფასი', 'ჯამი']) # name / count/price/amount
         i = 1
         sum_ = 0
-        for service in self.info.invoice_set.all():
+        for service in self.info_order.invoice_set.all():
             table_serv.append([i,service.service_id, service.quantity, service.price, round(service.sum, 2)])
             i = i + 1
             sum_ = sum_ + service.sum
@@ -179,12 +188,10 @@ class InvoiceMaker(object):
                  f'<a href="https://www.sakhlis-remonti.ge/" color="blue">www.sakhlis-remonti.ge</a> |'
                  f'alprostov.1982@gmail.com')
         self.createParagraph(line4, *self.coord(20, 270), style='Normal')
-
+        self.createQRcode( 400, 580, 70, 'https://www.sakhlis-remonti.ge/' )
 
     def coord(self, x, y, unit=1) -> tuple:
-        """
-        Helper class to help position flowables in Canvas objects
-        """
+        """ Helper class to help position flowables in Canvas objects """
         x, y = x * unit, y * unit
         return x, y
 
@@ -197,11 +204,18 @@ class InvoiceMaker(object):
         p.wrapOn(self.c, self.width, self.height)
         p.drawOn(self.c, *self.coord(x, y, mm))
 
+
     def createTable(self, data, x, y, TableStyle_, c_width):
         table = Table(data, colWidths=c_width)
         table.setStyle(TableStyle_)
         table.wrapOn(self.c, self.width, self.height)
         table.drawOn(self.c, *self.coord(x, y))
+
+    def createQRcode(self, x, y, width:int=None, str_:str=''):
+        _ = create_qr_code_url(f'{str_}{self.info_client}')
+        Im = Image.open(_)
+        ir = ImageReader(Im)
+        self.c.drawImage(ir, *self.coord(x, y), width, preserveAspectRatio=True, mask='auto')
 
     def savePDF(self):
         self.c.showPage()
@@ -301,19 +315,26 @@ def is_valid_uuid(uuid_to_test, version=4):
         return False
     return True
 
-def code_data(code: str or None) -> str:
-    if not code:
-        return ''
-    if len(code) >= 7 :
-        return f'{code[0:-5]}**{code[-3:-1]}*'
-    elif 5<len(code) < 7:
-        return f'{code[0:-2]}**'
-    elif len(code) < 5:
-        return f'{code[0:-1]}*'
 
 def coding_personal_data(**kwargs):
-    " coding contact information showing without authentication"
+    ''' coding contact information showing without authentication '''
+    def code_data(code: str or None) -> str:
+        if not code:
+            return ''
+        if len(code) >= 7:
+            return f'{code[0:-5]}**{code[-3:-1]}*'
+        elif 5 <= len(code) < 7:
+            return f'{code[0:-2]}**'
+        elif len(code) < 5:
+            return f'{code[0:-1]}*'
     return dict(map(lambda  x: (x[0], code_data(x[1])) , kwargs.items()))
+
+def create_qr_code_url(url:str):
+    ''' Generate the QR code image and save to buffer'''
+    qr = qrcode.make(url)
+    buffer = io.BytesIO()
+    qr.save(buffer, format='PNG')
+    return buffer
 
 
 

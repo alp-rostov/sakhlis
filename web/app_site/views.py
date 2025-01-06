@@ -2,12 +2,13 @@ import json
 import logging
 import uuid
 
+from PIL.ImageFont import ImageFont
 from django.contrib.auth.models import Group
 from django.contrib.auth.views import LoginView
 from django.db import transaction
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.contrib.auth.decorators import login_required
-from django.http import FileResponse, JsonResponse, Http404
+from django.http import FileResponse, JsonResponse, Http404, HttpResponse
 from django.forms import modelformset_factory
 from django.shortcuts import redirect, get_object_or_404
 from django.urls import reverse_lazy
@@ -173,7 +174,7 @@ class OrderCreate(CreateView):
                                      'repaier': '',
                                      'apartment': form.instance.apartment_id.pk
                                      })
-            elif self.request.GET.get('qrcode') and not self.request.user.is_authenticated:
+            elif self.request.GET.get('qrcode'):
                 apartment_id = Apartment.objects.get(pk=self.request.POST.get('apartment_id'))  #TODO eliminate code duplication
                 customer_id = apartment_id.owner
 
@@ -354,6 +355,17 @@ class UserRegisterView(CreateView):
             return redirect('message_after_registration')
 
 
+def create_qr_code_pdf(request, **kwargs):
+    """ Create pdf-file for printing """
+    buf = io.BytesIO()
+    qrcode_id=request.GET.get('qrcode')
+    doc = CreatePDF(buf, info_client=qrcode_id, info_order=None )
+    doc.create_qr_code_client()
+    doc.savePDF()
+    buf.seek(0)
+    return FileResponse(buf, as_attachment=True, filename=f'QrCode_.pdf')
+
+
 def CreateIvoicePDF(request, **kwargs):
     """ Create invoice pdf-file for printing """
     # get information from models
@@ -361,8 +373,8 @@ def CreateIvoicePDF(request, **kwargs):
     info = DataFromOrderList().get_all_data_of_order_with_from_invoice().get(pk=order_pk)
     # create file
     buf = io.BytesIO()
-    doc = InvoiceMaker(buf, info)
-    doc.createDocument()
+    doc = CreatePDF(buf, info_order=info)
+    doc.createDocument_invoice()
     doc.savePDF()
     buf.seek(0)
     return FileResponse(buf, as_attachment=True, filename=f'Invoice_{order_pk}_.pdf')

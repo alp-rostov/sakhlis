@@ -31,6 +31,7 @@ urlpatterns = [
     path('confirm_registration/', InfoTemplate.as_view(extra_context={'title': 'Your account has been verified',
                                                           'info': ''}), name='confirm_registration'),
     path('clients/', Clients.as_view(), name='clients'),
+    path('clients/qr', create_qr_code_pdf, name='qrclients'),
 
     path('apartments/', ApartmentList.as_view(), name='apartments'),
     path('apartments/update/<int:pk>', ApartmentUpdate.as_view(), name='apart'),
