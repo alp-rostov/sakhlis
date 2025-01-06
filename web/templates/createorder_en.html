@@ -85,11 +85,15 @@
            {% #form form_order_=form form_appart_=form_appart  form_customer_=form_customer lng='en' %}
              {% csrf_token %}
            {% if contact_data.name %}
-           <h4>Customer: {{ contact_data.name }}</h4>
-           <h5>
+           <h4>Customer: {{ contact_data.name }} | <a class="text-secondary" href="{% url 'login' %}" title='Sign in'>
+                    <i class="fa fa-sign-in"> Login</i>
+                </a></h4>
+           <h5 class="mb-0">
                <i class="fa fa-phone mycolor m-1 p-2 btn border-danger" aria-hidden="true"> {{contact_data.phone }}</i>
                <i class="fa fa-telegram mycolor m-1 p-2 btn border-danger" aria-hidden="true"> {{ contact_data.telegram }}</i>
-               <i class="fa fa-whatsapp mycolor m-1 p-2 btn border-danger" aria-hidden="true"> {{ contact_data.whatsapp }}</i> </h5>
+               <i class="fa fa-whatsapp mycolor m-1 p-2 btn border-danger" aria-hidden="true"> {{ contact_data.whatsapp }}</i>
+           </h5>
+               <a href="" class="text-secondary">add new customer contact information</a>
            {% endif %}
 
            {% /form %}

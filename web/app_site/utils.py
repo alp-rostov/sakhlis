@@ -213,9 +213,9 @@ class CreatePDF(object):
 
     def createQRcode(self, x, y, width:int=None, str_:str=''):
         _ = create_qr_code_url(f'{str_}{self.info_client}')
-        Im = Image.open(_)
-        ir = ImageReader(Im)
-        self.c.drawImage(ir, *self.coord(x, y), width, preserveAspectRatio=True, mask='auto')
+        with Image.open(_) as Im:
+            ir = ImageReader(Im)
+            self.c.drawImage(ir, *self.coord(x, y), width, preserveAspectRatio=True, mask='auto')
 
     def savePDF(self):
         self.c.showPage()
