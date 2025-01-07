@@ -75,7 +75,7 @@ def get_telegram_button(repairer: list, order_pk: int) -> types.InlineKeyboardMa
 class CreatePDF(object):
     """ create pdf-document -> the invoice for payment """
 
-    def __init__(self, pdf_file: _io.BytesIO, info_order: OrderList=None, info_client:str=''):
+    def __init__(self, pdf_file: _io.BytesIO, info_order: OrderList=None):
         """ pdf_file = io.BytesIO()"""
         self.c = canvas.Canvas(pdf_file, bottomup=0)
         folder = os.path.dirname(reportlab.__file__)
@@ -115,16 +115,12 @@ class CreatePDF(object):
                                        borderPadding=20,
                                        borderColor='#8c8a8a',
                                        borderRadius=5,
-                                                                             ))
+                                       ))
+
 
         self.width, self.height = A4
         self.info_order = info_order
         self.info_client = info_client
-
-    def create_qr_code_client(self) -> None:
-        self.createParagraph(('Repair service in Tbilisi'), *self.coord(5, 5))
-        _=f'http://127.0.0.1:8000/createorder_en?qrcode={self.info_client}'
-        self.createQRcode(*self.coord(15, -110), 100, str_=_ )
 
     def createDocument_invoice(self) -> None:
         # create a header
@@ -203,7 +199,6 @@ class CreatePDF(object):
         p = Paragraph(ptext, style=style)
         p.wrapOn(self.c, self.width, self.height)
         p.drawOn(self.c, *self.coord(x, y, mm))
-
 
     def createTable(self, data, x, y, TableStyle_, c_width):
         table = Table(data, colWidths=c_width)
@@ -331,10 +326,12 @@ def coding_personal_data(**kwargs):
 
 def create_qr_code_url(url:str):
     ''' Generate the QR code image and save to buffer'''
-    qr = qrcode.make(url)
-    buffer = io.BytesIO()
-    qr.save(buffer, format='PNG')
-    return buffer
+    qr = qrcode.QRCode(version=1, error_correction=qrcode.constants.ERROR_CORRECT_L,
+    box_size=12, border=1,  )
+    qr.add_data(url)
+    qr.make()
+    img_ = qr.make_image(fill_color="#FF8000", back_color="white")
+    return img_
 
 
 

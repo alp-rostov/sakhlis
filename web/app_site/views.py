@@ -355,15 +355,33 @@ class UserRegisterView(CreateView):
             return redirect('message_after_registration')
 
 
-def create_qr_code_pdf(request, **kwargs):
+def create_qr_code_client(request, **kwargs):
     """ Create pdf-file for printing """
+
+    from PIL import Image, ImageDraw, ImageFont
+
+
+    city='Tbilisi'
+    site='https://www.sakhlis-remonti.ge/createorder_en'
+    qrcode_= request.GET.get('qrcode')
+    if qrcode_:
+        str_=f'{site}?qrcode={qrcode_}'
+    else:
+        str_=site
+
+    img_ = Image.open("static/images/frame_qr.jpg")
+    draw = ImageDraw.Draw(img_)
+    font = ImageFont.truetype("static/fonts/TT Travels Trial Regular.otf", 35)
+    draw.text((260, 25), city, (0, 0, 0),font=font)
+
+    qr_code = create_qr_code_url(str_)
+
     buf = io.BytesIO()
-    qrcode_id=request.GET.get('qrcode')
-    doc = CreatePDF(buf, info_client=qrcode_id, info_order=None )
-    doc.create_qr_code_client()
-    doc.savePDF()
+    img_.paste(qr_code, (60, 195))
+    img_ = img_.save(buf, "PNG")
     buf.seek(0)
-    return FileResponse(buf, as_attachment=True, filename=f'QrCode_.pdf')
+
+    return FileResponse(buf, as_attachment=True, filename=f'QrCode_.png')
 
 
 def CreateIvoicePDF(request, **kwargs):

@@ -11907,3 +11907,888 @@ Traceback (most recent call last):
        ^^^^^^^
 TypeError: '<' not supported between instances of 'str' and 'int'
 06/Jan/2025 21:45:52    ERROR    basehttp    "GET /list_order/pdf/2109 HTTP/1.1" 500 112435   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+07/Jan/2025 14:01:25    ERROR    log    Internal Server Error: /clients/qr   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'TypeError'>, TypeError('Canvas.setPageSize() takes 2 positional arguments but 3 were given'), <traceback object at 0x7fc196bf7080>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 363, in create_qr_code_pdf
+    doc.create_qr_code_client()
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 127, in create_qr_code_client
+    self.c.setPageSize(50,70)
+TypeError: Canvas.setPageSize() takes 2 positional arguments but 3 were given
+07/Jan/2025 14:01:25    ERROR    basehttp    "GET /clients/qr?qrcode=9c7cb1a9-4868-4f43-8033-e23c2e62d00a HTTP/1.1" 500 86012   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+07/Jan/2025 17:59:59    ERROR    log    Internal Server Error: /clients/qr   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'NameError'>, NameError("name 'buf' is not defined"), <traceback object at 0x7fb6bef3a7c0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 368, in create_qr_code_pdf
+    return FileResponse(buf, as_attachment=True, filename=f'QrCode_.pdf')
+                        ^^^
+NameError: name 'buf' is not defined
+07/Jan/2025 17:59:59    ERROR    basehttp    "GET /clients/qr?qrcode=a22d0895-5cc0-46f0-ae6a-c24553a01bba HTTP/1.1" 500 81562   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+07/Jan/2025 18:13:02    ERROR    log    Internal Server Error: /clients/qr   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'NameError'>, NameError("name 'buf' is not defined"), <traceback object at 0x7f03050fc880>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 379, in create_qr_code_pdf
+    return FileResponse(buf, as_attachment=True, filename=f'QrCode_.pdf')
+                        ^^^
+NameError: name 'buf' is not defined
+07/Jan/2025 18:13:02    ERROR    basehttp    "GET /clients/qr?qrcode=a22d0895-5cc0-46f0-ae6a-c24553a01bba HTTP/1.1" 500 82250   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+07/Jan/2025 18:21:23    ERROR    log    Internal Server Error: /clients/qr   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'AttributeError'>, AttributeError("type object 'ImageDraw' has no attribute 'Draw'"), <traceback object at 0x7efeb5477ec0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 374, in create_qr_code_pdf
+    draw = ImageDraw.Draw(img_)
+           ^^^^^^^^^^^^^^
+AttributeError: type object 'ImageDraw' has no attribute 'Draw'
+07/Jan/2025 18:21:23    ERROR    basehttp    "GET /clients/qr?qrcode=a22d0895-5cc0-46f0-ae6a-c24553a01bba HTTP/1.1" 500 82935   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+07/Jan/2025 18:21:25    ERROR    log    Internal Server Error: /clients/qr   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'AttributeError'>, AttributeError("type object 'ImageDraw' has no attribute 'Draw'"), <traceback object at 0x7efeb4707180>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 374, in create_qr_code_pdf
+    draw = ImageDraw.Draw(img_)
+           ^^^^^^^^^^^^^^
+AttributeError: type object 'ImageDraw' has no attribute 'Draw'
+07/Jan/2025 18:21:25    ERROR    basehttp    "GET /clients/qr?qrcode=a22d0895-5cc0-46f0-ae6a-c24553a01bba HTTP/1.1" 500 82933   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+07/Jan/2025 18:21:48    ERROR    log    Internal Server Error: /clients/qr   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'AttributeError'>, AttributeError("type object 'ImageDraw' has no attribute 'draw'"), <traceback object at 0x7fdf916826c0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 374, in create_qr_code_pdf
+    draw = ImageDraw.draw(img_)
+           ^^^^^^^^^^^^^^
+AttributeError: type object 'ImageDraw' has no attribute 'draw'
+07/Jan/2025 18:21:48    ERROR    basehttp    "GET /clients/qr?qrcode=a22d0895-5cc0-46f0-ae6a-c24553a01bba HTTP/1.1" 500 82723   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+07/Jan/2025 18:24:06    ERROR    log    Internal Server Error: /clients/qr   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'AttributeError'>, AttributeError("type object 'ImageFont' has no attribute 'truetype'"), <traceback object at 0x7f9817190940>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 374, in create_qr_code_pdf
+    font = ImageFont.truetype("sans-serif.ttf", 16)
+           ^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'ImageFont' has no attribute 'truetype'
+07/Jan/2025 18:24:06    ERROR    basehttp    "GET /clients/qr?qrcode=e7c5af46-9cff-477d-bec6-90e855f8f886 HTTP/1.1" 500 83364   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+07/Jan/2025 18:24:24    ERROR    log    Internal Server Error: /clients/qr   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'AttributeError'>, AttributeError("type object 'ImageFont' has no attribute 'truetype'"), <traceback object at 0x7f9817136640>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 374, in create_qr_code_pdf
+    font = ImageFont.truetype("sans-serif.ttf", 16)
+           ^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'ImageFont' has no attribute 'truetype'
+07/Jan/2025 18:24:28    ERROR    log    Internal Server Error: /clients/qr   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'OSError'>, OSError('cannot open resource'), <traceback object at 0x7f7544109c40>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 374, in create_qr_code_pdf
+    font = ImageFont.truetype("sans-serif.ttf", 16)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageFont.py", line 996, in truetype
+    return freetype(font)
+           ^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageFont.py", line 993, in freetype
+    return FreeTypeFont(font, size, index, encoding, layout_engine)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageFont.py", line 248, in __init__
+    self.font = core.getfont(
+                ^^^^^^^^^^^^^
+OSError: cannot open resource
+07/Jan/2025 18:24:28    ERROR    basehttp    "GET /clients/qr?qrcode=e7c5af46-9cff-477d-bec6-90e855f8f886 HTTP/1.1" 500 100606   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+07/Jan/2025 18:24:53    ERROR    log    Internal Server Error: /clients/qr   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'OSError'>, OSError('cannot open resource'), <traceback object at 0x7f753fffd080>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 374, in create_qr_code_pdf
+    font = ImageFont.truetype("sans-serif.ttf", 16)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageFont.py", line 996, in truetype
+    return freetype(font)
+           ^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageFont.py", line 993, in freetype
+    return FreeTypeFont(font, size, index, encoding, layout_engine)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageFont.py", line 248, in __init__
+    self.font = core.getfont(
+                ^^^^^^^^^^^^^
+OSError: cannot open resource
+07/Jan/2025 18:24:53    ERROR    basehttp    "GET /clients/qr?qrcode=e7c5af46-9cff-477d-bec6-90e855f8f886 HTTP/1.1" 500 100606   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+07/Jan/2025 18:26:11    ERROR    log    Internal Server Error: /clients/qr   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'OSError'>, OSError('cannot open resource'), <traceback object at 0x7fe59fc824c0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 374, in create_qr_code_pdf
+    font = ImageFont.truetype("sans-serif.ttf", 16)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageFont.py", line 996, in truetype
+    return freetype(font)
+           ^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageFont.py", line 993, in freetype
+    return FreeTypeFont(font, size, index, encoding, layout_engine)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageFont.py", line 248, in __init__
+    self.font = core.getfont(
+                ^^^^^^^^^^^^^
+OSError: cannot open resource
+07/Jan/2025 18:26:11    ERROR    basehttp    "GET /clients/qr?qrcode=e7c5af46-9cff-477d-bec6-90e855f8f886 HTTP/1.1" 500 100667   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+07/Jan/2025 18:26:13    ERROR    log    Internal Server Error: /clients/qr   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'OSError'>, OSError('cannot open resource'), <traceback object at 0x7fe59fcb9140>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 374, in create_qr_code_pdf
+    font = ImageFont.truetype("sans-serif.ttf", 16)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageFont.py", line 996, in truetype
+    return freetype(font)
+           ^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageFont.py", line 993, in freetype
+    return FreeTypeFont(font, size, index, encoding, layout_engine)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageFont.py", line 248, in __init__
+    self.font = core.getfont(
+                ^^^^^^^^^^^^^
+OSError: cannot open resource
+07/Jan/2025 18:26:13    ERROR    basehttp    "GET /clients/qr?qrcode=e7c5af46-9cff-477d-bec6-90e855f8f886 HTTP/1.1" 500 100667   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+07/Jan/2025 18:26:14    ERROR    log    Internal Server Error: /clients/qr   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'OSError'>, OSError('cannot open resource'), <traceback object at 0x7fe59fe2e780>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 374, in create_qr_code_pdf
+    font = ImageFont.truetype("sans-serif.ttf", 16)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageFont.py", line 996, in truetype
+    return freetype(font)
+           ^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageFont.py", line 993, in freetype
+    return FreeTypeFont(font, size, index, encoding, layout_engine)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageFont.py", line 248, in __init__
+    self.font = core.getfont(
+                ^^^^^^^^^^^^^
+OSError: cannot open resource
+07/Jan/2025 18:26:14    ERROR    basehttp    "GET /clients/qr?qrcode=e7c5af46-9cff-477d-bec6-90e855f8f886 HTTP/1.1" 500 100667   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+07/Jan/2025 18:26:14    ERROR    log    Internal Server Error: /clients/qr   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'OSError'>, OSError('cannot open resource'), <traceback object at 0x7fe59c349140>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 374, in create_qr_code_pdf
+    font = ImageFont.truetype("sans-serif.ttf", 16)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageFont.py", line 996, in truetype
+    return freetype(font)
+           ^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageFont.py", line 993, in freetype
+    return FreeTypeFont(font, size, index, encoding, layout_engine)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageFont.py", line 248, in __init__
+    self.font = core.getfont(
+                ^^^^^^^^^^^^^
+OSError: cannot open resource
+07/Jan/2025 18:26:14    ERROR    basehttp    "GET /clients/qr?qrcode=e7c5af46-9cff-477d-bec6-90e855f8f886 HTTP/1.1" 500 100667   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+07/Jan/2025 18:44:58    ERROR    log    Internal Server Error: /clients/qr   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'OSError'>, OSError('cannot open resource'), <traceback object at 0x7f58f79d7600>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 374, in create_qr_code_pdf
+    font = ImageFont.truetype("sans-serif.ttf", 16)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageFont.py", line 996, in truetype
+    return freetype(font)
+           ^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageFont.py", line 993, in freetype
+    return FreeTypeFont(font, size, index, encoding, layout_engine)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageFont.py", line 248, in __init__
+    self.font = core.getfont(
+                ^^^^^^^^^^^^^
+OSError: cannot open resource
+07/Jan/2025 18:44:58    ERROR    basehttp    "GET /clients/qr?qrcode=e7c5af46-9cff-477d-bec6-90e855f8f886 HTTP/1.1" 500 100644   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+07/Jan/2025 19:13:17    ERROR    log    Internal Server Error: /clients/qr   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'OSError'>, OSError('cannot open resource'), <traceback object at 0x7ff8509074c0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 374, in create_qr_code_pdf
+    font = ImageFont.truetype("static/fonts/TT Travels Next Trial Regular .ttf", 35)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageFont.py", line 996, in truetype
+    return freetype(font)
+           ^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageFont.py", line 993, in freetype
+    return FreeTypeFont(font, size, index, encoding, layout_engine)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageFont.py", line 248, in __init__
+    self.font = core.getfont(
+                ^^^^^^^^^^^^^
+OSError: cannot open resource
+07/Jan/2025 19:13:17    ERROR    basehttp    "GET /clients/qr?qrcode=e7c5af46-9cff-477d-bec6-90e855f8f886 HTTP/1.1" 500 100679   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+07/Jan/2025 19:13:19    ERROR    log    Internal Server Error: /clients/qr   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'OSError'>, OSError('cannot open resource'), <traceback object at 0x7ff850a33500>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 374, in create_qr_code_pdf
+    font = ImageFont.truetype("static/fonts/TT Travels Next Trial Regular .ttf", 35)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageFont.py", line 996, in truetype
+    return freetype(font)
+           ^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageFont.py", line 993, in freetype
+    return FreeTypeFont(font, size, index, encoding, layout_engine)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageFont.py", line 248, in __init__
+    self.font = core.getfont(
+                ^^^^^^^^^^^^^
+OSError: cannot open resource
+07/Jan/2025 19:13:19    ERROR    basehttp    "GET /clients/qr?qrcode=e7c5af46-9cff-477d-bec6-90e855f8f886 HTTP/1.1" 500 100677   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+07/Jan/2025 19:28:24    ERROR    log    Internal Server Error: /clients/qr   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'ValueError'>, ValueError('bad transparency mask'), <traceback object at 0x7f905fcad480>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 382, in create_qr_code_pdf
+    img_.paste(Image2copy, (10, 10), Image2copy)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/Image.py", line 1732, in paste
+    self.im.paste(im, box, mask.im)
+ValueError: bad transparency mask
+07/Jan/2025 19:28:24    ERROR    basehttp    "GET /clients/qr?qrcode=e7c5af46-9cff-477d-bec6-90e855f8f886 HTTP/1.1" 500 88213   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+07/Jan/2025 19:40:09    ERROR    log    Internal Server Error: /clients/qr   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'SystemError'>, SystemError('tile cannot extend outside image'), <traceback object at 0x7f39207cf980>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageFile.py", line 515, in _save
+    fh = fp.fileno()
+         ^^^^^^^^^
+AttributeError: '_idat' object has no attribute 'fileno'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 381, in create_qr_code_pdf
+    qr_code = Image.open(create_qr_code_url(str_))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 351, in create_qr_code_url
+    qr.save(buffer, format='PNG')
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/Image.py", line 2432, in save
+    save_handler(self, fp, filename)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/PngImagePlugin.py", line 1407, in _save
+    ImageFile._save(im, _idat(fp, chunk), [("zip", (0, 0) + im.size, 0, rawmode)])
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageFile.py", line 519, in _save
+    _encode_tile(im, fp, tile, bufsize, None, exc)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageFile.py", line 530, in _encode_tile
+    encoder.setimage(im.im, b)
+SystemError: tile cannot extend outside image
+07/Jan/2025 19:40:09    ERROR    basehttp    "GET /clients/qr?qrcode=e7c5af46-9cff-477d-bec6-90e855f8f886 HTTP/1.1" 500 113727   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+07/Jan/2025 19:40:22    ERROR    log    Internal Server Error: /clients/qr   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'SystemError'>, SystemError('tile cannot extend outside image'), <traceback object at 0x7fd4325e9880>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageFile.py", line 515, in _save
+    fh = fp.fileno()
+         ^^^^^^^^^
+AttributeError: '_idat' object has no attribute 'fileno'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 381, in create_qr_code_pdf
+    qr_code = Image.open(create_qr_code_url(str_))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 351, in create_qr_code_url
+    qr.save(buffer, format='PNG')
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/Image.py", line 2432, in save
+    save_handler(self, fp, filename)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/PngImagePlugin.py", line 1407, in _save
+    ImageFile._save(im, _idat(fp, chunk), [("zip", (0, 0) + im.size, 0, rawmode)])
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageFile.py", line 519, in _save
+    _encode_tile(im, fp, tile, bufsize, None, exc)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageFile.py", line 530, in _encode_tile
+    encoder.setimage(im.im, b)
+SystemError: tile cannot extend outside image
+07/Jan/2025 19:40:22    ERROR    basehttp    "GET /clients/qr?qrcode=e7c5af46-9cff-477d-bec6-90e855f8f886 HTTP/1.1" 500 113738   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+07/Jan/2025 19:40:23    ERROR    log    Internal Server Error: /clients/qr   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'SystemError'>, SystemError('tile cannot extend outside image'), <traceback object at 0x7fd43115b200>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageFile.py", line 515, in _save
+    fh = fp.fileno()
+         ^^^^^^^^^
+AttributeError: '_idat' object has no attribute 'fileno'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 381, in create_qr_code_pdf
+    qr_code = Image.open(create_qr_code_url(str_))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 351, in create_qr_code_url
+    qr.save(buffer, format='PNG')
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/Image.py", line 2432, in save
+    save_handler(self, fp, filename)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/PngImagePlugin.py", line 1407, in _save
+    ImageFile._save(im, _idat(fp, chunk), [("zip", (0, 0) + im.size, 0, rawmode)])
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageFile.py", line 519, in _save
+    _encode_tile(im, fp, tile, bufsize, None, exc)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageFile.py", line 530, in _encode_tile
+    encoder.setimage(im.im, b)
+SystemError: tile cannot extend outside image
+07/Jan/2025 19:40:23    ERROR    basehttp    "GET /clients/qr?qrcode=e7c5af46-9cff-477d-bec6-90e855f8f886 HTTP/1.1" 500 113736   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+07/Jan/2025 19:40:24    ERROR    log    Internal Server Error: /clients/qr   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'SystemError'>, SystemError('tile cannot extend outside image'), <traceback object at 0x7fd4326d6900>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageFile.py", line 515, in _save
+    fh = fp.fileno()
+         ^^^^^^^^^
+AttributeError: '_idat' object has no attribute 'fileno'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 381, in create_qr_code_pdf
+    qr_code = Image.open(create_qr_code_url(str_))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 351, in create_qr_code_url
+    qr.save(buffer, format='PNG')
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/Image.py", line 2432, in save
+    save_handler(self, fp, filename)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/PngImagePlugin.py", line 1407, in _save
+    ImageFile._save(im, _idat(fp, chunk), [("zip", (0, 0) + im.size, 0, rawmode)])
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageFile.py", line 519, in _save
+    _encode_tile(im, fp, tile, bufsize, None, exc)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageFile.py", line 530, in _encode_tile
+    encoder.setimage(im.im, b)
+SystemError: tile cannot extend outside image
+07/Jan/2025 19:40:24    ERROR    basehttp    "GET /clients/qr?qrcode=e7c5af46-9cff-477d-bec6-90e855f8f886 HTTP/1.1" 500 113738   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+07/Jan/2025 19:42:58    ERROR    log    Internal Server Error: /clients/qr   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'ValueError'>, ValueError("Coordinate 'lower' is less than 'upper'"), <traceback object at 0x7f7ab524f8c0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 384, in create_qr_code_pdf
+    img_=img_.crop((0,40,52,20))
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/Image.py", line 1227, in crop
+    raise ValueError(msg)
+ValueError: Coordinate 'lower' is less than 'upper'
+07/Jan/2025 19:42:58    ERROR    basehttp    "GET /clients/qr?qrcode=e7c5af46-9cff-477d-bec6-90e855f8f886 HTTP/1.1" 500 88412   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+07/Jan/2025 19:43:01    ERROR    log    Internal Server Error: /clients/qr   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'ValueError'>, ValueError("Coordinate 'lower' is less than 'upper'"), <traceback object at 0x7f7ab440b7c0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 384, in create_qr_code_pdf
+    img_=img_.crop((0,40,52,20))
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/Image.py", line 1227, in crop
+    raise ValueError(msg)
+ValueError: Coordinate 'lower' is less than 'upper'
+07/Jan/2025 19:43:01    ERROR    basehttp    "GET /clients/qr?qrcode=e7c5af46-9cff-477d-bec6-90e855f8f886 HTTP/1.1" 500 88412   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+07/Jan/2025 19:43:26    ERROR    log    Internal Server Error: /clients/qr   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'ValueError'>, ValueError("Coordinate 'lower' is less than 'upper'"), <traceback object at 0x7f3239ace380>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 384, in create_qr_code_pdf
+    img_=img_.crop((2,4,5,2))
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/Image.py", line 1227, in crop
+    raise ValueError(msg)
+ValueError: Coordinate 'lower' is less than 'upper'
+07/Jan/2025 19:43:26    ERROR    basehttp    "GET /clients/qr?qrcode=e7c5af46-9cff-477d-bec6-90e855f8f886 HTTP/1.1" 500 88397   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+07/Jan/2025 19:43:28    ERROR    log    Internal Server Error: /clients/qr   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'ValueError'>, ValueError("Coordinate 'lower' is less than 'upper'"), <traceback object at 0x7f3239bc9740>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 384, in create_qr_code_pdf
+    img_=img_.crop((2,4,5,2))
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/Image.py", line 1227, in crop
+    raise ValueError(msg)
+ValueError: Coordinate 'lower' is less than 'upper'
+07/Jan/2025 19:43:28    ERROR    basehttp    "GET /clients/qr?qrcode=e7c5af46-9cff-477d-bec6-90e855f8f886 HTTP/1.1" 500 88397   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+07/Jan/2025 19:43:30    ERROR    log    Internal Server Error: /clients/qr   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'ValueError'>, ValueError("Coordinate 'lower' is less than 'upper'"), <traceback object at 0x7f3239a96300>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 384, in create_qr_code_pdf
+    img_=img_.crop((2,4,5,2))
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/Image.py", line 1227, in crop
+    raise ValueError(msg)
+ValueError: Coordinate 'lower' is less than 'upper'
+07/Jan/2025 19:43:30    ERROR    basehttp    "GET /clients/qr?qrcode=e7c5af46-9cff-477d-bec6-90e855f8f886 HTTP/1.1" 500 88395   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+07/Jan/2025 19:48:26    ERROR    log    Internal Server Error: /clients/qr   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'AttributeError'>, AttributeError('make_image'), <traceback object at 0x7f5618ab66c0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 381, in create_qr_code_pdf
+    qr_code = Image.open(create_qr_code_url(str_))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 347, in create_qr_code_url
+    qr = qrcode.make(url).make_image(back_color=(255, 195, 235), fill_color=(55, 95, 35))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/qrcode/image/pil.py", line 54, in __getattr__
+    return getattr(self._img, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/Image.py", line 528, in __getattr__
+    raise AttributeError(name)
+AttributeError: make_image
+07/Jan/2025 19:48:26    ERROR    basehttp    "GET /clients/qr?qrcode=e7c5af46-9cff-477d-bec6-90e855f8f886 HTTP/1.1" 500 94401   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+07/Jan/2025 19:48:29    ERROR    log    Internal Server Error: /clients/qr   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'AttributeError'>, AttributeError('make_image'), <traceback object at 0x7f5618bca140>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 381, in create_qr_code_pdf
+    qr_code = Image.open(create_qr_code_url(str_))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 347, in create_qr_code_url
+    qr = qrcode.make(url).make_image(back_color=(255, 195, 235), fill_color=(55, 95, 35))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/qrcode/image/pil.py", line 54, in __getattr__
+    return getattr(self._img, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/Image.py", line 528, in __getattr__
+    raise AttributeError(name)
+AttributeError: make_image
+07/Jan/2025 19:48:29    ERROR    basehttp    "GET /clients/qr?qrcode=e7c5af46-9cff-477d-bec6-90e855f8f886 HTTP/1.1" 500 94401   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+07/Jan/2025 19:48:59    ERROR    log    Internal Server Error: /clients/qr   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'AttributeError'>, AttributeError('make_image'), <traceback object at 0x7fec8877d8c0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 381, in create_qr_code_pdf
+    qr_code = Image.open(create_qr_code_url(str_))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 348, in create_qr_code_url
+    qr.make_image(back_color=(255, 195, 235), fill_color=(55, 95, 35))
+    ^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/qrcode/image/pil.py", line 54, in __getattr__
+    return getattr(self._img, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/Image.py", line 528, in __getattr__
+    raise AttributeError(name)
+AttributeError: make_image
+07/Jan/2025 19:48:59    ERROR    basehttp    "GET /clients/qr?qrcode=e7c5af46-9cff-477d-bec6-90e855f8f886 HTTP/1.1" 500 94512   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+07/Jan/2025 19:49:00    ERROR    log    Internal Server Error: /clients/qr   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'AttributeError'>, AttributeError('make_image'), <traceback object at 0x7fec87371600>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 381, in create_qr_code_pdf
+    qr_code = Image.open(create_qr_code_url(str_))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 348, in create_qr_code_url
+    qr.make_image(back_color=(255, 195, 235), fill_color=(55, 95, 35))
+    ^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/qrcode/image/pil.py", line 54, in __getattr__
+    return getattr(self._img, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/Image.py", line 528, in __getattr__
+    raise AttributeError(name)
+AttributeError: make_image
+07/Jan/2025 19:49:00    ERROR    basehttp    "GET /clients/qr?qrcode=e7c5af46-9cff-477d-bec6-90e855f8f886 HTTP/1.1" 500 94510   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+07/Jan/2025 19:49:01    ERROR    log    Internal Server Error: /clients/qr   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'AttributeError'>, AttributeError('make_image'), <traceback object at 0x7fec8726e580>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 381, in create_qr_code_pdf
+    qr_code = Image.open(create_qr_code_url(str_))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 348, in create_qr_code_url
+    qr.make_image(back_color=(255, 195, 235), fill_color=(55, 95, 35))
+    ^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/qrcode/image/pil.py", line 54, in __getattr__
+    return getattr(self._img, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/Image.py", line 528, in __getattr__
+    raise AttributeError(name)
+AttributeError: make_image
+07/Jan/2025 19:49:01    ERROR    basehttp    "GET /clients/qr?qrcode=e7c5af46-9cff-477d-bec6-90e855f8f886 HTTP/1.1" 500 94512   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+07/Jan/2025 19:49:02    ERROR    log    Internal Server Error: /clients/qr   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'AttributeError'>, AttributeError('make_image'), <traceback object at 0x7fec872e5f00>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 381, in create_qr_code_pdf
+    qr_code = Image.open(create_qr_code_url(str_))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 348, in create_qr_code_url
+    qr.make_image(back_color=(255, 195, 235), fill_color=(55, 95, 35))
+    ^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/qrcode/image/pil.py", line 54, in __getattr__
+    return getattr(self._img, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/Image.py", line 528, in __getattr__
+    raise AttributeError(name)
+AttributeError: make_image
+07/Jan/2025 19:49:02    ERROR    basehttp    "GET /clients/qr?qrcode=e7c5af46-9cff-477d-bec6-90e855f8f886 HTTP/1.1" 500 94510   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+07/Jan/2025 19:49:02    ERROR    log    Internal Server Error: /clients/qr   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'AttributeError'>, AttributeError('make_image'), <traceback object at 0x7fec86b77680>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 381, in create_qr_code_pdf
+    qr_code = Image.open(create_qr_code_url(str_))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 348, in create_qr_code_url
+    qr.make_image(back_color=(255, 195, 235), fill_color=(55, 95, 35))
+    ^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/qrcode/image/pil.py", line 54, in __getattr__
+    return getattr(self._img, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/Image.py", line 528, in __getattr__
+    raise AttributeError(name)
+AttributeError: make_image
+07/Jan/2025 19:49:02    ERROR    basehttp    "GET /clients/qr?qrcode=e7c5af46-9cff-477d-bec6-90e855f8f886 HTTP/1.1" 500 94510   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+07/Jan/2025 19:49:02    ERROR    log    Internal Server Error: /clients/qr   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'AttributeError'>, AttributeError('make_image'), <traceback object at 0x7fec86bd04c0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 381, in create_qr_code_pdf
+    qr_code = Image.open(create_qr_code_url(str_))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 348, in create_qr_code_url
+    qr.make_image(back_color=(255, 195, 235), fill_color=(55, 95, 35))
+    ^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/qrcode/image/pil.py", line 54, in __getattr__
+    return getattr(self._img, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/Image.py", line 528, in __getattr__
+    raise AttributeError(name)
+AttributeError: make_image
+07/Jan/2025 19:49:02    ERROR    basehttp    "GET /clients/qr?qrcode=e7c5af46-9cff-477d-bec6-90e855f8f886 HTTP/1.1" 500 94510   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+07/Jan/2025 19:49:02    ERROR    log    Internal Server Error: /clients/qr   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'AttributeError'>, AttributeError('make_image'), <traceback object at 0x7fec86c0fac0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 381, in create_qr_code_pdf
+    qr_code = Image.open(create_qr_code_url(str_))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 348, in create_qr_code_url
+    qr.make_image(back_color=(255, 195, 235), fill_color=(55, 95, 35))
+    ^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/qrcode/image/pil.py", line 54, in __getattr__
+    return getattr(self._img, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/Image.py", line 528, in __getattr__
+    raise AttributeError(name)
+AttributeError: make_image
+07/Jan/2025 19:49:02    ERROR    basehttp    "GET /clients/qr?qrcode=e7c5af46-9cff-477d-bec6-90e855f8f886 HTTP/1.1" 500 94510   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+07/Jan/2025 19:52:53    ERROR    log    Internal Server Error: /clients/qr   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'AttributeError'>, AttributeError('read'), <traceback object at 0x7f1135903040>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 382, in create_qr_code_pdf
+    qr_code = Image.open(create_qr_code_url(str_))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/Image.py", line 3245, in open
+    prefix = fp.read(16)
+             ^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/qrcode/image/pil.py", line 54, in __getattr__
+    return getattr(self._img, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/Image.py", line 528, in __getattr__
+    raise AttributeError(name)
+AttributeError: read
+07/Jan/2025 19:52:53    ERROR    basehttp    "GET /clients/qr?qrcode=e7c5af46-9cff-477d-bec6-90e855f8f886 HTTP/1.1" 500 94735   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+07/Jan/2025 19:52:54    ERROR    log    Internal Server Error: /clients/qr   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'AttributeError'>, AttributeError('read'), <traceback object at 0x7f1134b6ddc0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 382, in create_qr_code_pdf
+    qr_code = Image.open(create_qr_code_url(str_))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/Image.py", line 3245, in open
+    prefix = fp.read(16)
+             ^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/qrcode/image/pil.py", line 54, in __getattr__
+    return getattr(self._img, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/Image.py", line 528, in __getattr__
+    raise AttributeError(name)
+AttributeError: read
+07/Jan/2025 19:52:54    ERROR    basehttp    "GET /clients/qr?qrcode=e7c5af46-9cff-477d-bec6-90e855f8f886 HTTP/1.1" 500 94733   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+07/Jan/2025 19:52:56    ERROR    log    Internal Server Error: /clients/qr   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'AttributeError'>, AttributeError('read'), <traceback object at 0x7f1134be6880>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 382, in create_qr_code_pdf
+    qr_code = Image.open(create_qr_code_url(str_))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/Image.py", line 3245, in open
+    prefix = fp.read(16)
+             ^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/qrcode/image/pil.py", line 54, in __getattr__
+    return getattr(self._img, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/Image.py", line 528, in __getattr__
+    raise AttributeError(name)
+AttributeError: read
+07/Jan/2025 19:52:56    ERROR    basehttp    "GET /clients/qr?qrcode=e7c5af46-9cff-477d-bec6-90e855f8f886 HTTP/1.1" 500 94733   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+07/Jan/2025 19:52:58    ERROR    log    Internal Server Error: /clients/qr   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'AttributeError'>, AttributeError('read'), <traceback object at 0x7f113468d400>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 382, in create_qr_code_pdf
+    qr_code = Image.open(create_qr_code_url(str_))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/Image.py", line 3245, in open
+    prefix = fp.read(16)
+             ^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/qrcode/image/pil.py", line 54, in __getattr__
+    return getattr(self._img, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/Image.py", line 528, in __getattr__
+    raise AttributeError(name)
+AttributeError: read
+07/Jan/2025 19:52:58    ERROR    basehttp    "GET /clients/qr?qrcode=e7c5af46-9cff-477d-bec6-90e855f8f886 HTTP/1.1" 500 94733   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+07/Jan/2025 20:07:17    ERROR    log    Internal Server Error: /clients/qr   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'ValueError'>, ValueError("unknown color specifier: 'ff8000'"), <traceback object at 0x7fc82ff088c0>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 374, in create_qr_code_pdf
+    qr_code = create_qr_code_url(str_)
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 354, in create_qr_code_url
+    img_ = qr.make_image(fill_color="FF8000", back_color="white")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/qrcode/main.py", line 379, in make_image
+    im.drawrect(r, c)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/qrcode/image/pil.py", line 45, in drawrect
+    self._idr.rectangle(box, fill=self.fill_color)
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageDraw.py", line 292, in rectangle
+    ink, fill = self._getink(outline, fill)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageDraw.py", line 133, in _getink
+    fill = ImageColor.getcolor(fill, self.mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageColor.py", line 136, in getcolor
+    color, alpha = getrgb(color), 255
+                   ^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageColor.py", line 120, in getrgb
+    raise ValueError(msg)
+ValueError: unknown color specifier: 'ff8000'
+07/Jan/2025 20:07:17    ERROR    basehttp    "GET /clients/qr?qrcode=e7c5af46-9cff-477d-bec6-90e855f8f886 HTTP/1.1" 500 113800   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+07/Jan/2025 20:35:01    ERROR    log    Internal Server Error: /clients/qr   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'OSError'>, OSError('cannot open resource'), <traceback object at 0x7f2750d3ea00>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 374, in create_qr_code_client
+    font = ImageFont.truetype("static/fonts/TT Travels Regular.ttf", 35)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageFont.py", line 996, in truetype
+    return freetype(font)
+           ^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageFont.py", line 993, in freetype
+    return FreeTypeFont(font, size, index, encoding, layout_engine)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageFont.py", line 248, in __init__
+    self.font = core.getfont(
+                ^^^^^^^^^^^^^
+OSError: cannot open resource
+07/Jan/2025 20:35:01    ERROR    basehttp    "GET /clients/qr?qrcode=ba51bdaf-5585-41f9-be45-d05428b568c8 HTTP/1.1" 500 100792   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+07/Jan/2025 20:35:25    ERROR    log    Internal Server Error: /clients/qr   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'OSError'>, OSError('cannot open resource'), <traceback object at 0x7f6b488d3500>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 374, in create_qr_code_client
+    font = ImageFont.truetype("static/fonts/TT Travels Regular.otf", 35)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageFont.py", line 996, in truetype
+    return freetype(font)
+           ^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageFont.py", line 993, in freetype
+    return FreeTypeFont(font, size, index, encoding, layout_engine)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageFont.py", line 248, in __init__
+    self.font = core.getfont(
+                ^^^^^^^^^^^^^
+OSError: cannot open resource
+07/Jan/2025 20:35:25    ERROR    basehttp    "GET /clients/qr?qrcode=ba51bdaf-5585-41f9-be45-d05428b568c8 HTTP/1.1" 500 100794   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+07/Jan/2025 20:35:31    ERROR    log    Internal Server Error: /clients/qr   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'OSError'>, OSError('cannot open resource'), <traceback object at 0x7f6b4721c980>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 374, in create_qr_code_client
+    font = ImageFont.truetype("static/fonts/TT Travels Regular.otf", 35)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageFont.py", line 996, in truetype
+    return freetype(font)
+           ^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageFont.py", line 993, in freetype
+    return FreeTypeFont(font, size, index, encoding, layout_engine)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/ImageFont.py", line 248, in __init__
+    self.font = core.getfont(
+                ^^^^^^^^^^^^^
+OSError: cannot open resource
+07/Jan/2025 20:35:31    ERROR    basehttp    "GET /clients/qr?qrcode=ba51bdaf-5585-41f9-be45-d05428b568c8 HTTP/1.1" 500 100792   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None

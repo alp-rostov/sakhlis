@@ -30,14 +30,14 @@
             <a href="" class="text-secondary ml-2" title="delete client" >
                 <i class='far fa-trash-alt'></i>
             </a>
-            <a href="{{ b.pk  }}" class="text-secondary ml-2" title="about order`s client" id="link_"
+            <a href="{{ b.pk  }}" class="text-secondary ml-2 link_modal_windows" title="about order`s client" id="link_"
             data-toggle="modal" data-target="#exampleModal" >
                 <i class='far fa-address-book'></i>
             </a>
 
         </div>
         <div class="col-md-2">
-             <a href="{{ b.pk  }}" class="text-secondary ml-2" title="far fa-address-card" id="link"
+             <a href="{{ b.pk  }}" class="text-secondary ml-2 link_modal_windows" title="far fa-address-card" id="link"
                     data-toggle="modal" data-target="#exampleModal" >            {{ b.customer_name }}
              </a>
                 {% if b.user %}
@@ -73,7 +73,7 @@
 
 
 <script>
-$(document).on('click', '#link', function (e) {
+$(document).on('click', '.link_modal_windows', function (e) {
     e.preventDefault();
     $.ajax({
         url: "../client?pk="+$(this).attr("href") ,
