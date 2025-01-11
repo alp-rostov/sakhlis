@@ -334,5 +334,9 @@ def create_qr_code_url(url:str):
     return img_
 
 
+def get_qrcode_for_client():
+    pass
+
+
 
 

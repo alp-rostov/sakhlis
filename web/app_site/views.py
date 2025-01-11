@@ -360,14 +360,13 @@ def create_qr_code_client(request, **kwargs):
 
     from PIL import Image, ImageDraw, ImageFont
 
+    city_=UserProfile.objects.get(qrcode_id = request.GET.get('qrcode')).city
+    city=CITY_CHOICES_INVOICE[city_]
 
-    city='Tbilisi'
-    site='https://www.sakhlis-remonti.ge/createorder_en'
+    url='https://www.sakhlis-remonti.ge/createorder_en'
+
     qrcode_= request.GET.get('qrcode')
-    if qrcode_:
-        str_=f'{site}?qrcode={qrcode_}'
-    else:
-        str_=site
+    str_=f'{url}?qrcode={qrcode_}'
 
     img_ = Image.open("static/images/frame_qr.jpg")
     draw = ImageDraw.Draw(img_)
@@ -375,9 +374,9 @@ def create_qr_code_client(request, **kwargs):
     draw.text((260, 25), city, (0, 0, 0),font=font)
 
     qr_code = create_qr_code_url(str_)
+    img_.paste(qr_code, (60, 195))
 
     buf = io.BytesIO()
-    img_.paste(qr_code, (60, 195))
     img_ = img_.save(buf, "PNG")
     buf.seek(0)
 
