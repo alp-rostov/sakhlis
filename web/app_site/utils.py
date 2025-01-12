@@ -116,15 +116,13 @@ class CreatePDF(object):
                                        borderColor='#8c8a8a',
                                        borderRadius=5,
                                        ))
-
-
         self.width, self.height = A4
         self.info_order = info_order
 
     def createDocument_invoice(self) -> None:
         # create a header
         date_info = str(self.info_order.time_in)[0:10]
-        #
+
         line1 = ('ინდივიდუალურიმეწარმე სერგეი გოცინ <br />'
                  'საქართველო, თბილისი, დიდუბის რაიონი, <br />'
                  'მურმან ლებანიძის ქუჩა, N 10, <br />'
@@ -132,7 +130,6 @@ class CreatePDF(object):
                  'საიდენტიფიკაციო ნომერი: 302264920 <br />'
                  'კრედო ბანკი <br /> ბანკის კოდი JSCRG22 <br /> '
                  'ა/ა GE18CD0360000030597044<br />')
-
         self.createParagraph(line1, *self.coord(-20, -45), style='Top_Right')
 
         line2 = f'<b>Invoice # {self.info_order.pk} </b><br /><br /><font fontsize=18>Data {date_info}</font>'
@@ -140,7 +137,6 @@ class CreatePDF(object):
 
         line3 = (f'<font fontName="Georgian">Invoiced To: <br /><b>{self.info_order.customer_id.customer_name}</b><br />'
                  f'{self.info_order.apartment_id}, {CITY_CHOICES_INVOICE[self.info_order.apartment_id.address_city]}</font>')
-
         self.createParagraph(line3, *self.coord(20, 95), style='Heading2')
 
         #create a service list
@@ -300,7 +296,7 @@ class Graph:
 
 
 def is_valid_uuid(uuid_to_test, version=4):
-    """    Check if uuid_to_test is a valid UUID.    """
+    """    Check if uuid is a valid UUID.    """
     try:
         uuid_obj = UUID(uuid_to_test, version=version)
     except ValueError:
@@ -323,18 +319,15 @@ def coding_personal_data(**kwargs):
             return f'{code[0:-1]}*'
     return dict(map(lambda  x: (x[0], code_data(x[1])) , kwargs.items()))
 
-def create_qr_code_url(url:str):
-    ''' Generate the QR code image and save to buffer'''
+
+def create_qr_code_url(url:str, box_size_:int):
+    ''' Generate the QR code image '''
     qr = qrcode.QRCode(version=1, error_correction=qrcode.constants.ERROR_CORRECT_L,
-    box_size=12, border=1,  )
+    box_size=box_size_, border=1,  )
     qr.add_data(url)
     qr.make()
     img_ = qr.make_image(fill_color="#FF8000", back_color="white")
     return img_
-
-
-def get_qrcode_for_client():
-    pass
 
 
 

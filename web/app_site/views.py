@@ -2,28 +2,29 @@ import json
 import logging
 import uuid
 
-from PIL.ImageFont import ImageFont
 from django.contrib.auth.models import Group
 from django.contrib.auth.views import LoginView
 from django.db import transaction
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.contrib.auth.decorators import login_required
-from django.http import FileResponse, JsonResponse, Http404, HttpResponse
+from django.http import FileResponse, JsonResponse, Http404
 from django.forms import modelformset_factory
 from django.shortcuts import redirect, get_object_or_404
 from django.urls import reverse_lazy
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView, FormView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
+from django.core.exceptions import ValidationError
 
 from clients.filters import ClientFilter
 from clients.form import CustomerForm, CustomerFormForModal
 from .constants import *
-from .exeptions import BaseClassExeption
 from .filters import OrderFilter, ApartmentFilter
 from .forms import *
 from .repository import DataFromOrderList, DataFromInvoice
 from .serialaizers import OrderStatusSerializer, InvoiceSerializer, UserSerializer, UpdateMasterSerializer
 from .utils import *
 from rest_framework import generics
+from PIL import ImageDraw, ImageFont
+
 
 logger = logging.getLogger('django')
 
@@ -167,7 +168,7 @@ class OrderCreate(CreateView):
                 form.instance.apartment_id = apartment_id
                 form.instance.customer_id = customer_id
                 form.save()
-                return JsonResponse({'message': f'<h3>Заявка № {form.instance.pk} отправлена успешно!</h3>',
+                return JsonResponse({'message': '',
                                      'pk': form.instance.pk,
                                      'text': form.instance.text_order,
                                      'date': form.instance.time_in,
@@ -189,10 +190,10 @@ class OrderCreate(CreateView):
             form.save()
 
             response_ = {'message': f'{form.instance.pk}',
-                         'contact': f'<h4>Ваш менеджер мастер Сергей: <br><img src="/media/masters/51.jpg" class="rounded-circle" width="100">.</h4>'
-                                    f'<h5>Вы можете написать ему, уточнить детали, отправить фото работ или геопозицию:</h5>'
-                                    f'<a class="mx-2" title="Telegram" href="https://t.me/+995598259119"><img src="/static/images/telegram.gif" width="50" alt="Telegram"></a>'
-                                    f'<a class="mx-2" title="WhatsApp" href="https://wa.me/+79604458687"><img src="/static/images/whatsapp.png" width="55" alt="WhatsApp"></a>',
+                         # 'contact': f'<h4>Ваш менеджер мастер Сергей: <br><img src="/media/masters/51.jpg" class="rounded-circle" width="100">.</h4>'
+                         #            f'<h5>Вы можете написать ему, уточнить детали, отправить фото работ или геопозицию:</h5>'
+                         #            f'<a class="mx-2" title="Telegram" href="https://t.me/+995598259119"><img src="/static/images/telegram.gif" width="50" alt="Telegram"></a>'
+                         #            f'<a class="mx-2" title="WhatsApp" href="https://wa.me/+79604458687"><img src="/static/images/whatsapp.png" width="55" alt="WhatsApp"></a>',
                          'pk': form.instance.pk,
                          'auth': self.request.user.is_authenticated
                          }
@@ -356,29 +357,30 @@ class UserRegisterView(CreateView):
 
 
 def create_qr_code_client(request, **kwargs):
-    """ Create pdf-file for printing """
-
-    from PIL import Image, ImageDraw, ImageFont
-
-    city_=UserProfile.objects.get(qrcode_id = request.GET.get('qrcode')).city
-    city=CITY_CHOICES_INVOICE[city_]
-
-    url='https://www.sakhlis-remonti.ge/createorder_en'
-
+    """ Create png-file for printing """
     qrcode_= request.GET.get('qrcode')
-    str_=f'{url}?qrcode={qrcode_}'
+    url = 'https://www.sakhlis-remonti.ge/'
+    box_size=12
+    try:
+        if not is_valid_uuid(qrcode_):
+            raise UserProfile.DoesNotExist
+        city_=UserProfile.objects.get(qrcode_id = request.GET.get('qrcode')).city
+        city=CITY_CHOICES_INVOICE[city_]
+        str_ = f'{url}createorder_en?qrcode={qrcode_}'
+    except UserProfile.DoesNotExist:
+        box_size = 17
+        city = 'Tbilisi'
+        str_ = url
 
-    img_ = Image.open("static/images/frame_qr.jpg")
-    draw = ImageDraw.Draw(img_)
-    font = ImageFont.truetype("static/fonts/TT Travels Trial Regular.otf", 35)
-    draw.text((260, 25), city, (0, 0, 0),font=font)
-
-    qr_code = create_qr_code_url(str_)
-    img_.paste(qr_code, (60, 195))
-
-    buf = io.BytesIO()
-    img_ = img_.save(buf, "PNG")
-    buf.seek(0)
+    with Image.open("static/images/frame_qr.jpg") as img_:
+        draw = ImageDraw.Draw(img_)
+        font = ImageFont.truetype("static/fonts/TT Travels Trial Regular.otf", 35)
+        draw.text((260, 25), city, (0, 0, 0),font=font)
+        qr_code = create_qr_code_url(str_, box_size)
+        img_.paste(qr_code, (60, 195))
+        buf = io.BytesIO()
+        img_ = img_.save(buf, "PNG")
+        buf.seek(0)
 
     return FileResponse(buf, as_attachment=True, filename=f'QrCode_.png')
 
