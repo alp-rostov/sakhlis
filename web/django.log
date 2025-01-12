@@ -12792,3 +12792,142 @@ Traceback (most recent call last):
                 ^^^^^^^^^^^^^
 OSError: cannot open resource
 07/Jan/2025 20:35:31    ERROR    basehttp    "GET /clients/qr?qrcode=ba51bdaf-5585-41f9-be45-d05428b568c8 HTTP/1.1" 500 100792   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+12/Jan/2025 10:10:12    ERROR    log    Internal Server Error: /list_order/pdf/2104   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'NameError'>, NameError("name 'info_client' is not defined"), <traceback object at 0x7f1dda6ee400>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 393, in CreateIvoicePDF
+    doc = CreatePDF(buf, info_order=info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 123, in __init__
+    self.info_client = info_client
+                       ^^^^^^^^^^^
+NameError: name 'info_client' is not defined
+12/Jan/2025 10:10:12    ERROR    basehttp    "GET /list_order/pdf/2104 HTTP/1.1" 500 87103   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+12/Jan/2025 10:10:21    ERROR    log    Internal Server Error: /list_order/pdf/2104   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'NameError'>, NameError("name 'info_client' is not defined"), <traceback object at 0x7f1dd0f74300>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 393, in CreateIvoicePDF
+    doc = CreatePDF(buf, info_order=info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 123, in __init__
+    self.info_client = info_client
+                       ^^^^^^^^^^^
+NameError: name 'info_client' is not defined
+12/Jan/2025 10:10:21    ERROR    basehttp    "GET /list_order/pdf/2104 HTTP/1.1" 500 87103   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+12/Jan/2025 10:11:23    ERROR    log    Internal Server Error: /list_order/pdf/2104   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'AttributeError'>, AttributeError("'CreatePDF' object has no attribute 'info_client'"), <traceback object at 0x7f3b6762a480>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 394, in CreateIvoicePDF
+    doc.createDocument_invoice()
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 186, in createDocument_invoice
+    self.createQRcode( 400, 580, 70, 'https://www.sakhlis-remonti.ge/' )
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 209, in createQRcode
+    _ = create_qr_code_url(f'{str_}{self.info_client}')
+                                    ^^^^^^^^^^^^^^^^
+AttributeError: 'CreatePDF' object has no attribute 'info_client'
+12/Jan/2025 10:11:23    ERROR    basehttp    "GET /list_order/pdf/2104 HTTP/1.1" 500 94988   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+12/Jan/2025 10:12:02    ERROR    log    Internal Server Error: /list_order/pdf/2104   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'AttributeError'>, AttributeError("'CreatePDF' object has no attribute 'createQRcode'"), <traceback object at 0x7fb96bd67800>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 394, in CreateIvoicePDF
+    doc.createDocument_invoice()
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 186, in createDocument_invoice
+    self.createQRcode( 400, 580, 70, 'https://www.sakhlis-remonti.ge/' )
+    ^^^^^^^^^^^^^^^^^
+AttributeError: 'CreatePDF' object has no attribute 'createQRcode'
+12/Jan/2025 10:12:02    ERROR    basehttp    "GET /list_order/pdf/2104 HTTP/1.1" 500 90502   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+12/Jan/2025 10:12:41    ERROR    log    Internal Server Error: /list_order/pdf/2104   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'AttributeError'>, AttributeError('read'), <traceback object at 0x7f40174fae00>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 394, in CreateIvoicePDF
+    doc.createDocument_invoice()
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 186, in createDocument_invoice
+    self.createQRcode( 400, 580, 70, 'https://www.sakhlis-remonti.ge/' )
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 210, in createQRcode
+    with Image.open(_) as Im:
+         ^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/Image.py", line 3245, in open
+    prefix = fp.read(16)
+             ^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/qrcode/image/pil.py", line 54, in __getattr__
+    return getattr(self._img, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/Image.py", line 528, in __getattr__
+    raise AttributeError(name)
+AttributeError: read
+12/Jan/2025 10:12:42    ERROR    basehttp    "GET /list_order/pdf/2104 HTTP/1.1" 500 105845   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+12/Jan/2025 10:12:44    ERROR    log    Internal Server Error: /list_order/pdf/2104   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'AttributeError'>, AttributeError('read'), <traceback object at 0x7f400e676640>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 394, in CreateIvoicePDF
+    doc.createDocument_invoice()
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 186, in createDocument_invoice
+    self.createQRcode( 400, 580, 70, 'https://www.sakhlis-remonti.ge/' )
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 210, in createQRcode
+    with Image.open(_) as Im:
+         ^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/Image.py", line 3245, in open
+    prefix = fp.read(16)
+             ^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/qrcode/image/pil.py", line 54, in __getattr__
+    return getattr(self._img, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/Image.py", line 528, in __getattr__
+    raise AttributeError(name)
+AttributeError: read
+12/Jan/2025 10:12:44    ERROR    basehttp    "GET /list_order/pdf/2104 HTTP/1.1" 500 105845   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None
+12/Jan/2025 10:15:37    ERROR    log    Internal Server Error: /list_order/pdf/2121   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/utils/log.py   (<class 'AttributeError'>, AttributeError('read'), <traceback object at 0x7f5319b38040>)
+Traceback (most recent call last):
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/views.py", line 394, in CreateIvoicePDF
+    doc.createDocument_invoice()
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 186, in createDocument_invoice
+    self.createQRcode( 400, 580, 70, 'https://www.sakhlis-remonti.ge/' )
+  File "/home/alprostov/PycharmProjects/sakhlis/web/app_site/utils.py", line 210, in createQRcode
+    with Image.open(_) as Im:
+         ^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/Image.py", line 3245, in open
+    prefix = fp.read(16)
+             ^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/qrcode/image/pil.py", line 54, in __getattr__
+    return getattr(self._img, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/PIL/Image.py", line 528, in __getattr__
+    raise AttributeError(name)
+AttributeError: read
+12/Jan/2025 10:15:37    ERROR    basehttp    "GET /list_order/pdf/2121 HTTP/1.1" 500 105866   /home/alprostov/PycharmProjects/sakhlis/web/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py   None

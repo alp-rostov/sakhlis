@@ -120,7 +120,6 @@ class CreatePDF(object):
 
         self.width, self.height = A4
         self.info_order = info_order
-        self.info_client = info_client
 
     def createDocument_invoice(self) -> None:
         # create a header
@@ -184,7 +183,7 @@ class CreatePDF(object):
                  f'<a href="https://www.sakhlis-remonti.ge/" color="blue">www.sakhlis-remonti.ge</a> |'
                  f'alprostov.1982@gmail.com')
         self.createParagraph(line4, *self.coord(20, 270), style='Normal')
-        self.createQRcode( 400, 580, 70, 'https://www.sakhlis-remonti.ge/' )
+        # self.createQRcode( 400, 580, 70, 'https://www.sakhlis-remonti.ge/' )
 
     def coord(self, x, y, unit=1) -> tuple:
         """ Helper class to help position flowables in Canvas objects """
@@ -206,11 +205,11 @@ class CreatePDF(object):
         table.wrapOn(self.c, self.width, self.height)
         table.drawOn(self.c, *self.coord(x, y))
 
-    def createQRcode(self, x, y, width:int=None, str_:str=''):
-        _ = create_qr_code_url(f'{str_}{self.info_client}')
-        with Image.open(_) as Im:
-            ir = ImageReader(Im)
-            self.c.drawImage(ir, *self.coord(x, y), width, preserveAspectRatio=True, mask='auto')
+    # def createQRcode(self, x, y, width:int=None, str_:str=''):
+    #     _ = create_qr_code_url(f'{str_}')
+    #     with Image.open(_) as Im:
+    #         ir = ImageReader(Im)
+    #         self.c.drawImage(ir, *self.coord(x, y), width, preserveAspectRatio=True, mask='auto')
 
     def savePDF(self):
         self.c.showPage()
