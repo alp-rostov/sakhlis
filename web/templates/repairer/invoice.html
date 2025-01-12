@@ -60,23 +60,16 @@
 
             {% if info.customer_id.phone %}
             <a href="tel:+{{ info.customer_id.phone }}" title="phone" class="">
-            <i class="fa fa-phone mycolor m-2 p-2 btn border-danger" aria-hidden="true"></i></a>
+            <i class="fa fa-phone mycolor m-2 p-2 btn border-danger" aria-hidden="true"> {{ info.customer_id.phone }}</i></a>
             {% endif %}
             {% if info.customer_id.telegram %}
             <a href="https://t.me/{{ info.customer_id.telegram|cut:'@' }}" title="Telegram" class="">
-            <i class="fa fa-telegram mycolor m-2 p-2 btn border-danger" aria-hidden="true"></i></a>
+            <i class="fa fa-telegram mycolor m-2 p-2 btn border-danger" aria-hidden="true"> @{{ info.customer_id.telegram }}</i></a>
             {% endif %}
             {% if info.customer_id.whatsapp %}
-            <a href="https://wa.me/+{{ info.customer_id.whatsapp }}" class=""
-                            title="Whatsapp" aria-hidden="true" >
-            <i class="fa fa-whatsapp mycolor m-2 p-2 btn border-danger" aria-hidden="true"></i>
+            <a href="https://wa.me/+{{ info.customer_id.whatsapp }}" class="" title="Whatsapp" aria-hidden="true" >
+            <i class="fa fa-whatsapp mycolor m-2 p-2 btn border-danger" aria-hidden="true"> {{ info.customer_id.whatsapp }}</i>
 
-            </a>
-            {% endif %}
-
-            {% if info.apartment_id.link_location  %}
-            <a href="{{info.apartment_id.link_location}}" class="" title="Open map" aria-hidden="true">
-             <i class="fa fa-location-arrow mycolor m-2 p-2 btn border-danger"></i>
             </a>
             {% endif %}
 
@@ -87,17 +80,22 @@
             <h4>
                 <b>Handyman</b>
             </h4>
+
                 <a href="" class="text-secondary" title="handyman" id="handyman">
-                    <img src="../media/masters/{% if info.repairer_id %}{{info.repairer_id.pk}}{% else %}unknown_person{% endif %}.jpg"
-                    class="rounded-circle" width="60" alt="master"><br>
+
                     {% if info.repairer_id %}
+                                <img src="../media/masters/{% if info.repairer_id %}{{info.repairer_id.pk}}{% else %}unknown_person{% endif %}.jpg"
+                    class="rounded-circle" width="60" alt="master">
+
+
                     <b>{{ info.repairer_id.username}}</b></a>
+                    <br>
                     <a href="" class="link_master text-secondary"  data-toggle="modal" data-target="#exampleModal" title="{{ info.pk }}">
-                        <i class="fas fa-pen text-secondary btn border p-1" style='font-size:14px'>edit</i>
+                        <i class="fa fa-pencil fa-border text-secondary p-1 m-1" style='font-size:14px'> Change master</i>
                     </a>
                     {% else %}
-                    <a href="" class="link_master text-secondary" data-toggle="modal" data-target="#exampleModal" title="{{ info.pk }}">
-                        <i class="fas fa-pen text-secondary" style='font-size:14px'>Appoint master</i>
+                    <a href="" class="link_master text-secondary btn border" data-toggle="modal" data-target="#exampleModal" title="{{ info.pk }}">
+                        <i class="fa fa-user text-secondary fa-x"> Appoint master</i>
                     </a>
                     {% endif %}
         </div>
@@ -105,17 +103,25 @@
 
     <div class="row mb-2">
         <div class="col-md-4 text-secondary">
-            <div class="h6">
-            <i class="fa fa-home text-secondary mb-2"></i>
-            {{ info.apartment_id.address_street_app }}, {{ info.apartment_id.address_num|default_if_none:""  }}, {{ info.apartment_id.address_city|choice_tag:'city' }}
-                <a href="../apartments/update/{{ info.apartment_id.pk }}" class="text-secondary " >
-                 <i class="fas fa-pen text-secondary btn border p-1" style='font-size:14px'> edit</i>
+            <div class="h5">
+                {% if info.apartment_id.link_location  %}
+                <a href="{{info.apartment_id.link_location}}" class="" title="Open map" >
+                <i class="fa fa-location-arrow mycolor p-2 btn btn-wrap border-danger w-100 " aria-hidden="true">
+                {{ info.apartment_id.address_street_app }}, {{ info.apartment_id.address_num|default_if_none:""  }}, {{ info.apartment_id.address_city|choice_tag:'city' }}
+                </i>
+            </a>
+                    {% else %}
+                <i class="fa fa-home  p-2  " aria-hidden="true">
+                {{ info.apartment_id.address_street_app }}, {{ info.apartment_id.address_num|default_if_none:""  }}, {{ info.apartment_id.address_city|choice_tag:'city' }}
+                </i>
+
+                {% endif %}
+
+            <br>
+            <a href="../apartments/update/{{ info.apartment_id.pk }}" class="text-secondary " >
+                <i class="fas fa-pen text-secondary btn border p-1" style='font-size:14px'> edit</i>
             </a>
             </div>
-
-            <i class="fa fa-phone prefix text-secondary mb-2"></i> {{ info.customer_id.phone }}<br>
-            <i class="fa fa-paper-plane text-secondary mb-2"></i> @{{ info.customer_id.telegram }}<br>
-            <i class="fa fa-whatsapp text-secondary mb-2"></i> {{ info.customer_id.whatsapp }}
         </div>
 
        <div class="col-md-8 " style='font-size:22px'>
@@ -234,8 +240,8 @@ $(document.getElementById('master')).on( "click", ".link-text-secondary", functi
         beforeSend: function () {},
         success: function (resp) {
             $('#exampleModal').modal('hide');
-            const con1 = '<img src="../media/masters/'+resp.repairer_id+'.jpg" alt="" class="rounded-circle" align="center" width="60">'+'<br><b class="text-secondary">'+resp.repairer_name+'</b>';
-            const con2 = ' <a href="" class="link_master text-secondary" data-toggle="modal" data-target="#exampleModal" title="'+resp.pk+'"><i class="fas fa-pen text-secondary" style="font-size:14px"></i></a>';
+            const con1 = '<img src="../media/masters/'+resp.repairer_id+'.jpg" alt="" class="rounded-circle" width="60">'+'<br><b class="text-secondary">'+resp.repairer_name+'</b>';
+            const con2 = '<a href="" class="link_master text-secondary" data-toggle="modal" data-target="#exampleModal" title="'+resp.pk+'"><i class="fas fa-pen text-secondary" style="font-size:14px"></i></a>';
             document.getElementById('handyman').innerHTML=con1;
         },
     });

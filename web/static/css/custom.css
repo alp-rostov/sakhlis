@@ -321,15 +321,50 @@ a {
     margin-top: 15px;
     backdrop-filter: blur(30px);
     border: 2px solid;
-    border-color: var(--span-color);
+    /*border-color: var(--span-color);*/
     transition: 1.0s;
 }
 
-.btn-send:hover {
-color: var(--span-color);
+
+.btn-send-color {
+    border-color: var(--span-color);
+}
+
+.btn-send-color:hover {
+    color: var(--span-color);
     border-color: #FFFFFF;
     background-color: #FFFFFF;
 }
+
+.btn-send-color-b {
+    border-color: var(--span-color-corporate);
+}
+
+.btn-send-color-b:hover {
+    color: var(--span-color-corporate);
+    border-color: #FFFFFF;
+    background-color: #FFFFFF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .cta-btn:hover {
@@ -421,6 +456,10 @@ ul.servicesLinks {
     margin-bottom: 20px;
     margin-top: 20px;
 
+}
+
+.btn-wrap {
+  white-space: normal;
 }
 
 /*.servicesLinks li:before {*/

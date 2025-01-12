@@ -99,17 +99,14 @@
 
             <div class="flex-center">
                 {% if request.user.groups.first.name == 'owner' %}
-                <br><a href="{% url 'profile' %}" class="btn-send p-3 h2 lead">Личный кабинет</a>
+                <br><a href="{% url 'profile' %}" class="btn-send btn-send-color p-3 h2 lead">Личный кабинет</a>
                 {% else %}
-                <a href="{% url 'createorder'%}" class="btn-send">Отправить заявку на ремонт</a><br>
-                <a href="{% url 'business' %}" class="btn-send">Для корпоративных клиентов</a>
+                <a href="{% url 'createorder'%}" class="btn-send btn-send-color">Отправить заявку на ремонт</a><br>
+                <a href="{% url 'business' %}" class="btn-send btn-send-color-b">Для корпоративных клиентов</a>
                 {% endif %}
             </div>
         </div>
 
-    </div>
-    <div class="w-100 mt-5">
-        <p class="lead">{{clients}} клиентов | {{orders}} выполненных работ
     </div>
 
 </header>
