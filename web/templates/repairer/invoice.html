@@ -14,13 +14,17 @@
 </style>
 
 <div class="container">
-    <div class="row">
+    <div class="row font-weight-bold w-100 text-center">
         <div class="col-md-12">
         {% if prev.pk %}
-            <a href="{% url 'invoice' prev.pk %}" class="mycolor m-2 p-2"><</a>
+            <a href="{% url 'invoice' prev.pk %}" class="">
+                <i class="fa fa-arrow-circle-left text-secondary fa-2x btn" aria-hidden="true"></i>
+            </a>
         {% endif %}
         {% if next.pk %}
-            <a href="{% url 'invoice' next.pk %}" class="mycolor m-2 p-2 ">></a>
+            <a href="{% url 'invoice' next.pk %}" class="">
+                <i class="fa fa-arrow-circle-right text-secondary fa-2x btn" aria-hidden="true"></i>
+            </a>
         {% endif %}
         </div>
     </div>
@@ -29,10 +33,10 @@
         <div class="col-md-4 mt-2" >
             <h4 class="mycolor">
                 <b>Order № {{ info.id }}</b> <a href="{% url 'delete-order' info.pk %}" id="delete_{{ info.pk }}" class="mycolor" title="Delete order">
-                <i class="fas fa-trash text-secondary" style='font-size:14px'> delete</i>
-            </a> |
+                <i class="fas fa-trash text-secondary btn border p-1" style='font-size:14px'> delete</i>
+            </a>
             <a href="{% url 'update-order' info.pk %}" id="update_{{ info.pk }}" class="text-secondary" title="Update order">
-                <i class="fas fa-pen text-secondary" style='font-size:14px'> edit</i>
+                <i class="fas fa-pen text-secondary btn border p-1" style='font-size:14px'> edit</i>
             </a>
             </h4>
             {{ info.time_in }}<br>
@@ -50,27 +54,29 @@
             <h5>
                 {{ info.customer_id.customer_name }}
                 <a href="{% url 'clients_update' info.customer_id.pk %}?pk={{info.pk}}" class="text-secondary ml-2" title="update information" >
-                   | <i class="fas fa-pen text-secondary" style='font-size:14px'> edit</i>
+                    <i class="fas fa-pen text-secondary btn border p-1" style='font-size:14px'> edit</i>
                 </a>
             </h5>
-            {% if info.customer_id.phone%}
-            <a href="tel:+{{ info.customer_id.phone }}" title="Телефон" class="">
-            <i class="text-secondary fas fa-phone m-1 p-1"></i></a>
+
+            {% if info.customer_id.phone %}
+            <a href="tel:+{{ info.customer_id.phone }}" title="phone" class="">
+            <i class="fa fa-phone mycolor m-2 p-2 btn border-danger" aria-hidden="true"></i></a>
             {% endif %}
             {% if info.customer_id.telegram %}
             <a href="https://t.me/{{ info.customer_id.telegram|cut:'@' }}" title="Telegram" class="">
-            <i class="text-secondary fas fa-paper-plane text fa-sm mr-1 btn m-1 p-1"></i></a>
+            <i class="fa fa-telegram mycolor m-2 p-2 btn border-danger" aria-hidden="true"></i></a>
             {% endif %}
             {% if info.customer_id.whatsapp %}
-            <a href="https://wa.me/+{{ info.customer_id.whatsapp }}" class="fa fab fa-whatsapp-square text fa-sm mr-1 btn"
+            <a href="https://wa.me/+{{ info.customer_id.whatsapp }}" class=""
                             title="Whatsapp" aria-hidden="true" >
-                <i class="text-secondary fa fab fa-whatsapp-square btn m-1 p-1"></i>
+            <i class="fa fa-whatsapp mycolor m-2 p-2 btn border-danger" aria-hidden="true"></i>
+
             </a>
             {% endif %}
 
             {% if info.apartment_id.link_location  %}
             <a href="{{info.apartment_id.link_location}}" class="" title="Open map" aria-hidden="true">
-             <i class="text-secondary fas fa-map-marker text fa-sm mr-1 btn m-1 p-1"></i>
+             <i class="fa fa-location-arrow mycolor m-2 p-2 btn border-danger"></i>
             </a>
             {% endif %}
 
@@ -85,9 +91,9 @@
                     <img src="../media/masters/{% if info.repairer_id %}{{info.repairer_id.pk}}{% else %}unknown_person{% endif %}.jpg"
                     class="rounded-circle" width="60" alt="master"><br>
                     {% if info.repairer_id %}
-                    <b>{{ info.repairer_id.username}}</b></a> |
+                    <b>{{ info.repairer_id.username}}</b></a>
                     <a href="" class="link_master text-secondary"  data-toggle="modal" data-target="#exampleModal" title="{{ info.pk }}">
-                        <i class="fas fa-pen text-secondary" style='font-size:14px'>edit</i>
+                        <i class="fas fa-pen text-secondary btn border p-1" style='font-size:14px'>edit</i>
                     </a>
                     {% else %}
                     <a href="" class="link_master text-secondary" data-toggle="modal" data-target="#exampleModal" title="{{ info.pk }}">
@@ -99,15 +105,17 @@
 
     <div class="row mb-2">
         <div class="col-md-4 text-secondary">
-            <i class="fas fa-home prefix text-secondary mb-2"> </i>
-            {{ info.apartment_id.address_num|default_if_none:""  }} {{ info.apartment_id.address_street_app }}, {{ info.apartment_id.address_city|choice_tag:'city' }}
-            <a href="../apartments/update/{{ info.apartment_id.pk }}" class="h5 text-secondary " >
-                | <i class="fas fa-pen text-secondary" style='font-size:14px'> edit</i>
+            <div class="h6">
+            <i class="fa fa-home text-secondary mb-2"></i>
+            {{ info.apartment_id.address_street_app }}, {{ info.apartment_id.address_num|default_if_none:""  }}, {{ info.apartment_id.address_city|choice_tag:'city' }}
+                <a href="../apartments/update/{{ info.apartment_id.pk }}" class="text-secondary " >
+                 <i class="fas fa-pen text-secondary btn border p-1" style='font-size:14px'> edit</i>
             </a>
-            <br>
-            <i class="fas fa-phone prefix text-secondary mb-2"></i> {{ info.customer_id.phone }}<br>
-            <i class="fas fa-paper-plane prefix text-secondary mb-2"></i> @{{ info.customer_id.telegram }}<br>
-            <i class="fas fa-paper prefix text-secondary mb-2"></i> Whatsapp{{ info.customer_id.whatsapp }}
+            </div>
+
+            <i class="fa fa-phone prefix text-secondary mb-2"></i> {{ info.customer_id.phone }}<br>
+            <i class="fa fa-paper-plane text-secondary mb-2"></i> @{{ info.customer_id.telegram }}<br>
+            <i class="fa fa-whatsapp text-secondary mb-2"></i> {{ info.customer_id.whatsapp }}
         </div>
 
        <div class="col-md-8 " style='font-size:22px'>

@@ -1,6 +1,6 @@
 from django.db import models
 
-class Client(models.Model):
+class Mail(models.Model):
     """list of clients` mails for sending offers"""
     mail = models.EmailField(null=True, blank=True)
     flag = models.BooleanField(default=False)

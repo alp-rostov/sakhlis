@@ -7,15 +7,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Repair service in Tbilisi</title>
-
     <!-- Bootstrap CSS -->
-
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'fonts' %}/font-awesome/css/font-awesome.min.css">
     <!-- Custom Stylesheets -->
     <link rel="stylesheet" href="{% static 'css/custom.css' %}">
-
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
@@ -23,27 +22,14 @@
 
 {% endblock head %}
 
-
-<style>
-.hidden{
-display:none;
-}
-
-.sticky {
-position: sticky;
-top: 0;
-}
-</style>
   </head>
   <body>
-
 
 {% url 'user' request.user.id as the_url1 %}
 {% url 'list_order' as the_url2 %}
 {% url 'clients' as the_url3 %}
 {% url 'stat' as the_url4 %}
 {% url 'apartments' as the_url5 %}
-
 
 <!--Header-->
 {% #menu line='border_line_blue' %}
@@ -110,8 +96,6 @@ top: 0;
                 {{ user.username }} : Log out</a>
         </li>
     {% endif %}
-
-
 
 {% /menu %}
 

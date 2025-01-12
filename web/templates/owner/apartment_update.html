@@ -10,8 +10,6 @@
 <hr>
 <form action="" method="post" enctype="multipart/form-data" class="" >
     {% csrf_token %}
-
-
     {{ form.as_p }}
     <button type="submit" name="submit" class="btn btn-sm btn-orange cta-btn btn-form mt-3 mb-5 ">Send</button>
 </form>

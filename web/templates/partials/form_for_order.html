@@ -2,24 +2,20 @@
 {% load custom_tags %}
 
 
-<form method="post" action="" name="form" id="form"  style="display:{{hidden}}" class="">
+<form method="post" action="" name="form" id="form" class="">
     {{ children }}
-
     <div class="md-form mb-3">
-        <i class="fas fa-user prefix grey-text" aria-hidden="true"></i>
         {{ form_customer_.customer_name.errors }}
         {{ form_customer_.customer_name }}
         <span id="0"></span>
     </div>
     <div class="md-form mb-4">
-        <i class="fas fa-phone prefix grey-text" aria-hidden="true"></i>
         {{ form_customer_.phone.errors }}
         {{ form_customer_.phone }}
         <span id="1"></span>
     </div>
 
    <div class="md-form mb-4">
-       <i class="fas fa fa-paper-plane prefix grey-text" aria-hidden="true"></i>
        {{ form_customer_.telegram.errors }}
        {{ form_customer_.telegram }}
        <span id="2"></span>
@@ -27,14 +23,12 @@
 
 
    <div class="md-form mb-4">
-       <i class="fas fa fa-whatsapp prefix grey-text" aria-hidden="true"></i>
        {{ form_customer_.whatsapp.errors }}
        {{ form_customer_.whatsapp }}
        <span id="3"></span>
    </div>
 
     <div class="md-form mb-4">
-        <i class="fas fa-address-card-o prefix grey-text fa-lg" aria-hidden="true"></i>
         {{ form_appart_.apartment_id..errors }}
         <span id="4"></span>
         {{ form_appart_.apartment_id }}
@@ -42,7 +36,6 @@
     </div>
 
      <div class="" id="ff">
-     <i class="fas fa-home prefix grey-text fa-lg" aria-hidden="true"></i>
         {% for radio in form_appart_.address_city %}
         <div class="form-check-inline grey-text ml-2">
         {{ radio }}
@@ -51,23 +44,30 @@
      </div>
 
     <div class="md-form mb-4">
-        <i class="fas fa-address-card-o prefix grey-text fa-lg" aria-hidden="true"></i>
         <datalist id="languages">
         </datalist>
         {{ form_appart_.address_street_app }}
-        <span id="4"></span>
+        <span id="6"></span>
         {{ form_appart_.address_num }}
-        <span id="5"></span>
+        <span id="7"></span>
     </div>
 
 
     <div class="md-form mb-4">
-        <i class="fa fa-comment prefix grey-text" aria-hidden="true"></i>
         {{ form_order_.text_order.errors }}
         {{ form_order_.text_order }}
-        <span id="6"></span>
+        <span id="8"></span>
     </div>
-    <button type="submit" name="submit" class="btn btn-lg btn-block mycolor m-2 p-2 waves-effect waves-light">Send</button>
+    {% if lng == 'ru' %}
+        <button type="submit" name="submit" class="btn btn-lg mycolor m-2 p-2">Отправить</button>
+        <a href="{% url 'createorder' %}" class="btn btn-lg mycolor m-2 p-2 border border-danger">Сбросить</a>
+    {% elif lng == 'ge'%}
+        <button type="submit" name="submit" class="btn btn-lg mycolor m-2 p-2">გაგზავნა</button>
+        <a href="{% url 'createorder_ge' %}" class="btn btn-lg mycolor m-2 p-2 border border-danger">გადატვირთვა</a>
+    {% else %}
+        <button type="submit" name="submit" class="btn btn-lg mycolor m-2 p-2">Submit</button>
+        <a href="{% url 'createorder_en' %}" class="btn btn-lg mycolor m-2 p-2 border border-danger">Reset</a>
 
+    {% endif %}
 </form>
 

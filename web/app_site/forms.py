@@ -1,6 +1,8 @@
 from django.contrib.auth.forms import UserCreationForm
 from django import forms
 
+from clients.models import UserProfile
+from .constants import CITY_CHOICES, APART_CHOICES
 from .models import *
 
 class ApartmentFormOwner(forms.Form):
@@ -12,10 +14,11 @@ class ApartmentFormOwner(forms.Form):
     def __init__(self, person, *args, **kwargs):
         self.person=person
         super(ApartmentFormOwner, self).__init__(*args, **kwargs)
-        self.fields['apartment_id'].choices = [(x.pk, x.address_street_app) for x in Apartment.objects.filter(owner=self.person)]
+        self.fields['apartment_id'].choices = [(x.pk, f'{x.name} | {x.address_street_app} {x.address_num}') for x in Apartment.objects.filter(owner=self.person).order_by('name','address_street_app')]
 
 
 class ApartmentForm(forms.ModelForm):
+
     address_city = forms.ChoiceField(
         choices=CITY_CHOICES,
         widget=forms.RadioSelect(attrs={"class": ""},),
@@ -24,18 +27,12 @@ class ApartmentForm(forms.ModelForm):
     address_street_app = forms.CharField(
         label='Street',
         widget=forms.TextInput(
-            attrs={"class": "form-control", 'list': 'languages', 'placeholder': "Street", 'maxlength': 40}),
+            attrs={"class": "form-control", 'list': 'languages', 'placeholder': 'ქუჩა / Street', 'maxlength': 40}),
         required=False
     )
     address_num = forms.CharField(
-        label='Appartment',
-        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Apartment", 'maxlength': 10}),
-        required=False
-    )
-    notes = forms.CharField(
-        label='Note(entrance, floor, apartment, door code, etc. )',
-        widget=forms.TextInput(
-            attrs={"class": "form-control", 'placeholder': "entrance, floor, door code, etc.", 'maxlength': 40}),
+        label='Apartment (number, entrance, floor etc.)',
+        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "ბინა / Apartment", 'maxlength': 150}),
         required=False
     )
 
@@ -59,12 +56,7 @@ class ApartentUpdateForm(ApartmentForm, forms.ModelForm):
         widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "", 'maxlength': 40}),
         required=False
     )
-    notes = forms.CharField(
-        label='Note',
-        widget=forms.TextInput(
-            attrs={"class": "form-control", 'placeholder': "Additional information", 'maxlength': 40}),
-        required=False
-    )
+
     type = forms.ChoiceField(
         choices=APART_CHOICES,
         label='Type of apartment',
@@ -75,48 +67,6 @@ class ApartentUpdateForm(ApartmentForm, forms.ModelForm):
     class Meta:
         model = Apartment
         exclude = ["owner"]
-
-
-class CustomerForm(forms.ModelForm):
-    customer_name = forms.CharField(
-        label='Name',
-        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Name", 'maxlength': 20}),
-        required=True
-    )
-    profile = forms.CharField(
-        label='Additional information:',
-        widget=forms.TextInput(
-            attrs={"class": "form-control", 'placeholder': "About company, job title, etm", 'maxlength': 1500}),
-        required=False
-    )
-    city = forms.ChoiceField(
-        choices=CITY_CHOICES,
-
-        widget=forms.RadioSelect(
-            attrs={"class": ""
-                   },
-        ),
-        initial="TB"
-    )
-    phone = forms.CharField(
-        label='Phone',
-        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Phone", 'type': 'tel', 'maxlength': 16}),
-        required=False
-    )
-    telegram = forms.CharField(
-        label='Telegram',
-        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Telegram", 'maxlength': 26}),
-        required=False
-    )
-    whatsapp = forms.CharField(
-        label='Whatsapp',
-        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "Whatsapp", 'maxlength': 26}),
-        required=False
-    )
-
-    class Meta:
-        model = UserProfile
-        fields = ('customer_name', 'phone', 'telegram', 'whatsapp', 'profile', 'foto', 'city')
 
 
 class InvoiceForm(forms.ModelForm):

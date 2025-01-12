@@ -75,7 +75,7 @@
 {% /menu %}
 
 
-<header id="section-0" class="bg_img jarallax _mPS2id-t mPS2id-target mPS2id-target-first mPS2id-target-last" data-jarallax="{'speed': 0.2}">
+<header id="section-0" class="bg_img jarallax text-center" data-jarallax="{'speed': 0.2}">
     <div class="space">
         <div class="text-center">
             <img src="{% static 'images/logo.png' %}" alt="Мастер на час в Тбилиси" class="logo mt-5" width="200">
@@ -95,12 +95,16 @@
                 <br><a href="{% url 'profile' %}" class="btn-send p-3 h2 lead">პირადი ანგარიში</a>
                 {% else %}
                 <a class="btn-send" href="{% url 'createorder_ge'%}">გაგზავნეთ მოთხოვნა</a>
-                <hr>
+                <br>
                 <a href="{% url 'business_ge' %}" class="button-like_ m-3">ბიზნეს კლიენტებისთვის</a>
                 {% endif %}
             </div>
         </div>
     </div>
+            <div class="w-100 mt-5">
+        <p class="lead">{{clients}} clients | {{orders}} completed works
+    </div>
+
 </header>
 
 

@@ -3,9 +3,6 @@ from django.core.exceptions import ValidationError
 from django.test import TestCase
 from app_site.models import *
 
-
-
-
 class Settings(TestCase):
     @classmethod
     def setUpTestData(cls):

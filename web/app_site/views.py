@@ -1,36 +1,34 @@
 import json
 import logging
 import uuid
-from itertools import count
 
+from PIL.ImageFont import ImageFont
 from django.contrib.auth.models import Group
 from django.contrib.auth.views import LoginView
-from django.db.models import Count, Subquery, F, Exists, OuterRef, Sum
-
 from django.db import transaction
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.contrib.auth.decorators import login_required
-
-from django.http import FileResponse, HttpResponseRedirect, JsonResponse, Http404
+from django.http import FileResponse, JsonResponse, Http404, HttpResponse
 from django.forms import modelformset_factory
 from django.shortcuts import redirect, get_object_or_404
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView, FormView
 
+from clients.filters import ClientFilter
+from clients.form import CustomerForm, CustomerFormForModal
 from .constants import *
 from .exeptions import BaseClassExeption
-from .filters import OrderFilter, ClientFilter, ApartmentFilter
+from .filters import OrderFilter, ApartmentFilter
 from .forms import *
-from .repository import DataFromRepairerList, DataFromOrderList, DataFromInvoice, DataFromUserProfile
-from .serialaizers import StreetModelSerializer, OrderStatusSerializer, InvoiceSerializer, UserSerializer, \
-    UpdateMasterSerializer
+from .repository import DataFromOrderList, DataFromInvoice
+from .serialaizers import OrderStatusSerializer, InvoiceSerializer, UserSerializer, UpdateMasterSerializer
 from .utils import *
 from rest_framework import generics
 
 logger = logging.getLogger('django')
 
 
-class ApartmentList(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, ListView):
+class ApartmentList(PermissionRequiredMixin, LoginRequiredMixin, ListView):
     model = Apartment
     context_object_name = 'apart'
     template_name = 'repairer/apartments.html'
@@ -58,58 +56,14 @@ class ApartmentUpdate(PermissionRequiredMixin, LoginRequiredMixin, UpdateView):
     permission_required = PERMISSION_FOR_REPAIER
     success_url = '/apartments/?address_city=&address_street_app='
 
+class Error404(TemplateView):
+    template_name = '404.html'
 
-class ApartmentOwner(PermissionRequiredMixin, LoginRequiredMixin, ListView):
-    model = Apartment
-    template_name = 'owner/apartment.html'
-    permission_required = PERMISSION_FOR_OWNER
-    context_object_name = 'appartment'
+class InfoTemplate(TemplateView):
+    template_name = 'information.html'
 
-    def get_queryset(self):
-        _=UserProfile.objects.get(user=self.request.user)
-        return (Apartment.objects
-                .filter(owner=_)
-                .order_by('address_street_app'))
-
-    def get_context_data(self, *, object_list=None, **kwargs):
-        _=UserProfile.objects.get(user=self.request.user)  # TODO delete DRY
-        context=super().get_context_data(**kwargs)
-
-        list_orders_master=OrderList.objects.filter(apartment_id__owner=_)
-
-        orders_quantity = list_orders_master.values('apartment_id').annotate(
-            quantity=Count("apartment_id"))
-        count = {}
-        for i in orders_quantity:
-            count[i['apartment_id']] = i['quantity']
-        context['orders_count'] = count
-
-        orders_amount = (Invoice.objects
-             .filter(order_id__apartment_id__owner_id=_)
-             .values('order_id__apartment_id')
-             .annotate(ss=Sum(F('price')*F('quantity')))
-             )
-        summ = {}
-        for ii in orders_amount:
-            summ[ii['order_id__apartment_id']] = str(ii['ss'])
-        context['orders_summ'] = summ
-
-        masters={}
-        list_masters = list_orders_master.exclude(repairer_id=None).values('apartment_id','repairer_id', 'repairer_id__username').distinct()
-        for iii in list_masters:
-            if not masters.get(iii.get('apartment_id')):
-                masters[iii['apartment_id']] = [(iii['repairer_id'], iii['repairer_id__username'])]
-            else:
-                t= masters.get(iii.get('apartment_id'))
-                t.append((iii['repairer_id'], iii['repairer_id__username']))
-                masters[iii['apartment_id']]=t
-        context['list_master'] = masters
-
-
-        return context
-
-
-class Clients(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, ListView):
+class Clients(PermissionRequiredMixin, LoginRequiredMixin, ListView):
+    """ LIST OF CLIENTS """
     model = UserProfile
     context_object_name = 'clients'
     template_name = 'repairer/clients.html'
@@ -130,25 +84,7 @@ class Clients(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, Li
         return self.filterset.qs
 
 
-class ClientsUpdate(PermissionRequiredMixin, LoginRequiredMixin, UpdateView):
-    model = UserProfile
-    template_name = 'repairer/clients_update.html'
-    form_class = CustomerForm
-    permission_required = PERMISSION_FOR_REPAIER
-
-    def get_success_url(self):
-        dict_choice_url = {'repairer': '/list_order/'+self.request.GET.get('pk'), 'owner': '/owner/apartment'}
-        return dict_choice_url[self.request.user.groups.first().name]
-
-
-class Error404(TemplateView):
-    template_name = '404.html'
-
-class InfoTemplate(TemplateView):
-    template_name = 'information.html'
-
-
-class InvoiceCreate(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, DetailView):
+class InvoiceCreate(PermissionRequiredMixin, LoginRequiredMixin, DetailView):
     """ Add name of works, quantity, price to order  """
     model = OrderList
     context_object_name = 'info'
@@ -166,7 +102,7 @@ class InvoiceCreate(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMix
         InvoiceFormSet = modelformset_factory(Invoice, form=InvoiceForm, extra=0)
         formset = InvoiceFormSet(queryset=Invoice.objects.none())
         context['form'] = formset                          # TODO refactor filter 3 is a group`s number 'repaier'
-        context['list_masters'] = User.objects.filter(groups=3).values('pk', 'username',
+        context['list_masters'] = User.objects.filter(groups=2).values('pk', 'username',
                                                                        'groups')
         return context
 
@@ -178,7 +114,6 @@ class InvoiceCreate(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMix
             instances = formset.save(commit=False)
         except ValueError:
             return JsonResponse('error', safe=False)
-
         list_num = []
         if instances:
             for instance in instances:
@@ -190,13 +125,12 @@ class InvoiceCreate(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMix
                                  "service_id": instance.service_id.pk,
                                  "service_id_name": instance.service_id.name
                                  })
-
             return JsonResponse(list_num, safe=False)
         else:
             return JsonResponse({}, safe=False)
 
 
-class OrderCreate(BaseClassExeption, CreateView):
+class OrderCreate(CreateView):
     """" Add order """
     model = OrderList
     template_name = 'order_create.html'
@@ -207,55 +141,65 @@ class OrderCreate(BaseClassExeption, CreateView):
         context = super().get_context_data(**kwargs)
         context['form_appart'] = ApartmentForm
         context['form_customer'] = CustomerForm
-        if self.request.user.is_authenticated:   # TODO to improve code
-            if self.request.user.groups.first().name == 'owner':
-                per = UserProfile.objects.get(user=self.request.user)
-                context['form_appart']=ApartmentFormOwner(person=per)
-                context['form_customer'] = ''
+        if self.request.user.is_authenticated and self.request.user.groups.first().name == 'owner':
+            user_ = get_object_or_404(UserProfile, user=self.request.user)
+        elif ((not self.request.user.is_authenticated or self.request.user.is_superuser)
+              and is_valid_uuid(self.request.GET.get('qrcode'))):
+            try:
+                user_ = UserProfile.objects.get(qrcode_id=self.request.GET.get('qrcode'))
+            except UserProfile.DoesNotExist:
+                return context
+        else:
+            return context
+        context['form_appart'] = ApartmentFormOwner(person=user_)
+        context['form_customer'] = ''
+        context['form_for_modal'] = CustomerFormForModal
+        context['contact_data'] = coding_personal_data(name=str(user_),  phone=user_.phone, whatsapp=user_.whatsapp,
+                                                       telegram=user_.telegram)
+        context['qruuid'] =f'?qrcode={self.request.GET.get("qrcode")}'
         return context
 
     def form_valid(self, form):
         with (transaction.atomic()):
-            if self.request.user.is_authenticated:
-                if self.request.user.groups.first().name == 'owner':
-                    form.instance.customer_id = UserProfile.objects.get(user=self.request.user.id)
-                    form.instance.apartment_id = Apartment.objects.get(pk=self.request.POST.get('apartment_id'))
-                    form.save()
-                    return JsonResponse({'message': f'<h3>Заявка № {form.instance.pk} отправлена успешно!</h3>',
-                                         'pk': form.instance.pk,
-                                         'text': form.instance.text_order,
-                                         'date': form.instance.time_in,
-                                         'repaier': '',
-                                         'apartment': form.instance.apartment_id.pk
-                                         })
-                elif self.request.user.groups.first().name == 'repairer':
-                    customer = OrderCustomerForm(self.request.POST).save()
-                    app = ApartmentForm(self.request.POST).save(commit=False)
-                    app.owner = customer
-                    app.save()
-                    form.instance.apartment_id = app
-                    form.instance.customer_id = customer
-            else:
-                customer = OrderCustomerForm(self.request.POST).save()
-                app = ApartmentForm(self.request.POST).save(commit=False)
-                app.owner = customer
-                app.save()
-                form.instance.apartment_id = app
-                form.instance.customer_id = customer
+            if self.request.user.is_authenticated and self.request.user.groups.first().name == 'owner':
+                customer_id = UserProfile.objects.get(user=self.request.user.id)
+                apartment_id = Apartment.objects.get(pk=self.request.POST.get('apartment_id'))
+                form.instance.apartment_id = apartment_id
+                form.instance.customer_id = customer_id
+                form.save()
+                return JsonResponse({'message': f'<h3>Заявка № {form.instance.pk} отправлена успешно!</h3>',
+                                     'pk': form.instance.pk,
+                                     'text': form.instance.text_order,
+                                     'date': form.instance.time_in,
+                                     'repaier': '',
+                                     'apartment': form.instance.apartment_id.pk
+                                     })
+            elif self.request.GET.get('qrcode'):
+                apartment_id = Apartment.objects.get(pk=self.request.POST.get('apartment_id'))  #TODO eliminate code duplication
+                customer_id = apartment_id.owner
 
+            else:
+                customer_id = OrderCustomerForm(self.request.POST).save()
+                apartment_id = ApartmentForm(self.request.POST).save(commit=False)
+                apartment_id.owner = customer_id
+                apartment_id.save()
+
+            form.instance.apartment_id = apartment_id
+            form.instance.customer_id = customer_id
             form.save()
 
-            return JsonResponse({'message': f'{form.instance.pk}',
-                                 'contact': f'<h4>Ваш менеджер мастер Сергей: <br><img src="/media/masters/51.jpg" class="rounded-circle" width="100">.</h4>'
-                                            f'<h5>Вы можете написать ему, уточнить детали, отправить фото работ или геопозицию:</h5>'
-                                            f'<a class="mx-2" title="Telegram" href="https://t.me/+995598259119"><img src="/static/images/telegram.gif" width="50" alt="Telegram"></a>'
-                                            f'<a class="mx-2" title="WhatsApp" href="https://wa.me/+79604458687"><img src="/static/images/whatsapp.png" width="55" alt="WhatsApp"></a>',
-                                 'pk': form.instance.pk,
-                                 'auth': self.request.user.is_authenticated
-                                 })
+            response_ = {'message': f'{form.instance.pk}',
+                         'contact': f'<h4>Ваш менеджер мастер Сергей: <br><img src="/media/masters/51.jpg" class="rounded-circle" width="100">.</h4>'
+                                    f'<h5>Вы можете написать ему, уточнить детали, отправить фото работ или геопозицию:</h5>'
+                                    f'<a class="mx-2" title="Telegram" href="https://t.me/+995598259119"><img src="/static/images/telegram.gif" width="50" alt="Telegram"></a>'
+                                    f'<a class="mx-2" title="WhatsApp" href="https://wa.me/+79604458687"><img src="/static/images/whatsapp.png" width="55" alt="WhatsApp"></a>',
+                         'pk': form.instance.pk,
+                         'auth': self.request.user.is_authenticated
+                         }
+            return JsonResponse(response_)
 
 
-class OrderDelete(BaseClassExeption, LoginRequiredMixin, DeleteView):
+class OrderDelete(LoginRequiredMixin, DeleteView):
     model = OrderList
     template_name = 'order_delete.html'
 
@@ -264,50 +208,7 @@ class OrderDelete(BaseClassExeption, LoginRequiredMixin, DeleteView):
         return dict_choice_url[self.request.user.groups.first().name]
 
 
-class OwnerDetailInformation(PermissionRequiredMixin, LoginRequiredMixin, TemplateView):
-    template_name = 'owner/owner_profile.html'
-    permission_required = PERMISSION_FOR_OWNER
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['prof'] = DataFromRepairerList().get_object_from_UserProfile(user=self.request.user)
-
-        context['order_list_by_apartments'] = (
-            OrderList.objects.only('time_in', 'text_order', 'apartment_id__address_street_app',
-                                   'apartment_id__address_num', 'apartment_id__name', 'apartment_id__notes',
-                                   'apartment_id__address_city', 'apartment_id__foto', 'order_status',
-                                   'repairer_id__username')
-            .filter(customer_id=context['prof'])
-            .order_by('apartment_id__address_street_app', '-time_in')
-            .select_related('apartment_id', 'repairer_id')
-        )
-        #  apartments` list for top buttons
-        context['apartments'] = (Apartment.objects
-                                 .filter(owner=context['prof'])
-                                 .annotate(top=Subquery(Exists(OrderList.objects.filter(apartment_id=OuterRef('pk')).exclude(order_status='END'))))
-                                 .only('pk', 'address_city', 'address_street_app', 'address_num', 'foto', 'notes',
-                                        'name')
-                                 .order_by('address_street_app'))
-        # detail info of apartments wich have no orders
-        list_app_ = set([i.get('apartment_id') for i in context['order_list_by_apartments'].values('apartment_id')])
-        list_app = context['apartments'].exclude(pk__in=list_app_)
-        context['list_app'] = list_app
-        return context
-
-class OwnerInvoice(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, DetailView):
-    """ list of all orders """
-    model = OrderList
-    context_object_name = 'info'
-    template_name = 'owner/owner_invoice.html'
-    permission_required = PERMISSION_FOR_OWNER
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data()
-        context['invoice'] = DataFromInvoice().get_data_from_invoice_with_amount(order_id_=self.object.pk)
-        return context
-
-
-class OrderManagementSystem(BaseClassExeption, LoginRequiredMixin, ListView):
+class OrderManagementSystem(LoginRequiredMixin, ListView):
     """ list of all orders """
     model = OrderList
     context_object_name = 'order'
@@ -329,10 +230,6 @@ class OrderManagementSystem(BaseClassExeption, LoginRequiredMixin, ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['filterset'] = self.filterset
-        # c = context['filterset'].qs.values('pk')
-        # c_ = DataFromInvoice().get_total_cost_of_some_orders(list_of_orders=c)
-        # context['summ_orders'] = c_
-        # context['count_orders'] = self.get_queryset().count()
         return context
 
 
@@ -355,45 +252,6 @@ class OrdersOnTheStreet(ListView):
         return queryset
 
 
-class OwnerOrderManagementSystem(OrderManagementSystem, BaseClassExeption, LoginRequiredMixin, ListView):
-    """ list of all orders """
-    template_name = 'owner/order_list.html'
-    permission_required = PERMISSION_FOR_OWNER
-
-    def get_queryset(self):
-        userprof = UserProfile.objects.get(user=self.request.user)
-        queryset = OrderList.objects \
-            .filter(customer_id=userprof) \
-            .select_related('apartment_id', 'repairer_id') \
-            .values('pk', 'time_in',
-                    'text_order', 'apartment_id','repairer_id',
-                    'repairer_id__username', 'apartment_id__address_street_app',
-                    'apartment_id__address_city', 'apartment_id__address_num', 'apartment_id__name'
-                    ).order_by('-time_in')
-        self.filterset = OrderFilter(self.request.GET, queryset)
-        return self.filterset.qs
-
-
-class OwnerApartmentCreate(BaseClassExeption, LoginRequiredMixin, CreateView):
-    model = Apartment
-    template_name = 'owner/apartment_update.html'
-    form_class = ApartentUpdateForm
-    success_url = '../apartment'
-
-    def form_valid(self, form):
-        super().form_valid(form)
-        form.instance.owner = UserProfile.objects.get(user=self.request.user)
-        form.save()
-        return redirect('apartment')
-
-
-class OwnerApartmentUpdate(LoginRequiredMixin, UpdateView):
-    model = Apartment
-    template_name = 'owner/apartment_update.html'
-    form_class = ApartentUpdateForm
-    success_url = '../apartment'
-
-
 class OrderUpdate(LoginRequiredMixin, UpdateView):
     model = OrderList
     template_name = 'order_update.html'
@@ -403,7 +261,7 @@ class OrderUpdate(LoginRequiredMixin, UpdateView):
         return '/list_order/' + str(self.object.pk)
 
 
-class RepairerDetailInformation(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, TemplateView):
+class RepairerDetailInformation(PermissionRequiredMixin, LoginRequiredMixin, TemplateView):
     template_name = 'repairer/repaier_profile.html'
     permission_required = PERMISSION_FOR_REPAIER
 
@@ -411,15 +269,15 @@ class RepairerDetailInformation(BaseClassExeption, PermissionRequiredMixin, Logi
         context = super().get_context_data(**kwargs)
         context['form_order'] = OrderForm
         context['form_appart'] = ApartmentForm
-        context['form_customer'] = CustomerForm               # TODO refactor filter 3 is a group`s number 'repaier'
-        context['list_masters'] = User.objects.filter(groups=3).values('pk', 'username', 'groups')
+        context['form_customer'] = CustomerForm               # TODO refactor filter 2 is a group`s number 'repaier'
+        context['list_masters'] = User.objects.filter(groups=2).values('pk', 'username', 'groups')
         context['orders'] = DataFromOrderList().get_data_from_OrderList_with_order_status(repairer=self.request.user,
                                                                                           status_of_order=['SND',
                                                                                                            'RCV'])
         return context
 
 
-class RepaierUpdate(BaseClassExeption, PermissionRequiredMixin, UpdateView):
+class RepaierUpdate(PermissionRequiredMixin, UpdateView):
     model = UserProfile
     template_name = 'repairer/repaier_create.html'
     form_class = CustomerForm
@@ -429,21 +287,7 @@ class RepaierUpdate(BaseClassExeption, PermissionRequiredMixin, UpdateView):
         return '/user/' + str(self.request.user.pk)
 
 
-class SendOffer(FormView):
-    template_name = 'offers.html'
-    form_class = SendOffer
-    def post(self, formset, **kwargs):
-
-        send_email(self.request.POST['email'],
-                   'Repair services in Georgia',
-                   'emails/mail-offer.html',
-                   {'name': self.request.POST['username']}
-                   )
-        return redirect('sendoffer')
-
-
-
-class Statistica(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin, ListView):
+class Statistica(PermissionRequiredMixin, LoginRequiredMixin, ListView):
     template_name = 'repairer/statistica.html'
     model = OrderList
     context_object_name = 'order'
@@ -466,6 +310,7 @@ class Statistica(BaseClassExeption, PermissionRequiredMixin, LoginRequiredMixin,
         context['d'] = Graph(data_from_invoice.get_quantity_of_orders_by_type(repairer=self.request.user),
                              'service_id__type', 'count', WORK_CHOICES_, 'Order structure, quantity.', '') \
             .make_graf_pie()
+
         context['d_'] = Graph(data_from_invoice.get_cost_of_orders_by_type(repairer=self.request.user),
                               'service_id__type', 'count', WORK_CHOICES_, 'Order structure, lar.', '') \
             .make_graf_pie()
@@ -510,6 +355,34 @@ class UserRegisterView(CreateView):
             return redirect('message_after_registration')
 
 
+def create_qr_code_client(request, **kwargs):
+    """ Create pdf-file for printing """
+
+    from PIL import Image, ImageDraw, ImageFont
+
+    city_=UserProfile.objects.get(qrcode_id = request.GET.get('qrcode')).city
+    city=CITY_CHOICES_INVOICE[city_]
+
+    url='https://www.sakhlis-remonti.ge/createorder_en'
+
+    qrcode_= request.GET.get('qrcode')
+    str_=f'{url}?qrcode={qrcode_}'
+
+    img_ = Image.open("static/images/frame_qr.jpg")
+    draw = ImageDraw.Draw(img_)
+    font = ImageFont.truetype("static/fonts/TT Travels Trial Regular.otf", 35)
+    draw.text((260, 25), city, (0, 0, 0),font=font)
+
+    qr_code = create_qr_code_url(str_)
+    img_.paste(qr_code, (60, 195))
+
+    buf = io.BytesIO()
+    img_ = img_.save(buf, "PNG")
+    buf.seek(0)
+
+    return FileResponse(buf, as_attachment=True, filename=f'QrCode_.png')
+
+
 def CreateIvoicePDF(request, **kwargs):
     """ Create invoice pdf-file for printing """
     # get information from models
@@ -517,8 +390,8 @@ def CreateIvoicePDF(request, **kwargs):
     info = DataFromOrderList().get_all_data_of_order_with_from_invoice().get(pk=order_pk)
     # create file
     buf = io.BytesIO()
-    doc = InvoiceMaker(buf, info)
-    doc.createDocument()
+    doc = CreatePDF(buf, info_order=info)
+    doc.createDocument_invoice()
     doc.savePDF()
     buf.seek(0)
     return FileResponse(buf, as_attachment=True, filename=f'Invoice_{order_pk}_.pdf')
@@ -551,10 +424,8 @@ def listservices_for_invoice_json(request, **kwargs):
 def client_details_json(request, **kwargs):
     """for ajax request """
     data = UserProfile.objects.get(pk=request.GET.get('pk'))
-
     orders = OrderList.objects.filter(customer_id=data).values('pk', 'text_order', 'time_in').order_by('-time_in')[0:5]
     json_orders = json.dumps(list(orders), default=str)
-
     apartment = Apartment.objects.filter(owner=data).values('pk', 'name', 'address_city', 'address_street_app',
                                                             'address_num').order_by('-address_street_app')
     json_apartment = json.dumps(list(apartment), default=str)
@@ -576,7 +447,6 @@ def client_details_json(request, **kwargs):
 def save_list_jobs(request, **kwargs):
     """for ajax request """
     FormSet_ = modelformset_factory(OrderList, fields=('text_order', 'apartment_id', 'customer_id'))
-
     formset = FormSet_(request.POST).save(commit=False)
     if formset:
         for instance in formset:
@@ -594,16 +464,6 @@ class DeleteIvoiceServiceAPI(generics.DestroyAPIView):
 
     def get_queryset(self):
         queryset = Invoice.objects.all()
-        return queryset
-
-
-class StreetListApi(generics.ListAPIView):
-    """API for ajax request """
-    serializer_class = StreetModelSerializer
-    http_method_names = ['get']
-
-    def get_queryset(self):
-        queryset = StreetTbilisi.objects.filter(name_street__istartswith=self.request.GET.get('street'))[0:10]
         return queryset
 
 
@@ -652,7 +512,8 @@ class MastersListAPI(generics.ListAPIView):
     http_method_names = ['get']
 
     def get_queryset(self):                 # TODO refactor filter 3 is a group`s number 'repaier'
-        queryset = User.objects.filter(groups=3).values('pk', 'username', 'groups')
+        # queryset = User.objects.filter(groups=3).values('pk', 'username', 'groups')
+        queryset = User.objects.values('pk', 'username', 'groups')
         return queryset
 
 
@@ -667,9 +528,7 @@ def creat_order_from_owner_profile(request, **kwargs):
 
 def verife_account(request):
     token_ = request.GET.get('token')
-    print(token_)
     pk_=request.GET.get('pk')
-    print(pk_)
     user_ = get_object_or_404(User, pk=pk_)
     profile = UserProfile.objects.get(user=user_)
     if profile.customer_name == token_:
@@ -681,5 +540,3 @@ def verife_account(request):
         return redirect('confirm_registration')
     else:
         raise Http404("")
-
-

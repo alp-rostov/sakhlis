@@ -30,7 +30,7 @@ LOGGING = {
 
     'handlers': {
         'security': {
-            'level': 'WARNING',
+            'level': 'ERROR',
             'class': 'logging.FileHandler',
             'filename': 'django.log',
             'formatter': 'verbose_info'
@@ -57,31 +57,32 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
-    'django.contrib.flatpages',
     'django_filters',
     'formtools',
     'slippers',
     'rest_framework',
     'django_cleanup.apps.CleanupConfig',
-    'app_site.apps.AppSiteConfig',
-    'api.apps.ApiConfig',
     'debug_toolbar',
+    'qrcode',
     'corsheaders',  # app is for giving permission to use api from other sources
-    'mails'
+    'app_site.apps.AppSiteConfig',
+    'clients.apps.ClientsConfig',
+    'mails.apps.MailsConfig',
+    'masters.apps.MastersConfig',
+    'apartments.apps.ApartmentsConfig',
+
 ]
 SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    # 'django.middleware.locale.LocaleMiddleware',  # for translate
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
-    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
      'debug_toolbar.middleware.DebugToolbarMiddleware'
 ]
 
