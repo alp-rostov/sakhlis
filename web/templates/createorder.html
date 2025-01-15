@@ -82,26 +82,37 @@
 
 <!-- Services -->
 <section id="section-1" class="container">
-    <h2 class="mt-0" id="answer">Отправить заявку на ремонт</h2>
+    <h2 class="mt-0" id="answer">Заявка на ремонт</h2>
        <div id="contact" class="form-container">
            <div id="message"></div>
            {% #form form_order_=form form_appart_=form_appart  form_customer_=form_customer lng='ru' %}
              {% csrf_token %}
            {% if contact_data.name %}
-           <h4>Заказчик: {{contact_data.name }}
-               <a href="" class="link_master text-secondary"  data-toggle="modal" data-target="#exampleModal" title="{{ info.pk }}">
-                   <i class="fa fa-address-card-o ml-5" style="font-size: 18px"> Add new contact</i>
-               </a>
-           </h4>
-           <h5>
-               <i class="fa fa-phone mycolor m-1 p-2 btn border-danger" aria-hidden="true"> {{contact_data.phone }}</i>
-               <i class="fa fa-telegram mycolor m-1 p-2 btn border-danger" aria-hidden="true"> {{ contact_data.telegram }}</i>
-               <i class="fa fa-whatsapp mycolor m-1 p-2 btn border-danger" aria-hidden="true"> {{ contact_data.whatsapp }}</i>
-
+               <div class="md-form mb-3">
+               Имя: <input value="{{contact_data.name }}" class="form-control" disabled >
+               </div>
+               {% if contact_data.phone %}
+                   <div class="md-form mb-3">
+                   Телефон: <input value="{{contact_data.phone }}" class="form-control" disabled >
+                   </div>
+               {% endif %}
+               {% if contact_data.telegram %}
+                   <div class="md-form mb-3">
+                   Telegram: <input value=" {{ contact_data.telegram }}" class="form-control" disabled >
+                   </div>
+               {% endif %}
+               {% if contact_data.whatsapp %}
+                   <div class="md-form">
+                   WhatsApp: <input value="{{ contact_data.whatsapp }}" class="form-control" disabled >
+                   </div>
+               {% endif %}
            {% endif %}
            {% /form %}
+<!--           <a href="" class="btn btn-lg mycolor  m-2 p-2 border border-danger color w-25">Позвонить</a>-->
+<!--           <a href="" class="btn btn-lg mycolor m-2 p-2 border border-danger w-50">Написать мастеру</a>-->
         </div>
 </section>
+
 <!-- And Services -->
 
 <!-- Footer -->

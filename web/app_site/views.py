@@ -12,7 +12,6 @@ from django.forms import modelformset_factory
 from django.shortcuts import redirect, get_object_or_404
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
-from django.core.exceptions import ValidationError
 
 from clients.filters import ClientFilter
 from clients.form import CustomerForm, CustomerFormForModal
@@ -23,7 +22,7 @@ from .repository import DataFromOrderList, DataFromInvoice
 from .serialaizers import OrderStatusSerializer, InvoiceSerializer, UserSerializer, UpdateMasterSerializer
 from .utils import *
 from rest_framework import generics
-from PIL import ImageDraw, ImageFont
+
 
 
 logger = logging.getLogger('django')
@@ -142,6 +141,7 @@ class OrderCreate(CreateView):
         context = super().get_context_data(**kwargs)
         context['form_appart'] = ApartmentForm
         context['form_customer'] = CustomerForm
+
         if self.request.user.is_authenticated and self.request.user.groups.first().name == 'owner':
             user_ = get_object_or_404(UserProfile, user=self.request.user)
         elif ((not self.request.user.is_authenticated or self.request.user.is_superuser)
@@ -152,52 +152,46 @@ class OrderCreate(CreateView):
                 return context
         else:
             return context
+
         context['form_appart'] = ApartmentFormOwner(person=user_)
         context['form_customer'] = ''
-        context['form_for_modal'] = CustomerFormForModal
-        context['contact_data'] = coding_personal_data(name=str(user_),  phone=user_.phone, whatsapp=user_.whatsapp,
+        # context['form_for_modal'] = CustomerFormForModal
+        context['contact_data'] = coding_personal_data(phone=user_.phone, whatsapp=user_.whatsapp,
                                                        telegram=user_.telegram)
+        context['contact_data']['name'] = user_
         context['qruuid'] =f'?qrcode={self.request.GET.get("qrcode")}'
         return context
 
     def form_valid(self, form):
         with (transaction.atomic()):
-            if self.request.user.is_authenticated and self.request.user.groups.first().name == 'owner':
-                customer_id = UserProfile.objects.get(user=self.request.user.id)
-                apartment_id = Apartment.objects.get(pk=self.request.POST.get('apartment_id'))
-                form.instance.apartment_id = apartment_id
-                form.instance.customer_id = customer_id
-                form.save()
-                return JsonResponse({'message': '',
-                                     'pk': form.instance.pk,
-                                     'text': form.instance.text_order,
-                                     'date': form.instance.time_in,
-                                     'repaier': '',
-                                     'apartment': form.instance.apartment_id.pk
-                                     })
-            elif self.request.GET.get('qrcode'):
-                apartment_id = Apartment.objects.get(pk=self.request.POST.get('apartment_id'))  #TODO eliminate code duplication
-                customer_id = apartment_id.owner
-
-            else:
-                customer_id = OrderCustomerForm(self.request.POST).save()
-                apartment_id = ApartmentForm(self.request.POST).save(commit=False)
-                apartment_id.owner = customer_id
-                apartment_id.save()
+            try:
+                if self.request.user.groups.first().name == 'owner':
+                    customer_id = get_object_or_404(UserProfile, user=self.request.user.id)
+                    apartment_id = get_object_or_404(Apartment, pk=self.request.POST.get('apartment_id'))
+                else:
+                    raise AttributeError
+            except AttributeError:
+                if self.request.GET.get('qrcode'):
+                    apartment_id =get_object_or_404(Apartment, pk=self.request.POST.get('apartment_id'))
+                    customer_id = apartment_id.owner
+                else:
+                    customer_id = OrderCustomerForm(self.request.POST).save()
+                    apartment_id = ApartmentForm(self.request.POST).save(commit=False)
+                    apartment_id.owner = customer_id
+                    apartment_id.save()
 
             form.instance.apartment_id = apartment_id
             form.instance.customer_id = customer_id
             form.save()
 
-            response_ = {'message': f'{form.instance.pk}',
-                         # 'contact': f'<h4>Ваш менеджер мастер Сергей: <br><img src="/media/masters/51.jpg" class="rounded-circle" width="100">.</h4>'
-                         #            f'<h5>Вы можете написать ему, уточнить детали, отправить фото работ или геопозицию:</h5>'
-                         #            f'<a class="mx-2" title="Telegram" href="https://t.me/+995598259119"><img src="/static/images/telegram.gif" width="50" alt="Telegram"></a>'
-                         #            f'<a class="mx-2" title="WhatsApp" href="https://wa.me/+79604458687"><img src="/static/images/whatsapp.png" width="55" alt="WhatsApp"></a>',
-                         'pk': form.instance.pk,
-                         'auth': self.request.user.is_authenticated
-                         }
-            return JsonResponse(response_)
+        return JsonResponse({'message': '',
+                             'pk': form.instance.pk,
+                             'auth': self.request.user.is_authenticated,
+                             'text': form.instance.text_order,
+                             'date': form.instance.time_in,
+                             'repaier': '',
+                             'apartment': form.instance.apartment_id.pk
+                             })
 
 
 class OrderDelete(LoginRequiredMixin, DeleteView):
@@ -372,16 +366,10 @@ def create_qr_code_client(request, **kwargs):
         city = 'Tbilisi'
         str_ = url
 
-    with Image.open("static/images/frame_qr.jpg") as img_:
-        draw = ImageDraw.Draw(img_)
-        font = ImageFont.truetype("static/fonts/TT Travels Trial Regular.otf", 35)
-        draw.text((260, 25), city, (0, 0, 0),font=font)
-        qr_code = create_qr_code_url(str_, box_size)
-        img_.paste(qr_code, (60, 195))
-        buf = io.BytesIO()
-        img_ = img_.save(buf, "PNG")
-        buf.seek(0)
-
+    buf = io.BytesIO()
+    img_ = create_qrcode_for_client(city, str_, box_size)
+    img_ = img_.save(buf, "PNG")
+    buf.seek(0)
     return FileResponse(buf, as_attachment=True, filename=f'QrCode_.png')
 
 

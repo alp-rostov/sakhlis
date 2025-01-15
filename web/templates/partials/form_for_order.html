@@ -2,7 +2,7 @@
 {% load custom_tags %}
 
 
-<form method="post" action="" name="form" id="form" class="">
+<form method="post" action="" name="form" id="form" class="border border-default p-2">
     {{ children }}
     <div class="md-form mb-3">
         {{ form_customer_.customer_name.errors }}
@@ -29,6 +29,7 @@
    </div>
 
     <div class="md-form mb-4">
+        Адрес:
         {{ form_appart_.apartment_id..errors }}
         <span id="4"></span>
         {{ form_appart_.apartment_id }}
@@ -59,8 +60,8 @@
         <span id="8"></span>
     </div>
     {% if lng == 'ru' %}
-        <button type="submit" name="submit" class="btn btn-lg mycolor m-2 p-2">Отправить</button>
-        <a href="{% url 'createorder' %}" class="btn btn-lg mycolor m-2 p-2 border border-danger">Сбросить</a>
+        <button type="submit" name="submit" class="btn btn-send mycolor m-2 p-2 lead mycolor">Отправить заявку на ремонт</button>
+        <a href="{% url 'createorder' %}" class="btn btn-send mycolor m-2 p-2 border border-danger lead mycolor">очистить форму</a>
     {% elif lng == 'ge'%}
         <button type="submit" name="submit" class="btn btn-lg mycolor m-2 p-2">გაგზავნა</button>
         <a href="{% url 'createorder_ge' %}" class="btn btn-lg mycolor m-2 p-2 border border-danger">გადატვირთვა</a>

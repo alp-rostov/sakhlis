@@ -396,7 +396,7 @@ h1.display-4 {
 .lead {
     font-size: 1.50rem;
     font-weight: 400;
-	color: #fefefe;
+	/*color: #fefefe;*/
 }
 
 .space {

@@ -6,7 +6,7 @@ import qrcode
 import reportlab
 from geopy.geocoders import Nominatim
 from reportlab.lib import styles
-from PIL import Image
+from PIL import Image, ImageDraw, ImageFont
 from reportlab.lib.enums import TA_LEFT, TA_RIGHT
 from reportlab.lib.utils import ImageReader
 from reportlab.pdfbase.ttfonts import TTFont
@@ -76,12 +76,11 @@ class CreatePDF(object):
     """ create pdf-document -> the invoice for payment """
 
     def __init__(self, pdf_file: _io.BytesIO, info_order: OrderList=None):
-        """ pdf_file = io.BytesIO()"""
         self.c = canvas.Canvas(pdf_file, bottomup=0)
         folder = os.path.dirname(reportlab.__file__)
         folder_font = os.path.join(folder, 'fonts')
 
-        custom_font = os.path.join(folder_font, 'Tantular.ttf') # add file to ...reportlab/fonts
+        custom_font = os.path.join(folder_font, 'Tantular.ttf') # need to add file 'Tantular.ttf' to ...reportlab/fonts
         gergian_font = os.path.join(folder_font, 'ARIALUNI.TTF')
         lary_font = os.path.join(folder_font, 'font-larisome.ttf')
         pdfmetrics.registerFont(TTFont('Tantular', custom_font,))
@@ -317,18 +316,65 @@ def coding_personal_data(**kwargs):
             return f'{code[0:-2]}**'
         elif len(code) < 5:
             return f'{code[0:-1]}*'
+
     return dict(map(lambda  x: (x[0], code_data(x[1])) , kwargs.items()))
 
 
-def create_qr_code_url(url:str, box_size_:int):
-    ''' Generate the QR code image '''
+def create_qr_code_url(str_:str, box_size_:int):
+    ''' Generate the QRcode image '''
     qr = qrcode.QRCode(version=1, error_correction=qrcode.constants.ERROR_CORRECT_L,
     box_size=box_size_, border=1,  )
-    qr.add_data(url)
+    qr.add_data(str_)
     qr.make()
     img_ = qr.make_image(fill_color="#FF8000", back_color="white")
     return img_
 
+def create_qrcode_for_client(city, str_, box_size):
+    """put qrcode in image"""
+    with Image.open("static/images/frame_qr.jpg") as img_:
+        draw = ImageDraw.Draw(img_)
+        font = ImageFont.truetype("static/fonts/TT Travels Trial Regular.otf", 35)
+        draw.text((260, 25), city, (0, 0, 0),font=font)
+        qr_code = create_qr_code_url(str_, box_size)
+        img_.paste(qr_code, (60, 195))
+        return img_
 
 
-
+# def create_order(b:re):
+#     try:
+#         if self.request.user.groups.first().name == 'owner':
+#             customer_id = UserProfile.objects.get(user=self.request.user.id)
+#             apartment_id = Apartment.objects.get(pk=self.request.POST.get('apartment_id'))
+#         else:
+#             raise AttributeError
+#     except AttributeError:
+#         if self.request.GET.get('qrcode'):
+#             apartment_id = Apartment.objects.get(pk=self.request.POST.get('apartment_id'))
+#             customer_id = apartment_id.owner
+#         else:
+#             customer_id = OrderCustomerForm(self.request.POST).save()
+#             apartment_id = ApartmentForm(self.request.POST).save(commit=False)
+#             apartment_id.owner = customer_id
+#             apartment_id.save()
+#     with (transaction.atomic()):
+#         form.instance.apartment_id = apartment_id
+#         form.instance.customer_id = customer_id
+#         form.save()
+#
+#     # with (transaction.atomic()):
+#     #     form.instance.apartment_id = apartment_id
+#     #     form.instance.customer_id = customer_id
+#     #     form.save()
+#     # return JsonResponse({'message': '',
+#     #                      'pk': form.instance.pk,
+#     #                      'text': form.instance.text_order,
+#     #                      'date': form.instance.time_in,
+#     #                      'repaier': '',
+#     #                      'apartment': form.instance.apartment_id.pk
+#     #                      })
+#
+#     response_ = {'message': f'{form.instance.pk}',
+#                  'pk': form.instance.pk,
+#                  'auth': self.request.user.is_authenticated
+#                  }
+#     return JsonResponse(response_)
