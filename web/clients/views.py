@@ -40,7 +40,7 @@ class OwnerDetailInformation(PermissionRequiredMixin, LoginRequiredMixin, Templa
                                  .annotate(top=Subquery(Exists(OrderList.objects.filter(apartment_id=OuterRef('pk')).exclude(order_status='END'))))
                                  .only('pk', 'address_city', 'address_street_app', 'address_num', 'foto',
                                         'name')
-                                 .order_by('address_street_app'))
+                                 .order_by('name', 'address_street_app'))
         # detail info of apartments wich have no orders
         list_app_ = set([i.get('apartment_id') for i in context['order_list_by_apartments'].values('apartment_id')])
         list_app = context['apartments'].exclude(pk__in=list_app_)
