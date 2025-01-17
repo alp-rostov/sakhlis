@@ -326,7 +326,7 @@ a {
 }
 
 
-.btn-send-color {
+.btn-send-color  {
     border-color: var(--span-color);
 }
 
@@ -346,26 +346,9 @@ a {
     background-color: #FFFFFF;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+button[type=submit] {
+    background: #ffffff;
+}
 
 .cta-btn:hover {
     background-color: transparent!important;
@@ -393,10 +376,11 @@ h1.display-4 {
     font-weight: 800;
 }
 
+
 .lead {
     font-size: 1.50rem;
     font-weight: 400;
-	/*color: #fefefe;*/
+    color: rgb(244, 244, 244);
 }
 
 .space {
@@ -575,101 +559,6 @@ button:focus {
     transform: translateY(-35%);
 }
 
-/*********************************************
-		Price css
-*********************************************/
-
-/*.accordion-bg {*/
-/*    background-image: url(../images/usluga-master-na-chas.jpg);*/
-/*    background-size: cover;*/
-/*    background-repeat: no-repeat;*/
-/*    background-attachment: fixed;*/
-/*}*/
-
-/*.accordion.md-accordion.accordion-2 .card {*/
-/*    background-color: rgba(2, 1, 1, 0.9);*/
-/*}*/
-
-/*.accordion.md-accordion.accordion-2 .card {*/
-/*    border: 0;*/
-/*}*/
-
-/*table td {*/
-/*    font-size: 1.1rem;*/
-/*    font-weight: 300;*/
-/*    letter-spacing: 1px;*/
-/*}*/
-
-/*********************************************
-		Call to Actions css
-*********************************************/
-
-/*.cta {*/
-/*    font-size: 2rem;*/
-/*    font-family: inherit;*/
-/*}*/
-
-/*.browns {*/
-/*    color: var(--span-color);*/
-/*}*/
-
-/*#typed2.wrapper {*/
-/*    position: absolute;*/
-/*    top: 0;*/
-/*    left: 0;*/
-/*}*/
-
-/*section.frame_bg {*/
-/*    position: relative;*/
-/*	 background-image: url('../images/remont-v-vannoy.jpg');*/
-/*    background-repeat: no-repeat;*/
-/*    background-size: cover;*/
-/*    background-position: center;*/
-/*    background-attachment: fixed;*/
-/*}*/
-
-/*.mt-6 {*/
-/*    margin-top: 7rem !important;*/
-/*}*/
-
-/*.mt-5-5 {*/
-/*    margin-top: 6.5rem;*/
-/*}*/
-
-/*.black {*/
-/*    background-color: #000000c7!important;*/
-/*    border: 4px #fff;*/
-/*    border-style: outset;*/
-/*    border-radius: 25px;*/
-/*}*/
-
-/*!**********************************************/
-/*		Counter css*/
-/**********************************************!*/
-
-/*#counter h3 {*/
-/*	color :#fdfdfd;*/
-/*	text-transform: uppercase;*/
-/*	font-weight: bold;*/
-/*	margin-bottom: .5rem;*/
-/*}*/
-/*.streak {*/
-/*    display: block;*/
-/*    position: relative;*/
-/*    overflow: hidden;*/
-/*}*/
-
-/*.streak.streak-long-2 {*/
-/*    height: 100%;*/
-/*}*/
-
-/*.streak.streak-photo {*/
-/*    background-image: url('../images/populyarnie-uslugi.jpg');*/
-/*    background-repeat: no-repeat;*/
-/*    background-size: cover;*/
-/*    background-position: center;*/
-/*    background-attachment: fixed;*/
-/*}*/
 
 /*********************************************
 		Modal Window css
@@ -747,16 +636,6 @@ footer hr {
     text-align: left;
 
 }
-
-/*    .corporateheader {*/
-/*    margin-top: 120px;*/
-/*    margin-left: -3px;*/
-/*    margin-right: 6px;*/
-/*    border-radius: 0px 50px 50px 0px;*/
-/*    backdrop-filter: blur(8px);*/
-/*    border: 2px solid;*/
-/*    border-color: #00ACFF;*/
-/*}*/
 
 
     .display-4 {

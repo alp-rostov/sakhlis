@@ -29,7 +29,11 @@
    </div>
 
     <div class="md-form mb-4">
-        Адрес:
+    {% if lng == 'ru' %} Адрес:
+    {% elif lng == 'en'%} Address:
+    {% else %} მისამართი:
+    {% endif %}
+
         {{ form_appart_.apartment_id..errors }}
         <span id="4"></span>
         {{ form_appart_.apartment_id }}
@@ -55,19 +59,23 @@
 
 
     <div class="md-form mb-4">
+    {% if lng == 'ru' %} Опишите проблему:
+    {% elif lng == 'en'%} Describe the problem:
+    {% else %} აღწერეთ პრობლემა:
+    {% endif %}
         {{ form_order_.text_order.errors }}
         {{ form_order_.text_order }}
         <span id="8"></span>
     </div>
     {% if lng == 'ru' %}
-        <button type="submit" name="submit" class="btn btn-send mycolor m-2 p-2 lead mycolor">Отправить заявку на ремонт</button>
-        <a href="{% url 'createorder' %}" class="btn btn-send mycolor m-2 p-2 border border-danger lead mycolor">очистить форму</a>
+        <button type="submit" name="submit" class="btn-send btn-send mycolor">Отправить заявку на ремонт</button>
+        <a href="{% url 'createorder' %}" class="btn-send btn-send mycolor">Oчистить форму</a>
     {% elif lng == 'ge'%}
-        <button type="submit" name="submit" class="btn btn-lg mycolor m-2 p-2">გაგზავნა</button>
-        <a href="{% url 'createorder_ge' %}" class="btn btn-lg mycolor m-2 p-2 border border-danger">გადატვირთვა</a>
+        <button type="submit" name="submit" class="btn-send btn-send mycolor">გაგზავნეთ შეკეთების მოთხოვნა</button>
+        <a href="{% url 'createorder_ge' %}" class="btn-send btn-send mycolor">გადატვირთვა</a>
     {% else %}
-        <button type="submit" name="submit" class="btn btn-lg mycolor m-2 p-2">Submit</button>
-        <a href="{% url 'createorder_en' %}" class="btn btn-lg mycolor m-2 p-2 border border-danger">Reset</a>
+        <button type="submit" name="submit" class="btn-send btn-send mycolor">Submit a repair request</button>
+        <a href="{% url 'createorder_en' %}" class="btn-send btn-send mycolor">Reset</a>
 
     {% endif %}
 </form>
