@@ -179,7 +179,6 @@ class OrderCreate(CreateView):
                     apartment_id = ApartmentForm(self.request.POST).save(commit=False)
                     apartment_id.owner = customer_id
                     apartment_id.save()
-
             form.instance.apartment_id = apartment_id
             form.instance.customer_id = customer_id
             form.save()
