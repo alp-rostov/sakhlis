@@ -346,8 +346,10 @@ a {
     background-color: #FFFFFF;
 }
 
-button[type=submit] {
+button[type=submit], button[type=submit]:hover  {
     background: #ffffff;
+    border-color: var(--span-color);
+    color: var(--span-color);
 }
 
 .cta-btn:hover {

@@ -91,7 +91,7 @@
         <input id="tab-btn-{{ b.pk }}" name="tab-btn" type="radio" value="">
         <label onclick="menu_hide_show()" for="tab-btn-{{ b.pk }}">
             
-            {{b.address_street_app}} {{b.address_num|default_if_none:''}}  | <span class="text-secondary">{{b.name}}</span>
+              {{b.name}} | <span class="text-secondary">{{b.address_street_app}} {{b.address_num|default_if_none:''}}</span>
             {% if b.top %}<br> <span class="text-secondary font-weight-bold"> Orders in progress</span>{% endif %}    
         </label>
         {% endfor %}
@@ -119,7 +119,7 @@
                     </p>
                     {% if c.grouper.foto %}
                     <img src="../media/{{ c.grouper.foto }}"
-                         alt="" class="" width="200">
+                         alt="" class="img-thumbnail" width="200">
                     {% endif %}
                 </div>
                 <!-- end details about apartments-->

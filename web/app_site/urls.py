@@ -12,6 +12,9 @@ urlpatterns = [
     path('createorder', OrderCreate.as_view(template_name='createorder.html'), name='createorder'),
     path('createorder_en', OrderCreate.as_view(template_name='createorder_en.html'), name='createorder_en'),
     path('createorder_ge', OrderCreate.as_view(template_name='createorder_ge.html'), name='createorder_ge'),
+    path('repairingwashingmachine', TemplateView.as_view(template_name='washing_machine.html'),
+         name='repairingwashingmachine'),
+
     path('list_order', OrderManagementSystem.as_view(), name='list_order'),
     # path('street', OrdersOnTheStreet.as_view(), name='aaa'),
     path('list_order/<int:pk>', InvoiceCreate.as_view(), name='invoice'),

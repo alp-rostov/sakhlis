@@ -101,7 +101,7 @@ class InvoiceCreate(PermissionRequiredMixin, LoginRequiredMixin, DetailView):
             .get_previous_number_for_paginator_from_OrderList(pk=self.object.pk)
         InvoiceFormSet = modelformset_factory(Invoice, form=InvoiceForm, extra=0)
         formset = InvoiceFormSet(queryset=Invoice.objects.none())
-        context['form'] = formset                          # TODO refactor filter 3 is a group`s number 'repaier'
+        context['form'] = formset                          # TODO refactor filter groups=2 is a group`s number 'repaier'
         context['list_masters'] = User.objects.filter(groups=2).values('pk', 'username',
                                                                        'groups')
         return context

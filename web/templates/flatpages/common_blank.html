@@ -1,0 +1,160 @@
+{% load static %}
+{% load slippers %}
+
+<!DOCTYPE html><html lang="ru" ><head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- Fav Icon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Мастер на час в Тбилиси | Мелкие ремонтные работы: Заказать ремонтные работы</title>
+    <meta name="description" content="Формат отправки заявки на ремонтные работы: yслуги электрика, сантехника, мелкий ремонт квартир, ремонт бытовой техники">
+    <!-- Facebook -->
+    <meta property="og:title" content="Мастер на час в Тбилиси: заказать ремонтные работы">
+	<meta property="og:description" content="Услуги по ремонту в Тбилиси ✔ Вызвать мастера на дом ✔ Услуги электрика, сантехника, мелкий ремонт квартир">
+	<meta property="og:image" content="images/master-na-chas.jpg">
+	<meta property="og:image:width" content>
+	<meta property="og:image:height" content>
+	<meta property="og:site_name" content>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'fonts' %}/font-awesome/css/font-awesome.min.css">
+
+    <!-- Owl Carusel -->
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <!-- Custom Stylesheets -->
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+</head>
+
+<body id="top">
+
+<!--Header-->
+
+{% #menu_lg_createorder line='border_line_orange' uuid_=qruuid %}
+
+<li class="nav-item mr-3 active">
+    <a class="nav-link" href="{% url 'home' %}"><b>Главная </b><span class="sr-only">(current)</span></a>
+</li>
+
+{% if request.user.is_authenticated %}
+    <li class="nav-item mr-4">
+        {% if request.user.groups.first.name == 'repairer' %}
+        <a class="nav-link" href="{% url 'user' request.user.pk %}">
+        {% elif request.user.groups.first.name == 'owner' %}
+        <a class="nav-link" href="{% url 'profile' %}">
+        {% endif %}
+        {{ request.user }}
+        </a>
+    </li>
+    <li class="nav-item mr-4">
+        <a class="nav-link" href="{% url 'logout' %}">
+            Выйти
+        </a>
+    </li>
+{% else %}
+    <li class="nav-item mr-4">
+        <a class="nav-link" href="{% url 'login' %}" title='Sign in'>
+            Авторизоваться
+        </a>
+    </li>
+{% endif %}
+
+{% /menu_lg_createorder %}
+
+<section id="section-0" class="bg_img bottom">
+    <div class="space text-center">
+            <h1 class="display-4 m-0" >Мастер на час в Тбилиси</h1>
+                <span class="lead border-bottom">Написать мастеру:</span>
+                <!--Telegramm-->
+                <a class="m-1" title="Telegram" href="https://t.me/+995598259119"><img src="{% static 'images/telegram.gif' %}" width="40" alt="Telegram"></a>
+                <!--WhatsApp-->
+                <a class="m-1" title="WhatsApp" href="https://wa.me/+79604458687"><img src="{% static 'images/whatsapp.png' %}" width="45" alt="WhatsApp"></a>
+                <!--Instagram-->
+                <a class="m-1" href="https://www.instagram.com/repairservicetbilisi/"><img src="{% static 'images/instagram.png' %}" width="50" alt="Instagram"></a>
+    </div>
+</section>
+
+<!-- Services -->
+<section id="section-1" class="container">
+    <h2 class="mt-0" id="answer">Ремонт стиральных машин</h2>
+       <div id="contact" class="form-container">
+           <div id="message">----</div>
+-------------
+        </div>
+</section>
+
+<!-- And Services -->
+
+<!-- Footer -->
+<footer class="footer_bg">
+       {% #footer address_title='Адрес' address_name='Тбилиси, ул.Зураба Патаридзе 8' phone_title='Контакты' write_to_us_title='Написать нам' master_title='Мастер на час в Тбилиси' %}
+       {% /footer %}
+</footer>
+
+<!-- And Footer -->
+
+
+    <!-- jQuery first, then Bootstrap JS -->
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/mdb.min.js' %}"></script>
+    <!-- Optional JavaScript -->
+
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/jquery.malihu.PageScroll2id.min.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+	<script type="text/javascript">
+        $(document).ready(function() {
+            new WOW().init();
+        });
+    </script>
+
+<script>
+$(document.body).ready(function() {
+    $('#form').submit(function(e) {
+        e.preventDefault();
+        $.ajax({
+            url: '',
+            type: 'POST',
+            data: $(this).serialize(),
+            dataType: 'text',
+            beforeSend: function () {$("#form").html('<h3>Отправляется...</h3>');},
+            success: function (resp) {
+                let mes=JSON.parse(resp);
+                if (mes.auth==true) {
+                    window.location.href = '/list_order/'+mes.pk;
+                    }
+                else {
+                    $("#form").html(' ');
+                    $("#answer").html('<h2>Благодарим Вас за заявку!</h2><h3>Заявка № '+mes.pk + ' отправлена успешно!</h2><hr><h4>Ваш менеджер мастер Сергей: <br><img src="/media/masters/51.jpg" class="rounded-circle" width="100">.</h4><h5>Вы можете написать ему, уточнить детали, отправить фото работ или геопозицию:</h5><a class="mx-2" title="Telegram" href="https://t.me/+995598259119"><img src="/static/images/telegram.gif" width="50" alt="Telegram"></a><a class="mx-2" title="WhatsApp" href="https://wa.me/+79604458687"><img src="/static/images/whatsapp.png" width="55" alt="WhatsApp"></a>')
+                    }
+                },
+            });
+    });
+
+
+
+    $('#form_add_client').submit(function(e) {
+    e.preventDefault();
+    $.ajax({
+        url: '/client/createclient',
+        type: 'POST',
+        data: $(this).serialize(),
+        dataType: 'text',
+        beforeSend: function () {$("#form_add_client").html('<h3>Отправляется...</h3>');},
+        success: function (resp) {
+            let mes=JSON.parse(resp);
+            console.log(mes)
+            },
+        });
+    });
+
+
+});
+</script>
+</body></html>

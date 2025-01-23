@@ -12,6 +12,6 @@ urlpatterns = [
     path('list_order', OwnerOrderManagementSystem.as_view(), name='o_list_order'),
     path('invoice/<int:pk>', OwnerInvoice.as_view(), name='ownerinvoice'),
 
-    path('createclient',clent_create_api, name='createclient'),
+    # path('createclient',clent_create_api, name='createclient'),
 
 ]
