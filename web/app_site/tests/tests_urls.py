@@ -6,12 +6,21 @@ from app_site.urls import urlpatterns
 
 
 class UrlTestCase(TestCase):
-
-    def test_home_url(self):
-        for url in urlpatterns[0:10]:
-            url_ = str(url.pattern)
-            response=Client().get('/'+url_)
+    def test_urls_200(self):
+        urls=['', 'en', 'ge', 'corporate','corporate_en', 'corporate_ge',
+              'createorder', 'createorder_en', 'createorder_ge',
+              'repairingwashingmachine']
+        for url in urls:   #list of URLs that do not require authorization
+            response=Client().get('/'+url)
             self.assertEqual(response.status_code, 200)
+
+    def test_urls_301(self):
+        urls=['login', 'logout', 'register', 'registration',
+              'confirm_registration', 'stat']
+        for url in urls:   #list of URLs that do not require authorization
+            response=Client().get('/'+url)
+            self.assertEqual(response.status_code, 301)
+
 
 
 
