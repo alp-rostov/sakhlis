@@ -37,7 +37,8 @@
     <a class="nav-link" href="#section-0"><b>Главная </b><span class="sr-only">(current)</span></a>
 </li>
 <li class="nav-item mr-3">
-    <a class="nav-link" href="#section-1">Услуги</a>
+    <a class="nav-link" href="#section-1">
+        Услуги</a>
 </li>
 <li class="nav-item mr-3">
     <a class="nav-link" href="#section-2">Фото</a>
@@ -178,7 +179,7 @@
                     {% #card name_service="Услуги сантехника" name_service1="Устранение засора" name_service2="Установка раковины, унитаза, смесителя" name_service3="Устранение протечки крана"  %}
                         <img src="{% static 'fonts/leak.svg' %}" class="rounded-circle img-fluid">
                     {% /card %}
-                    {% #card name_service="Ремонт бытовой техники" name_service1="Посудомоечные машины" name_service2="Стиральные машины и сушильные машины" name_service3="Духовки и печки"  %}
+                    {% #card name_service="Ремонт бытовой техники" name_service1="<a href='/dishwasher' class='text-secondary'>Посудомоечные машины</a>" name_service2="<a href='/repairwashingmachine' class='text-secondary'>Стиральные машины и сушильные машины</a>" name_service3="Духовки и печки"  %}
                         <img src="{% static 'fonts/washing-machine.svg' %}" class="rounded-circle img-fluid">
                     {% /card %}
                     {% #card name_service="Cборка мебели" name_service1="Шкафы, диваны, кухни" name_service2="Установка встраиваемой техники" name_service3="Подъем на этаж"  %}

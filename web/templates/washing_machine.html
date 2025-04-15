@@ -1,16 +1,27 @@
 {% extends 'flatpages/common_blank.html' %}
-{% load custom_filters %}
-{% load custom_tags %}
+
+{% load static %}
 
 
-{% block subbody %}
+{% block title %}Ремонт стиральных машин{% endblock title %}
+
+{% block content %}Ремонт стиральных машин и сушильных машин в Тбилиси{% endblock content %}
+
+{% block facebookcontent %}Ремонт стиральных машин в Тбилиси{% endblock facebookcontent %}
+
+{% block facebookdescription %}Все виды ремонта стиральных и сушильных машин в Тбилиси{% endblock facebookdescription %}
 
 
-{% endblock subbody %}
+{% block button %}Заказать ремонтстиральной машины{% endblock button %}
 
 {% block body %}
 
 <h2>Ремонт стиральных машин</h2>
 
+<img src="{% static 'images/remontstiralnihmashine.jpeg' %}" alt="Слив стиральной машины" >
+<img src="{% static 'images/remontstiralok.jpeg' %}" alt="Стиральная маштна Bosch" >
+<img src="{% static 'images/washingmachine2.jpeg' %}" alt="Барабан стиральной машины" >
+<img src="{% static 'images/washingmachinerepair.jpeg' %}" alt="Ремонт стиральной машины" >
+<img src="{% static 'images/washingmachine1.jpeg' %}" alt="Плата стиральной машины" >
 
 {% endblock body %}
