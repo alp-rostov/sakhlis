@@ -13,15 +13,20 @@
 
 
 {% block button %}Заказать ремонтстиральной машины{% endblock button %}
-
 {% block body %}
 
-<h2>Ремонт стиральных машин</h2>
+<h2 class="mt-0">Ремонт стиральных машин</h2>
+<p>Мы также занимается ремонтом стиральных и сушильных машин:  замена барабана, ремонт электро-плат, замена манжет и прокладок, прочистка слива и насоса, замена нагревательных тенов и многое другое. Мы выполняем диагностику, ремонт или замену необходимых деталей без необходимости транспортировать технику в сервисный центр.
+</p>
+<h3>Фотографии ремонтов стиральных машин<h3>
+<img src="{% static 'images/remontstiralnihmashine.jpeg' %}" alt="Слив стиральной машины" width="200" >
+<img src="{% static 'images/remontstiralok.jpeg' %}" alt="Стиральная маштна Bosch" width="200">
+<img src="{% static 'images/washingmachine2.jpeg' %}" alt="Барабан стиральной машины" width="200">
+<img src="{% static 'images/washingmachinerepair.jpeg' %}" alt="Ремонт стиральной машины" width="200">
+<img src="{% static 'images/washingmachine1.jpeg' %}" alt="Плата стиральной машины" width="200">
 
-<img src="{% static 'images/remontstiralnihmashine.jpeg' %}" alt="Слив стиральной машины" >
-<img src="{% static 'images/remontstiralok.jpeg' %}" alt="Стиральная маштна Bosch" >
-<img src="{% static 'images/washingmachine2.jpeg' %}" alt="Барабан стиральной машины" >
-<img src="{% static 'images/washingmachinerepair.jpeg' %}" alt="Ремонт стиральной машины" >
-<img src="{% static 'images/washingmachine1.jpeg' %}" alt="Плата стиральной машины" >
-
+<h3>Отправить заявку на ремонт стиральной машины</h3>
+<a class="btn border-danger mycolor mr-1 ml-1 w-100" href="{% url 'createorder'%}">
+Заказать ремонт
+    </a>
 {% endblock body %}

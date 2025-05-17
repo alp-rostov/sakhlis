@@ -352,7 +352,7 @@ class UserRegisterView(CreateView):
 def create_qr_code_client(request, **kwargs):
     """ Create png-file for printing """
     qrcode_= request.GET.get('qrcode')
-    url = 'https://www.sakhlis-remonti.ge/'
+    url = 'https://www.sakhlis-remonti.ge/createorder'
     box_size=12
     try:
         if not is_valid_uuid(qrcode_):
@@ -361,7 +361,7 @@ def create_qr_code_client(request, **kwargs):
         city=CITY_CHOICES_INVOICE[city_]
         str_ = f'{url}createorder_en?qrcode={qrcode_}'
     except UserProfile.DoesNotExist:
-        box_size = 17
+        box_size = 15
         city = 'Tbilisi'
         str_ = url
 
