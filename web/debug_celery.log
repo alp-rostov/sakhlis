@@ -1,0 +1,1516 @@
+ 
+ -------------- celery@debian v5.2.7 (dawn-chorus)
+--- ***** ----- 
+-- ******* ---- Linux-6.1.0-18-amd64-x86_64-with-glibc2.36 2025-01-11 21:55:10
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         web:0x7fa47c254f10
+- ** ---------- .> transport:   redis://127.0.0.1:6379//
+- ** ---------- .> results:     redis://127.0.0.1:6379/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . app_site.tasks.send_email
+  . app_site.tasks.send_to_telegrambot
+
+[2025-01-11 21:55:11,185: INFO/MainProcess] Connected to redis://127.0.0.1:6379//
+[2025-01-11 21:55:11,206: INFO/MainProcess] mingle: searching for neighbors
+[2025-01-11 21:55:12,238: INFO/MainProcess] mingle: all alone
+[2025-01-11 21:55:12,326: INFO/MainProcess] celery@debian ready.
+[2025-01-11 21:55:48,978: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[ddc37ea2-364a-45d7-bcbc-8cd6820d76fa] received
+[2025-01-11 21:55:54,759: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[ddc37ea2-364a-45d7-bcbc-8cd6820d76fa] succeeded in 0.6648008767515421s: None
+[2025-01-11 21:56:26,516: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[45bf47de-f77f-4c49-921d-8d562169a75f] received
+[2025-01-11 21:56:31,797: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[45bf47de-f77f-4c49-921d-8d562169a75f] succeeded in 0.1710150595754385s: None
+[2025-01-11 21:57:48,891: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[e3441a74-93ed-41c7-bf75-b034a3b48aff] received
+[2025-01-11 21:57:54,135: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[e3441a74-93ed-41c7-bf75-b034a3b48aff] succeeded in 0.15626141801476479s: None
+[2025-01-13 08:57:56,332: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[856449cf-6bfb-4c49-afda-bdc667312360] received
+[2025-01-13 08:58:01,947: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[856449cf-6bfb-4c49-afda-bdc667312360] succeeded in 0.5389688741415739s: None
+[2025-01-13 12:05:32,315: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[03dfaab3-298e-4be4-be4c-072a317826a3] received
+[2025-01-13 12:05:37,962: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[03dfaab3-298e-4be4-be4c-072a317826a3] succeeded in 0.5671415887773037s: None
+[2025-01-13 19:41:30,092: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[aefbb76a-03bb-4bbc-949b-f9f181691b28] received
+[2025-01-13 19:41:35,772: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[aefbb76a-03bb-4bbc-949b-f9f181691b28] succeeded in 0.5981321707367897s: None
+[2025-01-14 10:41:58,398: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[cf55ca16-dd13-4aec-9aaa-54e20ea56751] received
+[2025-01-14 10:42:04,013: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[cf55ca16-dd13-4aec-9aaa-54e20ea56751] succeeded in 0.5154020395129919s: None
+[2025-01-15 06:10:46,622: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[ec53545a-7593-4477-ad24-4bebf8b25627] received
+[2025-01-15 06:10:52,258: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[ec53545a-7593-4477-ad24-4bebf8b25627] succeeded in 0.5631668958812952s: None
+[2025-01-15 06:11:07,421: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[f7a9c90d-90a9-4e0e-a517-eec327666f1b] received
+[2025-01-15 06:11:12,682: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[f7a9c90d-90a9-4e0e-a517-eec327666f1b] succeeded in 0.15587630309164524s: None
+[2025-01-15 06:11:14,904: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[8259f194-62eb-4e63-9fbd-e4900c9e8183] received
+[2025-01-15 06:11:20,093: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[8259f194-62eb-4e63-9fbd-e4900c9e8183] succeeded in 0.12238298915326595s: None
+[2025-01-15 06:11:23,418: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[d4771d57-9ff4-4d26-9d7b-9e7b3b23ef43] received
+[2025-01-15 06:11:28,652: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[d4771d57-9ff4-4d26-9d7b-9e7b3b23ef43] succeeded in 0.12637650407850742s: None
+[2025-01-15 06:11:31,070: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[e4428ce4-3440-4529-9fc1-0e2004b16488] received
+[2025-01-15 06:11:36,292: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[e4428ce4-3440-4529-9fc1-0e2004b16488] succeeded in 0.11732158809900284s: None
+[2025-01-15 06:11:38,605: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[d09d1896-9136-4205-95a7-2ec6b7115f1b] received
+[2025-01-15 06:11:43,940: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[d09d1896-9136-4205-95a7-2ec6b7115f1b] succeeded in 0.21854226849973202s: None
+[2025-01-15 06:11:45,865: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[755dc1de-012d-4642-bce8-ba57fcbd42ef] received
+[2025-01-15 06:11:51,142: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[755dc1de-012d-4642-bce8-ba57fcbd42ef] succeeded in 0.17159772291779518s: None
+[2025-01-15 13:42:50,530: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[0a6c5833-6f92-49bc-b627-43450440e00e] received
+[2025-01-15 13:42:56,141: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[0a6c5833-6f92-49bc-b627-43450440e00e] succeeded in 0.5284701399505138s: None
+[2025-01-15 16:01:32,124: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[16471ced-67f9-4488-9b28-071f413e7bab] received
+[2025-01-15 16:01:37,771: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[16471ced-67f9-4488-9b28-071f413e7bab] succeeded in 0.5234377328306437s: None
+[2025-01-16 12:13:53,880: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[7a439bba-e2b6-4a0b-b755-05ad9a484496] received
+[2025-01-16 12:13:59,571: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[7a439bba-e2b6-4a0b-b755-05ad9a484496] succeeded in 0.6257661040872335s: None
+[2025-01-16 18:19:43,183: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[6a76ef6d-d370-4890-a6c8-c2ef353d2a80] received
+[2025-01-16 18:19:48,995: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[6a76ef6d-d370-4890-a6c8-c2ef353d2a80] succeeded in 0.7394887432456017s: None
+[2025-01-16 18:20:15,999: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[eb2e7cd6-d28e-43da-a410-5149ccff5ba0] received
+[2025-01-16 18:20:21,355: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[eb2e7cd6-d28e-43da-a410-5149ccff5ba0] succeeded in 0.26657822728157043s: None
+[2025-01-17 06:33:58,558: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[b8ca1c5d-f9bb-46ca-a9e6-79ff087dae59] received
+[2025-01-17 06:34:04,292: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[b8ca1c5d-f9bb-46ca-a9e6-79ff087dae59] succeeded in 0.6367982793599367s: None
+[2025-01-17 15:20:21,706: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[b5858de5-05d1-4c81-bb2f-75d119728fd0] received
+[2025-01-17 15:20:27,334: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[b5858de5-05d1-4c81-bb2f-75d119728fd0] succeeded in 0.5723829865455627s: None
+[2025-01-17 15:49:12,903: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[7ef1f2bc-27fe-4af9-99b9-fef5f4efab45] received
+[2025-01-17 15:49:18,627: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[7ef1f2bc-27fe-4af9-99b9-fef5f4efab45] succeeded in 0.616261126473546s: None
+[2025-01-17 19:57:15,703: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[6db8e9c2-972c-4050-b921-4d227b24225c] received
+[2025-01-17 19:57:21,421: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[6db8e9c2-972c-4050-b921-4d227b24225c] succeeded in 0.6653156485408545s: None
+[2025-01-17 19:58:07,050: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[6204bd7f-4781-4347-89c0-0fa6216adf16] received
+[2025-01-17 19:58:12,252: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[6204bd7f-4781-4347-89c0-0fa6216adf16] succeeded in 0.16133939288556576s: None
+[2025-01-18 13:45:14,128: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[e6ef5bd4-8e19-45bf-acea-6370d5f6bc5f] received
+[2025-01-18 13:45:19,800: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[e6ef5bd4-8e19-45bf-acea-6370d5f6bc5f] succeeded in 0.5464039966464043s: None
+[2025-01-18 22:17:13,264: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[d41f5c87-2ab8-4c61-a77f-808458540754] received
+[2025-01-18 22:17:18,876: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[d41f5c87-2ab8-4c61-a77f-808458540754] succeeded in 0.5222547706216574s: None
+[2025-01-19 06:17:49,586: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[9dc2fbb0-5332-4702-9fd0-37d3c9a485cc] received
+[2025-01-19 06:17:55,216: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[9dc2fbb0-5332-4702-9fd0-37d3c9a485cc] succeeded in 0.5593808107078075s: None
+[2025-01-19 15:28:04,488: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[927c3e7d-c415-4a9a-8d17-1c7dab19ddb2] received
+[2025-01-19 15:28:10,052: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[927c3e7d-c415-4a9a-8d17-1c7dab19ddb2] succeeded in 0.5591503474861383s: None
+[2025-01-20 05:53:05,604: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[07ced413-72f2-4d97-bd12-0d1285472660] received
+[2025-01-20 05:53:11,221: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[07ced413-72f2-4d97-bd12-0d1285472660] succeeded in 0.5442422404885292s: None
+[2025-01-20 13:44:46,843: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[f5e26ca6-cf55-4f25-a453-5bd85947f5e6] received
+[2025-01-20 13:44:52,501: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[f5e26ca6-cf55-4f25-a453-5bd85947f5e6] succeeded in 0.605526190251112s: None
+[2025-01-20 18:54:48,720: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[8b0debb5-9a0b-4238-80e9-b605fb3bd407] received
+[2025-01-20 18:54:54,326: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[8b0debb5-9a0b-4238-80e9-b605fb3bd407] succeeded in 0.5624329876154661s: None
+[2025-01-20 22:36:01,770: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[f72fabed-4880-4841-81c6-1700389db95a] received
+[2025-01-20 22:36:07,638: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[f72fabed-4880-4841-81c6-1700389db95a] succeeded in 0.7629427034407854s: None
+[2025-01-21 08:03:18,379: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[a3deaec0-f8bf-4222-b5c2-b922eeea7042] received
+[2025-01-21 08:03:24,023: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[a3deaec0-f8bf-4222-b5c2-b922eeea7042] succeeded in 0.540948061272502s: None
+[2025-01-22 06:55:30,469: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[43a20557-cc12-4403-8209-0fdccfaf6db4] received
+[2025-01-22 06:55:36,240: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[43a20557-cc12-4403-8209-0fdccfaf6db4] succeeded in 0.6329265665262938s: None
+[2025-01-22 09:16:35,332: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[ea226d73-b67f-4ac8-a117-da7dda30a334] received
+[2025-01-22 09:16:40,991: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[ea226d73-b67f-4ac8-a117-da7dda30a334] succeeded in 0.5978367198258638s: None
+[2025-01-23 21:19:15,277: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[b03486e4-c751-48b9-b8cd-2c807a2dfd48] received
+[2025-01-23 21:19:20,877: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[b03486e4-c751-48b9-b8cd-2c807a2dfd48] succeeded in 0.5102789625525475s: None
+[2025-01-24 11:00:36,759: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[5c82f6c9-271b-460f-817d-aabba5b2efb9] received
+[2025-01-24 11:00:42,771: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[5c82f6c9-271b-460f-817d-aabba5b2efb9] succeeded in 0.9106244947761297s: None
+[2025-01-24 17:17:30,671: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[5596ae96-893e-4aaf-bb33-aee301608a7e] received
+[2025-01-24 17:17:36,322: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[5596ae96-893e-4aaf-bb33-aee301608a7e] succeeded in 0.635522123426199s: None
+[2025-01-24 19:37:17,703: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[86af630e-a411-4302-9565-99954fa788eb] received
+[2025-01-24 19:37:23,551: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[86af630e-a411-4302-9565-99954fa788eb] succeeded in 0.6657457835972309s: None
+[2025-01-24 19:45:27,646: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[bbb2f911-c4ec-4104-ade9-786f8e49c895] received
+[2025-01-24 19:45:33,067: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[bbb2f911-c4ec-4104-ade9-786f8e49c895] succeeded in 0.3311539329588413s: None
+[2025-01-25 00:52:10,278: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[5c9c2251-fd3a-49e4-843d-cc7f01125fb4] received
+[2025-01-25 00:52:16,082: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[5c9c2251-fd3a-49e4-843d-cc7f01125fb4] succeeded in 0.6711668334901333s: None
+[2025-01-25 04:28:09,486: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[5e940723-8f07-4464-8269-8fc55cff4090] received
+[2025-01-25 04:28:15,063: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[5e940723-8f07-4464-8269-8fc55cff4090] succeeded in 0.5718900803476572s: None
+[2025-01-25 07:50:05,859: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[677f2a96-8b73-469b-b2fc-513d12cef115] received
+[2025-01-25 07:50:11,498: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[677f2a96-8b73-469b-b2fc-513d12cef115] succeeded in 0.5504318606108427s: None
+[2025-01-26 14:51:17,595: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[6d154ac0-b72e-4066-8a8d-e14ebc34922b] received
+[2025-01-26 14:51:23,286: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[6d154ac0-b72e-4066-8a8d-e14ebc34922b] succeeded in 0.6100866217166185s: None
+[2025-01-26 16:00:31,572: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[0a285800-620e-4394-b94c-0d3aa3950af6] received
+[2025-01-26 16:00:37,396: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[0a285800-620e-4394-b94c-0d3aa3950af6] succeeded in 0.6686374880373478s: None
+[2025-01-27 09:27:00,857: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[7f553fa2-178b-47c7-a60b-875dea8d0cb0] received
+[2025-01-27 09:27:06,569: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[7f553fa2-178b-47c7-a60b-875dea8d0cb0] succeeded in 0.6122131515294313s: None
+[2025-01-27 10:14:20,122: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[3046a7e5-8838-4d02-a057-89b1af61631d] received
+[2025-01-27 10:14:25,740: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[3046a7e5-8838-4d02-a057-89b1af61631d] succeeded in 0.5186064578592777s: None
+[2025-01-28 03:45:51,142: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[bf20cac3-ebe2-43fe-aef3-2350f06e76cd] received
+[2025-01-28 03:45:56,966: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[bf20cac3-ebe2-43fe-aef3-2350f06e76cd] succeeded in 0.7841726318001747s: None
+[2025-01-28 17:18:53,552: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[5268e189-ec88-43ac-a986-2a63cbe9197d] received
+[2025-01-28 17:18:59,098: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[5268e189-ec88-43ac-a986-2a63cbe9197d] succeeded in 0.47413330525159836s: None
+[2025-01-28 21:33:26,148: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[d98500f3-8515-4275-bbfe-43310a3efc87] received
+[2025-01-28 21:33:32,012: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[d98500f3-8515-4275-bbfe-43310a3efc87] succeeded in 0.7497262433171272s: None
+[2025-01-29 10:14:50,815: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[bb6b3983-7cf5-4315-99bd-ae3a0ec02fdb] received
+[2025-01-29 10:14:56,489: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[bb6b3983-7cf5-4315-99bd-ae3a0ec02fdb] succeeded in 0.60798005387187s: None
+[2025-01-30 07:00:00,098: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[3dddd2f5-631c-440d-9752-6cc1a6658076] received
+[2025-01-30 07:00:05,882: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[3dddd2f5-631c-440d-9752-6cc1a6658076] succeeded in 0.7066573016345501s: None
+[2025-01-30 09:15:53,248: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[4800a5dc-058f-47b3-b6df-eb49d25e81a2] received
+[2025-01-30 09:15:58,839: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[4800a5dc-058f-47b3-b6df-eb49d25e81a2] succeeded in 0.5289743542671204s: None
+[2025-01-30 16:17:43,945: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[4343c3b8-9e4e-40bd-9e7a-42a43dbd3b9f] received
+[2025-01-30 16:17:49,654: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[4343c3b8-9e4e-40bd-9e7a-42a43dbd3b9f] succeeded in 0.6030634827911854s: None
+[2025-01-30 16:19:39,422: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[6e240b22-9b24-4fde-a2a1-edc721cafd3c] received
+[2025-01-30 16:19:44,865: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[6e240b22-9b24-4fde-a2a1-edc721cafd3c] succeeded in 0.2619323991239071s: None
+[2025-02-01 03:12:54,286: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[1a727ba4-596d-4f79-90d1-61c122b488f2] received
+[2025-02-01 03:12:59,933: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[1a727ba4-596d-4f79-90d1-61c122b488f2] succeeded in 0.5829298701137304s: None
+[2025-02-01 17:40:04,086: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[9fdb1e46-760b-4974-81ef-7006e618bdd7] received
+[2025-02-01 17:40:09,877: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[9fdb1e46-760b-4974-81ef-7006e618bdd7] succeeded in 0.6584122236818075s: None
+[2025-02-01 17:41:48,750: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[46e5b396-f08d-42d0-92f9-3538e286f5de] received
+[2025-02-01 17:41:54,072: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[46e5b396-f08d-42d0-92f9-3538e286f5de] succeeded in 0.21344266645610332s: None
+[2025-02-01 17:42:36,510: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[be51730d-263d-416a-84b3-444a5cf7fa1d] received
+[2025-02-01 17:42:41,806: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[be51730d-263d-416a-84b3-444a5cf7fa1d] succeeded in 0.19132251664996147s: None
+[2025-02-02 08:58:18,304: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[dc865200-9fdf-4f54-b80f-403dcdfb3bb9] received
+[2025-02-02 08:58:23,920: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[dc865200-9fdf-4f54-b80f-403dcdfb3bb9] succeeded in 0.5741012375801802s: None
+[2025-02-03 09:51:01,093: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[c976d861-6d22-4e00-98e2-74de60bcc3ab] received
+[2025-02-03 09:51:06,993: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[c976d861-6d22-4e00-98e2-74de60bcc3ab] succeeded in 0.7770810145884752s: None
+[2025-02-03 09:52:20,650: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[e2a1167b-9abe-4ae9-af1b-35dec3249601] received
+[2025-02-03 09:52:26,084: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[e2a1167b-9abe-4ae9-af1b-35dec3249601] succeeded in 0.3054725080728531s: None
+[2025-02-03 16:06:40,931: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[0e5cbaa0-79b8-4d4a-8bad-de8207399f94] received
+[2025-02-03 16:06:46,810: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[0e5cbaa0-79b8-4d4a-8bad-de8207399f94] succeeded in 0.7552758939564228s: None
+[2025-02-04 04:00:10,521: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[50789501-c9cb-48a1-bc61-a56c6eee6f6e] received
+[2025-02-04 04:00:16,241: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[50789501-c9cb-48a1-bc61-a56c6eee6f6e] succeeded in 0.5787637531757355s: None
+[2025-02-04 07:48:27,753: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[a133c5d9-9c17-48b7-8b64-052979b90767] received
+[2025-02-04 07:48:33,492: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[a133c5d9-9c17-48b7-8b64-052979b90767] succeeded in 0.6274447683244944s: None
+[2025-02-04 19:05:48,809: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[e4b53969-002b-4bd4-ab6f-b0f9cf702764] received
+[2025-02-04 19:05:54,752: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[e4b53969-002b-4bd4-ab6f-b0f9cf702764] succeeded in 0.8027792349457741s: None
+[2025-02-05 11:54:45,817: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[f393b1f1-d40b-4b54-bac8-fa667e5037fc] received
+[2025-02-05 11:54:51,434: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[f393b1f1-d40b-4b54-bac8-fa667e5037fc] succeeded in 0.5304141361266375s: None
+[2025-02-05 14:19:16,876: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[d75067a9-b62c-4650-bf02-77ceca94ee36] received
+[2025-02-05 14:19:22,741: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[d75067a9-b62c-4650-bf02-77ceca94ee36] succeeded in 0.7491889353841543s: None
+[2025-02-05 20:41:56,736: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[3a8a91f9-8eec-44e7-a9ff-4c039c386ed2] received
+[2025-02-05 20:42:02,751: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[3a8a91f9-8eec-44e7-a9ff-4c039c386ed2] succeeded in 0.9058768413960934s: None
+[2025-02-06 07:36:06,273: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[97a063fe-6c63-446c-a213-08e11446f361] received
+[2025-02-06 07:36:11,880: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[97a063fe-6c63-446c-a213-08e11446f361] succeeded in 0.5266215521842241s: None
+[2025-02-08 13:01:01,462: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[08fa8f45-9eee-40c0-8249-8a9971ddd10b] received
+[2025-02-08 13:01:06,962: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[08fa8f45-9eee-40c0-8249-8a9971ddd10b] succeeded in 0.5825043376535177s: None
+[2025-02-09 21:46:24,362: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[6d115638-75ee-4122-9abc-971d559f0d2f] received
+[2025-02-09 21:46:30,040: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[6d115638-75ee-4122-9abc-971d559f0d2f] succeeded in 0.6041410285979509s: None
+[2025-02-10 05:48:30,344: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[0bb2daa0-c217-4503-a4fe-9f7f33b22216] received
+[2025-02-10 05:48:36,103: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[0bb2daa0-c217-4503-a4fe-9f7f33b22216] succeeded in 0.5566967558115721s: None
+[2025-02-10 05:49:55,230: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[b55df3f0-5dc4-4128-b1f8-59cba67baec7] received
+[2025-02-10 05:50:00,674: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[b55df3f0-5dc4-4128-b1f8-59cba67baec7] succeeded in 0.36114667169749737s: None
+[2025-02-10 14:16:50,707: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[8cf5989b-fc85-4dd5-8561-53ae62666edd] received
+[2025-02-10 14:16:56,409: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[8cf5989b-fc85-4dd5-8561-53ae62666edd] succeeded in 0.5987981650978327s: None
+[2025-02-11 05:46:11,894: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[4e2f3565-c317-40b7-a408-47de43a79bd2] received
+[2025-02-11 05:46:17,644: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[4e2f3565-c317-40b7-a408-47de43a79bd2] succeeded in 0.6323792897164822s: None
+[2025-02-11 10:20:02,778: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[7bc1e220-fea2-4ddb-9b54-36461a83eb0a] received
+[2025-02-11 10:20:08,719: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[7bc1e220-fea2-4ddb-9b54-36461a83eb0a] succeeded in 0.7699859421700239s: None
+[2025-02-11 17:40:40,344: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[8a4ef57b-4529-49fa-8ff6-d1fb814b81d6] received
+[2025-02-11 17:40:45,999: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[8a4ef57b-4529-49fa-8ff6-d1fb814b81d6] succeeded in 0.5967478547245264s: None
+[2025-02-11 17:44:56,863: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[19054754-5619-43c2-a676-98f5e7adce70] received
+[2025-02-11 17:45:02,311: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[19054754-5619-43c2-a676-98f5e7adce70] succeeded in 0.36630938947200775s: None
+[2025-02-11 20:11:20,149: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[338a71ff-91df-4525-b042-c512e7306f8d] received
+[2025-02-11 20:11:25,893: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[338a71ff-91df-4525-b042-c512e7306f8d] succeeded in 0.6416842248290777s: None
+[2025-02-12 06:42:29,204: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[552d3e4b-38fb-44be-9d11-d13574251ee8] received
+[2025-02-12 06:42:35,020: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[552d3e4b-38fb-44be-9d11-d13574251ee8] succeeded in 0.6762022208422422s: None
+[2025-02-12 07:11:35,777: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[cb976ebe-b0a6-4231-b81b-b73e8ce3ebd9] received
+[2025-02-12 07:11:41,649: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[cb976ebe-b0a6-4231-b81b-b73e8ce3ebd9] succeeded in 0.738427946344018s: None
+[2025-02-13 20:50:32,692: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[3744da64-2b76-4b96-b338-eb570ec9fc8e] received
+[2025-02-13 20:50:38,435: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[3744da64-2b76-4b96-b338-eb570ec9fc8e] succeeded in 0.6689866445958614s: None
+[2025-02-14 06:38:25,979: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[7f6dd955-d9ea-40c1-a718-1b036ef077ff] received
+[2025-02-14 06:38:32,018: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[7f6dd955-d9ea-40c1-a718-1b036ef077ff] succeeded in 0.910273764282465s: None
+[2025-02-14 10:40:22,825: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[69d4e241-b875-4519-999a-257dd93b95bb] received
+[2025-02-14 10:40:28,704: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[69d4e241-b875-4519-999a-257dd93b95bb] succeeded in 0.7910491079092026s: None
+[2025-02-14 13:37:01,166: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[b086528d-ff67-4993-ad77-d907300a6375] received
+[2025-02-14 13:37:06,851: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[b086528d-ff67-4993-ad77-d907300a6375] succeeded in 0.5956828743219376s: None
+[2025-02-15 03:03:15,436: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[9cb68e74-b1bf-47e7-afe7-5a96076d9345] received
+[2025-02-15 03:03:21,084: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[9cb68e74-b1bf-47e7-afe7-5a96076d9345] succeeded in 0.5943860411643982s: None
+[2025-02-16 15:18:15,443: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[c30eabda-a42b-4666-babe-cf0ac4363a70] received
+[2025-02-16 15:18:21,064: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[c30eabda-a42b-4666-babe-cf0ac4363a70] succeeded in 0.5538593530654907s: None
+[2025-02-17 00:15:13,258: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[06ceedab-feaa-4a78-9cb5-275ee42420e2] received
+[2025-02-17 00:15:18,860: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[06ceedab-feaa-4a78-9cb5-275ee42420e2] succeeded in 0.5321441553533077s: None
+[2025-02-18 06:20:51,298: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[d5f1332d-262d-4342-8dc4-998b4b388f1f] received
+[2025-02-18 06:20:56,834: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[d5f1332d-262d-4342-8dc4-998b4b388f1f] succeeded in 0.6605594865977764s: None
+[2025-02-18 15:20:49,290: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[c54feea4-a721-45d7-9cf3-4edca644e973] received
+[2025-02-18 15:20:55,159: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[c54feea4-a721-45d7-9cf3-4edca644e973] succeeded in 0.6397247239947319s: None
+[2025-02-18 16:00:38,860: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[db05f788-c3cd-47ec-beab-22a153b65f16] received
+[2025-02-18 16:00:44,638: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[db05f788-c3cd-47ec-beab-22a153b65f16] succeeded in 0.6754753366112709s: None
+[2025-02-19 17:35:01,783: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[a7916d04-a39e-4659-b5ec-680b4eb4d4fc] received
+[2025-02-19 17:35:07,673: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[a7916d04-a39e-4659-b5ec-680b4eb4d4fc] succeeded in 0.7538085989654064s: None
+[2025-02-19 18:50:55,722: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[53b696cb-2377-47e7-9591-5988faca2a50] received
+[2025-02-19 18:51:01,436: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[53b696cb-2377-47e7-9591-5988faca2a50] succeeded in 0.5990727543830872s: None
+[2025-02-19 18:52:39,889: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[ffc39379-0b03-4661-9b81-89c288d032ed] received
+[2025-02-19 18:52:45,240: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[ffc39379-0b03-4661-9b81-89c288d032ed] succeeded in 0.309856403619051s: None
+[2025-02-20 10:17:07,617: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[b0264306-f3ad-46a9-90bc-d93ae8904105] received
+[2025-02-20 10:17:13,633: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[b0264306-f3ad-46a9-90bc-d93ae8904105] succeeded in 0.9376127310097218s: None
+[2025-02-20 12:26:30,778: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[574ed55a-80a9-4ee4-a2cc-33d046c3eda7] received
+[2025-02-20 12:26:36,353: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[574ed55a-80a9-4ee4-a2cc-33d046c3eda7] succeeded in 0.5357869975268841s: None
+[2025-02-21 02:53:51,362: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[e8897b70-ecd0-4539-812b-d31109016ee0] received
+[2025-02-21 02:53:57,086: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[e8897b70-ecd0-4539-812b-d31109016ee0] succeeded in 0.5680392608046532s: None
+[2025-02-21 17:27:46,399: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[990e8eca-742a-47f0-bdf3-84fe8af2804f] received
+[2025-02-21 17:27:52,164: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[990e8eca-742a-47f0-bdf3-84fe8af2804f] succeeded in 0.5947143472731113s: None
+[2025-02-21 17:38:36,140: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[1c40b3e8-48c3-4f65-ad34-59a6814affb2] received
+[2025-02-21 17:38:41,768: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[1c40b3e8-48c3-4f65-ad34-59a6814affb2] succeeded in 0.6124414950609207s: None
+[2025-02-22 08:49:24,417: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[4cb9f0f8-32f6-40a3-9a83-12ba54ca00a5] received
+[2025-02-22 08:49:30,160: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[4cb9f0f8-32f6-40a3-9a83-12ba54ca00a5] succeeded in 0.5623496100306511s: None
+[2025-02-23 09:24:53,946: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[f6a1e285-f124-4723-bf8f-94f008547b94] received
+[2025-02-23 09:24:59,774: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[f6a1e285-f124-4723-bf8f-94f008547b94] succeeded in 0.6875114738941193s: None
+[2025-02-23 22:28:47,044: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[bbc2bf37-3645-4b09-b2b9-99fa194f2669] received
+[2025-02-23 22:28:52,735: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[bbc2bf37-3645-4b09-b2b9-99fa194f2669] succeeded in 0.5717544406652451s: None
+[2025-02-24 01:49:28,214: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[cef0ed98-88ff-45d1-9934-14a4a3142000] received
+[2025-02-24 01:49:33,883: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[cef0ed98-88ff-45d1-9934-14a4a3142000] succeeded in 0.6088528707623482s: None
+[2025-02-24 10:05:24,554: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[be383ab4-7d9f-423b-a9c5-c6a3c0370ff3] received
+[2025-02-24 10:05:30,237: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[be383ab4-7d9f-423b-a9c5-c6a3c0370ff3] succeeded in 0.6275272406637669s: None
+[2025-02-24 11:31:13,239: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[f98562b3-19ec-4f6e-8ec2-1aa9e5d5a85f] received
+[2025-02-24 11:31:18,909: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[f98562b3-19ec-4f6e-8ec2-1aa9e5d5a85f] succeeded in 0.55244255438447s: None
+[2025-02-24 15:19:53,130: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[6486291e-6ceb-486d-b419-8a4fdb3e3416] received
+[2025-02-24 15:19:58,842: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[6486291e-6ceb-486d-b419-8a4fdb3e3416] succeeded in 0.6309149749577045s: None
+[2025-02-24 18:57:22,274: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[b46e9564-16b7-4d0d-8dee-ae11f20ec24f] received
+[2025-02-24 18:57:27,996: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[b46e9564-16b7-4d0d-8dee-ae11f20ec24f] succeeded in 0.6736199744045734s: None
+[2025-02-25 14:55:07,206: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[ee2cdc58-f978-4e48-8170-20678934830c] received
+[2025-02-25 14:55:12,930: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[ee2cdc58-f978-4e48-8170-20678934830c] succeeded in 0.6728654839098454s: None
+[2025-02-25 20:44:59,869: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[609645ca-52cf-4845-9dc1-0fe5b52c5039] received
+[2025-02-25 20:45:05,456: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[609645ca-52cf-4845-9dc1-0fe5b52c5039] succeeded in 0.4820662550628185s: None
+[2025-02-26 07:47:53,404: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[0fd9a8d7-43f7-4aa9-af89-39d5b7e052da] received
+[2025-02-26 07:47:59,187: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[0fd9a8d7-43f7-4aa9-af89-39d5b7e052da] succeeded in 0.6574790440499783s: None
+[2025-02-26 09:33:13,965: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[510ab17c-da7d-4d9b-93bd-21eff36d8578] received
+[2025-02-26 09:33:19,722: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[510ab17c-da7d-4d9b-93bd-21eff36d8578] succeeded in 0.6109483316540718s: None
+[2025-02-26 18:18:15,532: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[070116ae-ccd3-477e-8525-c2a2e3019b6b] received
+[2025-02-26 18:18:21,231: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[070116ae-ccd3-477e-8525-c2a2e3019b6b] succeeded in 0.5379278995096684s: None
+[2025-02-26 21:30:24,966: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[e6e9d820-2dc5-4fea-8c17-e5a08812f0f2] received
+[2025-02-26 21:30:30,656: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[e6e9d820-2dc5-4fea-8c17-e5a08812f0f2] succeeded in 0.603555902838707s: None
+[2025-02-27 12:43:27,838: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[d34d1e07-aed7-4575-b14e-89e300021aaf] received
+[2025-02-27 12:43:33,568: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[d34d1e07-aed7-4575-b14e-89e300021aaf] succeeded in 0.6272740922868252s: None
+[2025-02-28 12:39:22,414: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[fae81c5a-3380-48ae-82d7-4d48e9e1baa8] received
+[2025-02-28 12:39:28,030: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[fae81c5a-3380-48ae-82d7-4d48e9e1baa8] succeeded in 0.5499473437666893s: None
+[2025-02-28 12:40:05,737: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[5cdbf31a-b008-43dc-8714-8429a2ce471f] received
+[2025-02-28 12:40:11,089: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[5cdbf31a-b008-43dc-8714-8429a2ce471f] succeeded in 0.31121716275811195s: None
+[2025-03-01 15:26:55,143: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[0de128c8-0939-43a3-897d-97aa0fdb9588] received
+[2025-03-01 15:27:00,772: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[0de128c8-0939-43a3-897d-97aa0fdb9588] succeeded in 0.5386740192770958s: None
+[2025-03-02 11:25:34,729: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[a92fb885-be00-4c1f-927f-ac1d6f46991b] received
+[2025-03-02 11:25:40,482: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[a92fb885-be00-4c1f-927f-ac1d6f46991b] succeeded in 0.5689058415591717s: None
+[2025-03-02 16:23:45,274: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[6612b493-2fc6-4ce7-b73a-3c76dbc197bf] received
+[2025-03-02 16:23:51,151: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[6612b493-2fc6-4ce7-b73a-3c76dbc197bf] succeeded in 0.7333368510007858s: None
+[2025-03-03 17:26:40,738: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[ce6ebd38-a3bb-4c24-9bb9-6336dc63fb0e] received
+[2025-03-03 17:26:46,428: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[ce6ebd38-a3bb-4c24-9bb9-6336dc63fb0e] succeeded in 0.61287946626544s: None
+[2025-03-03 17:27:44,934: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[98304b40-098d-48bf-9afb-e902a6e21add] received
+[2025-03-03 17:27:50,232: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[98304b40-098d-48bf-9afb-e902a6e21add] succeeded in 0.2624607942998409s: None
+[2025-03-03 17:28:25,911: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[3761ed70-1fa2-4ded-bbfd-5157dafa149d] received
+[2025-03-03 17:28:31,259: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[3761ed70-1fa2-4ded-bbfd-5157dafa149d] succeeded in 0.25648190826177597s: None
+[2025-03-03 17:38:41,937: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[00e2b659-2c3d-47ec-be95-d9a2904713ea] received
+[2025-03-03 17:38:47,681: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[00e2b659-2c3d-47ec-be95-d9a2904713ea] succeeded in 0.6279064156115055s: None
+[2025-03-03 20:56:21,484: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[f7de7c20-5590-44b8-ab85-378f9db8f680] received
+[2025-03-03 20:56:27,239: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[f7de7c20-5590-44b8-ab85-378f9db8f680] succeeded in 0.6399060599505901s: None
+[2025-03-03 21:39:30,737: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[db7ac87c-a6b3-48ce-b459-bc5c0dc4d251] received
+[2025-03-03 21:39:36,491: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[db7ac87c-a6b3-48ce-b459-bc5c0dc4d251] succeeded in 0.5458354726433754s: None
+[2025-03-04 11:16:42,275: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[b8dc28f3-791f-495c-9065-6147cc061f88] received
+[2025-03-04 11:16:48,084: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[b8dc28f3-791f-495c-9065-6147cc061f88] succeeded in 0.6970793828368187s: None
+[2025-03-04 12:39:04,913: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[37a70506-0434-4eaf-9ce0-51d5750f8692] received
+[2025-03-04 12:39:10,666: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[37a70506-0434-4eaf-9ce0-51d5750f8692] succeeded in 0.6350972391664982s: None
+[2025-03-04 12:42:01,845: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[a1e857fc-7080-40bb-a862-13448192cdd5] received
+[2025-03-04 12:42:07,238: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[a1e857fc-7080-40bb-a862-13448192cdd5] succeeded in 0.2663489803671837s: None
+[2025-03-05 03:43:06,010: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[629e8aa5-3fca-4244-b5bd-25839dd33adc] received
+[2025-03-05 03:43:11,711: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[629e8aa5-3fca-4244-b5bd-25839dd33adc] succeeded in 0.645336702466011s: None
+[2025-03-05 11:09:29,678: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[7b5d4f48-51d2-4f2a-9997-94abf574f275] received
+[2025-03-05 11:09:35,562: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[7b5d4f48-51d2-4f2a-9997-94abf574f275] succeeded in 0.8131297826766968s: None
+[2025-03-05 15:55:40,175: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[daae7cea-43cb-4997-902c-23909316fe45] received
+[2025-03-05 15:55:45,914: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[daae7cea-43cb-4997-902c-23909316fe45] succeeded in 0.6895390599966049s: None
+[2025-03-05 16:02:50,473: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[20ea487e-ea3f-4137-831d-105b1f486084] received
+[2025-03-05 16:02:55,889: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[20ea487e-ea3f-4137-831d-105b1f486084] succeeded in 0.3130999878048897s: None
+[2025-03-05 16:57:41,040: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[3b3c3062-d310-4f83-9e8c-811d8862f982] received
+[2025-03-05 16:57:46,952: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[3b3c3062-d310-4f83-9e8c-811d8862f982] succeeded in 0.8069749064743519s: None
+[2025-03-07 10:43:22,413: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[04e10baa-4802-49ff-b66d-1441b2deb1e1] received
+[2025-03-07 10:43:28,060: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[04e10baa-4802-49ff-b66d-1441b2deb1e1] succeeded in 0.5866367630660534s: None
+[2025-03-07 10:46:38,903: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[87cf215d-9ba0-4004-9d3b-6448843482cc] received
+[2025-03-07 10:46:44,284: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[87cf215d-9ba0-4004-9d3b-6448843482cc] succeeded in 0.25160158425569534s: None
+[2025-03-07 10:48:31,702: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[f228817d-2578-4a82-8699-43749a4e70a6] received
+[2025-03-07 10:48:37,206: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[f228817d-2578-4a82-8699-43749a4e70a6] succeeded in 0.389280766248703s: None
+[2025-03-07 19:27:13,540: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[f3f2a08b-097c-41e6-bbe0-3fb4e1993ae8] received
+[2025-03-07 19:27:19,249: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[f3f2a08b-097c-41e6-bbe0-3fb4e1993ae8] succeeded in 0.5752059929072857s: None
+[2025-03-08 20:12:44,850: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[83571926-c070-4d23-8b6d-cbb809856e0e] received
+[2025-03-08 20:12:50,900: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[83571926-c070-4d23-8b6d-cbb809856e0e] succeeded in 0.9897003881633282s: None
+[2025-03-09 10:36:58,316: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[8bdf6f80-e38c-42ce-9d24-1eb73a371f87] received
+[2025-03-09 10:37:04,044: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[8bdf6f80-e38c-42ce-9d24-1eb73a371f87] succeeded in 0.6706929132342339s: None
+[2025-03-09 16:19:54,826: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[1249fb8b-3b1e-4e1a-8f46-a3ea457d2675] received
+[2025-03-09 16:20:00,470: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[1249fb8b-3b1e-4e1a-8f46-a3ea457d2675] succeeded in 0.546426348388195s: None
+[2025-03-10 07:12:14,510: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[c20cd198-a985-43a5-ba0e-77e26bbb3cad] received
+[2025-03-10 07:12:20,148: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[c20cd198-a985-43a5-ba0e-77e26bbb3cad] succeeded in 0.5347972437739372s: None
+[2025-03-10 12:57:53,737: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[d86f2936-39be-428b-bddf-9a37096d0b9e] received
+[2025-03-10 12:57:59,514: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[d86f2936-39be-428b-bddf-9a37096d0b9e] succeeded in 0.6604634188115597s: None
+[2025-03-10 13:00:27,034: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[2a340f94-d17d-4eb0-9b04-8343cfe76989] received
+[2025-03-10 13:00:32,622: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[2a340f94-d17d-4eb0-9b04-8343cfe76989] succeeded in 0.464172899723053s: None
+[2025-03-11 06:46:09,833: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[989fc49a-7d9b-4942-ba5f-116e9b916539] received
+[2025-03-11 06:46:15,588: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[989fc49a-7d9b-4942-ba5f-116e9b916539] succeeded in 0.6638339795172215s: None
+[2025-03-11 06:48:15,356: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[bffd892c-b0d3-4542-818a-44618b2505ab] received
+[2025-03-11 06:48:20,808: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[bffd892c-b0d3-4542-818a-44618b2505ab] succeeded in 0.2893303111195564s: None
+[2025-03-11 07:20:39,756: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[42467821-517f-460f-bb31-fe62398db4b4] received
+[2025-03-11 07:20:45,447: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[42467821-517f-460f-bb31-fe62398db4b4] succeeded in 0.5692346803843975s: None
+[2025-03-11 19:05:51,583: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[4fba2ec5-e8a4-477d-8fa1-715afc22f2d3] received
+[2025-03-11 19:05:57,365: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[4fba2ec5-e8a4-477d-8fa1-715afc22f2d3] succeeded in 0.639339804649353s: None
+[2025-03-11 19:09:58,306: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[3b979a68-471e-49e7-860d-4e431ede9d79] received
+[2025-03-11 19:10:03,710: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[3b979a68-471e-49e7-860d-4e431ede9d79] succeeded in 0.2691892758011818s: None
+[2025-03-11 19:13:55,849: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[896bd60c-a5b6-45e6-b4d8-5c15d9dea934] received
+[2025-03-11 19:14:01,961: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[896bd60c-a5b6-45e6-b4d8-5c15d9dea934] succeeded in 0.9422186873853207s: None
+[2025-03-11 19:15:52,943: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[1d629932-8f1d-4fe0-a1ab-e5ee2e87d083] received
+[2025-03-11 19:15:58,485: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[1d629932-8f1d-4fe0-a1ab-e5ee2e87d083] succeeded in 0.518319446593523s: None
+[2025-03-12 08:23:40,954: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[a222d393-6dc5-4914-9fad-f528c2bf0ea3] received
+[2025-03-12 08:23:46,612: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[a222d393-6dc5-4914-9fad-f528c2bf0ea3] succeeded in 0.542181596159935s: None
+[2025-03-12 11:23:17,358: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[1b7065df-1b99-4fcd-9ead-7bbe15fecafb] received
+[2025-03-12 11:23:22,993: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[1b7065df-1b99-4fcd-9ead-7bbe15fecafb] succeeded in 0.5047375522553921s: None
+[2025-03-12 23:34:09,690: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[6d56ffe5-1675-48df-89fc-817beda62cb5] received
+[2025-03-12 23:34:15,101: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[6d56ffe5-1675-48df-89fc-817beda62cb5] succeeded in 0.47964392974972725s: None
+[2025-03-13 01:36:08,948: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[48e0120c-8193-44ac-9143-a7e89e01a35f] received
+[2025-03-13 01:36:14,779: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[48e0120c-8193-44ac-9143-a7e89e01a35f] succeeded in 0.6933273375034332s: None
+[2025-03-13 17:36:59,510: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[9ac9b3f0-e1be-471c-8c80-7198debaf20e] received
+[2025-03-13 17:37:05,278: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[9ac9b3f0-e1be-471c-8c80-7198debaf20e] succeeded in 0.6313607655465603s: None
+[2025-03-14 00:58:17,023: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[6a7e7987-713d-4f4b-9a13-6a8a03390050] received
+[2025-03-14 00:58:22,636: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[6a7e7987-713d-4f4b-9a13-6a8a03390050] succeeded in 0.5504407398402691s: None
+[2025-03-14 23:57:38,099: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[88de7b0e-c500-4b08-9df2-44b9a395752b] received
+[2025-03-14 23:57:43,782: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[88de7b0e-c500-4b08-9df2-44b9a395752b] succeeded in 0.597526092082262s: None
+[2025-03-15 17:03:39,191: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[8394f44c-8524-4738-bec7-f298f36660b4] received
+[2025-03-15 17:03:44,895: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[8394f44c-8524-4738-bec7-f298f36660b4] succeeded in 0.6567289866507053s: None
+[2025-03-16 22:06:55,425: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[85167b76-d18c-4682-bb0b-ba684fee2596] received
+[2025-03-16 22:07:01,183: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[85167b76-d18c-4682-bb0b-ba684fee2596] succeeded in 0.5912695825099945s: None
+[2025-03-17 17:07:28,079: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[c6c24af1-8209-40c5-8659-4c4e614a3266] received
+[2025-03-17 17:07:33,694: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[c6c24af1-8209-40c5-8659-4c4e614a3266] succeeded in 0.48519695550203323s: None
+[2025-03-18 05:12:04,645: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[99af0538-e5e8-4339-b24a-5cd4e2371901] received
+[2025-03-18 05:12:12,223: WARNING/ForkPoolWorker-1] --- Logging error ---
+[2025-03-18 05:12:12,347: WARNING/ForkPoolWorker-1] Traceback (most recent call last):
+[2025-03-18 05:12:12,349: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/app/trace.py", line 451, in trace_task
+    R = retval = fun(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^
+[2025-03-18 05:12:12,349: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/app/trace.py", line 734, in __protected_call__
+    return self.run(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-18 05:12:12,350: WARNING/ForkPoolWorker-1]   File "/home/alprostov/sakhlis/web/app_site/tasks.py", line 28, in send_to_telegrambot
+    bot.send_message(CHAT_ID_,  subject_+text, parse_mode='HTML')
+[2025-03-18 05:12:12,350: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/telebot/__init__.py", line 1549, in send_message
+    apihelper.send_message(
+[2025-03-18 05:12:12,350: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/telebot/apihelper.py", line 264, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-18 05:12:12,350: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/telebot/apihelper.py", line 162, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-18 05:12:12,351: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/telebot/apihelper.py", line 189, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+[2025-03-18 05:12:12,351: WARNING/ForkPoolWorker-1] telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: can't parse entities: Unexpected end of name token at byte offset 771
+[2025-03-18 05:12:12,351: WARNING/ForkPoolWorker-1] 
+During handling of the above exception, another exception occurred:
+[2025-03-18 05:12:12,352: WARNING/ForkPoolWorker-1] Traceback (most recent call last):
+[2025-03-18 05:12:12,383: WARNING/ForkPoolWorker-1]   File "/usr/lib/python3.11/logging/__init__.py", line 1110, in emit
+    msg = self.format(record)
+          ^^^^^^^^^^^^^^^^^^^
+[2025-03-18 05:12:12,384: WARNING/ForkPoolWorker-1]   File "/usr/lib/python3.11/logging/__init__.py", line 953, in format
+    return fmt.format(record)
+           ^^^^^^^^^^^^^^^^^^
+[2025-03-18 05:12:12,384: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/utils/log.py", line 146, in format
+    msg = super().format(record)
+          ^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-18 05:12:12,384: WARNING/ForkPoolWorker-1]   File "/usr/lib/python3.11/logging/__init__.py", line 695, in format
+    record.exc_text = self.formatException(record.exc_info)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-18 05:12:12,385: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/utils/log.py", line 142, in formatException
+    r = super().formatException(ei)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-18 05:12:12,385: WARNING/ForkPoolWorker-1]   File "/usr/lib/python3.11/logging/__init__.py", line 645, in formatException
+    traceback.print_exception(ei[0], ei[1], tb, None, sio)
+[2025-03-18 05:12:12,385: WARNING/ForkPoolWorker-1]   File "/usr/lib/python3.11/traceback.py", line 124, in print_exception
+    te = TracebackException(type(value), value, tb, limit=limit, compact=True)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-18 05:12:12,391: WARNING/ForkPoolWorker-1]   File "/usr/lib/python3.11/traceback.py", line 690, in __init__
+    self.stack = StackSummary._extract_from_extended_frame_gen(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-18 05:12:12,396: WARNING/ForkPoolWorker-1]   File "/usr/lib/python3.11/traceback.py", line 416, in _extract_from_extended_frame_gen
+    for f, (lineno, end_lineno, colno, end_colno) in frame_gen:
+[2025-03-18 05:12:12,397: WARNING/ForkPoolWorker-1]   File "/usr/lib/python3.11/traceback.py", line 353, in _walk_tb_with_full_positions
+    positions = _get_code_position(tb.tb_frame.f_code, tb.tb_lasti)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-18 05:12:12,397: WARNING/ForkPoolWorker-1]   File "/usr/lib/python3.11/traceback.py", line 366, in _get_code_position
+    positions_gen = code.co_positions()
+                    ^^^^^^^^^^^^^^^^^
+[2025-03-18 05:12:12,397: WARNING/ForkPoolWorker-1] AttributeError: '_Code' object has no attribute 'co_positions'
+[2025-03-18 05:12:12,397: WARNING/ForkPoolWorker-1] Call stack:
+[2025-03-18 05:12:12,727: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/bin/celery", line 8, in <module>
+    sys.exit(main())
+[2025-03-18 05:12:12,727: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/__main__.py", line 15, in main
+    sys.exit(_main())
+[2025-03-18 05:12:12,728: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/bin/celery.py", line 217, in main
+    return celery(auto_envvar_prefix="CELERY")
+[2025-03-18 05:12:12,728: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/click/core.py", line 1130, in __call__
+    return self.main(*args, **kwargs)
+[2025-03-18 05:12:12,728: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/click/core.py", line 1055, in main
+    rv = self.invoke(ctx)
+[2025-03-18 05:12:12,729: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/click/core.py", line 1657, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+[2025-03-18 05:12:12,729: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/click/core.py", line 1404, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+[2025-03-18 05:12:12,729: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/click/core.py", line 760, in invoke
+    return __callback(*args, **kwargs)
+[2025-03-18 05:12:12,730: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/click/decorators.py", line 26, in new_func
+    return f(get_current_context(), *args, **kwargs)
+[2025-03-18 05:12:12,730: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/bin/base.py", line 134, in caller
+    return f(ctx, *args, **kwargs)
+[2025-03-18 05:12:12,730: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/bin/worker.py", line 351, in worker
+    worker.start()
+[2025-03-18 05:12:12,731: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/worker/worker.py", line 203, in start
+    self.blueprint.start(self)
+[2025-03-18 05:12:12,731: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/bootsteps.py", line 116, in start
+    step.start(parent)
+[2025-03-18 05:12:12,731: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/bootsteps.py", line 365, in start
+    return self.obj.start()
+[2025-03-18 05:12:12,732: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/concurrency/base.py", line 129, in start
+    self.on_start()
+[2025-03-18 05:12:12,732: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/concurrency/prefork.py", line 109, in on_start
+    P = self._pool = Pool(processes=self.limit,
+[2025-03-18 05:12:12,732: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/concurrency/asynpool.py", line 463, in __init__
+    super().__init__(processes, *args, **kwargs)
+[2025-03-18 05:12:12,733: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/billiard/pool.py", line 1046, in __init__
+    self._create_worker_process(i)
+[2025-03-18 05:12:12,733: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/concurrency/asynpool.py", line 480, in _create_worker_process
+    return super()._create_worker_process(i)
+[2025-03-18 05:12:12,733: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/billiard/pool.py", line 1158, in _create_worker_process
+    w.start()
+[2025-03-18 05:12:12,734: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/billiard/process.py", line 124, in start
+    self._popen = self._Popen(self)
+[2025-03-18 05:12:12,734: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/billiard/context.py", line 333, in _Popen
+    return Popen(process_obj)
+[2025-03-18 05:12:12,734: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/billiard/popen_fork.py", line 24, in __init__
+    self._launch(process_obj)
+[2025-03-18 05:12:12,735: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/billiard/popen_fork.py", line 79, in _launch
+    code = process_obj._bootstrap()
+[2025-03-18 05:12:12,735: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/billiard/process.py", line 327, in _bootstrap
+    self.run()
+[2025-03-18 05:12:12,735: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/billiard/process.py", line 114, in run
+    self._target(*self._args, **self._kwargs)
+[2025-03-18 05:12:12,736: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/billiard/pool.py", line 292, in __call__
+    sys.exit(self.workloop(pid=pid))
+[2025-03-18 05:12:12,736: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/billiard/pool.py", line 362, in workloop
+    result = (True, prepare_result(fun(*args, **kwargs)))
+[2025-03-18 05:12:12,736: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/app/trace.py", line 649, in fast_trace_task
+    R, I, T, Rstr = tasks[task].__trace__(
+[2025-03-18 05:12:12,737: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/app/trace.py", line 468, in trace_task
+    I, R, state, retval = on_error(task_request, exc, uuid)
+[2025-03-18 05:12:12,737: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/app/trace.py", line 379, in on_error
+    R = I.handle_error_state(
+[2025-03-18 05:12:12,737: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/app/trace.py", line 178, in handle_error_state
+    return {
+[2025-03-18 05:12:12,737: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/app/trace.py", line 237, in handle_failure
+    self._log_error(task, req, einfo)
+[2025-03-18 05:12:12,738: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/app/trace.py", line 265, in _log_error
+    logger.log(policy.severity, policy.format.strip(), context,
+[2025-03-18 05:12:12,738: WARNING/ForkPoolWorker-1] Message: 'Task %(name)s[%(id)s] %(description)s: %(exc)s'
+Arguments: {'hostname': 'celery@debian', 'id': '99af0538-e5e8-4339-b24a-5cd4e2371901', 'name': 'app_site.tasks.send_to_telegrambot', 'exc': 'ApiTelegramException("A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: can\'t parse entities: Unexpected end of name token at byte offset 771")', 'traceback': 'Traceback (most recent call last):\n  File "/home/alprostov/venv/lib/python3.11/site-packages/celery/app/trace.py", line 451, in trace_task\n    R = retval = fun(*args, **kwargs)\n                 ^^^^^^^^^^^^^^^^^^^^\n  File "/home/alprostov/venv/lib/python3.11/site-packages/celery/app/trace.py", line 734, in __protected_call__\n    return self.run(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/home/alprostov/sakhlis/web/app_site/tasks.py", line 28, in send_to_telegrambot\n    bot.send_message(CHAT_ID_,  subject_+text, parse_mode=\'HTML\')\n  File "/home/alprostov/venv/lib/python3.11/site-packages/telebot/__init__.py", line 1549, in send_message\n    apihelper.send_message(\n  File "/home/alprostov/venv/lib/python3.11/site-packages/telebot/apihelper.py", line 264, in send_message\n    return _make_request(token, method_url, params=payload, method=\'post\')\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/home/alprostov/venv/lib/python3.11/site-packages/telebot/apihelper.py", line 162, in _make_request\n    json_result = _check_result(method_name, result)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/home/alprostov/venv/lib/python3.11/site-packages/telebot/apihelper.py", line 189, in _check_result\n    raise ApiTelegramException(method_name, result, result_json)\ntelebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: can\'t parse entities: Unexpected end of name token at byte offset 771\n', 'args': '[2286]', 'kwargs': '{}', 'description': 'raised unexpected', 'internal': False}
+[2025-03-18 05:12:13,698: WARNING/MainProcess] --- Logging error ---
+[2025-03-18 05:12:13,761: WARNING/MainProcess] Traceback (most recent call last):
+[2025-03-18 05:12:13,799: WARNING/MainProcess]   File "/usr/lib/python3.11/logging/__init__.py", line 1110, in emit
+    msg = self.format(record)
+          ^^^^^^^^^^^^^^^^^^^
+[2025-03-18 05:12:13,800: WARNING/MainProcess]   File "/usr/lib/python3.11/logging/__init__.py", line 953, in format
+    return fmt.format(record)
+           ^^^^^^^^^^^^^^^^^^
+[2025-03-18 05:12:13,801: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/utils/log.py", line 146, in format
+    msg = super().format(record)
+          ^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-18 05:12:13,801: WARNING/MainProcess]   File "/usr/lib/python3.11/logging/__init__.py", line 695, in format
+    record.exc_text = self.formatException(record.exc_info)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-18 05:12:13,801: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/utils/log.py", line 142, in formatException
+    r = super().formatException(ei)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-18 05:12:13,802: WARNING/MainProcess]   File "/usr/lib/python3.11/logging/__init__.py", line 645, in formatException
+    traceback.print_exception(ei[0], ei[1], tb, None, sio)
+[2025-03-18 05:12:13,802: WARNING/MainProcess]   File "/usr/lib/python3.11/traceback.py", line 124, in print_exception
+    te = TracebackException(type(value), value, tb, limit=limit, compact=True)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-18 05:12:13,802: WARNING/MainProcess]   File "/usr/lib/python3.11/traceback.py", line 690, in __init__
+    self.stack = StackSummary._extract_from_extended_frame_gen(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-18 05:12:13,803: WARNING/MainProcess]   File "/usr/lib/python3.11/traceback.py", line 416, in _extract_from_extended_frame_gen
+    for f, (lineno, end_lineno, colno, end_colno) in frame_gen:
+[2025-03-18 05:12:13,803: WARNING/MainProcess]   File "/usr/lib/python3.11/traceback.py", line 353, in _walk_tb_with_full_positions
+    positions = _get_code_position(tb.tb_frame.f_code, tb.tb_lasti)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-18 05:12:13,804: WARNING/MainProcess]   File "/usr/lib/python3.11/traceback.py", line 366, in _get_code_position
+    positions_gen = code.co_positions()
+                    ^^^^^^^^^^^^^^^^^
+[2025-03-18 05:12:13,804: WARNING/MainProcess] AttributeError: '_Code' object has no attribute 'co_positions'
+[2025-03-18 05:12:13,919: WARNING/MainProcess] Call stack:
+[2025-03-18 05:12:13,994: WARNING/MainProcess]   File "/home/alprostov/venv/bin/celery", line 8, in <module>
+    sys.exit(main())
+[2025-03-18 05:12:13,994: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/__main__.py", line 15, in main
+    sys.exit(_main())
+[2025-03-18 05:12:13,995: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/bin/celery.py", line 217, in main
+    return celery(auto_envvar_prefix="CELERY")
+[2025-03-18 05:12:13,995: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/click/core.py", line 1130, in __call__
+    return self.main(*args, **kwargs)
+[2025-03-18 05:12:13,995: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/click/core.py", line 1055, in main
+    rv = self.invoke(ctx)
+[2025-03-18 05:12:13,996: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/click/core.py", line 1657, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+[2025-03-18 05:12:13,996: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/click/core.py", line 1404, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+[2025-03-18 05:12:13,997: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/click/core.py", line 760, in invoke
+    return __callback(*args, **kwargs)
+[2025-03-18 05:12:13,997: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/click/decorators.py", line 26, in new_func
+    return f(get_current_context(), *args, **kwargs)
+[2025-03-18 05:12:13,997: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/bin/base.py", line 134, in caller
+    return f(ctx, *args, **kwargs)
+[2025-03-18 05:12:13,997: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/bin/worker.py", line 351, in worker
+    worker.start()
+[2025-03-18 05:12:13,998: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/worker/worker.py", line 203, in start
+    self.blueprint.start(self)
+[2025-03-18 05:12:13,998: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/bootsteps.py", line 116, in start
+    step.start(parent)
+[2025-03-18 05:12:13,998: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/bootsteps.py", line 365, in start
+    return self.obj.start()
+[2025-03-18 05:12:13,999: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/worker/consumer/consumer.py", line 332, in start
+    blueprint.start(self)
+[2025-03-18 05:12:13,999: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/bootsteps.py", line 116, in start
+    step.start(parent)
+[2025-03-18 05:12:13,999: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/worker/consumer/consumer.py", line 628, in start
+    c.loop(*c.loop_args())
+[2025-03-18 05:12:14,000: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/worker/loops.py", line 97, in asynloop
+    next(loop)
+[2025-03-18 05:12:14,000: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/kombu/asynchronous/hub.py", line 362, in create_loop
+    cb(*cbargs)
+[2025-03-18 05:12:14,000: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/concurrency/asynpool.py", line 325, in on_result_readable
+    next(it)
+[2025-03-18 05:12:14,000: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/concurrency/asynpool.py", line 308, in _recv_message
+    callback(message)
+[2025-03-18 05:12:14,001: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/billiard/pool.py", line 853, in on_state_change
+    state_handlers[state](*args)
+[2025-03-18 05:12:14,001: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/billiard/pool.py", line 835, in on_ready
+    item._set(i, obj)
+[2025-03-18 05:12:14,001: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/billiard/pool.py", line 1828, in _set
+    self.safe_apply_callback(
+[2025-03-18 05:12:14,002: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/billiard/pool.py", line 1796, in safe_apply_callback
+    fun(*args, **kwargs)
+[2025-03-18 05:12:14,002: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/worker/request.py", line 596, in on_failure
+    error('Task handler raised error: %r', exc,
+[2025-03-18 05:12:14,002: WARNING/MainProcess] Message: 'Task handler raised error: %r'
+Arguments: (<MaybeEncodingError: Error sending result: ''(1, <ExceptionInfo: ApiTelegramException("A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: can\'t parse entities: Unexpected end of name token at byte offset 771")>, None)''. Reason: ''PicklingError("Can\'t pickle <class \'telebot.apihelper.ApiTelegramException\'>: it\'s not the same object as telebot.apihelper.ApiTelegramException")''.>,)
+[2025-03-18 08:55:40,562: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[06b7f948-fb74-4aa0-a11a-309264d25b2e] received
+[2025-03-18 08:55:46,439: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[06b7f948-fb74-4aa0-a11a-309264d25b2e] succeeded in 0.7565237879753113s: None
+[2025-03-18 12:59:35,677: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[cd9bdb56-8f5d-4468-a07b-29e66ff32a41] received
+[2025-03-18 12:59:41,470: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[cd9bdb56-8f5d-4468-a07b-29e66ff32a41] succeeded in 0.6703842580318451s: None
+[2025-03-20 06:57:31,212: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[4b41d37c-e967-4e23-bd8a-efecf181e518] received
+[2025-03-20 06:57:36,869: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[4b41d37c-e967-4e23-bd8a-efecf181e518] succeeded in 0.5841539241373539s: None
+[2025-03-20 07:58:53,624: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[c9ca8682-bf86-42d0-a995-8d53959de803] received
+[2025-03-20 07:58:59,331: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[c9ca8682-bf86-42d0-a995-8d53959de803] succeeded in 0.6233331821858883s: None
+[2025-03-21 01:32:23,379: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[bb94d5f8-bb3d-4c3b-a423-5cb4b57861d7] received
+[2025-03-21 01:32:29,013: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[bb94d5f8-bb3d-4c3b-a423-5cb4b57861d7] succeeded in 0.5350441932678223s: None
+[2025-03-21 06:29:28,373: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[65200525-ce1e-44e7-b449-69f0d97ca118] received
+[2025-03-21 06:29:33,922: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[65200525-ce1e-44e7-b449-69f0d97ca118] succeeded in 0.53178945556283s: None
+[2025-03-21 13:05:54,396: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[0a1b0a16-06d2-4b5f-b227-8499a08e7880] received
+[2025-03-21 13:06:00,150: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[0a1b0a16-06d2-4b5f-b227-8499a08e7880] succeeded in 0.6368509903550148s: None
+[2025-03-22 07:07:57,994: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[b9014d22-2799-4439-a817-8d46b361392b] received
+[2025-03-22 07:08:03,630: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[b9014d22-2799-4439-a817-8d46b361392b] succeeded in 0.5721306949853897s: None
+[2025-03-23 16:01:06,089: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[93dcf709-64bb-4bdc-ac8b-f208daf38c7d] received
+[2025-03-23 16:01:11,737: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[93dcf709-64bb-4bdc-ac8b-f208daf38c7d] succeeded in 0.5983008444309235s: None
+[2025-03-23 16:47:52,743: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[d405d51e-e63d-4f8e-9564-476f67ced107] received
+[2025-03-23 16:47:58,582: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[d405d51e-e63d-4f8e-9564-476f67ced107] succeeded in 0.7149460837244987s: None
+[2025-03-23 19:30:54,073: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[628a77ab-865b-4736-aa95-0f6a478d100c] received
+[2025-03-23 19:30:59,708: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[628a77ab-865b-4736-aa95-0f6a478d100c] succeeded in 0.525689210742712s: None
+[2025-03-23 19:32:49,886: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[707db87f-9f39-4481-afca-7e201f6f277b] received
+[2025-03-23 19:32:55,136: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[707db87f-9f39-4481-afca-7e201f6f277b] succeeded in 0.19463970139622688s: None
+[2025-03-24 09:31:29,822: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[7aa01a5e-4ac4-4e64-9b72-fdd200ccde71] received
+[2025-03-24 09:31:35,448: WARNING/ForkPoolWorker-1] --- Logging error ---
+[2025-03-24 09:31:35,453: WARNING/ForkPoolWorker-1] Traceback (most recent call last):
+[2025-03-24 09:31:35,454: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/app/trace.py", line 451, in trace_task
+    R = retval = fun(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^
+[2025-03-24 09:31:35,455: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/app/trace.py", line 734, in __protected_call__
+    return self.run(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-24 09:31:35,455: WARNING/ForkPoolWorker-1]   File "/home/alprostov/sakhlis/web/app_site/tasks.py", line 28, in send_to_telegrambot
+    bot.send_message(CHAT_ID_,  subject_+text, parse_mode='HTML')
+[2025-03-24 09:31:35,456: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/telebot/__init__.py", line 1549, in send_message
+    apihelper.send_message(
+[2025-03-24 09:31:35,456: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/telebot/apihelper.py", line 264, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-24 09:31:35,457: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/telebot/apihelper.py", line 162, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-24 09:31:35,457: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/telebot/apihelper.py", line 189, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+[2025-03-24 09:31:35,458: WARNING/ForkPoolWorker-1] telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: can't parse entities: Unexpected end of name token at byte offset 804
+[2025-03-24 09:31:35,458: WARNING/ForkPoolWorker-1] 
+During handling of the above exception, another exception occurred:
+[2025-03-24 09:31:35,459: WARNING/ForkPoolWorker-1] Traceback (most recent call last):
+[2025-03-24 09:31:35,461: WARNING/ForkPoolWorker-1]   File "/usr/lib/python3.11/logging/__init__.py", line 1110, in emit
+    msg = self.format(record)
+          ^^^^^^^^^^^^^^^^^^^
+[2025-03-24 09:31:35,461: WARNING/ForkPoolWorker-1]   File "/usr/lib/python3.11/logging/__init__.py", line 953, in format
+    return fmt.format(record)
+           ^^^^^^^^^^^^^^^^^^
+[2025-03-24 09:31:35,462: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/utils/log.py", line 146, in format
+    msg = super().format(record)
+          ^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-24 09:31:35,462: WARNING/ForkPoolWorker-1]   File "/usr/lib/python3.11/logging/__init__.py", line 695, in format
+    record.exc_text = self.formatException(record.exc_info)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-24 09:31:35,464: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/utils/log.py", line 142, in formatException
+    r = super().formatException(ei)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-24 09:31:35,464: WARNING/ForkPoolWorker-1]   File "/usr/lib/python3.11/logging/__init__.py", line 645, in formatException
+    traceback.print_exception(ei[0], ei[1], tb, None, sio)
+[2025-03-24 09:31:35,465: WARNING/ForkPoolWorker-1]   File "/usr/lib/python3.11/traceback.py", line 124, in print_exception
+    te = TracebackException(type(value), value, tb, limit=limit, compact=True)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-24 09:31:35,465: WARNING/ForkPoolWorker-1]   File "/usr/lib/python3.11/traceback.py", line 690, in __init__
+    self.stack = StackSummary._extract_from_extended_frame_gen(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-24 09:31:35,466: WARNING/ForkPoolWorker-1]   File "/usr/lib/python3.11/traceback.py", line 416, in _extract_from_extended_frame_gen
+    for f, (lineno, end_lineno, colno, end_colno) in frame_gen:
+[2025-03-24 09:31:35,466: WARNING/ForkPoolWorker-1]   File "/usr/lib/python3.11/traceback.py", line 353, in _walk_tb_with_full_positions
+    positions = _get_code_position(tb.tb_frame.f_code, tb.tb_lasti)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-24 09:31:35,467: WARNING/ForkPoolWorker-1]   File "/usr/lib/python3.11/traceback.py", line 366, in _get_code_position
+    positions_gen = code.co_positions()
+                    ^^^^^^^^^^^^^^^^^
+[2025-03-24 09:31:35,467: WARNING/ForkPoolWorker-1] AttributeError: '_Code' object has no attribute 'co_positions'
+[2025-03-24 09:31:35,467: WARNING/ForkPoolWorker-1] Call stack:
+[2025-03-24 09:31:35,471: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/bin/celery", line 8, in <module>
+    sys.exit(main())
+[2025-03-24 09:31:35,471: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/__main__.py", line 15, in main
+    sys.exit(_main())
+[2025-03-24 09:31:35,471: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/bin/celery.py", line 217, in main
+    return celery(auto_envvar_prefix="CELERY")
+[2025-03-24 09:31:35,472: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/click/core.py", line 1130, in __call__
+    return self.main(*args, **kwargs)
+[2025-03-24 09:31:35,472: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/click/core.py", line 1055, in main
+    rv = self.invoke(ctx)
+[2025-03-24 09:31:35,473: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/click/core.py", line 1657, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+[2025-03-24 09:31:35,473: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/click/core.py", line 1404, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+[2025-03-24 09:31:35,473: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/click/core.py", line 760, in invoke
+    return __callback(*args, **kwargs)
+[2025-03-24 09:31:35,474: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/click/decorators.py", line 26, in new_func
+    return f(get_current_context(), *args, **kwargs)
+[2025-03-24 09:31:35,474: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/bin/base.py", line 134, in caller
+    return f(ctx, *args, **kwargs)
+[2025-03-24 09:31:35,474: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/bin/worker.py", line 351, in worker
+    worker.start()
+[2025-03-24 09:31:35,475: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/worker/worker.py", line 203, in start
+    self.blueprint.start(self)
+[2025-03-24 09:31:35,475: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/bootsteps.py", line 116, in start
+    step.start(parent)
+[2025-03-24 09:31:35,475: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/bootsteps.py", line 365, in start
+    return self.obj.start()
+[2025-03-24 09:31:35,476: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/concurrency/base.py", line 129, in start
+    self.on_start()
+[2025-03-24 09:31:35,476: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/concurrency/prefork.py", line 109, in on_start
+    P = self._pool = Pool(processes=self.limit,
+[2025-03-24 09:31:35,476: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/concurrency/asynpool.py", line 463, in __init__
+    super().__init__(processes, *args, **kwargs)
+[2025-03-24 09:31:35,477: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/billiard/pool.py", line 1046, in __init__
+    self._create_worker_process(i)
+[2025-03-24 09:31:35,477: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/concurrency/asynpool.py", line 480, in _create_worker_process
+    return super()._create_worker_process(i)
+[2025-03-24 09:31:35,477: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/billiard/pool.py", line 1158, in _create_worker_process
+    w.start()
+[2025-03-24 09:31:35,478: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/billiard/process.py", line 124, in start
+    self._popen = self._Popen(self)
+[2025-03-24 09:31:35,478: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/billiard/context.py", line 333, in _Popen
+    return Popen(process_obj)
+[2025-03-24 09:31:35,479: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/billiard/popen_fork.py", line 24, in __init__
+    self._launch(process_obj)
+[2025-03-24 09:31:35,479: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/billiard/popen_fork.py", line 79, in _launch
+    code = process_obj._bootstrap()
+[2025-03-24 09:31:35,479: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/billiard/process.py", line 327, in _bootstrap
+    self.run()
+[2025-03-24 09:31:35,480: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/billiard/process.py", line 114, in run
+    self._target(*self._args, **self._kwargs)
+[2025-03-24 09:31:35,480: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/billiard/pool.py", line 292, in __call__
+    sys.exit(self.workloop(pid=pid))
+[2025-03-24 09:31:35,481: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/billiard/pool.py", line 362, in workloop
+    result = (True, prepare_result(fun(*args, **kwargs)))
+[2025-03-24 09:31:35,481: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/app/trace.py", line 649, in fast_trace_task
+    R, I, T, Rstr = tasks[task].__trace__(
+[2025-03-24 09:31:35,481: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/app/trace.py", line 468, in trace_task
+    I, R, state, retval = on_error(task_request, exc, uuid)
+[2025-03-24 09:31:35,482: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/app/trace.py", line 379, in on_error
+    R = I.handle_error_state(
+[2025-03-24 09:31:35,482: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/app/trace.py", line 178, in handle_error_state
+    return {
+[2025-03-24 09:31:35,482: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/app/trace.py", line 237, in handle_failure
+    self._log_error(task, req, einfo)
+[2025-03-24 09:31:35,483: WARNING/ForkPoolWorker-1]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/app/trace.py", line 265, in _log_error
+    logger.log(policy.severity, policy.format.strip(), context,
+[2025-03-24 09:31:35,483: WARNING/ForkPoolWorker-1] Message: 'Task %(name)s[%(id)s] %(description)s: %(exc)s'
+Arguments: {'hostname': 'celery@debian', 'id': '7aa01a5e-4ac4-4e64-9b72-fdd200ccde71', 'name': 'app_site.tasks.send_to_telegrambot', 'exc': 'ApiTelegramException("A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: can\'t parse entities: Unexpected end of name token at byte offset 804")', 'traceback': 'Traceback (most recent call last):\n  File "/home/alprostov/venv/lib/python3.11/site-packages/celery/app/trace.py", line 451, in trace_task\n    R = retval = fun(*args, **kwargs)\n                 ^^^^^^^^^^^^^^^^^^^^\n  File "/home/alprostov/venv/lib/python3.11/site-packages/celery/app/trace.py", line 734, in __protected_call__\n    return self.run(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/home/alprostov/sakhlis/web/app_site/tasks.py", line 28, in send_to_telegrambot\n    bot.send_message(CHAT_ID_,  subject_+text, parse_mode=\'HTML\')\n  File "/home/alprostov/venv/lib/python3.11/site-packages/telebot/__init__.py", line 1549, in send_message\n    apihelper.send_message(\n  File "/home/alprostov/venv/lib/python3.11/site-packages/telebot/apihelper.py", line 264, in send_message\n    return _make_request(token, method_url, params=payload, method=\'post\')\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/home/alprostov/venv/lib/python3.11/site-packages/telebot/apihelper.py", line 162, in _make_request\n    json_result = _check_result(method_name, result)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/home/alprostov/venv/lib/python3.11/site-packages/telebot/apihelper.py", line 189, in _check_result\n    raise ApiTelegramException(method_name, result, result_json)\ntelebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: can\'t parse entities: Unexpected end of name token at byte offset 804\n', 'args': '[2299]', 'kwargs': '{}', 'description': 'raised unexpected', 'internal': False}
+[2025-03-24 09:31:35,568: WARNING/MainProcess] --- Logging error ---
+[2025-03-24 09:31:35,570: WARNING/MainProcess] Traceback (most recent call last):
+[2025-03-24 09:31:35,575: WARNING/MainProcess]   File "/usr/lib/python3.11/logging/__init__.py", line 1110, in emit
+    msg = self.format(record)
+          ^^^^^^^^^^^^^^^^^^^
+[2025-03-24 09:31:35,576: WARNING/MainProcess]   File "/usr/lib/python3.11/logging/__init__.py", line 953, in format
+    return fmt.format(record)
+           ^^^^^^^^^^^^^^^^^^
+[2025-03-24 09:31:35,576: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/utils/log.py", line 146, in format
+    msg = super().format(record)
+          ^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-24 09:31:35,576: WARNING/MainProcess]   File "/usr/lib/python3.11/logging/__init__.py", line 695, in format
+    record.exc_text = self.formatException(record.exc_info)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-24 09:31:35,577: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/utils/log.py", line 142, in formatException
+    r = super().formatException(ei)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-24 09:31:35,577: WARNING/MainProcess]   File "/usr/lib/python3.11/logging/__init__.py", line 645, in formatException
+    traceback.print_exception(ei[0], ei[1], tb, None, sio)
+[2025-03-24 09:31:35,577: WARNING/MainProcess]   File "/usr/lib/python3.11/traceback.py", line 124, in print_exception
+    te = TracebackException(type(value), value, tb, limit=limit, compact=True)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-24 09:31:35,578: WARNING/MainProcess]   File "/usr/lib/python3.11/traceback.py", line 690, in __init__
+    self.stack = StackSummary._extract_from_extended_frame_gen(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-24 09:31:35,578: WARNING/MainProcess]   File "/usr/lib/python3.11/traceback.py", line 416, in _extract_from_extended_frame_gen
+    for f, (lineno, end_lineno, colno, end_colno) in frame_gen:
+[2025-03-24 09:31:35,579: WARNING/MainProcess]   File "/usr/lib/python3.11/traceback.py", line 353, in _walk_tb_with_full_positions
+    positions = _get_code_position(tb.tb_frame.f_code, tb.tb_lasti)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-24 09:31:35,579: WARNING/MainProcess]   File "/usr/lib/python3.11/traceback.py", line 366, in _get_code_position
+    positions_gen = code.co_positions()
+                    ^^^^^^^^^^^^^^^^^
+[2025-03-24 09:31:35,579: WARNING/MainProcess] AttributeError: '_Code' object has no attribute 'co_positions'
+[2025-03-24 09:31:35,580: WARNING/MainProcess] Call stack:
+[2025-03-24 09:31:35,582: WARNING/MainProcess]   File "/home/alprostov/venv/bin/celery", line 8, in <module>
+    sys.exit(main())
+[2025-03-24 09:31:35,583: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/__main__.py", line 15, in main
+    sys.exit(_main())
+[2025-03-24 09:31:35,583: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/bin/celery.py", line 217, in main
+    return celery(auto_envvar_prefix="CELERY")
+[2025-03-24 09:31:35,584: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/click/core.py", line 1130, in __call__
+    return self.main(*args, **kwargs)
+[2025-03-24 09:31:35,584: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/click/core.py", line 1055, in main
+    rv = self.invoke(ctx)
+[2025-03-24 09:31:35,585: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/click/core.py", line 1657, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+[2025-03-24 09:31:35,585: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/click/core.py", line 1404, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+[2025-03-24 09:31:35,585: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/click/core.py", line 760, in invoke
+    return __callback(*args, **kwargs)
+[2025-03-24 09:31:35,586: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/click/decorators.py", line 26, in new_func
+    return f(get_current_context(), *args, **kwargs)
+[2025-03-24 09:31:35,586: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/bin/base.py", line 134, in caller
+    return f(ctx, *args, **kwargs)
+[2025-03-24 09:31:35,587: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/bin/worker.py", line 351, in worker
+    worker.start()
+[2025-03-24 09:31:35,587: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/worker/worker.py", line 203, in start
+    self.blueprint.start(self)
+[2025-03-24 09:31:35,588: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/bootsteps.py", line 116, in start
+    step.start(parent)
+[2025-03-24 09:31:35,588: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/bootsteps.py", line 365, in start
+    return self.obj.start()
+[2025-03-24 09:31:35,588: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/worker/consumer/consumer.py", line 332, in start
+    blueprint.start(self)
+[2025-03-24 09:31:35,589: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/bootsteps.py", line 116, in start
+    step.start(parent)
+[2025-03-24 09:31:35,589: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/worker/consumer/consumer.py", line 628, in start
+    c.loop(*c.loop_args())
+[2025-03-24 09:31:35,589: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/worker/loops.py", line 97, in asynloop
+    next(loop)
+[2025-03-24 09:31:35,590: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/kombu/asynchronous/hub.py", line 362, in create_loop
+    cb(*cbargs)
+[2025-03-24 09:31:35,595: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/concurrency/asynpool.py", line 325, in on_result_readable
+    next(it)
+[2025-03-24 09:31:35,595: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/concurrency/asynpool.py", line 308, in _recv_message
+    callback(message)
+[2025-03-24 09:31:35,595: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/billiard/pool.py", line 853, in on_state_change
+    state_handlers[state](*args)
+[2025-03-24 09:31:35,595: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/billiard/pool.py", line 835, in on_ready
+    item._set(i, obj)
+[2025-03-24 09:31:35,595: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/billiard/pool.py", line 1828, in _set
+    self.safe_apply_callback(
+[2025-03-24 09:31:35,596: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/billiard/pool.py", line 1796, in safe_apply_callback
+    fun(*args, **kwargs)
+[2025-03-24 09:31:35,596: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/worker/request.py", line 596, in on_failure
+    error('Task handler raised error: %r', exc,
+[2025-03-24 09:31:35,596: WARNING/MainProcess] Message: 'Task handler raised error: %r'
+Arguments: (<MaybeEncodingError: Error sending result: ''(1, <ExceptionInfo: ApiTelegramException("A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: can\'t parse entities: Unexpected end of name token at byte offset 804")>, None)''. Reason: ''PicklingError("Can\'t pickle <class \'telebot.apihelper.ApiTelegramException\'>: it\'s not the same object as telebot.apihelper.ApiTelegramException")''.>,)
+[2025-03-24 23:45:58,754: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[c6064295-27bb-47c4-85c4-a2b7e658cae4] received
+[2025-03-24 23:46:04,589: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[c6064295-27bb-47c4-85c4-a2b7e658cae4] succeeded in 0.7223531529307365s: None
+[2025-03-25 09:39:05,070: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[c682d708-c133-4636-9330-59023c53ba79] received
+[2025-03-25 09:39:10,715: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[c682d708-c133-4636-9330-59023c53ba79] succeeded in 0.5780611932277679s: None
+[2025-03-25 12:41:28,655: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[174c67cb-da93-4dc3-9375-f51ce458e645] received
+[2025-03-25 12:41:34,328: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[174c67cb-da93-4dc3-9375-f51ce458e645] succeeded in 0.5753297470510006s: None
+[2025-03-25 16:00:32,442: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[a7f7d52c-0bd7-4775-b02c-c9a509f697e5] received
+[2025-03-25 16:00:38,347: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[a7f7d52c-0bd7-4775-b02c-c9a509f697e5] succeeded in 0.7533534318208694s: None
+[2025-03-25 16:01:06,142: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[78f2958d-f948-4fdc-99e5-7d1576f0302f] received
+[2025-03-25 16:01:11,570: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[78f2958d-f948-4fdc-99e5-7d1576f0302f] succeeded in 0.3194444663822651s: None
+[2025-03-25 16:02:38,721: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[dfd0464c-07f0-4fcf-b4fe-0a025f050c24] received
+[2025-03-25 16:02:44,016: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[dfd0464c-07f0-4fcf-b4fe-0a025f050c24] succeeded in 0.2244645208120346s: None
+[2025-03-25 17:45:30,782: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[9523f383-edc6-4c25-b25d-9bf417d5f8fb] received
+[2025-03-25 17:45:36,652: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[9523f383-edc6-4c25-b25d-9bf417d5f8fb] succeeded in 0.7398187480866909s: None
+[2025-03-26 13:05:49,681: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[152a8c04-73ff-4308-a4dc-a4af8879b065] received
+[2025-03-26 13:05:55,459: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[152a8c04-73ff-4308-a4dc-a4af8879b065] succeeded in 0.6836757846176624s: None
+[2025-03-27 00:40:45,652: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[a4d37678-9e35-4279-b58c-c512ed88230a] received
+[2025-03-27 00:40:51,433: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[a4d37678-9e35-4279-b58c-c512ed88230a] succeeded in 0.5771273821592331s: None
+[2025-03-27 05:10:37,963: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[8ee3d31f-a5d4-42b5-ac49-c344e65140a1] received
+[2025-03-27 05:10:43,537: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[8ee3d31f-a5d4-42b5-ac49-c344e65140a1] succeeded in 0.5200856551527977s: None
+[2025-03-28 05:14:44,134: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[98f2abbf-7162-49d0-a1a7-8370ba4c629c] received
+[2025-03-28 05:14:49,820: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[98f2abbf-7162-49d0-a1a7-8370ba4c629c] succeeded in 0.5566393919289112s: None
+[2025-03-28 12:40:25,443: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[df1047c0-1875-45c9-acfb-f3d020298b7c] received
+[2025-03-28 12:40:31,011: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[df1047c0-1875-45c9-acfb-f3d020298b7c] succeeded in 0.5197164565324783s: None
+[2025-03-28 12:43:54,955: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[33286123-c178-4cd4-ac46-2530951a3f8a] received
+[2025-03-28 12:44:00,452: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[33286123-c178-4cd4-ac46-2530951a3f8a] succeeded in 0.23392831534147263s: None
+[2025-03-28 15:30:15,471: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[c3882f5b-9e89-46ac-8d6b-5c5c9b84f709] received
+[2025-03-28 15:30:21,352: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[c3882f5b-9e89-46ac-8d6b-5c5c9b84f709] succeeded in 0.7287787348031998s: None
+[2025-03-28 18:00:44,414: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[6767ecfd-6452-4d73-aa34-935da4da4c58] received
+[2025-03-28 18:00:50,153: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[6767ecfd-6452-4d73-aa34-935da4da4c58] succeeded in 0.6229197941720486s: None
+[2025-03-29 12:23:17,535: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[cd48746a-cc63-41aa-82d5-361d4eca262e] received
+[2025-03-29 12:23:23,192: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[cd48746a-cc63-41aa-82d5-361d4eca262e] succeeded in 0.6686569787561893s: None
+[2025-03-29 12:24:57,572: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[ac93d7da-3d87-43dc-a970-cbb463d1629e] received
+[2025-03-29 12:24:57,613: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[ccb999dd-e83e-42d7-9e4c-115878e91f81] received
+[2025-03-29 12:25:02,861: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[ac93d7da-3d87-43dc-a970-cbb463d1629e] succeeded in 0.2709413729608059s: None
+[2025-03-29 12:25:03,071: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[ccb999dd-e83e-42d7-9e4c-115878e91f81] succeeded in 0.203884307295084s: None
+[2025-03-29 19:10:22,342: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[07e489fb-bc6a-4dba-a45a-1460ff40fec8] received
+[2025-03-29 19:10:27,981: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[07e489fb-bc6a-4dba-a45a-1460ff40fec8] succeeded in 0.5421332232654095s: None
+[2025-03-30 01:06:20,651: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[7b257feb-8330-4341-a58b-27ba81f31109] received
+[2025-03-30 01:06:26,227: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[7b257feb-8330-4341-a58b-27ba81f31109] succeeded in 0.4966767244040966s: None
+[2025-03-30 20:31:12,857: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[04792b36-e57b-4bb7-8821-df66dae107b1] received
+[2025-03-30 20:31:18,548: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[04792b36-e57b-4bb7-8821-df66dae107b1] succeeded in 0.6411774307489395s: None
+[2025-03-31 00:15:12,759: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[7a8b868a-5318-4941-b0fb-cbf0d7d6c82d] received
+[2025-03-31 00:15:18,670: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[7a8b868a-5318-4941-b0fb-cbf0d7d6c82d] succeeded in 0.7203720100224018s: None
+[2025-03-31 07:26:43,209: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[8766581c-baaa-4045-bc50-d82d2cb125b3] received
+[2025-03-31 07:26:49,023: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[8766581c-baaa-4045-bc50-d82d2cb125b3] succeeded in 0.6675101704895496s: None
+[2025-03-31 13:12:57,953: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[1cf4b149-9a86-4d34-a3fd-bb9bb6ab7657] received
+[2025-03-31 13:13:03,596: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[1cf4b149-9a86-4d34-a3fd-bb9bb6ab7657] succeeded in 0.5219521522521973s: None
+[2025-03-31 13:14:22,234: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[7f0f9865-3fe4-4dbe-aed0-2eae5cd5c008] received
+[2025-03-31 13:14:27,542: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[7f0f9865-3fe4-4dbe-aed0-2eae5cd5c008] succeeded in 0.20407281816005707s: None
+[2025-03-31 14:48:01,860: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[c44b602c-5f46-43c5-9a7a-3ac5a0f6fd5d] received
+[2025-03-31 14:48:07,721: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[c44b602c-5f46-43c5-9a7a-3ac5a0f6fd5d] succeeded in 0.7228182032704353s: None
+[2025-04-01 00:18:27,865: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[6a310f40-6dc3-489c-b96b-5441b04d319d] received
+[2025-04-01 00:18:33,503: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[6a310f40-6dc3-489c-b96b-5441b04d319d] succeeded in 0.5582208596169949s: None
+[2025-04-01 13:42:51,438: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[df91f657-9d4a-461b-9465-0d837088204d] received
+[2025-04-01 13:42:57,154: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[df91f657-9d4a-461b-9465-0d837088204d] succeeded in 0.5339990183711052s: None
+[2025-04-03 07:35:42,305: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[2c88b120-cc2c-443a-b247-a5b5cbf0253a] received
+[2025-04-03 07:35:48,019: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[2c88b120-cc2c-443a-b247-a5b5cbf0253a] succeeded in 0.5831670016050339s: None
+[2025-04-03 23:56:54,056: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[4962fe77-44ce-4600-961b-664461b64641] received
+[2025-04-03 23:56:59,625: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[4962fe77-44ce-4600-961b-664461b64641] succeeded in 0.4872666038572788s: None
+[2025-04-04 10:51:32,415: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[6f3073cc-689b-4bff-9353-a4e7e9a20117] received
+[2025-04-04 10:51:38,143: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[6f3073cc-689b-4bff-9353-a4e7e9a20117] succeeded in 0.5399158038198948s: None
+[2025-04-04 14:38:10,503: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[23a69d9e-5021-4c80-89dc-60545b74faee] received
+[2025-04-04 14:38:16,186: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[23a69d9e-5021-4c80-89dc-60545b74faee] succeeded in 0.5819010771811008s: None
+[2025-04-05 07:10:53,787: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[4752cac5-5e2f-453d-b79a-544285c81f28] received
+[2025-04-05 07:10:59,545: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[4752cac5-5e2f-453d-b79a-544285c81f28] succeeded in 0.6783130317926407s: None
+[2025-04-05 07:11:38,315: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[4fe494ff-4509-4c3e-93a4-bd43eb2b0bbc] received
+[2025-04-05 07:11:43,575: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[4fe494ff-4509-4c3e-93a4-bd43eb2b0bbc] succeeded in 0.18187203258275986s: None
+[2025-04-07 20:23:46,733: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[f4cf8a57-d7fe-4cce-855a-7be7fb1abac6] received
+[2025-04-07 20:23:52,281: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[f4cf8a57-d7fe-4cce-855a-7be7fb1abac6] succeeded in 0.4968110956251621s: None
+[2025-04-07 20:26:06,022: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[0d5c4858-1c38-4358-ba86-267acc7cbda2] received
+[2025-04-07 20:26:11,278: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[0d5c4858-1c38-4358-ba86-267acc7cbda2] succeeded in 0.21096981689333916s: None
+[2025-04-08 06:14:42,587: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[f526910c-2b4c-495f-891e-cc52497f989e] received
+[2025-04-08 06:14:48,382: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[f526910c-2b4c-495f-891e-cc52497f989e] succeeded in 0.6228413134813309s: None
+[2025-04-08 14:23:11,184: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[5d2ba1e1-9a50-4992-905e-a88c5d7420d5] received
+[2025-04-08 14:23:17,017: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[5d2ba1e1-9a50-4992-905e-a88c5d7420d5] succeeded in 0.7505802102386951s: None
+[2025-04-08 19:50:07,322: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[622bc73f-90e3-455a-a957-66c8c977c740] received
+[2025-04-08 19:50:13,012: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[622bc73f-90e3-455a-a957-66c8c977c740] succeeded in 0.6101144179701805s: None
+[2025-04-09 01:56:04,015: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[ce461188-5a0c-4660-97fb-e4771bde858c] received
+[2025-04-09 01:56:09,766: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[ce461188-5a0c-4660-97fb-e4771bde858c] succeeded in 0.6715936176478863s: None
+[2025-04-09 12:22:00,154: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[26534076-9a96-4243-9e83-cc4e7de24689] received
+[2025-04-09 12:22:05,879: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[26534076-9a96-4243-9e83-cc4e7de24689] succeeded in 0.6706886552274227s: None
+[2025-04-10 08:11:53,051: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[b74b4304-58e0-48f3-969b-120376d9fc77] received
+[2025-04-10 08:11:58,759: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[b74b4304-58e0-48f3-969b-120376d9fc77] succeeded in 0.6087242253124714s: None
+[2025-04-10 12:12:32,739: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[24bdf38b-3841-4364-a645-2e751d0b28bb] received
+[2025-04-10 12:12:38,992: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[24bdf38b-3841-4364-a645-2e751d0b28bb] succeeded in 1.1199822761118412s: None
+[2025-04-10 19:07:13,548: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[0c735b3d-872d-4050-b794-5d251083613f] received
+[2025-04-10 19:07:19,292: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[0c735b3d-872d-4050-b794-5d251083613f] succeeded in 0.6159519515931606s: None
+[2025-04-10 19:10:08,205: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[460c2b9b-4852-4c05-b92f-e0ec500c0543] received
+[2025-04-10 19:10:13,458: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[460c2b9b-4852-4c05-b92f-e0ec500c0543] succeeded in 0.1934521347284317s: None
+[2025-04-11 23:33:44,716: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[67bbde7b-e169-40cd-8d4c-fdc49b13ccde] received
+[2025-04-11 23:33:50,368: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[67bbde7b-e169-40cd-8d4c-fdc49b13ccde] succeeded in 0.5239384770393372s: None
+[2025-04-12 09:21:55,925: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[e26fdc38-a2b9-4aa2-992b-79c68c28163b] received
+[2025-04-12 09:22:01,615: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[e26fdc38-a2b9-4aa2-992b-79c68c28163b] succeeded in 0.5867279917001724s: None
+[2025-04-13 13:43:58,611: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[e071269e-a18d-43aa-8279-6ac612013ab7] received
+[2025-04-13 13:44:04,358: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[e071269e-a18d-43aa-8279-6ac612013ab7] succeeded in 0.6570999585092068s: None
+[2025-04-14 13:34:14,501: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[c45b5a6e-f85a-4bf2-bf9f-5f9e24a55186] received
+[2025-04-14 13:34:20,109: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[c45b5a6e-f85a-4bf2-bf9f-5f9e24a55186] succeeded in 0.5502493493258953s: None
+[2025-04-14 13:36:01,114: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[51efce9a-9de0-4397-a1a4-bfda8fa35668] received
+[2025-04-14 13:36:06,339: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[51efce9a-9de0-4397-a1a4-bfda8fa35668] succeeded in 0.16732076555490494s: None
+[2025-04-15 19:31:20,971: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[47a2db9b-2752-4c57-9ab0-41d8151f967f] received
+[2025-04-15 19:31:26,586: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[47a2db9b-2752-4c57-9ab0-41d8151f967f] succeeded in 0.5451518073678017s: None
+[2025-04-15 19:50:57,458: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[754b56eb-4e2e-4696-b300-94f0c5a3044b] received
+[2025-04-15 19:51:03,112: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[754b56eb-4e2e-4696-b300-94f0c5a3044b] succeeded in 0.5685167387127876s: None
+[2025-04-16 08:14:20,773: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[a1531754-1d85-4b1c-9473-e32bb2aa7ba9] received
+[2025-04-16 08:14:26,398: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[a1531754-1d85-4b1c-9473-e32bb2aa7ba9] succeeded in 0.5363359339535236s: None
+[2025-04-17 00:43:58,087: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[dc593cda-0c33-453c-bbe9-6a593bf09b10] received
+[2025-04-17 00:44:03,720: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[dc593cda-0c33-453c-bbe9-6a593bf09b10] succeeded in 0.5372006371617317s: None
+[2025-04-17 08:44:04,338: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[fb9a299a-87ab-4872-b50c-76f834e081af] received
+[2025-04-17 08:44:10,063: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[fb9a299a-87ab-4872-b50c-76f834e081af] succeeded in 0.6576015874743462s: None
+[2025-04-17 12:05:27,516: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[c04ab962-d6cd-42a0-9ea9-9c38e4a59372] received
+[2025-04-17 12:05:33,388: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[c04ab962-d6cd-42a0-9ea9-9c38e4a59372] succeeded in 0.7325996123254299s: None
+[2025-04-18 16:41:01,921: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[05717fbf-f8b6-42e0-a202-8849d11ac988] received
+[2025-04-18 16:41:07,825: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[05717fbf-f8b6-42e0-a202-8849d11ac988] succeeded in 0.7889064662158489s: None
+[2025-04-19 08:49:53,343: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[47531555-46bb-4eaa-8be6-f333858d16ef] received
+[2025-04-19 08:49:59,117: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[47531555-46bb-4eaa-8be6-f333858d16ef] succeeded in 0.6000183261930943s: None
+[2025-04-19 15:40:46,005: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[2c8149b1-f39e-4522-bb7a-e2c10a05b5df] received
+[2025-04-19 15:40:51,695: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[2c8149b1-f39e-4522-bb7a-e2c10a05b5df] succeeded in 0.6237358748912811s: None
+[2025-04-21 02:32:19,448: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[90d0667a-883f-49e7-89d8-ae0072f64979] received
+[2025-04-21 02:32:25,096: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[90d0667a-883f-49e7-89d8-ae0072f64979] succeeded in 0.5723143666982651s: None
+[2025-04-21 13:18:23,463: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[2f0bd9b1-3c5b-4caa-b143-da0127b033b4] received
+[2025-04-21 13:18:29,164: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[2f0bd9b1-3c5b-4caa-b143-da0127b033b4] succeeded in 0.5858121402561665s: None
+[2025-04-21 13:20:58,504: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[5c9cf4bd-9135-4ffd-968d-56fda7fc12de] received
+[2025-04-21 13:21:03,917: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[5c9cf4bd-9135-4ffd-968d-56fda7fc12de] succeeded in 0.3111850954592228s: None
+[2025-04-21 13:31:10,847: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[049f9a2a-84d9-4bd4-8607-e3ad3d49d543] received
+[2025-04-21 13:31:16,520: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[049f9a2a-84d9-4bd4-8607-e3ad3d49d543] succeeded in 0.6130887754261494s: None
+[2025-04-22 08:38:31,202: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[6fb8c56e-ab2d-48a7-bbc7-bc8423b741b7] received
+[2025-04-22 08:38:37,019: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[6fb8c56e-ab2d-48a7-bbc7-bc8423b741b7] succeeded in 0.7262758538126945s: None
+[2025-04-22 08:57:38,941: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[44652028-f957-43da-b88b-c250b0f0c1f3] received
+[2025-04-22 08:57:44,624: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[44652028-f957-43da-b88b-c250b0f0c1f3] succeeded in 0.5887348838150501s: None
+[2025-04-22 17:25:03,546: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[0f805883-8cfd-4d1d-95db-91d717b6eb80] received
+[2025-04-22 17:25:09,145: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[0f805883-8cfd-4d1d-95db-91d717b6eb80] succeeded in 0.5236751362681389s: None
+[2025-04-22 17:28:08,799: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[07c23677-9560-408b-a058-038056420773] received
+[2025-04-22 17:28:14,042: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[07c23677-9560-408b-a058-038056420773] succeeded in 0.18325380608439445s: None
+[2025-04-22 17:30:49,044: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[0faa9d9c-dc77-40b9-bfc2-41a73aab12c5] received
+[2025-04-22 17:30:54,497: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[0faa9d9c-dc77-40b9-bfc2-41a73aab12c5] succeeded in 0.363872904330492s: None
+[2025-04-22 17:32:39,817: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[dc7899fc-0d9a-43aa-9fdd-930414e78d4c] received
+[2025-04-22 17:32:45,236: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[dc7899fc-0d9a-43aa-9fdd-930414e78d4c] succeeded in 0.26893260329961777s: None
+[2025-04-22 17:35:16,877: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[0602911f-955e-4feb-946b-912051811220] received
+[2025-04-22 17:35:22,608: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[0602911f-955e-4feb-946b-912051811220] succeeded in 0.6549847461283207s: None
+[2025-04-23 07:23:19,098: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[5825056e-0cc4-40a4-9069-6c607d640fd0] received
+[2025-04-23 07:23:24,818: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[5825056e-0cc4-40a4-9069-6c607d640fd0] succeeded in 0.676648385822773s: None
+[2025-04-23 16:44:52,047: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[9ed73852-e708-406e-8a89-4de666e8eaf9] received
+[2025-04-23 16:44:57,753: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[9ed73852-e708-406e-8a89-4de666e8eaf9] succeeded in 0.6329510770738125s: None
+[2025-04-23 16:56:18,642: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[6c4114b4-06b2-4e32-91c3-94f62edf6eaa] received
+[2025-04-23 16:56:24,434: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[6c4114b4-06b2-4e32-91c3-94f62edf6eaa] succeeded in 0.7202237509191036s: None
+[2025-04-23 17:20:44,525: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[4851bc92-d8f3-48e0-80d6-07a5d2b52d71] received
+[2025-04-23 17:20:50,165: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[4851bc92-d8f3-48e0-80d6-07a5d2b52d71] succeeded in 0.5982959978282452s: None
+[2025-04-24 07:23:46,448: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[ecedc1b2-8c0c-45a7-b898-9ade25f96906] received
+[2025-04-24 07:23:52,084: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[ecedc1b2-8c0c-45a7-b898-9ade25f96906] succeeded in 0.5032741613686085s: None
+[2025-04-24 10:17:27,546: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[c4db4ee5-cc71-4414-94c2-541eb572b65a] received
+[2025-04-24 10:17:33,188: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[c4db4ee5-cc71-4414-94c2-541eb572b65a] succeeded in 0.5767902955412865s: None
+[2025-04-24 12:54:29,350: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[ce3fa040-7024-4d60-8ae6-3377fd0302e3] received
+[2025-04-24 12:54:34,901: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[ce3fa040-7024-4d60-8ae6-3377fd0302e3] succeeded in 0.48523328453302383s: None
+[2025-04-25 18:05:44,913: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[cdae0482-ff3e-441f-88c7-6310545caf46] received
+[2025-04-25 18:05:50,566: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[cdae0482-ff3e-441f-88c7-6310545caf46] succeeded in 0.5852249935269356s: None
+[2025-04-26 14:42:57,428: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[2dcaed7a-99cd-4354-b65f-b1f57e2c88ad] received
+[2025-04-26 14:43:03,161: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[2dcaed7a-99cd-4354-b65f-b1f57e2c88ad] succeeded in 0.5934315621852875s: None
+[2025-04-26 17:38:06,225: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[cf8e63d1-6564-4323-972a-735242a312a8] received
+[2025-04-26 17:38:11,905: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[cf8e63d1-6564-4323-972a-735242a312a8] succeeded in 0.5711430571973324s: None
+[2025-04-28 07:13:44,243: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[6d6cca8b-995d-474d-8d96-69550532c969] received
+[2025-04-28 07:13:49,907: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[6d6cca8b-995d-474d-8d96-69550532c969] succeeded in 0.5640786439180374s: None
+[2025-04-28 10:03:07,720: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[9929e213-6d97-49a3-aace-593b62eef678] received
+[2025-04-28 10:03:13,449: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[9929e213-6d97-49a3-aace-593b62eef678] succeeded in 0.6269845888018608s: None
+[2025-04-28 12:24:25,317: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[9c4b6838-8234-495b-8838-51c9d00bf963] received
+[2025-04-28 12:24:30,884: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[9c4b6838-8234-495b-8838-51c9d00bf963] succeeded in 0.5060525126755238s: None
+[2025-04-28 18:40:17,023: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[9621008a-d668-4ffb-9452-8fe3f59a624d] received
+[2025-04-28 18:40:22,746: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[9621008a-d668-4ffb-9452-8fe3f59a624d] succeeded in 0.5901426561176777s: None
+[2025-04-28 21:08:16,039: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[b523d21e-7e63-4fe4-979d-03242b4a4484] received
+[2025-04-28 21:08:21,737: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[b523d21e-7e63-4fe4-979d-03242b4a4484] succeeded in 0.5787805803120136s: None
+[2025-04-29 06:26:39,152: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[f4784635-93b3-4f98-a912-1defa37b40f1] received
+[2025-04-29 06:26:44,766: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[f4784635-93b3-4f98-a912-1defa37b40f1] succeeded in 0.5643288642168045s: None
+[2025-04-29 07:08:03,565: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[02b73306-bba0-4eef-9e63-1a8075a15a41] received
+[2025-04-29 07:08:09,263: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[02b73306-bba0-4eef-9e63-1a8075a15a41] succeeded in 0.6147330105304718s: None
+[2025-04-29 19:37:48,328: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[ddd7de73-b510-4748-9c6c-7b3bf718cdf1] received
+[2025-04-29 19:37:54,003: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[ddd7de73-b510-4748-9c6c-7b3bf718cdf1] succeeded in 0.5263756923377514s: None
+[2025-04-29 20:27:23,628: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[ecf47dd3-c3aa-40de-b077-a0ad0b54f29c] received
+[2025-04-29 20:27:29,244: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[ecf47dd3-c3aa-40de-b077-a0ad0b54f29c] succeeded in 0.5419644080102444s: None
+[2025-04-30 02:35:55,748: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[1995d31f-fa8e-444c-9666-2e5fcd5e26ae] received
+[2025-04-30 02:36:01,287: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[1995d31f-fa8e-444c-9666-2e5fcd5e26ae] succeeded in 0.5427490249276161s: None
+[2025-04-30 06:12:56,348: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[20cdbe01-6ddb-41da-919a-155b205857b2] received
+[2025-04-30 06:13:01,956: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[20cdbe01-6ddb-41da-919a-155b205857b2] succeeded in 0.5216053873300552s: None
+[2025-04-30 12:10:23,787: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[02af488b-4489-4a6b-85db-8112debf880f] received
+[2025-04-30 12:10:29,415: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[02af488b-4489-4a6b-85db-8112debf880f] succeeded in 0.5092516839504242s: None
+[2025-04-30 18:04:08,996: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[1b304d12-b488-4b46-b8fb-d0310ebfec91] received
+[2025-04-30 18:04:14,771: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[1b304d12-b488-4b46-b8fb-d0310ebfec91] succeeded in 0.6186278983950615s: None
+[2025-04-30 20:09:37,570: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[43e289f7-fb76-4c6a-a29f-41abc71dde25] received
+[2025-04-30 20:09:43,136: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[43e289f7-fb76-4c6a-a29f-41abc71dde25] succeeded in 0.4660661146044731s: None
+[2025-04-30 21:01:59,015: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[7a419e20-5ff3-4d2a-82f4-8c168afcdb7c] received
+[2025-04-30 21:02:04,619: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[7a419e20-5ff3-4d2a-82f4-8c168afcdb7c] succeeded in 0.6059579029679298s: None
+[2025-05-01 12:05:57,769: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[c61e8d76-56ec-4dac-98aa-08e5b719ca5d] received
+[2025-05-01 12:06:03,609: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[c61e8d76-56ec-4dac-98aa-08e5b719ca5d] succeeded in 0.757856547832489s: None
+[2025-05-01 15:31:46,556: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[1a0c9149-32ea-4f2c-9be3-98fd8829b2b1] received
+[2025-05-01 15:31:52,245: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[1a0c9149-32ea-4f2c-9be3-98fd8829b2b1] succeeded in 0.6340723969042301s: None
+[2025-05-02 12:27:30,923: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[605c7e74-1ad4-40b8-9dca-1a941f1e2308] received
+[2025-05-02 12:27:36,744: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[605c7e74-1ad4-40b8-9dca-1a941f1e2308] succeeded in 0.7601402811706066s: None
+[2025-05-02 20:46:01,762: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[c0994869-f29a-427f-8406-3de0fda3edb2] received
+[2025-05-02 20:46:07,492: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[c0994869-f29a-427f-8406-3de0fda3edb2] succeeded in 0.6125730946660042s: None
+[2025-05-03 04:43:13,185: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[007707a0-59f9-468e-8f42-28f98d100876] received
+[2025-05-03 04:43:18,808: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[007707a0-59f9-468e-8f42-28f98d100876] succeeded in 0.5242964029312134s: None
+[2025-05-03 06:40:50,514: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[dd421cc0-8857-4e8c-9cee-d3e629c7bb83] received
+[2025-05-03 06:40:56,060: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[dd421cc0-8857-4e8c-9cee-d3e629c7bb83] succeeded in 0.4905826821923256s: None
+[2025-05-03 06:43:21,649: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[58033cc8-bbc2-41bd-87a9-cddcf1798cd9] received
+[2025-05-03 06:43:27,053: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[58033cc8-bbc2-41bd-87a9-cddcf1798cd9] succeeded in 0.3237903043627739s: None
+[2025-05-03 06:54:01,202: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[be61ea4b-581e-4e08-bd62-d374b1a8f066] received
+[2025-05-03 06:54:06,817: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[be61ea4b-581e-4e08-bd62-d374b1a8f066] succeeded in 0.5265086442232132s: None
+[2025-05-03 06:57:01,690: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[035393cc-e3f2-4c1b-80ab-7c8bd5642edd] received
+[2025-05-03 06:57:06,959: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[035393cc-e3f2-4c1b-80ab-7c8bd5642edd] succeeded in 0.22324687987565994s: None
+[2025-05-03 06:58:29,672: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[6df5fe76-e402-48fe-8497-df981c468692] received
+[2025-05-03 06:58:34,898: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[6df5fe76-e402-48fe-8497-df981c468692] succeeded in 0.1653343364596367s: None
+[2025-05-03 06:59:47,238: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[ec55bffc-269a-424d-8bfd-02113d353ec4] received
+[2025-05-03 06:59:52,531: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[ec55bffc-269a-424d-8bfd-02113d353ec4] succeeded in 0.1901027299463749s: None
+[2025-05-03 12:35:04,691: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[874d28f9-3d1f-49ec-ad52-332c6b8d6505] received
+[2025-05-03 12:35:10,315: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[874d28f9-3d1f-49ec-ad52-332c6b8d6505] succeeded in 0.5603786781430244s: None
+[2025-05-05 08:38:18,629: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[982efbbd-5517-4be7-a938-2a986019e8f9] received
+[2025-05-05 08:38:24,386: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[982efbbd-5517-4be7-a938-2a986019e8f9] succeeded in 0.6991622634232044s: None
+[2025-05-05 16:17:33,725: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[cd3a2c15-f003-4a2c-a80c-15b862ad7e97] received
+[2025-05-05 16:17:39,421: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[cd3a2c15-f003-4a2c-a80c-15b862ad7e97] succeeded in 0.6460168622434139s: None
+[2025-05-06 04:00:02,837: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[840ccd74-f3e0-42d6-bddb-07b008fa2818] received
+[2025-05-06 04:00:08,498: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[840ccd74-f3e0-42d6-bddb-07b008fa2818] succeeded in 0.5811068341135979s: None
+[2025-05-07 07:05:54,421: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[2d207f50-5efb-4f0e-ab86-e1b5110ef9c4] received
+[2025-05-07 07:06:00,077: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[2d207f50-5efb-4f0e-ab86-e1b5110ef9c4] succeeded in 0.596152376383543s: None
+[2025-05-07 11:32:50,465: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[2d0d66e5-499d-402b-bb2d-49f01b6a9969] received
+[2025-05-07 11:32:56,143: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[2d0d66e5-499d-402b-bb2d-49f01b6a9969] succeeded in 0.5869895182549953s: None
+[2025-05-07 12:22:53,079: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[58b105d9-9e26-4896-a8f9-459d2fa018bb] received
+[2025-05-07 12:22:58,893: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[58b105d9-9e26-4896-a8f9-459d2fa018bb] succeeded in 0.5835347771644592s: None
+[2025-05-07 20:33:58,618: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[e6f3bd32-9ea4-4bc4-8fe4-8523b852cde1] received
+[2025-05-07 20:34:04,298: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[e6f3bd32-9ea4-4bc4-8fe4-8523b852cde1] succeeded in 0.627288892865181s: None
+[2025-05-08 16:13:52,286: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[34bf67c0-29b3-402a-b117-1c2f186c78e2] received
+[2025-05-08 16:13:57,902: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[34bf67c0-29b3-402a-b117-1c2f186c78e2] succeeded in 0.5582251138985157s: None
+[2025-05-08 16:19:29,137: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[c05d84fb-de50-46e2-9074-f326aa9f30bb] received
+[2025-05-08 16:19:34,536: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[c05d84fb-de50-46e2-9074-f326aa9f30bb] succeeded in 0.32579464465379715s: None
+[2025-05-08 16:27:14,558: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[cd09f078-a3f5-42d6-82cc-6632e749e7c6] received
+[2025-05-08 16:27:20,244: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[cd09f078-a3f5-42d6-82cc-6632e749e7c6] succeeded in 0.5772401988506317s: None
+[2025-05-09 12:05:26,148: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[e6a32ed9-0e21-4d10-b586-231dc920b179] received
+[2025-05-09 12:05:31,731: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[e6a32ed9-0e21-4d10-b586-231dc920b179] succeeded in 0.5335340611636639s: None
+[2025-05-10 06:09:27,514: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[d1db8d35-9247-46dd-a4c2-a23a6d90e408] received
+[2025-05-10 06:09:33,241: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[d1db8d35-9247-46dd-a4c2-a23a6d90e408] succeeded in 0.6464213170111179s: None
+[2025-05-11 12:59:23,538: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[4d6a7bf5-b1c4-45f8-a18b-c9e471ab53ac] received
+[2025-05-11 12:59:29,210: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[4d6a7bf5-b1c4-45f8-a18b-c9e471ab53ac] succeeded in 0.5656748488545418s: None
+[2025-05-11 14:21:33,062: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[d1d2e0d1-4d21-4f6b-94bc-1a772c6ca7c5] received
+[2025-05-11 14:21:38,805: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[d1d2e0d1-4d21-4f6b-94bc-1a772c6ca7c5] succeeded in 0.5787144899368286s: None
+[2025-05-11 17:42:09,350: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[d8fde3eb-e271-44b3-aebd-d43f0647ae0f] received
+[2025-05-11 17:42:15,057: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[d8fde3eb-e271-44b3-aebd-d43f0647ae0f] succeeded in 0.5778905265033245s: None
+[2025-05-11 21:02:12,292: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[b2f59725-5aee-4260-b9f1-d05acaa46108] received
+[2025-05-11 21:02:18,009: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[b2f59725-5aee-4260-b9f1-d05acaa46108] succeeded in 0.531838919967413s: None
+[2025-05-12 07:29:06,231: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[4644d252-435e-436b-8143-e5f2d20fa01f] received
+[2025-05-12 07:29:11,968: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[4644d252-435e-436b-8143-e5f2d20fa01f] succeeded in 0.6174894012510777s: None
+[2025-05-12 16:18:41,740: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[2d9bd659-d85a-47ce-bce5-b3ca2e4b2aed] received
+[2025-05-12 16:18:47,613: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[2d9bd659-d85a-47ce-bce5-b3ca2e4b2aed] succeeded in 0.7395339831709862s: None
+[2025-05-12 23:40:34,850: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[c45d8050-52bf-480e-9146-86c2c5be61b7] received
+[2025-05-12 23:40:40,689: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[c45d8050-52bf-480e-9146-86c2c5be61b7] succeeded in 0.7068736329674721s: None
+[2025-05-13 22:34:46,708: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[6778eb00-e75b-4730-b10a-fcc4e303f849] received
+[2025-05-13 22:34:52,331: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[6778eb00-e75b-4730-b10a-fcc4e303f849] succeeded in 0.5677073746919632s: None
+[2025-05-14 18:19:48,879: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[972e444c-3ac1-47f0-988b-d88711221a6a] received
+[2025-05-14 18:19:54,616: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[972e444c-3ac1-47f0-988b-d88711221a6a] succeeded in 0.6375357285141945s: None
+[2025-05-15 04:07:07,905: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[b6444b58-3be8-4707-b37c-f75598ed0636] received
+[2025-05-15 04:07:13,520: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[b6444b58-3be8-4707-b37c-f75598ed0636] succeeded in 0.5090270042419434s: None
+[2025-05-16 07:55:32,722: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[9209a246-fd27-433d-b3c9-12b425fbe435] received
+[2025-05-16 07:55:38,358: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[9209a246-fd27-433d-b3c9-12b425fbe435] succeeded in 0.4808555208146572s: None
+[2025-05-16 14:00:16,176: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[63acb343-badd-4aa4-9759-1b61dad7b30d] received
+[2025-05-16 14:00:21,880: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[63acb343-badd-4aa4-9759-1b61dad7b30d] succeeded in 0.6403103843331337s: None
+[2025-05-16 17:06:00,637: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[977e2b30-a702-4392-b04b-fbbd84b7956f] received
+[2025-05-16 17:06:06,386: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[977e2b30-a702-4392-b04b-fbbd84b7956f] succeeded in 0.6235011965036392s: None
+[2025-05-17 11:04:17,676: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[6a5fa696-cf51-45a3-b90f-3d76ff01ee47] received
+[2025-05-17 11:04:23,264: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[6a5fa696-cf51-45a3-b90f-3d76ff01ee47] succeeded in 0.505303181707859s: None
+[2025-05-17 12:31:53,956: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[bed753b5-9360-4e99-b994-01230f08bbd9] received
+[2025-05-17 12:32:00,743: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[bed753b5-9360-4e99-b994-01230f08bbd9] succeeded in 1.5576536171138287s: None
+[2025-05-17 15:41:40,048: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[9423ee84-a9a4-4833-a565-c0acdc613fe1] received
+[2025-05-17 15:41:45,625: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[9423ee84-a9a4-4833-a565-c0acdc613fe1] succeeded in 0.4961823523044586s: None
+[2025-05-18 08:52:40,860: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[a4ec7d1f-599a-441a-b343-f149aa9431f8] received
+[2025-05-18 08:52:46,567: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[a4ec7d1f-599a-441a-b343-f149aa9431f8] succeeded in 0.6517840810120106s: None
+[2025-05-18 08:54:43,633: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[746bef2e-d822-4d58-8cd8-32cd74a01c9a] received
+[2025-05-18 08:54:48,596: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[746bef2e-d822-4d58-8cd8-32cd74a01c9a] succeeded in 0.2068968489766121s: None
+[2025-05-18 08:57:02,916: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[2dd4af6b-6325-41c2-bac0-dabdb762f853] received
+[2025-05-18 08:57:08,125: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[2dd4af6b-6325-41c2-bac0-dabdb762f853] succeeded in 0.16729196533560753s: None
+[2025-05-18 21:48:54,895: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[98c2618b-1902-4f20-86c7-b3844c5f2db5] received
+[2025-05-18 21:49:00,548: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[98c2618b-1902-4f20-86c7-b3844c5f2db5] succeeded in 0.5142355859279633s: None
+[2025-05-19 18:32:34,176: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[26bcf4f2-402f-427f-ac4c-c7a7ba2cd3e7] received
+[2025-05-19 18:32:39,931: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[26bcf4f2-402f-427f-ac4c-c7a7ba2cd3e7] succeeded in 0.6142137423157692s: None
+[2025-05-20 09:30:49,560: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[a3021e8f-e931-43d8-9e0d-4e4f4f7fccca] received
+[2025-05-20 09:30:55,304: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[a3021e8f-e931-43d8-9e0d-4e4f4f7fccca] succeeded in 0.7008879743516445s: None
+[2025-05-20 10:29:31,378: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[1db9b304-e783-4539-af5c-8f85b0de2e2f] received
+[2025-05-20 10:29:37,064: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[1db9b304-e783-4539-af5c-8f85b0de2e2f] succeeded in 0.5999660789966583s: None
+[2025-05-20 16:11:56,789: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[1c33416c-9ebf-4c88-b467-92016facbdc3] received
+[2025-05-20 16:12:02,539: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[1c33416c-9ebf-4c88-b467-92016facbdc3] succeeded in 0.7024011537432671s: None
+[2025-05-21 08:30:25,278: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[e35610aa-88b4-462a-a62f-3af47346e1fd] received
+[2025-05-21 08:30:30,930: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[e35610aa-88b4-462a-a62f-3af47346e1fd] succeeded in 0.5294443443417549s: None
+[2025-05-21 14:24:23,374: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[a65a4fa3-8d29-4028-9242-171929ebff30] received
+[2025-05-21 14:24:29,158: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[a65a4fa3-8d29-4028-9242-171929ebff30] succeeded in 0.6402975842356682s: None
+[2025-05-21 18:39:20,630: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[97a6b3ab-813c-45f4-a5a5-6a82f6b25b99] received
+[2025-05-21 18:39:26,310: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[97a6b3ab-813c-45f4-a5a5-6a82f6b25b99] succeeded in 0.6030024141073227s: None
+[2025-05-22 02:22:29,987: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[592ac0f5-1df2-4976-af4d-77cb93a225aa] received
+[2025-05-22 02:22:35,673: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[592ac0f5-1df2-4976-af4d-77cb93a225aa] succeeded in 0.6002186685800552s: None
+[2025-05-22 11:35:58,309: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[0870f991-51ab-4cb0-ba82-3ae84dc6974a] received
+[2025-05-22 11:36:03,993: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[0870f991-51ab-4cb0-ba82-3ae84dc6974a] succeeded in 0.6689283214509487s: None
+[2025-05-22 11:58:50,762: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[bbd23fd5-028d-4f5d-b8b2-4310dd50cb05] received
+[2025-05-22 11:58:56,552: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[bbd23fd5-028d-4f5d-b8b2-4310dd50cb05] succeeded in 0.632649589329958s: None
+[2025-05-22 12:46:46,926: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[048091c4-7cf6-4755-800c-3714b552284d] received
+[2025-05-22 12:46:52,608: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[048091c4-7cf6-4755-800c-3714b552284d] succeeded in 0.5579620823264122s: None
+[2025-05-23 10:58:13,155: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[e4f241c2-29e4-40dc-a79f-8832885db888] received
+[2025-05-23 10:58:18,791: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[e4f241c2-29e4-40dc-a79f-8832885db888] succeeded in 0.5631725378334522s: None
+[2025-05-23 15:44:40,378: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[5dba0c6e-8a1a-48d1-9484-7a6eed0520e4] received
+[2025-05-23 15:44:46,136: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[5dba0c6e-8a1a-48d1-9484-7a6eed0520e4] succeeded in 0.6620559170842171s: None
+[2025-05-24 16:05:21,911: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[557c5392-d8c0-49c7-82cc-226bd07242c4] received
+[2025-05-24 16:05:27,679: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[557c5392-d8c0-49c7-82cc-226bd07242c4] succeeded in 0.7094418965280056s: None
+[2025-05-25 00:15:54,562: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[f13b4639-083d-4bd9-a301-4b17f6cbe1e7] received
+[2025-05-25 00:16:00,105: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[f13b4639-083d-4bd9-a301-4b17f6cbe1e7] succeeded in 0.530501451343298s: None
+[2025-05-25 05:40:30,656: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[eb017b93-ccfc-4db4-86c5-b889e1dfc2f2] received
+[2025-05-25 05:40:36,278: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[eb017b93-ccfc-4db4-86c5-b889e1dfc2f2] succeeded in 0.5376340113580227s: None
+[2025-05-26 02:29:46,819: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[576372dd-50ad-4a05-8e23-462f832bfba4] received
+[2025-05-26 02:29:52,454: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[576372dd-50ad-4a05-8e23-462f832bfba4] succeeded in 0.5573265925049782s: None
+[2025-05-26 05:22:44,281: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[8843d1e7-75bc-430c-9540-dc08e5f114b9] received
+[2025-05-26 05:22:49,892: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[8843d1e7-75bc-430c-9540-dc08e5f114b9] succeeded in 0.5247013755142689s: None
+[2025-05-26 14:21:43,838: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[2e8392df-e47a-403c-8d0b-c2ffcedf3d3e] received
+[2025-05-26 14:21:49,538: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[2e8392df-e47a-403c-8d0b-c2ffcedf3d3e] succeeded in 0.6794462464749813s: None
+[2025-05-26 14:24:24,748: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[f1f95c65-650d-47d8-8c0d-0f4fe004027e] received
+[2025-05-26 14:24:30,080: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[f1f95c65-650d-47d8-8c0d-0f4fe004027e] succeeded in 0.20036155730485916s: None
+[2025-05-26 16:15:54,305: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[5df8cf9c-db11-4f23-8ddc-d79f7c09ae1e] received
+[2025-05-26 16:15:59,941: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[5df8cf9c-db11-4f23-8ddc-d79f7c09ae1e] succeeded in 0.5819423086941242s: None
+[2025-05-27 12:02:48,327: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[d59dc0e7-d99a-44eb-832a-657a3c4b918d] received
+[2025-05-27 12:02:54,149: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[d59dc0e7-d99a-44eb-832a-657a3c4b918d] succeeded in 0.7137111499905586s: None
+[2025-05-27 22:26:18,407: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[0bd8ff09-9602-43f8-8404-eccf17f1c5c0] received
+[2025-05-27 22:26:23,972: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[0bd8ff09-9602-43f8-8404-eccf17f1c5c0] succeeded in 0.5107626207172871s: None
+[2025-05-28 03:23:26,283: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[ee706e57-c1bb-4298-b32b-a3afab41c305] received
+[2025-05-28 03:23:31,965: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[ee706e57-c1bb-4298-b32b-a3afab41c305] succeeded in 0.5914120860397816s: None
+[2025-05-28 05:00:16,727: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[746497dd-5c06-40fb-9060-90fdaeda15b0] received
+[2025-05-28 05:00:22,247: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[746497dd-5c06-40fb-9060-90fdaeda15b0] succeeded in 0.46774036064743996s: None
+[2025-05-28 20:08:39,015: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[f3c7b869-ad04-42b2-a3e1-32b86d4977ae] received
+[2025-05-28 20:08:44,624: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[f3c7b869-ad04-42b2-a3e1-32b86d4977ae] succeeded in 0.4982108399271965s: None
+[2025-05-29 06:44:00,409: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[3ba8f836-bb7c-4cc3-88dc-37f9fac165ea] received
+[2025-05-29 06:44:06,116: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[3ba8f836-bb7c-4cc3-88dc-37f9fac165ea] succeeded in 0.617018561810255s: None
+[2025-05-29 16:57:38,635: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[20cd1905-5b45-449d-9afa-2e29da3fda4c] received
+[2025-05-29 16:57:44,217: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[20cd1905-5b45-449d-9afa-2e29da3fda4c] succeeded in 0.4772712364792824s: None
+[2025-05-29 16:58:56,382: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[93f75f11-68d0-4b3f-839e-b7f888edbda0] received
+[2025-05-29 16:59:01,665: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[93f75f11-68d0-4b3f-839e-b7f888edbda0] succeeded in 0.20984920114278793s: None
+[2025-05-29 17:00:38,753: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[76b834a9-5776-492e-a692-dc03d4e4ce65] received
+[2025-05-29 17:00:44,068: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[76b834a9-5776-492e-a692-dc03d4e4ce65] succeeded in 0.224250216037035s: None
+[2025-05-29 17:03:33,138: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[d3f9f921-7de0-46a9-b507-071c249b1012] received
+[2025-05-29 17:03:38,421: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[d3f9f921-7de0-46a9-b507-071c249b1012] succeeded in 0.16004834696650505s: None
+[2025-05-30 03:46:14,414: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[d7ab8c27-cef7-430f-b951-7bf2260d21cd] received
+[2025-05-30 03:46:20,156: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[d7ab8c27-cef7-430f-b951-7bf2260d21cd] succeeded in 0.6040221191942692s: None
+[2025-05-30 15:56:07,347: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[61764e3b-34fd-401d-8a6e-5ffa61b401ed] received
+[2025-05-30 15:56:13,050: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[61764e3b-34fd-401d-8a6e-5ffa61b401ed] succeeded in 0.6165958158671856s: None
+[2025-05-30 18:21:53,457: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[9351191d-eace-4ae6-8eed-c1113d9948ac] received
+[2025-05-30 18:21:59,100: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[9351191d-eace-4ae6-8eed-c1113d9948ac] succeeded in 0.5355970449745655s: None
+[2025-05-30 18:35:42,310: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[97f2b170-d696-4ee0-bded-ba787f90f430] received
+[2025-05-30 18:35:47,914: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[97f2b170-d696-4ee0-bded-ba787f90f430] succeeded in 0.5407520867884159s: None
+[2025-05-30 18:41:58,370: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[6767333f-cc01-442e-a639-fb68e15c27ca] received
+[2025-05-30 18:42:03,714: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[6767333f-cc01-442e-a639-fb68e15c27ca] succeeded in 0.22912510111927986s: None
+[2025-05-31 06:34:33,017: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[40818d9c-f54e-42c5-a206-2e1f693e67de] received
+[2025-05-31 06:34:38,663: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[40818d9c-f54e-42c5-a206-2e1f693e67de] succeeded in 0.5774687863886356s: None
+[2025-05-31 14:36:02,413: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[c961c4dc-8c57-434e-ab58-437502fb095b] received
+[2025-05-31 14:36:08,148: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[c961c4dc-8c57-434e-ab58-437502fb095b] succeeded in 0.6197617799043655s: None
+[2025-05-31 14:38:20,850: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[3167ee25-3ec9-4309-9f53-6cb9b1bc69e5] received
+[2025-05-31 14:38:26,159: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[3167ee25-3ec9-4309-9f53-6cb9b1bc69e5] succeeded in 0.24866094440221786s: None
+[2025-05-31 17:02:57,279: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[a8e9f19f-1516-4ad1-b31e-57f224c16f11] received
+[2025-05-31 17:03:02,917: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[a8e9f19f-1516-4ad1-b31e-57f224c16f11] succeeded in 0.5622850134968758s: None
+[2025-06-01 00:19:36,829: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[69e67f09-40db-4f91-b044-c1c056fe858c] received
+[2025-06-01 00:19:42,599: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[69e67f09-40db-4f91-b044-c1c056fe858c] succeeded in 0.6388397850096226s: None
+[2025-06-01 18:17:10,671: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[b33ba3ac-53c2-4f7d-8b62-83db2ea63ab1] received
+[2025-06-01 18:17:16,475: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[b33ba3ac-53c2-4f7d-8b62-83db2ea63ab1] succeeded in 0.7004972286522388s: None
+[2025-06-02 00:31:09,125: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[75db6f01-15d8-425e-883e-9e85ed703df5] received
+[2025-06-02 00:31:14,784: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[75db6f01-15d8-425e-883e-9e85ed703df5] succeeded in 0.5660736486315727s: None
+[2025-06-02 09:02:09,665: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[22f40552-76ac-406a-bbfa-d9e931202b9c] received
+[2025-06-02 09:02:15,502: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[22f40552-76ac-406a-bbfa-d9e931202b9c] succeeded in 0.7039484493434429s: None
+[2025-06-02 14:31:27,853: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[aaf0bc11-47cc-46d6-aea4-f70044beb9ed] received
+[2025-06-02 14:31:33,596: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[aaf0bc11-47cc-46d6-aea4-f70044beb9ed] succeeded in 0.622914370149374s: None
+[2025-06-02 16:08:31,261: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[80e9d5bf-195a-451b-816c-136bd3d237ff] received
+[2025-06-02 16:08:36,924: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[80e9d5bf-195a-451b-816c-136bd3d237ff] succeeded in 0.588765125721693s: None
+[2025-06-02 20:16:41,219: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[bfe6df81-1ccb-430c-b0cf-36b01b6b61b5] received
+[2025-06-02 20:16:47,060: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[bfe6df81-1ccb-430c-b0cf-36b01b6b61b5] succeeded in 0.725676354020834s: None
+[2025-06-03 04:35:34,918: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[8a2070ea-3ee5-4a1a-9810-2afff9b98e67] received
+[2025-06-03 04:35:40,572: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[8a2070ea-3ee5-4a1a-9810-2afff9b98e67] succeeded in 0.6026985831558704s: None
+[2025-06-03 04:44:29,017: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[647f9746-da2d-4240-b87e-26830b1ad1d7] received
+[2025-06-03 04:44:34,374: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[647f9746-da2d-4240-b87e-26830b1ad1d7] succeeded in 0.26267215982079506s: None
+[2025-06-03 04:48:01,708: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[8fba0777-b67b-409f-8bb5-c6451fd51539] received
+[2025-06-03 04:48:07,370: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[8fba0777-b67b-409f-8bb5-c6451fd51539] succeeded in 0.5742639563977718s: None
+[2025-06-03 04:48:46,179: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[a3918fda-d17e-4ff7-8b67-56ac602c8493] received
+[2025-06-03 04:48:51,436: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[a3918fda-d17e-4ff7-8b67-56ac602c8493] succeeded in 0.16395783424377441s: None
+[2025-06-04 00:23:43,020: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[88cd5480-9e8b-4520-be79-5071c87fd8ec] received
+[2025-06-04 00:23:48,722: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[88cd5480-9e8b-4520-be79-5071c87fd8ec] succeeded in 0.564991295337677s: None
+[2025-06-04 06:59:34,692: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[c8589828-ae0f-4349-a0bd-8fc36136aebe] received
+[2025-06-04 06:59:40,332: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[c8589828-ae0f-4349-a0bd-8fc36136aebe] succeeded in 0.5756603106856346s: None
+[2025-06-04 12:49:45,050: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[a4b0273d-6102-4084-87f0-cf45beb87518] received
+[2025-06-04 12:49:50,860: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[a4b0273d-6102-4084-87f0-cf45beb87518] succeeded in 0.6904046200215816s: None
+[2025-06-04 17:32:06,149: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[d4963b0e-faf9-474a-b63b-37fb19b0a9e9] received
+[2025-06-04 17:32:11,755: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[d4963b0e-faf9-474a-b63b-37fb19b0a9e9] succeeded in 0.5322742871940136s: None
+[2025-06-05 05:39:46,419: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[e4d3e509-1d8f-4d87-bf3b-8c7e5bcce563] received
+[2025-06-05 05:39:51,972: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[e4d3e509-1d8f-4d87-bf3b-8c7e5bcce563] succeeded in 0.4956478588283062s: None
+[2025-06-06 07:16:15,925: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[39860115-6fa7-4969-8370-91d393a52900] received
+[2025-06-06 07:16:21,691: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[39860115-6fa7-4969-8370-91d393a52900] succeeded in 0.6581420861184597s: None
+[2025-06-06 15:51:27,771: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[a5dbe327-ed70-4219-8636-5845740bf80c] received
+[2025-06-06 15:51:33,357: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[a5dbe327-ed70-4219-8636-5845740bf80c] succeeded in 0.5166537463665009s: None
+[2025-06-07 12:55:37,898: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[efb55036-de90-45c0-a8a9-213c6625eee3] received
+[2025-06-07 12:55:43,572: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[efb55036-de90-45c0-a8a9-213c6625eee3] succeeded in 0.6330233104526997s: None
+[2025-06-07 13:09:49,528: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[52c8ddf4-923a-440c-b54c-56c555eb1b44] received
+[2025-06-07 13:09:55,208: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[52c8ddf4-923a-440c-b54c-56c555eb1b44] succeeded in 0.5930195897817612s: None
+[2025-06-08 05:58:48,175: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[1ead809b-bac5-4a28-a0d7-85ced9825fe3] received
+[2025-06-08 05:58:54,001: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[1ead809b-bac5-4a28-a0d7-85ced9825fe3] succeeded in 0.7452727071940899s: None
+[2025-06-09 01:10:17,826: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[dd375788-e239-4a3d-b2ad-dae5e919be9f] received
+[2025-06-09 01:10:23,459: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[dd375788-e239-4a3d-b2ad-dae5e919be9f] succeeded in 0.5096066333353519s: None
+[2025-06-09 17:19:42,539: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[840243ca-edcb-46f5-b6f4-6a3b28d39943] received
+[2025-06-09 17:19:48,186: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[840243ca-edcb-46f5-b6f4-6a3b28d39943] succeeded in 0.5751142576336861s: None
+[2025-06-09 17:21:07,736: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[c44f5a31-1f0b-413e-adee-3a40c45de16e] received
+[2025-06-09 17:21:13,078: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[c44f5a31-1f0b-413e-adee-3a40c45de16e] succeeded in 0.19172575324773788s: None
+[2025-06-10 05:42:52,855: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[4c5973c8-0e35-470f-8fba-fc0cd047df5f] received
+[2025-06-10 05:42:58,349: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[4c5973c8-0e35-470f-8fba-fc0cd047df5f] succeeded in 0.5005964003503323s: None
+[2025-06-10 08:09:11,673: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[4923fc2c-f3da-46aa-ae35-5925ccd7d5e6] received
+[2025-06-10 08:09:17,358: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[4923fc2c-f3da-46aa-ae35-5925ccd7d5e6] succeeded in 0.5779711417853832s: None
+[2025-06-10 10:07:00,705: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[22a431ff-e5be-4e1f-8f49-545e5f988e73] received
+[2025-06-10 10:07:06,344: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[22a431ff-e5be-4e1f-8f49-545e5f988e73] succeeded in 0.5869730561971664s: None
+[2025-06-10 10:55:29,377: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[b2a21344-f012-40db-bfaf-961e82f34add] received
+[2025-06-10 10:55:35,114: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[b2a21344-f012-40db-bfaf-961e82f34add] succeeded in 0.6648276709020138s: None
+[2025-06-10 18:26:09,602: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[aeea6482-a63b-4cbb-9b5a-4e57e4878e48] received
+[2025-06-10 18:26:15,383: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[aeea6482-a63b-4cbb-9b5a-4e57e4878e48] succeeded in 0.6623908057808876s: None
+[2025-06-10 19:13:24,996: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[56d90ffe-da91-4aa2-868e-59c05a929848] received
+[2025-06-10 19:13:30,740: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[56d90ffe-da91-4aa2-868e-59c05a929848] succeeded in 0.5978337116539478s: None
+[2025-06-11 17:17:28,845: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[3da6a4bc-1fd4-45cc-b838-24e1f42bc4ce] received
+[2025-06-11 17:17:57,288: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[3da6a4bc-1fd4-45cc-b838-24e1f42bc4ce] succeeded in 23.35069551318884s: None
+[2025-06-11 18:44:00,793: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[65834986-d03b-4f08-8b74-477b99bd99be] received
+[2025-06-11 18:44:06,575: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[65834986-d03b-4f08-8b74-477b99bd99be] succeeded in 0.6652465872466564s: None
+[2025-06-12 05:40:19,162: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[6cad8bb1-6a9e-45b8-bbf6-91c9ea4ae2e7] received
+[2025-06-12 05:40:24,860: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[6cad8bb1-6a9e-45b8-bbf6-91c9ea4ae2e7] succeeded in 0.5244256593286991s: None
+[2025-06-12 07:23:30,720: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[a50dd878-495c-4085-95f6-9c53eacf7d95] received
+[2025-06-12 07:23:36,407: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[a50dd878-495c-4085-95f6-9c53eacf7d95] succeeded in 0.5531021617352962s: None
+[2025-06-13 00:01:26,786: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[23ba42ae-b248-4ce1-93d3-e601faa503de] received
+[2025-06-13 00:01:32,359: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[23ba42ae-b248-4ce1-93d3-e601faa503de] succeeded in 0.5294561423361301s: None
+[2025-06-13 14:46:34,007: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[77a0a390-271e-476e-be4f-530bdd521e5b] received
+[2025-06-13 14:46:39,672: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[77a0a390-271e-476e-be4f-530bdd521e5b] succeeded in 0.5973860360682011s: None
+[2025-06-14 03:58:26,556: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[aa18f9be-d357-45ce-9fac-a739f9b97c27] received
+[2025-06-14 03:58:32,263: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[aa18f9be-d357-45ce-9fac-a739f9b97c27] succeeded in 0.638149794191122s: None
+[2025-06-14 20:16:11,020: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[6d08eda8-ea5c-465e-a265-a2b386c8f49f] received
+[2025-06-14 20:16:16,802: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[6d08eda8-ea5c-465e-a265-a2b386c8f49f] succeeded in 0.6607601568102837s: None
+[2025-06-14 23:16:07,190: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[1f92c0fe-c242-4173-a99b-2222bd24c281] received
+[2025-06-14 23:16:12,882: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[1f92c0fe-c242-4173-a99b-2222bd24c281] succeeded in 0.6842508427798748s: None
+[2025-06-15 16:35:06,503: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[c70b1f15-2a69-417d-b08b-484104bb77a3] received
+[2025-06-15 16:35:12,348: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[c70b1f15-2a69-417d-b08b-484104bb77a3] succeeded in 0.7164077386260033s: None
+[2025-06-15 22:46:03,466: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[0e94d3fc-9aa2-4110-a340-fbb8d44fd2cd] received
+[2025-06-15 22:46:09,082: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[0e94d3fc-9aa2-4110-a340-fbb8d44fd2cd] succeeded in 0.5639814510941505s: None
+[2025-06-16 05:53:26,374: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[51187681-7ff9-4095-b3b0-00f08b74e270] received
+[2025-06-16 05:53:32,303: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[51187681-7ff9-4095-b3b0-00f08b74e270] succeeded in 0.7713616974651814s: None
+[2025-06-16 07:17:32,908: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[cf85cfad-49a1-4f93-b3be-b740aad3378b] received
+[2025-06-16 07:17:38,561: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[cf85cfad-49a1-4f93-b3be-b740aad3378b] succeeded in 0.5638174377381802s: None
+[2025-06-17 01:27:25,834: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[d99fbdc7-2081-48a8-bc5f-c8e92f1de24e] received
+[2025-06-17 01:27:31,576: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[d99fbdc7-2081-48a8-bc5f-c8e92f1de24e] succeeded in 0.5550769679248333s: None
+[2025-06-17 02:33:54,622: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[d866dd46-7078-4414-bc78-434cc5184c0f] received
+[2025-06-17 02:34:00,257: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[d866dd46-7078-4414-bc78-434cc5184c0f] succeeded in 0.5617468245327473s: None
+[2025-06-17 04:15:29,613: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[76a6bad4-7ea6-4df5-a5e9-c9728fff0663] received
+[2025-06-17 04:15:35,319: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[76a6bad4-7ea6-4df5-a5e9-c9728fff0663] succeeded in 0.6185716316103935s: None
+[2025-06-18 03:24:51,858: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[31a644b9-7c36-4cc7-81fa-6cce1a81f8ae] received
+[2025-06-18 03:24:57,478: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[31a644b9-7c36-4cc7-81fa-6cce1a81f8ae] succeeded in 0.5359306707978249s: None
+[2025-06-18 06:26:15,087: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[d5343f18-79d8-4ff8-987c-89ea330d3e6c] received
+[2025-06-18 06:26:20,760: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[d5343f18-79d8-4ff8-987c-89ea330d3e6c] succeeded in 0.5937267430126667s: None
+[2025-06-18 18:23:15,561: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[18565a58-9063-4de2-b473-c901e8717f58] received
+[2025-06-18 18:23:21,349: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[18565a58-9063-4de2-b473-c901e8717f58] succeeded in 0.6758401989936829s: None
+[2025-06-18 18:25:34,285: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[cf08bf23-8f11-4304-a99e-1244b89fd8fb] received
+[2025-06-18 18:25:39,657: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[cf08bf23-8f11-4304-a99e-1244b89fd8fb] succeeded in 0.2779214233160019s: None
+[2025-06-18 18:27:35,134: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[77455990-2b8d-4467-ae1b-392e2a006dd6] received
+[2025-06-18 18:27:40,463: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[77455990-2b8d-4467-ae1b-392e2a006dd6] succeeded in 0.19137824699282646s: None
+[2025-06-19 04:46:39,680: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[6488015d-6db9-45f8-a1ab-a9e1c7dbb271] received
+[2025-06-19 04:46:45,590: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[6488015d-6db9-45f8-a1ab-a9e1c7dbb271] succeeded in 0.8153187371790409s: None
+[2025-06-19 11:07:54,683: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[db1ccc10-6deb-4ee5-a57f-d2b1a1f21769] received
+[2025-06-19 11:08:00,418: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[db1ccc10-6deb-4ee5-a57f-d2b1a1f21769] succeeded in 0.6069886609911919s: None
+[2025-06-19 11:09:44,844: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[44f14033-0cfa-40f9-8632-93796595018c] received
+[2025-06-19 11:09:50,039: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[44f14033-0cfa-40f9-8632-93796595018c] succeeded in 0.18248418346047401s: None
+[2025-06-20 08:11:45,923: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[80f35bbf-f0d1-4cd1-b1d0-2840145e7b6b] received
+[2025-06-20 08:11:51,768: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[80f35bbf-f0d1-4cd1-b1d0-2840145e7b6b] succeeded in 0.7020818702876568s: None
+[2025-06-20 11:30:03,168: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[08396487-3e52-4500-b11a-8c944b28430a] received
+[2025-06-20 11:30:08,806: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[08396487-3e52-4500-b11a-8c944b28430a] succeeded in 0.5616498813033104s: None
+[2025-06-20 12:44:30,035: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[757e6438-e99b-40fc-a496-ce8f5a0577bb] received
+[2025-06-20 12:44:35,857: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[757e6438-e99b-40fc-a496-ce8f5a0577bb] succeeded in 0.6996963769197464s: None
+[2025-06-20 15:57:57,138: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[8dd87768-aaf0-4990-9a43-ae951af70d99] received
+[2025-06-20 15:58:02,944: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[8dd87768-aaf0-4990-9a43-ae951af70d99] succeeded in 0.7897164523601532s: None
+[2025-06-21 03:41:08,347: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[ebc5dfc1-88a2-4e20-a929-23af1863c179] received
+[2025-06-21 03:41:13,963: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[ebc5dfc1-88a2-4e20-a929-23af1863c179] succeeded in 0.5640358626842499s: None
+[2025-06-21 07:03:13,841: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[fedf04f8-0213-4ed7-956f-3140fe14e2d5] received
+[2025-06-21 07:03:19,533: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[fedf04f8-0213-4ed7-956f-3140fe14e2d5] succeeded in 0.5733556784689426s: None
+[2025-06-21 10:45:40,059: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[f5cb78d8-78c9-47df-8abf-ada5c48b3120] received
+[2025-06-21 10:45:45,933: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[f5cb78d8-78c9-47df-8abf-ada5c48b3120] succeeded in 0.763951025903225s: None
+[2025-06-22 11:42:34,917: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[b9c75c0b-cfd7-4fa2-a845-bdc9967360cf] received
+[2025-06-22 11:42:40,625: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[b9c75c0b-cfd7-4fa2-a845-bdc9967360cf] succeeded in 0.6010529771447182s: None
+[2025-06-22 18:28:03,279: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[a6a7a611-34e8-4b91-ad75-5f2a163593ff] received
+[2025-06-22 18:28:09,112: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[a6a7a611-34e8-4b91-ad75-5f2a163593ff] succeeded in 0.6840919964015484s: None
+[2025-06-23 09:00:06,826: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[7fdd8f8f-74f0-46ac-9ed1-f848d6fbe722] received
+[2025-06-23 09:00:12,410: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[7fdd8f8f-74f0-46ac-9ed1-f848d6fbe722] succeeded in 0.5208961144089699s: None
+[2025-06-23 11:22:56,874: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[4be3684a-1ae6-4b28-8615-d51a149f1771] received
+[2025-06-23 11:23:02,590: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[4be3684a-1ae6-4b28-8615-d51a149f1771] succeeded in 0.5758322402834892s: None
+[2025-06-23 14:35:21,304: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[34746a91-f5b1-4ebb-a20f-42ed51bfdcf2] received
+[2025-06-23 14:35:27,145: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[34746a91-f5b1-4ebb-a20f-42ed51bfdcf2] succeeded in 0.7150067277252674s: None
+[2025-06-23 18:13:49,235: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[8b543e99-d6b7-41d0-b697-589999c43be1] received
+[2025-06-23 18:13:54,953: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[8b543e99-d6b7-41d0-b697-589999c43be1] succeeded in 0.5910266600549221s: None
+[2025-06-24 18:24:43,929: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[6a60d122-bf8d-4289-92e1-dcac5ba27734] received
+[2025-06-24 18:24:49,547: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[6a60d122-bf8d-4289-92e1-dcac5ba27734] succeeded in 0.5553386062383652s: None
+[2025-06-24 21:06:30,891: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[a3b0715f-a0a1-4d2c-9f4a-d6def10f2d23] received
+[2025-06-24 21:06:36,672: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[a3b0715f-a0a1-4d2c-9f4a-d6def10f2d23] succeeded in 0.7932665422558784s: None
+[2025-06-25 08:30:36,782: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[5f51cdd1-3bbc-455e-8f10-bbb57b9a6a71] received
+[2025-06-25 08:30:42,513: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[5f51cdd1-3bbc-455e-8f10-bbb57b9a6a71] succeeded in 0.7119470275938511s: None
+[2025-06-25 15:39:23,540: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[e376aee6-38ad-4885-8dd8-55457507bb95] received
+[2025-06-25 15:39:29,244: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[e376aee6-38ad-4885-8dd8-55457507bb95] succeeded in 0.6415470652282238s: None
+[2025-06-25 21:17:03,699: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[a0f9d158-7651-4065-bd3a-d56e14e5fc4f] received
+[2025-06-25 21:17:09,247: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[a0f9d158-7651-4065-bd3a-d56e14e5fc4f] succeeded in 0.4969975911080837s: None
+[2025-06-25 22:15:41,868: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[2bd7c40f-be64-4ad7-9ee9-878d78cb26d1] received
+[2025-06-25 22:15:47,620: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[2bd7c40f-be64-4ad7-9ee9-878d78cb26d1] succeeded in 0.5846896469593048s: None
+[2025-06-26 07:06:38,710: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[8790d25c-8fab-487d-a94d-8ae2786d28c9] received
+[2025-06-26 07:06:45,435: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[8790d25c-8fab-487d-a94d-8ae2786d28c9] succeeded in 1.6179433278739452s: None
+[2025-06-26 10:37:59,040: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[22c4336b-409c-4f35-a0d0-191ccb85da00] received
+[2025-06-26 10:38:04,854: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[22c4336b-409c-4f35-a0d0-191ccb85da00] succeeded in 0.6771586164832115s: None
+[2025-06-26 12:59:19,116: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[7f5662e0-c7a8-4159-ae80-eea94d47b68c] received
+[2025-06-26 12:59:24,853: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[7f5662e0-c7a8-4159-ae80-eea94d47b68c] succeeded in 0.6687622927129269s: None
+[2025-06-26 18:30:11,292: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[d17b4267-ac73-416f-b2aa-e57b3a370e86] received
+[2025-06-26 18:30:16,940: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[d17b4267-ac73-416f-b2aa-e57b3a370e86] succeeded in 0.5721290335059166s: None
+[2025-06-27 10:02:22,989: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[3ee7e612-f633-4f9c-a0d5-c875c1547c04] received
+[2025-06-27 10:02:28,712: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[3ee7e612-f633-4f9c-a0d5-c875c1547c04] succeeded in 0.5777485333383083s: None
+[2025-06-27 17:13:27,783: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[72fb5856-6a94-4a2b-80d9-3c5e5d292d99] received
+[2025-06-27 17:13:33,381: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[72fb5856-6a94-4a2b-80d9-3c5e5d292d99] succeeded in 0.5572464093565941s: None
+[2025-06-28 18:13:25,168: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[8b975364-eb3c-412b-b043-e7a2a262ace5] received
+[2025-06-28 18:13:30,977: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[8b975364-eb3c-412b-b043-e7a2a262ace5] succeeded in 0.6161640509963036s: None
+[2025-06-29 00:10:32,585: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[200ce9ce-c056-439c-b020-a1e00b625238] received
+[2025-06-29 00:10:38,265: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[200ce9ce-c056-439c-b020-a1e00b625238] succeeded in 0.5257831141352654s: None
+[2025-06-29 02:31:12,303: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[099e1f16-9a41-44da-ac27-956eca29c8f3] received
+[2025-06-29 02:31:17,907: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[099e1f16-9a41-44da-ac27-956eca29c8f3] succeeded in 0.534123856574297s: None
+[2025-06-29 06:11:03,418: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[09b7bd41-abc4-4ade-94f0-e6bf89e6e561] received
+[2025-06-29 06:11:09,081: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[09b7bd41-abc4-4ade-94f0-e6bf89e6e561] succeeded in 0.5866232104599476s: None
+[2025-06-29 19:32:49,180: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[1b9f7faf-b0e7-4f97-827e-d9fc237c3adb] received
+[2025-06-29 19:32:54,815: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[1b9f7faf-b0e7-4f97-827e-d9fc237c3adb] succeeded in 0.5326663851737976s: None
+[2025-06-30 10:04:05,454: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[7662b13b-f9a3-4d39-8c28-0152544b9d6c] received
+[2025-06-30 10:04:11,266: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[7662b13b-f9a3-4d39-8c28-0152544b9d6c] succeeded in 0.6750198975205421s: None
+[2025-06-30 11:09:20,498: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[724b391f-b7ca-4d60-be75-6360477487b8] received
+[2025-06-30 11:09:26,113: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[724b391f-b7ca-4d60-be75-6360477487b8] succeeded in 0.5989831648766994s: None
+[2025-07-01 05:25:05,526: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[374dc54a-1135-46b6-aa4d-f5009debdd8d] received
+[2025-07-01 05:25:11,136: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[374dc54a-1135-46b6-aa4d-f5009debdd8d] succeeded in 0.5187122114002705s: None
+[2025-07-01 10:31:53,026: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[b30bdda6-4710-42c1-b46c-a45064c05a95] received
+[2025-07-01 10:31:58,803: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[b30bdda6-4710-42c1-b46c-a45064c05a95] succeeded in 0.6921578757464886s: None
+[2025-07-02 05:37:38,308: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[2050b969-626a-4ed9-8f54-92f534fea6eb] received
+[2025-07-02 05:37:43,920: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[2050b969-626a-4ed9-8f54-92f534fea6eb] succeeded in 0.5469429567456245s: None
+[2025-07-02 11:01:54,208: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[adb7b3b4-ca83-4659-a334-bfd37245158f] received
+[2025-07-02 11:01:59,888: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[adb7b3b4-ca83-4659-a334-bfd37245158f] succeeded in 0.6050893142819405s: None
+[2025-07-02 12:32:27,320: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[611911d3-6169-460b-9302-d0780da55416] received
+[2025-07-02 12:32:32,902: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[611911d3-6169-460b-9302-d0780da55416] succeeded in 0.5302548035979271s: None
+[2025-07-03 19:32:32,473: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[169e9990-5888-4f4b-b143-094dad579114] received
+[2025-07-03 19:32:38,254: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[169e9990-5888-4f4b-b143-094dad579114] succeeded in 0.6858060993254185s: None
+[2025-07-03 20:50:45,415: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[39cf22f5-1496-455c-8147-c0d7bb4791a4] received
+[2025-07-03 20:50:51,256: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[39cf22f5-1496-455c-8147-c0d7bb4791a4] succeeded in 0.6941222362220287s: None
+[2025-07-04 15:08:26,605: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[6374d6c6-c9d7-44a7-92af-64d71554c69f] received
+[2025-07-04 15:08:32,359: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[6374d6c6-c9d7-44a7-92af-64d71554c69f] succeeded in 0.6511196754872799s: None
+[2025-07-04 15:12:52,389: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[53fc4732-efe3-4d0b-925b-7ee05f2d945f] received
+[2025-07-04 15:12:57,654: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[53fc4732-efe3-4d0b-925b-7ee05f2d945f] succeeded in 0.21504076942801476s: None
+[2025-07-04 15:14:50,878: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[27785e64-d9dc-40b5-ada4-20dd1a3c3f21] received
+[2025-07-04 15:14:56,224: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[27785e64-d9dc-40b5-ada4-20dd1a3c3f21] succeeded in 0.22544266283512115s: None
+[2025-07-04 19:22:33,029: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[2a8c9652-825a-4539-aa1b-767771d8168c] received
+[2025-07-04 19:22:38,785: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[2a8c9652-825a-4539-aa1b-767771d8168c] succeeded in 0.5917992405593395s: None
+[2025-07-04 20:39:05,267: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[eacadc55-89ac-4641-b227-4b46ab5544ff] received
+[2025-07-04 20:39:11,013: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[eacadc55-89ac-4641-b227-4b46ab5544ff] succeeded in 0.6385629586875439s: None
+[2025-07-04 23:17:20,891: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[004dc9e7-74e3-4254-a661-f034f95e9ecc] received
+[2025-07-04 23:17:26,507: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[004dc9e7-74e3-4254-a661-f034f95e9ecc] succeeded in 0.5377437509596348s: None
+[2025-07-06 11:43:00,822: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[076776ed-0dcd-41cc-911a-c4da5f4149ee] received
+[2025-07-06 11:43:06,386: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[076776ed-0dcd-41cc-911a-c4da5f4149ee] succeeded in 0.5011965818703175s: None
+[2025-07-06 14:09:54,848: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[af601955-b649-4fa5-8124-c767e534912e] received
+[2025-07-06 14:10:00,579: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[af601955-b649-4fa5-8124-c767e534912e] succeeded in 0.666570108383894s: None
+[2025-07-07 17:14:04,393: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[e670ea9e-6e85-4a5c-a9d3-1a0b1915d30d] received
+[2025-07-07 17:14:10,020: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[e670ea9e-6e85-4a5c-a9d3-1a0b1915d30d] succeeded in 0.5498913563787937s: None
+[2025-07-07 17:17:24,988: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[58c3c8ea-bc7d-41c6-82fd-2c168c93d758] received
+[2025-07-07 17:17:30,271: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[58c3c8ea-bc7d-41c6-82fd-2c168c93d758] succeeded in 0.20483534410595894s: None
+[2025-07-07 17:23:35,442: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[fccba322-e407-4a6c-9f32-e5171f70540e] received
+[2025-07-07 17:23:40,854: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[fccba322-e407-4a6c-9f32-e5171f70540e] succeeded in 0.270814698189497s: None
+[2025-07-08 20:16:08,812: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[78e73f6a-1101-4f7d-b0d2-227a23d1de03] received
+[2025-07-08 20:16:14,429: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[78e73f6a-1101-4f7d-b0d2-227a23d1de03] succeeded in 0.5920968651771545s: None
+[2025-07-08 23:51:14,139: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[a9f1e39c-dd5a-4004-a598-c183168a5edf] received
+[2025-07-08 23:51:19,791: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[a9f1e39c-dd5a-4004-a598-c183168a5edf] succeeded in 0.6345979496836662s: None
+[2025-07-09 06:01:32,853: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[a32c48be-4a21-43aa-8e45-24ba8ee44510] received
+[2025-07-09 06:01:38,567: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[a32c48be-4a21-43aa-8e45-24ba8ee44510] succeeded in 0.5805694982409477s: None
+[2025-07-10 00:21:21,653: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[45dd51a3-03d6-4f4b-ac9a-44975822ed79] received
+[2025-07-10 00:21:27,367: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[45dd51a3-03d6-4f4b-ac9a-44975822ed79] succeeded in 0.5940640904009342s: None
+[2025-07-10 00:54:31,463: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[17d348a3-917e-484a-9f04-af91931ff782] received
+[2025-07-10 00:54:37,063: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[17d348a3-917e-484a-9f04-af91931ff782] succeeded in 0.49749990180134773s: None
+[2025-07-10 13:14:01,857: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[5da7713c-85e1-4e7f-99ef-8f23816a8c05] received
+[2025-07-10 13:14:07,611: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[5da7713c-85e1-4e7f-99ef-8f23816a8c05] succeeded in 0.6725580394268036s: None
+[2025-07-10 16:29:09,105: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[bc0d5095-9e46-4fd6-a205-c9e9b904d065] received
+[2025-07-10 16:29:14,797: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[bc0d5095-9e46-4fd6-a205-c9e9b904d065] succeeded in 0.6353325322270393s: None
+[2025-07-11 18:47:31,709: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[1cfb2f18-4d7a-460a-8a5b-881348b45f28] received
+[2025-07-11 18:47:37,425: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[1cfb2f18-4d7a-460a-8a5b-881348b45f28] succeeded in 0.6422332525253296s: None
+[2025-07-11 18:49:09,977: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[86175d7c-87e9-42bb-84ff-45c8ea5f2f44] received
+[2025-07-11 18:49:15,235: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[86175d7c-87e9-42bb-84ff-45c8ea5f2f44] succeeded in 0.17806262150406837s: None
+[2025-07-11 18:54:00,730: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[737fd36d-f693-4101-a984-eaa2e9c35104] received
+[2025-07-11 18:54:06,066: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[737fd36d-f693-4101-a984-eaa2e9c35104] succeeded in 0.21725047007203102s: None
+[2025-07-12 08:02:21,770: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[b45f8d37-c1e1-4cbf-92d1-21d8d59c675a] received
+[2025-07-12 08:02:27,812: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[b45f8d37-c1e1-4cbf-92d1-21d8d59c675a] succeeded in 0.8842007331550121s: None
+[2025-07-13 01:25:44,014: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[76cee8d6-831b-44a2-9f94-84d89fcb6605] received
+[2025-07-13 01:26:03,352: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[76cee8d6-831b-44a2-9f94-84d89fcb6605] succeeded in 14.23469352722168s: None
+[2025-07-13 02:49:32,903: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[3d22f448-274a-4775-88c6-d6c5fbe751ad] received
+[2025-07-13 02:49:38,604: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[3d22f448-274a-4775-88c6-d6c5fbe751ad] succeeded in 0.5595174320042133s: None
+[2025-07-13 06:45:40,858: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[4038a3fa-0b85-4e3f-a26e-62aaeda93591] received
+[2025-07-13 06:45:46,489: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[4038a3fa-0b85-4e3f-a26e-62aaeda93591] succeeded in 0.5279705710709095s: None
+[2025-07-13 07:01:05,325: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[f3dcd71a-e4ce-4817-9e22-ae0d9cfa5ccb] received
+[2025-07-13 07:01:10,998: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[f3dcd71a-e4ce-4817-9e22-ae0d9cfa5ccb] succeeded in 0.59821567684412s: None
+[2025-07-13 09:47:25,706: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[735f92c3-f68b-4c12-8f95-d37166c6bc1d] received
+[2025-07-13 09:47:31,427: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[735f92c3-f68b-4c12-8f95-d37166c6bc1d] succeeded in 0.596992988139391s: None
+[2025-07-13 13:32:18,686: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[3135faf2-0266-461d-bd59-11837e41fcf5] received
+[2025-07-13 13:32:24,321: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[3135faf2-0266-461d-bd59-11837e41fcf5] succeeded in 0.5382288470864296s: None
+[2025-07-13 22:56:43,276: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[ea66892c-7bd6-4c9f-b238-22de81076e24] received
+[2025-07-13 22:56:50,168: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[ea66892c-7bd6-4c9f-b238-22de81076e24] succeeded in 1.769749391824007s: None
+[2025-07-14 14:23:54,182: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[a9b311f5-affa-46a7-ab58-5c27769e7fe6] received
+[2025-07-14 14:24:00,313: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[a9b311f5-affa-46a7-ab58-5c27769e7fe6] succeeded in 1.0020857192575932s: None
+[2025-07-14 14:25:25,682: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[89fc563f-7c0a-4ae0-8d0f-96a340d8e100] received
+[2025-07-14 14:25:31,004: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[89fc563f-7c0a-4ae0-8d0f-96a340d8e100] succeeded in 0.18971237540245056s: None
+[2025-07-14 17:22:11,001: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[f8a605bb-943c-4a65-8018-e132f494e93e] received
+[2025-07-14 17:22:16,799: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[f8a605bb-943c-4a65-8018-e132f494e93e] succeeded in 0.6530212573707104s: None
+[2025-07-14 21:06:29,546: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[b6972bae-7445-4b27-a050-68d72de565db] received
+[2025-07-14 21:06:35,225: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[b6972bae-7445-4b27-a050-68d72de565db] succeeded in 0.6138645634055138s: None
+[2025-07-15 08:44:26,107: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[e9ab81cd-8fff-40aa-96e6-270b48f66058] received
+[2025-07-15 08:44:31,683: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[e9ab81cd-8fff-40aa-96e6-270b48f66058] succeeded in 0.5040416680276394s: None
+[2025-07-15 17:21:32,347: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[0a592fb8-8312-4663-8eed-af5a5ee9628c] received
+[2025-07-15 17:21:37,989: INFO/ForkPoolWorker-1] Task app_site.tasks.send_to_telegrambot[0a592fb8-8312-4663-8eed-af5a5ee9628c] succeeded in 0.5791171565651894s: None
+[2025-07-16 08:45:34,830: INFO/MainProcess] Task app_site.tasks.send_to_telegrambot[2486e52b-f144-41c7-a115-2be4b57bf7cb] received
+[2025-07-16 09:17:10,853: WARNING/MainProcess] --- Logging error ---
+[2025-07-16 09:17:12,978: WARNING/MainProcess] Traceback (most recent call last):
+[2025-07-16 09:17:13,990: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/billiard/pool.py", line 684, in on_hard_timeout
+    raise TimeLimitExceeded(job._timeout)
+[2025-07-16 09:17:14,979: WARNING/MainProcess] billiard.exceptions.TimeLimitExceeded: TimeLimitExceeded(1800,)
+[2025-07-16 09:17:14,979: WARNING/MainProcess] 
+During handling of the above exception, another exception occurred:
+[2025-07-16 09:17:14,980: WARNING/MainProcess] Traceback (most recent call last):
+[2025-07-16 09:17:23,749: WARNING/MainProcess]   File "/usr/lib/python3.11/logging/__init__.py", line 1110, in emit
+    msg = self.format(record)
+          ^^^^^^^^^^^^^^^^^^^
+[2025-07-16 09:17:23,750: WARNING/MainProcess]   File "/usr/lib/python3.11/logging/__init__.py", line 953, in format
+    return fmt.format(record)
+           ^^^^^^^^^^^^^^^^^^
+[2025-07-16 09:17:24,584: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/utils/log.py", line 146, in format
+    msg = super().format(record)
+          ^^^^^^^^^^^^^^^^^^^^^^
+[2025-07-16 09:17:24,584: WARNING/MainProcess]   File "/usr/lib/python3.11/logging/__init__.py", line 695, in format
+    record.exc_text = self.formatException(record.exc_info)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-07-16 09:17:24,585: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/utils/log.py", line 142, in formatException
+    r = super().formatException(ei)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-07-16 09:17:24,585: WARNING/MainProcess]   File "/usr/lib/python3.11/logging/__init__.py", line 645, in formatException
+    traceback.print_exception(ei[0], ei[1], tb, None, sio)
+[2025-07-16 09:17:24,601: WARNING/MainProcess]   File "/usr/lib/python3.11/traceback.py", line 124, in print_exception
+    te = TracebackException(type(value), value, tb, limit=limit, compact=True)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-07-16 09:17:25,983: WARNING/MainProcess]   File "/usr/lib/python3.11/traceback.py", line 690, in __init__
+    self.stack = StackSummary._extract_from_extended_frame_gen(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-07-16 09:17:25,983: WARNING/MainProcess]   File "/usr/lib/python3.11/traceback.py", line 416, in _extract_from_extended_frame_gen
+    for f, (lineno, end_lineno, colno, end_colno) in frame_gen:
+[2025-07-16 09:17:25,983: WARNING/MainProcess]   File "/usr/lib/python3.11/traceback.py", line 353, in _walk_tb_with_full_positions
+    positions = _get_code_position(tb.tb_frame.f_code, tb.tb_lasti)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-07-16 09:17:27,013: WARNING/MainProcess]   File "/usr/lib/python3.11/traceback.py", line 366, in _get_code_position
+    positions_gen = code.co_positions()
+                    ^^^^^^^^^^^^^^^^^
+[2025-07-16 09:17:27,014: WARNING/MainProcess] AttributeError: '_Code' object has no attribute 'co_positions'
+[2025-07-16 09:17:27,014: WARNING/MainProcess] Call stack:
+[2025-07-16 09:17:37,919: WARNING/MainProcess]   File "/home/alprostov/venv/bin/celery", line 8, in <module>
+    sys.exit(main())
+[2025-07-16 09:17:38,979: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/__main__.py", line 15, in main
+    sys.exit(_main())
+[2025-07-16 09:17:38,979: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/bin/celery.py", line 217, in main
+    return celery(auto_envvar_prefix="CELERY")
+[2025-07-16 09:17:38,979: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/click/core.py", line 1130, in __call__
+    return self.main(*args, **kwargs)
+[2025-07-16 09:17:38,979: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/click/core.py", line 1055, in main
+    rv = self.invoke(ctx)
+[2025-07-16 09:17:38,979: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/click/core.py", line 1657, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+[2025-07-16 09:17:38,980: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/click/core.py", line 1404, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+[2025-07-16 09:17:38,980: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/click/core.py", line 760, in invoke
+    return __callback(*args, **kwargs)
+[2025-07-16 09:17:38,980: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/click/decorators.py", line 26, in new_func
+    return f(get_current_context(), *args, **kwargs)
+[2025-07-16 09:17:40,041: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/bin/base.py", line 134, in caller
+    return f(ctx, *args, **kwargs)
+[2025-07-16 09:17:40,042: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/bin/worker.py", line 351, in worker
+    worker.start()
+[2025-07-16 09:17:40,042: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/worker/worker.py", line 203, in start
+    self.blueprint.start(self)
+[2025-07-16 09:17:40,690: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/bootsteps.py", line 116, in start
+    step.start(parent)
+[2025-07-16 09:17:42,014: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/bootsteps.py", line 365, in start
+    return self.obj.start()
+[2025-07-16 09:17:42,015: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/worker/consumer/consumer.py", line 332, in start
+    blueprint.start(self)
+[2025-07-16 09:17:42,015: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/bootsteps.py", line 116, in start
+    step.start(parent)
+[2025-07-16 09:17:42,016: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/worker/consumer/consumer.py", line 628, in start
+    c.loop(*c.loop_args())
+[2025-07-16 09:17:42,016: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/worker/loops.py", line 97, in asynloop
+    next(loop)
+[2025-07-16 09:17:42,016: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/kombu/asynchronous/hub.py", line 301, in create_loop
+    poll_timeout = fire_timers(propagate=propagate) if scheduled else 1
+[2025-07-16 09:17:43,024: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/kombu/asynchronous/hub.py", line 143, in fire_timers
+    entry()
+[2025-07-16 09:17:43,024: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/kombu/asynchronous/timer.py", line 64, in __call__
+    return self.fun(*self.args, **self.kwargs)
+[2025-07-16 09:17:43,025: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/concurrency/asynpool.py", line 588, in _on_hard_timeout
+    self.on_hard_timeout(result)
+[2025-07-16 09:17:43,025: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/billiard/pool.py", line 686, in on_hard_timeout
+    job._set(job._job, (False, ExceptionInfo()))
+[2025-07-16 09:17:43,025: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/billiard/pool.py", line 1828, in _set
+    self.safe_apply_callback(
+[2025-07-16 09:17:43,025: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/billiard/pool.py", line 1796, in safe_apply_callback
+    fun(*args, **kwargs)
+[2025-07-16 09:17:44,036: WARNING/MainProcess]   File "/home/alprostov/venv/lib/python3.11/site-packages/celery/worker/request.py", line 596, in on_failure
+    error('Task handler raised error: %r', exc,
+[2025-07-16 09:17:44,037: WARNING/MainProcess] Message: 'Task handler raised error: %r'
+Arguments: (TimeLimitExceeded(1800),)
+[2025-07-16 09:17:48,635: ERROR/MainProcess] Hard time limit (1800s) exceeded for app_site.tasks.send_to_telegrambot[2486e52b-f144-41c7-a115-2be4b57bf7cb]
+[2025-07-16 09:18:06,969: ERROR/MainProcess] Process 'ForkPoolWorker-1' pid:2325701 exited with 'signal 9 (SIGKILL)'

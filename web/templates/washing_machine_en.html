@@ -1,0 +1,35 @@
+{% extends 'flatpages/common_blank.html' %}
+
+{% load static %}
+
+
+{% block title %}Washing machine repair{% endblock title %}
+
+{% block content %}Washing machine repair{% endblock content %}
+
+{% block facebookcontent %}Washing machine repair in Tbilisi{% endblock facebookcontent %}
+
+{% block facebookdescription %}All types of washing machine and dryer repairs in Tbilisi{% endblock facebookdescription %}
+
+
+{% block button %}Order washing machine repair{% endblock button %}
+{% block body %}
+
+<h2 class="mt-0">Washing machine repair</h2>
+<p>We also repair washing machines and dryers: drum replacement, electrical board repair,
+    seal and gasket replacement, drain and pump cleaning, heating element replacement
+    and much more. We perform diagnostics, repair or replacement of necessary parts without
+    the need to transport the equipment to a service center.
+</p>
+<h3>Photos of washing machine repairs<h3>
+<img src="{% static 'images/remontstiralnihmashine.jpeg' %}" alt="Washing machine drain" width="200" >
+<img src="{% static 'images/remontstiralok.jpeg' %}" alt="Bosch washing machine" width="200">
+<img src="{% static 'images/washingmachine2.jpeg' %}" alt="Washing machine drum" width="200">
+<img src="{% static 'images/washingmachinerepair.jpeg' %}" alt="Washing machine repaiПлата стиральной машиныr" width="200">
+<img src="{% static 'images/washingmachine1.jpeg' %}" alt="Washing machine electricity board" width="200">
+
+<h3>Submit a request for washing machine repair</h3>
+<a class="btn border-danger mycolor mr-1 ml-1 w-100" href="{% url 'createorder'%}">
+Order repair
+    </a>
+{% endblock body %}

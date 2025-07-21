@@ -14,7 +14,7 @@ CITY_CHOICES = [
     ('TB', 'Tbilisi'),
     ('BT', 'Batumi'),
     ('GD', 'Gudaury'),
-    ('RS', 'Rustaveli'),
+    ('RS', 'Rustavi'),
 ]
 
 CITY_CHOICES_INVOICE = {

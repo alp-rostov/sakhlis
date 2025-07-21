@@ -1,0 +1,32 @@
+{% extends 'flatpages/common_blank.html' %}
+
+{% load static %}
+
+
+{% block title %}Dishwasher repair{% endblock title %}
+
+{% block content %}Dishwasher repair in Tbilisi{% endblock content %}
+
+{% block facebookcontent %}Dishwasher repair in Tbilisi{% endblock facebookcontent %}
+
+{% block facebookdescription %}All types of dishwasher repair in Tbilisi{% endblock facebookdescription %}
+
+
+{% block button %}Order dishwasher repair{% endblock button %}
+
+{% block body %}
+
+<h2 class="mt-0">Dishwasher repair</h2>
+<p>Fast and efficient repair of household and industrial dishwashers in Tbilisi.
+Elimination of leaks, repair and replacement of electrical boards, maintenance and connection to the water supply system.
+</p>
+
+<h3>Photos of dishwasher repairs<h3>
+<img src="{% static 'images/dishwasher1.jpeg' %}" alt="Dishwasher repair" width="200" >
+<img src="{% static 'images/dishwasher2.jpeg' %}" alt="Dishwasher repair Bosch" width="200">
+<img src="{% static 'images/dishwasher3.jpeg' %}" alt="Dishwasher repair Midea" width="320">
+
+<h3>Submit a request for dishwasher repair</h3>
+<a class="btn border-danger mycolor mr-1 ml-1 w-100" href="{% url 'createorder_en'%}">
+ Order repair</a>
+{% endblock body %}

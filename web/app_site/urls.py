@@ -13,13 +13,14 @@ urlpatterns = [
     path('createorder_en', OrderCreate.as_view(template_name='createorder_en.html'), name='createorder_en'),
     path('createorder_ge', OrderCreate.as_view(template_name='createorder_ge.html'), name='createorder_ge'),
 
-    path('repairwashingmachine',
-         TemplateView.as_view(template_name='washing_machine.html'),
+    path('repairwashingmachine', TemplateView.as_view(template_name='washing_machine.html'),
          name='repairwashingmachine'),
-
-    path('dishwasher',
-         TemplateView.as_view(template_name='dishwasher.html'),
+    path('dishwasher', TemplateView.as_view(template_name='dishwasher.html'),
          name='dishwasher'),
+    path('repairwashingmachine_en', TemplateView.as_view(template_name='washing_machine_en.html'),
+         name='repairwashingmachine_en'),
+    path('dishwasher_en', TemplateView.as_view(template_name='dishwasher_en.html'),
+         name='dishwasher_en'),
 
     path('list_order', OrderManagementSystem.as_view(), name='list_order'),
     # path('street', OrdersOnTheStreet.as_view(), name='aaa'),
