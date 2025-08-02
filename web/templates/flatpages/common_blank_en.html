@@ -1,0 +1,111 @@
+{% load static %}
+{% load slippers %}
+
+<!DOCTYPE html><html lang="ru" ><head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- Fav Icon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>{% block title %} {% endblock title %}  | Repair service in Tbilisi</title>
+    <meta name="description" content="{% block content %} {% endblock content %}">
+    <!-- Facebook -->
+    <meta property="og:title" content="{% block facebookcontent %} {% endblock facebookcontent %}">
+	<meta property="og:description" content="{% block facebookdescription %} {% endblock facebookdescription %}">
+	<meta property="og:image" content="images/master-na-chas.jpg">
+	<meta property="og:image:width" content>
+	<meta property="og:image:height" content>
+	<meta property="og:site_name" content>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'fonts' %}/font-awesome/css/font-awesome.min.css">
+    <!-- Owl Carusel -->
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <!-- Custom Stylesheets -->
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+</head>
+
+<body id="top">
+<!--Header-->
+{% #menu_lg_createorder line='border_line_orange' uuid_=qruuid %}
+<li class="nav-item mr-3 active">
+    <a class="nav-link" href="{% url 'home' %}"><b>Main </b><span class="sr-only">(current)</span></a>
+</li>
+<li class="nav-item mr-3">
+    <a class="nav-link btn border border-white" href="{% url 'createorder'%}">
+        {% block button %}
+        {% endblock button %}
+    </a>
+</li>
+{% if request.user.is_authenticated %}
+    <li class="nav-item mr-4">
+        {% if request.user.groups.first.name == 'repairer' %}
+        <a class="nav-link" href="{% url 'user' request.user.pk %}">
+        {% elif request.user.groups.first.name == 'owner' %}
+        <a class="nav-link" href="{% url 'profile' %}">
+        {% endif %}
+        {{ request.user }}
+        </a>
+    </li>
+    <li class="nav-item mr-4">
+        <a class="nav-link" href="{% url 'logout' %}">
+            Log out
+        </a>
+    </li>
+{% else %}
+    <li class="nav-item mr-4">
+        <a class="nav-link" href="{% url 'login' %}" title='Sign in'>
+            Login
+        </a>
+    </li>
+{% endif %}
+{% /menu_lg_createorder %}
+<section class="bg_img bottom">
+    <div class="space text-center">
+            <h1 class="display-4 m-0" >Repair service in Tbilisi</h1>
+                <span class="lead border-bottom">Write to the repairman:</span>
+                <!--Telegramm-->
+                <a class="m-1" title="Telegram" href="https://t.me/+995598259119"><img src="{% static 'images/telegram.gif' %}" width="40" alt="Telegram"></a>
+                <!--WhatsApp-->
+                <a class="m-1" title="WhatsApp" href="https://wa.me/+79604458687"><img src="{% static 'images/whatsapp.png' %}" width="45" alt="WhatsApp"></a>
+                <!--Instagram-->
+                <a class="m-1" href="https://www.instagram.com/repairservicetbilisi/"><img src="{% static 'images/instagram.png' %}" width="50" alt="Instagram"></a>
+    </div>
+</section>
+
+<!-- Service -->
+<section class="container">
+{% block body %}
+{% endblock body %}
+</section>
+
+<!-- And Servce -->
+
+<!-- Footer -->
+<footer class="footer_bg">
+       {% #footer address_title='Address' address_name='Tbilisi, Zutab Pataridze str 8' phone_title='Contact' write_to_us_title='Write to us' master_title='Repair service in Tbilisi' %}
+       {% /footer %}
+</footer>
+
+<!-- And Footer -->
+
+
+    <!-- jQuery first, then Bootstrap JS -->
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/mdb.min.js' %}"></script>
+    <!-- Optional JavaScript -->
+
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/jquery.malihu.PageScroll2id.min.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+	<script type="text/javascript">
+        $(document).ready(function() {
+            new WOW().init();
+        });
+    </script>
+
+</body></html>

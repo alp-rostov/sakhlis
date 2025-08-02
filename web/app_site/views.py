@@ -209,6 +209,7 @@ class OrderManagementSystem(LoginRequiredMixin, ListView):
     template_name = 'repairer/order_list.html'
     permission_required = PERMISSION_FOR_REPAIER
     ordering = ['-time_in']
+    paginate_by = 10
 
     def get_queryset(self):
         queryset = (super().get_queryset()

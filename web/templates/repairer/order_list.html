@@ -68,11 +68,36 @@
                          </a>
                 </div>
             </div>
+
     {% empty %}
                 <div  class="row border  rounded p-2 m-3" >
                     <h3>No orders</h3>
                 </div>
     {% endfor %}
+
+    {# Добавляем пагинацию на страницу #}
+
+   {# Информация о предыдущих страницах #}
+   {% if page_obj.has_previous %}
+       <a href="?{% url_replace page=1 %}" class="text-secondary">1</a>
+       {% if page_obj.previous_page_number != 1 %}
+           ...
+           <a href="?{% url_replace page=page_obj.previous_page_number %}"  class="text-secondary">{{ page_obj.previous_page_number }}</a>
+       {% endif %}
+   {% endif %}
+
+   {# Информация о текущей странице #}
+   {{ page_obj.number }}
+
+   {# Информация о следующих страницах #}
+   {% if page_obj.has_next %}
+       <a href="?{% url_replace page=page_obj.next_page_number %}" class="text-secondary">{{ page_obj.next_page_number }}</a>
+       {% if paginator.num_pages != page_obj.next_page_number %}
+           ...
+           <a href="?{% url_replace page=page_obj.paginator.num_pages %}" class="text-secondary">{{ page_obj.paginator.num_pages }}</a>
+       {% endif %}
+   {% endif %}
+
 </div>
 
 

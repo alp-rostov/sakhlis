@@ -1,0 +1,36 @@
+{% extends 'flatpages/common_blank_en.html' %}
+
+{% load static %}
+
+
+{% block title %}Electrician services: electrical installation work{% endblock title %}
+
+{% block content %}Electrician services in Tbilisi{% endblock content %}
+
+{% block facebookcontent %}Electrician services in Tbilisi{% endblock facebookcontent %}
+
+{% block facebookdescription %}All types of electrical installation works in Tbilisi{% endblock facebookdescription %}
+
+
+{% block button %}Order electrician services{% endblock button %}
+
+{% block body %}
+
+<h2 class="mt-0">Electrical installation works</h2>
+<p>We carry out electrical installation work of any complexity, both in the budget and premium segments.
+    Electrical installation of apartments, offices, restaurants and bars, production facilities.
+</p>
+<hr>
+<h3>Photos of electrical installation works<h3>
+
+<img src="{% static 'images/electriciti2.jpeg' %}" alt="" width="300">
+<img src="{% static 'images/electriciti3.jpeg' %}" alt="" width="300">
+<img src="{% static 'images/electriciti4.jpeg' %}" alt="" width="300">
+<hr>
+<a class="h4" href="https://www.instagram.com/repairservicetbilisi/">
+    <img src="{% static 'images/instagram.png' %}" width="70" alt="Instagram">Portfolio of works on electrical installation works</a>
+<hr>
+<h3>Submit a request for electrical repairs</h3>
+<a class="btn border-danger mycolor mr-1 ml-1 w-100" href="{% url 'createorder'%}">
+Order repairs</a>
+{% endblock body %}

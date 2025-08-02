@@ -1,0 +1,49 @@
+{% extends 'flatpages/common_blank.html' %}
+
+{% load static %}
+
+
+{% block title %}Furniture restoration and repair in Tbilisi{% endblock title %}
+
+{% block content %}Restoration and repair services Tbilisi{% endblock content %}
+
+{% block facebookcontent %}Furniture restoration in Tbilisi{% endblock facebookcontent %}
+
+{% block facebookdescription %}Furniture repair and restoration of various surfaces Tbilisi{% endblock facebookdescription %}
+
+
+{% block button %}Order furniture repair services{% endblock button %}
+
+{% block body %}
+
+<h2 class="mt-0">Furniture restoration and repair</h2>
+<p>Restoration and repair of furniture elements and various surfaces in the apartment: furniture, walls, wallpaper, kitchen countertops, doors, windows.
+We will correct minor defects that spoil the aesthetic appearance of the surface:
+gnawed by animals, vandalized by children or careless use, cracks, remaining defects after repair.
+<ul class="ml-5">Damage to the paint layer, varnish, texture.
+<li>painted walls</li>
+<li>some damage to wallpaper</li>
+<li>wood</li>
+<li>plastic</li>
+<li>chipboard, laminated chipboard</li>
+<li>in some cases metal</li>
+</ul>
+
+I consider each case individually.
+</p>
+<hr>
+<h3>Photos of examples of restoration of furniture elements and surfaces<h3>
+
+<img src="{% static 'images/furniture1.jpg' %}" alt="" width="300">
+<img src="{% static 'images/furniture2.jpg' %}" alt="" width="300">
+<img src="{% static 'images/furniture3.jpg' %}" alt="" width="300">
+<img src="{% static 'images/furniture4.jpg' %}" alt="" width="300">
+<img src="{% static 'images/furniture5.jpg' %}" alt="" width="300">
+<img src="{% static 'images/furniture6.jpg' %}" alt="" width="300">
+    <hr>
+
+
+<h3>Submit a request for furniture repair</h3>
+<a class="btn border-danger mycolor mr-1 ml-1 w-100" href="{% url 'createorder'%}">
+Order repair</a>
+{% endblock body %}
