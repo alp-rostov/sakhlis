@@ -15,6 +15,7 @@ CITY_CHOICES = [
     ('BT', 'Batumi'),
     ('GD', 'Gudaury'),
     ('RS', 'Rustavi'),
+    ('OT', 'Other'),
 ]
 
 CITY_CHOICES_INVOICE = {
@@ -22,6 +23,7 @@ CITY_CHOICES_INVOICE = {
     'BT': 'Batumi',
     'GD': 'Gudaury',
     'RS': 'Rustaveli',
+    'OT': 'Other'
 }
 
 WORK_CHOICES = [

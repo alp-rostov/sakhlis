@@ -424,6 +424,7 @@ def client_details_json(request, **kwargs):
                              'name': data.customer_name,
                              'phone': data.phone,
                              'telegram': data.telegram,
+                             'whatsapp': data.whatsapp,
                              'foto': str(data.foto),
                              'profile': data.profile,
                              'orders': json_orders,

@@ -1,4 +1,4 @@
-from django_filters import FilterSet, CharFilter, DateFilter, ChoiceFilter, ModelChoiceFilter
+from django_filters import FilterSet, CharFilter
 
 from app_site.models import OrderList
 from .models import *
@@ -25,6 +25,12 @@ class ClientFilter(FilterSet):
         label='',
         lookup_expr='icontains',
     )
+    whatsapp = CharFilter(
+        field_name='whatsapp',
+        widget=forms.TextInput(attrs={"class": "", "placeholder": "whatsapp", "size": "12"}),
+        label='',
+        lookup_expr='icontains',
+    )
     profile = CharFilter(
         field_name='profile',
         label='',
@@ -34,6 +40,6 @@ class ClientFilter(FilterSet):
 
     class Meta:
         model = OrderList
-        fields = ['customer_name', 'phone', 'telegram', 'profile']
+        fields = ['customer_name', 'phone', 'telegram', 'whatsapp', 'profile']
 
 
