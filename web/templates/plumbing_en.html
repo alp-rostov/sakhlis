@@ -1,0 +1,44 @@
+{% extends 'flatpages/common_blank.html' %}
+
+{% load static %}
+
+
+{% block title %}Plumbing repairs in Tbilisi{% endblock title %}
+
+{% block content %}Plumbing, faucet, toilet, and other plumbing repair services in Tbilisi{% endblock content %}
+
+{% block facebookcontent %}Master plumber in Tbilisi{% endblock facebookcontent %}
+
+{% block facebookdescription %}Plumbing repairs in Tbilisi: pipe installation, valve and faucet installation, water heater installation,
+toilet installation.{% endblock facebookdescription %}
+
+
+{% block button %}Submit plumbing services{% endblock button %}
+
+{% block body %}
+
+<h2 class="mt-0">Plumbing services</h2>
+<p>If you need a reliable plumbing repair technician, then you've come to the right place.
+    We'll put our full effort and experience into plumbing work for your home, office, or
+    industrial facility.
+<ul class="ml-5">
+<li>Faucet and valve repair</li>
+<li>Toilet, shower, and jacuzzi installation</li>
+<li>Water filter installation</li>
+<li>Water pipe installation and repair</li>
+<li>Connecting various equipment to the water supply:
+    ice makers, coffee machines, washing machines, and dishwashers
+    for domestic and industrial use</li>
+</ul>
+</p>
+<hr>
+<h3>Photos<h3>
+
+<!--<img src="{% static 'images/furniture1.jpg' %}" alt="" width="300">-->
+    <hr>
+
+
+<h3>Submit a request for plumbing repairs</h3>
+<a class="btn border-danger mycolor mr-1 ml-1 w-100" href="{% url 'createorder'%}">
+Submit repair</a>
+{% endblock body %}

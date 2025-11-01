@@ -6,13 +6,14 @@ urlpatterns = [
     path('', OrderCreate.as_view(), name='home'),
     path('en', OrderCreate.as_view(template_name='order_create_en.html'), name='home_en'),
     path('ge', OrderCreate.as_view(template_name='order_create_ge.html'), name='home_ge'),
+
+# start static pages __________________________-
     path('corporate', TemplateView.as_view(template_name='business.html'), name='business'),
     path('corporate_en', TemplateView.as_view(template_name='business_en.html'), name='business_en'),
     path('corporate_ge', TemplateView.as_view(template_name='business_ge.html'), name='business_ge'),
     path('createorder', OrderCreate.as_view(template_name='createorder.html'), name='createorder'),
     path('createorder_en', OrderCreate.as_view(template_name='createorder_en.html'), name='createorder_en'),
     path('createorder_ge', OrderCreate.as_view(template_name='createorder_ge.html'), name='createorder_ge'),
-
     path('repairwashingmachine', TemplateView.as_view(template_name='washing_machine.html'),
          name='repairwashingmachine'),
     path('dishwasher', TemplateView.as_view(template_name='dishwasher.html'),
@@ -29,6 +30,13 @@ urlpatterns = [
          name='furniturerepair'),
     path('furniturerepair_en', TemplateView.as_view(template_name='furniturerepair_en.html'),
          name='furniturerepair_en'),
+    path('plumbing', TemplateView.as_view(template_name='plumbing.html'),
+         name='plumbing'),
+    path('plumbing_en', TemplateView.as_view(template_name='plumbing_en.html'),
+         name='plumbing_en'),
+
+    # end static pages_________________________
+
     path('list_order', OrderManagementSystem.as_view(), name='list_order'),
     # path('street', OrdersOnTheStreet.as_view(), name='aaa'),
     path('list_order/<int:pk>', InvoiceCreate.as_view(), name='invoice'),

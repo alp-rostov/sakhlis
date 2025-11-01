@@ -176,7 +176,7 @@
                     {% #card name_service="<a href='/electricianservices' class='text-secondary'>Услуги электрика</a>" name_service1="Ремонт выключателя, розетки" name_service2="Монтаж счетчика" name_service3="Прокладка электропроводки" %}
                         <img src="{% static 'fonts/broken-cable.svg' %}" class="rounded-circle img-fluid">
                     {% /card %}
-                    {% #card name_service="Услуги сантехника" name_service1="Устранение засора" name_service2="Установка раковины, унитаза, смесителя" name_service3="Устранение протечки крана"  %}
+                    {% #card name_service="<a href='/plumbing' class='text-secondary'>Услуги сантехника</a>" name_service1="Устранение засора" name_service2="Установка раковины, унитаза, смесителя" name_service3="Устранение протечки крана"  %}
                         <img src="{% static 'fonts/leak.svg' %}" class="rounded-circle img-fluid">
                     {% /card %}
                     {% #card name_service="Ремонт бытовой техники" name_service1="<a href='/dishwasher' class='text-secondary'>Посудомоечные машины</a>" name_service2="<a href='/repairwashingmachine' class='text-secondary'>Стиральные машины и сушильные машины</a>" name_service3="Духовки и печки"  %}
@@ -374,29 +374,5 @@
         });
     </script>
 
-<script>
-$(document.body).ready(function() {
-    $('#form').submit(function(e) {
-        e.preventDefault();
-        $.ajax({
-            url: '',
-            type: 'POST',
-            data: $(this).serialize(),
-            dataType: 'text',
-            beforeSend: function () {$("#form").html('<h3>Отправляется...</h3>');},
-            success: function (resp) {
-                let mes=JSON.parse(resp);
-                if (mes.auth==true) {
-                    window.location.href = '/list_order/'+mes.pk;
-                    }
-                else {
-                    $("#form").html(' ');
-                    $("#answer").html(mes.message+mes.contact);
 
-                    }
-                },
-            });
-    });
-});
-</script>
 </body></html>
