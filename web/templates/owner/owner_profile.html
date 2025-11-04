@@ -158,7 +158,7 @@
 
                                     | <span class="text-body mt-1">{{ b.time_in }}</span>
                                 <br>
-                                    <div class="text-body mt-1">{{ b.text_order }}</div> </a>
+                                    <div class="text-body mt-1">{{ b.text_order|truncatechars:100|capfirst  }}</div> </a>
                             </div>
                             <div class="col-sm-12 col-md-6 col-lg-6">
                                 {% if b.repairer_id %}
@@ -256,11 +256,11 @@ $(document.body).ready(function() {
                         let info=JSON.parse(resp);
                         let order_list = $('#empty-form').clone();
                         order_list.find('#order_number').html('<b>New order №'+info.pk+'</b>');
-                        order_list.find('#order_number').attr('href', '/owner-invoice/'+info.pk);
+                        order_list.find('#order_number').attr('href', '/client/invoice/'+info.pk);
                         order_list.find('#link-delete').attr('href', '../invoice/delete-order/'+info.pk);
                         let date_order=info.date.substring(0, 10).split("-").reverse().join(".");
                         order_list.find('#time_in').html(date_order);
-                        order_list.find('#text').html(info.text);
+                        order_list.find('#text').html(info.text+'<hr><h5>Благодарим Вас за заявку!</h5><h6>Ваш мастер Сергей: <img src="/media/masters/51.jpg"class="rounded-circle" width="70">.</h4><h5>Вы можете написать ему, уточнить детали, отправить фото работ или геопозицию:</h6><a class="mx-2" title="Telegram" href="https://t.me/+995598259119"><img src="/static/images/telegram.gif" width="50" alt="Telegram"></a><a class="mx-2" title="WhatsApp" href="https://wa.me/+79604458687"><img src="/static/images/whatsapp.png" width="55" alt="WhatsApp"></a>');
                         order_list.attr('class','mt-2 mb-3 pb-2 border-bottom');
                         $('#list_orders-'+info.apartment).before(order_list);
                         $('#form-'+info.apartment).remove();

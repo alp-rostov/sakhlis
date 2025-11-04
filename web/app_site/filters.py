@@ -30,7 +30,7 @@ class OrderFilter(FilterSet):
 
     )
     repairer_id = ModelChoiceFilter(
-        queryset=User.objects.all(),
+        queryset=User.objects.none(),
         field_name='repairer_id',
         label='Master',
         empty_label='Choose master'

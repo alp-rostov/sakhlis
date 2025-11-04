@@ -195,20 +195,7 @@ $(document.body).ready(function() {
     });
 
 
-    $('#form_add_client').submit(function(e) {
-    e.preventDefault();
-    $.ajax({
-        url: '/client/createclient',
-        type: 'POST',
-        data: $(this).serialize(),
-        dataType: 'text',
-        beforeSend: function () {$("#form_add_client").html('<h3>Отправляется...</h3>');},
-        success: function (resp) {
-            let mes=JSON.parse(resp);
-            console.log(mes)
-            },
-        });
-    });
+
 
 
 });

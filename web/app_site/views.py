@@ -164,7 +164,10 @@ class OrderCreate(CreateView):
 
     def form_valid(self, form):
         with (transaction.atomic()):
+            redirection=False  # need to redirect to invoice`s page
             try:
+                if self.request.user.groups.first().name == 'repairer':
+                    redirection=True
                 if self.request.user.groups.first().name == 'owner':
                     customer_id = get_object_or_404(UserProfile, user=self.request.user.id)
                     apartment_id = get_object_or_404(Apartment, pk=self.request.POST.get('apartment_id'))
@@ -182,10 +185,9 @@ class OrderCreate(CreateView):
             form.instance.apartment_id = apartment_id
             form.instance.customer_id = customer_id
             form.save()
-
         return JsonResponse({'message': '',
                              'pk': form.instance.pk,
-                             'auth': self.request.user.is_authenticated,
+                             'auth': redirection,
                              'text': form.instance.text_order,
                              'date': form.instance.time_in,
                              'repaier': '',
@@ -198,7 +200,7 @@ class OrderDelete(LoginRequiredMixin, DeleteView):
     template_name = 'order_delete.html'
 
     def get_success_url(self):
-        dict_choice_url = {'repairer': '/list_order', 'owner': '/owner/apartment'}
+        dict_choice_url = {'repairer': '/list_order', 'owner': '/client/'}
         return dict_choice_url[self.request.user.groups.first().name]
 
 
@@ -220,6 +222,7 @@ class OrderManagementSystem(LoginRequiredMixin, ListView):
                             'customer_id__pk', 'customer_id__user', 'customer_id__customer_name'
                             ))
         self.filterset = OrderFilter(self.request.GET, queryset)
+        self.filterset.form.fields['repairer_id'].queryset = User.objects.filter(groups__name='repairer')
         return self.filterset.qs
 
     def get_context_data(self, **kwargs):
@@ -353,7 +356,7 @@ class UserRegisterView(CreateView):
 def create_qr_code_client(request, **kwargs):
     """ Create png-file for printing """
     qrcode_= request.GET.get('qrcode')
-    url = 'https://www.sakhlis-remonti.ge/createorder'
+    url = 'https://www.sakhlis-remonti.ge/'
     box_size=12
     try:
         if not is_valid_uuid(qrcode_):

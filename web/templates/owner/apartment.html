@@ -15,37 +15,43 @@
     </a>
     {% for b in appartment %}
           <div class="row border-bottom p-3 mb-3">
-              <div class="col-lg-2 col-md-2 col-sm-12">
-                  <img src="../media/{{ b.foto }} " alt="" class="img-thumbnail" width="100">
+              <div class="col-lg-6 col-md-6 col-sm-12">
+                  <img src="../media/{{ b.foto }} " alt="" class="img-thumbnail" width="150">
               </div>
               <div class="col-lg-6 col-md-6 col-sm-12">
                   <h4>{{ b.name|default_if_none:'' }}
                       <a href="{% url 'apartment_update' b.pk %}" class="text-secondary ml-3 btn" >
                     <i class="fas fa-pen text-secondary" style='font-size:14px'> edit </i></a>
                   </h4>
-
-                    
                   <h5 class="mt-0 p-0">
-                      {{ b.address_street_app }} {{ b.address_num }}, {{ b.address_city|choice_tag:'city' }}
-                  </h5>
-                  <span class="text-secondary ">
-                      {{ b.notes|default_if_none:'' }}
-                      <a href="{{b.link_location }}">
-                          MAP
-                      </a>
+                      <span class="text-secondary ">
+                      {% if b.link_location %}
+                      <a href="{{b.link_location }}" class="btn btn-outline-dark">
+                          <i class='fas fa-location-arrow'></i>
+                       {% endif%}
+                      {{ b.address_street_app }} {{ b.address_num }}, {{ b.address_city|choice_tag:'city' }}</a>
                   </span>
-              </div>
-              <div class="col-lg-4 col-md-4 col-sm-12">
+                  </h5>
 
-                  Oders: {{ orders_count|get_item:b.pk  }}<br>
-                  Costs: {{ orders_summ|get_item:b.pk }}<br>
-                  Masters:<br>
+                  <a href ="{% url 'o_list_order' %}?apartment_id={{b.pk}}" class="h6">
+                  <p class="btn btn-outline-danger">Oders: {{ orders_count|get_item:b.pk}}</p></a>
+                  <p class="btn btn-outline-danger">Costs: {{ orders_summ|get_item:b.pk }}</p>
+                  <h5><button type="button"
+                              class="btn btn btn-outline-info m-0 pb-0 pt-0 pl-2 pr-2"
+                              data-bs-toggle="tooltip"
+                              data-bs-placement="right"
+                              title="List of the handymans who serviced these apartments or equipment">
+                              !
+                      </button>
+                      Masters / manager:
+
+                  </h5>
                   {% for i in list_master|get_item:b.pk %}
                   <img src="../media/masters/{{ i.0 }}.jpg"
-                    class="rounded-circle border border-5 border-white" width="35"> {{ i.1 }}
+                    class="rounded-circle border border-5 border-white" width="75"> {{ i.1 }}
                   {% endfor %}
               </div>
-              
+
           </div>
     {% endfor%}
 </div>
