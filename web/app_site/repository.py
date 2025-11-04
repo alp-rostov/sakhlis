@@ -123,11 +123,11 @@ class DataFromInvoice:
             .filter(order_id__repairer_id=repairer)[0]['sum']
 
     def get_data_from_invoice_with_amount(self, order_id_: int):
-        return self.model \
+        return (self.model \
             .filter(order_id=order_id_) \
-            .select_related('service_id') \
-            .defer('service_id__type') \
-            .annotate(amount=F('price') * F('quantity'))
+            .select_related('service_id')
+            # .defer('service_id__type') \
+            .annotate(amount=F('price') * F('quantity')))
 
     def get_quantity_of_orders_by_type(self, repairer: User):
         return self.model \

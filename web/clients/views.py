@@ -5,6 +5,7 @@ from django.views.generic import ListView, UpdateView, TemplateView, DetailView,
 from django.shortcuts import redirect, get_object_or_404
 
 from apartments.models import Apartment
+
 from app_site.constants import PERMISSION_FOR_REPAIER, PERMISSION_FOR_OWNER
 from app_site.exeptions import BaseClassExeption
 from app_site.filters import OrderFilter
@@ -12,6 +13,7 @@ from app_site.forms import ApartentUpdateForm
 from app_site.models import OrderList, Invoice
 from app_site.repository import DataFromRepairerList, DataFromInvoice
 from app_site.views import OrderManagementSystem, OrderCreate
+
 from clients.filters import ClientFilter
 from clients.form import CustomerForm, CustomerFormForModal
 from clients.models import UserProfile
@@ -46,6 +48,7 @@ class OwnerDetailInformation(PermissionRequiredMixin, LoginRequiredMixin, Templa
         list_app = context['apartments'].exclude(pk__in=list_app_)
         context['list_app'] = list_app
         return context
+
 
 class ApartmentOwner(PermissionRequiredMixin, LoginRequiredMixin, ListView):
     model = Apartment
@@ -95,10 +98,12 @@ class ApartmentOwner(PermissionRequiredMixin, LoginRequiredMixin, ListView):
 
         return context
 
+
 class OwnerOrderManagementSystem(OrderManagementSystem, LoginRequiredMixin, ListView):
     """ list of all orders """
     template_name = 'owner/order_list.html'
     permission_required = PERMISSION_FOR_OWNER
+    paginate_by = None
 
     def get_queryset(self):
         userprof = UserProfile.objects.get(user=self.request.user)
@@ -111,6 +116,7 @@ class OwnerOrderManagementSystem(OrderManagementSystem, LoginRequiredMixin, List
                     'apartment_id__address_city', 'apartment_id__address_num', 'apartment_id__name'
                     ).order_by('-time_in')
         self.filterset = OrderFilter(self.request.GET, queryset)
+        self.filterset.form.fields['apartment_id'].queryset=Apartment.objects.filter(owner=userprof)
         return self.filterset.qs
 
 
@@ -126,11 +132,13 @@ class OwnerInvoice(PermissionRequiredMixin, LoginRequiredMixin, DetailView):
         context['invoice'] = DataFromInvoice().get_data_from_invoice_with_amount(order_id_=self.object.pk)
         return context
 
+
 class OwnerApartmentUpdate(LoginRequiredMixin, UpdateView):
     model = Apartment
     template_name = 'owner/apartment_update.html'
     form_class = ApartentUpdateForm
     success_url = '../apartments'
+
 
 class OwnerApartmentCreate(LoginRequiredMixin, CreateView):
     model = Apartment
@@ -143,6 +151,7 @@ class OwnerApartmentCreate(LoginRequiredMixin, CreateView):
         form.instance.owner = UserProfile.objects.get(user=self.request.user)
         form.save()
         return redirect('apartments')
+
 
 class ClientsUpdate(PermissionRequiredMixin, LoginRequiredMixin, UpdateView):
     """UPDATE INFORMATION ABOUT CLIENT"""
@@ -157,11 +166,3 @@ class ClientsUpdate(PermissionRequiredMixin, LoginRequiredMixin, UpdateView):
             return dict_choice_url[self.request.user.groups.first().name]
         else:
             return '../../clients'
-
-# def clent_create_api(request):
-#     _=request.POST.get('qr-code')[8:]
-#     if request.method == 'POST' and UserProfile.objects.get(qrcode_id=_):
-#         form = CustomerFormForModal(request.POST)
-#         form.instance.save()
-#     return JsonResponse({'message': ''})
-

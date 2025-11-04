@@ -6,30 +6,27 @@
 
 {% block body %}
 
-<div class="container">
+<tr class="container">
     <div class="row mb-0" >
-        <div class="col-sm-12 col-md-3 col-lg-3 mb-3" >
+        <div class="col-sm-12 col-md-4 col-lg-4 mb-4" >
             <h4 class="mycolor mb-0"><b>Order № {{ info.id }}</b></h4>
             {{ info.time_in }}
         </div>
         
-        <div class="col-lg-3 col-md-3 col-sm-12 mb-3" >
+        <div class="col-lg-4 col-md-4 col-sm-12 mb-4" >
             <h5 class="mb-0">{{ info.apartment_id.name }}</h5>
             <i class="fas fa-home prefix text-secondary mt-1"> </i> {{ info.apartment_id.address_city|choice_tag:'city' }}, {{ info.apartment_id.address_street_app }}, {{ info.apartment_id.address_num }}<br>
         </div>
 
-        <div class="col-lg-3 col-md-3 col-sm-12 text-secondary mb-3" >
-            {{ info.text_order }}
-        </div>
-        
-    <div class="col-lg-3 col-md-3 col-sm-12 mb-3">
-            <a href="" class="text-secondary">
+    <div class="col-lg-4 col-md-4 col-sm-12 mb-4">
+        <h4>Manager / masrer
+            <a href="" class="text-secondary"><br>
                 <img src="../media/masters/{{ info.repairer_id.pk }}.jpg"
                                 class="rounded-circle" width="60">
                 <b>
                     {{ info.repairer_id|default_if_none:""|capfirst }}
                 </b>
-            </a>
+            </a></h4>
     </div>
     
     
@@ -40,6 +37,10 @@
 
 <table id="table_invoice" class="table" >
 <thead>
+    <tr class="" ><td colspan="5" class="h4">
+        {{ info.text_order }}
+    </td></tr>
+
 <tr  class="table-warning">
     <th>Name of service </th>
     <th>Quantity </th>
@@ -50,15 +51,27 @@
 </thead>
 
 <tbody>
-{% for g in invoice %}
-    <tr class="form_text">
-            <td name="service_id">{{ g.service_id }}</td>
-            <td name="quantity">{{ g.quantity }} </td>
-            <td name="price">{{ g.price }}</td>
-            <td name="amount">{{ g.amount }}</td>
+    {% regroup invoice by service_id.type as type %}
+    {% for i in type %}
+    <tr>
+        <th class="table-secondary h5" colspan="5">{{ i.grouper|choice_tag:'work_type'  }} </th>
     </tr>
-{% endfor %}
+        <tr class="form_text">
+            {% for g in i.list %}
+                <td name="service_id" class="pl-4">{{ g.service_id }}</td>
+                <td name="quantity">{{ g.quantity }} </td>
+                <td name="price">{{ g.price }}</td>
+                <td name="amount">{{ g.amount }}</td>
+        </tr>
+            {% endfor %}
+
+    {% endfor %}
 </tbody>
+
+
+
+
+
 <tr class="table-warning" id="total_">
     <th>
         <a href="{% url 'invoice_pdf' info.id  %}" title="Invoice #{{ info.id }}">

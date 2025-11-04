@@ -6,7 +6,9 @@ from .models import *
 from django import forms
 
 
+
 class OrderFilter(FilterSet):
+
     time_in_sence = DateFilter(
         field_name="time_in__date",
         widget=forms.DateInput(attrs={'type': 'date', 'class': 'mr-3', }),
@@ -33,6 +35,13 @@ class OrderFilter(FilterSet):
         label='Master',
         empty_label='Choose master'
 
+    )
+
+    apartment_id = ModelChoiceFilter(
+        queryset=Apartment.objects.none(),
+        field_name='apartment_id',
+        label='apartment',
+        empty_label='Choose apartment'
     )
 
     class Meta:

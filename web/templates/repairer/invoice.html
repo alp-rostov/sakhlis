@@ -138,7 +138,7 @@
 
         </div>
 
-       <div class="col-md-8 " style='font-size:22px'>
+       <div class="col-md-8" style='font-size:22px'>
            {{ info.text_order }}
        </div>
 
@@ -167,34 +167,45 @@
 </tr>
 
 <tbody>
-{% for g in invoice %}
-    <tr class="form_text">
-            <td name="service_id">{{ g.service_id }}</td>
-            <td name="quantity">{{ g.quantity }} </td>
-            <td name="price">{{ g.price }}</td>
-            <td name="amount">{{ g.amount }}</td>
-            <td name="delete"><a href="../deleteinvoice/{{g.pk}}" class="link-delete" ><i class="fas fa-trash text-secondary"></i></a></td>
+    {% regroup invoice by service_id.type as type %}
+    {% for i in type %}
+    <tr>
+        <th class="table-secondary h5" colspan="5">{{ i.grouper|choice_tag:'work_type'  }} </th>
     </tr>
-{% endfor %}
-</tbody>
-<tr class="table-warning" id="total_">
-    <th>
-        <a href="{% url 'invoice_pdf' info.id  %}" title="Invoice #{{ info.pk }}">
-            <img src={% static 'images/invoice.png' %} width=60 alt="Invoice">
-        </a>
-    </th>
-    <th class="h5-responsive" >
-        
-    </th>
-    <th class="h5-responsive">
-        Total:
-    </th>
-    <th class="h5-responsive" id="total">
-    </th>
-    <th>
-    </th>
-</tr>
+        <tr class="form_text">
+            {% for g in i.list %}
+                <td name="service_id" class="pl-4">{{ g.service_id }}</td>
+                <td name="quantity">{{ g.quantity }} </td>
+                <td name="price">{{ g.price }}</td>
+                <td name="amount">{{ g.amount }}</td>
+                <td name="delete"><a href="../deleteinvoice/{{g.pk}}" class="link-delete" ><i class="fas fa-trash text-secondary"></i></a></td>
+        </tr>
+            {% endfor %}
 
+    {% endfor %}
+</tbody>
+
+<tfoot>
+
+
+    <tr class="table-warning" id="total_">
+        <th>
+            <a href="{% url 'invoice_pdf' info.id  %}" title="Invoice #{{ info.pk }}">
+                <img src={% static 'images/invoice.png' %} width=60 alt="Invoice">
+            </a>
+        </th>
+        <th class="h4-responsive" >
+
+        </th>
+        <th class="h3">
+            Total:
+        </th>
+        <th class="h3" id="total">
+        </th>
+        <th>
+        </th>
+    </tr>
+</tfoot>
 <script>
     function sum_total() {
         let sum_total=0;
@@ -261,7 +272,7 @@ $(document.getElementById('master')).on( "click", ".link-text-secondary", functi
     });
 });
 
-<!-- SENT AJAX - CREATE NEW REQUEST FROM CLIENT WINDOW -->
+<!-- SENT AJAX - CREATE NEW REQUEST  -->
 $(document.body).on( "click", ".link-delete", function(e) {
     e.preventDefault();
     let $this=$(this);
