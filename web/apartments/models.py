@@ -25,6 +25,18 @@ class Apartment(models.Model):
         return f"{self.address_street_app} {self.address_num} "
 
 
+class ApartmentPhoto(models.Model):
+    """Clients' apartments"""
+    id_apartments = models.OneToOneField('Apartment', on_delete=models.CASCADE , primary_key = True,
+                              verbose_name='Id apartments')
+
+    photo = models.ImageField(upload_to="images/appartment/", null=True, blank=True, verbose_name='Photo:')
+
+    class Meta:
+        verbose_name = 'Appartment_photo'
+        verbose_name_plural = 'Appartments_photo'
+
+
 # class StreetTbilisi(models.Model):
 #     type_street = models.CharField(max_length=50)
 #     name_street = models.CharField(max_length=50)

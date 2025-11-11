@@ -95,7 +95,7 @@
                     </a>
                     {% else %}
                     <a href="" class="link_master text-secondary btn border" data-toggle="modal" data-target="#exampleModal" title="{{ info.pk }}">
-                        <i class="fa fa-user text-secondary fa-x"> Appoint master</i>
+                        <i class="fa fa-user text-secondary fa-x"> Appoint master </i>
                     </a>
                     {% endif %}
         </div>
@@ -112,9 +112,8 @@
                         {{ info.apartment_id.address_street_app }},
                         {{ info.apartment_id.address_num|default_if_none:""  }},
                         {{ info.apartment_id.address_city|choice_tag:'city' }}
-                        {% if info.apartment_id.foto %}
-                            <br>
-                            <img src="../media/{{ info.apartment_id.foto }}"
+                        {% if photo %}
+                            <img src="../media/{{ photo }}"
                             alt="" class="rounded mx-auto d-block mt-2" width="150">
                         {% endif %}
                         </i>
@@ -124,14 +123,17 @@
                     <i class="fa fa-home  p-2  " aria-hidden="true">
                     {{ info.apartment_id.address_street_app }}, {{ info.apartment_id.address_num|default_if_none:""  }}, {{ info.apartment_id.address_city|choice_tag:'city' }}
                     </i>
-                        {% if info.apartment_id.foto %}
+                        {% if photo %}
                             <br>
-                            <img src="../media/{{ info.apartment_id.foto }}"
+                            <img src="../media/{{ photo }}"
                             alt="" class="rounded mx-auto d-block mt-2" width="150">
                         {% endif %}
                     {% endif %}
-            <br>
+                <br>
             </div>
+            <a href="../apartment/updatephotoapartment/{{ info.apartment_id.pk }}" class="h5 text-secondary mr-4 " >
+                <i class='far fa-file-image'></i>
+            </a>
             <a href="../apartments/update/{{ info.apartment_id.pk }}" class="ml-1 text-secondary" title="edit address" >
                 <i class="fas fa-pen " style='font-size:14px'> edit</i>
             </a>

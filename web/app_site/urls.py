@@ -34,6 +34,8 @@ urlpatterns = [
          name='plumbing'),
     path('plumbing_en', TemplateView.as_view(template_name='plumbing_en.html'),
          name='plumbing_en'),
+    path('renovation', TemplateView.as_view(template_name='renovation.html'),
+         name='renovation'),
 
     # end static pages_________________________
 

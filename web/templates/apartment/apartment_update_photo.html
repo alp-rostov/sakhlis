@@ -6,15 +6,12 @@
 
 {% block body %}
 
-<h1>Update apartment</h1>
-<hr>
-
+<h2 class="form">Download Apartmest`s photo</h2>
 
 <form action="" method="post" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="Save" />
 </form>
-
 
 {% endblock body %}

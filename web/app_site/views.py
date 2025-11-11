@@ -12,7 +12,9 @@ from django.forms import modelformset_factory
 from django.shortcuts import redirect, get_object_or_404
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
+from django.core.exceptions import ObjectDoesNotExist
 
+from apartments.models import ApartmentPhoto
 from clients.filters import ClientFilter
 from clients.form import CustomerForm, CustomerFormForModal
 from .constants import *
@@ -104,6 +106,10 @@ class InvoiceCreate(PermissionRequiredMixin, LoginRequiredMixin, DetailView):
         context['form'] = formset                          # TODO refactor filter groups=2 is a group`s number 'repaier'
         context['list_masters'] = User.objects.filter(groups=2).values('pk', 'username',
                                                                        'groups')
+        try:
+            context['photo'] = ApartmentPhoto.objects.get(id_apartments=self.object.apartment_id).photo
+        except ObjectDoesNotExist:
+            context['photo'] = None
         return context
 
     def post(self, formset, **kwargs):

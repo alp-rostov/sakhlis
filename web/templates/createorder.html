@@ -83,8 +83,8 @@
 <!-- Services -->
 <section id="section-1" class="container">
     <h2 class="mt-0" id="answer">Заявка на ремонт</h2>
-       <div id="contact" class="form-container">
-           <div id="message"></div>
+        <div id="contact" class="form-container">
+               <img id="myImage" src="img1.jpg" alt="Изображение" width="150">
            {% #form form_order_=form form_appart_=form_appart  form_customer_=form_customer lng='ru' %}
              {% csrf_token %}
            {% if contact_data.name %}
@@ -108,9 +108,8 @@
                {% endif %}
            {% endif %}
            {% /form %}
-        </div>
+           </div>
 </section>
-
 <!-- And Services -->
 
 <!-- Footer -->
@@ -118,40 +117,6 @@
        {% #footer address_title='Адрес' address_name='Тбилиси, ул.Зураба Патаридзе 8' phone_title='Контакты' write_to_us_title='Написать нам' master_title='Мастер на час в Тбилиси' %}
        {% /footer %}
 </footer>
-
-
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-body  mx-3">
-                <div id="contact_" class="form-container">
-                    <fieldset>
-                        <div id="message_">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">X</span>
-                        </button>
-                        </div>
-                    </fieldset>
-                        <div class="row">
-                            <div class="col-12 text-center">
-                                <h4 id="" class="mycolor font-weight-bold">Input contact information</h4>
-                            </div>
-                        </div>
-
-                            <form method="post" action="" name="form_add_client" id="form_add_client" class="">
-                                <input type="hidden" value="{{qruuid}}" name="qr-code">
-                                {% csrf_token %}
-                                {{form_for_modal}}
-                                <button type="submit" name="submit" class="btn btn-lg mycolor m-2 p-2">Сохранить</button>
-                            </form>
-
-
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 <!-- And Footer -->
 
@@ -195,9 +160,21 @@ $(document.body).ready(function() {
     });
 
 
-
-
-
 });
 </script>
+
+
+
+
+
+<script>
+const selectElement = document.getElementById('id_apartment_id');
+const imageElement = document.getElementById('myImage');
+
+selectElement.onchange = function() {
+  const selectedValue = selectElement.value;
+  imageElement.src = 'media/images/appartment/'+selectedValue + '.jpg';
+};
+</script>
+
 </body></html>
