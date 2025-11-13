@@ -56,7 +56,12 @@ class ApartmentUpdate(PermissionRequiredMixin, LoginRequiredMixin, UpdateView):
     template_name = 'repairer/apartment_update.html'
     form_class = ApartentUpdateForm
     permission_required = PERMISSION_FOR_REPAIER
-    success_url = '/apartments/?address_city=&address_street_app='
+    # success_url = '/apartments/?address_city=&address_street_app='
+    def get_success_url(self):
+        return '/list_order/'+self.request.GET.get('pk')
+
+
+
 
 class Error404(TemplateView):
     template_name = '404.html'

@@ -110,7 +110,12 @@
                         {{ c.grouper.address_street_app }} {{ c.grouper.address_num }},
                         {{ c.grouper.address_city|choice_tag:'city' }}
                     </h5>
-                
+                           <a href="../apartment/updatephotoapartment/{{ c.grouper.pk }}" class="h5 text-secondary mr-4 " >
+                <i class='far fa-file-image'></i>
+            </a>
+
+
+
                     <p class="text-secondary ">
                         {{ c.grouper.notes|default_if_none:'' }}
                         <a href="{% url 'apartment_update' c.grouper.pk %}" class="fas fa-pen text-secondary"

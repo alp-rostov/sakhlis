@@ -133,10 +133,11 @@ class OwnerInvoice(PermissionRequiredMixin, LoginRequiredMixin, DetailView):
         return context
 
 
-class OwnerApartmentUpdate(LoginRequiredMixin, UpdateView):
+class OwnerApartmentUpdate(PermissionRequiredMixin, LoginRequiredMixin, UpdateView):
     model = Apartment
     template_name = 'owner/apartment_update.html'
     form_class = ApartentUpdateForm
+    permission_required = PERMISSION_FOR_OWNER
     success_url = '../apartments'
 
 
