@@ -20,8 +20,11 @@
               </div>
               <div class="col-lg-6 col-md-6 col-sm-12">
                   <h4>{{ b.name|default_if_none:'' }}
-                      <a href="{% url 'apartment_update' b.pk %}" class="text-secondary ml-3 btn" >
-                    <i class="fas fa-pen text-secondary" style='font-size:14px'> edit </i></a>
+                    <a href="../apartment/updateapartment/{{ b.pk }}" class="h5 text-secondary mr-4 " >
+                    <i class="fas fa-pen text-secondary" style='font-size:14px'> edit </i>
+                    </a>
+                       <a href="../apartment/updatephotoapartment/{{ b.pk }}" class="h5 text-secondary mr-4 " >
+                <i class='far fa-file-image'></i>
                   </h4>
                   <h5 class="mt-0 p-0">
                       <span class="text-secondary ">

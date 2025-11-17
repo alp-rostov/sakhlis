@@ -88,14 +88,16 @@
 
         <!--menu apartments-->
         {% for b in apartments %}
-        <input id="tab-btn-{{ b.pk }}" name="tab-btn" type="radio" value="">
-        <label onclick="menu_hide_show()" for="tab-btn-{{ b.pk }}">
-            
-              {{b.name}} | <span class="text-secondary">{{b.address_street_app}} {{b.address_num|default_if_none:''}}</span>
-            {% if b.top %}<br> <span class="text-secondary font-weight-bold"> Orders in progress</span>{% endif %}    
-        </label>
+            <input id="tab-btn-{{ b.pk }}" name="tab-btn" type="radio" value="">
+            <label onclick="menu_hide_show()" for="tab-btn-{{ b.pk }}">
+
+                  {{b.name}} | <span class="text-secondary">{{b.address_street_app}} {{b.address_num|default_if_none:''}}</span>
+                {% if b.top %}<br> <span class="text-secondary font-weight-bold"> Orders in progress</span>{% endif %}
+
+            </label>
         {% endfor %}
         <!--end menu apartments-->
+
         {% regroup order_list_by_apartments by apartment_id as ap_list %}
    
         {% for c in ap_list %}
@@ -110,22 +112,17 @@
                         {{ c.grouper.address_street_app }} {{ c.grouper.address_num }},
                         {{ c.grouper.address_city|choice_tag:'city' }}
                     </h5>
-                           <a href="../apartment/updatephotoapartment/{{ c.grouper.pk }}" class="h5 text-secondary mr-4 " >
-                <i class='far fa-file-image'></i>
-            </a>
-
-
-
                     <p class="text-secondary ">
-                        {{ c.grouper.notes|default_if_none:'' }}
-                        <a href="{% url 'apartment_update' c.grouper.pk %}" class="fas fa-pen text-secondary"
-                           title="update apartment"> Edit
-                        </a>
+                    <a href="../apartment/updatephotoapartment/{{ c.grouper.pk }}" class="h5 text-secondary mr-4 " >
+                        <i class='far fa-file-image'></i>
+                    </a>
+                    {{ c.grouper.notes|default_if_none:'' }}
+                    <a href="../apartment/updateapartment/{{ c.grouper.pk }}" class="fas fa-pen text-secondary"
+                       title="update apartment"> Edit
+                    </a>
                     </p>
-                    {% if c.grouper.foto %}
-                    <img src="../media/{{ c.grouper.foto }}"
+                    <img src="../media/images/appartment/{{ c.grouper.pk }}.jpg"
                          alt="" class="img-thumbnail" width="200">
-                    {% endif %}
                 </div>
                 <!-- end details about apartments-->
                 <!-- list of orders for a specific apartment -->
@@ -202,10 +199,15 @@
                         {{ q.address_num }},
                         {{ q.address_city|choice_tag:'city' }}
                     </h5>
+
                     <p class="text-secondary ">{{ q.notes|default_if_none:'' }}
-                        <a href="{% url 'apartment_update' q.pk %}" class="mycolor" title="изменить данные">
-                            <i class="fas fa-pen text-secondary"> </i>
-                        </a>
+                        <a href="../apartment/updatephotoapartment/{{ q.pk }}" class="h5 text-secondary mr-4 " >
+                        <i class='far fa-file-image'></i>
+                    </a>
+                    {{ c.grouper.notes|default_if_none:'' }}
+                    <a href="../apartment/updateapartment/{{ q.pk }}" class="fas fa-pen text-secondary"
+                       title="update apartment"> Edit
+                    </a>
                     </p>
                     {% if q.foto %}
                     <img src="../media/{{ q.foto }} "
@@ -218,10 +220,15 @@
                 <div class="col-lg-8 col-md-8 col-sm-12">
                     <div class="mt-1 mb-2 p-2  border-5 rounded">
                         <div id="button-form-{{ q.pk }}">
-                        <a id="toggleLinkq" class="fa fa-plus mycolor m-1"
-                           href="javascript:void(0)" onclick="viewdiv('form-{{ q.pk }}')">
+                            <button id="toggleLinkq" class="btn btn-lg btn-block fa fa-plus mycolor m-2 p-2"
+                           onclick="viewdiv('form-{{ q.pk }}')">
                             Add new request
-                        </a>
+                        </button>
+
+<!--                        <a id="toggleLinkq" class="fa fa-plus mycolor m-1"-->
+<!--                           href="javascript:void(0)" onclick="viewdiv('form-{{ q.pk }}')">-->
+<!--                            Add new request-->
+<!--                        </a>-->
                         </div>
                         <!-- form for order -->
                         <div id="form-{{ q.pk }}" style="display:none;" class="mb-5">

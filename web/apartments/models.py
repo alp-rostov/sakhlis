@@ -1,5 +1,7 @@
 from django.db import models
-
+from pathlib import Path
+import os
+from web.settings_prod  import BASE_DIR
 from app_site.constants import APART_CHOICES, CITY_CHOICES
 
 
@@ -32,10 +34,20 @@ class ApartmentPhoto(models.Model):
 
     photo = models.ImageField(upload_to="images/appartment/", null=True, blank=True, verbose_name='Photo:')
 
+    def save(self, *args, **kwargs):
+        filename=self.photo.name=str(self.id_apartments.pk)+'.jpg'
+        try:
+            os.remove(os.path.join(BASE_DIR, 'media/images/appartment', filename))
+        except FileNotFoundError:
+            pass
+        self.photo.name=str(self.id_apartments.pk)+'.jpg'
+        super().save(*args, **kwargs)
+        super().save()
+
+
     class Meta:
         verbose_name = 'Appartment_photo'
         verbose_name_plural = 'Appartments_photo'
-
 
 # class StreetTbilisi(models.Model):
 #     type_street = models.CharField(max_length=50)

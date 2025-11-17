@@ -51,14 +51,14 @@ class ApartmentList(PermissionRequiredMixin, LoginRequiredMixin, ListView):
         return self.filterset.qs
 
 
-class ApartmentUpdate(PermissionRequiredMixin, LoginRequiredMixin, UpdateView):
-    model = Apartment
-    template_name = 'repairer/apartment_update.html'
-    form_class = ApartentUpdateForm
-    permission_required = PERMISSION_FOR_REPAIER
-    # success_url = '/apartments/?address_city=&address_street_app='
-    def get_success_url(self):
-        return '/list_order/'+self.request.GET.get('pk')
+# class ApartmentUpdate(PermissionRequiredMixin, LoginRequiredMixin, UpdateView):
+#     model = Apartment
+#     template_name = 'repairer/apartment_update.html'
+#     form_class = ApartentUpdateForm
+#     permission_required = PERMISSION_FOR_REPAIER
+#     # success_url = '/apartments/?address_city=&address_street_app='
+#     def get_success_url(self):
+#         return '/list_order/'+self.request.GET.get('pk')
 
 
 
@@ -108,7 +108,7 @@ class InvoiceCreate(PermissionRequiredMixin, LoginRequiredMixin, DetailView):
             .get_previous_number_for_paginator_from_OrderList(pk=self.object.pk)
         InvoiceFormSet = modelformset_factory(Invoice, form=InvoiceForm, extra=0)
         formset = InvoiceFormSet(queryset=Invoice.objects.none())
-        context['form'] = formset                          # TODO refactor filter groups=2 is a group`s number 'repaier'
+        context['form'] = formset
         context['list_masters'] = User.objects.filter(groups=2).values('pk', 'username',
                                                                        'groups')
         try:

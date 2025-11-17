@@ -61,7 +61,7 @@ urlpatterns = [
     path('clients/qr', create_qr_code_client, name='qrclients'),
 
     path('apartments/', ApartmentList.as_view(), name='apartments'),
-    path('apartments/update/<int:pk>', ApartmentUpdate.as_view(), name='apart'),
+    # path('apartments/update/<int:pk>', ApartmentUpdate.as_view(), name='apart'),
 
     path('stat/', Statistica.as_view(), name='stat'),
     path('user/<int:pk>', RepairerDetailInformation.as_view(), name='user'),

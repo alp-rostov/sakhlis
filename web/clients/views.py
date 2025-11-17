@@ -4,7 +4,7 @@ from django.http import JsonResponse
 from django.views.generic import ListView, UpdateView, TemplateView, DetailView, CreateView
 from django.shortcuts import redirect, get_object_or_404
 
-from apartments.models import Apartment
+from apartments.models import Apartment, ApartmentPhoto
 
 from app_site.constants import PERMISSION_FOR_REPAIER, PERMISSION_FOR_OWNER
 from app_site.exeptions import BaseClassExeption
@@ -25,21 +25,22 @@ class OwnerDetailInformation(PermissionRequiredMixin, LoginRequiredMixin, Templa
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['prof'] = DataFromRepairerList().get_object_from_UserProfile(user=self.request.user)
-
+        prof = DataFromRepairerList().get_object_from_UserProfile(user=self.request.user)
         context['order_list_by_apartments'] = (
             OrderList.objects.only('time_in', 'text_order', 'apartment_id__address_street_app',
                                    'apartment_id__address_num', 'apartment_id__name',
                                    'apartment_id__address_city', 'apartment_id__foto', 'order_status',
                                    'repairer_id__username')
-            .filter(customer_id=context['prof'])
+            .filter(customer_id=prof)
             .order_by('apartment_id__address_street_app', '-time_in')
             .select_related('apartment_id', 'repairer_id')
         )
-        #  apartments` list for top buttons
+        # apartments` list for top buttons
         context['apartments'] = (Apartment.objects
-                                 .filter(owner=context['prof'])
-                                 .annotate(top=Subquery(Exists(OrderList.objects.filter(apartment_id=OuterRef('pk')).exclude(order_status='END'))))
+                                 .filter(owner=prof)
+                                 .annotate(
+                                            top=Subquery(Exists(OrderList.objects.filter(apartment_id=OuterRef('pk')).exclude(order_status='END'))),
+                                          )
                                  .only('pk', 'address_city', 'address_street_app', 'address_num', 'foto',
                                         'name')
                                  .order_by('name', 'address_street_app'))
@@ -47,6 +48,7 @@ class OwnerDetailInformation(PermissionRequiredMixin, LoginRequiredMixin, Templa
         list_app_ = set([i.get('apartment_id') for i in context['order_list_by_apartments'].values('apartment_id')])
         list_app = context['apartments'].exclude(pk__in=list_app_)
         context['list_app'] = list_app
+
         return context
 
 
@@ -133,12 +135,12 @@ class OwnerInvoice(PermissionRequiredMixin, LoginRequiredMixin, DetailView):
         return context
 
 
-class OwnerApartmentUpdate(PermissionRequiredMixin, LoginRequiredMixin, UpdateView):
-    model = Apartment
-    template_name = 'owner/apartment_update.html'
-    form_class = ApartentUpdateForm
-    permission_required = PERMISSION_FOR_OWNER
-    success_url = '../apartments'
+# class OwnerApartmentUpdate(PermissionRequiredMixin, LoginRequiredMixin, UpdateView):
+#     model = Apartment
+#     template_name = 'owner/apartment_update.html'
+#     form_class = ApartentUpdateForm
+#     permission_required = PERMISSION_FOR_OWNER
+#     success_url = '../apartments'
 
 
 class OwnerApartmentCreate(LoginRequiredMixin, CreateView):
