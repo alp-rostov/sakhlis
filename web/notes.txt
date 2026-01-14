@@ -1,3 +1,8 @@
+Python 3.11.13 (main, Nov 10 2011, 15:00:00) [GCC 13.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+
+
+
 Работа с пакетами
 pip freeze > requirements.txt  - create requirements
 pip install -r requirements.txt  - Install from the given requirements file..

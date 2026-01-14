@@ -5,7 +5,7 @@ from apartments.models import Apartment, ApartmentPhoto
 
 class ApartmentAdmin(admin.ModelAdmin):
     list_display = ('address_city', 'address_street_app', 'address_num',
-                    'name', 'type', 'owner', 'foto')
+                    'name', 'type', 'owner')
 
 class ApartmentPhotoAdmin(admin.ModelAdmin):
     list_display = ('id_apartments', 'photo')

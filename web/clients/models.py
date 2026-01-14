@@ -16,7 +16,7 @@ class UserProfile(models.Model):
     whatsapp = models.CharField(max_length=16, verbose_name='Whatsapp', null=True, blank=True)
     city = models.CharField(max_length=2, choices=CITY_CHOICES, default='TB')
     profile = models.CharField(max_length=1500, null=True, blank=True, verbose_name='About me:')
-    foto = models.ImageField(upload_to='images/', null=True, blank=True, verbose_name='Photo:')
+    # foto = models.ImageField(upload_to='images/', null=True, blank=True, verbose_name='Photo:')
     user = models.OneToOneField(User, on_delete=models.CASCADE, blank=True, null=True)
     class Meta:
         verbose_name = 'UserProfile'

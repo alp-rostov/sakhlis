@@ -54,7 +54,7 @@ class CustomerForm(forms.ModelForm):
 
     class Meta:
         model = UserProfile
-        fields = ('customer_name', 'phone', 'telegram', 'whatsapp', 'profile', 'foto', 'city')
+        fields = ('customer_name', 'phone', 'telegram', 'whatsapp', 'profile', 'city')
 
 
 class CustomerFormForModal(forms.ModelForm):

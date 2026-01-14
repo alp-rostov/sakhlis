@@ -13,10 +13,9 @@ from django.shortcuts import redirect, get_object_or_404
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
 from django.core.exceptions import ObjectDoesNotExist
-
 from apartments.models import ApartmentPhoto
 from clients.filters import ClientFilter
-from clients.form import CustomerForm, CustomerFormForModal
+from clients.form import CustomerForm
 from .constants import *
 from .filters import OrderFilter, ApartmentFilter
 from .forms import *
@@ -49,18 +48,6 @@ class ApartmentList(PermissionRequiredMixin, LoginRequiredMixin, ListView):
                                                                              'address_num').all()
         self.filterset = ApartmentFilter(self.request.GET, queryset)
         return self.filterset.qs
-
-
-# class ApartmentUpdate(PermissionRequiredMixin, LoginRequiredMixin, UpdateView):
-#     model = Apartment
-#     template_name = 'repairer/apartment_update.html'
-#     form_class = ApartentUpdateForm
-#     permission_required = PERMISSION_FOR_REPAIER
-#     # success_url = '/apartments/?address_city=&address_street_app='
-#     def get_success_url(self):
-#         return '/list_order/'+self.request.GET.get('pk')
-
-
 
 
 class Error404(TemplateView):
@@ -152,7 +139,6 @@ class OrderCreate(CreateView):
         context = super().get_context_data(**kwargs)
         context['form_appart'] = ApartmentForm
         context['form_customer'] = CustomerForm
-
         if self.request.user.is_authenticated and self.request.user.groups.first().name == 'owner':
             user_ = get_object_or_404(UserProfile, user=self.request.user)
         elif ((not self.request.user.is_authenticated or self.request.user.is_superuser)
@@ -163,7 +149,6 @@ class OrderCreate(CreateView):
                 return context
         else:
             return context
-
         context['form_appart'] = ApartmentFormOwner(person=user_)
         context['form_customer'] = ''
         # context['form_for_modal'] = CustomerFormForModal
@@ -278,11 +263,10 @@ class RepairerDetailInformation(PermissionRequiredMixin, LoginRequiredMixin, Tem
         context = super().get_context_data(**kwargs)
         context['form_order'] = OrderForm
         context['form_appart'] = ApartmentForm
-        context['form_customer'] = CustomerForm               # TODO refactor filter 2 is a group`s number 'repaier'
+        context['form_customer'] = CustomerForm
         context['list_masters'] = User.objects.filter(groups=2).values('pk', 'username', 'groups')
         context['orders'] = DataFromOrderList().get_data_from_OrderList_with_order_status(repairer=self.request.user,
-                                                                                          status_of_order=['SND',
-                                                                                                           'RCV'])
+                                                                                          status_of_order=['SND','RCV'])
         return context
 
 
@@ -439,7 +423,6 @@ def client_details_json(request, **kwargs):
                              'phone': data.phone,
                              'telegram': data.telegram,
                              'whatsapp': data.whatsapp,
-                             'foto': str(data.foto),
                              'profile': data.profile,
                              'orders': json_orders,
                              'apartment': json_apartment,

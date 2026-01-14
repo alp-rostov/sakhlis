@@ -25,11 +25,11 @@
     <div  class="row" >
         <div class="col-md-6 mb-2">
 
-            <a href="../apartment/updatephotoapartment/{{ b.pk }}" class="h5 text-secondary mr-4 " >
+            <a href="{% url 'updatephotoapartment' b.pk  %}" class="h5 text-secondary mr-4 " >
                 <i class='far fa-file-image'></i>
             </a>
 
-            <a href="update/{{ b.pk }}" class="h5 text-secondary " >
+            <a href="{% url 'updateapartment' b.pk  %}?pk=0" class="h5 text-secondary " >
                 {{ b }}
             </a>
         </div>

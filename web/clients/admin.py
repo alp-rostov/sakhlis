@@ -6,6 +6,6 @@ from clients.models import UserProfile
 class ClientsAdmin(admin.ModelAdmin):
     list_display = ('pk', 'customer_name', 'phone',
                     'telegram','whatsapp', 'city',
-                    'profile', 'foto', 'user', 'qrcode_id')
+                    'profile', 'user', 'qrcode_id')
 
 admin.site.register(UserProfile,  ClientsAdmin)

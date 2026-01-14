@@ -1,11 +1,8 @@
 from django.contrib.auth.mixins import PermissionRequiredMixin, LoginRequiredMixin
 from django.db.models import Exists, Subquery, OuterRef, Count, Sum, F
-from django.http import JsonResponse
 from django.views.generic import ListView, UpdateView, TemplateView, DetailView, CreateView
-from django.shortcuts import redirect, get_object_or_404
-
-from apartments.models import Apartment, ApartmentPhoto
-
+from django.shortcuts import redirect
+from apartments.models import Apartment
 from app_site.constants import PERMISSION_FOR_REPAIER, PERMISSION_FOR_OWNER
 from app_site.exeptions import BaseClassExeption
 from app_site.filters import OrderFilter
@@ -13,7 +10,6 @@ from app_site.forms import ApartentUpdateForm
 from app_site.models import OrderList, Invoice
 from app_site.repository import DataFromRepairerList, DataFromInvoice
 from app_site.views import OrderManagementSystem, OrderCreate
-
 from clients.filters import ClientFilter
 from clients.form import CustomerForm, CustomerFormForModal
 from clients.models import UserProfile
@@ -29,7 +25,7 @@ class OwnerDetailInformation(PermissionRequiredMixin, LoginRequiredMixin, Templa
         context['order_list_by_apartments'] = (
             OrderList.objects.only('time_in', 'text_order', 'apartment_id__address_street_app',
                                    'apartment_id__address_num', 'apartment_id__name',
-                                   'apartment_id__address_city', 'apartment_id__foto', 'order_status',
+                                   'apartment_id__address_city', 'order_status',
                                    'repairer_id__username')
             .filter(customer_id=prof)
             .order_by('apartment_id__address_street_app', '-time_in')
@@ -41,7 +37,7 @@ class OwnerDetailInformation(PermissionRequiredMixin, LoginRequiredMixin, Templa
                                  .annotate(
                                             top=Subquery(Exists(OrderList.objects.filter(apartment_id=OuterRef('pk')).exclude(order_status='END'))),
                                           )
-                                 .only('pk', 'address_city', 'address_street_app', 'address_num', 'foto',
+                                 .only('pk', 'address_city', 'address_street_app', 'address_num',
                                         'name')
                                  .order_by('name', 'address_street_app'))
         # detail info of apartments wich have no orders

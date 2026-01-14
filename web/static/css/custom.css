@@ -461,6 +461,10 @@ ul.servicesLinks {
 
 /* Carusel */
 
+.divphoto {
+    display: inline-block;
+}
+
 .owl-carousel .owl-nav button.owl-next,
 .owl-carousel .owl-nav button.owl-prev {
     font-size: 2.1rem;

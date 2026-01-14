@@ -5,10 +5,12 @@ from clients.models import UserProfile
 from .models import ApartmentPhoto, Apartment
 from .form import ApartmentFormAddPhoto, ApartmentFormUpdate
 
-def dict_choice_url(pk, usergroup):
+def dict_choice_url(pk, usergroup):  #TODO refactor this
     if pk is None:
         pk=' '
-    choice_url = {'repairer': '/list_order/'+pk, 'owner': '/client/'}
+    choice_url = {'repairer': '/list_order/' + pk, 'owner': '/client/'}
+    if pk=='0':
+        choice_url['repairer'] ='/user/51'
     return choice_url[usergroup]
 
 
