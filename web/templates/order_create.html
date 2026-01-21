@@ -1,12 +1,10 @@
 {% load static %}
 {% load slippers %}
-
 <!DOCTYPE html><html lang="ru" ><head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <!-- Fav Icon -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Мастер на час в Тбилиси | Мелкие ремонтные работы</title>
@@ -18,6 +16,9 @@
 	<meta property="og:image:width" content>
 	<meta property="og:image:height" content>
 	<meta property="og:site_name" content>
+
+    <link rel= "preconnect" href="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js" />
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <!-- Owl Carusel -->
@@ -28,27 +29,27 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 </head>
 
-<body id="top">
+<body>
 
 <!--Header-->
 {% #menu line='border_line_orange' %}
 
-<li class="nav-item mr-3 active">
-    <a class="nav-link" href="#section-0"><b>Главная </b><span class="sr-only">(current)</span></a>
+<li class="nav-item mr-3 active" >
+    <a class="nav-link" href="#section-0" ><strong>Главная </strong><span class="sr-only">(current)</span></a>
 </li>
-<li class="nav-item mr-3">
-    <a class="nav-link" href="#section-1">
+<li class="nav-item mr-3" >
+    <a class="nav-link" href="#section-1" >
         Услуги</a>
 </li>
-<li class="nav-item mr-3">
-    <a class="nav-link" href="#section-2">Фото</a>
+<li class="nav-item mr-3" >
+    <a class="nav-link" href="#section-2" >Фото</a>
 </li>
-<li class="nav-item mr-3">
-    <a class="nav-link" href="#section-3">О нас</a>
+<li class="nav-item mr-3" >
+    <a class="nav-link" href="#section-3" >О нас</a>
 </li>
 
-<li class="nav-item mr-3">
-    <a class="nav-link btn border border-white" href="{% url 'createorder'%}">Заказать ремонт
+<li class="nav-item mr-3" >
+    <a class="nav-link btn border border-white" href="{% url 'createorder'%}" aria-label="Форма для отправки заявки на ремонт">Заказать ремонт
     </a>
 
 </li>
@@ -70,7 +71,7 @@
     </li>
 {% else %}
     <li class="nav-item mr-4">
-        <a class="nav-link" href="{% url 'login' %}" title='Sign in'>
+        <a class="nav-link" href="{% url 'login' %}" title='Авторизация для зарегистрированных пользователей'>
             Авторизоваться
         </a>
     </li>
@@ -78,11 +79,10 @@
 
 {% /menu %}
 
-
 <header id="section-0" class="bg_img text-center">
     <div class="space">
         <div class="text-center">
-            <img src="{% static 'images/logo.png' %}" alt="Мастер на час в Тбилиси" class="logo mt-5" width="200">
+            <img src="{% static 'images/logo.png' %}" alt="Мастер на час в Тбилиси  - логотип" class="logo mt-5" width="200">
             <h1 class="display-4 mb-0" >Мастер на час в Тбилиси </h1>
             <p class="lead">Нужны мужские руки? Домашний мастер быстро решит <br>любые проблемы с ремонтом в квартире, доме и офисе!</p>
             {% if not request.user.is_authenticated %}
@@ -90,11 +90,11 @@
             <div class="lead" >
                     <h2>Написать мастеру </h2>
                     <!--Telegramm-->
-                    <a class="m-2" title="Telegram" href="https://t.me/+995598259119"><img src="{% static 'images/telegram.gif' %}" width="60" alt="Telegram"></a>
+                    <a class="m-2" aria-label="Связаться с мастером через Telegram" href="https://t.me/+995598259119"><img src="{% static 'images/telegram.gif' %}" width="60" alt="Telegram - иконка"></a>
                     <!--WhatsApp-->
-                    <a class="m-2" title="WhatsApp" href="https://wa.me/+79604458687"><img src="{% static 'images/whatsapp.png' %}" width="65" alt="WhatsApp"></a>
+                    <a class="m-2" aria-label="Связаться с мастером чперез WhatsApp" href="https://wa.me/+79604458687"><img src="{% static 'images/whatsapp.png' %}" width="65" alt="WhatsApp - иконка"></a>
                     <!--Instagram-->
-                    <a class="m-2" href="https://www.instagram.com/repairservicetbilisi/"><img src="{% static 'images/instagram.png' %}" width="70" alt="Instagram"></a>
+                    <a class="m-2" href="https://www.instagram.com/repairservicetbilisi/" aria-label="Instagram нашей компании"><img src="{% static 'images/instagram.png' %}" width="70" alt="Instagram иконка"></a>
             </div>
             {% endif %}
 
@@ -102,7 +102,7 @@
                 {% if request.user.groups.first.name == 'owner' %}
                 <br><a href="{% url 'profile' %}" class="btn-send btn-send-color p-3 h2 lead">Личный кабинет</a>
                 {% else %}
-                <a href="{% url 'createorder'%}" class="btn-send btn-send-color">Отправить заявку на ремонт</a><br>
+                <a href="{% url 'createorder'%}" class="btn-send btn-send-color" title="Форма для заявки на ремонтные работы">Отправить заявку на ремонт</a><br>
                 <a href="{% url 'business' %}" class="btn-send btn-send-color-b">Для корпоративных клиентов</a>
                 {% endif %}
             </div>
@@ -122,38 +122,38 @@
 
     <div class="container text-coor">
         <div class="row pb-4 m-1">
-            <div class="col-3 text-farme p-0"><img src="{% static 'images/1_.png' %}" alt="1" ></div>
+            <div class="col-3 text-farme p-0"><img src="{% static 'images/1_.png' %}" alt="logo1" ></div>
             <div class="col-9 text-farme frame_radius">Вы оставляете заказ в одном из мессенджеров
                     <a class="" title="Telegram" href="https://t.me/+995598259119"><img src="{% static 'images/telegram.gif' %}" width="30" alt="Telegram"></a>
                     <!--WhatsApp-->
                     <a class="" title="WhatsApp" href="https://wa.me/+79604458687"><img src="{% static 'images/whatsapp.png' %}" width="35" alt="WhatsApp"></a>
 
-                или заполняете <a class="mycolor font-weight-bold" href="{% url 'createorder'%}"><u>форму заказа</u></a> на сайте.</div>
+                или заполняете <a class="mycolor font-weight-bold" href="{% url 'createorder'%}">форму заказа</a> на сайте.</div>
         </div>
         <div class="row pb-4 m-1">
-            <div class="col-3 text-farme p-0"><img src="{% static 'images/2_.png' %}" alt="2" ></div>
+            <div class="col-3 text-farme p-0"><img src="{% static 'images/2_.png' %}" alt="logo2" ></div>
             <div class="col-9 text-farme frame_radius">
                 Мастер связывается с вами и, после уточнения всех деталей заказа, озвучивает стоимость и время выполнения работ.
             </div>
         </div>
         <div class="row pb-4 m-1">
-            <div class="col-3 text-farme p-0"><img src="{% static 'images/3_.png' %}" alt="3" ></div>
+            <div class="col-3 text-farme p-0"><img src="{% static 'images/3_.png' %}" alt="logo3" ></div>
             <div class="col-9 text-farme frame_radius">
                 В согласованное время мастер выполняет все необходимые работы.
             </div>
         </div>
 
         <div class="row pb-4 m-1">
-            <div class="col-3 text-farme p-0"><img src="{% static 'images/4_.png' %}" alt="4" ></div>
+            <div class="col-3 text-farme p-0"><img src="{% static 'images/4_.png' %}" alt="logo4" ></div>
             <div class="col-9 text-farme frame_radius">
-                Вы оплачиваете работу картой <img src="static/images/mastercard.svg" alt="mastercard" >
-                <img src="static/images/visa.svg" alt="visa"  > или наличными. Предоставление
-                <img src="{% static 'images/invoice.png' %}" alt="pdf-invoice" width="40" > счета на работы.
+                Вы оплачиваете работу картой <img src="static/images/mastercard.svg" alt="mastercard логотип" >
+                <img src="static/images/visa.svg" alt="visa логотир"  > или наличными.
+                <img src="{% static 'images/invoice.png' %}" alt="pdf-файл логотип" width="40" > счет на работы.
             </div>
         </div>
 
         <div class="row pb-4 m-1">
-            <div class="col-3 text-farme p-0"><img src="{% static 'images/5_.png' %}" alt="4" ></div>
+            <div class="col-3 text-farme p-0"><img src="{% static 'images/5_.png' %}" alt="logo5" ></div>
             <div class="col-9 text-farme frame_radius">
                 Вы получаете гарантию на выполненную работу.
             </div>
@@ -162,7 +162,6 @@
 </div>
         </div>
 </section>
-
 
 <!-- Services -->
 <section id="section-1" class="row_bg">
@@ -174,22 +173,22 @@
             <div class="col-12 columns mt-4">
                 <div class="owl-carousel owl-theme pt-5">
                     {% #card name_service="<a href='/electricianservices' class='text-secondary'>Услуги электрика</a>" name_service1="Ремонт выключателя, розетки" name_service2="Монтаж счетчика" name_service3="Прокладка электропроводки" %}
-                        <img src="{% static 'fonts/broken-cable.svg' %}" class="rounded-circle img-fluid">
+                        <img src="{% static 'fonts/broken-cable.svg' %}" class="rounded-circle img-fluid" alt="логотип Электрика">
                     {% /card %}
                     {% #card name_service="<a href='/plumbing' class='text-secondary'>Услуги сантехника</a>" name_service1="Устранение засора" name_service2="Установка раковины, унитаза, смесителя" name_service3="Устранение протечки крана"  %}
-                        <img src="{% static 'fonts/leak.svg' %}" class="rounded-circle img-fluid">
+                        <img src="{% static 'fonts/leak.svg' %}" class="rounded-circle img-fluid" alt="логотип Чистка канализации">
                     {% /card %}
                     {% #card name_service="Ремонт бытовой техники" name_service1="<a href='/dishwasher' class='text-secondary'>Посудомоечные машины</a>" name_service2="<a href='/repairwashingmachine' class='text-secondary'>Стиральные машины и сушильные машины</a>" name_service3="Духовки и печки"  %}
-                        <img src="{% static 'fonts/washing-machine.svg' %}" class="rounded-circle img-fluid">
+                        <img src="{% static 'fonts/washing-machine.svg' %}" class="rounded-circle img-fluid" alt="логотип Ремонт посудомойки и стиральных машин">
                     {% /card %}
                     {% #card name_service="<a href='/furniturerepair' class='text-secondary'>Реставрация и ремонт мебели</a>" name_service1="Ремонт поврежденных поверхностей" name_service2="Замена поврежденных элементов" name_service3="Сборка и монтаж мебели"  %}
-                        <img src="{% static 'fonts/living-room.svg' %}" class="rounded-circle img-fluid">
+                        <img src="{% static 'fonts/living-room.svg' %}" class="rounded-circle img-fluid" alt="логотип Ремонт мебели">
                     {% /card %}
                     {% #card name_service="Мелкий ремонт в квартире" name_service1="Монтаж карнизов и плинтусов" name_service2="Ремонт межкомнатных дверей" name_service3="Повесить картину, телевизор, люстру"  %}
-                        <img src="{% static 'fonts/living-room.svg' %}" class="rounded-circle img-fluid">
+                        <img src="{% static 'fonts/living-room.svg' %}" class="rounded-circle img-fluid" alt="логотип Ремонт дверей">
                     {% /card %}
                     {% #card name_service="<a href='/renovation' class='text-secondary'>Ремонт квартиры</a>" name_service1="Электрика / Сантехника" name_service2="Отделочные работы" name_service3="Установка бытовой техники"  %}
-                        <img src="{% static 'fonts/3d-buildings.svg' %}" class="rounded-circle img-fluid">
+                        <img src="{% static 'fonts/3d-buildings.svg' %}" class="rounded-circle img-fluid" alt="логотип Электрика / Сантехника">
                     {% /card %}
                 </div>
             </div>
@@ -207,14 +206,14 @@
         <h2 class="h1-responsive">Фото работ<strong class="mycolor"> "Мастер на час" </strong></h2>
 
         <div class="card" style="width: 18rem;    display: inline-block;">
-          <img src="{% static 'images/1.jpg' %}" class="card-img-top" alt="...">
+          <img src="{% static 'images/1.jpg' %}" class="card-img-top" alt="Установка проектора">
           <div class="card-body">
             <p class="card-text">Установка проектора и экрана</p>
           </div>
         </div>
 
         <div class="card" style="width: 18rem;     display: inline-block;">
-          <img src="{% static 'images/2.jpg' %}" class="card-img-top" alt="...">
+          <img src="{% static 'images/2.jpg' %}" class="card-img-top" alt="Монтаж кодового замка">
           <div class="card-body">
             <p class="card-text">Установка кодового замка</p>
           </div>
@@ -265,7 +264,6 @@
     </div>
     <!-- Container -->
 </section>
-<!-- Testimonials -->
 </section>
 <!-- And Foto -->
 
@@ -338,8 +336,8 @@
             </ul>
 
 
-            <p><i class="fas fa-quote-left pr-2"></i>Мы готовы приехать на вызов в <b>любое время в экстренной ситуации.</b></p>
-                        <h4><i class="fas fa-wrench fa-sm mr-3"></i>Режим работы: КРУГЛОСУТОЧНО! (в экстренной ситуации)</h4>
+            <p><i class="fas fa-quote-left pr-2"></i>Мы готовы приехать на вызов в <strong>любое время в экстренной ситуации.</strong></p>
+                        <h3><i class="fas fa-wrench fa-sm mr-3"></i>Режим работы: КРУГЛОСУТОЧНО! (в экстренной ситуации)</h3>
                         <p>Наша команда имеет многолетний опыт работы по данному направлению. Предлагаем только качественное решение вашей проблемы будь-то поломаный выключатель, скрипящая дверь, протекающая сантехника.</p>
                         <blockquote class="blockquote">
                             <p class="mb-0">Контактная информация: +995 598259119</p>
@@ -352,54 +350,21 @@
 </section>
 <!-- About Me -->
 
-
-
 <!-- Footer -->
-<footer class="footer_bg">
+<footer class="footer_bg" role="contentinfo">
        {% #footer address_title='Адрес' address_name='Тбилиси, ул.Зураба Патаридзе 8' phone_title='Контакты' write_to_us_title='Написать нам' master_title='Мастер на час в Тбилиси' %}
        {% /footer %}
 </footer>
 <!-- And Footer -->
 
-    <!-- Modal Window -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header text-center">
-                </div>
-                <div class="modal-body  mx-3">
-                    <div id="contact" class="form-container">
-                        <fieldset>
-                            <div id="message">
-				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">×</span>
-                                </button>
-				    </div><div id="answer"></div>
-                            {% #form form_order_=form form_appart_=form_appart form_customer_=form_customer %}
-                            {% csrf_token %}
-                            {% /form %}
-                        </fieldset>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- And Modal Window -->
-
-    <!-- jQuery first, then Bootstrap JS -->
+<!-- jQuery first, then Bootstrap JS -->
     <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <script src="{% static 'js/mdb.min.js' %}"></script>
-    <!-- Optional JavaScript -->
 
+    <!-- Optional JavaScript -->
     <script src="{% static 'js/owl.carousel.min.js' %}"></script>
     <script src="{% static 'js/jquery.malihu.PageScroll2id.min.js' %}"></script>
     <script src="{% static 'js/custom.js' %}"></script>
-	<script type="text/javascript">
-        $(document).ready(function() {
-            new WOW().init();
-        });
-    </script>
-
 
 </body></html>

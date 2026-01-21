@@ -1,12 +1,12 @@
    {% load static %}
 
-    <nav id="navigation-menu" class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar {{ line }}">
+    <nav id="navigation-menu" class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar {{ line }}" role="navigation">
         <div class="container">
-            <a class="navbar-brand" href="tel:+995598259119">+995 598-259-119</a>
+            <a class="navbar-brand" href="tel:+995598259119" aria-label="Phone number the Handyman">+995 598-259-119</a>
 
-		    <a href="{% url 'home' %}"><img src="{% static 'images/flag_ru.png' %}" class="flag" alt="ru"></a>
-            <a href="{% url 'home_en' %}"><img src="{% static 'images/flag_en.png' %}" class="flag" alt="en"></a>
-            <a href="{% url 'home_ge' %}"><img src="{% static 'images/flag_ge.png' %}" class="flag" alt-ge></a>
+		    <a href="{% url 'home' %}" aria-label="Русская версия сайта 'Мастер на час'" ><img src="{% static 'images/flag_ru.png' %}" class="flag" alt="Русская версия сайта 'Мастер на час'"></a>
+            <a href="{% url 'home_en' %}" aria-label="English version of the Handyman website"><img src="{% static 'images/flag_en.png' %}" class="flag" alt="English version of the Handyman website"></a>
+            <a href="{% url 'home_ge' %}" aria-label="Georgian version of the Handyman website"><img src="{% static 'images/flag_ge.png' %}" class="flag" alt="ხელოსნის ვებსაიტის ქართული ვერსია"></a>
 
 		    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

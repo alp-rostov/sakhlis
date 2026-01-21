@@ -3,7 +3,6 @@
 /*********************************************
 		Base css
 *********************************************/
-
 * {
     margin: 0;
     padding: 0;
@@ -152,13 +151,11 @@ section h1 {
 .r {
     display: flex;
 	justify-content: flex-end;
-
   }
 .pad {
     padding-top: 10px;
     padding-bottom: 10px;
     height: 100%;
-
 }
 
 .button-like {
@@ -189,13 +186,6 @@ section h1 {
     border: 1px solid;
     border-color: var(--span-color-corporate);
 }
-
-
-
-/*********************************************
-		Header css
-*********************************************/
-
 
 header {
 	height: 100vh;
@@ -271,7 +261,6 @@ header h1 {
 	transition: color 0.5s linear;
 }
 
-
 .btn-rounded {
     border-radius: 10em;
 }
@@ -285,17 +274,10 @@ header h1 {
     background-color: rgba(255, 255, 255, 0);
 }
 
-
-.btn.dropdown-toggle,
-.top-nav-collapse {
-    background-color: #1C2331!important;
-}
-
 a {
     text-decoration: none!important;
 	color: #fefefe;
 }
-
 
 .btn-order {
     font-weight: bold;
@@ -364,7 +346,6 @@ h1.display-4 {
     position: relative;
 }
 
-
 .mycolor {
 	color: var(--span-color);
 }
@@ -373,11 +354,9 @@ h1.display-4 {
 	color: var(--span-color);
 }
 
-
 .display-4 {
     font-weight: 800;
 }
-
 
 .lead {
     font-size: 1.50rem;
@@ -553,27 +532,6 @@ button:focus {
     transition: .4s;
 }
 
-.testimonial-carousel .carousel-control.left {
-    left: 6%;
-}
-
-.testimonial-carousel .carousel-control {
-    background-image: none;
-    top: 50%;
-    -webkit-transform: translateY(-35%);
-    -ms-transform: translateY(-35%);
-    transform: translateY(-35%);
-}
-
-
-/*********************************************
-		Modal Window css
-*********************************************/
-
-.md-form .prefix {
-    top: .25rem;
-    font-size: 1.50rem;
-}
 
 /*********************************************
 		Footer css
@@ -620,6 +578,9 @@ footer hr {
 .text-skype {
     color: #00A9E8;
 }
+
+
+
 
 /*****************************************
 		Media Screen
@@ -741,22 +702,17 @@ footer hr {
 }
 
 @media(min-width: 1025px) and (max-width: 1440px) {
-/*    .r {*/
-/* display: none;*/
-/*}*/
 
     .displ {
     font-size: 2.0rem;
     line-height: 1.2;
-}
+    }
 
     .logo {
         margin-top: 50px;
         margin-bottom: 0px;
         width: 150px;
     }
-
-
 
     .navbar {
         background-color: rgba(28, 35, 49, 0.93);
