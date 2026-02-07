@@ -1,22 +1,15 @@
 {% load static %}
-         <div class="item">
-          <div class="card testimonial-card">
-                                <div class="card-up services_gr">
+         <div class="col-lg-4 col-md-6 col-sm-12 card_border">
+                <div class="card_header">
+                    <h3 class="services_h">{{ name_service }}</h3>
+                    {{ children }}
+                </div>
+                <div class="card_body">
+                    <ul class="servicesLinks">
+                        <li>{{ name_service1 }}</li>
+                        <li>{{ name_service2 }}</li>
+                        <li>{{ name_service3 }}</li>
+                    </ul>
+                </div>
 
-                                </div>
-                                <div class="avatar mx-auto white">
-                                    {{ children }}
-                                </div>
-                                <div class="card-body">
-                                    <!--Name-->
-                                    <h3 class="services_h ">{{ name_service }}</h3>
-                                    <hr>
-                                    <ul class="servicesLinks">
-                                        <li>{{ name_service1 }}</li>
-                                        <li>{{ name_service2 }}</li>
-                                        <li>{{ name_service3 }}</li>
-                                    </ul>
-                                </div>
-
-                        </div>
              </div>

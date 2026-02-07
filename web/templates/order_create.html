@@ -167,31 +167,25 @@
 <section id="section-1" class="row_bg">
     <div class="container">
         <div class="position-relative">
-            <h2 class="h1-responsive">Услуга<strong class="mycolor">"Мастер на час"</strong></h2>
+            <h2 class="h1-responsive">Услуга <strong class="mycolor">"Мастер на час"</strong></h2>
         </div>
         <div class="row">
-            <div class="col-12 columns mt-4">
-                <div class="owl-carousel owl-theme pt-5">
-                    {% #card name_service="<a href='/electricianservices' class='text-secondary'>Услуги электрика</a>" name_service1="Ремонт выключателя, розетки" name_service2="Монтаж счетчика" name_service3="Прокладка электропроводки" %}
-                        <img src="{% static 'fonts/broken-cable.svg' %}" class="rounded-circle img-fluid" alt="логотип Электрика">
+                    {% #card name_service="Услуги электрика" name_service1="Ремонт выключателя, розетки" name_service2="Монтаж счетчика" name_service3="Прокладка электропроводки" %}
+<!--<a href='/electricianservices' class='text-secondary'>-->
+                    <img src="{% static 'images/electro1.jpg' %}" alt="" class="card_img">
+                    <img src="{% static 'images/electro2.jpg' %}" alt="" class="card_img">
+                    <img src="{% static 'images/electro3.jpg' %}" alt="" class="card_img">
                     {% /card %}
                     {% #card name_service="<a href='/plumbing' class='text-secondary'>Услуги сантехника</a>" name_service1="Устранение засора" name_service2="Установка раковины, унитаза, смесителя" name_service3="Устранение протечки крана"  %}
-                        <img src="{% static 'fonts/leak.svg' %}" class="rounded-circle img-fluid" alt="логотип Чистка канализации">
                     {% /card %}
                     {% #card name_service="Ремонт бытовой техники" name_service1="<a href='/dishwasher' class='text-secondary'>Посудомоечные машины</a>" name_service2="<a href='/repairwashingmachine' class='text-secondary'>Стиральные машины и сушильные машины</a>" name_service3="Духовки и печки"  %}
-                        <img src="{% static 'fonts/washing-machine.svg' %}" class="rounded-circle img-fluid" alt="логотип Ремонт посудомойки и стиральных машин">
                     {% /card %}
                     {% #card name_service="<a href='/furniturerepair' class='text-secondary'>Реставрация и ремонт мебели</a>" name_service1="Ремонт поврежденных поверхностей" name_service2="Замена поврежденных элементов" name_service3="Сборка и монтаж мебели"  %}
-                        <img src="{% static 'fonts/living-room.svg' %}" class="rounded-circle img-fluid" alt="логотип Ремонт мебели">
                     {% /card %}
                     {% #card name_service="Мелкий ремонт в квартире" name_service1="Монтаж карнизов и плинтусов" name_service2="Ремонт межкомнатных дверей" name_service3="Повесить картину, телевизор, люстру"  %}
-                        <img src="{% static 'fonts/living-room.svg' %}" class="rounded-circle img-fluid" alt="логотип Ремонт дверей">
                     {% /card %}
                     {% #card name_service="<a href='/renovation' class='text-secondary'>Ремонт квартиры</a>" name_service1="Электрика / Сантехника" name_service2="Отделочные работы" name_service3="Установка бытовой техники"  %}
-                        <img src="{% static 'fonts/3d-buildings.svg' %}" class="rounded-circle img-fluid" alt="логотип Электрика / Сантехника">
                     {% /card %}
-                </div>
-            </div>
         </div>
     </div>
 </section>
