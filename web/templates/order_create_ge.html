@@ -21,8 +21,6 @@
 	<meta property="og:site_name" content>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    <!-- Owl Carusel -->
-    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
     <!-- Custom Stylesheets -->
     <link rel="stylesheet" href="{% static 'css/custom.css' %}">
 
@@ -75,7 +73,7 @@
 {% /menu %}
 
 
-<header id="section-0" class="bg_img jarallax text-center" data-jarallax="{'speed': 0.2}">
+<header id="section-0" class="bg_img text-center">
     <div class="space">
         <div class="text-center">
             <img src="{% static 'images/logo.png' %}" alt="Мастер на час в Тбилиси" class="logo mt-5" width="200">
@@ -108,7 +106,7 @@
 <!--And Header-->
 
 
-<section id="section-14" class="row_bg">
+<section id="section-14">
     <div class="container">
         <div class="position-relative">
     <h2 class="h1-responsive mb-4">
@@ -168,28 +166,33 @@
             <h2 class="h1-responsive">სერვისი<strong class="mycolor">"ოსტატი ერთი საათის განმავლობაში"</strong></h2>
         </div>
         <div class="row">
-            <div class="col-12 columns mt-4">
-                <div class="owl-carousel owl-theme pt-5">
                     {% #card name_service="ელექტრიკოსის მომსახურება" name_service1="გადამრთველის, სოკეტის შეკეთება" name_service2="მრიცხველის მონტაჟი" name_service3="გაყვანილობა" %}
-                        <img src="{% static 'fonts/broken-cable.svg' %}" class="rounded-circle img-fluid">
+                    <img src="{% static 'images/electro1.png' %}" alt="" class="card_img">
+                    <img src="{% static 'images/electro2.png' %}" alt="" class="card_img">
+                    <img src="{% static 'images/electro3.png' %}" alt="" class="card_img">
                     {% /card %}
                     {% #card name_service="სანტექნიკის მომსახურება" name_service1="ბლოკირების მოცილება" name_service2="ნიჟარის, ნიჟარის, ტუალეტის, ონკანის დაყენება" name_service3="გაჟონვის ონკანის შეკეთება"  %}
-                        <img src="{% static 'fonts/leak.svg' %}" class="rounded-circle img-fluid">
+                        <img src="{% static 'images/plumber1.png' %}" alt="" class="card_img">
+                        <img src="{% static 'images/plumber2.png' %}" alt="" class="card_img">
+                        <img src="{% static 'images/plumber3.png' %}" alt="" class="card_img">
                     {% /card %}
                     {% #card name_service="ავეჯის აწყობა" name_service1="კარადები, დივნები, სამზარეულოები" name_service2="ჩაშენებული ტექნოლოგიის მონტაჟი" name_service3="ტვირთის ატანა სართულზე"  %}
-                        <img src="{% static 'fonts/living-room.svg' %}" class="rounded-circle img-fluid">
-                    {% /card %}
+                        <img src="{% static 'images/repair1.png' %}" alt="" class="card_img">
+                        <img src="{% static 'images/repair2.png' %}" alt="" class="card_img">
+                        <img src="{% static 'images/repair3.png' %}" alt="" class="card_img">{% /card %}
                     {% #card name_service="მცირე რემონტი ბინაში" name_service1="კარნიზების და საფენების მონტაჟი" name_service2="შიდა კარების შეკეთება" name_service3="სურათის დაკიდვა კედელზე, ტელევიზორი, ჭაღი"  %}
-                        <img src="{% static 'fonts/living-room.svg' %}" class="rounded-circle img-fluid">
-                    {% /card %}
+                        <img src="{% static 'images/furniture1.png' %}" alt="" class="card_img">
+                        <img src="{% static 'images/furniture2.png' %}" alt="" class="card_img">
+                        <img src="{% static 'images/furniture3.png' %}" alt="" class="card_img">{% /card %}
                     {% #card name_service="საყოფაცხოვრებო ტექნიკის მონტაჟი" name_service1="გაყოფილი სისტემები" name_service2="მაცივრები" name_service3="სარეცხი მანქანები"  %}
-                        <img src="{% static 'fonts/washing-machine.svg' %}" class="rounded-circle img-fluid">
+                        <img src="{% static 'images/flat1.png' %}" alt="" class="card_img">
+                        <img src="{% static 'images/flat2.png' %}" alt="" class="card_img">
+                        <img src="{% static 'images/flat3.png' %}" alt="" class="card_img">
                     {% /card %}
                     {% #card name_service="ოფისის მცირე რემონტი" name_service1="საოფისო ავეჯი" name_service2="წყლის გამაგრილებლების მოვლა: გაწმენდა, შეკეთება" name_service3="სპლიტ სისტემის მოვლა"  %}
-                        <img src="{% static 'fonts/3d-buildings.svg' %}" class="rounded-circle img-fluid">
-                    {% /card %}
-                </div>
-            </div>
+                        <img src="{% static 'images/install1.png' %}" alt="" class="card_img">
+                        <img src="{% static 'images/install2.png' %}" alt="" class="card_img">
+                        <img src="{% static 'images/install3.png' %}" alt="" class="card_img">{% /card %}
         </div>
     </div>
 </section>
@@ -323,7 +326,6 @@
 
     <!-- Optional JavaScript -->
 
-    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
     <script src="{% static 'js/jquery.malihu.PageScroll2id.min.js' %}"></script>
     <script src="{% static 'js/custom.js' %}"></script>
 

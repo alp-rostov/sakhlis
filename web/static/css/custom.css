@@ -394,12 +394,10 @@ h3.services_h {
 }
 
 .card_img {
-  border-radius: 50%;
-  width:50px;
-  max-width: 100%;
   margin-top:0;
-  margin-left: 25px;
+  margin-left: 15px;
   margin-bottom:15px;
+  width:50px;
 }
 
 .card_header{
@@ -417,15 +415,9 @@ h3.services_h {
     font-weight: 400;
 }
 
-
-
-
 ul,
 ul.servicesLinks {
-    /*list-style: none;*/
-}
-
-.servicesLinks {
+    list-style-image:url(../images/pic-list.png);
     position: relative;
     margin-left: 80px;
     margin-bottom: 20px;
@@ -433,19 +425,6 @@ ul.servicesLinks {
 
 }
 
-.btn-wrap {
-  white-space: normal;
-}
-
-/*.servicesLinks li:before {*/
-/*    content: "\27A5";*/
-/*    font-family: 'FontAwesome';*/
-/*    position: absolute;*/
-/*    top: 0;*/
-/*    left: 0;*/
-/*    font-size: 18px;*/
-/*    color: var(--span-color);*/
-/*}*/
 
 
 /* Carusel */
@@ -508,14 +487,6 @@ button:focus {
 .owl-carousel .owl-stage-outer {
     margin-top: 20px;
 }
-
-/*********************************************
-		About css
-*********************************************/
-
-/*.about-text {*/
-/*    color: var(--span-color);*/
-/*}*/
 
 /*********************************************
 		Testimonials css
@@ -588,8 +559,6 @@ footer hr {
 .text-skype {
     color: #00A9E8;
 }
-
-
 
 
 /*****************************************

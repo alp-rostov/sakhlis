@@ -21,8 +21,6 @@
 	<meta property="og:site_name" content>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    <!-- Owl Carusel -->
-    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
     <!-- Custom Stylesheets -->
     <link rel="stylesheet" href="{% static 'css/custom.css' %}">
 
@@ -78,7 +76,7 @@
 {% /menu %}
 
 
-<header id="section-0" class="bg_img text-center" data-jarallax="{'speed': 0.2}">
+<header id="section-0" class="bg_img text-center">
     <div class="space">
         <div class="text-center">
             <img src="{% static 'images/logo.png' %}" alt="Мастер на час в Тбилиси" class="logo mt-5" width="200">
@@ -87,11 +85,11 @@
             <br><u>Write to the repairman</u></p>
             <div class="lead" >
                 <!--Telegramm-->
-                <a class="m-2" title="Telegram" href="https://t.me/+995598259119"><img src="{% static 'images/telegram.gif' %}" width="60" alt="Telegram"></a>
+                <a class="m-2" aria-label="Contact the specialist via Telegram" href="https://t.me/+995598259119"><img src="{% static 'images/telegram.gif' %}" width="60" alt="Telegram"></a>
                 <!--WhatsApp-->
-                <a class="m-2" title="WhatsApp" href="https://wa.me/+79604458687"><img src="{% static 'images/whatsapp.png' %}" width="65" alt="WhatsApp"></a>
+                <a class="m-2" aria-label="Contact the specialist via WhatsApp" href="https://wa.me/+79604458687"><img src="{% static 'images/whatsapp.png' %}" width="65" alt="WhatsApp"></a>
                 <!--Instagram-->
-                <a class="m-2" href="https://www.instagram.com/repairservicetbilisi/"><img src="{% static 'images/instagram.png' %}" width="70" alt="Instagram"></a>
+                <a class="m-2" aria-label="Our company's Instagram" href="https://www.instagram.com/repairservicetbilisi/"><img src="{% static 'images/instagram.png' %}" width="70" alt="Instagram"></a>
             </div>
             <div class="flex-center">
                 {% if request.user.groups.first.name == 'owner' %}
@@ -122,11 +120,11 @@
         <div class="row pb-4 m-1">
             <div class="col-3 text-farme p-0"><img src="{% static 'images/1_.png' %}" alt="1" ></div>
             <div class="col-9 text-farme frame_radius">You submit the order from messenger
-                    <a class="" title="Telegram" href="https://t.me/+995598259119"><img src="{% static 'images/telegram.gif' %}" width="30" alt="Telegram"></a>
+                    <a class="" aria-label="Contact the specialist via Telegram" href="https://t.me/+995598259119"><img src="{% static 'images/telegram.gif' %}" width="30" alt="Telegram"></a>
                     <!--WhatsApp-->
-                    <a class="" title="WhatsApp" href="https://wa.me/+79604458687"><img src="{% static 'images/whatsapp.png' %}" width="35" alt="WhatsApp"></a>
+                    <a class="" aria-label="Contact the specialist via WhatsApp" href="https://wa.me/+79604458687"><img src="{% static 'images/whatsapp.png' %}" width="35" alt="WhatsApp"></a>
 
-                or input data using <a class="mycolor font-weight-bold" href="{% url 'createorder_en'%}"><u>the form</u></a> on the website.</div>
+                or input data using <a class="mycolor font-weight-bold" href="{% url 'createorder_en'%}"><u>our order form</u></a> on the website.</div>
         </div>
         <div class="row pb-4 m-1">
             <div class="col-3 text-farme p-0"><img src="{% static 'images/2_.png' %}" alt="2" ></div>
@@ -145,9 +143,7 @@
             <div class="col-3 text-farme p-0"><img src="{% static 'images/4_.png' %}" alt="4" ></div>
             <div class="col-9 text-farme frame_radius">
                 You pay for the work by card  <img src="static/images/mastercard.svg" alt="mastercard" >
-                <img src="static/images/visa.svg" alt="visa"  > or cash. You can receive an <img src="{% static 'images/invoice.png' %}" alt="pdf-invoice" width="40" >
-                invoice for performed works
-                .
+                <img src="static/images/visa.svg" alt="visa"> or cash.
             </div>
         </div>
 
@@ -165,40 +161,49 @@
 
 
 <!-- Services -->
-<section id="section-1" class="row_bg">
+<section id="section-1">
     <div class="container">
         <div class="position-relative">
             <h2 class="h1-responsive">Service<strong class="mycolor">"Master for an hour"</strong></h2>
         </div>
         <div class="row">
-            <div class="col-12 columns mt-4">
-                <div class="owl-carousel owl-theme pt-5">
-                    {% #card name_service="<a href='/electricianservices_en' class='text-secondary'>Electrician services</a>" name_service1="Electric meter installation" name_service2="Repair of switch and lamp" name_service3="Electrical wiring" %}
-                        <img src="{% static 'fonts/broken-cable.svg' %}" class="rounded-circle img-fluid">
+                    {% #card name_service="Electrician services" name_service1="Electric meter installation" name_service2="Repair of switch and lamp" name_service3="Electrical wiring" %}
+                    <a href='/electricianservices_en' class='text-secondary' aria-label="Electrical installation work: more about services">
+                    <img src="{% static 'images/electro1.png' %}" alt="" class="card_img">
+                    <img src="{% static 'images/electro2.png' %}" alt="" class="card_img">
+                    <img src="{% static 'images/electro3.png' %}" alt="" class="card_img">
+                    </a>
                     {% /card %}
-                    {% #card name_service="<a href='/plumbing_en' class='text-secondary'>Plumber services</a>" name_service1="Elimination of pipe blockage" name_service2="Installation of sink, toilet, water taps" name_service3="Laying of water pipes"  %}
-                        <img src="{% static 'fonts/leak.svg' %}" class="rounded-circle img-fluid">
+                    {% #card name_service="Plumber services" name_service1="Elimination of pipe blockage" name_service2="Installation of sink, toilet, water taps" name_service3="Laying of water pipes"  %}
+                    <a href='/plumbing_en' class='text-secondary' aria-label="Plumber services: more about services">
+                        <img src="{% static 'images/plumber1.png' %}" alt="" class="card_img">
+                        <img src="{% static 'images/plumber2.png' %}" alt="" class="card_img">
+                        <img src="{% static 'images/plumber3.png' %}" alt="" class="card_img">
+                    </a>
                     {% /card %}
                     {% #card name_service="Repair of household appliances" name_service1="<a href='/dishwasher_en' class='text-secondary'>Dishwashers</a>" name_service2="<a href='/repairwashingmachine_en' class='text-secondary'>Washing machines and dryers</a>" name_service3="Ovens and stoves"  %}
-                        <img src="{% static 'fonts/washing-machine.svg' %}" class="rounded-circle img-fluid">
+                        <img src="{% static 'images/repair1.png' %}" alt="" class="card_img">
+                        <img src="{% static 'images/repair2.png' %}" alt="" class="card_img">
+                        <img src="{% static 'images/repair3.png' %}" alt="" class="card_img">
                     {% /card %}
-
-                    {% #card name_service="<a href='/furniturerepair_en' class='text-secondary'>Furniture repair and restoration</a>" name_service1="Repair of damaged surfaces" name_service2="Replacement of damaged elements" name_service3="Furniture assembly and installation"  %}
-                        <img src="{% static 'fonts/living-room.svg' %}" class="rounded-circle img-fluid">
+                    {% #card name_service="Furniture repair and restoration" name_service1="Repair of damaged surfaces" name_service2="Replacement of damaged elements" name_service3="Furniture assembly and installation"  %}
+                    <a href='/furniturerepair_en' class='text-secondary' aria-label="Furniture repair and restoration: more about services">
+                        <img src="{% static 'images/furniture1.png' %}" alt="" class="card_img">
+                        <img src="{% static 'images/furniture2.png' %}" alt="" class="card_img">
+                        <img src="{% static 'images/furniture3.png' %}" alt="" class="card_img">
+                    </a>
                     {% /card %}
-
-
                     {% #card name_service="Minor repairs in the apartment" name_service1="Installation of cornices, skirting boards" name_service2="Appartment`s door repair" name_service3="Hang a picture, TV, chandelier"  %}
-                        <img src="{% static 'fonts/living-room.svg' %}" class="rounded-circle img-fluid">
+                        <img src="{% static 'images/flat1.png' %}" alt="" class="card_img">
+                        <img src="{% static 'images/flat2.png' %}" alt="" class="card_img">
+                        <img src="{% static 'images/flat3.png' %}" alt="" class="card_img">
+
                     {% /card %}
                     {% #card name_service="Installation of house devices" name_service1="Air conditioner" name_service2="Fridge" name_service3="Washing machine"  %}
-                        <img src="{% static 'fonts/washing-machine.svg' %}" class="rounded-circle img-fluid">
+                        <img src="{% static 'images/install1.png' %}" alt="" class="card_img">
+                        <img src="{% static 'images/install2.png' %}" alt="" class="card_img">
+                        <img src="{% static 'images/install3.png' %}" alt="" class="card_img">
                     {% /card %}
-                    {% #card name_service="Minor office repairs" name_service1="Office furniture" name_service2="Service and repair of air conditioner" name_service3="Air conditioning service"  %}
-                        <img src="{% static 'fonts/3d-buildings.svg' %}" class="rounded-circle img-fluid">
-                    {% /card %}
-                </div>
-            </div>
         </div>
     </div>
 </section>
@@ -332,7 +337,6 @@
 
     <!-- Optional JavaScript -->
 
-    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
     <script src="{% static 'js/jquery.malihu.PageScroll2id.min.js' %}"></script>
     <script src="{% static 'js/custom.js' %}"></script>
 
