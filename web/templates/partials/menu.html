@@ -1,9 +1,9 @@
    {% load static %}
 
     <nav id="navigation-menu" class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar {{ line }}" role="navigation">
+           <a href="#" onclick="document.getElementById('targetLink').focus(); return false;" class=" navbar-brand skip-link">Skip to content</a>
         <div class="container">
             <a class="navbar-brand" href="tel:+995598259119" aria-label="Phone number the Handyman">+995 598-259-119</a>
-
 		    <a href="{% url 'home' %}" aria-label="Русская версия сайта 'Мастер на час'" ><img src="{% static 'images/flag_ru.png' %}" class="flag" alt="Русская версия сайта 'Мастер на час'"></a>
             <a href="{% url 'home_en' %}" aria-label="English version of the Handyman website"><img src="{% static 'images/flag_en.png' %}" class="flag" alt="English version of the Handyman website"></a>
             <a href="{% url 'home_ge' %}" aria-label="Georgian version of the Handyman website"><img src="{% static 'images/flag_ge.png' %}" class="flag" alt="ხელოსნის ვებსაიტის ქართული ვერსია"></a>

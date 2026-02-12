@@ -28,7 +28,6 @@
 </head>
 
 <body>
-
 <!--Header-->
 {% #menu line='border_line_orange' %}
 
@@ -80,7 +79,7 @@
     <div class="space">
         <div class="text-center">
             <img src="{% static 'images/logo.png' %}" alt="Мастер на час в Тбилиси  - логотип" class="logo mt-5" width="200">
-            <h1 class="display-4 mb-0" >Мастер на час в Тбилиси </h1>
+            <h1 class="display-4 mb-0" tabindex="0" id="targetLink">Мастер на час в Тбилиси </h1>
             <p class="lead">Нужны мужские руки? Домашний мастер быстро решит <br>любые проблемы с ремонтом в квартире, доме и офисе!</p>
             {% if not request.user.is_authenticated %}
 
@@ -113,7 +112,7 @@
 <section id="section-14" class="row_bg">
     <div class="container">
         <div class="position-relative">
-    <h2 class="h1-responsive mb-4"><strong class="mycolor">Как мы работаем?</strong>
+    <h2 class="h1-responsive mb-4"tabindex="0"><strong class="mycolor">Как мы работаем?</strong>
         в компании "Мастер на час"
     </h2>
 
@@ -163,7 +162,7 @@
 <section id="section-1">
     <div class="container">
         <div class="position-relative">
-            <h2 class="h1-responsive">Услуга <strong class="mycolor">"Мастер на час"</strong></h2>
+            <h2 class="h1-responsive" tabindex="0">Услуга <strong class="mycolor">"Мастер на час"</strong></h2>
         </div>
         <div class="row">
                     {% #card name_service="Услуги электрика" name_service1="Ремонт выключателя, розетки" name_service2="Монтаж счетчика" name_service3="Прокладка электропроводки" %}
@@ -213,7 +212,7 @@
 <section class="text-center cloudy-knoxville-gradient">
     <div class="container">
         <!-- Section heading -->
-        <h2 class="h1-responsive">Фото работ<strong class="mycolor"> "Мастер на час" </strong></h2>
+        <h2 class="h1-responsive" tabindex="0">Фото работ<strong class="mycolor"> "Мастер на час" </strong></h2>
 
         <div class="card" style="width: 18rem;    display: inline-block;">
           <img src="{% static 'images/1.jpg' %}" class="card-img-top" alt="Установка проектора">
@@ -280,7 +279,7 @@
 <!-- How I work -->
 <section id="section-3">
 
-    <h2 class="h1-responsive">
+    <h2 class="h1-responsive" tabindex="0">
         Мастер на час в Тбилиси:
         <strong class="mycolor">
             принципы работы
@@ -338,7 +337,7 @@
 <section id="section-4">
     <div class="container">
         <div class="position-relative">
-            {% #about_me head="«Мастер на час»<strong class='mycolor'> всегда на связи</strong>" %}
+            {% #about_me head="«Мастер на час»<strong  class='mycolor'> всегда на связи</strong>" %}
             <ul>
             <li>Пн-Пт: 9.00-18.00
             <li>Суб: 9.00-15.00

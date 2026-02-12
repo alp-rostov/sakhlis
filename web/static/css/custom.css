@@ -24,6 +24,8 @@ body {
 	height: 100%;
 }
 
+
+
 h1,
 h2,
 h3,
@@ -39,10 +41,16 @@ h2, h3{
     position: relative;
 }
 
-a:hover, a:focus, a:active {
+a:hover, a:active {
       text-decoration: none;
-      color: inherit;
+      border: none;
  }
+
+h2:focus, button:focus, textarea:focus, input:focus, a:focus {
+    border: 4px;
+    border-color:  var(--span-color);
+    border-style: dashed;
+}
 
  a {
 	 color: #fefefe;
@@ -433,86 +441,9 @@ ul.servicesLinks {
     display: inline-block;
 }
 
-.owl-carousel .owl-nav button.owl-next,
-.owl-carousel .owl-nav button.owl-prev {
-    font-size: 2.1rem;
-    color: #343A40;
-    background: #b7c6c9;
-    width: 40px;
-    height: 40px;
-    top: 26px;
-    line-height: 1;
-}
-
-.owl-carousel .owl-nav button.owl-next:hover,
-.owl-carousel .owl-nav button.owl-prev:hover {
-    background: var(--span-color);
-    transition: background 1s, color 1s;
-    color: #fafafa;
-}
-
-.owl-theme .owl-nav {
-    position: absolute;
-    top: -4%;
-    left: 50%;
-    margin-left: -50px;
-}
-
-.owl-theme .owl-nav [class*=owl-]:hover {
-    background: rgba(134, 151, 145, 0);
-    color: var(--span-color);
-    text-decoration: none;
-}
-
 button:focus {
     outline: 0px auto -webkit-focus-ring-color;
 }
-
-.owl-theme .owl-dots .owl-dot.active {
-    display: inline-block;
-    zoom: 1.1;
-    transition: zoom 1s;
-}
-
-.owl-theme .owl-dots .owl-dot.active span,
-.owl-theme .owl-dots .owl-dot:hover span {
-    background: var(--span-color);
-    transition: background 1s;
-}
-
-.owl-theme .owl-dots {
-    margin-top: 30px;
-}
-
-.owl-carousel .owl-stage-outer {
-    margin-top: 20px;
-}
-
-/*********************************************
-		Testimonials css
-*********************************************/
-
-.testimonial-carousel .carousel-control.left:before {
-    content: "\2039";
-}
-
-.testimonial-carousel .carousel-control.right:before {
-    content: "\203a";
-}
-
-.testimonial-carousel .testimonial {
-    margin-right: 23%;
-    margin-left: 23%;
-}
-
-.testimonial-carousel .carousel-control:before {
-    font-size: 5rem;
-    color: rgba(0, 0, 0, .6);
-    -webkit-transition: .4s;
-    -o-transition: .4s;
-    transition: .4s;
-}
-
 
 /*********************************************
 		Footer css
@@ -552,13 +483,35 @@ footer hr {
 .footer-copyright a:hover {
 	color: rgba(245, 177, 110, 0.3);
 }
-.text-viber {
-    color: #574E92;
+
+
+
+
+
+
+
+.skip-link {
+
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  padding:10px;
+}
+.skip-link:focus {
+  position: static;
+  width: auto;
+  height: auto;
 }
 
-.text-skype {
-    color: #00A9E8;
-}
+
+
+
+
+
+
 
 
 /*****************************************
