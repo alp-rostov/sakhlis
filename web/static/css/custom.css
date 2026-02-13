@@ -63,7 +63,6 @@ section {
 
 section h1 {
     font-family: Cygre-ExtraBold;
-    line-height: 68.94px;
     color: #FFFFFF;
 }
 
@@ -209,10 +208,18 @@ header + div {
 
 header h1 {
     font-family: Cygre-ExtraBold;
-    line-height: 68.94px;
     color: #FFFFFF;
 }
 
+.border_head {
+    margin: 0 auto;
+    width: 60%;
+    border: 3px solid;
+    border-color:var(--span-color);
+    border-radius:20px;
+    backdrop-filter: blur(100px);
+    padding:5px;
+}
 .displ {
     font-size: 3.0rem;
     line-height: 1.2;
@@ -221,7 +228,7 @@ header h1 {
 
 .bg_img {
     background-image: linear-gradient(
-        rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.48)), url(../images/master-na-chas_1.jpg);
+        rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.48)), url(../images/muzg-na-chas1.jpg);
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: cover;
@@ -369,7 +376,8 @@ h1.display-4 {
 .lead {
     font-size: 1.50rem;
     font-weight: 400;
-    color: rgb(244, 244, 244);
+    color: rgb(255, 255, 255);
+
 }
 
 .space {
@@ -520,7 +528,11 @@ footer hr {
 
 @media(min-width: 320px) and (max-width: 576px) {
     .r {
- display: none;
+     display: none;
+    }
+
+.border_head {
+    width: 100%;
 }
 
     .text-coor {
@@ -550,7 +562,7 @@ footer hr {
     }
 
     .lead {
-        font-size: 1.0rem;
+        font-size: 1.2rem;
     }
 
     .logo {
@@ -572,7 +584,11 @@ footer hr {
 
 @media(min-width: 577px) and (max-width: 767.8px) {
     .r {
- display: none;
+         display: none;
+    }
+
+.border_head {
+    width: 100%;
 }
 
 
@@ -605,6 +621,10 @@ footer hr {
 @media(min-width: 768px) and (max-width: 1024px) {
     .r {
  display: none;
+}
+
+.border_head {
+    width: 100%;
 }
 
       .navbar {

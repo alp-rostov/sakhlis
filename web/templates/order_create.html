@@ -75,35 +75,34 @@
 
 {% /menu %}
 
-<header id="section-0" class="bg_img text-center">
-    <div class="space">
-        <div class="text-center">
-            <img src="{% static 'images/logo.png' %}" alt="Мастер на час в Тбилиси  - логотип" class="logo mt-5" width="200">
-            <h1 class="display-4 mb-0" tabindex="0" id="targetLink">Мастер на час в Тбилиси </h1>
-            <p class="lead">Нужны мужские руки? Домашний мастер быстро решит <br>любые проблемы с ремонтом в квартире, доме и офисе!</p>
-            {% if not request.user.is_authenticated %}
-
-            <div class="lead" >
-                    <h2>Написать мастеру </h2>
-                    <!--Telegramm-->
-                    <a class="m-2" aria-label="Связаться с мастером через Telegram" href="https://t.me/+995598259119"><img src="{% static 'images/telegram.gif' %}" width="60" alt="Telegram - иконка"></a>
-                    <!--WhatsApp-->
-                    <a class="m-2" aria-label="Связаться с мастером чперез WhatsApp" href="https://wa.me/+79604458687"><img src="{% static 'images/whatsapp.png' %}" width="65" alt="WhatsApp - иконка"></a>
-                    <!--Instagram-->
-                    <a class="m-2" aria-label="Instagram нашей компании" href="https://www.instagram.com/repairservicetbilisi/"><img src="{% static 'images/instagram.png' %}" width="70" alt="Instagram иконка"></a>
-            </div>
-            {% endif %}
-
-            <div class="flex-center">
-                {% if request.user.groups.first.name == 'owner' %}
-                <br><a href="{% url 'profile' %}" class="btn-send btn-send-color p-3 h2 lead">Личный кабинет</a>
-                {% else %}
-                <a href="{% url 'createorder'%}" class="btn-send btn-send-color">Отправить заявку на ремонт</a><br>
-                <a href="{% url 'business' %}" class="btn-send btn-send-color-b">Для корпоративных клиентов</a>
-                {% endif %}
-            </div>
+<header id="section-0" class="bg_img">
+    <div class="space text-center">
+        <img src="{% static 'images/logo.png' %}" alt="Мастер на час в Тбилиси  - логотип" class="logo mt-5" width="200">
+        <div class="border_head">
+        <h1 tabindex="0" id="targetLink">Мастер на час в Тбилиси </h1>
+        <p class="lead">Нужны мужские руки? Домашний мастер быстро решит <br>любые проблемы с ремонтом в квартире, доме и офисе!</p>
         </div>
+        {% if not request.user.is_authenticated %}
 
+        <div class="lead" >
+                <h2>Написать мастеру </h2>
+                <!--Telegramm-->
+                <a class="m-2" aria-label="Связаться с мастером через Telegram" href="https://t.me/+995598259119"><img src="{% static 'images/telegram.gif' %}" width="60" alt="Telegram - иконка"></a>
+                <!--WhatsApp-->
+                <a class="m-2" aria-label="Связаться с мастером чперез WhatsApp" href="https://wa.me/+79604458687"><img src="{% static 'images/whatsapp.png' %}" width="65" alt="WhatsApp - иконка"></a>
+                <!--Instagram-->
+                <a class="m-2" aria-label="Instagram нашей компании" href="https://www.instagram.com/repairservicetbilisi/"><img src="{% static 'images/instagram.png' %}" width="70" alt="Instagram иконка"></a>
+        </div>
+        {% endif %}
+
+        <div class="flex-center">
+            {% if request.user.groups.first.name == 'owner' %}
+            <br><a href="{% url 'profile' %}" class="btn-send btn-send-color p-3 h2 lead">Личный кабинет</a>
+            {% else %}
+            <a href="{% url 'createorder'%}" class="btn-send btn-send-color">Отправить заявку на ремонт</a><br>
+            <a href="{% url 'business' %}" class="btn-send btn-send-color-b">Для корпоративных клиентов</a>
+            {% endif %}
+        </div>
     </div>
 
 </header>
@@ -207,9 +206,7 @@
 <!-- And Services -->
 
 <!-- Foto -->
-<section id="section-2" class="accordion-bg">
-<!-- Testimonials -->
-<section class="text-center cloudy-knoxville-gradient">
+<section id="section-2" class="accordion-bg text-center">
     <div class="container">
         <!-- Section heading -->
         <h2 class="h1-responsive" tabindex="0">Фото работ<strong class="mycolor"> "Мастер на час" </strong></h2>
@@ -272,7 +269,6 @@
 
     </div>
     <!-- Container -->
-</section>
 </section>
 <!-- And Foto -->
 
