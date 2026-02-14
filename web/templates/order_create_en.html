@@ -1,7 +1,5 @@
 {% load static %}
 {% load slippers %}
-
-
 <!DOCTYPE html><html lang="en" prefix="og: http://ogp.me/ns#"><head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -27,11 +25,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 </head>
 
-<body id="top">
-
-<!--Header-->
+<body>
 {% #menu line='border_line_orange' %}
-
 <li class="nav-item mr-4 active">
     <a class="nav-link" href="#section-0">Main <span class="sr-only">(current)</span></a>
 </li>
@@ -76,37 +71,32 @@
 {% /menu %}
 
 
-<header id="section-0" class="bg_img text-center">
-    <div class="space">
-        <div class="text-center">
-            <img src="{% static 'images/logo.png' %}" alt="Мастер на час в Тбилиси" class="logo mt-5" width="200">
+<header id="section-0" class="bg_img">
+    <div class="space text-center">
+        <img src="{% static 'images/logo.png' %}" alt="Мастер на час в Тбилиси" class="logo mt-5" width="200">
+        <div class="border_head">
             <h1 class="display-4 mb-0" tabindex="0" id="targetLink">Repair service in Tbilisi </h1>
-            <p class="lead">Do you need working hands? Serviceman quickly will solve the problem of repair at the home or office.<br>
-            <br><u>Write to the repairman</u></p>
-            <div class="lead" >
-                <!--Telegramm-->
-                <a class="m-2" aria-label="Contact the specialist via Telegram" href="https://t.me/+995598259119"><img src="{% static 'images/telegram.gif' %}" width="60" alt="Telegram"></a>
-                <!--WhatsApp-->
-                <a class="m-2" aria-label="Contact the specialist via WhatsApp" href="https://wa.me/+79604458687"><img src="{% static 'images/whatsapp.png' %}" width="65" alt="WhatsApp"></a>
-                <!--Instagram-->
-                <a class="m-2" aria-label="Our company's Instagram" href="https://www.instagram.com/repairservicetbilisi/"><img src="{% static 'images/instagram.png' %}" width="70" alt="Instagram"></a>
-            </div>
-            <div class="flex-center">
-                {% if request.user.groups.first.name == 'owner' %}
-                <br><a href="{% url 'profile' %}" class="btn-send p-3 h2 lead">Personal account</a>
-                {% else %}
-                <a class="btn-send btn-send btn-send-color" href="{% url 'createorder_en'%}">Submit a repair request</a><br>
-                <a href="{% url 'business_en' %}" class="btn-send btn-send-color-b">For business clients</a>
-                {% endif %}
-            </div>
+            <hr class="hr_"><p class="lead">Do you need working hands? Serviceman quickly will solve the problem of repair at the home or office.
+        </div>
+        <div class="lead" >
+            <h2>Write to the repairman</h2>
+            <!--Telegramm-->
+            <a class="m-2" aria-label="Contact the specialist via Telegram" href="https://t.me/+995598259119"><img src="{% static 'images/telegram.gif' %}" width="60" alt="Telegram"></a>
+            <!--WhatsApp-->
+            <a class="m-2" aria-label="Contact the specialist via WhatsApp" href="https://wa.me/+79604458687"><img src="{% static 'images/whatsapp.png' %}" width="65" alt="WhatsApp"></a>
+            <!--Instagram-->
+            <a class="m-2" aria-label="Our company's Instagram" href="https://www.instagram.com/repairservicetbilisi/"><img src="{% static 'images/instagram.png' %}" width="70" alt="Instagram"></a>
+        </div>
+        <div class="flex-center">
+            {% if request.user.groups.first.name == 'owner' %}
+            <br><a href="{% url 'profile' %}" class="btn-send p-3 h2 lead">Personal account</a>
+            {% else %}
+            <a class="btn-send btn-send btn-send-color" href="{% url 'createorder_en'%}">Submit a repair request</a><br>
+            <a href="{% url 'business_en' %}" class="btn-send btn-send-color-b">For business clients</a>
+            {% endif %}
         </div>
     </div>
-
 </header>
-
-<!--And Header-->
-
-
 
 <section id="section-14" class="row_bg">
     <div class="container">
@@ -124,7 +114,7 @@
                     <!--WhatsApp-->
                     <a class="" aria-label="Contact the specialist via WhatsApp" href="https://wa.me/+79604458687"><img src="{% static 'images/whatsapp.png' %}" width="35" alt="WhatsApp"></a>
 
-                or input data using <a class="mycolor font-weight-bold" href="{% url 'createorder_en'%}"><u>our order form</u></a> on the website.</div>
+                or input data using <a class="text-dark border border-1 border-dark p-2" href="{% url 'createorder_en'%}">our order form</a> on the website.</div>
         </div>
         <div class="row pb-4 m-1">
             <div class="col-3 text-farme p-0"><img src="{% static 'images/2_.png' %}" alt="2" ></div>
@@ -207,54 +197,68 @@
         </div>
     </div>
 </section>
-<!-- And Services -->
 
-<!-- Foto -->
-<section id="section-3" class="accordion-bg">
-<!-- Testimonials -->
-<section class="text-center cloudy-knoxville-gradient">
+<section id="section-2" class="accordion-bg text-center">
     <div class="container">
-        <!-- Section heading -->
-        <h2 class="h1-responsive" tabindex="0">Photos<strong class="mycolor"> of our work</strong></h2>
+          <h2 class="h1-responsive" tabindex="0">Photos of works<strong class="mycolor"> "Handyman"</strong></h2>        <div class="card" style="width: 18rem;    display: inline-block;">
+          <img src="{% static 'images/1.jpg' %}" class="card-img-top" alt="Installing the projector">
+          <div class="card-body">
+            <p class="card-text">Installing the projector and screen</p>
+          </div>
+        </div>
 
-        <div class="wrapper-carousel-fix py-4">
-            <!-- Carousel Wrapper -->
-            <div id="carousel-example-1" class="carousel no-flex testimonial-carousel slide carousel-fade" data-ride="carousel" data-interval="false">
-                <!--Slides-->
-                <div class="carousel-inner" role="listbox">
-                    {% #carusel active="active" text="Installation and installation of the projector, screen on the wall and redecoration of the office."  %}
-                        <img src="{% static 'images/1.jpg' %}" class="" width='250' alt="Фотогаллерея работ мастер на час: монтаж проектора">
-                    {% /carusel %}
-                    {% #carusel text="Installation of a coded door lock with opening by fingerprint or digital code."  %}
-                        <img src="{% static 'images/2.jpg' %}" class="" width='250' alt="Фотогаллерея работ мастер на час: монтаж замка">
-                    {% /carusel %}
-                    {% #carusel text="Installation of a coded door lock with opening by fingerprint or digital code."  %}
-                        <img src="{% static 'images/3.jpg' %}" class="" width='250' alt="Фотогаллерея работ мастер на час: монтаж кухни">
-                    {% /carusel %}
-                </div>
-                <!--Slides-->
-                <!--Controls-->
-                <a class="carousel-control-prev left carousel-control" href="#carousel-example-1" role="button" data-slide="prev">
-                    <span class="icon-prev" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next right carousel-control" href="#carousel-example-1" role="button" data-slide="next">
-                    <span class="icon-next" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-                <!--Controls-->
-            </div>
-            <!-- Carousel Wrapper -->
+        <div class="card" style="width: 18rem;     display: inline-block;">
+          <img src="{% static 'images/2.jpg' %}" class="card-img-top" alt="Installation of a combination lock">
+          <div class="card-body">
+            <p class="card-text">Installing a combination lock</p>
+          </div>
+        </div>
+
+        <div class="card" style="width: 18rem;     display: inline-block;">
+          <img src="{% static 'images/3.jpg' %}" class="card-img-top" alt="lighting">
+          <div class="card-body">
+            <p class="card-text">Installing lighting in the kitchen</p>
+          </div>
+        </div>
+
+        <div class="card" style="width: 18rem;     display: inline-block;">
+          <img src="{% static 'images/4.jpg' %}" class="card-img-top" alt="furniture assembly">
+          <div class="card-body">
+            <p class="card-text">Installation of panels, furniture, TV, lighting</p>
+          </div>
+        </div>
+
+        <div class="card" style="width: 18rem;     display: inline-block;">
+          <img src="{% static 'images/5.jpg' %}" class="card-img-top" alt="Electrical installation work">
+          <div class="card-body">
+            <p class="card-text">Electrical installation work: panel assembly</p>
+          </div>
+        </div>
+
+        <div class="card" style="width: 18rem;     display: inline-block;">
+          <img src="{% static 'images/6.jpg' %}" class="card-img-top" alt="heating installation">
+          <div class="card-body">
+            <p class="card-text">Installation of radiators</p>
+          </div>
+        </div>
+
+        <div class="card" style="width: 18rem;     display: inline-block;">
+          <img src="{% static 'images/7.jpg' %}" class="card-img-top" alt="Washing machine repair">
+          <div class="card-body">
+            <p class="card-text">Washing machine repair</p>
+          </div>
+        </div>
+
+        <div class="card" style="width: 18rem;     display: inline-block;">
+          <img src="{% static 'images/8.jpg' %}" class="card-img-top" alt="split-system air conditioner">
+          <div class="card-body">
+            <p class="card-text">Installation of a split system</p>
+          </div>
         </div>
     </div>
-    <!-- Container -->
 </section>
-<!-- Testimonials -->
-</section>
-<!-- And Foto -->
 
-<!-- How I work -->
-<section>
+<section id="section-3">
     <h2 class="h1-responsive" tabindex="0">
         Master for an hour in Tbilisi:
         <strong class="mycolor">
@@ -264,7 +268,7 @@
     <!--Container-->
     <div class="container">
         <!--First row-->
-        <div class="row features-small my-5 pt-5 wow fadeIn" data-wow-delay="0.6s">
+        <div class="row features-small my-5 pt-5" >
             <!--First column-->
             <div class="col-md-4">
                 <!--First row-->
@@ -305,17 +309,12 @@
         <!--/First row-->
     </div>
     <!--/Container-->
-
 </section>
-<!-- And How I work -->
 
-<!--About Me -->
-<section id="section-2">
-
+<section id="section-4">
     {% #about_me head="«Master for an hour»<strong class='mycolor'>is always in touch</strong>" img="images/muzg-na-chas.jpg" %}
-
     <p><i class="fas fa-quote-left pr-2"></i>We are ready to come any time in an emergency.</p>
-                <h4><i class="fas fa-wrench fa-sm mr-3"></i>Working hours: ROUND THE CLOCK!</h4>
+                <h3><i class="fas fa-wrench fa-sm mr-3"></i>Working hours: ROUND THE CLOCK!</h3>
                 <p>Our team has many years of experience in this field. We offer only a high-quality solution to your problem,
 				whether it is a broken switch, a creaking door, leaking plumbing.</p>
                 <blockquote class="blockquote">
@@ -325,18 +324,20 @@
                 </blockquote>
     {% /about_me%}
 </section>
-<!-- About Me -->
 
-<!-- Footer -->
 <footer id="section-5" class="footer_bg">
    {% #footer address_title='Address' address_name='8 Zurab Pataridze St, Tbilisi' phone_title='Contact' write_to_us_title='Write to us' master_title='Repair services in Tbilisi' %}
    {% /footer %}
 </footer>
 <!-- And Footer -->
 
+<!-- jQuery first, then Bootstrap JS -->
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/mdb.min.js' %}"></script>
 
     <!-- Optional JavaScript -->
-
+<!--    <script src="{% static 'js/owl.carousel.min.js' %}"></script>-->
     <script src="{% static 'js/jquery.malihu.PageScroll2id.min.js' %}"></script>
     <script src="{% static 'js/custom.js' %}"></script>
 

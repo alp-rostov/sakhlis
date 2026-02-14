@@ -134,11 +134,13 @@ class OrderCreate(CreateView):
     template_name = 'order_create.html'
     form_class = OrderForm
     success_url = 'home'
+    lan = 'en'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['form_appart'] = ApartmentForm
-        context['form_customer'] = CustomerForm
+        context['form_appart'] = ApartmentForm(lang=self.lan)
+        context['form_customer'] = CustomerForm(lang=self.lan)
+        context['form'] = OrderForm(lang=self.lan)
         if self.request.user.is_authenticated and self.request.user.groups.first().name == 'owner':
             user_ = get_object_or_404(UserProfile, user=self.request.user)
         elif ((not self.request.user.is_authenticated or self.request.user.is_superuser)

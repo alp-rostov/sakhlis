@@ -19,27 +19,29 @@ class ApartmentFormOwner(forms.Form):
 
 class ApartmentForm(forms.ModelForm):
 
+    def __init__(self, *args, lang='ru', **kwargs):
+        self.lang = lang
+        langv={'ru':['Город', 'Улица','Дом, этаж, номер квартира'], 'en':['City', 'Street','Apartment (number, entrance, floor etc.)'], 'ge':['ქალაქი', 'ქუჩა', 'სახლი, სართული, ბინის ნომერი']}
+        super(ApartmentForm, self).__init__(*args, **kwargs)
+        self.fields['address_city'].label = langv[self.lang][0]
+        self.fields['address_street_app'].label = langv[self.lang][1]
+        self.fields['address_num'].label = langv[self.lang][2]
+
     address_city = forms.ChoiceField(
+        label='City',
+        widget=forms.Select(attrs={"class": "form-control"}),
         choices=CITY_CHOICES,
-        widget=forms.RadioSelect(attrs={"class": ""},),
         initial="TB"
     )
     address_street_app = forms.CharField(
         label='Street',
         widget=forms.TextInput(
-            attrs={"class": "form-control", 'list': 'languages', 'placeholder': 'ქუჩა / Street', 'maxlength': 40}),
+            attrs={"class": "form-control", 'placeholder': ' Zurap Pataridze str', 'maxlength': 40}),
         required=False
     )
     address_num = forms.CharField(
         label='Apartment (number, entrance, floor etc.)',
-        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "ბინა / Apartment", 'maxlength': 150}),
-        required=False
-    )
-
-    link_location = forms.CharField(
-        label='Geo location',
-        widget=forms.TextInput(
-            attrs={"class": "form-control", 'placeholder': "GoogleMap or other location link", 'maxlength': 300}),
+        widget=forms.TextInput(attrs={"class": "form-control", 'placeholder': "ap.5, en.3, fl.13, code 1234", 'maxlength': 150}),
         required=False
     )
 
@@ -47,7 +49,7 @@ class ApartmentForm(forms.ModelForm):
         model = Apartment
         fields = ('address_city',
                   'address_street_app',
-                  'address_num', 'link_location')
+                  'address_num')
 
 
 class ApartentUpdateForm(ApartmentForm, forms.ModelForm):
@@ -97,10 +99,17 @@ class OrderCustomerForm(forms.ModelForm):
 
 
 class OrderForm(forms.ModelForm):
+    def __init__(self, *args, lang='ru', **kwargs):
+        self.lang = lang
+        langv={'ru':['Сообщение заказа'], 'en':['Order`s message'], 'ge':['შეკვეთის შეტყობინება']}
+        super(OrderForm, self).__init__(*args, **kwargs)
+        self.fields['text_order'].label = langv[self.lang][0]
+
+
     text_order = forms.CharField(
         label='Order`s message',
         widget=forms.Textarea(attrs={"class": "md-textarea form-control",
-                                     'placeholder': "Describe problems", 'maxlength': 1500, 'rows': 3, 'cols': 10}),
+                                     'placeholder': "Describe what you need to repair.", 'maxlength': 1500, 'rows': 3, 'cols': 10}),
         required=True
     )
 

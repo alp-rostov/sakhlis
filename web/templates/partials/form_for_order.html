@@ -2,71 +2,17 @@
 {% load custom_tags %}
 
 
-<form method="post" action="" name="form" id="form" class="border border-default p-2">
+<form method="post" action="" name="form" id="form" class="form border border-default p-2">
     {{ children }}
-    <div class="md-form mb-3">
-        {{ form_customer_.customer_name.errors }}
-        {{ form_customer_.customer_name }}
-        <span id="0"></span>
-    </div>
-    <div class="md-form mb-4">
-        {{ form_customer_.phone.errors }}
-        {{ form_customer_.phone }}
-        <span id="1"></span>
+    <div class="">
+        {{ form_customer_ }}
+
+        {{ form_appart_}}
+
+        {{ form_order_}}
+
     </div>
 
-   <div class="md-form mb-4">
-       {{ form_customer_.telegram.errors }}
-       {{ form_customer_.telegram }}
-       <span id="2"></span>
-   </div>
-
-
-   <div class="md-form mb-4">
-       {{ form_customer_.whatsapp.errors }}
-       {{ form_customer_.whatsapp }}
-       <span id="3"></span>
-   </div>
-
-    <div class="md-form mb-4">
-    {% if lng == 'ru' %} Адрес:
-    {% elif lng == 'en'%} Address:
-    {% else %} მისამართი:
-    {% endif %}
-
-        {{ form_appart_.apartment_id..errors }}
-        <span id="4"></span>
-        {{ form_appart_.apartment_id }}
-        <span id="5"></span>
-    </div>
-
-     <div class="" id="ff">
-        {% for radio in form_appart_.address_city %}
-        <div class="form-check-inline grey-text ml-2">
-        {{ radio }}
-        </div>
-        {% endfor %}
-     </div>
-
-    <div class="md-form mb-4">
-        <datalist id="languages">
-        </datalist>
-        {{ form_appart_.address_street_app }}
-        <span id="6"></span>
-        {{ form_appart_.address_num }}
-        <span id="7"></span>
-    </div>
-
-
-    <div class="md-form mb-4">
-    {% if lng == 'ru' %} Опишите проблему:
-    {% elif lng == 'en'%} Describe the problem:
-    {% else %} აღწერეთ პრობლემა:
-    {% endif %}
-        {{ form_order_.text_order.errors }}
-        {{ form_order_.text_order }}
-        <span id="8"></span>
-    </div>
     {% if lng == 'ru' %}
         <button type="submit" name="submit" class="btn-send btn-send mycolor">Отправить заявку на ремонт</button>
         <a href="{% url 'createorder' %}" class="btn-send btn-send mycolor">Oчистить форму</a>

@@ -73,31 +73,32 @@
 {% /menu %}
 
 
-<header id="section-0" class="bg_img text-center">
-    <div class="space">
-        <div class="text-center">
-            <img src="{% static 'images/logo.png' %}" alt="Мастер на час в Тбилиси" class="logo mt-5" width="200">
+<header id="section-0" class="bg_img">
+    <div class="space text-center">
+        <img src="{% static 'images/logo.png' %}" alt="Мастер на час в Тбилиси" class="logo mt-5" width="200">
+        <div class="border_head">
             <h1 class="display-4" tabindex="0" id="targetLink">ოსტატი ერთი საათით თბილისში</h1>
-            <p class="lead">გჭირდება მამაკაცის ხელები? სახლის ოსტატი სწრაფად გადაწყვეტს ბინაში, სახლსა და ოფისში რემონტის პრობლემა არ არის!<br>
-                <br><u>მისწერეთ ოსტატს:</u></p>
-            <div class="lead" >
-                    <!--Telegramm-->
-                    <a class="m-2" title="Telegram" href="https://t.me/+995598259119"><img src="{% static 'images/telegram.gif' %}" width="60" alt="Telegram"></a>
-                    <!--WhatsApp-->
-                    <a class="m-2" title="WhatsApp" href="https://wa.me/+79604458687"><img src="{% static 'images/whatsapp.png' %}" width="65" alt="WhatsApp"></a>
-                    <!--Instagram-->
-                    <a class="m-2" href="https://www.instagram.com/repairservicetbilisi/"><img src="{% static 'images/instagram.png' %}" width="70" alt="Instagram"></a>
-            </div>
-            <div class="flex-center">
-                {% if request.user.groups.first.name == 'owner' %}
-                <br><a href="{% url 'profile' %}" class="btn-send p-3 h2 lead">პირადი ანგარიში</a>
-                {% else %}
-                <a class="btn-send btn-send-color" href="{% url 'createorder_ge'%}">გაგზავნეთ მოთხოვნა</a>
-                <br>
-                <a href="{% url 'business_ge' %}" class="btn-send btn-send-color-b">ბიზნეს კლიენტებისთვის</a>
-                {% endif %}
-            </div>
+            <hr class="hr_"><p class="lead">გჭირდება მამაკაცის ხელები? სახლის ოსტატი სწრაფად გადაწყვეტს ბინაში, სახლსა და ოფისში რემონტის პრობლემა არ არის!<br>
         </div>
+        <div class="lead" >
+            <h2>მისწერეთ ოსტატს:</h2>
+            <!--Telegramm-->
+            <a class="m-2" title="Telegram" href="https://t.me/+995598259119"><img src="{% static 'images/telegram.gif' %}" width="60" alt="Telegram"></a>
+            <!--WhatsApp-->
+            <a class="m-2" title="WhatsApp" href="https://wa.me/+79604458687"><img src="{% static 'images/whatsapp.png' %}" width="65" alt="WhatsApp"></a>
+            <!--Instagram-->
+            <a class="m-2" href="https://www.instagram.com/repairservicetbilisi/"><img src="{% static 'images/instagram.png' %}" width="70" alt="Instagram"></a>
+    </div>
+        <div class="flex-center">
+            {% if request.user.groups.first.name == 'owner' %}
+            <br><a href="{% url 'profile' %}" class="btn-send p-3 h2 lead">პირადი ანგარიში</a>
+            {% else %}
+            <a class="btn-send btn-send-color" href="{% url 'createorder_ge'%}">გაგზავნეთ მოთხოვნა</a>
+            <br>
+            <a href="{% url 'business_ge' %}" class="btn-send btn-send-color-b">ბიზნეს კლიენტებისთვის</a>
+            {% endif %}
+        </div>
+
     </div>
 
 </header>

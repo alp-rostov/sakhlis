@@ -28,9 +28,7 @@
 </head>
 
 <body>
-<!--Header-->
 {% #menu line='border_line_orange' %}
-
 <li class="nav-item mr-3 active" >
     <a class="nav-link" href="#section-0" ><strong>Главная </strong><span class="sr-only">(current)</span></a>
 </li>
@@ -79,22 +77,18 @@
     <div class="space text-center">
         <img src="{% static 'images/logo.png' %}" alt="Мастер на час в Тбилиси  - логотип" class="logo mt-5" width="200">
         <div class="border_head">
-        <h1 tabindex="0" id="targetLink">Мастер на час в Тбилиси </h1>
-        <p class="lead">Нужны мужские руки? Домашний мастер быстро решит <br>любые проблемы с ремонтом в квартире, доме и офисе!</p>
+        <h1 class="display-4 mb-0" tabindex="0" id="targetLink">Мастер на час в Тбилиси </h1>
+        <hr class="hr_"><p class="lead">Нужны мужские руки? Домашний мастер быстро решит <br>любые проблемы с ремонтом в квартире, доме и офисе!</p>
         </div>
-        {% if not request.user.is_authenticated %}
-
         <div class="lead" >
-                <h2>Написать мастеру </h2>
-                <!--Telegramm-->
-                <a class="m-2" aria-label="Связаться с мастером через Telegram" href="https://t.me/+995598259119"><img src="{% static 'images/telegram.gif' %}" width="60" alt="Telegram - иконка"></a>
-                <!--WhatsApp-->
-                <a class="m-2" aria-label="Связаться с мастером чперез WhatsApp" href="https://wa.me/+79604458687"><img src="{% static 'images/whatsapp.png' %}" width="65" alt="WhatsApp - иконка"></a>
-                <!--Instagram-->
-                <a class="m-2" aria-label="Instagram нашей компании" href="https://www.instagram.com/repairservicetbilisi/"><img src="{% static 'images/instagram.png' %}" width="70" alt="Instagram иконка"></a>
+            <h2>Написать мастеру </h2>
+            <!--Telegramm-->
+            <a class="m-2" aria-label="Связаться с мастером через Telegram" href="https://t.me/+995598259119"><img src="{% static 'images/telegram.gif' %}" width="60" alt="Telegram - иконка"></a>
+            <!--WhatsApp-->
+            <a class="m-2" aria-label="Связаться с мастером чперез WhatsApp" href="https://wa.me/+79604458687"><img src="{% static 'images/whatsapp.png' %}" width="65" alt="WhatsApp - иконка"></a>
+            <!--Instagram-->
+            <a class="m-2" aria-label="Instagram нашей компании" href="https://www.instagram.com/repairservicetbilisi/"><img src="{% static 'images/instagram.png' %}" width="70" alt="Instagram иконка"></a>
         </div>
-        {% endif %}
-
         <div class="flex-center">
             {% if request.user.groups.first.name == 'owner' %}
             <br><a href="{% url 'profile' %}" class="btn-send btn-send-color p-3 h2 lead">Личный кабинет</a>
@@ -104,9 +98,8 @@
             {% endif %}
         </div>
     </div>
-
 </header>
-<!--And Header-->
+
 
 <section id="section-14" class="row_bg">
     <div class="container">
@@ -123,7 +116,7 @@
                     <!--WhatsApp-->
                     <a class="" aria-label="Связаться с мастером через WhatsApp" href="https://wa.me/+79604458687"><img src="{% static 'images/whatsapp.png' %}" width="35" alt="WhatsApp"></a>
 
-                или заполняете <a class="mycolor font-weight-bold" href="{% url 'createorder'%}">форму заказа</a> на сайте.</div>
+                или заполняете <a class="text-dark border border-1 border-dark p-2" href="{% url 'createorder'%}">форму заказа</a> на сайте.</div>
         </div>
         <div class="row pb-4 m-1">
             <div class="col-3 text-farme p-0"><img src="{% static 'images/2_.png' %}" alt="2" ></div>
@@ -203,14 +196,10 @@
         </div>
     </div>
 </section>
-<!-- And Services -->
 
-<!-- Foto -->
 <section id="section-2" class="accordion-bg text-center">
     <div class="container">
-        <!-- Section heading -->
         <h2 class="h1-responsive" tabindex="0">Фото работ<strong class="mycolor"> "Мастер на час" </strong></h2>
-
         <div class="card" style="width: 18rem;    display: inline-block;">
           <img src="{% static 'images/1.jpg' %}" class="card-img-top" alt="Установка проектора">
           <div class="card-body">
@@ -266,13 +255,9 @@
             <p class="card-text">Установка сплит-системы</p>
           </div>
         </div>
-
     </div>
-    <!-- Container -->
 </section>
-<!-- And Foto -->
 
-<!-- How I work -->
 <section id="section-3">
 
     <h2 class="h1-responsive" tabindex="0">
@@ -284,7 +269,7 @@
     <!--Container-->
     <div class="container">
         <!--First row-->
-        <div class="row features-small my-5 pt-5 wow fadeIn" data-wow-delay="0.6s">
+        <div class="row features-small my-5 pt-5">
             <!--First column-->
             <div class="col-md-4">
                 <!--First row-->
@@ -327,9 +312,7 @@
     <!--/Container-->
 
 </section>
-<!-- And How I work -->
 
-<!--About Me -->
 <section id="section-4">
     <div class="container">
         <div class="position-relative">
@@ -351,14 +334,12 @@
         </div>
     </div>
 </section>
-<!-- About Me -->
 
-<!-- Footer -->
 <footer class="footer_bg" role="contentinfo">
        {% #footer address_title='Адрес' address_name='Тбилиси, ул.Зураба Патаридзе 8' phone_title='Контакты' write_to_us_title='Написать нам' master_title='Мастер на час в Тбилиси' %}
        {% /footer %}
 </footer>
-<!-- And Footer -->
+
 
 <!-- jQuery first, then Bootstrap JS -->
     <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>

@@ -4,34 +4,25 @@ from .models import *
 
 
 class CustomerForm(forms.ModelForm):
+    def __init__(self, *args, lang='ru', **kwargs):
+        self.lang = lang
+        langv={'ru':['Имя', 'Телефон'], 'en':['Name', 'Phone'], 'ge':['სახელი', 'ტელეფონი']}
+        super(CustomerForm, self).__init__(*args, **kwargs)
+        self.fields['customer_name'].label = langv[self.lang][0]
+        self.fields['phone'].label = langv[self.lang][1]
+
     customer_name = forms.CharField(
         label='Name',
         widget=forms.TextInput(attrs={"class": "form-control",
-                                      'placeholder': "Name",
+                                      'placeholder': "Input your name",
                                       'maxlength': 20}),
         required=True
     )
-    profile = forms.CharField(
-        label='Additional information:',
-        widget=forms.TextInput(
-            attrs={"class": "form-control",
-                   'placeholder': "About company, job title, etm",
-                   'maxlength': 1500}),
-        required=False
-    )
-    city = forms.ChoiceField(
-        choices=CITY_CHOICES,
 
-        widget=forms.RadioSelect(
-            attrs={"class": ""
-                   },
-        ),
-        initial="TB"
-    )
     phone = forms.CharField(
         label='Phone',
         widget=forms.TextInput(attrs={"class": "form-control",
-                                      'placeholder': "Phone",
+                                      'placeholder': "99512345678",
                                       'type': 'tel',
                                       'maxlength': 16}),
         required=False
@@ -39,14 +30,14 @@ class CustomerForm(forms.ModelForm):
     telegram = forms.CharField(
         label='Telegram',
         widget=forms.TextInput(attrs={"class": "form-control",
-                                      'placeholder': "Telegram",
+                                      'placeholder': "@telegram",
                                       'maxlength': 26}),
         required=False
     )
     whatsapp = forms.CharField(
         label='Whatsapp',
         widget=forms.TextInput(attrs={"class": "form-control",
-                                      'placeholder': "Whatsapp",
+                                      'placeholder': "99587654321",
                                       'maxlength': 26,
                                       'type': 'tel'}),
         required=False
@@ -54,7 +45,7 @@ class CustomerForm(forms.ModelForm):
 
     class Meta:
         model = UserProfile
-        fields = ('customer_name', 'phone', 'telegram', 'whatsapp', 'profile', 'city')
+        fields = ('customer_name', 'phone', 'telegram', 'whatsapp')
 
 
 class CustomerFormForModal(forms.ModelForm):

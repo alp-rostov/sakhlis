@@ -211,6 +211,13 @@ header h1 {
     color: #FFFFFF;
 }
 
+.hr_ {
+    border: none;
+    background-color: white;
+    height: 1px;
+    margin: 10px 20px 10px 20px;
+}
+
 .border_head {
     margin: 0 auto;
     width: 60%;
