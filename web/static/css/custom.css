@@ -11,7 +11,7 @@
 :root {
   --text-color: #15171d;
   --span-color: #D75900;
-  --span-color-corporate:#00ACFF;
+  --span-color-corporate:#026b9e;
   --span-color-frame: #CCEEFF;
 
 }
@@ -393,6 +393,28 @@ h1.display-4 {
 
 }
 
+label {
+margin:0;
+  border: 0px solid var(--span-color);
+  border-radius: 10px 10px 0 0;
+  padding: 5px 15px 5px 15px;
+  margin-top: 15px;
+  background: #696969;
+    color:#FFFFFF;
+    width: 50 px;
+    font-weight: bold;
+    font-size:1.2rem;
+}
+
+.form-control {
+    border: 1px;
+    border-color:  #696969;
+      border-radius: 0 10px 0 0;
+
+    border-style: solid;
+        font-size:1.3rem;
+height: 50px
+}
 
 /*********************************************
 		Services css
@@ -407,7 +429,7 @@ h3.services_h {
 
 }
 
-.card_border{
+ .card_border{
   margin: 10px;
   border: 2px solid #2F2F2F;
   border-radius: 20px 20px 20px 0;

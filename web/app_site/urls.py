@@ -34,6 +34,10 @@ urlpatterns = [
          name='plumbing'),
     path('plumbing_en', TemplateView.as_view(template_name='plumbing_en.html'),
          name='plumbing_en'),
+    path('split-systema', TemplateView.as_view(template_name='split-systema.html'),
+         name='split-systema'),
+    path('split-systema_en', TemplateView.as_view(template_name='split-systema_en.html'),
+         name='split-systema_en'),
     path('renovation', TemplateView.as_view(template_name='renovation.html'),
          name='renovation'),
 

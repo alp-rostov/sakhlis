@@ -1,0 +1,48 @@
+{% extends 'flatpages/common_blank_en.html' %}
+
+{% load static %}
+
+{% block title %}Split system installation | Air conditioning repair and maintenance in Tbilisi{% endblock title %}
+
+{% block content %}Split system and air conditioning installation in Tbilisi{% endblock content %}
+
+{% block facebookcontent %}Split system and air conditioning installation in Tbilisi{% endblock facebookcontent %}
+
+{% block facebookdescription %}Split system and air conditioning installation services in Tbilisi ✔ Split system cleaning and maintenance ✔ Split system repair{% endblock facebookdescription %}
+
+{% block button %}Order split system installation{% endblock button %}
+
+{% block body %}
+
+<h2 class="mt-0">Installation and repair of split systems and air conditioners in Tbilisi</h2>
+<p>Our company provides a full range of services for the installation, repair, and maintenance of split systems and air conditioners.
+We are ready to assist with any unusual situation related to split system installation:
+our specialists have knowledge and experience in split system installation, high-altitude work, and electrical work.
+</p>
+<b>Our advantages</b>
+<ul>
+<li>We are NOT intermediaries. We are personally involved in the production process and oversee all stages of the work.</li>
+<li>We have all the necessary equipment for high-quality repair and installation of air conditioners.</li>
+<li>We have extensive experience installing and repairing domestic and semi-industrial split systems.</li>
+</ul>
+
+<p>It is very important to choose the location for installing the indoor and outdoor units of a split system.
+for the indoor unit, to avoid drafts and create a beautiful appearance;
+for the outdoor unit, to avoid creating discomfort or disruption for neighbors and to avoid blocking access to gas and electrical utilities.</p>
+
+<h3 >Installing the Inter-Unit Line of a Split System Inside the Wall</h3>
+<p>This method of installing the inter-unit line allows you to hide all utilities inside the
+wall during repairs.</p>
+
+<h3>Cleaning and Refueling Split systems</h3>
+<p>Regular cleaning and refilling of split systems will allow you to breathe clean, cool air,
+and also extend the life of the equipment.</p>
+
+<h3>Photos of split system installation and repairs<h3>
+<img src="{% static 'images/split1.png' %}" alt="Washing machine drain" width="300" >
+<img src="{% static 'images/split2.png' %}" alt="Bosch washing machine" width="300">
+<img src="{% static 'images/split3.png' %}" alt="Washing machine drum" width="300">
+
+<h3>Submit a request for split system installation</h3>
+<a class="btn border-danger mycolor mr-1 ml-1 w-100" href="{% url 'createorder'%}">
+Order split system installation</a>{% endblock body %}
