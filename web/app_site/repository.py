@@ -127,6 +127,7 @@ class DataFromInvoice:
             .filter(order_id=order_id_) \
             .select_related('service_id')
             # .defer('service_id__type') \
+            .order_by('service_id') \
             .annotate(amount=F('price') * F('quantity')))
 
     def get_quantity_of_orders_by_type(self, repairer: User):
