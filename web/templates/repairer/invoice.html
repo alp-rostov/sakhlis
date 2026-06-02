@@ -108,15 +108,14 @@
                     <a href="{{info.apartment_id.link_location}}" class="mycolor p-2 btn btn-wrap border-danger w-100 "
                     title="Open map" >
                         <h4>{{ info.apartment_id.name }}</h4>
-                        <i class="fa fa-location-arrow " aria-hidden="true">
-                        {{ info.apartment_id.address_street_app }},
-                        {{ info.apartment_id.address_num|default_if_none:""  }},
+                        <i class="fa fa-location-arrow" aria-hidden="true"></i>
+                        {{ info.apartment_id.address_street_app }},<br>
+                        {{ info.apartment_id.address_num|default_if_none:""  }},<br>
                         {{ info.apartment_id.address_city|choice_tag:'city' }}
                         {% if photo %}
                             <img src="../media/{{ photo }}"
                             alt="" class="rounded mx-auto d-block mt-2" width="150">
                         {% endif %}
-                        </i>
                     </a>
                 {% else %}
                     {{ info.apartment_id.name }}
@@ -193,7 +192,7 @@
     <tr class="table-warning" id="total_">
         <th>
             <a href="{% url 'invoice_pdf' info.id  %}" title="Invoice #{{ info.pk }}">
-                <img src={% static 'images/invoice.png' %} width=60 alt="Invoice">
+                <img src="{% static 'images/invoice.png' %}" width=60 alt="Invoice">
             </a>
         </th>
         <th class="h4-responsive" >
